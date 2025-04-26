@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { getCourses, getCourseById } from '@/server-actions/course';
-import { Course } from '@prisma/client';
+import { course } from '@prisma/client';
 
 export function useCourses() {
   return useQuery<course[]>({

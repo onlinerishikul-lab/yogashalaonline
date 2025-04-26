@@ -1,0 +1,15 @@
+.swiperButtonRight::after, .swiperButtonLeft::after{
+    display: none;
+}
+.swiperButtonRight{
+    bottom: -20% !important;
+    left: 51% !important;
+    top: unset !important;
+}
+
+.swiperButtonLeft{
+    bottom: -20% !important;
+    right: 51% !important;
+    left: unset !important;
+    top: unset !important;
+}

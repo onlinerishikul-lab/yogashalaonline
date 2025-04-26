@@ -1,0 +1,155 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type BlogAuthor {
+  email String
+  image String
+  name  String
+}
+
+type CourseFaculty {
+  body  String
+  image String
+}
+
+type CourseFaq {
+  answer String
+  title  String
+}
+
+type CourseHeaderSection {
+  image      String
+  subHeading String
+  title      String
+}
+
+type CoursePricing {
+  fullPayment CoursePricingFullPayment
+  halfPayment CoursePricingHalfPayment
+}
+
+type CoursePricingFullPayment {
+  amount        Int
+  currency      String
+  whatsIncluded String[]
+}
+
+type CoursePricingHalfPayment {
+  amount        Int
+  currency      String
+  whatsIncluded String[]
+}
+
+type CourseStudentCorner {
+  body  String
+  image String
+  name  String
+}
+
+type CourseWhatYouWillLearn {
+  accordian CourseWhatYouWillLearnAccordian[]
+  body      String
+}
+
+type CourseWhatYouWillLearnAccordian {
+  body  String
+  title String
+}
+
+type CourseWhatsInsideTheCourse {
+  body         String
+  bulletPoints CourseWhatsInsideTheCourseBulletPoints[]
+}
+
+type CourseWhatsInsideTheCourseBulletPoints {
+  body  String
+  title String
+}
+
+type CourseWhyOurTrainingCourseUnique {
+  body    String
+  heading String
+}
+
+type CourseYogaCoursesForBeginners {
+  body               String
+  courseLanguage     String
+  skillsYouWillLearn String
+}
+
+model account {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  accountId  String
+  createdAt  DateTime @db.Date
+  password   String
+  providerId String
+  updatedAt  DateTime @db.Date
+  userId     String   @db.ObjectId
+}
+
+model blog {
+  id         String     @id @default(auto()) @map("_id") @db.ObjectId
+  author     BlogAuthor
+  content    String
+  coverImage String
+  createdAt  DateTime   @db.Date
+  overview   String
+  slug       String     @unique
+  tags       String[]
+  title      String
+}
+
+model course {
+  id                         String                             @id @default(auto()) @map("_id") @db.ObjectId
+  Certificate                String
+  availableSeats             Int
+  coreValues                 String[]
+  createdAt                  DateTime                           @db.Date
+  faculty                    CourseFaculty[]
+  faq                        CourseFaq[]
+  headerSection              CourseHeaderSection
+  ourGurantee                String
+  ourTeachingApproach        String[]
+  pricing                    CoursePricing
+  reserveSeats               Int
+  studentCorner              CourseStudentCorner[]
+  /// Could not determine type: the field only had null or empty values in the sample set.
+  testimonial                Json?
+  updatedAt                  DateTime                           @db.Date
+  whatYouWillLearn           CourseWhatYouWillLearn
+  whatsInsideTheCourse       CourseWhatsInsideTheCourse
+  whyOurTrainingCourseUnique CourseWhyOurTrainingCourseUnique[]
+  whyYogshala                String[]
+  yogaAllianceAccrediation   String
+  yogaCoursesForBeginners    CourseYogaCoursesForBeginners
+}
+
+model session {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @db.Date
+  expiresAt DateTime @db.Date
+  ipAddress String
+  token     String   @unique
+  updatedAt DateTime @db.Date
+  userAgent String
+  userId    String   @db.ObjectId
+}
+
+model user {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt     DateTime @db.Date
+  email         String   @unique
+  emailVerified Boolean
+  name          String
+  updatedAt     DateTime @db.Date
+}
+
+model verification {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}

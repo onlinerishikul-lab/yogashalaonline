@@ -1,0 +1,27 @@
+.icon_boxing::before {
+  content: "";
+  position: absolute;
+  width: 28%;
+  left: 19%;
+  height: 1px;
+  background-color: #4377b2;
+}
+.icon_boxing::after {
+  content: "";
+  position: absolute;
+  width: 28%;
+  right: 19%;
+  height: 1px;
+  background-color: #4377b2;
+}
+@media only screen and (max-width: 600px) {
+  /* body{
+      display: none;
+    } */
+  .icon_boxing::before {
+    display: none;
+  }
+  .icon_boxing::after {
+    display: none;
+  }
+}

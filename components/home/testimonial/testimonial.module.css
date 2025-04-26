@@ -1,0 +1,59 @@
+.explore_our_courses::before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    width: 110%;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+    transform: translate(-50%, 0px);
+}
+
+.explore_our_courses {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.explore_more::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    width: 110%;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+    transform: translate(-50%, 0px);
+}
+
+.explore_more {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

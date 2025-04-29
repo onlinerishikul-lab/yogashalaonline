@@ -84,7 +84,7 @@ export const Header = () => {
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container relative mx-auto min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center">
+      <div className="container relative mx-auto min-h-20 flex  flex-row lg:grid lg:grid-cols-3 items-center">
         <div className="flex lg:justify-start ps-4 md:ps-0">
           <Image
             src="/assets/yrlog-01.png"

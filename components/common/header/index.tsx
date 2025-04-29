@@ -5,7 +5,7 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
- NavigationMenuLink,
+  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -65,14 +65,14 @@ export const Header = () => {
           <NavigationMenu className="flex justify-center items-center">
             <NavigationMenuList className="flex justify-start gap-4 flex-row">
               {navigationItems.map((item) => (
-                <NavigationMenuItem key={item.title}>
+                <NavigationMenuItem key={item.title} className="relative">
                   {item.dropdown ? (
                     <>
                       <NavigationMenuTrigger className="font-medium text-sm text-white">
                         {item.title}
                       </NavigationMenuTrigger>
-                      <NavigationMenuContent className="!w-[300px] p-4">
-                        <div className="flex flex-col gap-2">
+                      <NavigationMenuContent className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md w-52 z-50">
+                        <div className="flex flex-col gap-2 p-2">
                           {item.dropdown.map((subItem) => (
                             <Link
                               key={subItem.title}

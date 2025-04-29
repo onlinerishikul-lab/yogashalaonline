@@ -95,9 +95,9 @@ export const Header = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="justify-center items-center gap-4 lg:flex hidden flex-row">
+        <div className="justify-center items-center  lg:flex hidden flex-row">
           <NavigationMenu>
-            <NavigationMenuList className="flex gap-4">
+            <NavigationMenuList className="flexs">
               {navigationItems.map((item) =>
                 item.dropdown ? (
                   <NavigationMenuItem key={item.title} className="relative">

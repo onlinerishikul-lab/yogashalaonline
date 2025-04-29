@@ -66,44 +66,41 @@ export const Header = () => {
         </div>
 
         <div className="justify-center items-center gap-4 lg:flex hidden flex-row">
-          <NavigationMenu className="flex justify-center items-center">
-            <NavigationMenuList className="flex justify-start gap-4 flex-row">
-              {navigationItems.map((item) => (
-                <NavigationMenuItem key={item.title}>
-                  {item.children ? (
-                    <>
-                      <NavigationMenuTrigger className="font-medium text-sm text-white">
-                        {item.title}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent className="!w-[300px] p-4">
-                        <div className="flex flex-col gap-2">
-                          {item.children.map((child) => (
-                            <NavigationMenuLink asChild key={child.title}>
-                              <Link
-                                href={child.href}
-                                className="text-sm text-gray-700 hover:text-blue-600"
-                              >
-                                {child.title}
-                              </Link>
-                            </NavigationMenuLink>
-                          ))}
-                        </div>
-                      </NavigationMenuContent>
-                    </>
-                  ) : (
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href={item.href}
-                        className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-white h-9 px-4 py-2 hover:text-white/70 hover:bg-transparent"
-                      >
-                        {item.title}
-                      </Link>
-                    </NavigationMenuLink>
-                  )}
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+          {navigationItems.map((item) => (
+  <NavigationMenuItem key={item.title}>
+    {item.children ? (
+      <>
+        <NavigationMenuTrigger className="font-medium text-sm text-white">
+          {item.title}
+        </NavigationMenuTrigger>
+        <NavigationMenuContent className="!w-[200px] bg-white p-2 rounded-md shadow-lg">
+          <div className="flex flex-col gap-2">
+            {item.children.map((child) => (
+              <NavigationMenuLink asChild key={child.title}>
+                <Link
+                  href={child.href}
+                  className="text-sm px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                >
+                  {child.title}
+                </Link>
+              </NavigationMenuLink>
+            ))}
+          </div>
+        </NavigationMenuContent>
+      </>
+    ) : (
+      <NavigationMenuLink asChild>
+        <Link
+          href={item.href}
+          className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-white h-9 px-4 py-2 hover:text-white/70 hover:bg-transparent"
+        >
+          {item.title}
+        </Link>
+      </NavigationMenuLink>
+    )}
+  </NavigationMenuItem>
+))}
+
         </div>
 
         <div className="flex justify-end w-full gap-4">

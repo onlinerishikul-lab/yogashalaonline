@@ -82,44 +82,31 @@ export const Header = () => {
 
         {/* Desktop Menu */}
         <div className="justify-center items-center lg:flex hidden flex-row">
-          <NavigationMenu>
-            <NavigationMenuList className="flex gap-4">
-              {navigationItems.map((item) =>
-                item.dropdown ? (
-                  <NavigationMenuItem key={item.title} className="relative">
-                    <NavigationMenuTrigger className="font-medium text-sm text-white hover:text-white/70 hover:bg-transparent">
-                      {item.title}
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent className="absolute left-0 top-full mt-2 bg-[#4377B2] shadow-md rounded-md z-50 px-4 py-3">
-                      <ul className="flex flex-col gap-2">
-                        {item.dropdown.map((subItem) => (
-                          <li key={subItem.title}>
-                            <Link
-                              href={subItem.href}
-                              className="text-white text-sm hover:text-white/70"
-                            >
-                              {subItem.title}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                ) : (
-                  <NavigationMenuItem key={item.title}>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href={item.href}
-                        className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-white h-9 px-4 py-2 hover:text-white/70 hover:bg-transparent"
-                      >
-                        {item.title}
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                )
-              )}
-            </NavigationMenuList>
-          </NavigationMenu>
+<NavigationMenuItem key="About Us" className="relative">
+  <NavigationMenuTrigger className="font-medium text-sm text-white hover:text-white/70 hover:bg-transparent">
+    About Us
+  </NavigationMenuTrigger>
+  <NavigationMenuContent className="absolute left-0 top-full mt-2 bg-[#4377B2] shadow-md rounded-md z-50 px-4 py-3">
+    <ul className="flex flex-col gap-2">
+      <li>
+        <Link href="/our-teachers" className="text-white text-sm hover:text-white/70">
+          Our Teachers
+        </Link>
+      </li>
+      <li>
+        <Link href="/our-blogs" className="text-white text-sm hover:text-white/70">
+          Our Blogs
+        </Link>
+      </li>
+      <li>
+        <Link href="/our-testimonials" className="text-white text-sm hover:text-white/70">
+          Our Testimonials
+        </Link>
+      </li>
+    </ul>
+  </NavigationMenuContent>
+</NavigationMenuItem>
+
         </div>
 
         {/* Right side button */}

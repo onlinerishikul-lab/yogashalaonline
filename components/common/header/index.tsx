@@ -17,13 +17,47 @@ import Image from "next/image";
 
 export const Header = () => {
   const navigationItems = [
-    { title: "Home", href: "/" },
-    { title: "Online Yoga Training", href: "/yoga-training" },
-    { title: "Online Ayurveda Courses", href: "/ayurveda-courses" },
-    { title: "Online Yoga Courses", href: "/yoga-courses" },
-    { title: "About Us", href: "" }, // dropdown
-    { title: "Contact Us", href: "/contact" },
-    { title: "Payment", href: "/payment" },
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "Online Yoga Training",
+      href: "/online-yoga-training",
+    },
+    {
+      title: "Online Ayurveda Courses",
+      href: "/online-ayurveda-courses",
+    },
+    {
+      title: "Online Yoga Courses",
+      href: "/online-yoga-courses",
+    },
+    {
+      title: "About Us",
+      dropdown: [
+        {
+          title: "Our Teachers",
+          href: "/our-teachers",
+        },
+        {
+          title: "Our Blogs",
+          href: "/our-blogs",
+        },
+        {
+          title: "Our Testimonials",
+          href: "/our-testimonials",
+        },
+      ],
+    },
+    {
+      title: "Contact Us",
+      href: "/contact",
+    },
+    {
+      title: "Payment",
+      href: "/payment",
+    },
   ];
 
   const router = useRouter();
@@ -35,6 +69,7 @@ export const Header = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const viewportHeight = window.innerHeight / 2;
+
       setIsScrolled(currentScrollY >= viewportHeight);
       setLastScrollY(currentScrollY);
     };
@@ -51,35 +86,39 @@ export const Header = () => {
     >
       <div className="container relative mx-auto min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center">
         <div className="flex lg:justify-start ps-4 md:ps-0">
-          <Image src="/assets/yrlog-01.png" alt="yoga logo" height={250} width={170} />
+          <Image
+            src="/assets/yrlog-01.png"
+            alt="yoga logo"
+            height={250}
+            width={170}
+          />
         </div>
 
+        {/* Desktop Menu */}
         <div className="justify-center items-center gap-4 lg:flex hidden flex-row">
-          <NavigationMenu className="flex justify-center items-center">
-            <NavigationMenuList className="flex justify-start gap-4 flex-row">
+          <NavigationMenu>
+            <NavigationMenuList className="flex gap-4">
               {navigationItems.map((item) =>
-                item.title === "About Us" ? (
-                  <NavigationMenuItem key={item.title}>
+                item.dropdown ? (
+                  <NavigationMenuItem key={item.title} className="relative">
                     <NavigationMenuTrigger className="font-medium text-sm text-white hover:text-white/70 hover:bg-transparent">
                       {item.title}
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent className="bg-[#4377B2] p-4 shadow-md rounded-md mt-2">
-                      <ul className="grid gap-3 p-2 w-56">
-                        <li>
-                          <Link href="/our-teachers" className="text-white text-sm hover:text-white/70">
-                            Our Teachers
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/our-blogs" className="text-white text-sm hover:text-white/70">
-                            Our Blogs
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/our-testimonials" className="text-white text-sm hover:text-white/70">
-                            Our Testimonials
-                          </Link>
-                        </li>
+                    <NavigationMenuContent
+                      className="absolute left-0 mt-2 bg-[#4377B2] p-4 shadow-md rounded-md z-50"
+                      style={{ minWidth: "14rem" }}
+                    >
+                      <ul className="grid gap-2 p-2">
+                        {item.dropdown.map((subItem) => (
+                          <li key={subItem.title}>
+                            <Link
+                              href={subItem.href}
+                              className="text-white text-sm hover:text-white/70"
+                            >
+                              {subItem.title}
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
@@ -100,6 +139,7 @@ export const Header = () => {
           </NavigationMenu>
         </div>
 
+        {/* Right side button */}
         <div className="flex justify-end w-full gap-4">
           <Button
             className="py-2 px-4 text-sm text-white font-medium bg-[#ffffff78] rounded-full hover:bg-[#285384]"
@@ -115,27 +155,35 @@ export const Header = () => {
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </Button>
           {isOpen && (
-            <div className="absolute top-20 border-t flex flex-col w-full right-0 bg-[#4377B2] shadow-lg py-4">
+            <div className="absolute top-20 border-t flex flex-col w-full right-0 bg-[#4377B2] shadow-lg py-4 z-50">
               <div className="container mx-auto px-4">
-                <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-6">
                   {navigationItems.map((item) =>
-                    item.title === "About Us" ? (
-                      <div key={item.title} className="flex flex-col gap-2 text-white">
-                        <span className="text-lg">About Us</span>
-                        <Link href="/our-teachers" className="pl-4 text-sm hover:text-white/70">Our Teachers</Link>
-                        <Link href="/our-blogs" className="pl-4 text-sm hover:text-white/70">Our Blogs</Link>
-                        <Link href="/our-testimonials" className="pl-4 text-sm hover:text-white/70">Our Testimonials</Link>
+                    item.dropdown ? (
+                      <div key={item.title} className="flex flex-col gap-1">
+                        <span className="text-white font-medium text-lg">{item.title}</span>
+                        <ul className="pl-4">
+                          {item.dropdown.map((subItem) => (
+                            <li key={subItem.title}>
+                              <Link
+                                href={subItem.href}
+                                className="text-white text-sm hover:text-white/70"
+                              >
+                                {subItem.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     ) : (
-                      <div key={item.title}>
-                        <Link
-                          href={item.href}
-                          className="flex justify-between items-center text-white hover:text-white/70"
-                        >
-                          <span className="text-lg">{item.title}</span>
-                          <MoveRight className="w-4 h-4 stroke-1 text-white" />
-                        </Link>
-                      </div>
+                      <Link
+                        key={item.title}
+                        href={item.href}
+                        className="flex justify-between items-center text-white hover:text-white/70"
+                      >
+                        <span className="text-lg">{item.title}</span>
+                        <MoveRight className="w-4 h-4 stroke-1 text-white" />
+                      </Link>
                     )
                   )}
                 </div>

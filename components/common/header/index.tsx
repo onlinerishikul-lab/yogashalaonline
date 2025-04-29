@@ -83,7 +83,7 @@ export const Header = () => {
         {/* Desktop Menu */}
         <div className="justify-center items-center lg:flex hidden flex-row">
           <NavigationMenu>
-            <NavigationMenuList className="flex">
+            <NavigationMenuList className="flex gap-4">
               {navigationItems.map((item) =>
                 item.dropdown ? (
                   <NavigationMenuItem key={item.title} className="relative">
@@ -91,7 +91,7 @@ export const Header = () => {
                       {item.title}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="absolute left-0 top-full mt-2 bg-[#4377B2] shadow-md rounded-md z-50 px-4 py-3">
-                      <ul className="grid gap-2">
+                      <ul className="flex flex-col gap-2">
                         {item.dropdown.map((subItem) => (
                           <li key={subItem.title}>
                             <Link

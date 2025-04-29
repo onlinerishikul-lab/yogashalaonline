@@ -61,7 +61,7 @@ export const Header = () => {
             src="/assets/yrlog-01.png"
             alt="yoga logo"
             height={250}
-            width={170}
+            width={160}
           />
         </div>
 

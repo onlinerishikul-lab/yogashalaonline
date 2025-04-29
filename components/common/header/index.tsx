@@ -36,18 +36,9 @@ export const Header = () => {
     {
       title: "About Us",
       dropdown: [
-        {
-          title: "Our Teachers",
-          href: "/our-teachers",
-        },
-        {
-          title: "Our Blogs",
-          href: "/our-blogs",
-        },
-        {
-          title: "Our Testimonials",
-          href: "/our-testimonials",
-        },
+        { title: "Our Teachers", href: "/our-teachers" },
+        { title: "Our Blogs", href: "/our-blogs" },
+        { title: "Our Testimonials", href: "/our-testimonials" },
       ],
     },
     {
@@ -63,20 +54,15 @@ export const Header = () => {
   const router = useRouter();
   const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const viewportHeight = window.innerHeight / 2;
-
-      setIsScrolled(currentScrollY >= viewportHeight);
-      setLastScrollY(currentScrollY);
+      setIsScrolled(window.scrollY >= window.innerHeight / 2);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <header
@@ -84,7 +70,7 @@ export const Header = () => {
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container relative mx-auto min-h-20 flex  flex-row lg:grid lg:grid-cols-3 items-center">
+      <div className="container relative mx-auto min-h-20 flex flex-row lg:grid lg:grid-cols-3 items-center">
         <div className="flex lg:justify-start ps-4 md:ps-0">
           <Image
             src="/assets/yrlog-01.png"
@@ -95,20 +81,17 @@ export const Header = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="justify-center items-center  lg:flex hidden flex-row">
+        <div className="justify-center items-center lg:flex hidden flex-row">
           <NavigationMenu>
-            <NavigationMenuList className="flexs">
+            <NavigationMenuList className="flex">
               {navigationItems.map((item) =>
                 item.dropdown ? (
-                  <NavigationMenuItem key={item.title} className="relative">
+                  <NavigationMenuItem key={item.title}>
                     <NavigationMenuTrigger className="font-medium text-sm text-white hover:text-white/70 hover:bg-transparent">
                       {item.title}
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent
-                      className="absolute left-0 mt-2 bg-[#4377B2] p-4 shadow-md rounded-md z-50"
-                      style={{ minWidth: "14rem" }}
-                    >
-                      <ul className="grid gap-2 p-2">
+                    <NavigationMenuContent className="bg-[#4377B2] shadow-md rounded-md z-50 px-4 py-3">
+                      <ul className="grid gap-2">
                         {item.dropdown.map((subItem) => (
                           <li key={subItem.title}>
                             <Link
@@ -161,7 +144,9 @@ export const Header = () => {
                   {navigationItems.map((item) =>
                     item.dropdown ? (
                       <div key={item.title} className="flex flex-col gap-1">
-                        <span className="text-white font-medium text-lg">{item.title}</span>
+                        <span className="text-white font-medium text-lg">
+                          {item.title}
+                        </span>
                         <ul className="pl-4">
                           {item.dropdown.map((subItem) => (
                             <li key={subItem.title}>

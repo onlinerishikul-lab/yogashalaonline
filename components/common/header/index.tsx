@@ -86,11 +86,11 @@ export const Header = () => {
             <NavigationMenuList className="flex">
               {navigationItems.map((item) =>
                 item.dropdown ? (
-                  <NavigationMenuItem key={item.title}>
+                  <NavigationMenuItem key={item.title} className="relative">
                     <NavigationMenuTrigger className="font-medium text-sm text-white hover:text-white/70 hover:bg-transparent">
                       {item.title}
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent className="bg-[#4377B2] shadow-md rounded-md z-50 px-4 py-3">
+                    <NavigationMenuContent className="absolute left-0 top-full mt-2 bg-[#4377B2] shadow-md rounded-md z-50 px-4 py-3">
                       <ul className="grid gap-2">
                         {item.dropdown.map((subItem) => (
                           <li key={subItem.title}>

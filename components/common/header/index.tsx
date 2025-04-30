@@ -7,18 +7,31 @@ import Image from "next/image";
 import { Menu, MoveRight, X, ChevronDown, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// ✅ Type definition
-type NavItem = {
+type SubDropdownItem = {
   title: string;
-  href?: string;
-  dropdown?: NavItem[];
-  subDropdown?: NavItem[];
+  href: string;
 };
+
+type DropdownItem = {
+  title: string;
+  href: string;
+  subDropdown?: SubDropdownItem[];
+};
+
+type NavigationItem =
+  | {
+      title: string;
+      href: string;
+    }
+  | {
+      title: string;
+      dropdown: DropdownItem[];
+    };
 
 export const Header = () => {
   const router = useRouter();
 
-  const navigationItems: NavItem[] = [
+  const navigationItems: NavigationItem[] = [
     {
       title: "Home",
       href: "/",
@@ -172,11 +185,8 @@ export const Header = () => {
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center space-x-10 text-white text-sm font-medium">
           {navigationItems.map((item) =>
-            item.dropdown ? (
-              <div
-                key={item.title}
-                className="relative dropdown-parent"
-              >
+            "dropdown" in item ? (
+              <div key={item.title} className="relative dropdown-parent">
                 <button
                   className="flex items-center gap-1 hover:text-white/80"
                   onClick={() =>
@@ -195,7 +205,7 @@ export const Header = () => {
                       <div
                         key={subItem.title}
                         className={`relative border-b ${
-                          index === item.dropdown!.length - 1 ? "border-none" : "border-gray-200"
+                          index === item.dropdown.length - 1 ? "border-none" : "border-gray-200"
                         }`}
                       >
                         <button
@@ -242,7 +252,7 @@ export const Header = () => {
             ) : (
               <Link
                 key={item.title}
-                href={item.href!}
+                href={item.href}
                 className="hover:text-white/80 transition"
               >
                 {item.title}
@@ -279,7 +289,7 @@ export const Header = () => {
           <div className="p-4 space-y-4">
             {navigationItems.map((item) => (
               <div key={item.title}>
-                {item.href && (
+                {"href" in item && (
                   <Link
                     href={item.href}
                     className="flex items-center justify-between text-lg py-2 hover:text-white/80"
@@ -289,14 +299,14 @@ export const Header = () => {
                     <MoveRight className="w-4 h-4" />
                   </Link>
                 )}
-                {item.dropdown && (
+                {"dropdown" in item && (
                   <>
                     <p className="text-lg mt-2">{item.title}</p>
                     <div className="pl-4 space-y-2">
                       {item.dropdown.map((subItem) => (
                         <Link
                           key={subItem.title}
-                          href={subItem.href!}
+                          href={subItem.href}
                           className="block text-sm hover:text-white/80"
                           onClick={() => setOpen(false)}
                         >

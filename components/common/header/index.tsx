@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Menu, MoveRight, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Header = () => {

@@ -20,7 +20,7 @@ export const Header = () => {
       dropdown: [
         { title: "Our Teachers", href: "/our-teachers" },
         { title: "Our Blogs", href: "/blog" },
-        { title: "Our Testimonials", href: "/our-testimonials" },
+        { title: "Our Testimonials", href: "/home/testimonial" },
       ],
     },
     { title: "Contact Us", href: "/contact" },

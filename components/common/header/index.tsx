@@ -71,17 +71,19 @@ export const Header = () => {
                       <NavigationMenuTrigger className="font-medium text-sm text-white">
                         {item.title}
                       </NavigationMenuTrigger>
-                      <NavigationMenuContent className="absolute top-full left-0 mt-2 bg-blue shadow-lg rounded-md w-52 z-50 ml-[42rem]">
-                        <div className="flex flex-col gap-2 p-2">
-                          {item.dropdown.map((subItem) => (
-                            <Link
-                              key={subItem.title}
-                              href={subItem.href}
-                              className="text-sm text-black hover:underline"
-                            >
-                              {subItem.title}
-                            </Link>
-                          ))}
+                      <NavigationMenuContent asChild>
+                        <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md w-52 z-50">
+                          <div className="flex flex-col gap-2 p-2">
+                            {item.dropdown.map((subItem) => (
+                              <Link
+                                key={subItem.title}
+                                href={subItem.href}
+                                className="text-sm text-black hover:underline"
+                              >
+                                {subItem.title}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       </NavigationMenuContent>
                     </>

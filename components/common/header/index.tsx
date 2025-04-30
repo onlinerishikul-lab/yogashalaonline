@@ -15,29 +15,27 @@ export const Header = () => {
       title: "Home",
       href: "/",
     },
-  {
-  title: "Online Yoga Training",
-  dropdown: [
     {
-      title: "25 Hrs Yoga Courses",
-      href: "/yoga/25-hours",
-      subDropdown: [
-        { title: "Yin Yoga", href: "/yoga/25-hours/yin-yoga" },
-        { title: "Prenatal Yoga", href: "/yoga/25-hours/prenatal-yoga" },
-        { title: "Kids Yoga", href: "/yoga/25-hours/kids-yoga" },
+      title: "Online Yoga Training",
+      dropdown: [
+        {
+          title: "25 Hrs Yoga Courses",
+          href: "/yoga/25-hours",
+          subDropdown: [
+            { title: "Yin Yoga", href: "/yoga/25-hours/yin-yoga" },
+            { title: "Prenatal Yoga", href: "/yoga/25-hours/prenatal-yoga" },
+            { title: "Kids Yoga", href: "/yoga/25-hours/kids-yoga" },
+          ],
+        },
+        { title: "50 Hrs Yoga Courses", href: "/yoga/50-hours" },
+        { title: "75 Hrs Yoga Courses", href: "/yoga/75-hours" },
+        { title: "85 Hrs Yoga Courses", href: "/yoga/85-hours" },
+        { title: "95 Hrs Yoga Courses", href: "/yoga/95-hours" },
+        { title: "100 Hrs Yoga Courses", href: "/yoga/100-hours" },
+        { title: "200 Hrs Yoga Courses", href: "/yoga/200-hours" },
+        { title: "300 Hrs Yoga Courses", href: "/yoga/300-hours" },
       ],
-      openDirection: "left", // Custom flag to indicate direction
     },
-    { title: "50 Hrs Yoga Courses", href: "/yoga/50-hours" },
-    { title: "75 Hrs Yoga Courses", href: "/yoga/75-hours" },
-    { title: "85 Hrs Yoga Courses", href: "/yoga/85-hours" },
-    { title: "95 Hrs Yoga Courses", href: "/yoga/95-hours" },
-    { title: "100 Hrs Yoga Courses", href: "/yoga/100-hours" },
-    { title: "200 Hrs Yoga Courses", href: "/yoga/200-hours" },
-    { title: "300 Hrs Yoga Courses", href: "/yoga/300-hours" },
-  ],
-},
-
     {
       title: "Online Ayurveda Courses",
       href: "/courses",
@@ -113,27 +111,43 @@ export const Header = () => {
             item.dropdown ? (
               <div
                 key={item.title}
-                className="relative dropdown-parent"
-                onClick={() =>
-                  setActiveDropdown((prev) =>
-                    prev === item.title ? null : item.title
-                  )
-                }
+                className="relative dropdown-parent group"
+                onMouseEnter={() => setActiveDropdown(item.title)}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
                 <button className="flex items-center gap-1 hover:text-white/80">
                   {item.title}
                   <ChevronDown className="w-4 h-4" />
                 </button>
+
                 {activeDropdown === item.title && (
                   <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md p-2 w-44 z-50">
                     {item.dropdown.map((subItem) => (
-                      <Link
-                        key={subItem.title}
-                        href={subItem.href}
-                        className="block px-15 py-2 text-sm text-black hover:bg-gray-100"
-                      >
-                        {subItem.title}
-                      </Link>
+                      <div key={subItem.title} className="relative group">
+                        <Link
+                          href={subItem.href}
+                          className="block px-4 py-2 text-sm text-black hover:bg-gray-100 whitespace-nowrap"
+                        >
+                          {subItem.title}
+                          {subItem.subDropdown && (
+                            <span className="float-right">▶</span>
+                          )}
+                        </Link>
+
+                        {subItem.subDropdown && (
+                          <div className="absolute top-0 left-full ml-1 w-44 bg-white shadow-lg rounded-md p-2 hidden group-hover:block z-50">
+                            {subItem.subDropdown.map((nestedItem) => (
+                              <Link
+                                key={nestedItem.title}
+                                href={nestedItem.href}
+                                className="block px-4 py-2 text-sm text-black hover:bg-gray-100 whitespace-nowrap"
+                              >
+                                {nestedItem.title}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}

@@ -66,7 +66,7 @@ export const Header = () => {
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 {dropdownOpen && (
-                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md p-2 w-52 z-50">
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md p-2 w-40 z-50">
                     {item.dropdown.map((subItem) => (
                       <Link
                         key={subItem.title}

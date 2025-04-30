@@ -25,6 +25,27 @@ export const Header = () => {
           { title: "Restorative Yoga TTC", href: "/yoga/50-hours/restorative-yoga" },
           { title: "Meditation TTC", href: "/yoga/50-hours/meditation" },
           { title: "Pranayama TTC", href: "/yoga/50-hours/pranayama" },
+          { title: "Yoga Nidra TTC", href:interface DropdownItem {
+  title: string;
+  href: string;
+  subDropdown?: DropdownItem[]; // Optional subDropdown property
+}
+
+const menuItems: DropdownItem[] = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "Online Yoga Training",
+    dropdown: [
+      {
+        title: "25 Hrs Yoga Courses",
+        href: "/yoga/25-hours",
+        subDropdown: [
+          { title: "Restorative Yoga TTC", href: "/yoga/50-hours/restorative-yoga" },
+          { title: "Meditation TTC", href: "/yoga/50-hours/meditation" },
+          { title: "Pranayama TTC", href: "/yoga/50-hours/pranayama" },
           { title: "Yoga Nidra TTC", href: "/yoga/50-hours/yoga-nidra" },
           { title: "Chair Yoga", href: "/yoga/50-hours/chair-yoga" },
           { title: "Mudra & Mantra Course", href: "/yoga/50-hours/mudra-mantra" },

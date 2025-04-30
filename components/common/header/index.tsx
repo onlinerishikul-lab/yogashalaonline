@@ -12,7 +12,18 @@ export const Header = () => {
 
   const navigationItems = [
     { title: "Home", href: "/" },
-    { title: "Online Yoga Training", href: "/courses" },
+    { title: "Online Yoga Training",
+      dropdown: [
+        { title: "25 hrs", href: "/our-teachers" },
+        { title: "50 hrs", href: "/blog" },
+        { title: "75 hrs", href: "/home/testimonial" },
+        { title: "85 hrs", href: "/our-teachers" },
+        { title: "95 hrs", href: "/blog" },
+        { title: "100 hrs", href: "/home/testimonial" },{ title: "25 hrs", href: "/our-teachers" },
+        { title: "200 hrs", href: "/blog" },
+        { title: "300 hrs", href: "/home/testimonial" },
+      ],
+    },
     { title: "Online Ayurveda Courses", href: "/courses" },
     { title: "Online Yoga Courses", href: "/courses" },
     {

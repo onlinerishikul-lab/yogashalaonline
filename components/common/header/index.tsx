@@ -12,9 +12,9 @@ export const Header = () => {
 
   const navigationItems = [
     { title: "Home", href: "/" },
-    { title: "Online Yoga Training", href: "/online-yoga-training" },
-    { title: "Online Ayurveda Courses", href: "/online-ayurveda-courses" },
-    { title: "Online Yoga Courses", href: "/online-yoga-courses" },
+    { title: "Online Yoga Training", href: "/courses" },
+    { title: "Online Ayurveda Courses", href: "/courses" },
+    { title: "Online Yoga Courses", href: "/courses" },
     {
       title: "About Us",
       dropdown: [

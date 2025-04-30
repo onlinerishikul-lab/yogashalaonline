@@ -21,13 +21,16 @@ export const Header = () => {
         {
           title: "25 Hrs Yoga Courses",
           href: "/yoga/25-hours",
-          subDropdown: [
-            { title: "Yin Yoga", href: "/yoga/25-hours/yin-yoga" },
-            { title: "Prenatal Yoga", href: "/yoga/25-hours/prenatal-yoga" },
-            { title: "Kids Yoga", href: "/yoga/25-hours/kids-yoga" },
+           subDropdown: [
+            { title: "Yoga Anatomy for Safe Journey", href: "/yoga/25-hours/yoga-anatomy" },
+            { title: "Face Yoga", href: "/yoga/25-hours/face-yoga" },
           ],
         },
-        { title: "50 Hrs Yoga Courses", href: "/yoga/50-hours" },
+        { title: "50 Hrs Yoga Courses", href: "/yoga/50-hours",
+        subDropdown: [
+            { title: "Yoga Anatomy for Safe Journey", href: "/yoga/25-hours/yoga-anatomy" },
+            { title: "Face Yoga", href: "/yoga/25-hours/face-yoga" },
+          ],},
         { title: "75 Hrs Yoga Courses", href: "/yoga/75-hours" },
         { title: "85 Hrs Yoga Courses", href: "/yoga/85-hours" },
         { title: "95 Hrs Yoga Courses", href: "/yoga/95-hours" },

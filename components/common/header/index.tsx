@@ -15,19 +15,68 @@ export const Header = () => {
       title: "Home",
       href: "/",
     },
+   {
+  title: "Yoga Teacher Training Courses (TTC)",
+  dropdown: [
     {
-      title: "Online Yoga Training",
-      dropdown: [
-        { title: "25 hrs Training", href: "/our-teachers" },
-        { title: "50 hrs Training", href: "/blog" },
-        { title: "75 hrs Training", href: "/home/testimonial" },
-        { title: "85 hrs Training", href: "/our-teachers" },
-        { title: "95 hrs Training", href: "/blog" },
-        { title: "100 hrs Training", href: "/home/testimonial" },
-        { title: "200 hrs Training", href: "/blog" },
-        { title: "300 hrs Training", href: "/home/testimonial" },
+      category: "25 Hr Courses",
+      items: [
+        { title: "Yoga Anatomy for a Safe Journey", href: "/yoga/25hr-anatomy" },
+        { title: "Face Yoga", href: "/yoga/25hr-face-yoga" },
       ],
     },
+    {
+      category: "50 Hr Courses",
+      items: [
+        { title: "Restorative Yoga TTC", href: "/yoga/50hr-restorative" },
+        { title: "Meditation TTC", href: "/yoga/50hr-meditation" },
+        { title: "Pranayama TTC", href: "/yoga/50hr-pranayama" },
+        { title: "Yoga Nidra TTC", href: "/yoga/50hr-yoga-nidra" },
+        { title: "Chair Yoga", href: "/yoga/50hr-chair-yoga" },
+        { title: "Mudra & Mantra Course", href: "/yoga/50hr-mudra-mantra" },
+        { title: "Kundalini Yoga Course", href: "/yoga/50hr-kundalini" },
+        { title: "Kids Yoga Course", href: "/yoga/50hr-kids" },
+        { title: "Yoga Therapy Course", href: "/yoga/50hr-therapy" },
+        { title: "Pregnancy Yoga", href: "/yoga/50hr-pregnancy" },
+      ],
+    },
+    {
+      category: "75 Hr Courses",
+      items: [
+        { title: "Core Concepts of Yoga Philosophy", href: "/yoga/75hr-philosophy" },
+        { title: "Asana Clinic for Yoga Professionals", href: "/yoga/75hr-asana-clinic" },
+      ],
+    },
+    {
+      category: "85–95 Hr Courses",
+      items: [
+        { title: "Prenatal & Postnatal Yoga for Teachers", href: "/yoga/85hr-prenatal" },
+        { title: "Advanced Kids Yoga Course", href: "/yoga/95hr-kids" },
+      ],
+    },
+    {
+      category: "100 Hr Courses",
+      items: [
+        { title: "Multi-Style Yoga TTC", href: "/yoga/100hr-multistyle" },
+        { title: "Vinyasa Flow Yoga TTC", href: "/yoga/100hr-vinyasa" },
+        { title: "Hatha Yoga TTC", href: "/yoga/100hr-hatha" },
+        { title: "Advanced Yoga Therapy Course", href: "/yoga/100hr-therapy" },
+      ],
+    },
+    {
+      category: "200 Hr Courses",
+      items: [
+        { title: "Multi-Style Yoga TTC", href: "/yoga/200hr-multistyle" },
+      ],
+    },
+    {
+      category: "300 Hr Courses",
+      items: [
+        { title: "Multi-Style Yoga TTC", href: "/yoga/300hr-multistyle" },
+      ],
+    }
+  ]
+},
     {
       title: "Online Ayurveda Courses",
       href: "/courses",

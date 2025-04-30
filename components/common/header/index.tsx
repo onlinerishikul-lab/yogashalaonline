@@ -18,7 +18,16 @@ export const Header = () => {
   {
   title: "Online Yoga Training",
   dropdown: [
-    { title: "25 Hrs Yoga Courses", href: "/yoga/25-hours" },
+    {
+      title: "25 Hrs Yoga Courses",
+      href: "/yoga/25-hours",
+      subDropdown: [
+        { title: "Yin Yoga", href: "/yoga/25-hours/yin-yoga" },
+        { title: "Prenatal Yoga", href: "/yoga/25-hours/prenatal-yoga" },
+        { title: "Kids Yoga", href: "/yoga/25-hours/kids-yoga" },
+      ],
+      openDirection: "left", // Custom flag to indicate direction
+    },
     { title: "50 Hrs Yoga Courses", href: "/yoga/50-hours" },
     { title: "75 Hrs Yoga Courses", href: "/yoga/75-hours" },
     { title: "85 Hrs Yoga Courses", href: "/yoga/85-hours" },
@@ -28,6 +37,7 @@ export const Header = () => {
     { title: "300 Hrs Yoga Courses", href: "/yoga/300-hours" },
   ],
 },
+
     {
       title: "Online Ayurveda Courses",
       href: "/courses",

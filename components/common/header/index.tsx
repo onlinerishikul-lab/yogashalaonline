@@ -60,9 +60,13 @@ export const Header = () => {
         { title: "200 Hrs Yoga Courses", href: "/yoga/200-hours" ,subDropdown: [
          { title: "Multi Style Yoga TTC", href: "/yoga/200-hours/multi-style" },
           ],},
-        { title: "300 Hrs Yoga Courses", href: "/yoga/300-hours",subDropdown: [
-         { title: "Multi Style Yoga TTC", href: "/yoga/300-hours/multi-style" },
-          ], },
+       {
+          title: "300 Hrs Yoga Courses",
+          href: "/yoga/300-hours",
+          subDropdown: [
+            { title: "Multi Style Yoga TTC", href: "/yoga/300-hours/multi-style" },
+          ],
+        },
       ],
     },
     {

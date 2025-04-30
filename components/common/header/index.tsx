@@ -39,6 +39,17 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const dropdown = document.getElementById("about-dropdown");
+      if (dropdown && !dropdown.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -46,7 +57,6 @@ export const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/">
           <Image src="/assets/yrlog-01.png" alt="Yoga Logo" width={150} height={80} />
         </Link>
@@ -58,8 +68,8 @@ export const Header = () => {
               <div
                 key={item.title}
                 className="relative"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
+                id="about-dropdown"
+                onClick={() => setDropdownOpen((prev) => !prev)}
               >
                 <button className="flex items-center gap-1 hover:text-white/80">
                   {item.title}

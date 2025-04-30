@@ -11,21 +11,31 @@ export const Header = () => {
   const router = useRouter();
 
   const navigationItems = [
-    { title: "Home", href: "/" },
-    { title: "Online Yoga Training",
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "Online Yoga Training",
       dropdown: [
         { title: "25 hrs", href: "/our-teachers" },
         { title: "50 hrs", href: "/blog" },
         { title: "75 hrs", href: "/home/testimonial" },
         { title: "85 hrs", href: "/our-teachers" },
         { title: "95 hrs", href: "/blog" },
-        { title: "100 hrs", href: "/home/testimonial" },{ title: "25 hrs", href: "/our-teachers" },
+        { title: "100 hrs", href: "/home/testimonial" },
         { title: "200 hrs", href: "/blog" },
         { title: "300 hrs", href: "/home/testimonial" },
       ],
     },
-    { title: "Online Ayurveda Courses", href: "/courses" },
-    { title: "Online Yoga Courses", href: "/courses" },
+    {
+      title: "Online Ayurveda Courses",
+      href: "/courses",
+    },
+    {
+      title: "Online Yoga Courses",
+      href: "/courses",
+    },
     {
       title: "About Us",
       dropdown: [
@@ -34,13 +44,19 @@ export const Header = () => {
         { title: "Our Testimonials", href: "/home/testimonial" },
       ],
     },
-    { title: "Contact Us", href: "/contact" },
-    { title: "Payment", href: "/payment" },
+    {
+      title: "Contact Us",
+      href: "/contact",
+    },
+    {
+      title: "Payment",
+      href: "/payment",
+    },
   ];
 
   const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,9 +68,13 @@ export const Header = () => {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      const dropdown = document.getElementById("about-dropdown");
-      if (dropdown && !dropdown.contains(e.target as Node)) {
-        setDropdownOpen(false);
+      const dropdowns = document.querySelectorAll(".dropdown-parent");
+      if (
+        Array.from(dropdowns).every(
+          (dropdown) => !dropdown.contains(e.target as Node)
+        )
+      ) {
+        setActiveDropdown(null);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -69,25 +89,33 @@ export const Header = () => {
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/">
-          <Image src="/assets/yrlog-01.png" alt="Yoga Logo" width={150} height={80} />
+          <Image
+            src="/assets/yrlog-01.png"
+            alt="Yoga Logo"
+            width={150}
+            height={80}
+          />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center space-x-6 text-white text-sm font-medium">
+        <nav className="hidden lg:flex items-center space-x-10 text-white text-sm font-medium">
           {navigationItems.map((item) =>
             item.dropdown ? (
               <div
                 key={item.title}
-                className="relative"
-                id="about-dropdown"
-                onClick={() => setDropdownOpen((prev) => !prev)}
+                className="relative dropdown-parent"
+                onClick={() =>
+                  setActiveDropdown((prev) =>
+                    prev === item.title ? null : item.title
+                  )
+                }
               >
                 <button className="flex items-center gap-1 hover:text-white/80">
                   {item.title}
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                {dropdownOpen && (
-                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md p-2 w-40 z-50">
+                {activeDropdown === item.title && (
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md p-2 w-44 z-50">
                     {item.dropdown.map((subItem) => (
                       <Link
                         key={subItem.title}
@@ -125,7 +153,11 @@ export const Header = () => {
         {/* Mobile Hamburger */}
         <div className="lg:hidden flex items-center">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-            {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+            {isOpen ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <Menu className="w-6 h-6 text-white" />
+            )}
           </Button>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Menu, MoveRight, X, ChevronDown } from "lucide-react";
+import { Menu, MoveRight, X, ChevronDown, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Header = () => {
@@ -65,6 +65,7 @@ export const Header = () => {
   const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,6 +84,7 @@ export const Header = () => {
         )
       ) {
         setActiveDropdown(null);
+        setOpenSubDropdown(null);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -111,36 +113,59 @@ export const Header = () => {
             item.dropdown ? (
               <div
                 key={item.title}
-                className="relative dropdown-parent group"
-                onMouseEnter={() => setActiveDropdown(item.title)}
-                onMouseLeave={() => setActiveDropdown(null)}
+                className="relative dropdown-parent"
               >
-                <button className="flex items-center gap-1 hover:text-white/80">
+                <button
+                  className="flex items-center gap-1 hover:text-white/80"
+                  onClick={() =>
+                    setActiveDropdown((prev) =>
+                      prev === item.title ? null : item.title
+                    )
+                  }
+                >
                   {item.title}
                   <ChevronDown className="w-4 h-4" />
                 </button>
 
                 {activeDropdown === item.title && (
-                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md p-2 w-44 z-50">
-                    {item.dropdown.map((subItem) => (
-                      <div key={subItem.title} className="relative group">
-                        <Link
-                          href={subItem.href}
-                          className="block px-4 py-2 text-sm text-black hover:bg-gray-100 whitespace-nowrap"
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-56 z-50">
+                    {item.dropdown.map((subItem, index) => (
+                      <div
+                        key={subItem.title}
+                        className={`relative border-b ${
+                          index === item.dropdown.length - 1 ? "border-none" : "border-gray-200"
+                        }`}
+                      >
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (subItem.subDropdown) {
+                              setOpenSubDropdown((prev) =>
+                                prev === subItem.title ? null : subItem.title
+                              );
+                            } else {
+                              router.push(subItem.href);
+                              setActiveDropdown(null);
+                              setOpenSubDropdown(null);
+                            }
+                          }}
+                          className="w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-100 flex justify-between items-center"
                         >
                           {subItem.title}
-                          {subItem.subDropdown && (
-                            <span className="float-right">▶</span>
-                          )}
-                        </Link>
+                          {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
+                        </button>
 
-                        {subItem.subDropdown && (
-                          <div className="absolute top-0 left-full ml-1 w-44 bg-white shadow-lg rounded-md p-2 hidden group-hover:block z-50">
-                            {subItem.subDropdown.map((nestedItem) => (
+                        {openSubDropdown === subItem.title && subItem.subDropdown && (
+                          <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-56 z-50">
+                            {subItem.subDropdown.map((nestedItem, idx) => (
                               <Link
                                 key={nestedItem.title}
                                 href={nestedItem.href}
-                                className="block px-4 py-2 text-sm text-black hover:bg-gray-100 whitespace-nowrap"
+                                className={`block px-4 py-2 text-sm text-black hover:bg-gray-100 border-b ${
+                                  idx === subItem.subDropdown.length - 1
+                                    ? "border-none"
+                                    : "border-gray-200"
+                                }`}
                               >
                                 {nestedItem.title}
                               </Link>

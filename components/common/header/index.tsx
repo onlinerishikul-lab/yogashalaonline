@@ -18,14 +18,14 @@ export const Header = () => {
     {
       title: "Online Yoga Training",
       dropdown: [
-        { title: "25 hrs", href: "/our-teachers" },
-        { title: "50 hrs", href: "/blog" },
-        { title: "75 hrs", href: "/home/testimonial" },
-        { title: "85 hrs", href: "/our-teachers" },
-        { title: "95 hrs", href: "/blog" },
-        { title: "100 hrs", href: "/home/testimonial" },
-        { title: "200 hrs", href: "/blog" },
-        { title: "300 hrs", href: "/home/testimonial" },
+        { title: "25 hrs Training", href: "/our-teachers" },
+        { title: "50 hrs Training", href: "/blog" },
+        { title: "75 hrs Training", href: "/home/testimonial" },
+        { title: "85 hrs Training", href: "/our-teachers" },
+        { title: "95 hrs Training", href: "/blog" },
+        { title: "100 hrs Training", href: "/home/testimonial" },
+        { title: "200 hrs Training", href: "/blog" },
+        { title: "300 hrs Training", href: "/home/testimonial" },
       ],
     },
     {

@@ -1,19 +1,11 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { Menu, MoveRight, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { Menu, MoveRight, X, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Header = () => {
   const router = useRouter();
@@ -37,12 +29,11 @@ export const Header = () => {
 
   const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const viewportHeight = window.innerHeight / 2;
-      setIsScrolled(currentScrollY >= viewportHeight);
+      setIsScrolled(window.scrollY >= window.innerHeight / 2);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -50,85 +41,85 @@ export const Header = () => {
 
   return (
     <header
-      className={`w-full z-40 fixed top-0 left-0 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto min-h-20 flex items-center justify-between px-4">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
-          <Image src="/assets/yrlog-01.png" alt="yoga logo" height={250} width={170} />
-        </div>
+        <Link href="/">
+          <Image src="/assets/yrlog-01.png" alt="Yoga Logo" width={150} height={80} />
+        </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center space-x-6">
-          <NavigationMenu>
-            <NavigationMenuList className="flex items-center gap-6">
-              {navigationItems.map((item) => (
-                <NavigationMenuItem key={item.title} className="relative">
-                  {item.dropdown ? (
-                    <>
-                      <NavigationMenuTrigger className="text-white text-sm font-medium bg-transparent hover:bg-white/10">
-                        {item.title}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent className="translate-x-[-50%] left-1/2">
-                        <div className="flex flex-col gap-2">
-                          {item.dropdown.map((subItem) => (
-                            <Link
-                              key={subItem.title}
-                              href={subItem.href}
-                              className="text-sm text-black hover:underline"
-                            >
-                              {subItem.title}
-                            </Link>
-                          ))}
-                        </div>
-                      </NavigationMenuContent>
-                    </>
-                  ) : (
-                    <NavigationMenuLink asChild>
+        <nav className="hidden lg:flex items-center space-x-6 text-white text-sm font-medium">
+          {navigationItems.map((item) =>
+            item.dropdown ? (
+              <div
+                key={item.title}
+                className="relative"
+                onMouseEnter={() => setDropdownOpen(true)}
+                onMouseLeave={() => setDropdownOpen(false)}
+              >
+                <button className="flex items-center gap-1 hover:text-white/80">
+                  {item.title}
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                {dropdownOpen && (
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md p-2 w-52 z-50">
+                    {item.dropdown.map((subItem) => (
                       <Link
-                        href={item.href}
-                        className="text-white text-sm font-medium hover:text-white/70"
+                        key={subItem.title}
+                        href={subItem.href}
+                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
                       >
-                        {item.title}
+                        {subItem.title}
                       </Link>
-                    </NavigationMenuLink>
-                  )}
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="hover:text-white/80 transition"
+              >
+                {item.title}
+              </Link>
+            )
+          )}
+        </nav>
 
-        {/* Sign In */}
+        {/* Login Button */}
         <div className="hidden lg:block">
           <Button
-            className="text-white font-medium bg-[#ffffff78] hover:bg-[#285384] rounded-full"
             onClick={() => router.push("/login")}
+            className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
           >
             Sign In / Log In
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Hamburger */}
         <div className="lg:hidden flex items-center">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
           </Button>
         </div>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-[#4377B2] px-4 py-6">
-          <div className="flex flex-col gap-6">
+        <div className="lg:hidden bg-[#4377B2] text-white shadow-md w-full absolute top-full left-0 z-40">
+          <div className="p-4 space-y-4">
             {navigationItems.map((item) => (
               <div key={item.title}>
                 {item.href && (
                   <Link
                     href={item.href}
-                    className="text-white text-lg flex items-center justify-between"
+                    className="flex items-center justify-between text-lg py-2 hover:text-white/80"
+                    onClick={() => setOpen(false)}
                   >
                     {item.title}
                     <MoveRight className="w-4 h-4" />
@@ -136,13 +127,14 @@ export const Header = () => {
                 )}
                 {item.dropdown && (
                   <>
-                    <p className="text-white text-lg">{item.title}</p>
-                    <div className="pl-4 flex flex-col gap-2">
+                    <p className="text-lg mt-2">{item.title}</p>
+                    <div className="pl-4 space-y-2">
                       {item.dropdown.map((subItem) => (
                         <Link
                           key={subItem.title}
                           href={subItem.href}
-                          className="text-sm text-white hover:text-white/70"
+                          className="block text-sm hover:text-white/80"
+                          onClick={() => setOpen(false)}
                         >
                           {subItem.title}
                         </Link>
@@ -152,6 +144,15 @@ export const Header = () => {
                 )}
               </div>
             ))}
+            <Button
+              onClick={() => {
+                setOpen(false);
+                router.push("/login");
+              }}
+              className="w-full mt-4 text-white bg-[#ffffff78] hover:bg-[#285384] rounded-full py-2"
+            >
+              Sign In / Log In
+            </Button>
           </div>
         </div>
       )}

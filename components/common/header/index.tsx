@@ -120,7 +120,7 @@ export const Header = () => {
                       <Link
                         key={subItem.title}
                         href={subItem.href}
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        className="block px-15 py-2 text-sm text-black hover:bg-gray-100"
                       >
                         {subItem.title}
                       </Link>

@@ -7,115 +7,122 @@ import Image from "next/image";
 import { Menu, MoveRight, X, ChevronDown, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// ✅ Type definition
+type NavItem = {
+  title: string;
+  href?: string;
+  dropdown?: NavItem[];
+  subDropdown?: NavItem[];
+};
+
 export const Header = () => {
   const router = useRouter();
 
-const navigationItems = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "Online Yoga Training",
-    dropdown: [
-      {
-        title: "25 Hrs Yoga Courses",
-        href: "/yoga/25-hours",
-        subDropdown: [
-          { title: "Yoga Anatomy for Safe Journey", href: "/yoga/25-hours/yoga-anatomy" },
-          { title: "Face Yoga", href: "/yoga/25-hours/face-yoga" },
-        ],
-      },
-      {
-        title: "50 Hrs Yoga Courses",
-        href: "/yoga/50-hours",
-        subDropdown: [
-          { title: "Restorative Yoga TTC", href: "/yoga/50-hours/restorative-yoga" },
-          { title: "Meditation TTC", href: "/yoga/50-hours/meditation" },
-          { title: "Pranayama TTC", href: "/yoga/50-hours/pranayama" },
-          { title: "Yoga Nidra TTC", href: "/yoga/50-hours/yoga-nidra" },
-          { title: "Chair Yoga", href: "/yoga/50-hours/chair-yoga" },
-          { title: "Mudra & Mantra Course", href: "/yoga/50-hours/mudra-mantra" },
-          { title: "Kundalini Yoga Course", href: "/yoga/50-hours/kundalini-yoga" },
-          { title: "Kids Yoga Course", href: "/yoga/50-hours/kids-yoga" },
-          { title: "Yoga Therapy Course", href: "/yoga/50-hours/yoga-therapy" },
-          { title: "Pregnancy Yoga", href: "/yoga/50-hours/pregnancy-yoga" },
-        ],
-      },
-      {
-        title: "75 Hrs Yoga Courses",
-        href: "/yoga/75-hours",
-        subDropdown: [
-          { title: "Core Concept of Yoga Philosophy", href: "/yoga/75-hours/yoga-philosophy" },
-          { title: "Asana Clinic for Yoga Professionals", href: "/yoga/75-hours/asana-clinic" },
-        ],
-      },
-      {
-        title: "85 Hrs Yoga Courses",
-        href: "/yoga/85-hours",
-        subDropdown: [
-          { title: "Prenatal & Postnatal Yoga Course for Teachers", href: "/yoga/85-hours/prenatal-postnatal" },
-        ],
-      },
-      {
-        title: "95 Hrs Yoga Courses",
-        href: "/yoga/95-hours",
-        subDropdown: [
-          { title: "Advanced Kids Yoga Course", href: "/yoga/95-hours/advanced-kids-yoga" },
-        ],
-      },
-      {
-        title: "100 Hrs Yoga Courses",
-        href: "/yoga/100-hours",
-        subDropdown: [
-          { title: "Multi Style Yoga TTC", href: "/yoga/100-hours/multi-style" },
-          { title: "Vinyasa Flow Yoga TTC", href: "/yoga/100-hours/vinyasa-flow" },
-          { title: "Hatha Yoga TTC", href: "/yoga/100-hours/hatha-yoga" },
-          { title: "Advanced Yoga Therapy Course", href: "/yoga/100-hours/advanced-yoga-therapy" },
-        ],
-      },
-      {
-        title: "200 Hrs Yoga Courses",
-        href: "/yoga/200-hours",
-        subDropdown: [
-          { title: "Multi Style Yoga TTC", href: "/yoga/200-hours/multi-style" },
-        ],
-      },
-      {
-        title: "300 Hrs Yoga Courses",
-        href: "/yoga/300-hours",
-        subDropdown: [
-          { title: "Multi Style Yoga TTC", href: "/yoga/300-hours/multi-style" },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Online Ayurveda Courses",
-    href: "/courses",
-  },
-  {
-    title: "Online Yoga Courses",
-    href: "/courses",
-  },
-  {
-    title: "About Us",
-    dropdown: [
-      { title: "Our Teachers", href: "/our-teachers" },
-      { title: "Our Blogs", href: "/blog" },
-      { title: "Our Testimonials", href: "/home/testimonial" },
-    ],
-  },
-  {
-    title: "Contact Us",
-    href: "/contact",
-  },
-  {
-    title: "Payment",
-    href: "/payment",
-  },
-];
-
+  const navigationItems: NavItem[] = [
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "Online Yoga Training",
+      dropdown: [
+        {
+          title: "25 Hrs Yoga Courses",
+          href: "/yoga/25-hours",
+          subDropdown: [
+            { title: "Yoga Anatomy for Safe Journey", href: "/yoga/25-hours/yoga-anatomy" },
+            { title: "Face Yoga", href: "/yoga/25-hours/face-yoga" },
+          ],
+        },
+        {
+          title: "50 Hrs Yoga Courses",
+          href: "/yoga/50-hours",
+          subDropdown: [
+            { title: "Restorative Yoga TTC", href: "/yoga/50-hours/restorative-yoga" },
+            { title: "Meditation TTC", href: "/yoga/50-hours/meditation" },
+            { title: "Pranayama TTC", href: "/yoga/50-hours/pranayama" },
+            { title: "Yoga Nidra TTC", href: "/yoga/50-hours/yoga-nidra" },
+            { title: "Chair Yoga", href: "/yoga/50-hours/chair-yoga" },
+            { title: "Mudra & Mantra Course", href: "/yoga/50-hours/mudra-mantra" },
+            { title: "Kundalini Yoga Course", href: "/yoga/50-hours/kundalini-yoga" },
+            { title: "Kids Yoga Course", href: "/yoga/50-hours/kids-yoga" },
+            { title: "Yoga Therapy Course", href: "/yoga/50-hours/yoga-therapy" },
+            { title: "Pregnancy Yoga", href: "/yoga/50-hours/pregnancy-yoga" },
+          ],
+        },
+        {
+          title: "75 Hrs Yoga Courses",
+          href: "/yoga/75-hours",
+          subDropdown: [
+            { title: "Core Concept of Yoga Philosophy", href: "/yoga/75-hours/yoga-philosophy" },
+            { title: "Asana Clinic for Yoga Professionals", href: "/yoga/75-hours/asana-clinic" },
+          ],
+        },
+        {
+          title: "85 Hrs Yoga Courses",
+          href: "/yoga/85-hours",
+          subDropdown: [
+            { title: "Prenatal & Postnatal Yoga Course for Teachers", href: "/yoga/85-hours/prenatal-postnatal" },
+          ],
+        },
+        {
+          title: "95 Hrs Yoga Courses",
+          href: "/yoga/95-hours",
+          subDropdown: [
+            { title: "Advanced Kids Yoga Course", href: "/yoga/95-hours/advanced-kids-yoga" },
+          ],
+        },
+        {
+          title: "100 Hrs Yoga Courses",
+          href: "/yoga/100-hours",
+          subDropdown: [
+            { title: "Multi Style Yoga TTC", href: "/yoga/100-hours/multi-style" },
+            { title: "Vinyasa Flow Yoga TTC", href: "/yoga/100-hours/vinyasa-flow" },
+            { title: "Hatha Yoga TTC", href: "/yoga/100-hours/hatha-yoga" },
+            { title: "Advanced Yoga Therapy Course", href: "/yoga/100-hours/advanced-yoga-therapy" },
+          ],
+        },
+        {
+          title: "200 Hrs Yoga Courses",
+          href: "/yoga/200-hours",
+          subDropdown: [
+            { title: "Multi Style Yoga TTC", href: "/yoga/200-hours/multi-style" },
+          ],
+        },
+        {
+          title: "300 Hrs Yoga Courses",
+          href: "/yoga/300-hours",
+          subDropdown: [
+            { title: "Multi Style Yoga TTC", href: "/yoga/300-hours/multi-style" },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Online Ayurveda Courses",
+      href: "/courses",
+    },
+    {
+      title: "Online Yoga Courses",
+      href: "/courses",
+    },
+    {
+      title: "About Us",
+      dropdown: [
+        { title: "Our Teachers", href: "/our-teachers" },
+        { title: "Our Blogs", href: "/blog" },
+        { title: "Our Testimonials", href: "/home/testimonial" },
+      ],
+    },
+    {
+      title: "Contact Us",
+      href: "/contact",
+    },
+    {
+      title: "Payment",
+      href: "/payment",
+    },
+  ];
 
   const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -188,7 +195,7 @@ const navigationItems = [
                       <div
                         key={subItem.title}
                         className={`relative border-b ${
-                          index === item.dropdown.length - 1 ? "border-none" : "border-gray-200"
+                          index === item.dropdown!.length - 1 ? "border-none" : "border-gray-200"
                         }`}
                       >
                         <button
@@ -198,7 +205,7 @@ const navigationItems = [
                               setOpenSubDropdown((prev) =>
                                 prev === subItem.title ? null : subItem.title
                               );
-                            } else {
+                            } else if (subItem.href) {
                               router.push(subItem.href);
                               setActiveDropdown(null);
                               setOpenSubDropdown(null);
@@ -217,7 +224,7 @@ const navigationItems = [
                                 key={nestedItem.title}
                                 href={nestedItem.href}
                                 className={`block px-4 py-2 text-sm text-black hover:bg-gray-100 border-b ${
-                                  idx === subItem.subDropdown.length - 1
+                                  idx === subItem.subDropdown!.length - 1
                                     ? "border-none"
                                     : "border-gray-200"
                                 }`}
@@ -235,7 +242,7 @@ const navigationItems = [
             ) : (
               <Link
                 key={item.title}
-                href={item.href}
+                href={item.href!}
                 className="hover:text-white/80 transition"
               >
                 {item.title}
@@ -289,7 +296,7 @@ const navigationItems = [
                       {item.dropdown.map((subItem) => (
                         <Link
                           key={subItem.title}
-                          href={subItem.href}
+                          href={subItem.href!}
                           className="block text-sm hover:text-white/80"
                           onClick={() => setOpen(false)}
                         >

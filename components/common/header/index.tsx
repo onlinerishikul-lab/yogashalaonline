@@ -175,7 +175,7 @@ export const Header = () => {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/">
           <Image
-            src="/assets/ONLINE.2025.svg"
+            src="/assets/ONLINE-Photoroom.svg"
             alt="Yoga Logo"
             width={80}
             height={80}

@@ -177,7 +177,7 @@ export const Header = () => {
           <Image
             src="/assets/ONLINE-Photoroom.png"
             alt="Yoga Logo"
-            width={80}
+            width={120}
             height={80}
           />
         </Link>

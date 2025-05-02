@@ -153,140 +153,178 @@ export const Header = () => {
   }, []);
 
   return (
-    <>
-      <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
-        }`}
-      >
-        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-          {/* Left Nav */}
-          <div className="hidden lg:flex flex-1 items-center gap-x-8 text-white text-sm font-medium">
-            {navigationItems.slice(0, 3).map((item) =>
-              "dropdown" in item ? (
-                <div key={item.title} className="relative dropdown-parent">
-                  <button
-                    className="flex items-center gap-1 hover:text-white/80"
-                    onClick={() =>
-                      setActiveDropdown((prev) => (prev === item.title ? null : item.title))
-                    }
-                  >
-                    {item.title}
-                    <ChevronDown className="w-4 h-4" />
-                  </button>
-                  {activeDropdown === item.title && (
-                    <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
-                      {item.dropdown.map((subItem) => (
-                        <div key={subItem.title} className="relative group">
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              if (subItem.subDropdown) {
-                                setOpenSubDropdown((prev) =>
-                                  prev === subItem.title ? null : subItem.title
-                                );
-                              } else {
-                                router.push(subItem.href);
-                                setActiveDropdown(null);
-                                setOpenSubDropdown(null);
-                              }
-                            }}
-                            className="w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-100 flex justify-between items-center"
-                          >
-                            {subItem.title}
-                            {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
-                          </button>
-                          {openSubDropdown === subItem.title && subItem.subDropdown && (
-                            <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-1">
-                              {subItem.subDropdown.map((nestedItem) => (
-                                <Link
-                                  key={nestedItem.title}
-                                  href={nestedItem.href}
-                                  className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                                >
-                                  {nestedItem.title}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link key={item.title} href={item.href} className="hover:text-white/80">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Left Nav */}
+        <div className="hidden lg:flex flex-1 items-center gap-x-8 text-white text-sm font-medium">
+          {navigationItems.slice(0, 3).map((item) =>
+            "dropdown" in item ? (
+              <div key={item.title} className="relative dropdown-parent">
+                <button
+                  className="flex items-center gap-1 hover:text-white/80"
+                  onClick={() =>
+                    setActiveDropdown((prev) => (prev === item.title ? null : item.title))
+                  }
+                >
                   {item.title}
-                </Link>
-              )
-            )}
-          </div>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                {activeDropdown === item.title && (
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
+                    {item.dropdown.map((subItem) => (
+                      <div key={subItem.title} className="relative group">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (subItem.subDropdown) {
+                              setOpenSubDropdown((prev) =>
+                                prev === subItem.title ? null : subItem.title
+                              );
+                            } else {
+                              router.push(subItem.href);
+                              setActiveDropdown(null);
+                              setOpenSubDropdown(null);
+                            }
+                          }}
+                          className="w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-100 flex justify-between items-center"
+                        >
+                          {subItem.title}
+                          {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
+                        </button>
+                        {openSubDropdown === subItem.title && subItem.subDropdown && (
+                          <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-1">
+                            {subItem.subDropdown.map((nestedItem) => (
+                              <Link
+                                key={nestedItem.title}
+                                href={nestedItem.href}
+                                className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                              >
+                                {nestedItem.title}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link key={item.title} href={item.href} className="hover:text-white/80">
+                {item.title}
+              </Link>
+            )
+          )}
+        </div>
 
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />
-          </Link>
+        {/* Logo */}
+        <Link href="/" className="flex-shrink-0">
+          <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />
+        </Link>
 
-          {/* Right Nav */}
-          <div className="hidden lg:flex flex-1 justify-end items-center gap-x-8 text-white text-sm font-medium">
-            {navigationItems.slice(3).map((item) =>
-              "dropdown" in item ? (
-                <div key={item.title} className="relative dropdown-parent">
-                  <button
-                    className="flex items-center gap-1 hover:text-white/80"
-                    onClick={() =>
-                      setActiveDropdown((prev) => (prev === item.title ? null : item.title))
-                    }
+        {/* Right Nav */}
+        <div className="hidden lg:flex flex-1 justify-end items-center gap-x-8 text-white text-sm font-medium">
+          {navigationItems.slice(3).map((item) =>
+            "dropdown" in item ? (
+              <div key={item.title} className="relative dropdown-parent">
+                <button
+                  className="flex items-center gap-1 hover:text-white/80"
+                  onClick={() =>
+                    setActiveDropdown((prev) => (prev === item.title ? null : item.title))
+                  }
+                >
+                  {item.title}
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                {activeDropdown === item.title && (
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
+                    {item.dropdown.map((subItem) => (
+                      <Link
+                        key={subItem.title}
+                        href={subItem.href}
+                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                      >
+                        {subItem.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link key={item.title} href={item.href} className="hover:text-white/80">
+                {item.title}
+              </Link>
+            )
+          )}
+
+          {/* Login Button */}
+          <Button
+            onClick={() => router.push("/login")}
+            className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
+          >
+            Sign In / Log In
+          </Button>
+        </div>
+
+        {/* Mobile Toggle */}
+        <div className="lg:hidden absolute left-4 top-1/2 transform -translate-y-1/2">
+          <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
+            {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+          </Button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="lg:hidden bg-[#4377B2] text-white shadow-md w-full absolute top-full left-0 z-40">
+          <div className="p-4 space-y-4">
+            {navigationItems.map((item) => (
+              <div key={item.title}>
+                {"href" in item && (
+                  <Link
+                    href={item.href}
+                    className="flex items-center justify-between text-lg py-2 hover:text-white/80"
+                    onClick={() => setOpen(false)}
                   >
                     {item.title}
-                    <ChevronDown className="w-4 h-4" />
-                  </button>
-                  {activeDropdown === item.title && (
-                    <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
+                    <MoveRight className="w-4 h-4" />
+                  </Link>
+                )}
+                {"dropdown" in item && (
+                  <>
+                    <p className="text-lg mt-2">{item.title}</p>
+                    <div className="pl-4 space-y-2">
                       {item.dropdown.map((subItem) => (
                         <Link
                           key={subItem.title}
                           href={subItem.href}
-                          className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                          className="block text-sm hover:text-white/80"
+                          onClick={() => setOpen(false)}
                         >
                           {subItem.title}
                         </Link>
                       ))}
                     </div>
-                  )}
-                </div>
-              ) : (
-                <Link key={item.title} href={item.href} className="hover:text-white/80">
-                  {item.title}
-                </Link>
-              )
-            )}
-
-            {/* Login Button */}
+                  </>
+                )}
+              </div>
+            ))}
             <Button
-              onClick={() => router.push("/login")}
-              className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
+              onClick={() => {
+                setOpen(false);
+                router.push("/login");
+              }}
+              className="w-full mt-4 text-white bg-[#ffffff78] hover:bg-[#285384] rounded-full py-2"
             >
               Sign In / Log In
             </Button>
           </div>
-
-          {/* Mobile Toggle - continue your mobile nav here */}
         </div>
-      </header>
-
-      {/* Centered Content Section */}
-      <div className="mt-36 px-4">
-        <div className="text-center max-w-2xl mx-auto">
-          <h1 className="text-3xl font-bold text-[#4377B2] mb-2">
-            Online Yoga Teacher Training:
-          </h1>
-          <p className="text-lg text-gray-700">
-            Become a Certified Yoga Teacher<br />
-            Start Your Journey Today
-          </p>
-        </div>
-      </div>
-    </>
+      )}
+    </header>
   );
 };

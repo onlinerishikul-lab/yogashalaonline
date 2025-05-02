@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, MoveRight, X, ChevronDown, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type SubDropdownItem = {
@@ -163,7 +163,11 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"}`}>
+    <header
+      className={fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
+      }}
+    >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between lg:justify-start">
         {/* Left Nav Items */}
         <div className="hidden lg:flex items-center space-x-8 text-white text-sm font-medium mr-auto">
@@ -181,12 +185,13 @@ export const Header = () => {
                   {item.title}
                   <ChevronDown className="w-4 h-4" />
                 </button>
+
                 {activeDropdown === item.title && (
                   <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-56 z-50">
                     {item.dropdown.map((subItem) => (
                       <div
                         key={subItem.title}
-                        className="relative border-b border-gray-200"
+                        className={relative border-b border-gray-200}
                       >
                         <button
                           onClick={(e) => {
@@ -195,7 +200,7 @@ export const Header = () => {
                               setOpenSubDropdown((prev) =>
                                 prev === subItem.title ? null : subItem.title
                               );
-                            } else {
+                            } else if (subItem.href) {
                               router.push(subItem.href);
                               setActiveDropdown(null);
                               setOpenSubDropdown(null);
@@ -206,6 +211,7 @@ export const Header = () => {
                           {subItem.title}
                           {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
                         </button>
+
                         {openSubDropdown === subItem.title && subItem.subDropdown && (
                           <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-56 z-50">
                             {subItem.subDropdown.map((nestedItem) => (
@@ -238,10 +244,15 @@ export const Header = () => {
 
         {/* Logo Center */}
         <Link href="/" className="mx-auto lg:mx-0">
-          <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />
+          <Image
+            src="/assets/rishikulonlinlogo.png"
+            alt="Yoga Logo"
+            width={120}
+            height={80}
+          />
         </Link>
 
-        {/* Right Nav Items */}
+        {/* Right Nav */}
         <nav className="hidden lg:flex items-center space-x-10 text-white text-sm font-medium ml-auto">
           {navigationItems.slice(3).map((item) =>
             "dropdown" in item ? (
@@ -285,9 +296,73 @@ export const Header = () => {
 
         {/* Login Button */}
         <div className="hidden lg:block ml-4">
-          <Button onClick={() => router.push("/login")}>Login</Button>
+          <Button
+            onClick={() => router.push("/login")}
+            className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
+          >
+            Sign In / Log In
+          </Button>
+        </div>
+
+        {/* Mobile Hamburger Icon Centered */}
+        <div className="lg:hidden absolute left-4 top-1/2 transform -translate-y-1/2">
+          <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
+            {isOpen ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <Menu className="w-6 h-6 text-white" />
+            )}
+          </Button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="lg:hidden bg-[#4377B2] text-white shadow-md w-full absolute top-full left-0 z-40">
+          <div className="p-4 space-y-4">
+            {navigationItems.map((item) => (
+              <div key={item.title}>
+                {"href" in item && (
+                  <Link
+                    href={item.href}
+                    className="flex items-center justify-between text-lg py-2 hover:text-white/80"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.title}
+                    <MoveRight className="w-4 h-4" />
+                  </Link>
+                )}
+                {"dropdown" in item && (
+                  <>
+                    <p className="text-lg mt-2">{item.title}</p>
+                    <div className="pl-4 space-y-2">
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.title}
+                          href={subItem.href}
+                          className="block text-sm hover:text-white/80"
+                          onClick={() => setOpen(false)}
+                        >
+                          {subItem.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            ))}
+            <Button
+              onClick={() => {
+                setOpen(false);
+                router.push("/login");
+              }}
+              className="w-full mt-4 text-white bg-[#ffffff78] hover:bg-[#285384] rounded-full py-2"
+            >
+              Sign In / Log In
+            </Button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

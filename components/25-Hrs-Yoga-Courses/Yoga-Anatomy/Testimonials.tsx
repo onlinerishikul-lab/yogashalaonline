@@ -8,7 +8,7 @@ const Testimonials = () => {
       name: "Jennifer K.",
       location: "New York, USA",
       image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      quote: "The Online 200 program at House of OM exceeded all my expectations. Despite being fully remote, I felt deeply connected to my teachers and fellow students. The curriculum was comprehensive and the instructors were incredibly supportive. I now feel fully prepared and confident to begin my teaching journey.",
+      quote: "&quot;The Online 200 program at House of OM exceeded all my expectations. Despite being fully remote, I felt deeply connected to my teachers and fellow students. The curriculum was comprehensive and the instructors were incredibly supportive. I now feel fully prepared and confident to begin my teaching journey.&quot;",
       stars: 5,
       year: 2023
     },
@@ -16,7 +16,7 @@ const Testimonials = () => {
       name: "Miguel R.",
       location: "Barcelona, Spain",
       image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      quote: "As someone who wasn't sure if an online yoga training could be effective, I was pleasantly surprised by how immersive and transformative this program was. The teachers created a sacred container for learning that transcended the digital format. I'm so grateful for this experience.",
+      quote: "&quot;As someone who wasn't sure if an online yoga training could be effective, I was pleasantly surprised by how immersive and transformative this program was. The teachers created a sacred container for learning that transcended the digital format. I'm so grateful for this experience.&quot;",
       stars: 5,
       year: 2024
     },
@@ -24,7 +24,7 @@ const Testimonials = () => {
       name: "Aisha T.",
       location: "Dubai, UAE",
       image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      quote: "The flexibility of the online format allowed me to complete my training while working full-time, which would have been impossible otherwise. The quality of instruction was excellent, and I appreciated how the program honored the traditional aspects of yoga while making them relevant for modern teachers.",
+      quote: "&quot;The flexibility of the online format allowed me to complete my training while working full-time, which would have been impossible otherwise. The quality of instruction was excellent, and I appreciated how the program honored the traditional aspects of yoga while making them relevant for modern teachers.&quot;",
       stars: 5,
       year: 2023
     },
@@ -32,7 +32,7 @@ const Testimonials = () => {
       name: "Thomas W.",
       location: "Melbourne, Australia",
       image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      quote: "Being able to train with House of OM from the other side of the world was incredible. The program was well-structured, with a perfect balance of theory and practice. The teachers were knowledgeable and accessible, always available to answer questions and provide guidance.",
+      quote: "&quot;Being able to train with House of OM from the other side of the world was incredible. The program was well-structured, with a perfect balance of theory and practice. The teachers were knowledgeable and accessible, always available to answer questions and provide guidance.&quot;",
       stars: 5,
       year: 2024
     },
@@ -85,7 +85,7 @@ const Testimonials = () => {
               <div className="md:w-2/3">
                 <blockquote>
                   <p className="text-primary-700 italic leading-relaxed">
-                    "{testimonials[activeIndex].quote}"
+                    &quot;{testimonials[activeIndex].quote}&quot;
                   </p>
                 </blockquote>
               </div>

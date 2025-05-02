@@ -18,37 +18,35 @@ export function Banner() {
 
       <div className="absolute inset-0 bg-black/30" />
 
-      <div className="relative z-10 h-full container mx-auto">
-        <div className="absolute bottom-0 w-full py-10 ">
-          <div className="text-center md:text-start">
-            <h1 className="mb-2 text-4xl md:text-5xl lg:text-6xl">
-              <span className="font-bold text-[#4377B2]">
-                Online Yoga Teacher Training:
-              </span>
-              <br />
-              <span className="text-white">
-                Become a Certified Yoga Teacher
-              </span>
-            </h1>
+      <div className="relative z-10 h-full container mx-auto flex flex-col justify-center items-center text-center">
+        {/* Centered heading and button */}
+        <div>
+          <h1 className="mb-4 text-4xl md:text-5xl lg:text-6xl">
+            <span className="font-bold text-[#4377B2]">
+              Online Yoga Teacher Training:
+            </span>
+            <br />
+            <span className="text-white">Become a Certified Yoga Teacher</span>
+          </h1>
+          <Button
+            className="mt-4 bg-[#4377B2] px-6 py-5 text-base hover:bg-[#285384] rounded-full"
+            onClick={() => router.push("/courses")}
+          >
+            Start Your Journey Today
+          </Button>
+        </div>
+      </div>
 
-            <Button
-              className="mt-4 bg-[#4377B2] px-6 py-5 text-base hover:bg-[#285384] rounded-full"
-              onClick={() => router.push("/courses")}
-            >
-              Start Your Journey Today
-            </Button>
-          </div>
-
-          <div className="flex flex-col md:flex-row items-center md:items-end justify-between gap-10">
-            <RysBadgeSection />
-
-            <Image
-              src="/yoga-alliance.png"
-              alt="Yoga Alliance"
-              width={150}
-              height={150}
-            />
-          </div>
+      {/* Bottom section with badge and image */}
+      <div className="absolute bottom-0 w-full py-10 container mx-auto">
+        <div className="flex flex-col md:flex-row items-center md:items-end justify-between gap-10">
+          <RysBadgeSection />
+          <Image
+            src="/yoga-alliance.png"
+            alt="Yoga Alliance"
+            width={150}
+            height={150}
+          />
         </div>
       </div>
     </div>

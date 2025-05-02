@@ -150,9 +150,7 @@ export const Header = () => {
     const handleClickOutside = (e: MouseEvent) => {
       const dropdowns = document.querySelectorAll(".dropdown-parent");
       if (
-        Array.from(dropdowns).every(
-          (dropdown) => !dropdown.contains(e.target as Node)
-        )
+        Array.from(dropdowns).every((dropdown) => !dropdown.contains(e.target as Node))
       ) {
         setActiveDropdown(null);
         setOpenSubDropdown(null);
@@ -168,38 +166,28 @@ export const Header = () => {
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between lg:justify-start">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between lg:justify-start gap-8">
         {/* Left Nav Items */}
-        <div className="hidden lg:flex items-center space-x-8 text-white text-sm font-medium mr-auto">
+        <div className="hidden lg:flex items-center gap-8 text-white text-sm font-medium mr-auto">
           {navigationItems.slice(0, 3).map((item) =>
             "dropdown" in item ? (
               <div key={item.title} className="relative dropdown-parent">
                 <button
                   className="flex items-center gap-1 hover:text-white/80"
-                  onClick={() =>
-                    setActiveDropdown((prev) =>
-                      prev === item.title ? null : item.title
-                    )
-                  }
+                  onClick={() => setActiveDropdown((prev) => (prev === item.title ? null : item.title))}
                 >
-                  {item.title}
-                  <ChevronDown className="w-4 h-4" />
+                  {item.title} <ChevronDown className="w-4 h-4" />
                 </button>
 
                 {activeDropdown === item.title && (
                   <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-56 z-50">
                     {item.dropdown.map((subItem) => (
-                      <div
-                        key={subItem.title}
-                        className={`relative border-b border-gray-200`}
-                      >
+                      <div key={subItem.title} className="relative border-b border-gray-200">
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
                             if (subItem.subDropdown) {
-                              setOpenSubDropdown((prev) =>
-                                prev === subItem.title ? null : subItem.title
-                              );
+                              setOpenSubDropdown((prev) => (prev === subItem.title ? null : subItem.title));
                             } else if (subItem.href) {
                               router.push(subItem.href);
                               setActiveDropdown(null);
@@ -231,11 +219,7 @@ export const Header = () => {
                 )}
               </div>
             ) : (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="hover:text-white/80 transition"
-              >
+              <Link key={item.title} href={item.href} className="hover:text-white/80 transition">
                 {item.title}
               </Link>
             )
@@ -244,26 +228,17 @@ export const Header = () => {
 
         {/* Logo Center */}
         <Link href="/" className="mx-auto lg:mx-0">
-          <Image
-            src="/assets/rishikulonlinlogo.png"
-            alt="Yoga Logo"
-            width={120}
-            height={80}
-          />
+          <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />
         </Link>
 
         {/* Right Nav */}
-        <nav className="hidden lg:flex items-center space-x-10 text-white text-sm font-medium ml-auto">
+        <nav className="hidden lg:flex items-center gap-8 text-white text-sm font-medium ml-auto">
           {navigationItems.slice(3).map((item) =>
             "dropdown" in item ? (
               <div key={item.title} className="relative dropdown-parent">
                 <button
                   className="flex items-center gap-1 hover:text-white/80"
-                  onClick={() =>
-                    setActiveDropdown((prev) =>
-                      prev === item.title ? null : item.title
-                    )
-                  }
+                  onClick={() => setActiveDropdown((prev) => (prev === item.title ? null : item.title))}
                 >
                   {item.title}
                   <ChevronDown className="w-4 h-4" />
@@ -283,11 +258,7 @@ export const Header = () => {
                 )}
               </div>
             ) : (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="hover:text-white/80 transition"
-              >
+              <Link key={item.title} href={item.href} className="hover:text-white/80 transition">
                 {item.title}
               </Link>
             )
@@ -307,11 +278,7 @@ export const Header = () => {
         {/* Mobile Hamburger Icon Centered */}
         <div className="lg:hidden absolute left-4 top-1/2 transform -translate-y-1/2">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-            {isOpen ? (
-              <X className="w-6 h-6 text-white" />
-            ) : (
-              <Menu className="w-6 h-6 text-white" />
-            )}
+            {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
           </Button>
         </div>
       </div>

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import Image from 'next/image'; // Import the Next.js Image component

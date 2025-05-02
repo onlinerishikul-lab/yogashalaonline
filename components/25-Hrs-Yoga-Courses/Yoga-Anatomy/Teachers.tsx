@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Teachers = () => {
   const teachers = [
@@ -46,10 +47,12 @@ const Teachers = () => {
           {teachers.map((teacher, index) => (
             <div key={index} className="bg-primary-50 rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row">
               <div className="md:w-2/5">
-                <img 
+                <Image 
                   src={teacher.image} 
                   alt={teacher.name} 
                   className="h-full w-full object-cover object-center"
+                  width={500} 
+                  height={500} 
                 />
               </div>
               <div className="p-6 md:w-3/5">
@@ -70,7 +73,7 @@ const Teachers = () => {
         
         <div className="mt-12 text-center">
           <p className="text-primary-600 italic">
-            "Our greatest joy is witnessing the transformation of our students as they develop not only as yoga teachers, but as individuals on their spiritual path."
+            &quot;Our greatest joy is witnessing the transformation of our students as they develop not only as yoga teachers, but as individuals on their spiritual path.&quot;
           </p>
           <p className="mt-2 text-primary-700 font-medium">— The House of OM Faculty</p>
         </div>

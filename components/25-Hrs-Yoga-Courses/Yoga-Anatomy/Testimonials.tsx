@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import Image from 'next/image'; // Import the Next.js Image component
 
 const Testimonials = () => {
   const testimonials = [
@@ -56,15 +57,17 @@ const Testimonials = () => {
             Hear from our graduates about their transformative journeys through our Online 200 program.
           </p>
         </div>
-        
+
         <div className="relative">
           <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3">
                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mx-auto">
-                  <img 
-                    src={testimonials[activeIndex].image} 
-                    alt={testimonials[activeIndex].name} 
+                  <Image
+                    src={testimonials[activeIndex].image}
+                    alt={testimonials[activeIndex].name}
+                    width={128} // Size of the image
+                    height={128} // Size of the image
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -81,29 +84,31 @@ const Testimonials = () => {
               </div>
               <div className="md:w-2/3">
                 <blockquote>
-                  <p className="text-primary-700 italic leading-relaxed">"{testimonials[activeIndex].quote}"</p>
+                  <p className="text-primary-700 italic leading-relaxed">"{testimonials[activeIndex].quote.replace(/"/g, "&quot;")}"</p>
                 </blockquote>
               </div>
             </div>
           </div>
-          
-          <button 
+
+          <button
             onClick={prevTestimonial}
+            onKeyDown={(e) => { if (e.key === 'ArrowLeft') prevTestimonial(); }}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 bg-white text-primary-800 w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-primary-100 transition-colors"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          
-          <button 
+
+          <button
             onClick={nextTestimonial}
+            onKeyDown={(e) => { if (e.key === 'ArrowRight') nextTestimonial(); }}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 bg-white text-primary-800 w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-primary-100 transition-colors"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
-        
+
         <div className="flex justify-center mt-8">
           {testimonials.map((_, index) => (
             <button
@@ -114,10 +119,10 @@ const Testimonials = () => {
             />
           ))}
         </div>
-        
+
         <div className="mt-16 text-center">
-          <a 
-            href="#" 
+          <a
+            href="#"
             className="inline-flex items-center text-primary-700 hover:text-primary-900 font-medium"
           >
             Read More Student Stories

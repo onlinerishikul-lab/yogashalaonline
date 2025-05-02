@@ -39,7 +39,7 @@ export const Header = () => {
           title: "25 Hrs Yoga Courses",
           href: "/yoga/25-hours",
           subDropdown: [
-            { title: "Yoga Anatomy for Safe Journey", href: "/yoga/25-hours/yoga-anatomy" },
+            { title: "Yoga Anatomy for Safe Journey", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy" },
             { title: "Face Yoga", href: "/yoga/25-hours/face-yoga" },
           ],
         },

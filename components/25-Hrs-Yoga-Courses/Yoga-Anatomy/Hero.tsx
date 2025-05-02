@@ -16,10 +16,16 @@ const Hero = () => {
         </div>
         
         <div className="mt-8 flex flex-col md:flex-row justify-center gap-4 animate-slide-up">
-          <button className="bg-primary text-primary-light px-8 py-3 rounded-md hover:bg-primary-dark transition-all">
+          <button 
+            className="bg-primary text-primary-light px-8 py-3 rounded-md hover:bg-primary-dark transition-all"
+            aria-label="Apply now for the training"
+          >
             Apply Now
           </button>
-          <button className="bg-primary-light text-primary border border-primary px-8 py-3 rounded-md hover:bg-primary-light transition-all">
+          <button 
+            className="bg-primary-light text-primary border border-primary px-8 py-3 rounded-md hover:bg-primary-light transition-all"
+            aria-label="Learn more about the training"
+          >
             Learn More
           </button>
         </div>

@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 const FAQ = () => {
-  const faqs = [
+  const faqs: FAQItem[] = [
     {
       question: "Is this training recognized by Yoga Alliance?",
       answer: "Yes, our Online 200-Hour Teacher Training is fully accredited by Yoga Alliance. Upon successful completion, you'll be eligible to register as an RYT-200 with Yoga Alliance."
@@ -69,9 +74,7 @@ const FAQ = () => {
                 )}
               </button>
               <div 
-                className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                }`}
+                className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
               >
                 <div className="p-5 bg-white text-primary">
                   {faq.answer}

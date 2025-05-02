@@ -39,7 +39,7 @@ const Benefits = () => {
           </div>
           
           <blockquote className="italic text-primary text-center max-w-3xl mx-auto">
-            "The House of OM Online 200 training exceeded all my expectations. The curriculum was thorough, the teachers were incredibly knowledgeable and supportive, and the community aspect made me feel connected despite being physically distant. This training has completely transformed my practice and given me the confidence to teach."
+            &quot;The House of OM Online 200 training exceeded all my expectations. The curriculum was thorough, the teachers were incredibly knowledgeable and supportive, and the community aspect made me feel connected despite being physically distant. This training has completely transformed my practice and given me the confidence to teach.&quot;
             <footer className="mt-4 text-primary font-medium not-italic">
               — Sarah J., Graduate 2024
             </footer>

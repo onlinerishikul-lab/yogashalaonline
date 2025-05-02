@@ -15,15 +15,15 @@ const CourseInfo = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-primary mb-6 leading-relaxed">
-              The House of OM's Online 200-Hour Teacher Training offers a deep immersion into the art and science of yoga. Our curriculum covers asana, pranayama, meditation, philosophy, anatomy, teaching methodology, and the business of yoga.
+              The House of OM&apos;s Online 200-Hour Teacher Training offers a deep immersion into the art and science of yoga. Our curriculum covers asana, pranayama, meditation, philosophy, anatomy, teaching methodology, and the business of yoga.
             </p>
             
             <p className="text-primary mb-6 leading-relaxed">
-              The program is designed to be completed part-time over 10 weeks, with a mix of live sessions and self-paced learning. You'll join a cohort of dedicated practitioners from around the world, creating a supportive community.
+              The program is designed to be completed part-time over 10 weeks, with a mix of live sessions and self-paced learning. You&apos;ll join a cohort of dedicated practitioners from around the world, creating a supportive community.
             </p>
             
             <p className="text-primary leading-relaxed">
-              By the end of the training, you'll have the confidence and skills to teach yoga safely and effectively, plus lifetime access to our extensive library of resources.
+              By the end of the training, you&apos;ll have the confidence and skills to teach yoga safely and effectively, plus lifetime access to our extensive library of resources.
             </p>
           </div>
           

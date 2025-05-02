@@ -19,11 +19,11 @@ type DropdownItem = {
 };
 
 type NavigationItem =
-  {
+  | {
       title: string;
       href: string;
     }
-   {
+  | {
       title: string;
       dropdown: DropdownItem[];
     };
@@ -163,12 +163,12 @@ export const Header = () => {
   }, []);
 
   return (
-   <header
+    <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-     <div className="container mx-auto px-4 py-3 flex items-center justify-between lg:justify-start">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between lg:justify-start">
         {/* Left Nav Items */}
         <div className="hidden lg:flex items-center space-x-8 text-white text-sm font-medium mr-auto">
           {navigationItems.slice(0, 3).map((item) =>
@@ -191,7 +191,7 @@ export const Header = () => {
                     {item.dropdown.map((subItem) => (
                       <div
                         key={subItem.title}
-                        className={relative border-b border-gray-200}
+                        className={`relative border-b border-gray-200`}
                       >
                         <button
                           onClick={(e) => {

@@ -84,7 +84,9 @@ const Testimonials = () => {
               </div>
               <div className="md:w-2/3">
                 <blockquote>
-                  <p className="text-primary-700 italic leading-relaxed">"{testimonials[activeIndex].quote.replace(/"/g, "&quot;")}"</p>
+                  <p className="text-primary-700 italic leading-relaxed">
+                    "{testimonials[activeIndex].quote}"
+                  </p>
                 </blockquote>
               </div>
             </div>

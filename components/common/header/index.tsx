@@ -19,11 +19,11 @@ type DropdownItem = {
 };
 
 type NavigationItem =
-  | {
+  {
       title: string;
       href: string;
     }
-  | {
+   {
       title: string;
       dropdown: DropdownItem[];
     };
@@ -168,9 +168,7 @@ export const Header = () => {
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-
-
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between lg:justify-start">
+     <div className="container mx-auto px-4 py-3 flex items-center justify-between lg:justify-start">
         {/* Left Nav Items */}
         <div className="hidden lg:flex items-center space-x-8 text-white text-sm font-medium mr-auto">
           {navigationItems.slice(0, 3).map((item) =>

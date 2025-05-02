@@ -164,10 +164,11 @@ export const Header = () => {
 
   return (
     <header
-  className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+  className={fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
     isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
-  }`}
+  }}
 >
+
 
       <div className="container mx-auto px-4 py-3 flex items-center justify-between lg:justify-start">
         {/* Left Nav Items */}

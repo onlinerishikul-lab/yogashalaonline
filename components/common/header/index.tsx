@@ -158,9 +158,9 @@ export const Header = () => {
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between lg:justify-start">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Left Nav */}
-        <div className="hidden lg:flex items-center gap-x-10 text-white text-sm font-medium mr-auto">
+        <div className="hidden lg:flex flex-1 items-center gap-x-8 text-white text-sm font-medium">
           {navigationItems.slice(0, 3).map((item) =>
             "dropdown" in item ? (
               <div key={item.title} className="relative dropdown-parent">
@@ -214,29 +214,20 @@ export const Header = () => {
                 )}
               </div>
             ) : (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="hover:text-white/80 transition"
-              >
+              <Link key={item.title} href={item.href} className="hover:text-white/80">
                 {item.title}
               </Link>
             )
           )}
         </div>
 
-        {/* Center Logo */}
-        <Link href="/" className="mx-auto lg:mx-0">
-          <Image
-            src="/assets/rishikulonlinlogo.png"
-            alt="Yoga Logo"
-            width={120}
-            height={80}
-          />
+        {/* Logo */}
+        <Link href="/" className="flex-shrink-0">
+          <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />
         </Link>
 
         {/* Right Nav */}
-        <nav className="hidden lg:flex items-center gap-x-10 text-white text-sm font-medium ml-auto">
+        <div className="hidden lg:flex flex-1 justify-end items-center gap-x-8 text-white text-sm font-medium">
           {navigationItems.slice(3).map((item) =>
             "dropdown" in item ? (
               <div key={item.title} className="relative dropdown-parent">
@@ -264,19 +255,13 @@ export const Header = () => {
                 )}
               </div>
             ) : (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="hover:text-white/80 transition"
-              >
+              <Link key={item.title} href={item.href} className="hover:text-white/80">
                 {item.title}
               </Link>
             )
           )}
-        </nav>
 
-        {/* Login */}
-        <div className="hidden lg:block ml-4">
+          {/* Login Button */}
           <Button
             onClick={() => router.push("/login")}
             className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"

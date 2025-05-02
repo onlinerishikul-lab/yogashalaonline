@@ -168,43 +168,9 @@ export const Header = () => {
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between lg:justify-center relative">
-        {/* Mobile Hamburger */}
-        <div className="lg:hidden absolute left-4">
-          <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-            {isOpen ? (
-              <X className="w-6 h-6 text-white" />
-            ) : (
-              <Menu className="w-6 h-6 text-white" />
-            )}
-          </Button>
-        </div>
-
-        {/* Logo Centered */}
-        <Link href="/" className="mx-auto lg:mx-0">
-          <Image
-            src="/assets/rishikulonlinlogo.png"
-            alt="Yoga Logo"
-            width={120}
-            height={80}
-          />
-        </Link>
-
-        {/* Sign In Button (hidden on mobile) */}
-        <div className="hidden lg:block absolute right-4">
-          <Button
-            onClick={() => router.push("/login")}
-            className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
-          >
-            Sign In / Log In
-          </Button>
-        </div>
-      </div>
-
-      {/* Desktop Nav */}
-      <div className="hidden lg:flex justify-between items-center px-4 pb-3 text-white text-sm font-medium">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between lg:justify-start">
         {/* Left Nav Items */}
-        <div className="flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-8 text-white text-sm font-medium mr-auto">
           {navigationItems.slice(0, 3).map((item) =>
             "dropdown" in item ? (
               <div key={item.title} className="relative dropdown-parent">
@@ -219,10 +185,14 @@ export const Header = () => {
                   {item.title}
                   <ChevronDown className="w-4 h-4" />
                 </button>
+
                 {activeDropdown === item.title && (
                   <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-56 z-50">
-                    {item.dropdown.map((subItem, index) => (
-                      <div key={subItem.title} className="relative border-b border-gray-200 last:border-none">
+                    {item.dropdown.map((subItem) => (
+                      <div
+                        key={subItem.title}
+                        className={`relative border-b border-gray-200`}
+                      >
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
@@ -230,7 +200,7 @@ export const Header = () => {
                               setOpenSubDropdown((prev) =>
                                 prev === subItem.title ? null : subItem.title
                               );
-                            } else {
+                            } else if (subItem.href) {
                               router.push(subItem.href);
                               setActiveDropdown(null);
                               setOpenSubDropdown(null);
@@ -241,13 +211,14 @@ export const Header = () => {
                           {subItem.title}
                           {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
                         </button>
+
                         {openSubDropdown === subItem.title && subItem.subDropdown && (
                           <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-56 z-50">
-                            {subItem.subDropdown.map((nestedItem, idx) => (
+                            {subItem.subDropdown.map((nestedItem) => (
                               <Link
                                 key={nestedItem.title}
                                 href={nestedItem.href}
-                                className="block px-4 py-2 text-sm text-black hover:bg-gray-100 border-b last:border-none"
+                                className="block px-4 py-2 text-sm text-black hover:bg-gray-100 border-b border-gray-200"
                               >
                                 {nestedItem.title}
                               </Link>
@@ -271,8 +242,18 @@ export const Header = () => {
           )}
         </div>
 
-        {/* Right Nav Items */}
-        <div className="flex items-center space-x-8">
+        {/* Logo Center */}
+        <Link href="/" className="mx-auto lg:mx-0">
+          <Image
+            src="/assets/rishikulonlinlogo.png"
+            alt="Yoga Logo"
+            width={120}
+            height={80}
+          />
+        </Link>
+
+        {/* Right Nav */}
+        <nav className="hidden lg:flex items-center space-x-10 text-white text-sm font-medium ml-auto">
           {navigationItems.slice(3).map((item) =>
             "dropdown" in item ? (
               <div key={item.title} className="relative dropdown-parent">
@@ -287,7 +268,19 @@ export const Header = () => {
                   {item.title}
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                {/* same dropdown code reused */}
+                {activeDropdown === item.title && (
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-56 z-50">
+                    {item.dropdown.map((subItem) => (
+                      <Link
+                        key={subItem.title}
+                        href={subItem.href}
+                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100 border-b border-gray-200"
+                      >
+                        {subItem.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             ) : (
               <Link
@@ -299,10 +292,31 @@ export const Header = () => {
               </Link>
             )
           )}
+        </nav>
+
+        {/* Login Button */}
+        <div className="hidden lg:block ml-4">
+          <Button
+            onClick={() => router.push("/login")}
+            className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
+          >
+            Sign In / Log In
+          </Button>
+        </div>
+
+        {/* Mobile Hamburger Icon Centered */}
+        <div className="lg:hidden absolute left-4 top-1/2 transform -translate-y-1/2">
+          <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
+            {isOpen ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <Menu className="w-6 h-6 text-white" />
+            )}
+          </Button>
         </div>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden bg-[#4377B2] text-white shadow-md w-full absolute top-full left-0 z-40">
           <div className="p-4 space-y-4">

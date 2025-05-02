@@ -4,7 +4,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Menu, MoveRight, X, ChevronDown, ChevronRight } from "lucide-react";
+import {
+  Menu,
+  MoveRight,
+  X,
+  ChevronDown,
+  ChevronRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type SubDropdownItem = {
@@ -32,10 +38,6 @@ export const Header = () => {
   const router = useRouter();
 
   const navigationItems: NavigationItem[] = [
-    {
-      title: "Home",
-      href: "/",
-    },
     {
       title: "Online Yoga Training",
       dropdown: [
@@ -166,6 +168,9 @@ export const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const leftItems = navigationItems.slice(0, 3);
+  const rightItems = navigationItems.slice(3);
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -173,18 +178,20 @@ export const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/">
-          <Image
-            src="/assets/rishikulonlinlogo.png"
-            alt="Yoga Logo"
-            width={120}
-            height={80}
-          />
-        </Link>
+        {/* Mobile Hamburger */}
+        <div className="lg:hidden flex items-center">
+          <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
+            {isOpen ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <Menu className="w-6 h-6 text-white" />
+            )}
+          </Button>
+        </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center space-x-10 text-white text-sm font-medium">
-          {navigationItems.map((item) =>
+        <div className="hidden lg:flex flex-1 items-center space-x-6 text-white text-sm font-medium">
+          {leftItems.map((item) =>
             "dropdown" in item ? (
               <div key={item.title} className="relative dropdown-parent">
                 <button
@@ -198,7 +205,6 @@ export const Header = () => {
                   {item.title}
                   <ChevronDown className="w-4 h-4" />
                 </button>
-
                 {activeDropdown === item.title && (
                   <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-56 z-50">
                     {item.dropdown.map((subItem, index) => (
@@ -226,7 +232,6 @@ export const Header = () => {
                           {subItem.title}
                           {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
                         </button>
-
                         {openSubDropdown === subItem.title && subItem.subDropdown && (
                           <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-56 z-50">
                             {subItem.subDropdown.map((nestedItem, idx) => (
@@ -259,26 +264,63 @@ export const Header = () => {
               </Link>
             )
           )}
-        </nav>
+        </div>
 
-        {/* Login Button */}
-        <div className="hidden lg:block">
+        {/* Center Logo */}
+        <Link href="/" className="hidden lg:flex justify-center flex-none">
+          <Image
+            src="/assets/rishikulonlinlogo.png"
+            alt="Yoga Logo"
+            width={120}
+            height={80}
+          />
+        </Link>
+
+        {/* Right Items */}
+        <div className="hidden lg:flex flex-1 items-center justify-end space-x-6 text-white text-sm font-medium">
+          {rightItems.map((item) =>
+            "dropdown" in item ? (
+              <div key={item.title} className="relative dropdown-parent">
+                <button
+                  className="flex items-center gap-1 hover:text-white/80"
+                  onClick={() =>
+                    setActiveDropdown((prev) =>
+                      prev === item.title ? null : item.title
+                    )
+                  }
+                >
+                  {item.title}
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                {activeDropdown === item.title && (
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-56 z-50">
+                    {item.dropdown.map((subItem) => (
+                      <Link
+                        key={subItem.title}
+                        href={subItem.href}
+                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                      >
+                        {subItem.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="hover:text-white/80 transition"
+              >
+                {item.title}
+              </Link>
+            )
+          )}
           <Button
             onClick={() => router.push("/login")}
             className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
           >
             Sign In / Log In
-          </Button>
-        </div>
-
-        {/* Mobile Hamburger */}
-        <div className="lg:hidden flex items-center">
-          <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-            {isOpen ? (
-              <X className="w-6 h-6 text-white" />
-            ) : (
-              <Menu className="w-6 h-6 text-white" />
-            )}
           </Button>
         </div>
       </div>

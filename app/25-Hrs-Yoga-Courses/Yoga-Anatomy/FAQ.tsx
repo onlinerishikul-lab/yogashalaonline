@@ -89,11 +89,10 @@ const FAQ = () => {
                 id={`faq-panel-${index}`}
                 role="region"
                 aria-labelledby={`faq-${index}`}
-                className={`transition-all duration-300 ${
-                  openIndex === index
+                className={`transition-all duration-300 ${openIndex === index
                     ? 'max-h-[500px] opacity-100 p-5'
                     : 'max-h-0 opacity-0 p-0'
-                } overflow-hidden bg-white text-primary`}
+                  } overflow-hidden bg-white text-primary`}
               >
                 <p className="text-sm">{faq.answer}</p>
               </div>
@@ -106,7 +105,7 @@ const FAQ = () => {
             Still Have Questions?
           </h3>
           <p className="text-primary mb-4">
-            We're happy to help! Reach out to us for more information about our program.
+            We&apos;re happy to help! Reach out to us for more information about our program.
           </p>
           <button className="bg-primary text-white px-6 py-2 rounded-md hover:bg-primary-dark transition-all">
             Contact Us

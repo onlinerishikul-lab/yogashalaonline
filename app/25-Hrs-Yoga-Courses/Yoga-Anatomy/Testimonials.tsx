@@ -33,7 +33,7 @@ const Testimonials = () => {
       name: "Thomas W.",
       location: "Melbourne, Australia",
       image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      quote: "House of OM's Yoga Anatomy course was a game-changer for me. It helped me to not only deepen my understanding of the body but also to connect more meaningfully with my students' needs and limitations.",
+      quote: "Yoga Anatomy course was a game-changer for me. It helped me to not only deepen my understanding of the body but also to connect more meaningfully with my students' needs and limitations.",
       stars: 5,
       year: 2024
     },

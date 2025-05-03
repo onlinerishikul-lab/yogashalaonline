@@ -9,7 +9,7 @@ const Testimonials = () => {
       name: "Jennifer K.",
       location: "New York, USA",
       image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      quote: "The Yoga Anatomy program at House of OM transformed my understanding of the human body in asana practice. The instructors' detailed explanations made anatomy fascinating and practical. I now feel confident in my ability to teach with anatomical precision.",
+      quote: "The Yoga Anatomy program at transformed my understanding of the human body in asana practice. The instructors' detailed explanations made anatomy fascinating and practical. I now feel confident in my ability to teach with anatomical precision.",
       stars: 5,
       year: 2023
     },

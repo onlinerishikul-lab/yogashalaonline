@@ -56,10 +56,10 @@ const FAQ = () => {
     <section className="py-16 md:py-24 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#4377b2] mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-primary max-w-3xl mx-auto">
+          <p className="text-lg text-[#4377b2] max-w-3xl mx-auto">
             Find answers to common questions about our Online 200-Hour Teacher Training program.
           </p>
         </div>
@@ -68,20 +68,20 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-primary rounded-lg overflow-hidden"
+              className="border border-[#4377b2] rounded-lg overflow-hidden"
             >
               <button
                 id={`faq-${index}`}
-                className="w-full text-left p-5 flex justify-between items-center bg-primary-light hover:bg-white transition-colors"
+                className="w-full text-left p-5 flex justify-between items-center bg-[#4377b2]/10 hover:bg-white transition-colors"
                 onClick={() => toggleFAQ(index)}
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-panel-${index}`}
               >
-                <span className="font-medium text-primary">{faq.question}</span>
+                <span className="font-medium text-[#4377b2]">{faq.question}</span>
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-primary" />
+                  <ChevronUp className="w-5 h-5 text-[#4377b2]" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-primary" />
+                  <ChevronDown className="w-5 h-5 text-[#4377b2]" />
                 )}
               </button>
 
@@ -92,7 +92,7 @@ const FAQ = () => {
                 className={`transition-all duration-300 ${openIndex === index
                     ? 'max-h-[500px] opacity-100 p-5'
                     : 'max-h-0 opacity-0 p-0'
-                  } overflow-hidden bg-white text-primary`}
+                  } overflow-hidden bg-white text-[#4377b2]`}
               >
                 <p className="text-sm">{faq.answer}</p>
               </div>
@@ -100,14 +100,14 @@ const FAQ = () => {
           ))}
         </div>
 
-        <div className="mt-12 p-6 bg-primary-light rounded-lg text-center">
-          <h3 className="text-xl font-serif text-primary mb-2">
+        <div className="mt-12 p-6 bg-[#4377b2]/10 rounded-lg text-center">
+          <h3 className="text-xl font-serif text-[#4377b2] mb-2">
             Still Have Questions?
           </h3>
-          <p className="text-primary mb-4">
+          <p className="text-[#4377b2] mb-4">
             We&apos;re happy to help! Reach out to us for more information about our program.
           </p>
-          <button className="bg-primary text-white px-6 py-2 rounded-md hover:bg-primary-dark transition-all">
+          <button className="bg-[#4377b2] text-white px-6 py-2 rounded-md hover:bg-[#365d91] transition-all">
             Contact Us
           </button>
         </div>

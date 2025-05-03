@@ -39,26 +39,26 @@ const Schedule = () => {
     <section className="py-16 md:py-24 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary mb-4">Yoga Anatomy Program Schedule & Curriculum</h2>
-          <p className="text-lg text-primary max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#4377b2] mb-4">Yoga Anatomy Program Schedule & Curriculum</h2>
+          <p className="text-lg text-[#4377b2] max-w-3xl mx-auto">
             Our 10-week Yoga Anatomy program is designed to give you a deep understanding of how the body functions during yoga practice, ensuring safe and effective teaching.
           </p>
         </div>
         
         <div className="space-y-8">
           {modules.map((module, index) => (
-            <div key={index} className="border-l-4 border-primary pl-6 py-2">
-              <div className="bg-primary-light p-6 rounded-r-lg shadow-sm">
+            <div key={index} className="border-l-4 border-[#4377b2] pl-6 py-2">
+              <div className="bg-[#f0f4fa] p-6 rounded-r-lg shadow-sm">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <h3 className="text-xl font-serif font-medium text-primary">{module.title}</h3>
-                  <span className="bg-white text-primary px-3 py-1 rounded-full text-sm font-medium mt-2 md:mt-0">
+                  <h3 className="text-xl font-serif font-medium text-[#4377b2]">{module.title}</h3>
+                  <span className="bg-white text-[#4377b2] px-3 py-1 rounded-full text-sm font-medium mt-2 md:mt-0">
                     {module.week}
                   </span>
                 </div>
-                <p className="text-primary mb-4">{module.description}</p>
+                <p className="text-[#4377b2] mb-4">{module.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {module.topics.map((topic, topicIndex) => (
-                    <span key={topicIndex} className="bg-white text-primary px-3 py-1 rounded-md text-sm border border-primary">
+                    <span key={topicIndex} className="bg-white text-[#4377b2] px-3 py-1 rounded-md text-sm border border-[#4377b2]">
                       {topic}
                     </span>
                   ))}
@@ -68,44 +68,44 @@ const Schedule = () => {
           ))}
         </div>
         
-        <div className="mt-12 bg-primary-light p-8 rounded-lg">
-          <h3 className="text-2xl font-serif text-primary mb-4 text-center">Weekly Schedule Overview</h3>
+        <div className="mt-12 bg-[#f0f4fa] p-8 rounded-lg">
+          <h3 className="text-2xl font-serif text-[#4377b2] mb-4 text-center">Weekly Schedule Overview</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h4 className="font-medium text-primary mb-2">Live Sessions</h4>
-              <ul className="space-y-3 text-primary">
+              <h4 className="font-medium text-[#4377b2] mb-2">Live Sessions</h4>
+              <ul className="space-y-3 text-[#4377b2]">
                 <li className="flex justify-between">
                   <span>Tuesday</span>
-                  <span className="text-primary">7:00 PM - 9:00 PM EST</span>
+                  <span className="text-[#4377b2]">7:00 PM - 9:00 PM EST</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Thursday</span>
-                  <span className="text-primary">7:00 PM - 9:00 PM EST</span>
+                  <span className="text-[#4377b2]">7:00 PM - 9:00 PM EST</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Saturday</span>
-                  <span className="text-primary">10:00 AM - 1:00 PM EST</span>
+                  <span className="text-[#4377b2]">10:00 AM - 1:00 PM EST</span>
                 </li>
               </ul>
-              <p className="mt-4 text-sm text-primary">All live sessions are recorded for those unable to attend.</p>
+              <p className="mt-4 text-sm text-[#4377b2]">All live sessions are recorded for those unable to attend.</p>
             </div>
             <div>
-              <h4 className="font-medium text-primary mb-2">Self-Paced Components</h4>
-              <ul className="space-y-3 text-primary">
+              <h4 className="font-medium text-[#4377b2] mb-2">Self-Paced Components</h4>
+              <ul className="space-y-3 text-[#4377b2]">
                 <li className="flex justify-between">
                   <span>Daily Practice</span>
-                  <span className="text-primary">30-60 minutes</span>
+                  <span className="text-[#4377b2]">30-60 minutes</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Reading & Study</span>
-                  <span className="text-primary">3-5 hours weekly</span>
+                  <span className="text-[#4377b2]">3-5 hours weekly</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Assignments</span>
-                  <span className="text-primary">2-3 hours weekly</span>
+                  <span className="text-[#4377b2]">2-3 hours weekly</span>
                 </li>
               </ul>
-              <p className="mt-4 text-sm text-primary">Estimated time commitment: 12-15 hours per week</p>
+              <p className="mt-4 text-sm text-[#4377b2]">Estimated time commitment: 12-15 hours per week</p>
             </div>
           </div>
         </div>

@@ -21,26 +21,26 @@ const Hero = () => {
         </div>
 
         <div className="mt-8 flex flex-col md:flex-row justify-center gap-4 animate-slide-up">
-          <button className="bg-white text-primary px-8 py-3 rounded-md hover:bg-gray-200 transition-all">
+          <button className="bg-white text-[#4377b2] px-8 py-3 rounded-md hover:bg-gray-200 transition-all">
             Enroll Now – $250
           </button>
-          <button className="bg-transparent text-white border border-white px-8 py-3 rounded-md hover:bg-white hover:text-primary transition-all">
+          <button className="bg-transparent text-white border border-white px-8 py-3 rounded-md hover:bg-white hover:text-[#4377b2] transition-all">
             Course Details
           </button>
         </div>
 
         <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white/90 p-6 rounded-lg shadow-md text-primary transform hover:-translate-y-1 transition-transform">
+          <div className="bg-white/90 p-6 rounded-lg shadow-md text-[#4377b2] transform hover:-translate-y-1 transition-transform">
             <h3 className="text-xl font-serif font-medium mb-2">Yoga Anatomy Mastery</h3>
             <p>Gain essential knowledge of muscles, joints, and movement to enhance safe and effective teaching.</p>
           </div>
 
-          <div className="bg-white/90 p-6 rounded-lg shadow-md text-primary transform hover:-translate-y-1 transition-transform">
+          <div className="bg-white/90 p-6 rounded-lg shadow-md text-[#4377b2] transform hover:-translate-y-1 transition-transform">
             <h3 className="text-xl font-serif font-medium mb-2">Flexible Online Format</h3>
             <p>Learn at your own pace with lifetime access to video lectures, guides, and expert support.</p>
           </div>
 
-          <div className="bg-white/90 p-6 rounded-lg shadow-md text-primary transform hover:-translate-y-1 transition-transform">
+          <div className="bg-white/90 p-6 rounded-lg shadow-md text-[#4377b2] transform hover:-translate-y-1 transition-transform">
             <h3 className="text-xl font-serif font-medium mb-2">Designed for All Levels</h3>
             <p>Perfect for yoga teachers, students, and wellness professionals looking to deepen their anatomical knowledge.</p>
           </div>

@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       className="relative bg-cover bg-center py-16 md:py-24 px-4"
-      style={{ backgroundImage: "url('/img/25.hrs.png')" }}
+      style={{ backgroundImage: "url('/25.hrs.png')" }}
     >
       {/* Dark semi-transparent overlay to improve contrast */}
       <div className="absolute inset-0 bg-black/50"></div>

@@ -37,29 +37,31 @@ const Teachers = () => {
     <section className="py-16 md:py-24 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary-800 mb-4">Meet Your Yoga Anatomy Instructors</h2>
-          <p className="text-lg text-primary-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary mb-4">
+            Meet Your Yoga Anatomy Instructors
+          </h2>
+          <p className="text-lg text-primary max-w-3xl mx-auto">
             Learn from our experienced instructors who combine anatomical expertise with the practice of yoga, offering a comprehensive understanding of how the body moves and functions in asana.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {teachers.map((teacher, index) => (
-            <div key={index} className="bg-primary-50 rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row">
+            <div key={index} className="bg-primary-light rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row">
               <div className="md:w-2/5">
-                <img 
-                  src={teacher.image} 
-                  alt={teacher.name} 
+                <img
+                  src={teacher.image}
+                  alt={teacher.name}
                   className="h-full w-full object-cover object-center"
                 />
               </div>
               <div className="p-6 md:w-3/5">
-                <h3 className="text-xl font-serif font-medium text-primary-800">{teacher.name}</h3>
-                <p className="text-accent-600 mb-3">{teacher.role}</p>
-                <p className="text-primary-600 text-sm mb-4">{teacher.bio}</p>
+                <h3 className="text-xl font-serif font-medium text-primary">{teacher.name}</h3>
+                <p className="text-accent mb-3">{teacher.role}</p>
+                <p className="text-primary text-sm mb-4">{teacher.bio}</p>
                 <div className="flex flex-wrap gap-2">
                   {teacher.certifications.map((cert, certIndex) => (
-                    <span key={certIndex} className="bg-white text-primary-700 px-2 py-1 rounded-md text-xs border border-primary-200">
+                    <span key={certIndex} className="bg-white text-primary px-2 py-1 rounded-md text-xs border border-primary">
                       {cert}
                     </span>
                   ))}
@@ -68,12 +70,12 @@ const Teachers = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-12 text-center">
-          <p className="text-primary-600 italic">
+          <p className="text-primary italic">
             "Our mission is to empower you with the anatomical knowledge that enhances your yoga practice and teaching, offering insights into how the body works in every posture."
           </p>
-          <p className="mt-2 text-primary-700 font-medium">— The Yoga Anatomy Faculty</p>
+          <p className="mt-2 text-primary font-medium">— The Yoga Anatomy Faculty</p>
         </div>
       </div>
     </section>

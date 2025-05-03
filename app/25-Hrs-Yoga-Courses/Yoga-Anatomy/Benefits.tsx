@@ -40,7 +40,7 @@ const Benefits = () => {
           </div>
           
           <blockquote className="italic text-primary text-center max-w-3xl mx-auto">
-            "This anatomy course helped me bridge the gap between movement and understanding. It gave me so much clarity in my own practice and confidence as a yoga teacher. The format was easy to follow, and I loved the visual explanations."
+            &quot;This anatomy course helped me bridge the gap between movement and understanding. It gave me so much clarity in my own practice and confidence as a yoga teacher. The format was easy to follow, and I loved the visual explanations.&quot;
             <footer className="mt-4 text-primary font-medium not-italic">
               — Priya R., Graduate 2024
             </footer>

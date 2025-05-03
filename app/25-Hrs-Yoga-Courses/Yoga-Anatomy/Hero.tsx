@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-import { Leaf } from 'lucide-react';
 
 const Hero = () => {
   return (

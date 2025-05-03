@@ -24,7 +24,7 @@ const CourseInfo = () => {
             </p>
             
             <p className="text-primary leading-relaxed">
-              You'll leave with a solid foundation in yoga anatomy and a certificate of completion, plus lifetime access to all materials to revisit anytime.
+              You&apos;ll leave with a solid foundation in yoga anatomy and a certificate of completion, plus lifetime access to all materials to revisit anytime.
             </p>
           </div>
           

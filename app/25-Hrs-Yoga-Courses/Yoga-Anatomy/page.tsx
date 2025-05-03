@@ -8,20 +8,12 @@ import RegistrationCTA from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Registration
 import Benefits from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Benefits";
 import Teachers from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Teachers";
 import Testimonials from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Testimonials";
-import FAQ from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/FAQ";
+import YogaLandingPage from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/YogaLandingPage";
 
 export default function Page() {
   return (
     <div>
-      <Hero />
-      <CourseInfo />
-      <Schedule />
-      <Pricing />
-      <RegistrationCTA />
-      <Benefits />
-      <Teachers />
-      <Testimonials />
-      <FAQ />
+      <YogaLandingPage />
     </div>
   );
 }

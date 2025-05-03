@@ -1,4 +1,5 @@
-// app/25-Hrs-Yoga-Courses/page.tsx
+
+"use client";// app/25-Hrs-Yoga-Courses/page.tsx
 import Hero from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Hero";
 import CourseInfo from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/CourseInfo";
 import Schedule from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Schedule";

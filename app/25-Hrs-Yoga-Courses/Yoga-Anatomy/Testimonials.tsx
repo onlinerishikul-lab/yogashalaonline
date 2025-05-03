@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import Image from 'next/image';
 
 const Testimonials = () => {
   const testimonials = [
@@ -61,12 +62,13 @@ const Testimonials = () => {
         <div className="relative">
           <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="md:w-1/3">
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mx-auto">
-                  <img 
+              <div className="md:w-1/3 flex flex-col items-center">
+                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
+                  <Image 
                     src={testimonials[activeIndex].image} 
                     alt={testimonials[activeIndex].name} 
-                    className="w-full h-full object-cover"
+                    fill 
+                    className="object-cover"
                   />
                 </div>
                 <div className="text-center mt-4">
@@ -82,7 +84,9 @@ const Testimonials = () => {
               </div>
               <div className="md:w-2/3">
                 <blockquote>
-                  <p className="text-primary-700 italic leading-relaxed">"{testimonials[activeIndex].quote}"</p>
+                  <p className="text-primary-700 italic leading-relaxed">
+                    &quot;{testimonials[activeIndex].quote}&quot;
+                  </p>
                 </blockquote>
               </div>
             </div>

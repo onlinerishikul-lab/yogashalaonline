@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 
 const Teachers = () => {
   const teachers = [
@@ -48,11 +49,12 @@ const Teachers = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {teachers.map((teacher, index) => (
             <div key={index} className="bg-primary-light rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row">
-              <div className="md:w-2/5">
-                <img
+              <div className="md:w-2/5 relative h-64 md:h-auto">
+                <Image
                   src={teacher.image}
                   alt={teacher.name}
-                  className="h-full w-full object-cover object-center"
+                  fill
+                  className="object-cover object-center"
                 />
               </div>
               <div className="p-6 md:w-3/5">
@@ -73,7 +75,7 @@ const Teachers = () => {
 
         <div className="mt-12 text-center">
           <p className="text-primary italic">
-            "Our mission is to empower you with the anatomical knowledge that enhances your yoga practice and teaching, offering insights into how the body works in every posture."
+            &quot;Our mission is to empower you with the anatomical knowledge that enhances your yoga practice and teaching, offering insights into how the body works in every posture.&quot;
           </p>
           <p className="mt-2 text-primary font-medium">— The Yoga Anatomy Faculty</p>
         </div>

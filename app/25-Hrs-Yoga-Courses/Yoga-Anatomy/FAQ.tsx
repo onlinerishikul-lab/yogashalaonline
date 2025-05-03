@@ -1,33 +1,27 @@
-"use client";
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
-interface FAQItem {
-  question: string;
-  answer: string;
-}
-
 const FAQ = () => {
-  const faqs: FAQItem[] = [
+  const faqs = [
     {
       question: "Is this training recognized by Yoga Alliance?",
       answer: "Yes, our Online 200-Hour Teacher Training is fully accredited by Yoga Alliance. Upon successful completion, you'll be eligible to register as an RYT-200 with Yoga Alliance."
     },
     {
       question: "Do I need to be an advanced yoga practitioner to join?",
-      answer: "No, you don&apos;t need to be an advanced practitioner. We welcome students with at least 6 months of consistent yoga practice. The program is designed to meet you where you are and help you progress in both your practice and teaching skills."
+      answer: "No, you don't need to be an advanced practitioner. We welcome students with at least 6 months of consistent yoga practice. The program is designed to meet you where you are and help you progress in both your practice and teaching skills."
     },
     {
-      question: "What if I can&apos;t attend all the live sessions?",
+      question: "What if I can't attend all the live sessions?",
       answer: "All live sessions are recorded and made available within 24 hours. While we encourage attending live whenever possible for the interactive experience, we understand that time zones and schedules may prevent this. You can watch the recordings and submit any questions, which will be addressed in the next live session."
     },
     {
       question: "How is the practical teaching component handled online?",
-      answer: "You&apos;ll practice teaching through video submissions, live Zoom sessions with peers, and one-on-one feedback sessions with instructors. We&apos;ve developed a comprehensive system to ensure you receive the guidance needed to develop strong teaching skills, even in a virtual environment."
+      answer: "You'll practice teaching through video submissions, live Zoom sessions with peers, and one-on-one feedback sessions with instructors. We've developed a comprehensive system to ensure you receive the guidance needed to develop strong teaching skills, even in a virtual environment."
     },
     {
       question: "What materials do I need for the training?",
-      answer: "You&apos;ll need a yoga mat, 2 blocks, a strap, and a blanket. Required reading materials include the Yoga Sutras of Patanjali, Anatomy of Movement, and our House of OM Teacher Training Manual, which is included in your tuition. A detailed list will be provided upon registration."
+      answer: "You'll need a yoga mat, 2 blocks, a strap, and a blanket. Required reading materials include the Yoga Sutras of Patanjali, Anatomy of Movement, and our House of OM Teacher Training Manual, which is included in your tuition. A detailed list will be provided upon registration."
     },
     {
       question: "Can I teach yoga internationally with this certification?",
@@ -35,7 +29,7 @@ const FAQ = () => {
     },
     {
       question: "What if I need more time to complete the program?",
-      answer: "While we encourage completing the program with your cohort over the 10-week period, we understand that life happens. You&apos;ll have up to 6 months from your start date to complete all requirements without additional fees."
+      answer: "While we encourage completing the program with your cohort over the 10-week period, we understand that life happens. You'll have up to 6 months from your start date to complete all requirements without additional fees."
     },
     {
       question: "Is there a refund policy?",
@@ -75,7 +69,9 @@ const FAQ = () => {
                 )}
               </button>
               <div 
-                className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+                className={`overflow-hidden transition-all duration-300 ${
+                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}
               >
                 <div className="p-5 bg-white text-primary">
                   {faq.answer}
@@ -88,7 +84,7 @@ const FAQ = () => {
         <div className="mt-12 p-6 bg-primary-light rounded-lg text-center">
           <h3 className="text-xl font-serif text-primary mb-2">Still Have Questions?</h3>
           <p className="text-primary mb-4">
-            We&apos;re happy to help! Reach out to us for more information about our program.
+            We're happy to help! Reach out to us for more information about our program.
           </p>
           <button className="bg-primary text-white px-6 py-2 rounded-md hover:bg-primary-dark transition-all">
             Contact Us

@@ -1,37 +1,36 @@
-"use client";
 import React from 'react';
 
 const Schedule = () => {
   const modules = [
     {
       week: "Weeks 1-2",
-      title: "Foundations of Yoga Practice",
-      description: "Introduction to yoga history, philosophy, and essential asanas. Learn proper alignment principles and begin to develop your teaching voice.",
-      topics: ["History of Yoga", "Foundational Asanas", "Basic Anatomy", "Introduction to Pranayama"]
+      title: "Introduction to Yoga Anatomy",
+      description: "Learn the basics of human anatomy as it relates to yoga. Understand how the body moves and how to apply anatomical principles to your practice.",
+      topics: ["Skeletal System", "Muscular System", "Joint Mobility", "Basic Posture Alignment"]
     },
     {
       week: "Weeks 3-4",
-      title: "Deepening Practice & Teaching Methodology",
-      description: "Expand your asana practice and develop teaching skills including sequencing, adjustments, and modifications.",
-      topics: ["Sequencing Principles", "Props & Modifications", "Teaching Methodology", "Hands-on Adjustments"]
+      title: "The Muscular System in Yoga",
+      description: "Dive deeper into the muscular system and how specific muscle groups are activated during yoga postures. Learn how to engage muscles for better alignment and protection.",
+      topics: ["Major Muscle Groups", "Muscle Activation", "Strength vs Flexibility", "Breathing and Muscle Relaxation"]
     },
     {
       week: "Weeks 5-6",
-      title: "Philosophy & Subtle Body",
-      description: "Explore yoga philosophy through key texts and understand the subtle body including chakras, nadis, and koshas.",
-      topics: ["Yoga Sutras", "Chakra System", "Meditation Techniques", "Sanskrit Basics"]
+      title: "The Spine & Nervous System",
+      description: "Understand the structure and function of the spine and how it relates to yoga. Explore how different postures affect spinal health and the nervous system.",
+      topics: ["Spinal Anatomy", "Nerve Pathways", "Postures for Spine Health", "The Role of the Nervous System"]
     },
     {
       week: "Weeks 7-8",
-      title: "Specialized Teaching & Advanced Asanas",
-      description: "Learn to teach specialized populations and explore more advanced asana variations and sequencing.",
-      topics: ["Prenatal Yoga", "Yoga for Seniors", "Advanced Asanas", "Injury Prevention"]
+      title: "The Respiratory & Cardiovascular Systems",
+      description: "Examine the respiratory and cardiovascular systems and their connection to breathwork in yoga. Learn how to regulate breath for optimal yoga practice.",
+      topics: ["Lung Capacity & Breath Control", "Pranayama Techniques", "Heart Rate and Blood Flow", "Breath and Movement Synchronization"]
     },
     {
       week: "Weeks 9-10",
-      title: "Teaching Practicum & Business of Yoga",
-      description: "Refine your teaching through practice teaching sessions and learn the business aspects of being a yoga teacher.",
-      topics: ["Practice Teaching", "Building Your Brand", "Marketing Basics", "Ethics & Professionalism"]
+      title: "Yoga Anatomy in Practice & Injury Prevention",
+      description: "Apply anatomical knowledge to yoga practice and explore injury prevention strategies. Learn how to modify postures for different body types and limitations.",
+      topics: ["Posture Modifications", "Injury Prevention", "Body Awareness in Practice", "Advanced Anatomy for Teachers"]
     }
   ];
 
@@ -39,9 +38,9 @@ const Schedule = () => {
     <section className="py-16 md:py-24 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary mb-4">Program Schedule & Curriculum</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary mb-4">Yoga Anatomy Program Schedule & Curriculum</h2>
           <p className="text-lg text-primary max-w-3xl mx-auto">
-            Our 10-week program is designed to progressively build your knowledge, skills, and confidence as a yoga teacher.
+            Our 10-week Yoga Anatomy program is designed to give you a deep understanding of how the body functions during yoga practice, ensuring safe and effective teaching.
           </p>
         </div>
         

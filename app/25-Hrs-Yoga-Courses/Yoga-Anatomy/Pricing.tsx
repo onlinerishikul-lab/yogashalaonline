@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 import { Check } from 'lucide-react';
 
@@ -7,9 +6,9 @@ const Pricing = () => {
     <section className="py-16 md:py-24 px-4 bg-primary-light">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary mb-4">Investment</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary mb-4">Yoga Anatomy Course Investment</h2>
           <p className="text-lg text-primary max-w-3xl mx-auto">
-            Invest in your future as a yoga teacher with our comprehensive training program.
+            Invest in your future as a yoga teacher with our comprehensive Yoga Anatomy course.
           </p>
         </div>
         
@@ -18,7 +17,7 @@ const Pricing = () => {
             <div className="bg-primary p-6 text-white text-center">
               <h3 className="text-xl font-serif font-medium">Early Bird</h3>
               <div className="mt-4">
-                <span className="text-4xl font-semibold">$2,200</span>
+                <span className="text-4xl font-semibold">$250</span>
               </div>
               <p className="mt-2 text-primary-light text-sm">Limited availability</p>
             </div>
@@ -26,11 +25,11 @@ const Pricing = () => {
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <Check className="text-primary w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-primary">Full 200-hour certification program</span>
+                  <span className="text-primary">Full Yoga Anatomy certification program</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="text-primary w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-primary">All course materials and resources</span>
+                  <span className="text-primary">Detailed video lessons on anatomy</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="text-primary w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
@@ -57,7 +56,7 @@ const Pricing = () => {
             <div className="bg-primary p-8 text-white text-center">
               <h3 className="text-xl font-serif font-medium">Standard</h3>
               <div className="mt-4">
-                <span className="text-4xl font-semibold">$2,500</span>
+                <span className="text-4xl font-semibold">$250</span>
               </div>
               <p className="mt-2 text-primary-light text-sm">Regular registration rate</p>
             </div>
@@ -65,11 +64,11 @@ const Pricing = () => {
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <Check className="text-primary w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-primary">Full 200-hour certification program</span>
+                  <span className="text-primary">Full Yoga Anatomy certification program</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="text-primary w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-primary">All course materials and resources</span>
+                  <span className="text-primary">Detailed video lessons on anatomy</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="text-primary w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
@@ -97,7 +96,7 @@ const Pricing = () => {
             <div className="bg-primary p-6 text-white text-center">
               <h3 className="text-xl font-serif font-medium">Premium</h3>
               <div className="mt-4">
-                <span className="text-4xl font-semibold">$2,900</span>
+                <span className="text-4xl font-semibold">$250</span>
               </div>
               <p className="mt-2 text-primary-light text-sm">Enhanced experience</p>
             </div>

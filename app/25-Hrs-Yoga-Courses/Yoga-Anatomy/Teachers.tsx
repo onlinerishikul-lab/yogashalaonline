@@ -1,36 +1,34 @@
-"use client";
 import React from 'react';
-import Image from 'next/image';
 
 const Teachers = () => {
   const teachers = [
     {
-      name: "Maya Patel",
-      role: "Lead Instructor & Program Director",
+      name: "Dr. Maya Patel",
+      role: "Lead Anatomy Instructor & Program Director",
       image: "https://images.pexels.com/photos/5384445/pexels-photo-5384445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      bio: "Maya has been teaching yoga for over 15 years and has trained hundreds of teachers worldwide. Her approach combines traditional yogic wisdom with modern teaching methodologies.",
-      certifications: ["E-RYT 500", "YACEP", "Yoga Therapy Certified"]
+      bio: "Dr. Maya Patel is a leading expert in Yoga Anatomy with over 15 years of experience in anatomy and yoga teaching. She specializes in the integration of anatomy with yoga asanas and functional movement.",
+      certifications: ["E-RYT 500", "Doctor of Anatomy", "Yoga Anatomy Specialist"]
     },
     {
-      name: "David Chen",
-      role: "Anatomy & Physiology Specialist",
+      name: "Dr. David Chen",
+      role: "Yoga Anatomy & Physiology Specialist",
       image: "https://images.pexels.com/photos/4057839/pexels-photo-4057839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      bio: "With a background in physical therapy and 10 years of yoga teaching experience, David brings profound anatomical knowledge to help you understand the body in asana practice.",
-      certifications: ["E-RYT 200", "Doctor of Physical Therapy", "Functional Anatomy Specialist"]
+      bio: "David brings an in-depth understanding of human anatomy and its relation to yoga postures. His expertise lies in functional anatomy and movement patterns, ensuring safe and effective practice.",
+      certifications: ["E-RYT 200", "Doctor of Physical Therapy", "Certified Yoga Anatomy Instructor"]
     },
     {
-      name: "Lakshmi Sharma",
-      role: "Philosophy & Meditation Instructor",
+      name: "Dr. Lakshmi Sharma",
+      role: "Yoga Philosophy & Anatomy Integration Instructor",
       image: "https://images.pexels.com/photos/7991662/pexels-photo-7991662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      bio: "Lakshmi has studied extensively in ashrams throughout India and brings authentic teachings of yoga philosophy, meditation, and the subtle body to our program.",
-      certifications: ["E-RYT 500", "MA in Eastern Philosophy", "Traditional Meditation Instructor"]
+      bio: "Dr. Lakshmi Sharma combines the ancient wisdom of yoga philosophy with the modern understanding of the body. She explores the integration of anatomical principles with yogic teachings.",
+      certifications: ["E-RYT 500", "PhD in Anatomy", "Traditional Yoga Anatomy Instructor"]
     },
     {
       name: "James Wilson",
-      role: "Sequencing & Teaching Methodology",
+      role: "Advanced Anatomy & Asana Alignment Instructor",
       image: "https://images.pexels.com/photos/10922942/pexels-photo-10922942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      bio: "James has built successful yoga studios in three countries and specializes in creative sequencing, advanced teaching skills, and the business of yoga.",
-      certifications: ["E-RYT 500", "MBA", "Certified Business Coach"]
+      bio: "James is a leading instructor in advanced asana alignment, focusing on the anatomical alignment in poses. His approach combines anatomical precision with mindful yoga practice.",
+      certifications: ["E-RYT 500", "Certified Yoga Anatomy Teacher", "Master of Anatomy & Physiology"]
     }
   ];
 
@@ -38,9 +36,9 @@ const Teachers = () => {
     <section className="py-16 md:py-24 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary-800 mb-4">Meet Your Teachers</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary-800 mb-4">Meet Your Yoga Anatomy Instructors</h2>
           <p className="text-lg text-primary-600 max-w-3xl mx-auto">
-            Learn from our diverse team of experienced and passionate yoga educators who bring their unique expertise to the program.
+            Learn from our experienced instructors who combine anatomical expertise with the practice of yoga, offering a comprehensive understanding of how the body moves and functions in asana.
           </p>
         </div>
         
@@ -48,12 +46,10 @@ const Teachers = () => {
           {teachers.map((teacher, index) => (
             <div key={index} className="bg-primary-50 rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row">
               <div className="md:w-2/5">
-                <Image 
+                <img 
                   src={teacher.image} 
                   alt={teacher.name} 
                   className="h-full w-full object-cover object-center"
-                  width={500} 
-                  height={500} 
                 />
               </div>
               <div className="p-6 md:w-3/5">
@@ -74,9 +70,9 @@ const Teachers = () => {
         
         <div className="mt-12 text-center">
           <p className="text-primary-600 italic">
-            &quot;Our greatest joy is witnessing the transformation of our students as they develop not only as yoga teachers, but as individuals on their spiritual path.&quot;
+            "Our mission is to empower you with the anatomical knowledge that enhances your yoga practice and teaching, offering insights into how the body works in every posture."
           </p>
-          <p className="mt-2 text-primary-700 font-medium">— The House of OM Faculty</p>
+          <p className="mt-2 text-primary-700 font-medium">— The Yoga Anatomy Faculty</p>
         </div>
       </div>
     </section>

@@ -1,9 +1,8 @@
-"use client";
 import React from 'react';
 
 const RegistrationCTA = () => {
   return (
-    <section className="py-16 md:py-24 px-4 bg-primary-800 text-white">
+    <section className="py-16 md:py-24 px-4 bg-primary-800 text-4379b4">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">Begin Your Teacher Training Journey</h2>
         <p className="text-lg text-primary-100 max-w-3xl mx-auto mb-8">
@@ -11,10 +10,10 @@ const RegistrationCTA = () => {
         </p>
         
         <div className="flex flex-col md:flex-row gap-4 justify-center">
-          <button className="bg-white text-primary-800 px-8 py-3 rounded-md hover:bg-primary-100 transition-all font-medium">
+          <button className="bg-primary text-white px-6 py-2 rounded-md hover:bg-primary-dark transition-all">
             Apply Now
           </button>
-          <button className="bg-transparent border border-white text-white px-8 py-3 rounded-md hover:bg-primary-700 transition-all">
+          <button className="bg-primary-light text-primary border border-primary px-8 py-3 rounded-md hover:bg-primary-light transition-all">
             Download Syllabus
           </button>
         </div>

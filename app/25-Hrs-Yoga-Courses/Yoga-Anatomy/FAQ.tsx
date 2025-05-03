@@ -27,7 +27,7 @@ const FAQ = () => {
     {
       question: "What materials do I need for the training?",
       answer:
-        "You'll need a yoga mat, 2 blocks, a strap, and a blanket. Required reading materials include the Yoga Sutras of Patanjali, Anatomy of Movement, and our House of OM Teacher Training Manual, which is included in your tuition. A detailed list will be provided upon registration.",
+        "You'll need a yoga mat, 2 blocks, a strap, and a blanket. Required reading materials include the Yoga Sutras of Patanjali, Anatomy of Movement, and our Teacher Training Manual, which is included in your tuition. A detailed list will be provided upon registration.",
     },
     {
       question: "Can I teach yoga internationally with this certification?",

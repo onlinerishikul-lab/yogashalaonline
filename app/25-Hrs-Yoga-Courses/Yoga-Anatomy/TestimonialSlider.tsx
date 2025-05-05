@@ -1,23 +1,26 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const slides = [
   {
-    image: "/slide1.jpg",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    avatar: "/avatar1.jpg",
+    image: '/slide1.jpg',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+    avatar: '/avatar1.jpg',
+    name: 'John Doe',
   },
   {
-    image: "/slide2.jpg",
-    text: "Ut aliquam purus sit amet luctus venenatis...",
-    avatar: "/avatar2.jpg",
+    image: '/slide2.jpg',
+    text: 'Ut aliquam purus sit amet luctus venenatis...',
+    avatar: '/avatar2.jpg',
+    name: 'Jane Smith',
   },
   {
-    image: "/slide3.jpg",
-    text: "Lectus magna fringilla urna, porttitor...",
-    avatar: "/avatar3.jpg",
+    image: '/slide3.jpg',
+    text: 'Lectus magna fringilla urna, porttitor...',
+    avatar: '/avatar3.jpg',
+    name: 'Michael Brown',
   },
 ];
 
@@ -27,41 +30,50 @@ const TestimonialSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 3000);
+    }, 5000); // Slower for better readability
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="w-full py-12 bg-white flex justify-center">
-      <div className="relative w-[600px] h-[300px] overflow-hidden">
+    <section className="w-full bg-white py-16 flex justify-center items-center px-4">
+      <div className="relative w-full max-w-4xl h-[400px] md:h-[450px] rounded-3xl overflow-hidden shadow-xl">
         {slides.map((slide, idx) => (
           <div
             key={idx}
-            className={`absolute transition-opacity duration-1000 ease-in-out w-full h-full ${
-              current === idx ? "opacity-100 z-10" : "opacity-0 z-0"
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              current === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
           >
+            {/* Background Image */}
             <Image
               src={slide.image}
               alt={`Slide ${idx + 1}`}
               layout="fill"
               objectFit="cover"
-              className="rounded-lg"
+              className="rounded-3xl"
+              priority={idx === 0}
             />
-            <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40 text-white p-4">
-              <Image
-                src={slide.avatar}
-                alt="Avatar"
-                width={64}
-                height={64}
-                className="rounded-full border-2 border-white mb-4"
-              />
-              <p className="text-center text-sm">{slide.text}</p>
+
+            {/* Overlay Content */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-6 flex flex-col justify-end">
+              <div className="bg-white bg-opacity-90 p-4 rounded-xl shadow-md max-w-md mx-auto text-center">
+                <div className="flex flex-col items-center mb-2">
+                  <Image
+                    src={slide.avatar}
+                    alt="Avatar"
+                    width={64}
+                    height={64}
+                    className="rounded-full border-2 border-orange-500 shadow-lg"
+                  />
+                  <h4 className="text-lg font-semibold mt-2">{slide.name}</h4>
+                </div>
+                <p className="text-gray-700 text-sm">{slide.text}</p>
+              </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

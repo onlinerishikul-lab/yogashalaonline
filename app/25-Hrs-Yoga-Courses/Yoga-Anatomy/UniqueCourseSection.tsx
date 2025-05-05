@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { GraduationCap, Users, Sun, BarChart3 } from "lucide-react";
 
 export default function UniqueCourseSection() {

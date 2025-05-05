@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -32,12 +33,12 @@ export default function Faq() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white px-4 py-12">
-      <h1 className="text-2xl font-bold text-orange-600 mb-1">FAQ&rsquo;s</h1>
+      <h1 className="text-2xl font-bold text-[#4377b2] mb-1">FAQ&rsquo;s</h1>
       <p className="text-gray-600 mb-6 text-sm">Providing answers to your questions</p>
 
       <div className="w-full max-w-md space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="bg-black text-white p-4 rounded-lg shadow">
+          <div key={index} className="bg-black text-white p-4 rounded-lg shadow-md">
             <div
               className="flex justify-between items-center cursor-pointer"
               onClick={() => toggleFAQ(index)}
@@ -55,7 +56,7 @@ export default function Faq() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Ask us what you want to know..."
-          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
+          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4377b2]"
           rows={3}
         />
 
@@ -63,7 +64,7 @@ export default function Faq() {
           We&rsquo;ll answer your question via email within 24 hours
         </div>
 
-        <button className="mt-2 bg-orange-500 text-white px-6 py-2 text-sm rounded-full hover:bg-orange-600 transition">
+        <button className="mt-2 bg-[#4377b2] text-white px-6 py-2 text-sm rounded-full hover:bg-[#365a90] transition">
           Send
         </button>
       </div>

@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -12,7 +13,7 @@ const testimonials = [
     role: 'Phone',
     image: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
-   {
+  {
     company: 'Gym',
     title: 'Lorem Ipsum Dolor Amet, Consectetur Adipisicing Elit. Odit Vitae Porta Porta te Mattis Nunc Hoc Veni',
     content:
@@ -21,7 +22,6 @@ const testimonials = [
     role: 'Phone',
     image: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
-  // You can add more testimonials here
 ];
 
 const TestimonialCarousel = () => {
@@ -37,52 +37,56 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <section className="py-12 bg-white w-full flex flex-col items-center px-4">
-      <h2 className="text-2xl md:text-3xl font-bold text-orange-600 text-center mb-2">
-        Straight from Our Trainees: <br /> Experiences That Inspire
+    <section className="py-16 bg-gradient-to-br from-orange-50 to-white w-full flex flex-col items-center px-4">
+      <h2 className="text-3xl md:text-4xl font-bold text-orange-600 text-center mb-3">
+        Straight from Our Trainees
       </h2>
-      <p className="text-gray-600 text-center mb-8">
-        We survey all of our clients, the results of which go directly to our CEO.
+      <p className="text-gray-600 text-center mb-10 text-sm md:text-base">
+        Experiences that inspire. Every voice matters — every story, heard.
       </p>
 
-      <div className="relative max-w-3xl w-full bg-white rounded-3xl shadow-md p-6 md:p-8 flex items-center justify-between">
-        {/* Left Arrow */}
+      <div className="relative max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-8 md:p-10 transition-all">
+        {/* Arrows */}
         <button
           onClick={handlePrev}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-orange-100 hover:bg-orange-300 text-orange-600 p-2 rounded-full transition"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-orange-200 hover:bg-orange-400 text-white p-3 rounded-full shadow-md hover:scale-110 transition"
         >
-          <ChevronLeft />
+          <ChevronLeft className="w-5 h-5" />
         </button>
 
-        {/* Testimonial Content */}
-        <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6">
-          {/* Text Content */}
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-2">
-              <img src="/logo-dark.svg" alt="Company Logo" className="h-5 w-auto" />
-              <p className="text-sm font-medium text-gray-800">{testimonial.company}</p>
-            </div>
-            <p className="font-semibold text-gray-900 mb-2">{testimonial.title}</p>
-            <p className="text-gray-600 mb-4">{testimonial.content}</p>
-            <p className="font-medium text-gray-800">{testimonial.name}</p>
-            <p className="text-sm text-gray-500">{testimonial.role}</p>
-          </div>
-
-          {/* User Image */}
-          <img
-            src={testimonial.image}
-            alt={testimonial.name}
-            className="w-32 h-32 rounded-full object-cover border-4 border-orange-200"
-          />
-        </div>
-
-        {/* Right Arrow */}
         <button
           onClick={handleNext}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-orange-100 hover:bg-orange-300 text-orange-600 p-2 rounded-full transition"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-orange-200 hover:bg-orange-400 text-white p-3 rounded-full shadow-md hover:scale-110 transition"
         >
-          <ChevronRight />
+          <ChevronRight className="w-5 h-5" />
         </button>
+
+        {/* Testimonial */}
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          {/* Image */}
+          <div className="flex-shrink-0">
+            <img
+              src={testimonial.image}
+              alt={testimonial.name}
+              className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-orange-200 shadow-md"
+            />
+          </div>
+
+          {/* Text */}
+          <div className="flex-1 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+              <img src="/logo-dark.svg" alt="Logo" className="h-5 w-auto" />
+              <p className="text-sm font-medium text-gray-700">{testimonial.company}</p>
+            </div>
+
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              {testimonial.title}
+            </h3>
+            <p className="text-gray-600 mb-4 text-sm leading-relaxed">{testimonial.content}</p>
+            <div className="font-medium text-gray-800">{testimonial.name}</div>
+            <div className="text-sm text-gray-500">{testimonial.role}</div>
+          </div>
+        </div>
       </div>
     </section>
   );

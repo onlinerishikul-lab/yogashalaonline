@@ -11,6 +11,7 @@ import YogaAccreditation from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/YogaAccred
 import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/CertificatePromo";
 import FacultyInfo from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/FacultyInfo";
 import PricingOptions from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/PricingOptions";
+import RiskFreeGuarantee from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/RiskFreeGuarantee";
 
 export default function Page() {
   return (
@@ -26,6 +27,7 @@ export default function Page() {
       <CertificatePromo/>
       <FacultyInfo/>
       <PricingOptions/>
+      <RiskFreeGuarantee/>
     </div>
   );
 }

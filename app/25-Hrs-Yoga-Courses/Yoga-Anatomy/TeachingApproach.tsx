@@ -33,7 +33,7 @@ const TeachingApproach = () => {
           ))}
         </div>
 
-        <div className="relative z-0 w-full h-80 md:h-96">
+        <div className="relative z-0 w-full  md:h-96">
           <Image
             src="/your-image.jpg" // replace with actual image
             alt="Teacher"

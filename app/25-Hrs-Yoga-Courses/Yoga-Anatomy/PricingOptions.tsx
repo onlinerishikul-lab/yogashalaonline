@@ -1,3 +1,5 @@
+"use client"
+import React from "react";
 const PricingOptions = () => {
   return (
     <section className="bg-white py-16 px-4 relative overflow-hidden">

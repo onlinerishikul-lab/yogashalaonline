@@ -1,4 +1,3 @@
-// app/yogacourse/page.tsx (Next.js 13+ using App Router)
 "use client";
 
 import React from 'react';
@@ -17,7 +16,6 @@ export default function YogaCoursePage() {
 
       {/* Course Info Section */}
       <section className="grid md:grid-cols-3 gap-8 items-start mb-16">
-        {/* Language Card */}
         <div className="relative rounded-2xl bg-neutral-100 text-black p-6 shadow-lg">
           <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center shadow-md">
             <span className="text-white text-2xl">🧘‍♂️</span>
@@ -26,10 +24,8 @@ export default function YogaCoursePage() {
           <p className="text-sm text-gray-700 mt-1">English</p>
         </div>
 
-        {/* Empty Card Placeholder */}
         <div className="rounded-2xl bg-neutral-100 h-32"></div>
 
-        {/* Skills Card */}
         <div className="rounded-2xl bg-orange-500 text-white p-6 shadow-lg">
           <h2 className="text-xl font-bold mb-2">Skills You’ll Learn</h2>
           <p className="text-sm">

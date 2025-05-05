@@ -1,27 +1,23 @@
 
 "use client";// app/25-Hrs-Yoga-Courses/page.tsx
-import Hero from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Hero";
-import CourseInfo from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/CourseInfo";
-import Schedule from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Schedule";
-import Pricing from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Pricing";
-import RegistrationCTA from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/RegistrationCTA";
-import Benefits from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Benefits";
-import Teachers from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Teachers";
-import Testimonials from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Testimonials";
-import FAQ from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/FAQ";
+import HeroSection from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/HeroSection";
+import TestimonialSlider from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TestimonialSlider";
+import YogaCoursePage from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/YogaCoursePage";
+import LearnSection from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/LearnSection";
+import UniqueCourseSection from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/UniqueCourseSection";
+import TeachingApproach from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TeachingApproach";
+import CourseDetails from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/CourseDetails";
 
 export default function Page() {
   return (
     <div>
-      <Hero />
-      <CourseInfo />
-      <Schedule />
-      <Pricing />
-      <RegistrationCTA />
-      <Benefits />
-      <Teachers />
-      <Testimonials />
-      <FAQ />
+      <HeroSection />
+      <TestimonialSlider />
+      <YogaCoursePage />
+      < LearnSection/>
+      <UniqueCourseSection />
+      <TeachingApproach />
+      <CourseDetails />
     </div>
   );
 }

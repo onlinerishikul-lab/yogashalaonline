@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { GraduationCap, Users, Sun, BarChart3 } from "lucide-react";
 
@@ -6,40 +6,44 @@ export default function UniqueCourseSection() {
   const items = [
     {
       title: "Experienced Teachers",
-      icon: <Users className="text-orange-600 w-8 h-8" />,
+      icon: <Users className="w-6 h-6 text-sky-600" />,
     },
     {
       title: "Flexible Schedule",
-      icon: <Sun className="text-orange-600 w-8 h-8" />,
+      icon: <Sun className="w-6 h-6 text-sky-600" />,
     },
     {
       title: "Certified Curriculum",
-      icon: <GraduationCap className="text-orange-600 w-8 h-8" />,
+      icon: <GraduationCap className="w-6 h-6 text-sky-600" />,
     },
     {
       title: "Progress Tracking",
-      icon: <BarChart3 className="text-orange-600 w-8 h-8" />,
+      icon: <BarChart3 className="w-6 h-6 text-sky-600" />,
     },
   ];
 
   return (
-    <section className="bg-white py-16 px-6 lg:px-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-orange-600 mb-6">
-            Why is Our 100 Hour Online Teacher Training Course Unique
-          </h2>
-        </div>
-        <div className="grid grid-cols-2 gap-8">
-          {items.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
+    <section className="bg-white py-16 px-6 md:px-10 lg:px-20">
+      <div className="max-w-6xl mx-auto text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-sky-600">
+          Why is Our 100-Hour Online Teacher Training Course Unique?
+        </h2>
+      </div>
+
+      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center gap-3"
+          >
+            <div className="bg-sky-100 p-4 rounded-full shadow-sm flex items-center justify-center">
               {item.icon}
-              <p className="mt-2 font-semibold text-lg text-black">
-                {item.title}
-              </p>
             </div>
-          ))}
-        </div>
+            <p className="text-lg font-semibold text-gray-800">
+              {item.title}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );

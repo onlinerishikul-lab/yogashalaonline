@@ -12,6 +12,15 @@ const testimonials = [
     role: 'Phone',
     image: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
+   {
+    company: 'Gym',
+    title: 'Lorem Ipsum Dolor Amet, Consectetur Adipisicing Elit. Odit Vitae Porta Porta te Mattis Nunc Hoc Veni',
+    content:
+      'Lorem ipsum dolor amet, consectetur adipiscing elit, venenatis integer magna ut risus et malesuada. Duis vehicula placerat neque pulvinar quam. Quis primis etiam imperdiet consectetur hac tincidunt eros.',
+    name: 'Name',
+    role: 'Phone',
+    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+  },
   // You can add more testimonials here
 ];
 

@@ -1,68 +1,80 @@
-"use client";
+'use client';
+import Image from 'next/image';
 
-import Image from "next/image";
+const points = [
+  {
+    number: '1',
+    text: 'Lorem ipsum odor amet, consectetuer adipiscing elite',
+  },
+  {
+    number: '2',
+    text: 'Lorem ipsum odor amet, consectetuer adipiscing elit. Mauris inceptos aliquam augue tristique convallis leo cursus lectus. Sodales malesuada curabitur primis consequat cras ligula.',
+  },
+  {
+    number: '3',
+    text: 'Lorem ipsum odor amet, consectetuer adipiscing elite',
+  },
+  {
+    number: '4',
+    text: 'Lorem ipsum odor amet, consectetuer adipiscing elite',
+  },
+];
 
-const TeachingApproach = () => {
-  const items = [
-    { id: 1, text: "Lorem ipsum odor amet, consectetuer adipiscing elite" },
-    {
-      id: 2,
-      text: "Lorem ipsum odor amet, consectetuer adipiscing elit. Mauris inceptos aliquam augue tristique convallis leo cursus lectus. Sodales malesuada curabitur primis consequat cras ligula.",
-    },
-    { id: 3, text: "Lorem ipsum odor amet, consectetuer adipiscing elite" },
-    { id: 4, text: "Lorem ipsum odor amet, consectetuer adipiscing elite" },
-  ];
-
+export default function TeachingApproach() {
   return (
-    <section className="bg-black text-white py-20 px-6 flex flex-col items-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-10">
-        Our Teaching Approach
-      </h2>
-      <div className="relative max-w-5xl w-full grid md:grid-cols-2 gap-8 items-center">
-        <div className="space-y-6 z-10">
-          {items.slice(0, 2).map((item) => (
+    <section className="relative bg-black text-white py-16 flex flex-col items-center overflow-hidden">
+      <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-10">Our Teaching Approach</h2>
+
+      <div className="relative flex flex-col items-center md:flex-row md:justify-center w-full max-w-6xl px-4">
+        {/* Left Side */}
+        <div className="flex flex-col space-y-6 w-full md:w-1/3 z-10">
+          {points.slice(0, 2).map((point, idx) => (
             <div
-              key={item.id}
-              className="bg-[#4D5475] p-4 rounded-xl shadow-md flex items-start gap-4"
+              key={idx}
+              className="bg-[#5B6484] p-4 md:p-5 rounded-xl flex items-start space-x-4 text-white"
             >
-              <div className="bg-[#6E7497] w-7 h-7 rounded-full flex items-center justify-center font-bold">
-                {item.id}
+              <div className="w-6 h-6 flex items-center justify-center bg-white text-black text-xs font-semibold rounded-full">
+                {point.number}
               </div>
-              <p className="text-sm">{item.text}</p>
+              <p className="text-sm leading-snug">{point.text}</p>
             </div>
           ))}
         </div>
 
-        <div className="relative z-0 w-full  md:h-96">
+        {/* Center Image */}
+        <div className="relative w-[280px] md:w-[400px] mx-4 my-10 md:my-0 z-0">
           <Image
-            src="/your-image.jpg" // replace with actual image
-            alt="Teacher"
-            layout="fill"
-            className="rounded-[40px] object-cover"
-            priority
+            src="/teaching-image.jpg" // Replace with your actual image path
+            alt="Teaching"
+            width={400}
+            height={500}
+            className="rounded-[30px] shadow-lg object-cover w-full h-auto"
           />
         </div>
 
-        <div className="space-y-6 z-10">
-          {items.slice(2).map((item) => (
+        {/* Right Side */}
+        <div className="flex flex-col space-y-6 w-full md:w-1/3 z-10">
+          {points.slice(2).map((point, idx) => (
             <div
-              key={item.id}
-              className="bg-[#4D5475] p-4 rounded-xl shadow-md flex items-start gap-4"
+              key={idx}
+              className="bg-[#5B6484] p-4 md:p-5 rounded-xl flex items-start space-x-4 text-white"
             >
-              <div className="bg-[#6E7497] w-7 h-7 rounded-full flex items-center justify-center font-bold">
-                {item.id}
+              <div className="w-6 h-6 flex items-center justify-center bg-white text-black text-xs font-semibold rounded-full">
+                {point.number}
               </div>
-              <p className="text-sm">{item.text}</p>
+              <p className="text-sm leading-snug">{point.text}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <button className="mt-12 bg-gradient-to-r from-orange-500 to-blue-500 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition">
+      {/* Button */}
+      <button className="mt-10 bg-gradient-to-r from-[#3B82F6] to-[#EF4444] text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg hover:scale-105 transition">
         Learn From Experts
       </button>
+
+      {/* Optional floating star or shape */}
+      <div className="absolute top-5 right-5 text-white text-xl">✦</div>
     </section>
   );
-};
-
-export default TeachingApproach;
+}

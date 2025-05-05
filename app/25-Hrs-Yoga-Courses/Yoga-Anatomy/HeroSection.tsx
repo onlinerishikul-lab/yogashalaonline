@@ -1,5 +1,6 @@
-// components/HeroSection.tsx
+"use client";
 import React from 'react';
+import Image from 'next/image';
 
 const HeroSection = () => {
   return (
@@ -13,9 +14,9 @@ const HeroSection = () => {
           Enroll Now
         </button>
         <div className="absolute bottom-6 flex space-x-6">
-          <img src="/rys200.png" alt="RYS 200" className="w-16 h-16" />
-          <img src="/rys300.png" alt="RYS 300" className="w-16 h-16" />
-          <img src="/rpys.png" alt="RPYS" className="w-16 h-16" />
+          <Image src="/rys200.png" alt="RYS 200" width={64} height={64} />
+          <Image src="/rys300.png" alt="RYS 300" width={64} height={64} />
+          <Image src="/rpys.png" alt="RPYS" width={64} height={64} />
         </div>
       </div>
     </div>

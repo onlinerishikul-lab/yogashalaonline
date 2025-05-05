@@ -37,8 +37,8 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-orange-50 to-white w-full flex flex-col items-center px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-orange-600 text-center mb-3">
+    <section className="py-16 bg-gradient-to-br from-blue-50 to-white w-full flex flex-col items-center px-4">
+      <h2 className="text-3xl md:text-4xl font-bold text-blue-600 text-center mb-3">
         Straight from Our Trainees
       </h2>
       <p className="text-gray-600 text-center mb-10 text-sm md:text-base">
@@ -49,14 +49,14 @@ const TestimonialCarousel = () => {
         {/* Arrows */}
         <button
           onClick={handlePrev}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-orange-200 hover:bg-orange-400 text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-200 hover:bg-blue-400 text-white p-3 rounded-full shadow-md hover:scale-110 transition"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
 
         <button
           onClick={handleNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-orange-200 hover:bg-orange-400 text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-200 hover:bg-blue-400 text-white p-3 rounded-full shadow-md hover:scale-110 transition"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
@@ -68,7 +68,7 @@ const TestimonialCarousel = () => {
             <img
               src={testimonial.image}
               alt={testimonial.name}
-              className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-orange-200 shadow-md"
+              className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-blue-200 shadow-md"
             />
           </div>
 

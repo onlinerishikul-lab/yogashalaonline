@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const TeachingApproach = () => {
   const items = [
     { id: 1, text: "Lorem ipsum odor amet, consectetuer adipiscing elite" },
@@ -31,11 +33,13 @@ const TeachingApproach = () => {
           ))}
         </div>
 
-        <div className="relative z-0">
-          <img
-            src="/your-image.jpg" // Replace with actual path or import if using next/image
+        <div className="relative z-0 w-full h-80 md:h-96">
+          <Image
+            src="/your-image.jpg" // replace with actual image
             alt="Teacher"
-            className="rounded-[40px] shadow-lg w-full h-auto object-cover"
+            layout="fill"
+            className="rounded-[40px] object-cover"
+            priority
           />
         </div>
 

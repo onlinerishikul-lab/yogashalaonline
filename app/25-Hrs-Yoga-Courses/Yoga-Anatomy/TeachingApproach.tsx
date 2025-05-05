@@ -1,4 +1,5 @@
 'use client';
+
 import Image from 'next/image';
 
 const points = [
@@ -22,21 +23,23 @@ const points = [
 
 export default function TeachingApproach() {
   return (
-    <section className="relative bg-black text-white py-16 flex flex-col items-center overflow-hidden">
-      <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-10">Our Teaching Approach</h2>
+    <section className="relative bg-[#101828] text-white py-16 flex flex-col items-center overflow-hidden">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-10">
+        Our Teaching Approach
+      </h2>
 
       <div className="relative flex flex-col items-center md:flex-row md:justify-center w-full max-w-6xl px-4">
-        {/* Left Side */}
+        {/* Left Points */}
         <div className="flex flex-col space-y-6 w-full md:w-1/3 z-10">
           {points.slice(0, 2).map((point, idx) => (
             <div
               key={idx}
-              className="bg-[#5B6484] p-4 md:p-5 rounded-xl flex items-start space-x-4 text-white"
+              className="bg-[#1F2937] p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition"
             >
-              <div className="w-6 h-6 flex items-center justify-center bg-white text-black text-xs font-semibold rounded-full">
+              <div className="w-7 h-7 flex items-center justify-center bg-white text-[#4377b2] text-sm font-bold rounded-full">
                 {point.number}
               </div>
-              <p className="text-sm leading-snug">{point.text}</p>
+              <p className="text-sm leading-relaxed">{point.text}</p>
             </div>
           ))}
         </div>
@@ -44,37 +47,37 @@ export default function TeachingApproach() {
         {/* Center Image */}
         <div className="relative w-[280px] md:w-[400px] mx-4 my-10 md:my-0 z-0">
           <Image
-            src="/teaching-image.jpg" // Replace with your actual image path
+            src="/teaching-image.jpg" // Replace with actual path
             alt="Teaching"
             width={400}
             height={500}
-            className="rounded-[30px] shadow-lg object-cover w-full h-auto"
+            className="rounded-[24px] shadow-2xl object-cover w-full h-auto"
           />
         </div>
 
-        {/* Right Side */}
+        {/* Right Points */}
         <div className="flex flex-col space-y-6 w-full md:w-1/3 z-10">
           {points.slice(2).map((point, idx) => (
             <div
               key={idx}
-              className="bg-[#5B6484] p-4 md:p-5 rounded-xl flex items-start space-x-4 text-white"
+              className="bg-[#1F2937] p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition"
             >
-              <div className="w-6 h-6 flex items-center justify-center bg-white text-black text-xs font-semibold rounded-full">
+              <div className="w-7 h-7 flex items-center justify-center bg-white text-[#4377b2] text-sm font-bold rounded-full">
                 {point.number}
               </div>
-              <p className="text-sm leading-snug">{point.text}</p>
+              <p className="text-sm leading-relaxed">{point.text}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Button */}
-      <button className="mt-10 bg-gradient-to-r from-[#3B82F6] to-[#EF4444] text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg hover:scale-105 transition">
+      {/* CTA Button */}
+      <button className="mt-10 bg-[#4377b2] hover:bg-[#365a90] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg transition-transform transform hover:scale-105">
         Learn From Experts
       </button>
 
-      {/* Optional floating star or shape */}
-      <div className="absolute top-5 right-5 text-white text-xl">✦</div>
+      {/* Floating star or decorative shape */}
+      <div className="absolute top-6 right-6 text-[#a8bfe7] text-2xl animate-pulse">✦</div>
     </section>
   );
 }

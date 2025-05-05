@@ -1,62 +1,62 @@
-"use client"
-import React from "react";
+'use client';
+import React from 'react';
+
 const PricingOptions = () => {
   return (
-    <section className="bg-white py-16 px-4 relative overflow-hidden">
-      {/* Background curves can be applied with CSS or an SVG */}
-      <div className="absolute inset-0 bg-[url('/pricing-bg.png')] bg-cover bg-center opacity-10 pointer-events-none"></div>
+    <section className="py-16 px-4 bg-white relative">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-orange-600">Our Pricing Option</h2>
+      </div>
 
-      <div className="max-w-5xl mx-auto relative z-10 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-orange-600 mb-12">
-          Our Pricing Option
-        </h2>
+      <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
+        {/* Full Payment Card */}
+        <div className="border border-orange-500 rounded-lg p-6 w-full max-w-sm bg-white shadow-lg">
+          <h3 className="text-lg font-semibold text-orange-600 mb-2">FULL PAYMENT</h3>
+          <p className="text-sm mb-4">For businesses, one-time domain registration and rights.</p>
+          <div className="text-4xl font-bold text-orange-600 mb-2">$49.<span className="text-xl">99</span></div>
+          <p className="text-sm mb-4">per member, per Month</p>
+          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-full w-full">
+            PAY NOW
+          </button>
 
-        <div className="grid md:grid-cols-2 gap-8 justify-center">
-          {/* Full Payment */}
-          <div className="border-2 border-orange-500 rounded-lg p-6 shadow-lg">
-            <h3 className="text-xl font-semibold mb-2 text-left">FULL PAYMENT</h3>
-            <p className="text-sm text-left text-gray-600 mb-4">
-              For businesses, one-time domain registration and options.
-            </p>
-            <div className="text-4xl font-bold text-orange-600 mb-2">$49.99</div>
-            <p className="text-sm text-gray-600 mb-4">Per member, per Month</p>
-
-            <button className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 rounded font-medium w-full">
-              PAY NOW
-            </button>
-
-            <ul className="text-left mt-6 space-y-2 text-sm text-gray-700">
-              <li>✅ Certification Available</li>
-              <li>✅ 200 Hour Yoga Teacher Training</li>
-              <li>✅ Digital Training Manual</li>
-              <li>✅ Life Long Access</li>
-              <li>✅ 24 Months of Teachers Support</li>
-            </ul>
-          </div>
-
-          {/* Easy Installments */}
-          <div className="border-2 border-orange-500 rounded-lg p-6 shadow-lg">
-            <h3 className="text-xl font-semibold mb-2 text-left">EASY INSTALLMENTS</h3>
-            <p className="text-sm text-left text-gray-600 mb-4">
-              For businesses, one-time domain registration and options.
-            </p>
-            <div className="text-4xl font-bold text-orange-600 mb-2">$20.99</div>
-            <p className="text-sm text-gray-600 mb-4">Per member, per Month</p>
-
-            <button className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 rounded font-medium w-full">
-              PAY NOW
-            </button>
-
-            <ul className="text-left mt-6 space-y-2 text-sm text-gray-700">
-              <li>✅ Certification Available</li>
-              <li>✅ 200 Hour Yoga Teacher Training</li>
-              <li>✅ Digital Training Manual</li>
-              <li>✅ Life Long Access</li>
-              <li>✅ 24 Months of Teachers Support</li>
-            </ul>
-          </div>
+          <ul className="mt-6 text-sm text-gray-700 space-y-2">
+            <li>✅ Certification Available</li>
+            <li>✅ 200 Hour Yoga Teacher Training</li>
+            <li>✅ Digital Training Manual</li>
+            <li>✅ Life Long Access</li>
+            <li>✅ 24 Months of Teachers Support</li>
+          </ul>
         </div>
 
-        <p className="text-xs text-gray-500 mt-10">
-          100% Secure Payment <br />
-          If you are not happy after your p
+        {/* Easy Installments Card */}
+        <div className="border border-orange-500 rounded-lg p-6 w-full max-w-sm bg-white shadow-lg">
+          <h3 className="text-lg font-semibold text-orange-600 mb-2">EASY INSTALLMENTS</h3>
+          <p className="text-sm mb-4">For businesses, enterprise domain registration and rights.</p>
+          <div className="text-4xl font-bold text-orange-600 mb-2">$20.<span className="text-xl">99</span></div>
+          <p className="text-sm mb-4">per member, per Month</p>
+          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-full w-full">
+            PAY NOW
+          </button>
+
+          <ul className="mt-6 text-sm text-gray-700 space-y-2">
+            <li>✅ Certification Available</li>
+            <li>✅ 200 Hour Yoga Teacher Training</li>
+            <li>✅ Digital Training Manual</li>
+            <li>✅ Life Long Access</li>
+            <li>✅ 24 Months of Teachers Support</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mt-10 text-center text-xs text-gray-500">
+        <p>100% Secure Payment</p>
+        <p>
+          If you are not happy after your purchase, do let us know within 7 days of purchase and we will refund you 100%.<br />
+          We’re here for you!
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default PricingOptions;

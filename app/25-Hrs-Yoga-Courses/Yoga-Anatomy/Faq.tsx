@@ -5,7 +5,8 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 const faqs = [
   {
     question: 'Lorem Ipsum Dolor Amet, Consectetuer Adipiscing?',
-    answer: 'Lorem ipsum dolor amet, consectetuer adipiscing elit. Vivamus eu eleifend magna nulla ut rhoncus.',
+    answer:
+      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus eu eleifend magna nulla ut rhoncus.',
   },
   {
     question: 'Lorem Ipsum Dolor Amet, Consectetuer Adipiscing?',
@@ -31,13 +32,16 @@ export default function Faq() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white px-4 py-12">
-      <h1 className="text-2xl font-bold text-orange-600 mb-1">FAQ's</h1>
+      <h1 className="text-2xl font-bold text-orange-600 mb-1">FAQ&rsquo;s</h1>
       <p className="text-gray-600 mb-6 text-sm">Providing answers to your questions</p>
 
       <div className="w-full max-w-md space-y-4">
         {faqs.map((faq, index) => (
           <div key={index} className="bg-black text-white p-4 rounded-lg shadow">
-            <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleFAQ(index)}>
+            <div
+              className="flex justify-between items-center cursor-pointer"
+              onClick={() => toggleFAQ(index)}
+            >
               <h3 className="font-semibold text-sm">{faq.question}</h3>
               {openIndex === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
             </div>
@@ -55,7 +59,9 @@ export default function Faq() {
           rows={3}
         />
 
-        <div className="text-xs text-gray-500 mt-1">We’ll answer your question via email within 24 hours</div>
+        <div className="text-xs text-gray-500 mt-1">
+          We&rsquo;ll answer your question via email within 24 hours
+        </div>
 
         <button className="mt-2 bg-orange-500 text-white px-6 py-2 text-sm rounded-full hover:bg-orange-600 transition">
           Send

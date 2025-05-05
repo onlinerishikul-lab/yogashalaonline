@@ -8,6 +8,7 @@ import UniqueCourseSection from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/UniqueCo
 import TeachingApproach from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TeachingApproach";
 import CourseDetails from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/CourseDetails";
 import YogaAccreditation from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/YogaAccreditation";
+import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/CertificatePromo";
 
 export default function Page() {
   return (
@@ -20,6 +21,7 @@ export default function Page() {
       <TeachingApproach />
       <CourseDetails />
       <YogaAccreditation/>
+      <CertificatePromo/>
     </div>
   );
 }

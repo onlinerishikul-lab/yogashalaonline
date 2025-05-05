@@ -10,7 +10,7 @@ const YogaCourse = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-[#007BFF] leading-tight">
             Yoga Courses For <br /> Beginners
           </h1>
-          <button className="mt-8 bg-[#.bg-[#.bg-[#365f91]]] hover:bg-[#.bg-[#365f91]] text-white px-6 py-3 rounded-full font-medium flex items-center space-x-2 transition">
+          <button className="mt-8 bg-[#365f91] hover:bg-[#2f4d78] text-white px-6 py-3 rounded-full font-medium flex items-center space-x-2 transition">
             <span>Join Now</span>
             <span>&rarr;</span>
           </button>

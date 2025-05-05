@@ -12,7 +12,7 @@ const CourseDetails = () => {
     { id: 6, icon: <DollarSign />, title: "Great value for money" },
     { id: 7, icon: <Settings />, title: "Customized for you" },
     { id: 8, icon: <Activity />, title: "Creative paying" },
-    { id: 10, icon: <Users />, title: "Expert turnovers" },
+    { id: 9, icon: <Users />, title: "Expert turnovers" },
   ];
 
   return (

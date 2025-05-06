@@ -49,7 +49,7 @@ const TestimonialCarousel = () => {
         {/* Left Arrow Button */}
         <button
           onClick={handlePrev}
-          className="absolute bottom-4 left-1/2 transform -translate-x-20 bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
@@ -57,7 +57,7 @@ const TestimonialCarousel = () => {
         {/* Right Arrow Button */}
         <button
           onClick={handleNext}
-          className="absolute bottom-4 left-1/2 transform translate-x-20 bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
         >
           <ChevronRight className="w-5 h-5" />
         </button>

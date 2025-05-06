@@ -5,12 +5,12 @@ import React from "react";
 const YogaCourse = () => {
   return (
     <div className="flex flex-col space-y-16 bg-gray-50 text-black p-8 md:p-16">
-      {/* Section: Yoga Courses For Beginners */}
+      {/* Section: Course Introduction */}
       <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-8">
         {/* Left Section */}
         <div>
           <h1 className="text-4xl md:text-5xl font-bold text-[#007BFF] leading-tight">
-            Yoga Courses For <br /> Beginners
+            25-Hour Yoga Anatomy <br /> for a Safe Journey
           </h1>
           <button className="mt-8 bg-[#365f91] hover:bg-[#2f4d78] text-white px-6 py-3 rounded-full font-medium flex items-center space-x-2 transition">
             <span>Join Now</span>
@@ -29,9 +29,9 @@ const YogaCourse = () => {
           </div>
 
           <div className="bg-gradient-to-r from-[#007BFF] to-[#0056b3] rounded-xl p-6 text-white shadow-md">
-            <h4 className="text-xl font-semibold mb-2">Skills You’ll Learn</h4>
+            <h4 className="text-xl font-semibold mb-2">What You’ll Learn</h4>
             <p className="text-sm leading-relaxed">
-              Yoga Poses for Beginners | The Science of Pranayama | Yoga Anatomy Basics | Eight-Limbs of Yoga | Seven Chakras | Bandhas & Mudras | Meditation | Mantras | Mobility Drills | Surya Namaskar and Basic Sequences
+              Functional Anatomy for Yoga | Understanding Joints & Movement | Preventing Injuries | Safe Asana Alignment | Body Mechanics | Breath & Nervous System | Muscle Engagement | Posture Breakdown | Modifications for All Levels | Practical Application for Teaching
             </p>
           </div>
         </div>
@@ -39,34 +39,36 @@ const YogaCourse = () => {
 
       {/* Section: Why Yogshala? */}
       <div className="text-center">
-        <h3 className="text-2xl md:text-3xl font-semibold text-[#007BFF] mb-8">Why Yogshala?</h3>
+        <h3 className="text-2xl md:text-3xl font-semibold text-[#007BFF] mb-8">
+          Why Choose Yogshala?
+        </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div className="flex items-center bg-white p-6 rounded-2xl shadow-md space-x-4">
             <div className="bg-[#007BFF] text-white p-4 rounded-full shadow">
-              <i className="fas fa-graduation-cap text-lg"></i>
+              <i className="fas fa-user-md text-lg"></i>
             </div>
-            <p className="text-lg font-medium">Top Indian Academy</p>
+            <p className="text-lg font-medium">Anatomy-Focused Approach</p>
           </div>
 
           <div className="flex items-center bg-white p-6 rounded-2xl shadow-md space-x-4">
             <div className="bg-[#007BFF] text-white p-4 rounded-full shadow">
-              <i className="fas fa-star text-lg"></i>
+              <i className="fas fa-heartbeat text-lg"></i>
             </div>
-            <p className="text-lg font-medium">5-Star Ratings</p>
+            <p className="text-lg font-medium">Injury Prevention Techniques</p>
           </div>
 
           <div className="flex items-center bg-white p-6 rounded-2xl shadow-md space-x-4">
             <div className="bg-[#007BFF] text-white p-4 rounded-full shadow">
-              <i className="fas fa-certificate text-lg"></i>
+              <i className="fas fa-globe text-lg"></i>
             </div>
-            <p className="text-lg font-medium">Globally Recognized Certifications</p>
+            <p className="text-lg font-medium">Globally Recognized Accreditation</p>
           </div>
 
           <div className="flex items-center bg-white p-6 rounded-2xl shadow-md space-x-4">
             <div className="bg-[#007BFF] text-white p-4 rounded-full shadow">
               <i className="fas fa-chalkboard-teacher text-lg"></i>
             </div>
-            <p className="text-lg font-medium">Expert Instructors</p>
+            <p className="text-lg font-medium">Led by Expert Trainers</p>
           </div>
         </div>
       </div>

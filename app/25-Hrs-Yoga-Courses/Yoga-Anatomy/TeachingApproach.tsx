@@ -1,4 +1,3 @@
-// TeachingApproach.tsx
 'use client';
 
 import Image from 'next/image';
@@ -24,22 +23,22 @@ const points = [
 
 export default function TeachingApproach() {
   return (
-    <section className="relative bg-[#101828] text-white py-16 flex flex-col items-center overflow-hidden">
+    <section className="relative bg-[#f5f5f5] text-[#101828] py-16 flex flex-col items-center overflow-hidden">
       <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-10">
         Our Teaching Approach
       </h2>
 
-      <div className="relative flex flex-col items-center md:flex-row md:justify-center w-full max-w-6xl px-4">
+      <div className="flex flex-col items-center md:flex-row md:justify-center w-full max-w-6xl px-4">
         <div className="flex flex-col space-y-6 w-full md:w-1/3 z-10">
           {points.slice(0, 2).map((point) => (
             <div
               key={point.number}
-              className="bg-[#1F2937] p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition"
+              className="bg-white p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition"
             >
-              <div className="w-7 h-7 flex items-center justify-center bg-white text-[#4377b2] text-sm font-bold rounded-full">
+              <div className="w-7 h-7 flex items-center justify-center bg-[#4377b2] text-white text-sm font-bold rounded-full">
                 {point.number}
               </div>
-              <p className="text-sm leading-relaxed">{point.text}</p>
+              <p className="text-sm leading-relaxed text-gray-700">{point.text}</p>
             </div>
           ))}
         </div>
@@ -58,12 +57,12 @@ export default function TeachingApproach() {
           {points.slice(2).map((point) => (
             <div
               key={point.number}
-              className="bg-[#1F2937] p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition"
+              className="bg-white p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition"
             >
-              <div className="w-7 h-7 flex items-center justify-center bg-white text-[#4377b2] text-sm font-bold rounded-full">
+              <div className="w-7 h-7 flex items-center justify-center bg-[#4377b2] text-white text-sm font-bold rounded-full">
                 {point.number}
               </div>
-              <p className="text-sm leading-relaxed">{point.text}</p>
+              <p className="text-sm leading-relaxed text-gray-700">{point.text}</p>
             </div>
           ))}
         </div>
@@ -73,7 +72,7 @@ export default function TeachingApproach() {
         Learn From Experts
       </button>
 
-      <div className="absolute top-6 right-6 text-[#a8bfe7] text-2xl animate-pulse">✦</div>
+      <div className="absolute top-6 right-6 text-[#4377b2] text-2xl animate-pulse">✦</div>
     </section>
   );
 }

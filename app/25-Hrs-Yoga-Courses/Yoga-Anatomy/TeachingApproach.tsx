@@ -1,3 +1,4 @@
+// TeachingApproach.tsx
 'use client';
 
 import Image from 'next/image';
@@ -5,19 +6,19 @@ import Image from 'next/image';
 const points = [
   {
     number: '1',
-    text: 'Our instructors bring years of experience to guide your learning journey.',
+    text: 'Personalized attention through small group sessions designed for focused learning.',
   },
   {
     number: '2',
-    text: 'Interactive sessions ensure you grasp concepts effectively and efficiently.',
+    text: 'Progressive curriculum with clear goals and milestones, ensuring continuous development.',
   },
   {
     number: '3',
-    text: 'Personalized feedback helps you improve continuously.',
+    text: 'Blending traditional wisdom with modern teaching tools and insights.',
   },
   {
     number: '4',
-    text: 'Real-world projects prepare you for industry challenges.',
+    text: 'Mindful mentorship to guide learners emotionally and intellectually.',
   },
 ];
 
@@ -29,11 +30,10 @@ export default function TeachingApproach() {
       </h2>
 
       <div className="relative flex flex-col items-center md:flex-row md:justify-center w-full max-w-6xl px-4">
-        {/* Left Points */}
         <div className="flex flex-col space-y-6 w-full md:w-1/3 z-10">
-          {points.slice(0, 2).map((point, idx) => (
+          {points.slice(0, 2).map((point) => (
             <div
-              key={idx}
+              key={point.number}
               className="bg-[#1F2937] p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition"
             >
               <div className="w-7 h-7 flex items-center justify-center bg-white text-[#4377b2] text-sm font-bold rounded-full">
@@ -44,7 +44,6 @@ export default function TeachingApproach() {
           ))}
         </div>
 
-        {/* Center Image */}
         <div className="relative w-[280px] md:w-[400px] mx-4 my-10 md:my-0 z-0">
           <Image
             src="/teaching-image.jpg"
@@ -55,11 +54,10 @@ export default function TeachingApproach() {
           />
         </div>
 
-        {/* Right Points */}
         <div className="flex flex-col space-y-6 w-full md:w-1/3 z-10">
-          {points.slice(2).map((point, idx) => (
+          {points.slice(2).map((point) => (
             <div
-              key={idx}
+              key={point.number}
               className="bg-[#1F2937] p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition"
             >
               <div className="w-7 h-7 flex items-center justify-center bg-white text-[#4377b2] text-sm font-bold rounded-full">
@@ -71,12 +69,10 @@ export default function TeachingApproach() {
         </div>
       </div>
 
-      {/* CTA Button */}
-      <button className="mt-10 bg-[#4377b2] hover:bg-[#365a90] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg transition-transform transform hover:scale-105">
+      <button className="mt-10 bg-[#4377b2] hover:bg-[#365f91] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg transition-transform transform hover:scale-105">
         Learn From Experts
       </button>
 
-      {/* Decorative Element */}
       <div className="absolute top-6 right-6 text-[#a8bfe7] text-2xl animate-pulse">✦</div>
     </section>
   );

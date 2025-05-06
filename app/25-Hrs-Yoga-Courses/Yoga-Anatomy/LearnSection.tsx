@@ -5,35 +5,35 @@ import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
 const LearnSection = () => {
-  const [active, setActive] = useState<number>(-1); // Default to no section open
+  const [active, setActive] = useState<number>(-1);
 
   const topics = [
     {
       title: "Poses Practice",
       content:
-        "Explore different yoga poses to improve flexibility, strength, and balance. Learn proper alignment and breathing with each posture."
+        "Explore different yoga poses to improve flexibility, strength, and balance. Learn proper alignment and breathing with each posture.",
     },
     {
       title: "Pranayama",
       content:
-        "Master breathing techniques that promote physical and mental wellness. Learn how to control your breath to energize or calm the body."
+        "Master breathing techniques that promote physical and mental wellness. Learn how to control your breath to energize or calm the body.",
     },
     {
       title: "Yoga Philosophy",
       content:
-        "Understand the spiritual and philosophical roots of yoga. Learn about the 8 limbs of yoga, the yamas and niyamas, and more."
+        "Understand the spiritual and philosophical roots of yoga. Learn about the 8 limbs of yoga, the yamas and niyamas, and more.",
     },
     {
       title: "Meditation",
       content:
-        "Learn techniques for focused meditation, mindfulness, and inner peace. Build a habit that enhances clarity and reduces stress."
-    }
+        "Learn techniques for focused meditation, mindfulness, and inner peace. Build a habit that enhances clarity and reduces stress.",
+    },
   ];
 
   return (
-    <div className="bg-[#F5F5F5] p-6 md:p-12">
+    <section className="bg-[#F5F5F5] p-6 md:p-12">
       <div className="bg-white rounded-2xl p-6 md:p-12 flex flex-col md:flex-row gap-12">
-        {/* Left Side Content */}
+        {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
             What you will learn?
@@ -46,13 +46,22 @@ const LearnSection = () => {
           </button>
         </div>
 
-        {/* Right Side Accordion */}
+        {/* Accordion */}
         <div className="md:w-1/2">
           {topics.map((topic, index) => (
             <div key={index} className="border-b py-4">
               <div
-                className="flex justify-between items-center cursor-pointer"
+                role="button"
+                tabIndex={0}
                 onClick={() => setActive(index === active ? -1 : index)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    setActive(index === active ? -1 : index);
+                  }
+                }}
+                className="flex justify-between items-center cursor-pointer"
+                aria-expanded={active === index}
+                aria-controls={`topic-content-${index}`}
               >
                 <h3 className="font-semibold text-lg text-[#4377b2]">
                   {topic.title}
@@ -64,13 +73,18 @@ const LearnSection = () => {
                 )}
               </div>
               {active === index && (
-                <p className="mt-2 text-gray-500 text-sm">{topic.content}</p>
+                <p
+                  id={`topic-content-${index}`}
+                  className="mt-2 text-gray-500 text-sm"
+                >
+                  {topic.content}
+                </p>
               )}
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

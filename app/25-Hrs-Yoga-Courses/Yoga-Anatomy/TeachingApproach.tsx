@@ -5,19 +5,19 @@ import Image from 'next/image';
 const points = [
   {
     number: '1',
-    text: 'Personalized attention through small group sessions designed for focused learning.',
+    text: 'Small group sessions that ensure individual support on your yoga journey.',
   },
   {
     number: '2',
-    text: 'Progressive curriculum with clear goals and milestones, ensuring continuous development.',
+    text: 'Step-by-step anatomical guidance tailored to a 25-hour progressive learning plan.',
   },
   {
     number: '3',
-    text: 'Blending traditional wisdom with modern teaching tools and insights.',
+    text: 'Integrating ancient yogic principles with modern anatomical knowledge.',
   },
   {
     number: '4',
-    text: 'Mindful mentorship to guide learners emotionally and intellectually.',
+    text: 'Experienced mentors to support your safe, mindful, and confident practice.',
   },
 ];
 
@@ -25,7 +25,7 @@ export default function TeachingApproach() {
   return (
     <section className="relative bg-[#f5f5f5] text-[#101828] py-16 flex flex-col items-center overflow-hidden">
       <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-10">
-        Our Teaching Approach
+        Our Yoga Teaching Approach
       </h2>
 
       <div className="flex flex-col items-center md:flex-row md:justify-center w-full max-w-6xl px-4">
@@ -45,8 +45,8 @@ export default function TeachingApproach() {
 
         <div className="relative w-[280px] md:w-[400px] mx-4 my-10 md:my-0 z-0">
           <Image
-            src="/teaching-image.jpg"
-            alt="Teaching"
+            src="/teaching-image.jpg" // Replace with a relevant yoga image if available
+            alt="Yoga Teaching"
             width={400}
             height={500}
             className="rounded-[24px] shadow-2xl object-cover w-full h-auto"
@@ -69,7 +69,7 @@ export default function TeachingApproach() {
       </div>
 
       <button className="mt-10 bg-[#4377b2] hover:bg-[#365f91] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg transition-transform transform hover:scale-105">
-        Learn From Experts
+        Enroll in the 25-hr Course
       </button>
 
       <div className="absolute top-6 right-6 text-[#4377b2] text-2xl animate-pulse">✦</div>

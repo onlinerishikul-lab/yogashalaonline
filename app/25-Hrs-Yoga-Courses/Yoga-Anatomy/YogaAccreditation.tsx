@@ -1,3 +1,6 @@
+'use client';
+
+import React from "react";
 import Image from "next/image";
 
 const YogaAccreditation = () => {
@@ -10,11 +13,11 @@ const YogaAccreditation = () => {
             alt="Yoga Alliance Certifications"
             width={512}
             height={174}
-            className="max-w-full h-auto"
+            className="max-w-full h-auto mx-auto"
           />
         </div>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-sky-600 mb-6">
           Yoga Alliance Accreditation
         </h2>
 

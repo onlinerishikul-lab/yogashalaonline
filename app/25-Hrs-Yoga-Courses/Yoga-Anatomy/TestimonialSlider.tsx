@@ -35,7 +35,7 @@ const TestimonialSlider = () => {
   }, []);
 
   return (
-    <section className="w-full bg-white py-16 flex justify-center items-center px-4">
+    <section className="w-full bg-[#f5f5f5] py-16 flex justify-center items-center px-4">
       <div className="relative w-full max-w-4xl h-[400px] md:h-[450px] rounded-3xl overflow-hidden shadow-xl">
         {slides.map((slide, idx) => (
           <div
@@ -44,7 +44,6 @@ const TestimonialSlider = () => {
               current === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
           >
-            {/* Background Image */}
             <Image
               src={slide.image}
               alt={`Slide ${idx + 1}`}
@@ -54,7 +53,6 @@ const TestimonialSlider = () => {
               priority={idx === 0}
             />
 
-            {/* Overlay Content */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-6 flex flex-col justify-end">
               <div className="bg-white bg-opacity-90 p-4 rounded-xl shadow-md max-w-md mx-auto text-center">
                 <div className="flex flex-col items-center mb-2">
@@ -63,9 +61,9 @@ const TestimonialSlider = () => {
                     alt="Avatar"
                     width={64}
                     height={64}
-                    className="rounded-full border-2 border-orange-500 shadow-lg"
+                    className="rounded-full border-2 border-[#4377b2] shadow-lg"
                   />
-                  <h4 className="text-lg font-semibold mt-2">{slide.name}</h4>
+                  <h4 className="text-lg font-semibold mt-2 text-[#4377b2]">{slide.name}</h4>
                 </div>
                 <p className="text-gray-700 text-sm">{slide.text}</p>
               </div>
@@ -78,3 +76,4 @@ const TestimonialSlider = () => {
 };
 
 export default TestimonialSlider;
+

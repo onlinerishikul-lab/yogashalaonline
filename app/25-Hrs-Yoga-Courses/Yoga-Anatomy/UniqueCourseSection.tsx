@@ -1,8 +1,9 @@
 'use client';
 
+import React from "react";
 import { GraduationCap, Users, Sun, BarChart3 } from "lucide-react";
 
-export default function UniqueCourseSection() {
+const UniqueCourseSection = () => {
   const items = [
     {
       title: "Experienced Teachers",
@@ -34,57 +35,7 @@ export default function UniqueCourseSection() {
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center gap-3"'use client';
-
-import { GraduationCap, Users, Sun, BarChart3 } from "lucide-react";
-
-export default function UniqueCourseSection() {
-  const items = [
-    {
-      title: "Experienced Teachers",
-      icon: <Users className="w-6 h-6 text-[#4377b2]" />,
-    },
-    {
-      title: "Flexible Schedule",
-      icon: <Sun className="w-6 h-6 text-[#4377b2]" />,
-    },
-    {
-      title: "Certified Curriculum",
-      icon: <GraduationCap className="w-6 h-6 text-[#4377b2]" />,
-    },
-    {
-      title: "Progress Tracking",
-      icon: <BarChart3 className="w-6 h-6 text-[#4377b2]" />,
-    },
-  ];
-
-  return (
-    <section className="bg-white py-16 px-6 md:px-10 lg:px-20">
-      <div className="max-w-6xl mx-auto text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2]">
-          Why is Our 100-Hour Online Teacher Training Course Unique?
-        </h2>
-      </div>
-
-      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center gap-3"
-          >
-            <div className="bg-[#f0f6fc] p-4 rounded-full shadow-sm flex items-center justify-center">
-              {item.icon}
-            </div>
-            <p className="text-lg font-semibold text-gray-800">{item.title}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-export { UniqueCourseSection };
-
+            className="flex flex-col items-center justify-center gap-3"
           >
             <div className="bg-sky-100 p-4 rounded-full shadow-sm flex items-center justify-center">
               {item.icon}
@@ -97,6 +48,6 @@ export { UniqueCourseSection };
       </div>
     </section>
   );
-}
+};
 
-export { UniqueCourseSection };
+export default UniqueCourseSection;

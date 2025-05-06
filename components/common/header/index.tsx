@@ -32,102 +32,155 @@ export const Header = () => {
   const router = useRouter();
 
   const navigationItems: NavigationItem[] = [
-    {
-      title: "Online Yoga Training",
-      dropdown: [
-        {
-          title: "25 Hrs Yoga Courses",
-          href: "/yoga/25-hours",
-          subDropdown: [
-            { title: "Yoga Anatomy for Safe Journey", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" },
-            { title: "Face Yoga", href: "/yoga/25-hours/face-yoga" },
-          ],
-        },
-        {
-          title: "50 Hrs Yoga Courses",
-          href: "/yoga/50-hours",
-          subDropdown: [
-            { title: "Restorative Yoga TTC", href: "/yoga/50-hours/restorative-yoga" },
-            { title: "Meditation TTC", href: "/yoga/50-hours/meditation" },
-            { title: "Pranayama TTC", href: "/yoga/50-hours/pranayama" },
-            { title: "Yoga Nidra TTC", href: "/yoga/50-hours/yoga-nidra" },
-            { title: "Chair Yoga", href: "/yoga/50-hours/chair-yoga" },
-            { title: "Mudra & Mantra Course", href: "/yoga/50-hours/mudra-mantra" },
-            { title: "Kundalini Yoga Course", href: "/yoga/50-hours/kundalini-yoga" },
-            { title: "Kids Yoga Course", href: "/yoga/50-hours/kids-yoga" },
-            { title: "Yoga Therapy Course", href: "/yoga/50-hours/yoga-therapy" },
-            { title: "Pregnancy Yoga", href: "/yoga/50-hours/pregnancy-yoga" },
-          ],
-        },
-        {
-          title: "75 Hrs Yoga Courses",
-          href: "/yoga/75-hours",
-          subDropdown: [
-            { title: "Core Concept of Yoga Philosophy", href: "/yoga/75-hours/yoga-philosophy" },
-            { title: "Asana Clinic for Yoga Professionals", href: "/yoga/75-hours/asana-clinic" },
-          ],
-        },
-        {
-          title: "85 Hrs Yoga Courses",
-          href: "/yoga/85-hours",
-          subDropdown: [
-            { title: "Prenatal & Postnatal Yoga Course for Teachers", href: "/yoga/85-hours/prenatal-postnatal" },
-          ],
-        },
-        {
-          title: "95 Hrs Yoga Courses",
-          href: "/yoga/95-hours",
-          subDropdown: [
-            { title: "Advanced Kids Yoga Course", href: "/yoga/95-hours/advanced-kids-yoga" },
-          ],
-        },
-        {
-          title: "100 Hrs Yoga Courses",
-          href: "/yoga/100-hours",
-          subDropdown: [
-            { title: "Multi Style Yoga TTC", href: "/yoga/100-hours/multi-style" },
-            { title: "Vinyasa Flow Yoga TTC", href: "/yoga/100-hours/vinyasa-flow" },
-            { title: "Hatha Yoga TTC", href: "/yoga/100-hours/hatha-yoga" },
-            { title: "Advanced Yoga Therapy Course", href: "/yoga/100-hours/advanced-yoga-therapy" },
-          ],
-        },
-        {
-          title: "200 Hrs Yoga Courses",
-          href: "/yoga/200-hours",
-          subDropdown: [{ title: "Multi Style Yoga TTC", href: "/yoga/200-hours/multi-style" }],
-        },
-        {
-          title: "300 Hrs Yoga Courses",
-          href: "/yoga/300-hours",
-          subDropdown: [{ title: "Multi Style Yoga TTC", href: "/yoga/300-hours/multi-style" }],
-        },
-      ],
-    },
-    {
-      title: "Online Ayurveda Courses",
-      href: "/courses",
-    },
-    {
-      title: "Online Yoga Courses",
-      href: "/courses",
-    },
-    {
-      title: "About Us",
-      dropdown: [
-        { title: "Our Teachers", href: "/our-teachers" },
-        { title: "Our Blogs", href: "/blog" },
-        { title: "Our Testimonials", href: "/home/testimonial" },
-      ],
-    },
-    {
-      title: "Contact Us",
-      href: "/contact",
-    },
-    {
-      title: "Payment",
-      href: "/payment",
-    },
-  ];
+  {
+    title: "Online Yoga Training",
+    dropdown: [
+      {
+        title: "25 Hrs Yoga Courses",
+        href: "/yoga/25-hours",
+        subDropdown: [
+          { title: "Yoga Anatomy for Safe Journey", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" },
+          { title: "Face Yoga", href: "/yoga/25-hours/face-yoga" },
+        ],
+      },
+      {
+        title: "50 Hrs Yoga Courses",
+        href: "/yoga/50-hours",
+        subDropdown: [
+          { title: "Restorative Yoga TTC", href: "/yoga/50-hours/restorative-yoga" },
+          { title: "Meditation TTC", href: "/yoga/50-hours/meditation" },
+          { title: "Pranayama TTC", href: "/yoga/50-hours/pranayama" },
+          { title: "Yoga Nidra TTC", href: "/yoga/50-hours/yoga-nidra" },
+          { title: "Chair Yoga", href: "/yoga/50-hours/chair-yoga" },
+          { title: "Mudra & Mantra Course", href: "/yoga/50-hours/mudra-mantra" },
+          { title: "Kundalini Yoga Course", href: "/yoga/50-hours/kundalini-yoga" },
+          { title: "Kids Yoga Course", href: "/yoga/50-hours/kids-yoga" },
+          { title: "Yoga Therapy Course", href: "/yoga/50-hours/yoga-therapy" },
+          { title: "Pregnancy Yoga", href: "/yoga/50-hours/pregnancy-yoga" },
+        ],
+      },
+      {
+        title: "75 Hrs Yoga Courses",
+        href: "/yoga/75-hours",
+        subDropdown: [
+          { title: "Core Concept of Yoga Philosophy", href: "/yoga/75-hours/yoga-philosophy" },
+          { title: "Asana Clinic for Yoga Professionals", href: "/yoga/75-hours/asana-clinic" },
+        ],
+      },
+      {
+        title: "85 Hrs Yoga Courses",
+        href: "/yoga/85-hours",
+        subDropdown: [
+          { title: "Prenatal & Postnatal Yoga Course for Teachers", href: "/yoga/85-hours/prenatal-postnatal" },
+        ],
+      },
+      {
+        title: "95 Hrs Yoga Courses",
+        href: "/yoga/95-hours",
+        subDropdown: [
+          { title: "Advanced Kids Yoga Course", href: "/yoga/95-hours/advanced-kids-yoga" },
+        ],
+      },
+      {
+        title: "100 Hrs Yoga Courses",
+        href: "/yoga/100-hours",
+        subDropdown: [
+          { title: "Multi Style Yoga TTC", href: "/yoga/100-hours/multi-style" },
+          { title: "Vinyasa Flow Yoga TTC", href: "/yoga/100-hours/vinyasa-flow" },
+          { title: "Hatha Yoga TTC", href: "/yoga/100-hours/hatha-yoga" },
+          { title: "Advanced Yoga Therapy Course", href: "/yoga/100-hours/advanced-yoga-therapy" },
+        ],
+      },
+      {
+        title: "200 Hrs Yoga Courses",
+        href: "/yoga/200-hours",
+        subDropdown: [
+          { title: "Multi Style Yoga TTC", href: "/yoga/200-hours/multi-style" },
+        ],
+      },
+      {
+        title: "300 Hrs Yoga Courses",
+        href: "/yoga/300-hours",
+        subDropdown: [
+          { title: "Multi Style Yoga TTC", href: "/yoga/300-hours/multi-style" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Online Ayurveda Courses",
+    dropdown: [
+      {
+        title: "10 Hr Ayurvedic Basics Course for Beginners",
+        href: "/ayurveda/10-hours/basics",
+      },
+      {
+        title: "10 Hr Ayurvedic Herbal Course",
+        href: "/ayurveda/10-hours/herbal",
+      },
+      {
+        title: "15 Hr Ayurvedic Sexual Relationship Course",
+        href: "/ayurveda/15-hours/sexual-relationship",
+      },
+      {
+        title: "15 Hr Ayurveda Garbha Samskara Course",
+        href: "/ayurveda/15-hours/garbha-samskara",
+      },
+      {
+        title: "25 Hr Ayurveda Immunity Course",
+        href: "/ayurveda/25-hours/immunity",
+      },
+      {
+        title: "25 Hr Ayurveda Skin and Beauty Course",
+        href: "/ayurveda/25-hours/skin-beauty",
+      },
+      {
+        title: "25 Hr Advanced Ayurveda Dosha Balancing Course",
+        href: "/ayurveda/25-hours/dosha-balancing",
+      },
+      {
+        title: "50 Hr Ayurvedic Foundational Course",
+        href: "/ayurveda/50-hours/foundational",
+      },
+      {
+        title: "50 Hr Ayurvedic Diet and Nutrition Course",
+        href: "/ayurveda/50-hours/diet-nutrition",
+      },
+      {
+        title: "50 Hr Ayurvedic Lifestyle Course",
+        href: "/ayurveda/50-hours/lifestyle",
+      },
+    ],
+  },
+  {
+    title: "Online Yoga Daily Classes",
+    dropdown: [
+      { title: "Prenatal Yoga", href: "/daily-classes/prenatal-yoga" },
+      { title: "Postnatal Yoga", href: "/daily-classes/postnatal-yoga" },
+      { title: "Meditation", href: "/daily-classes/meditation" },
+      { title: "Pranayama", href: "/daily-classes/pranayama" },
+      { title: "Hatha Yoga", href: "/daily-classes/hatha-yoga" },
+      { title: "Vinyasa Flow", href: "/daily-classes/vinyasa-flow" },
+    ],
+  },
+  {
+    title: "About Us",
+    dropdown: [
+      { title: "Our Teachers", href: "/our-teachers" },
+      { title: "Our Blogs", href: "/blog" },
+      { title: "Our Testimonials", href: "/home/testimonial" },
+    ],
+  },
+  {
+    title: "Contact Us",
+    href: "/contact",
+  },
+  {
+    title: "Payment",
+    href: "/payment",
+  },
+];
+
   const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -158,40 +211,70 @@ export const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-6 text-white text-sm font-medium">
-          {navigationItems.map((item) =>
+        {/* Left Nav */}
+        <div className="hidden lg:flex flex-1 items-center gap-x-8 text-white text-sm font-medium">
+          {navigationItems.slice(0, 3).map((item) =>
             "dropdown" in item ? (
               <div key={item.title} className="relative dropdown-parent">
                 <button
-                  onClick={() =>
-                    setActiveDropdown(
-                      activeDropdown === item.title ? null : item.title
-                    )
-                  }
                   className="flex items-center gap-1 hover:text-white/80"
+                  onClick={() =>
+                    setActiveDropdown((prev) => (prev === item.title ? null : item.title))
+                  }
                 >
-                  {item.title} <ChevronDown className="w-4 h-4" />
+                  {item.title}
+                  <ChevronDown className="w-4 h-4" />
                 </button>
-                {/* Render dropdown if active */}
                 {activeDropdown === item.title && (
-                  <div className="absolute top-full left-0 bg-white shadow-md text-black p-4">
-                    {item.dropdown.map((drop) => (
-                      <div key={drop.title}>
-                        <Link href={drop.href}>{drop.title}</Link>
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2">
+                    {item.dropdown.map((subItem, idx) => (
+                      <div key={subItem.title} className={`${idx !== 0 ? "border-t mt-2 pt-2" : ""}`}>
+                        <div className="relative group">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              if (subItem.subDropdown) {
+                                setOpenSubDropdown((prev) =>
+                                  prev === subItem.title ? null : subItem.title
+                                );
+                              } else {
+                                router.push(subItem.href);
+                                setActiveDropdown(null);
+                                setOpenSubDropdown(null);
+                              }
+                            }}
+                            className="w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-100 flex justify-between items-center"
+                          >
+                            {subItem.title}
+                            {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
+                          </button>
+                          {openSubDropdown === subItem.title && subItem.subDropdown && (
+                            <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-1">
+                              {subItem.subDropdown.map((nestedItem) => (
+                                <Link
+                                  key={nestedItem.title}
+                                  href={nestedItem.href}
+                                  className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                                >
+                                  {nestedItem.title}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       </div>
                     ))}
                   </div>
                 )}
               </div>
             ) : (
-              <Link key={item.title} href={item.href}>
+              <Link key={item.title} href={item.href} className="hover:text-white/80">
                 {item.title}
               </Link>
             )
           )}
-        </nav>
-      </div>
+        </div>
+
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />

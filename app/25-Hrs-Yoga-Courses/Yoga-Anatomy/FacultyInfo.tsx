@@ -4,14 +4,14 @@ import Image from "next/image";
 
 const FacultyInfo = () => {
   return (
-    <section id="faculty" className="bg-gray-50 py-16 px-4">
+    <section id="faculty" className="bg-[#f9fafb] py-16 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377B2] mb-6">
             Know About Your Faculty
           </h2>
-          <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+          <p className="text-[#4377B2] text-lg mb-8 leading-relaxed">
             Learn from industry veterans with decades of yoga and mindfulness training experience.
           </p>
 
@@ -19,7 +19,7 @@ const FacultyInfo = () => {
             <div className="text-4xl font-bold">920+</div>
             <div className="mt-1 text-sm">Projects Completed</div>
 
-            <div className="flex justify-center mt-4 space-x-[-10px]">
+            <div className="flex justify-center mt-4 space-x-[-10px] relative z-0">
               {["1", "2", "3", "4"].map((_, idx) => (
                 <Image
                   key={idx}
@@ -53,4 +53,3 @@ const FacultyInfo = () => {
 };
 
 export default FacultyInfo;
-

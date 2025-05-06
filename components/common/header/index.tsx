@@ -240,19 +240,22 @@ export const Header = () => {
                             {subItem.title}
                             {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
                           </button>
-                          {openSubDropdown === subItem.title && subItem.subDropdown && (
-                            <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-2">
-                              {subItem.subDropdown.map((nestedItem) => (
-                                <Link
-                                  key={nestedItem.title}
-                                  href={nestedItem.href}
-                                  className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                                >
-                                  {nestedItem.title}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
+                         {openSubDropdown === subItem.title && subItem.subDropdown && (
+  <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2">
+    {subItem.subDropdown.map((nestedItem, nestedIdx) => (
+      <Link
+        key={nestedItem.title}
+        href={nestedItem.href}
+        className={`block px-4 py-2 text-sm text-black hover:bg-gray-100 ${
+          nestedIdx !== 0 ? "border-t mt-2 pt-2" : ""
+        }`}
+      >
+        {nestedItem.title}
+      </Link>
+    ))}
+  </div>
+)}
+
                         </div>
                       </div>
                     ))}

@@ -23,7 +23,7 @@ const FacultyInfo = () => {
               {["1", "2", "3", "4"].map((_, idx) => (
                 <Image
                   key={idx}
-                  src={`/faculty-avatar-${idx + 1}.png`}
+                  src={`/faculty-avatar-${idx + 1}.jpg`}
                   alt={`Faculty ${idx + 1}`}
                   width={40}
                   height={40}

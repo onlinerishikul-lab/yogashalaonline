@@ -10,8 +10,8 @@ const HeroSection = () => {
     >
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-center leading-snug drop-shadow-lg">
-          Get Certified in 100-HOUR <br />
-          Multi-style Yoga
+          Yoga Anatomy for a Safe Journey<br />
+         Anatomy meets awareness.
         </h1>
         <button
           className="mt-6 bg-[#4377b2] hover:bg-[#365e8f] transition-colors duration-300 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg"

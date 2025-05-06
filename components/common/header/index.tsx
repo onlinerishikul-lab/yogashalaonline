@@ -39,11 +39,14 @@ export const Header = () => {
           title: "25 Hrs Yoga Courses",
           href: "/yoga/25-hours",
           subDropdown: [
-            { title: "Yoga Anatomy for Safe Journey", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" },
+            { title: "Yoga Anatomy", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" },
             { title: "Face Yoga", href: "/yoga/25-hours/face-yoga" },
           ],
         },
-        // ... (other dropdown items)
+        {
+          title: "50 Hrs Yoga Courses",
+          href: "/yoga/50-hours",
+        },
       ],
     },
     {
@@ -59,7 +62,7 @@ export const Header = () => {
       dropdown: [
         { title: "Our Teachers", href: "/our-teachers" },
         { title: "Our Blogs", href: "/blog" },
-        { title: "Our Testimonials", href: "/home/testimonial" },
+        { title: "Testimonials", href: "/home/testimonial" },
       ],
     },
     {
@@ -117,40 +120,42 @@ export const Header = () => {
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 {activeDropdown === item.title && (
-                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
-                    {item.dropdown.map((subItem) => (
-                      <div key={subItem.title} className="relative group">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            if (subItem.subDropdown) {
-                              setOpenSubDropdown((prev) =>
-                                prev === subItem.title ? null : subItem.title
-                              );
-                            } else {
-                              router.push(subItem.href);
-                              setActiveDropdown(null);
-                              setOpenSubDropdown(null);
-                            }
-                          }}
-                          className="w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-100 flex justify-between items-center"
-                        >
-                          {subItem.title}
-                          {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
-                        </button>
-                        {openSubDropdown === subItem.title && subItem.subDropdown && (
-                          <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-1">
-                            {subItem.subDropdown.map((nestedItem) => (
-                              <Link
-                                key={nestedItem.title}
-                                href={nestedItem.href}
-                                className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                              >
-                                {nestedItem.title}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2">
+                    {item.dropdown.map((subItem, idx) => (
+                      <div key={subItem.title} className={`${idx !== 0 ? "border-t mt-2 pt-2" : ""}`}>
+                        <div className="relative group">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              if (subItem.subDropdown) {
+                                setOpenSubDropdown((prev) =>
+                                  prev === subItem.title ? null : subItem.title
+                                );
+                              } else {
+                                router.push(subItem.href);
+                                setActiveDropdown(null);
+                                setOpenSubDropdown(null);
+                              }
+                            }}
+                            className="w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-100 flex justify-between items-center"
+                          >
+                            {subItem.title}
+                            {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
+                          </button>
+                          {openSubDropdown === subItem.title && subItem.subDropdown && (
+                            <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-1">
+                              {subItem.subDropdown.map((nestedItem) => (
+                                <Link
+                                  key={nestedItem.title}
+                                  href={nestedItem.href}
+                                  className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                                >
+                                  {nestedItem.title}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -184,12 +189,14 @@ export const Header = () => {
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 {activeDropdown === item.title && (
-                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
-                    {item.dropdown.map((subItem) => (
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2">
+                    {item.dropdown.map((subItem, idx) => (
                       <Link
                         key={subItem.title}
                         href={subItem.href}
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        className={`block px-4 py-2 text-sm text-black hover:bg-gray-100 ${
+                          idx !== 0 ? "border-t mt-2 pt-2" : ""
+                        }`}
                       >
                         {subItem.title}
                       </Link>
@@ -203,8 +210,6 @@ export const Header = () => {
               </Link>
             )
           )}
-
-          {/* Login Button */}
           <Button
             onClick={() => router.push("/login")}
             className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
@@ -241,11 +246,13 @@ export const Header = () => {
                   <>
                     <p className="text-lg mt-2">{item.title}</p>
                     <div className="pl-4 space-y-2">
-                      {item.dropdown.map((subItem) => (
+                      {item.dropdown.map((subItem, idx) => (
                         <Link
                           key={subItem.title}
                           href={subItem.href}
-                          className="block text-sm hover:text-white/80"
+                          className={`block text-sm hover:text-white/80 ${
+                            idx !== 0 ? "border-t mt-2 pt-2" : ""
+                          }`}
                           onClick={() => setOpen(false)}
                         >
                           {subItem.title}

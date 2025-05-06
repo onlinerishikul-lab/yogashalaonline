@@ -146,7 +146,7 @@ export const Header = () => {
   ],
   },
   {
-    title: "Online Yoga Daily Classes",
+    title: "Online Yoga Classes",
     dropdown: [
       { title: "Prenatal Yoga", href: "/daily-classes/prenatal-yoga" },
       { title: "Postnatal Yoga", href: "/daily-classes/postnatal-yoga" },

@@ -158,70 +158,40 @@ export const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Left Nav */}
-        <div className="hidden lg:flex flex-1 items-center gap-x-8 text-white text-sm font-medium">
-          {navigationItems.slice(0, 3).map((item) =>
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex items-center gap-6 text-white text-sm font-medium">
+          {navigationItems.map((item) =>
             "dropdown" in item ? (
               <div key={item.title} className="relative dropdown-parent">
                 <button
-                  className="flex items-center gap-1 hover:text-white/80"
                   onClick={() =>
-                    setActiveDropdown((prev) => (prev === item.title ? null : item.title))
+                    setActiveDropdown(
+                      activeDropdown === item.title ? null : item.title
+                    )
                   }
+                  className="flex items-center gap-1 hover:text-white/80"
                 >
-                  {item.title}
-                  <ChevronDown className="w-4 h-4" />
+                  {item.title} <ChevronDown className="w-4 h-4" />
                 </button>
+                {/* Render dropdown if active */}
                 {activeDropdown === item.title && (
-                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2">
-                    {item.dropdown.map((subItem, idx) => (
-                      <div key={subItem.title} className={`${idx !== 0 ? "border-t mt-2 pt-2" : ""}`}>
-                        <div className="relative group">
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              if (subItem.subDropdown) {
-                                setOpenSubDropdown((prev) =>
-                                  prev === subItem.title ? null : subItem.title
-                                );
-                              } else {
-                                router.push(subItem.href);
-                                setActiveDropdown(null);
-                                setOpenSubDropdown(null);
-                              }
-                            }}
-                            className="w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-100 flex justify-between items-center"
-                          >
-                            {subItem.title}
-                            {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
-                          </button>
-                          {openSubDropdown === subItem.title && subItem.subDropdown && (
-                            <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-1">
-                              {subItem.subDropdown.map((nestedItem) => (
-                                <Link
-                                  key={nestedItem.title}
-                                  href={nestedItem.href}
-                                  className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                                >
-                                  {nestedItem.title}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
-                        </div>
+                  <div className="absolute top-full left-0 bg-white shadow-md text-black p-4">
+                    {item.dropdown.map((drop) => (
+                      <div key={drop.title}>
+                        <Link href={drop.href}>{drop.title}</Link>
                       </div>
                     ))}
                   </div>
                 )}
               </div>
             ) : (
-              <Link key={item.title} href={item.href} className="hover:text-white/80">
+              <Link key={item.title} href={item.href}>
                 {item.title}
               </Link>
             )
           )}
-        </div>
-
+        </nav>
+      </div>
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />

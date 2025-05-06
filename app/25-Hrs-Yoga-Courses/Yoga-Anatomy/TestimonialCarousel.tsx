@@ -5,22 +5,22 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
   {
-    company: 'Gymstory',
-    title: 'Transformative Learning Experience',
+    company: 'YogAspire',
+    title: 'Empowering and Eye-Opening',
     content:
-      'The courses provided a comprehensive understanding of the subject matter, with practical applications that I could implement immediately.',
-    name: 'Alex Johnson',
-    role: 'Fitness Coach',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+      'The 25-hour course gave me a solid understanding of anatomy in yoga. It changed how I practice and teach — I feel safer and more confident.',
+    name: 'Anjali Mehta',
+    role: 'Certified Yoga Instructor',
+    image: 'https://randomuser.me/api/portraits/women/65.jpg',
   },
   {
-    company: 'Wellness Hub',
-    title: 'Exceptional Guidance and Support',
+    company: 'InnerGlow Yoga',
+    title: 'Supportive & Insightful Journey',
     content:
-      'The instructors were always available to answer questions and provide feedback, making the learning process smooth and enjoyable.',
-    name: 'Maria Gonzalez',
-    role: 'Wellness Consultant',
-    image: 'https://randomuser.me/api/portraits/women/44.jpg',
+      'The instructors made complex anatomy feel approachable. Their guidance was compassionate and professional throughout the course.',
+    name: 'David Lin',
+    role: 'Yoga Therapy Practitioner',
+    image: 'https://randomuser.me/api/portraits/men/53.jpg',
   },
 ];
 
@@ -39,10 +39,10 @@ const TestimonialCarousel = () => {
   return (
     <section className="py-16 bg-[#f5f5f5] w-full flex flex-col items-center px-4">
       <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] text-center mb-3">
-        Straight from Our Trainees
+        What Our Students Say
       </h2>
       <p className="text-gray-600 text-center mb-10 text-sm md:text-base">
-        Experiences that inspire. Every voice matters — every story, heard.
+        Honest reflections from those who’ve grown through our 25-hour yoga anatomy journey.
       </p>
 
       <div className="relative max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-8 md:p-10 transition-all">

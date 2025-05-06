@@ -31,7 +31,7 @@ type NavigationItem =
 export const Header = () => {
   const router = useRouter();
 
-const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dropdown: [ { title: "25 Hrs Yoga Courses", href: "/yoga/25-hours", subDropdown: [ { title: "Yoga Anatomy for Safe Journey", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" }, { title: "Face Yoga", href: "/yoga/25-hours/face-yoga" }, ], }, { title: "50 Hrs Yoga Courses", href: "/yoga/50-hours", subDropdown: [ { title: "Restorative Yoga TTC", href: "/yoga/50-hours/restorative-yoga" }, { title: "Meditation TTC", href: "/yoga/50-hours/meditation" }, { title: "Pranayama TTC", href: "/yoga/50-hours/pranayama" }, { title: "Yoga Nidra TTC", href: "/yoga/50-hours/yoga-nidra" }, { title: "Chair Yoga", href: "/yoga/50-hours/chair-yoga" }, { title: "Mudra & Mantra Course", href: "/yoga/50-hours/mudra-mantra" }, { title: "Kundalini Yoga Course", href: "/yoga/50-hours/kundalini-yoga" }, { title: "Kids Yoga Course", href: "/yoga/50-hours/kids-yoga" }, { title: "Yoga Therapy Course", href: "/yoga/50-hours/yoga-therapy" }, { title: "Pregnancy Yoga", href: "/yoga/50-hours/pregnancy-yoga" }, ], }, { title: "75 Hrs Yoga Courses", href: "/yoga/75-hours", subDropdown: [ { title: "Core Concept of Yoga Philosophy", href: "/yoga/75-hours/yoga-philosophy" }, { title: "Asana Clinic for Yoga Professionals", href: "/yoga/75-hours/asana-clinic" }, ], }, { title: "85 Hrs Yoga Courses", href: "/yoga/85-hours", subDropdown: [ { title: "Prenatal & Postnatal Yoga Course for Teachers", href: "/yoga/85-hours/prenatal-postnatal" }, ], }, { title: "95 Hrs Yoga Courses", href: "/yoga/95-hours", subDropdown: [ { title: "Advanced Kids Yoga Course", href: "/yoga/95-hours/advanced-kids-yoga" }, ], }, { title: "100 Hrs Yoga Courses", href: "/yoga/100-hours", subDropdown: [ { title: "Multi Style Yoga TTC", href: "/yoga/100-hours/multi-style" }, { title: "Vinyasa Flow Yoga TTC", href: "/yoga/100-hours/vinyasa-flow" }, { title: "Hatha Yoga TTC", href: "/yoga/100-hours/hatha-yoga" }, { title: "Advanced Yoga Therapy Course", href: "/yoga/100-hours/advanced-yoga-therapy" }, ], }, { title: "200 Hrs Yoga Courses", href: "/yoga/200-hours", subDropdown: [ { title: "Multi Style Yoga TTC", href: "/yoga/200-hours/multi-style" }, ], }, { title: "300 Hrs Yoga Courses", href: "/yoga/300-hours", subDropdown: [ { title: "Multi Style Yoga TTC", href: "/yoga/300-hours/multi-style" }, ], }, ], }, { title: "Online Ayurveda Courses", dropdown: [ { title: "10 Hrs Ayurveda Courses", href: "/yoga/25-hours", subDropdown: [ { title: "Ayurvedic Basics Course for Beginners", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" }, { title: "Ayurvedic Herbal Course", href: "/yoga/25-hours/face-yoga" }, ], }, { title: "15 Hrs Ayurveda Courses", href: "/yoga/50-hours", subDropdown: [ { title: "Ayurvedic Sexual Relationship Course", href: "/yoga/50-hours/restorative-yoga" }, { title: "Ayurveda Garbha Samskara Course", href: "/yoga/50-hours/meditation" }, ], }, { title: "25 Hrs Ayurveda Courses", href: "/yoga/75-hours", subDropdown: [ { title: "Ayurveda Immunity Course", href: "/yoga/75-hours/yoga-philosophy" }, { title: "Ayurveda Skin and Beauty Course", href: "/yoga/75-hours/asana-clinic" }, ], }, { title: "50 Hrs Ayurveda Courses", href: "/yoga/85-hours", subDropdown: [ { title: "Ayurvedic Foundational Course", href: "/yoga/85-hours/prenatal-postnatal" }, { title: "Ayurvedic Diet and Nutrition Course", href: "/yoga/85-hours/prenatal-postnatal" }, { title: "Ayurvedic Lifestyle Course", href: "/yoga/85-hours/prenatal-postnatal" }, ], }, ], }, { title: "Online Yoga Classes", dropdown: [ { title: "Prenatal Yoga", href: "/daily-classes/prenatal-yoga" }, { title: "Postnatal Yoga", href: "/daily-classes/postnatal-yoga" }, { title: "Meditation", href: "/daily-classes/meditation" }, { title: "Pranayama", href: "/daily-classes/pranayama" }, { title: "Hatha Yoga", href: "/daily-classes/hatha-yoga" }, { title: "Vinyasa Flow", href: "/daily-classes/vinyasa-flow" }, ], }, { title: "About Us", dropdown: [ { title: "Our Teachers", href: "/our-teachers" }, { title: "Our Blogs", href: "/blog" }, { title: "Our Testimonials", href: "/home/testimonial" }, ], }, { title: "Contact Us", href: "/contact", }, { title: "Payment", href: "/payment", }, ];
+  const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dropdown: [ { title: "25 Hrs Yoga Courses", href: "/yoga/25-hours", subDropdown: [ { title: "Yoga Anatomy for Safe Journey", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" }, { title: "Face Yoga", href: "/yoga/25-hours/face-yoga" }, ], }, { title: "50 Hrs Yoga Courses", href: "/yoga/50-hours", subDropdown: [ { title: "Restorative Yoga TTC", href: "/yoga/50-hours/restorative-yoga" }, { title: "Meditation TTC", href: "/yoga/50-hours/meditation" }, { title: "Pranayama TTC", href: "/yoga/50-hours/pranayama" }, { title: "Yoga Nidra TTC", href: "/yoga/50-hours/yoga-nidra" }, { title: "Chair Yoga", href: "/yoga/50-hours/chair-yoga" }, { title: "Mudra & Mantra Course", href: "/yoga/50-hours/mudra-mantra" }, { title: "Kundalini Yoga Course", href: "/yoga/50-hours/kundalini-yoga" }, { title: "Kids Yoga Course", href: "/yoga/50-hours/kids-yoga" }, { title: "Yoga Therapy Course", href: "/yoga/50-hours/yoga-therapy" }, { title: "Pregnancy Yoga", href: "/yoga/50-hours/pregnancy-yoga" }, ], }, { title: "75 Hrs Yoga Courses", href: "/yoga/75-hours", subDropdown: [ { title: "Core Concept of Yoga Philosophy", href: "/yoga/75-hours/yoga-philosophy" }, { title: "Asana Clinic for Yoga Professionals", href: "/yoga/75-hours/asana-clinic" }, ], }, { title: "85 Hrs Yoga Courses", href: "/yoga/85-hours", subDropdown: [ { title: "Prenatal & Postnatal Yoga Course for Teachers", href: "/yoga/85-hours/prenatal-postnatal" }, ], }, { title: "95 Hrs Yoga Courses", href: "/yoga/95-hours", subDropdown: [ { title: "Advanced Kids Yoga Course", href: "/yoga/95-hours/advanced-kids-yoga" }, ], }, { title: "100 Hrs Yoga Courses", href: "/yoga/100-hours", subDropdown: [ { title: "Multi Style Yoga TTC", href: "/yoga/100-hours/multi-style" }, { title: "Vinyasa Flow Yoga TTC", href: "/yoga/100-hours/vinyasa-flow" }, { title: "Hatha Yoga TTC", href: "/yoga/100-hours/hatha-yoga" }, { title: "Advanced Yoga Therapy Course", href: "/yoga/100-hours/advanced-yoga-therapy" }, ], }, { title: "200 Hrs Yoga Courses", href: "/yoga/200-hours", subDropdown: [ { title: "Multi Style Yoga TTC", href: "/yoga/200-hours/multi-style" }, ], }, { title: "300 Hrs Yoga Courses", href: "/yoga/300-hours", subDropdown: [ { title: "Multi Style Yoga TTC", href: "/yoga/300-hours/multi-style" }, ], }, ], }, { title: "Online Ayurveda Courses", dropdown: [ { title: "10 Hrs Ayurveda Courses", href: "/yoga/25-hours", subDropdown: [ { title: "Ayurvedic Basics Course for Beginners", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" }, { title: "Ayurvedic Herbal Course", href: "/yoga/25-hours/face-yoga" }, ], }, { title: "15 Hrs Ayurveda Courses", href: "/yoga/50-hours", subDropdown: [ { title: "Ayurvedic Sexual Relationship Course", href: "/yoga/50-hours/restorative-yoga" }, { title: "Ayurveda Garbha Samskara Course", href: "/yoga/50-hours/meditation" }, ], }, { title: "25 Hrs Ayurveda Courses", href: "/yoga/75-hours", subDropdown: [ { title: "Ayurveda Immunity Course", href: "/yoga/75-hours/yoga-philosophy" }, { title: "Ayurveda Skin and Beauty Course", href: "/yoga/75-hours/asana-clinic" }, ], }, { title: "50 Hrs Ayurveda Courses", href: "/yoga/85-hours", subDropdown: [ { title: "Ayurvedic Foundational Course", href: "/yoga/85-hours/prenatal-postnatal" }, { title: "Ayurvedic Diet and Nutrition Course", href: "/yoga/85-hours/prenatal-postnatal" }, { title: "Ayurvedic Lifestyle Course", href: "/yoga/85-hours/prenatal-postnatal" }, ], }, ], }, { title: "Online Yoga Classes", dropdown: [ { title: "Prenatal Yoga", href: "/daily-classes/prenatal-yoga" }, { title: "Postnatal Yoga", href: "/daily-classes/postnatal-yoga" }, { title: "Meditation", href: "/daily-classes/meditation" }, { title: "Pranayama", href: "/daily-classes/pranayama" }, { title: "Hatha Yoga", href: "/daily-classes/hatha-yoga" }, { title: "Vinyasa Flow", href: "/daily-classes/vinyasa-flow" }, ], }, { title: "About Us", dropdown: [ { title: "Our Teachers", href: "/our-teachers" }, { title: "Our Blogs", href: "/blog" }, { title: "Our Testimonials", href: "/home/testimonial" }, ], }, { title: "Contact Us", href: "/contact", }, { title: "Payment", href: "/payment", }, ];
 
   const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,7 +43,7 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
   const [expandedMobileSubItems, setExpandedMobileSubItems] = useState<string[]>([]);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY >= window.innerHeight / 2);
+    const handleScroll = () => setIsScrolled(window.scrollY >= 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -81,139 +81,124 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
+        isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-[#4377B2]/80"
       }`}
     >
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Left Nav */}
-        <div className="hidden lg:flex flex-1 items-center gap-x-8 text-white text-sm font-medium">
-          {navigationItems.slice(0, 3).map((item) =>
-            "dropdown" in item ? (
-              <div key={item.title} className="relative dropdown-parent">
-                <button
-                  className="flex items-center gap-1 hover:text-white/80"
-                  onClick={() =>
-                    setActiveDropdown((prev) => (prev === item.title ? null : item.title))
-                  }
-                >
-                  {item.title}
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                {activeDropdown === item.title && (
-                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
-                    {item.dropdown.map((subItem) => (
-                      <div key={subItem.title} className="relative group">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            if (subItem.subDropdown) {
-                              setOpenSubDropdown((prev) =>
-                                prev === subItem.title ? null : subItem.title
-                              );
-                            } else {
-                              router.push(subItem.href);
-                              setActiveDropdown(null);
-                              setOpenSubDropdown(null);
-                            }
-                          }}
-                          className="w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-100 flex justify-between items-center"
-                        >
-                          {subItem.title}
-                          {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
-                        </button>
-                        {openSubDropdown === subItem.title && subItem.subDropdown && (
-                          <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-1">
-                            {subItem.subDropdown.map((nestedItem) => (
-                              <Link
-                                key={nestedItem.title}
-                                href={nestedItem.href}
-                                className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                              >
-                                {nestedItem.title}
-                              </Link>
-                            ))}
+      <div className="container mx-auto px-4 py-3">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="relative z-20">
+            <div className="flex items-center">
+              <Image 
+                src="/assets/rishikulonlinlogo.png" 
+                alt="Rishikul Yoga" 
+                width={120} 
+                height={60} 
+                className="object-contain"
+              />
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center justify-end flex-1">
+            <nav className="flex items-center space-x-6">
+              {navigationItems.map((item) =>
+                "dropdown" in item ? (
+                  <div key={item.title} className="relative dropdown-parent">
+                    <button
+                      className="flex items-center gap-1 text-white hover:text-white/80 font-medium"
+                      onClick={() =>
+                        setActiveDropdown((prev) => (prev === item.title ? null : item.title))
+                      }
+                    >
+                      {item.title}
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+                    {activeDropdown === item.title && (
+                      <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
+                        {item.dropdown.map((subItem) => (
+                          <div key={subItem.title} className="relative group">
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                if (subItem.subDropdown) {
+                                  setOpenSubDropdown((prev) =>
+                                    prev === subItem.title ? null : subItem.title
+                                  );
+                                } else {
+                                  router.push(subItem.href);
+                                  setActiveDropdown(null);
+                                  setOpenSubDropdown(null);
+                                }
+                              }}
+                              className="w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-100 flex justify-between items-center"
+                            >
+                              {subItem.title}
+                              {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
+                            </button>
+                            {openSubDropdown === subItem.title && subItem.subDropdown && (
+                              <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-1">
+                                {subItem.subDropdown.map((nestedItem) => (
+                                  <Link
+                                    key={nestedItem.title}
+                                    href={nestedItem.href}
+                                    className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                                  >
+                                    {nestedItem.title}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
                           </div>
-                        )}
+                        ))}
                       </div>
-                    ))}
+                    )}
                   </div>
-                )}
-              </div>
-            ) : (
-              <Link key={item.title} href={item.href} className="hover:text-white/80">
-                {item.title}
-              </Link>
-            )
-          )}
-        </div>
+                ) : (
+                  <Link 
+                    key={item.title} 
+                    href={item.href} 
+                    className="text-white hover:text-white/80 font-medium"
+                  >
+                    {item.title}
+                  </Link>
+                )
+              )}
+              <Button
+                onClick={() => router.push("/login")}
+                className="ml-4 text-sm font-medium text-white bg-[#ffffff40] hover:bg-[#ffffff60] px-6 py-2 rounded-full"
+              >
+                Sign In / Log In
+              </Button>
+            </nav>
+          </div>
 
-        {/* Logo */}
-        <Link href="/" className="flex-shrink-0">
-          <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />
-        </Link>
-
-        {/* Right Nav */}
-        <div className="hidden lg:flex flex-1 justify-end items-center gap-x-8 text-white text-sm font-medium">
-          {navigationItems.slice(3).map((item) =>
-            "dropdown" in item ? (
-              <div key={item.title} className="relative dropdown-parent">
-                <button
-                  className="flex items-center gap-1 hover:text-white/80"
-                  onClick={() =>
-                    setActiveDropdown((prev) => (prev === item.title ? null : item.title))
-                  }
-                >
-                  {item.title}
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                {activeDropdown === item.title && (
-                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
-                    {item.dropdown.map((subItem) => (
-                      <Link
-                        key={subItem.title}
-                        href={subItem.href}
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                      >
-                        {subItem.title}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link key={item.title} href={item.href} className="hover:text-white/80">
-                {item.title}
-              </Link>
-            )
-          )}
-
-          {/* Login Button */}
-          <Button
-            onClick={() => router.push("/login")}
-            className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
-          >
-            Sign In / Log In
-          </Button>
-        </div>
-
-        {/* Mobile Toggle */}
-        <div className="lg:hidden absolute right-4 top-1/2 transform -translate-y-1/2">
-          <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-            {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
-          </Button>
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden">
+            <Button 
+              variant="ghost" 
+              onClick={() => setOpen(!isOpen)}
+              className="relative z-20 p-1"
+            >
+              {isOpen ? 
+                <X className="w-6 h-6 text-white" /> : 
+                <Menu className="w-6 h-6 text-white" />
+              }
+            </Button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-[#4377B2] text-white shadow-md w-full absolute top-full left-0 z-40 max-h-[80vh] overflow-y-auto">
-          <div className="p-4 space-y-4">
+        <div className="lg:hidden fixed inset-0 bg-[#4377B2] z-10 pt-20 pb-6 px-4 overflow-y-auto max-h-screen">
+          <nav className="flex flex-col space-y-2">
             {navigationItems.map((item) => (
-              <div key={item.title} className="border-b border-white/20 pb-2">
+              <div key={item.title} className="border-b border-white/20 py-2">
                 {"href" in item ? (
                   <Link
                     href={item.href}
-                    className="flex items-center justify-between text-lg py-2 hover:text-white/80"
+                    className="flex items-center justify-between text-lg font-medium text-white py-2"
                     onClick={() => setOpen(false)}
                   >
                     {item.title}
@@ -222,7 +207,7 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
                 ) : (
                   <div>
                     <button
-                      className="flex items-center justify-between w-full text-lg py-2 hover:text-white/80"
+                      className="flex items-center justify-between w-full text-lg font-medium text-white py-2"
                       onClick={() => toggleMobileDropdown(item.title)}
                     >
                       {item.title}
@@ -240,7 +225,7 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
                             {subItem.subDropdown ? (
                               <div>
                                 <button
-                                  className="flex items-center justify-between w-full text-base hover:text-white/80"
+                                  className="flex items-center justify-between w-full text-base text-white hover:text-white/80"
                                   onClick={() => toggleMobileSubDropdown(subItem.title)}
                                 >
                                   {subItem.title}
@@ -257,7 +242,7 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
                                       <Link
                                         key={nestedItem.title}
                                         href={nestedItem.href}
-                                        className="block text-sm hover:text-white/80 py-1"
+                                        className="block text-sm text-white hover:text-white/80 py-1"
                                         onClick={() => setOpen(false)}
                                       >
                                         {nestedItem.title}
@@ -269,7 +254,7 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
                             ) : (
                               <Link
                                 href={subItem.href}
-                                className="block text-base hover:text-white/80"
+                                className="block text-base text-white hover:text-white/80"
                                 onClick={() => setOpen(false)}
                               >
                                 {subItem.title}
@@ -283,12 +268,14 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
                 )}
               </div>
             ))}
+          </nav>
+          <div className="mt-6 px-2">
             <Button
               onClick={() => {
                 setOpen(false);
                 router.push("/login");
               }}
-              className="w-full mt-4 text-white bg-[#ffffff78] hover:bg-[#285384] rounded-full py-2"
+              className="w-full text-white bg-[#ffffff40] hover:bg-[#ffffff60] rounded-full py-3 font-medium"
             >
               Sign In / Log In
             </Button>

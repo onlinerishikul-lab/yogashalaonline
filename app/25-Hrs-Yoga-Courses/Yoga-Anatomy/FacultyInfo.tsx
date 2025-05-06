@@ -40,7 +40,7 @@ const FacultyInfo = () => {
         {/* Right Image */}
         <div className="flex justify-center md:justify-end">
           <Image
-            src="/faculty-main.png"
+            src="/faculty-main.jpg"
             alt="Faculty"
             width={450}
             height={350}

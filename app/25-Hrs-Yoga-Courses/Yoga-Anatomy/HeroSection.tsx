@@ -2,7 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import { Header } from "@/components/Header"; // Adjust the path if it's in a different folder
+import { Header } from "@/components/common/header";
+ // Adjust the path if it's in a different folder
 
 const HeroSection = () => {
   return (

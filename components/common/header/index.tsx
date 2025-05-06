@@ -111,46 +111,39 @@ export const Header = () => {
     title: "Online Ayurveda Courses",
     dropdown: [
       {
-        title: "10 Hr Ayurvedic Basics Course for Beginners",
-        href: "/ayurveda/10-hours/basics",
+        title: "10 Hrs Ayurveda Courses",
+        href: "/yoga/25-hours",
+        subDropdown: [
+          { title: "Ayurvedic Basics Course for Beginners", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" },
+          { title: "Ayurvedic Herbal Course", href: "/yoga/25-hours/face-yoga" },
+        ],
       },
       {
-        title: "10 Hr Ayurvedic Herbal Course",
-        href: "/ayurveda/10-hours/herbal",
+        title: "15 Hrs Ayurveda Courses",
+        href: "/yoga/50-hours",
+        subDropdown: [
+          { title: "Ayurvedic Sexual Relationship Course", href: "/yoga/50-hours/restorative-yoga" },
+          { title: "Ayurveda Garbha Samskara Course", href: "/yoga/50-hours/meditation" },
+        ],
       },
       {
-        title: "15 Hr Ayurvedic Sexual Relationship Course",
-        href: "/ayurveda/15-hours/sexual-relationship",
+        title: "25 Hrs Ayurveda Courses",
+        href: "/yoga/75-hours",
+        subDropdown: [
+          { title: "Ayurveda Immunity Course", href: "/yoga/75-hours/yoga-philosophy" },
+          { title: "Ayurveda Skin and Beauty Course", href: "/yoga/75-hours/asana-clinic" },
+        ],
       },
       {
-        title: "15 Hr Ayurveda Garbha Samskara Course",
-        href: "/ayurveda/15-hours/garbha-samskara",
+        title: "50 Hrs Ayurveda Courses",
+        href: "/yoga/85-hours",
+        subDropdown: [
+          { title: "Ayurvedic Foundational Course", href: "/yoga/85-hours/prenatal-postnatal" },
+          { title: "Ayurvedic Diet and Nutrition Course", href: "/yoga/85-hours/prenatal-postnatal" },
+          { title: "Ayurvedic Lifestyle Course", href: "/yoga/85-hours/prenatal-postnatal" }
+        ],
       },
-      {
-        title: "25 Hr Ayurveda Immunity Course",
-        href: "/ayurveda/25-hours/immunity",
-      },
-      {
-        title: "25 Hr Ayurveda Skin and Beauty Course",
-        href: "/ayurveda/25-hours/skin-beauty",
-      },
-      {
-        title: "25 Hr Advanced Ayurveda Dosha Balancing Course",
-        href: "/ayurveda/25-hours/dosha-balancing",
-      },
-      {
-        title: "50 Hr Ayurvedic Foundational Course",
-        href: "/ayurveda/50-hours/foundational",
-      },
-      {
-        title: "50 Hr Ayurvedic Diet and Nutrition Course",
-        href: "/ayurveda/50-hours/diet-nutrition",
-      },
-      {
-        title: "50 Hr Ayurvedic Lifestyle Course",
-        href: "/ayurveda/50-hours/lifestyle",
-      },
-    ],
+  ],
   },
   {
     title: "Online Yoga Daily Classes",

@@ -31,7 +31,142 @@ type NavigationItem =
 export const Header = () => {
   const router = useRouter();
 
-const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dropdown: [ { title: "25 Hrs Yoga Courses", href: "/yoga/25-hours", subDropdown: [ { title: "Yoga Anatomy for Safe Journey", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" }, { title: "Face Yoga", href: "/yoga/25-hours/face-yoga" }, ], }, { title: "50 Hrs Yoga Courses", href: "/yoga/50-hours", subDropdown: [ { title: "Restorative Yoga TTC", href: "/yoga/50-hours/restorative-yoga" }, { title: "Meditation TTC", href: "/yoga/50-hours/meditation" }, { title: "Pranayama TTC", href: "/yoga/50-hours/pranayama" }, { title: "Yoga Nidra TTC", href: "/yoga/50-hours/yoga-nidra" }, { title: "Chair Yoga", href: "/yoga/50-hours/chair-yoga" }, { title: "Mudra & Mantra Course", href: "/yoga/50-hours/mudra-mantra" }, { title: "Kundalini Yoga Course", href: "/yoga/50-hours/kundalini-yoga" }, { title: "Kids Yoga Course", href: "/yoga/50-hours/kids-yoga" }, { title: "Yoga Therapy Course", href: "/yoga/50-hours/yoga-therapy" }, { title: "Pregnancy Yoga", href: "/yoga/50-hours/pregnancy-yoga" }, ], }, { title: "75 Hrs Yoga Courses", href: "/yoga/75-hours", subDropdown: [ { title: "Core Concept of Yoga Philosophy", href: "/yoga/75-hours/yoga-philosophy" }, { title: "Asana Clinic for Yoga Professionals", href: "/yoga/75-hours/asana-clinic" }, ], }, { title: "85 Hrs Yoga Courses", href: "/yoga/85-hours", subDropdown: [ { title: "Prenatal & Postnatal Yoga Course for Teachers", href: "/yoga/85-hours/prenatal-postnatal" }, ], }, { title: "95 Hrs Yoga Courses", href: "/yoga/95-hours", subDropdown: [ { title: "Advanced Kids Yoga Course", href: "/yoga/95-hours/advanced-kids-yoga" }, ], }, { title: "100 Hrs Yoga Courses", href: "/yoga/100-hours", subDropdown: [ { title: "Multi Style Yoga TTC", href: "/yoga/100-hours/multi-style" }, { title: "Vinyasa Flow Yoga TTC", href: "/yoga/100-hours/vinyasa-flow" }, { title: "Hatha Yoga TTC", href: "/yoga/100-hours/hatha-yoga" }, { title: "Advanced Yoga Therapy Course", href: "/yoga/100-hours/advanced-yoga-therapy" }, ], }, { title: "200 Hrs Yoga Courses", href: "/yoga/200-hours", subDropdown: [ { title: "Multi Style Yoga TTC", href: "/yoga/200-hours/multi-style" }, ], }, { title: "300 Hrs Yoga Courses", href: "/yoga/300-hours", subDropdown: [ { title: "Multi Style Yoga TTC", href: "/yoga/300-hours/multi-style" }, ], }, ], }, { title: "Online Ayurveda Courses", dropdown: [ { title: "10 Hrs Ayurveda Courses", href: "/yoga/25-hours", subDropdown: [ { title: "Ayurvedic Basics Course for Beginners", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" }, { title: "Ayurvedic Herbal Course", href: "/yoga/25-hours/face-yoga" }, ], }, { title: "15 Hrs Ayurveda Courses", href: "/yoga/50-hours", subDropdown: [ { title: "Ayurvedic Sexual Relationship Course", href: "/yoga/50-hours/restorative-yoga" }, { title: "Ayurveda Garbha Samskara Course", href: "/yoga/50-hours/meditation" }, ], }, { title: "25 Hrs Ayurveda Courses", href: "/yoga/75-hours", subDropdown: [ { title: "Ayurveda Immunity Course", href: "/yoga/75-hours/yoga-philosophy" }, { title: "Ayurveda Skin and Beauty Course", href: "/yoga/75-hours/asana-clinic" }, ], }, { title: "50 Hrs Ayurveda Courses", href: "/yoga/85-hours", subDropdown: [ { title: "Ayurvedic Foundational Course", href: "/yoga/85-hours/prenatal-postnatal" }, { title: "Ayurvedic Diet and Nutrition Course", href: "/yoga/85-hours/prenatal-postnatal" }, { title: "Ayurvedic Lifestyle Course", href: "/yoga/85-hours/prenatal-postnatal" }, ], }, ], }, { title: "Online Yoga Classes", dropdown: [ { title: "Prenatal Yoga", href: "/daily-classes/prenatal-yoga" }, { title: "Postnatal Yoga", href: "/daily-classes/postnatal-yoga" }, { title: "Meditation", href: "/daily-classes/meditation" }, { title: "Pranayama", href: "/daily-classes/pranayama" }, { title: "Hatha Yoga", href: "/daily-classes/hatha-yoga" }, { title: "Vinyasa Flow", href: "/daily-classes/vinyasa-flow" }, ], }, { title: "About Us", dropdown: [ { title: "Our Teachers", href: "/our-teachers" }, { title: "Our Blogs", href: "/blog" }, { title: "Our Testimonials", href: "/home/testimonial" }, ], }, { title: "Contact Us", href: "/contact", }, { title: "Payment", href: "/payment", }, ];
+  const navigationItems: NavigationItem[] = [
+    {
+      title: "Online Yoga Training",
+      dropdown: [
+        {
+          title: "25 Hrs Yoga Courses",
+          href: "/yoga/25-hours",
+          subDropdown: [
+            { title: "Yoga Anatomy for Safe Journey", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" },
+            { title: "Face Yoga", href: "/yoga/25-hours/face-yoga" },
+          ],
+        },
+        {
+          title: "50 Hrs Yoga Courses",
+          href: "/yoga/50-hours",
+          subDropdown: [
+            { title: "Restorative Yoga TTC", href: "/yoga/50-hours/restorative-yoga" },
+            { title: "Meditation TTC", href: "/yoga/50-hours/meditation" },
+            { title: "Pranayama TTC", href: "/yoga/50-hours/pranayama" },
+            { title: "Yoga Nidra TTC", href: "/yoga/50-hours/yoga-nidra" },
+            { title: "Chair Yoga", href: "/yoga/50-hours/chair-yoga" },
+            { title: "Mudra & Mantra Course", href: "/yoga/50-hours/mudra-mantra" },
+            { title: "Kundalini Yoga Course", href: "/yoga/50-hours/kundalini-yoga" },
+            { title: "Kids Yoga Course", href: "/yoga/50-hours/kids-yoga" },
+            { title: "Yoga Therapy Course", href: "/yoga/50-hours/yoga-therapy" },
+            { title: "Pregnancy Yoga", href: "/yoga/50-hours/pregnancy-yoga" },
+          ],
+        },
+        {
+          title: "75 Hrs Yoga Courses",
+          href: "/yoga/75-hours",
+          subDropdown: [
+            { title: "Core Concept of Yoga Philosophy", href: "/yoga/75-hours/yoga-philosophy" },
+            { title: "Asana Clinic for Yoga Professionals", href: "/yoga/75-hours/asana-clinic" },
+          ],
+        },
+        {
+          title: "85 Hrs Yoga Courses",
+          href: "/yoga/85-hours",
+          subDropdown: [
+            { title: "Prenatal & Postnatal Yoga Course for Teachers", href: "/yoga/85-hours/prenatal-postnatal" },
+          ],
+        },
+        {
+          title: "95 Hrs Yoga Courses",
+          href: "/yoga/95-hours",
+          subDropdown: [
+            { title: "Advanced Kids Yoga Course", href: "/yoga/95-hours/advanced-kids-yoga" },
+          ],
+        },
+        {
+          title: "100 Hrs Yoga Courses",
+          href: "/yoga/100-hours",
+          subDropdown: [
+            { title: "Multi Style Yoga TTC", href: "/yoga/100-hours/multi-style" },
+            { title: "Vinyasa Flow Yoga TTC", href: "/yoga/100-hours/vinyasa-flow" },
+            { title: "Hatha Yoga TTC", href: "/yoga/100-hours/hatha-yoga" },
+            { title: "Advanced Yoga Therapy Course", href: "/yoga/100-hours/advanced-yoga-therapy" },
+          ],
+        },
+        {
+          title: "200 Hrs Yoga Courses",
+          href: "/yoga/200-hours",
+          subDropdown: [
+            { title: "Multi Style Yoga TTC", href: "/yoga/200-hours/multi-style" },
+          ],
+        },
+        {
+          title: "300 Hrs Yoga Courses",
+          href: "/yoga/300-hours",
+          subDropdown: [
+            { title: "Multi Style Yoga TTC", href: "/yoga/300-hours/multi-style" },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Online Ayurveda Courses",
+      dropdown: [
+        {
+          title: "10 Hrs Ayurveda Courses",
+          href: "/yoga/25-hours",
+          subDropdown: [
+            { title: "Ayurvedic Basics Course for Beginners", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" },
+            { title: "Ayurvedic Herbal Course", href: "/yoga/25-hours/face-yoga" },
+          ],
+        },
+        {
+          title: "15 Hrs Ayurveda Courses",
+          href: "/yoga/50-hours",
+          subDropdown: [
+            { title: "Ayurvedic Sexual Relationship Course", href: "/yoga/50-hours/restorative-yoga" },
+            { title: "Ayurveda Garbha Samskara Course", href: "/yoga/50-hours/meditation" },
+          ],
+        },
+        {
+          title: "25 Hrs Ayurveda Courses",
+          href: "/yoga/75-hours",
+          subDropdown: [
+            { title: "Ayurveda Immunity Course", href: "/yoga/75-hours/yoga-philosophy" },
+            { title: "Ayurveda Skin and Beauty Course", href: "/yoga/75-hours/asana-clinic" },
+          ],
+        },
+        {
+          title: "50 Hrs Ayurveda Courses",
+          href: "/yoga/85-hours",
+          subDropdown: [
+            { title: "Ayurvedic Foundational Course", href: "/yoga/85-hours/prenatal-postnatal" },
+            { title: "Ayurvedic Diet and Nutrition Course", href: "/yoga/85-hours/prenatal-postnatal" },
+            { title: "Ayurvedic Lifestyle Course", href: "/yoga/85-hours/prenatal-postnatal" },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Online Yoga Classes",
+      dropdown: [
+        { title: "Prenatal Yoga", href: "/daily-classes/prenatal-yoga" },
+        { title: "Postnatal Yoga", href: "/daily-classes/postnatal-yoga" },
+        { title: "Meditation", href: "/daily-classes/meditation" },
+        { title: "Pranayama", href: "/daily-classes/pranayama" },
+        { title: "Hatha Yoga", href: "/daily-classes/hatha-yoga" },
+        { title: "Vinyasa Flow", href: "/daily-classes/vinyasa-flow" },
+      ],
+    },
+    {
+      title: "About Us",
+      dropdown: [
+        { title: "Our Teachers", href: "/our-teachers" },
+        { title: "Our Blogs", href: "/blog" },
+        { title: "Our Testimonials", href: "/home/testimonial" },
+      ],
+    },
+    { title: "Contact Us", href: "/contact" },
+    { title: "Payment", href: "/payment" },
+  ];
 
   const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -129,12 +264,11 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
                                 {nestedIdx > 0 && <div className="border-t border-gray-200 my-1"></div>}
                                 <Link
                                   href={nestedItem.href}
-                                  href={nestedItem.href}
                                   className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
                                 >
                                   {nestedItem.title}
                                 </Link>
-                              </>
+                              </div>
                             ))}
                           </div>
                         )}
@@ -177,12 +311,11 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
                         {idx > 0 && <div className="border-t border-gray-200 my-1"></div>}
                         <Link
                           href={subItem.href}
-                          href={subItem.href}
                           className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
                         >
                           {subItem.title}
                         </Link>
-                      </>
+                      </div>
                     ))}
                   </div>
                 )}
@@ -266,13 +399,12 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
                                         {nestedIdx > 0 && <div className="border-t border-white/10 my-2"></div>}
                                         <Link
                                           href={nestedItem.href}
-                                          href={nestedItem.href}
                                           className="block text-sm hover:text-white/80 py-1"
                                           onClick={() => setOpen(false)}
                                         >
                                           {nestedItem.title}
                                         </Link>
-                                      </>
+                                      </div>
                                     ))}
                                   </div>
                                 )}

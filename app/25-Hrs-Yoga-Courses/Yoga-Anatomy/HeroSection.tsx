@@ -19,8 +19,8 @@ const HeroSection = () => {
           Enroll Now
         </button>
         <div className="absolute bottom-6 flex space-x-6">
-          <Image src="/rys200.png" alt="RYS 200" width={64} height={64} />
-          <Image src="/rys300.png" alt="RYS 300" width={64} height={64} />
+          <Image src="/rys-200.png" alt="RYS 200" width={64} height={64} />
+          <Image src="/rys-300.png" alt="RYS 300" width={64} height={64} />
           <Image src="/rpys.png" alt="RPYS" width={64} height={64} />
         </div>
       </div>

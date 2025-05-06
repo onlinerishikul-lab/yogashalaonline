@@ -6,21 +6,21 @@ import Image from 'next/image';
 const slides = [
   {
     image: '/slide1.jpg',
-    text: 'The interactive modules made learning engaging and effective.',
+    text: 'This course deepened my understanding of how anatomy supports safe yoga practice. Truly enlightening!',
     avatar: '/avatar1.jpg',
-    name: 'John Doe',
+    name: 'Priya Sharma',
   },
   {
     image: '/slide2.jpg',
-    text: 'I appreciated the real-world examples that clarified complex topics.',
+    text: 'An essential course for every yoga teacher. The blend of science and spirituality was beautifully delivered.',
     avatar: '/avatar2.jpg',
-    name: 'Jane Smith',
+    name: 'Liam Matthews',
   },
   {
     image: '/slide3.jpg',
-    text: 'The course structure was well-organized and easy to follow.',
+    text: 'I now teach with so much more awareness and intention. This was a turning point in my yoga journey.',
     avatar: '/avatar3.jpg',
-    name: 'Michael Brown',
+    name: 'Mei Tanaka',
   },
 ];
 
@@ -76,4 +76,3 @@ const TestimonialSlider = () => {
 };
 
 export default TestimonialSlider;
-

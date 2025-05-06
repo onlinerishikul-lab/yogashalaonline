@@ -46,16 +46,18 @@ const TestimonialCarousel = () => {
       </p>
 
       <div className="relative max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-8 md:p-10 transition-all">
+        {/* Left Arrow Button */}
         <button
           onClick={handlePrev}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+          className="absolute bottom-4 left-4 transform bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
 
+        {/* Right Arrow Button */}
         <button
           onClick={handleNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+          className="absolute bottom-4 right-4 transform bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
         >
           <ChevronRight className="w-5 h-5" />
         </button>

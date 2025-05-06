@@ -71,7 +71,6 @@ const TestimonialCarousel = () => {
 
           <div className="flex-1 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-              <img src="/logo-dark.svg" alt="Logo" className="h-5 w-auto" />
               <p className="text-sm font-medium text-[#4377b2]">{testimonial.company}</p>
             </div>
 

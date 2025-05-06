@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Menu, MoveRight, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, MoveRight, X, ChevronDown, ChevronRight, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type SubDropdownItem = {
@@ -37,6 +37,10 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
+  
+  // Mobile dropdown states
+  const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
+  const [expandedMobileSubItems, setExpandedMobileSubItems] = useState<string[]>([]);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY >= window.innerHeight / 2);
@@ -55,6 +59,24 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  // Toggle mobile dropdown
+  const toggleMobileDropdown = (title: string) => {
+    setExpandedMobileItems(prev => 
+      prev.includes(title) 
+        ? prev.filter(item => item !== title) 
+        : [...prev, title]
+    );
+  };
+
+  // Toggle mobile subdropdown
+  const toggleMobileSubDropdown = (title: string) => {
+    setExpandedMobileSubItems(prev => 
+      prev.includes(title) 
+        ? prev.filter(item => item !== title) 
+        : [...prev, title]
+    );
+  };
 
   return (
     <header
@@ -184,11 +206,11 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-[#4377B2] text-white shadow-md w-full absolute top-full left-0 z-40">
+        <div className="lg:hidden bg-[#4377B2] text-white shadow-md w-full absolute top-full left-0 z-40 max-h-[80vh] overflow-y-auto">
           <div className="p-4 space-y-4">
             {navigationItems.map((item) => (
-              <div key={item.title}>
-                {"href" in item && (
+              <div key={item.title} className="border-b border-white/20 pb-2">
+                {"href" in item ? (
                   <Link
                     href={item.href}
                     className="flex items-center justify-between text-lg py-2 hover:text-white/80"
@@ -197,25 +219,67 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
                     {item.title}
                     <MoveRight className="w-4 h-4" />
                   </Link>
-                )}
-                {"dropdown" in item && (
-                  <>
-                    <p className="text-lg mt-2">{item.title}</p>
-                    <div className="pl-4 space-y-2">
-                      {item.dropdown.map((subItem, idx) => (
-                        <Link
-                          key={subItem.title}
-                          href={subItem.href}
-                          className={`block text-sm hover:text-white/80 ${
-                            idx !== 0 ? "border-t mt-2 pt-2" : ""
-                          }`}
-                          onClick={() => setOpen(false)}
-                        >
-                          {subItem.title}
-                        </Link>
-                      ))}
-                    </div>
-                  </>
+                ) : (
+                  <div>
+                    <button
+                      className="flex items-center justify-between w-full text-lg py-2 hover:text-white/80"
+                      onClick={() => toggleMobileDropdown(item.title)}
+                    >
+                      {item.title}
+                      {expandedMobileItems.includes(item.title) ? (
+                        <ChevronUp className="w-5 h-5" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5" />
+                      )}
+                    </button>
+                    
+                    {expandedMobileItems.includes(item.title) && (
+                      <div className="pl-4 space-y-2 mt-2 border-l-2 border-white/20">
+                        {item.dropdown.map((subItem) => (
+                          <div key={subItem.title} className="py-1">
+                            {subItem.subDropdown ? (
+                              <div>
+                                <button
+                                  className="flex items-center justify-between w-full text-base hover:text-white/80"
+                                  onClick={() => toggleMobileSubDropdown(subItem.title)}
+                                >
+                                  {subItem.title}
+                                  {expandedMobileSubItems.includes(subItem.title) ? (
+                                    <ChevronUp className="w-4 h-4" />
+                                  ) : (
+                                    <ChevronDown className="w-4 h-4" />
+                                  )}
+                                </button>
+                                
+                                {expandedMobileSubItems.includes(subItem.title) && (
+                                  <div className="pl-4 mt-2 space-y-2 border-l border-white/20">
+                                    {subItem.subDropdown.map((nestedItem) => (
+                                      <Link
+                                        key={nestedItem.title}
+                                        href={nestedItem.href}
+                                        className="block text-sm hover:text-white/80 py-1"
+                                        onClick={() => setOpen(false)}
+                                      >
+                                        {nestedItem.title}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            ) : (
+                              <Link
+                                href={subItem.href}
+                                className="block text-base hover:text-white/80"
+                                onClick={() => setOpen(false)}
+                              >
+                                {subItem.title}
+                              </Link>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 )}
               </div>
             ))}

@@ -48,8 +48,8 @@ const TestimonialSlider = () => {
             <Image
               src={slide.image}
               alt={`Slide ${idx + 1}`}
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: 'cover' }}
               className="rounded-3xl"
               priority={idx === 0}
             />
@@ -73,6 +73,8 @@ const TestimonialSlider = () => {
           </div>
         ))}
       </div>
-   
-::contentReference[oaicite:0]{index=0}
- 
+    </section>
+  );
+};
+
+export default TestimonialSlider;

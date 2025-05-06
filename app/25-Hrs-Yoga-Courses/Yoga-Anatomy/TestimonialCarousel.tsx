@@ -37,8 +37,8 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 to-white w-full flex flex-col items-center px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-blue-600 text-center mb-3">
+    <section className="py-16 bg-[#f5f5f5] w-full flex flex-col items-center px-4">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] text-center mb-3">
         Straight from Our Trainees
       </h2>
       <p className="text-gray-600 text-center mb-10 text-sm md:text-base">
@@ -46,37 +46,33 @@ const TestimonialCarousel = () => {
       </p>
 
       <div className="relative max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-8 md:p-10 transition-all">
-        {/* Arrows */}
         <button
           onClick={handlePrev}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-200 hover:bg-blue-400 text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
 
         <button
           onClick={handleNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-200 hover:bg-blue-400 text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
 
-        {/* Testimonial */}
         <div className="flex flex-col md:flex-row items-center gap-8">
-          {/* Image */}
           <div className="flex-shrink-0">
             <img
               src={testimonial.image}
               alt={testimonial.name}
-              className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-blue-200 shadow-md"
+              className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-[#4377b2] shadow-md"
             />
           </div>
 
-          {/* Text */}
           <div className="flex-1 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
               <img src="/logo-dark.svg" alt="Logo" className="h-5 w-auto" />
-              <p className="text-sm font-medium text-gray-700">{testimonial.company}</p>
+              <p className="text-sm font-medium text-[#4377b2]">{testimonial.company}</p>
             </div>
 
             <h3 className="text-lg font-semibold text-gray-900 mb-2">

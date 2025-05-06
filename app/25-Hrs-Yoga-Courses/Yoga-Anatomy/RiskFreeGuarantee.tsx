@@ -1,6 +1,7 @@
-'use client';
+// components/RiskFreeGuarantee.tsx
+"use client";
 
-import React from 'react';
+import React from "react";
 
 const RiskFreeGuarantee = () => {
   return (
@@ -11,15 +12,14 @@ const RiskFreeGuarantee = () => {
             Our Guarantee to You: Learn Risk-Free
           </h2>
           <p className="text-gray-700 mb-4">
-            We&apos;re confident you&apos;ll love our course, but we understand it might not be for everyone.
-            That&apos;s why we offer a money-back guarantee. If you enroll and realize it was not what you expected,
+            We're confident you'll love our course, but we understand it might not be for everyone.
+            That's why we offer a money-back guarantee. If you enroll and realize it was not what you expected,
             simply let us know within 7 days for a full refund.
           </p>
           <p className="text-gray-700 mb-4">
-            No questions asked. It&apos;s our way of ensuring you can explore yoga with peace of mind.
+            No questions asked. It’s our way of ensuring you can explore yoga with peace of mind.
           </p>
           <p className="text-gray-900 font-semibold mb-6">Ready to start your yoga journey?</p>
-
           <button className="bg-[#4377b2] hover:bg-[#365a90] text-white font-semibold py-2 px-6 rounded-full transition">
             Join Us Today Risk Free!
           </button>
@@ -31,9 +31,11 @@ const RiskFreeGuarantee = () => {
         {/* Decorative plus signs */}
         <div className="absolute bottom-4 right-4 text-[#a8bfe7] text-lg leading-3">
           <div className="grid grid-cols-3 gap-1">
-            {Array(6).fill('+').map((char, idx) => (
-              <span key={idx}>{char}</span>
-            ))}
+            {Array(6)
+              .fill("+")
+              .map((char, idx) => (
+                <span key={idx}>{char}</span>
+              ))}
           </div>
         </div>
       </div>

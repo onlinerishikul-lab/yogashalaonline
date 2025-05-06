@@ -53,4 +53,4 @@ const FacultyInfo = () => {
   );
 };
 
-export defa
+export default FacultyInfo.tsx;

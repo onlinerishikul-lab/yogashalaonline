@@ -6,21 +6,21 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const testimonials = [
   {
     company: 'Gymstory',
-    title: 'Lorem Ipsum Dolor Amet, Consectetur Adipisicing Elit. Odit Vitae Porta Porta te Mattis Nunc Hoc Veni',
+    title: 'Transformative Learning Experience',
     content:
-      'Lorem ipsum dolor amet, consectetur adipiscing elit, venenatis integer magna ut risus et malesuada. Duis vehicula placerat neque pulvinar quam. Quis primis etiam imperdiet consectetur hac tincidunt eros.',
-    name: 'Name',
-    role: 'Phone',
+      'The courses provided a comprehensive understanding of the subject matter, with practical applications that I could implement immediately.',
+    name: 'Alex Johnson',
+    role: 'Fitness Coach',
     image: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
   {
-    company: 'Gym',
-    title: 'Lorem Ipsum Dolor Amet, Consectetur Adipisicing Elit. Odit Vitae Porta Porta te Mattis Nunc Hoc Veni',
+    company: 'Wellness Hub',
+    title: 'Exceptional Guidance and Support',
     content:
-      'Lorem ipsum dolor amet, consectetur adipiscing elit, venenatis integer magna ut risus et malesuada. Duis vehicula placerat neque pulvinar quam. Quis primis etiam imperdiet consectetur hac tincidunt eros.',
-    name: 'Name',
-    role: 'Phone',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+      'The instructors were always available to answer questions and provide feedback, making the learning process smooth and enjoyable.',
+    name: 'Maria Gonzalez',
+    role: 'Wellness Consultant',
+    image: 'https://randomuser.me/api/portraits/women/44.jpg',
   },
 ];
 

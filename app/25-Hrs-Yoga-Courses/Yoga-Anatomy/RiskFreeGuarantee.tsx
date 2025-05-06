@@ -8,19 +8,21 @@ const RiskFreeGuarantee = () => {
       <div className="relative bg-[#e8eefb] rounded-2xl p-8 max-w-2xl w-full overflow-hidden">
         <div className="text-center md:text-left">
           <h2 className="text-xl md:text-2xl font-bold text-[#4377b2] mb-4">
-            Our Guarantee to You: Learn Risk-Free
+            7-Day Risk-Free Guarantee
           </h2>
           <p className="text-gray-700 mb-4">
-            We&apos;re confident you&apos;ll love our course, but we understand it might not be for everyone.
-            That&apos;s why we offer a money-back guarantee. If you enroll and realize it was not what you expected,
-            simply let us know within 7 days for a full refund.
+            We’re confident you’ll love the <strong>25-Hour Yoga Anatomy for a Safe Journey</strong> course.
+            But if it doesn’t meet your expectations, we’ve got you covered.
           </p>
           <p className="text-gray-700 mb-4">
-            No questions asked. It&apos;s our way of ensuring you can explore yoga with peace of mind.
+            Simply email us within <strong>7 days</strong> of purchase for a full refund—no questions asked.
+            Explore the course, test it out, and decide with total peace of mind.
           </p>
-          <p className="text-gray-900 font-semibold mb-6">Ready to start your yoga journey?</p>
+          <p className="text-gray-900 font-semibold mb-6">
+            You’ve got nothing to lose and everything to gain.
+          </p>
           <button className="bg-[#4377b2] hover:bg-[#365a90] text-white font-semibold py-2 px-6 rounded-full transition">
-            Join Us Today Risk Free!
+            Enroll Now – Risk Free!
           </button>
         </div>
 

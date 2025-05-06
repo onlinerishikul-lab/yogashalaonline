@@ -203,7 +203,7 @@ export const Header = () => {
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         {/* Left Nav */}
         <div className="hidden lg:flex flex-1 items-center gap-x-8 text-white text-sm font-medium">
           {navigationItems.slice(0, 3).map((item) =>

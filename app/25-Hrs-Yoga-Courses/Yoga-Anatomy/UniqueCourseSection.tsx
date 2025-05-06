@@ -6,19 +6,19 @@ import { GraduationCap, Users, Sun, BarChart3 } from "lucide-react";
 const UniqueCourseSection = () => {
   const items = [
     {
-      title: "Experienced Teachers",
+      title: "Guidance from Master Teachers",
       icon: <Users className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Flexible Schedule",
+      title: "Balance Your Practice & Life",
       icon: <Sun className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Certified Curriculum",
+      title: "Globally Recognized Certification",
       icon: <GraduationCap className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Progress Tracking",
+      title: "Track Your Growth & Progress",
       icon: <BarChart3 className="w-6 h-6 text-sky-600" />,
     },
   ];
@@ -27,7 +27,7 @@ const UniqueCourseSection = () => {
     <section className="bg-white py-16 px-6 md:px-10 lg:px-20">
       <div className="max-w-6xl mx-auto text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold text-sky-600">
-          Why is Our 100-Hour Online Teacher Training Course Unique?
+          What Makes Our 100-Hour Online Yoga Teacher Training Unique?
         </h2>
       </div>
 

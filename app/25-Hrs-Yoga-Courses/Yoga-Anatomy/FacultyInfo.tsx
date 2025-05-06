@@ -9,15 +9,16 @@ const FacultyInfo = () => {
         {/* Left Content */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377B2] mb-6">
-            Know About Your Faculty
+            Meet Your Yoga Anatomy Faculty
           </h2>
           <p className="text-[#4377B2] text-lg mb-8 leading-relaxed">
-            Learn from industry veterans with decades of yoga and mindfulness training experience.
+            Learn from certified yoga educators with deep expertise in anatomy, biomechanics, and safe movement practices. 
+            Each instructor brings years of hands-on experience and compassionate teaching.
           </p>
 
           <div className="bg-[#4377B2] text-white p-6 rounded-xl w-64 text-center shadow-md">
-            <div className="text-4xl font-bold">920+</div>
-            <div className="mt-1 text-sm">Projects Completed</div>
+            <div className="text-4xl font-bold">1000+</div>
+            <div className="mt-1 text-sm">Students Trained Globally</div>
 
             <div className="flex justify-center mt-4 space-x-[-10px] relative z-0">
               {["1", "2", "3", "4"].map((_, idx) => (
@@ -41,7 +42,7 @@ const FacultyInfo = () => {
         <div className="flex justify-center md:justify-end">
           <Image
             src="/faculty-main.jpg"
-            alt="Faculty"
+            alt="Yoga Anatomy Faculty"
             width={450}
             height={350}
             className="rounded-xl object-cover shadow-md"
@@ -52,4 +53,4 @@ const FacultyInfo = () => {
   );
 };
 
-export default FacultyInfo;
+export defa

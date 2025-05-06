@@ -79,14 +79,14 @@ export const SiteFooter = () => {
                 contact@rishikulyogshalaonline.com
               </Link>
             </div>
-            <div className="text-white flex flex-col md:items-end">
+{/*             <div className="text-white flex flex-col md:items-end">
               <h2 className="text-xl mb-2">Location</h2>
               <p className="md:text-right">
                 The Kerala Retreat, Paravur Kollam, Kerala <br />
                 Palm Paradise Resort, Querim, North Goa, Goa <br />
                 Narayan Kunj, Ram Jhula, Rishikesh, India
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="flex flex-col items-start">

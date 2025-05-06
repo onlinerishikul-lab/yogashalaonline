@@ -5,19 +5,19 @@ import Image from 'next/image';
 const points = [
   {
     number: '1',
-    text: 'Lorem ipsum odor amet, consectetuer adipiscing elite',
+    text: 'Our instructors bring years of experience to guide your learning journey.',
   },
   {
     number: '2',
-    text: 'Lorem ipsum odor amet, consectetuer adipiscing elit. Mauris inceptos aliquam augue tristique convallis leo cursus lectus. Sodales malesuada curabitur primis consequat cras ligula.',
+    text: 'Interactive sessions ensure you grasp concepts effectively and efficiently.',
   },
   {
     number: '3',
-    text: 'Lorem ipsum odor amet, consectetuer adipiscing elite',
+    text: 'Personalized feedback helps you improve continuously.',
   },
   {
     number: '4',
-    text: 'Lorem ipsum odor amet, consectetuer adipiscing elite',
+    text: 'Real-world projects prepare you for industry challenges.',
   },
 ];
 
@@ -47,7 +47,7 @@ export default function TeachingApproach() {
         {/* Center Image */}
         <div className="relative w-[280px] md:w-[400px] mx-4 my-10 md:my-0 z-0">
           <Image
-            src="/teaching-image.jpg" // Replace with actual path
+            src="/teaching-image.jpg"
             alt="Teaching"
             width={400}
             height={500}
@@ -76,7 +76,7 @@ export default function TeachingApproach() {
         Learn From Experts
       </button>
 
-      {/* Floating star or decorative shape */}
+      {/* Decorative Element */}
       <div className="absolute top-6 right-6 text-[#a8bfe7] text-2xl animate-pulse">✦</div>
     </section>
   );

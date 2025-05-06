@@ -175,7 +175,7 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
         </div>
 
         {/* Mobile Toggle */}
-        <div className="lg:hidden absolute left-4 top-1/2 transform -translate-y-1/2">
+        <div className="lg:hidden absolute right-4 top-1/2 transform -translate-y-1/2">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
             {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
           </Button>
@@ -202,11 +202,13 @@ const navigationItems: NavigationItem[] = [ { title: "Online Yoga Training", dro
                   <>
                     <p className="text-lg mt-2">{item.title}</p>
                     <div className="pl-4 space-y-2">
-                      {item.dropdown.map((subItem) => (
+                      {item.dropdown.map((subItem, idx) => (
                         <Link
                           key={subItem.title}
                           href={subItem.href}
-                          className="block text-sm hover:text-white/80"
+                          className={`block text-sm hover:text-white/80 ${
+                            idx !== 0 ? "border-t mt-2 pt-2" : ""
+                          }`}
                           onClick={() => setOpen(false)}
                         >
                           {subItem.title}

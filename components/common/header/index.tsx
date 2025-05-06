@@ -240,140 +240,141 @@ export const Header = () => {
                             {subItem.title}
                             {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
                           </button>
-                         {openSubDropdown === subItem.title && subItem.subDropdown && (
-  <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2">
-    {subItem.subDropdown.map((nestedItem, nestedIdx) => (
-      <Link
-        key={nestedItem.title}
-        href={nestedItem.href}
-        className={`block px-4 py-2 text-sm text-black hover:bg-gray-100 ${
-          nestedIdx !== 0 ? "border-t mt-2 pt-2" : ""
-        }`}
-      >
-        {nestedItem.title}
-      </Link>
-    ))}
-  </div>
-)}
-
+                         {openSubDropdown === sub.title && sub.subDropdown && (
+                            <div className="absolute top-0 left-full ml-2 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-1">
+                              {sub.subDropdown.map((nested) => (
+                                <Link
+                                  key={nested.title}
+                                  href={nested.href}
+                                  className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                                >
+                                  {nested.title}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link key={item.title} href={item.href} className="hover:text-white/80">
-                {item.title}
-              </Link>
-            )
-          )}
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  className="hover:text-white/80"
+                >
+                  {item.title}
+                </Link>
+              )
+            )}
+          </div>
+
+          <div className="flex items-center gap-x-6">
+            {navigationItems.slice(3).map((item) =>
+              "dropdown" in item ? (
+                <div key={item.title} className="relative dropdown-parent">
+                  <button
+                    onClick={() =>
+                      setActiveDropdown((prev) =>
+                        prev === item.title ? null : item.title
+                      )
+                    }
+                    className="flex items-center gap-1 hover:text-white/80"
+                  >
+                    {item.title}
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                  {activeDropdown === item.title && (
+                    <div className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-1">
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.title}
+                          href={subItem.href}
+                          className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        >
+                          {subItem.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  className="hover:text-white/80"
+                >
+                  {item.title}
+                </Link>
+              )
+            )}
+
+            <Button
+              onClick={() => router.push("/login")}
+              className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
+            >
+              Sign In / Log In
+            </Button>
+          </div>
         </div>
 
-        {/* Logo */}
-        <Link href="/" className="flex-shrink-0">
-          <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />
-        </Link>
+        {/* Mobile Menu Toggle (Right Side) */}
+        <div className="lg:hidden flex items-center">
+          <button onClick={() => setOpen(!isOpen)} className="text-white">
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
 
-        {/* Right Nav */}
-        <div className="hidden lg:flex flex-1 justify-end items-center gap-x-8 text-white text-sm font-medium">
-          {navigationItems.slice(3).map((item) =>
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="lg:hidden bg-[#4377B2] text-white px-4 pb-4 space-y-2">
+          {navigationItems.map((item) =>
             "dropdown" in item ? (
-              <div key={item.title} className="relative dropdown-parent">
+              <div key={item.title}>
                 <button
-                  className="flex items-center gap-1 hover:text-white/80"
+                  className="w-full text-left py-2 flex justify-between items-center"
                   onClick={() =>
-                    setActiveDropdown((prev) => (prev === item.title ? null : item.title))
+                    setActiveDropdown((prev) =>
+                      prev === item.title ? null : item.title
+                    )
                   }
                 >
                   {item.title}
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                {activeDropdown === item.title && (
-                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2">
-                    {item.dropdown.map((subItem, idx) => (
-                      <Link
-                        key={subItem.title}
-                        href={subItem.href}
-                        className={`block px-4 py-2 text-sm text-black hover:bg-gray-100 ${
-                          idx !== 0 ? "border-t mt-2 pt-2" : ""
-                        }`}
-                      >
-                        {subItem.title}
+                {activeDropdown === item.title &&
+                  item.dropdown.map((sub) => (
+                    <div key={sub.title} className="pl-4">
+                      <Link href={sub.href} className="block py-1">
+                        {sub.title}
                       </Link>
-                    ))}
-                  </div>
-                )}
+                      {sub.subDropdown &&
+                        sub.subDropdown.map((nested) => (
+                          <Link
+                            key={nested.title}
+                            href={nested.href}
+                            className="block py-1 pl-4 text-sm text-white/80"
+                          >
+                            {nested.title}
+                          </Link>
+                        ))}
+                    </div>
+                  ))}
               </div>
             ) : (
-              <Link key={item.title} href={item.href} className="hover:text-white/80">
+              <Link key={item.title} href={item.href} className="block py-2">
                 {item.title}
               </Link>
             )
           )}
           <Button
             onClick={() => router.push("/login")}
-            className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
+            className="w-full mt-2 text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
           >
             Sign In / Log In
           </Button>
-        </div>
-
-        {/* Mobile Toggle */}
-        <div className="lg:hidden absolute right-4 top-1/2 transform -translate-y-1/2">
-          <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-            {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
-          </Button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="lg:hidden bg-[#4377B2] text-white shadow-md w-full absolute top-full left-0 z-40">
-          <div className="p-4 space-y-4">
-            {navigationItems.map((item) => (
-              <div key={item.title}>
-                {"href" in item && (
-                  <Link
-                    href={item.href}
-                    className="flex items-center justify-between text-lg py-2 hover:text-white/80"
-                    onClick={() => setOpen(false)}
-                  >
-                    {item.title}
-                    <MoveRight className="w-4 h-4" />
-                  </Link>
-                )}
-                {"dropdown" in item && (
-                  <>
-                    <p className="text-lg mt-2">{item.title}</p>
-                    <div className="pl-4 space-y-2">
-                      {item.dropdown.map((subItem, idx) => (
-                        <Link
-                          key={subItem.title}
-                          href={subItem.href}
-                          className={`block text-sm hover:text-white/80 ${
-                            idx !== 0 ? "border-t mt-2 pt-2" : ""
-                          }`}
-                          onClick={() => setOpen(false)}
-                        >
-                          {subItem.title}
-                        </Link>
-                      ))}
-                    </div>
-                  </>
-                )}
-              </div>
-            ))}
-            <Button
-              onClick={() => {
-                setOpen(false);
-                router.push("/login");
-              }}
-              className="w-full mt-4 text-white bg-[#ffffff78] hover:bg-[#285384] rounded-full py-2"
-            >
-              Sign In / Log In
-            </Button>
-          </div>
         </div>
       )}
     </header>

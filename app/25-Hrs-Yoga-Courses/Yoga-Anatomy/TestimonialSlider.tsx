@@ -6,19 +6,19 @@ import Image from 'next/image';
 const slides = [
   {
     image: '/slide1.jpg',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+    text: 'The interactive modules made learning engaging and effective.',
     avatar: '/avatar1.jpg',
     name: 'John Doe',
   },
   {
     image: '/slide2.jpg',
-    text: 'Ut aliquam purus sit amet luctus venenatis...',
+    text: 'I appreciated the real-world examples that clarified complex topics.',
     avatar: '/avatar2.jpg',
     name: 'Jane Smith',
   },
   {
     image: '/slide3.jpg',
-    text: 'Lectus magna fringilla urna, porttitor...',
+    text: 'The course structure was well-organized and easy to follow.',
     avatar: '/avatar3.jpg',
     name: 'Michael Brown',
   },
@@ -30,7 +30,7 @@ const TestimonialSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000); // Slower for better readability
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -73,8 +73,6 @@ const TestimonialSlider = () => {
           </div>
         ))}
       </div>
-    </section>
-  );
-};
-
-export default TestimonialSlider;
+   
+::contentReference[oaicite:0]{index=0}
+ 

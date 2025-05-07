@@ -2,6 +2,9 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
+// import { Button } from '@/components/ui/button'
+// import { CarouselSpacing } from '@/components/carousel.mui'
+// import { useRouter } from 'next/navigation';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import styles from "./explore-our-courses.module.css";
@@ -55,35 +58,30 @@ export default function ExploreOurCoursesView({
             }}
             className="w-full custom-swiper "
           >
-            {courses
-              .filter(
-                (course) =>
-                  course.headerSection.title === "Online Yoga Training"
-              )
-              .map((course, index) => (
-                <SwiperSlide key={course.id + index}>
-                  <div
-                    onClick={() => handleCourseClick(course.id)}
-                    style={{
-                      backgroundImage: `url(${course.headerSection.image})`,
-                      cursor: "pointer",
-                    }}
-                    className={`overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity`}
-                  >
-                    <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white">
-                      {course.yogaCoursesForBeginners.courseLanguage}
+            {courses.map((course, index) => (
+              <SwiperSlide key={course.id + index}>
+                <div
+                  onClick={() => handleCourseClick(course.id)}
+                  style={{
+                    backgroundImage: `url(${course.headerSection.image})`,
+                    cursor: "pointer",
+                  }}
+                  className={`overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity`}
+                >
+                  <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white">
+                    {course.yogaCoursesForBeginners.courseLanguage}
+                  </div>
+                  <div className="absolute bottom-[20%] w-full px-2 py-1 flex space-x-2 items-end justify-between">
+                    <div className="text-sm text-white w-2/3">
+                      {course.headerSection.title}
                     </div>
-                    <div className="absolute bottom-[20%] w-full px-2 py-1 flex space-x-2 items-end justify-between">
-                      <div className="text-sm text-white w-2/3">
-                        {course.headerSection.title}
-                      </div>
-                      <div className="text-sm text-white font-bold text-right">
-                        ${course.pricing.fullPayment.amount}
-                      </div>
+                    <div className="text-sm text-white font-bold text-right">
+                      ${course.pricing.fullPayment.amount}
                     </div>
                   </div>
-                </SwiperSlide>
-              ))}
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
 

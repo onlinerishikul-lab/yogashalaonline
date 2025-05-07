@@ -8,7 +8,6 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 20px !important;
@@ -26,6 +25,7 @@
   opacity: 1;
 }
 
+/* Add some padding to accommodate navigation buttons */
 .mySwiper {
   padding: 0 40px !important;
   padding-bottom: 50px !important;
@@ -36,12 +36,4 @@
     padding: 0 20px !important;
     padding-bottom: 50px !important;
   }
-}
-
-/* Ensuring all slides/cards are the same height */
-.swiper-slide > div {
-  height: 100% !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }

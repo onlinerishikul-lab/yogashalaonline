@@ -22,11 +22,12 @@ export default function ExploreOurClassesView({
   };
 
   // Filter courses with subHeading containing "online yoga training"
-  const filteredCourses = courses.filter((course) =>
-    course.headerSection?.subHeading
-      ?.toLowerCase()
-      .includes("online yoga Classes.toLowerCase()")
-  );
+const filteredCourses = courses.filter((course) =>
+  course.headerSection?.subHeading
+    ?.toLowerCase()
+    .includes("online Yoga Classes".toLowerCase())
+);
+
 
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3] py-20">

@@ -53,13 +53,13 @@ const PricingOptions = () => {
         <PricingCard
           title="One-Time Payment"
           description="Get full access instantly with a single payment."
-          price="$49.99"
+          price="$250.00"
           note="one-time payment"
         />
         <PricingCard
           title="Two-Part Installments"
           description="Split your payment into two easy installments."
-          price="$25.00"
+          price="$250.00"
           note="billed twice, monthly"
         />
       </div>

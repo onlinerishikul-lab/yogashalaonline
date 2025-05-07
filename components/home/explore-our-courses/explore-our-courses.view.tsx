@@ -23,7 +23,7 @@ export default function ExploreOurCoursesView({
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3] py-20">
       <div className="space-y-10">
-        <h2 className={`text-4xl font-bold text-center text-[#4377B2]`}>
+        <h2 className="text-4xl font-bold text-center text-[#4377B2]">
           Explore Our Courses
         </h2>
 
@@ -38,27 +38,20 @@ export default function ExploreOurCoursesView({
               pauseOnMouseEnter: true,
             }}
             speed={3000}
-            loop={true}
+            loop={false} // Changed to false to avoid issues with few slides
             breakpoints={{
-              0: {
-                slidesPerView: 1,
-              },
-              640: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
-              1280: {
-                slidesPerView: 4,
-              },
+              0: { slidesPerView: 1 },
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
             }}
-            className="w-full custom-swiper "
+            className="w-full custom-swiper"
           >
             {courses
-              .filter(
-                (course) =>
-                  course.headerSection.title === "Online Yoga Training"
+              .filter((course) =>
+                course.headerSection.title
+                  .toLowerCase()
+                  .includes("online yoga training")
               )
               .map((course, index) => (
                 <SwiperSlide key={course.id + index}>
@@ -68,7 +61,7 @@ export default function ExploreOurCoursesView({
                       backgroundImage: `url(${course.headerSection.image})`,
                       cursor: "pointer",
                     }}
-                    className={`overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity`}
+                    className="overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity"
                   >
                     <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white">
                       {course.yogaCoursesForBeginners.courseLanguage}
@@ -87,7 +80,7 @@ export default function ExploreOurCoursesView({
           </Swiper>
         </div>
 
-        <div className={`text-center`}>
+        <div className="text-center">
           <button
             className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors"
             onClick={() => router.push("/courses")}

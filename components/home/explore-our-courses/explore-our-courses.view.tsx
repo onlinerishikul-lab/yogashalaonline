@@ -20,11 +20,18 @@ export default function ExploreOurCoursesView({
     router.push(`/courses/${courseId}`);
   };
 
+  // Filter courses with subHeading containing "online yoga training"
+  const filteredCourses = courses.filter((course) =>
+    course.headerSection?.subHeading
+      ?.toLowerCase()
+      .includes("online yoga training")
+  );
+
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3] py-20">
       <div className="space-y-10">
         <h2 className="text-4xl font-bold text-center text-[#4377B2]">
-          Explore Our Courses
+          Online Yoga Training Courses
         </h2>
 
         <div className={`py-16 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
@@ -40,51 +47,37 @@ export default function ExploreOurCoursesView({
             speed={3000}
             loop={true}
             breakpoints={{
-              0: {
-                slidesPerView: 1,
-              },
-              640: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
-              1280: {
-                slidesPerView: 4,
-              },
+              0: { slidesPerView: 1 },
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
             }}
             className="w-full custom-swiper"
           >
-            {courses
-              .filter((course) =>
-                (course.headerSection?.subHeading ?? "")
-                  .toLowerCase()
-                  .includes("online yoga training")
-              )
-              .map((course, index) => (
-                <SwiperSlide key={course.id + index}>
-                  <div
-                    onClick={() => handleCourseClick(course.id)}
-                    style={{
-                      backgroundImage: `url(${course.headerSection.image})`,
-                      cursor: "pointer",
-                    }}
-                    className="overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity"
-                  >
-                    <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white">
-                      {course.yogaCoursesForBeginners.courseLanguage}
+            {filteredCourses.map((course, index) => (
+              <SwiperSlide key={course.id + index}>
+                <div
+                  onClick={() => handleCourseClick(course.id)}
+                  style={{
+                    backgroundImage: `url(${course.headerSection.image})`,
+                    cursor: "pointer",
+                  }}
+                  className="overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity"
+                >
+                  <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white">
+                    {course.yogaCoursesForBeginners.courseLanguage}
+                  </div>
+                  <div className="absolute bottom-[20%] w-full px-2 py-1 flex space-x-2 items-end justify-between">
+                    <div className="text-sm text-white w-2/3">
+                      {course.headerSection.title}
                     </div>
-                    <div className="absolute bottom-[20%] w-full px-2 py-1 flex space-x-2 items-end justify-between">
-                      <div className="text-sm text-white w-2/3">
-                        {course.headerSection.title}
-                      </div>
-                      <div className="text-sm text-white font-bold text-right">
-                        ${course.pricing.fullPayment.amount}
-                      </div>
+                    <div className="text-sm text-white font-bold text-right">
+                      ${course.pricing.fullPayment.amount}
                     </div>
                   </div>
-                </SwiperSlide>
-              ))}
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
 

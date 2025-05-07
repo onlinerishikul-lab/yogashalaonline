@@ -38,7 +38,7 @@ export default function ExploreOurCoursesView({
               pauseOnMouseEnter: true,
             }}
             speed={3000}
-            loop={false} // Changed to false to avoid issues with few slides
+            loop={false}
             breakpoints={{
               0: { slidesPerView: 1 },
               640: { slidesPerView: 2 },
@@ -49,7 +49,7 @@ export default function ExploreOurCoursesView({
           >
             {courses
               .filter((course) =>
-                course.headerSection.title
+                course.headerSection.description
                   .toLowerCase()
                   .includes("online yoga training")
               )

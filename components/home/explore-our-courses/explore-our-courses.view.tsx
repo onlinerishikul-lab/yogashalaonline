@@ -38,18 +38,26 @@ export default function ExploreOurCoursesView({
               pauseOnMouseEnter: true,
             }}
             speed={3000}
-            loop={false}
+            loop={true}
             breakpoints={{
-              0: { slidesPerView: 1 },
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-              1280: { slidesPerView: 4 },
+              0: {
+                slidesPerView: 1,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+              1280: {
+                slidesPerView: 4,
+              },
             }}
             className="w-full custom-swiper"
           >
             {courses
               .filter((course) =>
-                course.headerSection.description
+                course.whatYouWillLearn.body
                   .toLowerCase()
                   .includes("online yoga training")
               )

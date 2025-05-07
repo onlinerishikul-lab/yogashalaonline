@@ -17,6 +17,8 @@ import { Banner } from '@/components/home/Banner/banner'
 import ExploreOurCoursesView from '@/components/home/explore-our-Online-Yoga-Course/explore-our-courses.view'
 import { getCourses } from '@/server-actions/course'
 import { getBlogs } from '@/server-actions/blog'
+import ExploreOurCoursesView from '@/components/home/explore-our-Online-Ayurveda-Course/explore-our-courses.view'
+
 
 export default async function Home() {
   const [{ courses = [], error: coursesError }, { blogs = [], error: blogsError }] = await Promise.all([

@@ -11,7 +11,6 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Course } from "@/types/course";
 
-// Custom styles for Swiper
 import "./transforming.css";
 import { cn } from "@/lib/utils";
 
@@ -29,7 +28,7 @@ const Transforming = ({ courses }: TransformingProps) => {
           <h1 className="md:w-[50%] text-2xl mb-4 md:text-4xl font-bold text-[#4377B2]">
             Life-Changing Online Yoga Courses
           </h1>
-          <div className="md:w-[40%] ">
+          <div className="md:w-[40%]">
             <p className="text-[#878C91]">
               Rishikul online yoga courses are crafted to help you transform
               your mind, body, and spirit, all from the comfort of your home.
@@ -43,7 +42,7 @@ const Transforming = ({ courses }: TransformingProps) => {
               yoga brings into your life.
             </p>
             <Button
-              className="mt-10 bg-transparent text-[#4377B2] hover:bg-[#4377B2] hover:text-white font-semibold w-[252px]  rounded-full border-2 border-[#4377B2] py-7 duration-300"
+              className="mt-10 bg-transparent text-[#4377B2] hover:bg-[#4377B2] hover:text-white font-semibold w-[252px] rounded-full border-2 border-[#4377B2] py-7 duration-300"
               onClick={() => router.push("/courses")}
             >
               Explore More
@@ -80,8 +79,8 @@ const Transforming = ({ courses }: TransformingProps) => {
               const availSeats = course.availableSeats - course.reserveSeats;
               return (
                 <SwiperSlide key={course.id}>
-                  <div className="bg-white p-8 rounded-xl flex flex-col justify-between ">
-                    <div>
+                  <div className="bg-white p-8 rounded-xl flex flex-col justify-between h-[400px] min-h-[400px]">
+                    <div className="flex flex-col justify-between flex-1">
                       <div className="flex justify-between items-center mb-6">
                         <div
                           className={cn(
@@ -99,16 +98,16 @@ const Transforming = ({ courses }: TransformingProps) => {
                           {availSeats} Seats Available
                         </p>
                       </div>
-                      <h1 className="text-[#4377B2] text-2xl font-semibold mb-12">
+                      <h1 className="text-[#4377B2] text-2xl font-semibold mb-6">
                         {course.headerSection.title}
                       </h1>
-                    </div>
-                    <div className="flex justify-between gap-2 flex-col md:flex-row items-start">
-                      <p className="text-[#878C91] md:w-[70%] mb-4 leading-5 line-clamp-3">
+                      <p className="text-[#878C91] mb-6 leading-5 line-clamp-3">
                         {course.yogaCoursesForBeginners.body}
                       </p>
+                    </div>
+                    <div className="flex justify-end">
                       <Button
-                        className="bg-transparent text-[#4377B2] flex justify-center font-semibold rounded-full border-2 border-[#4377B2] py-7 px-10 duration-300 group hover:bg-[#4377B2] hover:text-white"
+                        className="bg-transparent text-[#4377B2] flex items-center font-semibold rounded-full border-2 border-[#4377B2] py-5 px-8 duration-300 group hover:bg-[#4377B2] hover:text-white"
                         onClick={() => router.push(`/courses/${course.id}`)}
                       >
                         <ArrowRight className="group-hover:text-white" />

@@ -12,7 +12,7 @@ interface ExploreOurCoursesViewProps {
   courses: Course[];
 }
 
-export default function ExploreOurCoursesView({
+export default function ExploreOurAyurvedaCoursesView({
   courses,
 }: ExploreOurCoursesViewProps) {
   const router = useRouter();

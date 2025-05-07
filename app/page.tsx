@@ -20,7 +20,6 @@ import { getBlogs } from '@/server-actions/blog'
 import ExploreOurAyurvedaCoursesView from '@/components/home/explore-our-Online-Ayurveda-Course/explore-our-courses.view'
 import ExploreOurClassesView from '@/components/home/explore-our-Online-Yoga-Classes/explore-our-courses.view'
 
-
 export default async function Home() {
   const [{ courses = [], error: coursesError }, { blogs = [], error: blogsError }] = await Promise.all([
     getCourses(),

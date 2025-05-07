@@ -33,6 +33,7 @@ export default async function Home() {
       <Banner />
       <Usp />
       <ExploreOurCoursesView courses={courses} />
+      <ExploreOurCoursesView courses={courses} />
       <CoreView isBgVisible={true} />
       <Guarante />
       <Trust />

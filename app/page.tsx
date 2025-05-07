@@ -14,7 +14,7 @@ import React from 'react'
 import TestimonialView from '@/components/home/testimonial/testimonial'
 import MainWrapper from '@/components/wrappers/main-wrapper'
 import { Banner } from '@/components/home/Banner/banner'
-import ExploreOurCoursesView from '@/components/home/explore-our-courses/explore-our-courses.view'
+import ExploreOurCoursesView from '@/components/home/explore-our-Online-Yoga-Course/explore-our-courses.view'
 import { getCourses } from '@/server-actions/course'
 import { getBlogs } from '@/server-actions/blog'
 

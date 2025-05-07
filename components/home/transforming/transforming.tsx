@@ -79,9 +79,9 @@ const Transforming = ({ courses }: TransformingProps) => {
               const availSeats = course.availableSeats - course.reserveSeats;
               return (
                 <SwiperSlide key={course.id}>
-                  <div className="bg-white p-8 rounded-xl flex flex-col justify-between h-[400px] min-h-[400px]">
+                  <div className="bg-white p-8 rounded-xl flex flex-col justify-between h-[250px] min-h-[250px]">
                     <div className="flex flex-col justify-between flex-1">
-                      <div className="flex justify-between items-center mb-6">
+                      <div className="flex justify-between items-center mb-4">
                         <div
                           className={cn(
                             `rounded-full h-3 w-3`,
@@ -94,20 +94,20 @@ const Transforming = ({ courses }: TransformingProps) => {
                               "bg-red-500"
                           )}
                         ></div>
-                        <p className="text-[#4377B2]">
+                        <p className="text-[#4377B2] text-sm">
                           {availSeats} Seats Available
                         </p>
                       </div>
-                      <h1 className="text-[#4377B2] text-2xl font-semibold mb-6">
+                      <h1 className="text-[#4377B2] text-lg font-semibold mb-2 line-clamp-1">
                         {course.headerSection.title}
                       </h1>
-                      <p className="text-[#878C91] mb-6 leading-5 line-clamp-3">
+                      <p className="text-[#878C91] text-sm mb-4 leading-4 line-clamp-2">
                         {course.yogaCoursesForBeginners.body}
                       </p>
                     </div>
                     <div className="flex justify-end">
                       <Button
-                        className="bg-transparent text-[#4377B2] flex items-center font-semibold rounded-full border-2 border-[#4377B2] py-5 px-8 duration-300 group hover:bg-[#4377B2] hover:text-white"
+                        className="bg-transparent text-[#4377B2] flex items-center font-semibold rounded-full border-2 border-[#4377B2] py-2 px-6 duration-300 group hover:bg-[#4377B2] hover:text-white"
                         onClick={() => router.push(`/courses/${course.id}`)}
                       >
                         <ArrowRight className="group-hover:text-white" />

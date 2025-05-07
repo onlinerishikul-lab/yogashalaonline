@@ -18,6 +18,7 @@ import ExploreOurCoursesView from '@/components/home/explore-our-Online-Yoga-Cou
 import { getCourses } from '@/server-actions/course'
 import { getBlogs } from '@/server-actions/blog'
 import ExploreOurAyurvedaCoursesView from '@/components/home/explore-our-Online-Ayurveda-Course/explore-our-courses.view'
+import ExploreOurClassesView from '@/components/home/explore-our-Online-Yoga-Classes/explore-our-courses.view'
 
 
 export default async function Home() {
@@ -36,6 +37,7 @@ export default async function Home() {
       <Usp />
       <ExploreOurCoursesView courses={courses} />
       <ExploreOurAyurvedaCoursesView courses={courses} />
+      <ExploreOurClassesView courses={courses} />
       <CoreView isBgVisible={true} />
       <Guarante />
       <Trust />

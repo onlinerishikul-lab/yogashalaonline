@@ -32,7 +32,7 @@ export default function ExploreOurCoursesView({
     <section className="overflow-x-hidden bg-[#FBF6F3] py-20">
       <div className="space-y-10">
         <h2 className="text-4xl font-bold text-center text-[#4377B2]">
-          Online Yoga Training Courses
+          Online Yoga  Courses
         </h2>
 
         <div className={`py-16 bg-[#FBF6F3] ${styles.explore_our_courses}`}>

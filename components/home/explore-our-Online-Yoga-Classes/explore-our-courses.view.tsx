@@ -28,7 +28,6 @@ const filteredCourses = courses.filter((course) =>
     .includes("online Yoga Classes".toLowerCase())
 );
 
-
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3] py-20">
       <div className="space-y-10">

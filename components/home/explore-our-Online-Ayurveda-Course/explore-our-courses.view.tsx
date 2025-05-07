@@ -25,7 +25,7 @@ export default function ExploreOurCoursesView({
   const filteredCourses = courses.filter((course) =>
     course.headerSection?.subHeading
       ?.toLowerCase()
-      .includes("online yoga training")
+      .includes("Online Ayurveda Courses")
   );
 
   return (

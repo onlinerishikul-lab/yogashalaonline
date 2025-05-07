@@ -17,7 +17,7 @@ import { Banner } from '@/components/home/Banner/banner'
 import ExploreOurCoursesView from '@/components/home/explore-our-Online-Yoga-Course/explore-our-courses.view'
 import { getCourses } from '@/server-actions/course'
 import { getBlogs } from '@/server-actions/blog'
-import ExploreOurCoursesView from '@/components/home/explore-our-Online-Ayurveda-Course/explore-our-courses.view'
+import ExploreOurAyurvedaCoursesView from '@/components/home/explore-our-Online-Ayurveda-Course/explore-our-courses.view'
 
 
 export default async function Home() {
@@ -35,7 +35,7 @@ export default async function Home() {
       <Banner />
       <Usp />
       <ExploreOurCoursesView courses={courses} />
-      <ExploreOurCoursesView courses={courses} />
+      <ExploreOurAyurvedaCoursesView courses={courses} />
       <CoreView isBgVisible={true} />
       <Guarante />
       <Trust />

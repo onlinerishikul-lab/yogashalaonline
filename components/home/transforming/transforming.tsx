@@ -17,6 +17,7 @@ interface TransformingProps {
   courses: Course[];
 }
 
+
 const Transforming = ({ courses }: TransformingProps) => {
   const router = useRouter();
 

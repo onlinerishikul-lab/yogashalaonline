@@ -57,8 +57,8 @@ export default function ExploreOurCoursesView({
           >
             {courses
               .filter((course) =>
-                course.headerSection?.subHeading
-                  ?.toLowerCase()
+                (course.headerSection?.subHeading ?? "")
+                  .toLowerCase()
                   .includes("online yoga training")
               )
               .map((course, index) => (

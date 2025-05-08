@@ -47,16 +47,16 @@ export const Header = () => {
           title: "50 Hrs Yoga Courses",
           href: "/yoga/50-hours",
           subDropdown: [
-            { title: "Restorative Yoga TTC", href: "/yoga/50-hours/restorative-yoga" },
-            { title: "Meditation TTC", href: "/yoga/50-hours/meditation" },
-            { title: "Pranayama TTC", href: "/yoga/50-hours/pranayama" },
-            { title: "Yoga Nidra TTC", href: "/yoga/50-hours/yoga-nidra" },
-            { title: "Chair Yoga", href: "/yoga/50-hours/chair-yoga" },
-            { title: "Mudra & Mantra Course", href: "/yoga/50-hours/mudra-mantra" },
-            { title: "Kundalini Yoga Course", href: "/yoga/50-hours/kundalini-yoga" },
-            { title: "Kids Yoga Course", href: "/yoga/50-hours/kids-yoga" },
-            { title: "Yoga Therapy Course", href: "/yoga/50-hours/yoga-therapy" },
-            { title: "Pregnancy Yoga", href: "/yoga/50-hours/pregnancy-yoga" },
+            { title: "Restorative Yoga TTC", href: "/50-Hrs-Yoga-Courses/Restorative-Yoga-TTC" },
+            { title: "Meditation TTC", href: "/50-Hrs-Yoga-Courses/Meditation-TTC" },
+            { title: "Pranayama TTC", href: "/50-Hrs-Yoga-Courses/Pranayama-TTC" },
+            { title: "Yoga Nidra TTC", href: "/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC" },
+            { title: "Chair Yoga", href: "/50-Hrs-Yoga-Courses/Chair-Yoga" },
+            { title: "Mudra & Mantra Course", href: "/50-Hrs-Yoga-Courses/Mudra-Mantra-Course" },
+            { title: "Kundalini Yoga Course", href: "/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course" },
+            { title: "Kids Yoga Course", href: "/50-Hrs-Yoga-Courses/Kids-Yoga-Course" },
+            { title: "Yoga Therapy Course", href: "/50-Hrs-Yoga-Courses/Yoga-Therapy-Course" },
+            { title: "Pregnancy Yoga", href: "/50-Hrs-Yoga-Courses/Pregnancy-Yoga" },
           ],
         },
         {
@@ -234,8 +234,8 @@ export const Header = () => {
                   {item.title}
                   <ChevronDown className="w-4 h-4" />
                 </button>
-               {activeDropdown === item.title && (
-  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
+                {activeDropdown === item.title && (
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
                     {item.dropdown.map((subItem, idx) => (
                       <div key={subItem.title} className="relative group">
                         {idx > 0 && <div className="border-t border-gray-200 my-1"></div>}
@@ -258,17 +258,16 @@ export const Header = () => {
                           {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
                         </button>
                         {openSubDropdown === subItem.title && subItem.subDropdown && (
-                          <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-66 z-50 p-2 space-y-1">
+                          <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-1">
                             {subItem.subDropdown.map((nestedItem, nestedIdx) => (
                               <div key={nestedItem.title}>
                                 {nestedIdx > 0 && <div className="border-t border-gray-200 my-1"></div>}
                                 <Link
-  href={nestedItem.href}
-  className="inline-block px-4 py-2 text-sm text-black hover:bg-gray-100 whitespace-nowrap"
->
-  {nestedItem.title}
-</Link>
-
+                                  href={nestedItem.href}
+                                  className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                                >
+                                  {nestedItem.title}
+                                </Link>
                               </div>
                             ))}
                           </div>
@@ -306,7 +305,7 @@ export const Header = () => {
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 {activeDropdown === item.title && (
-                  <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md z-50 p-2 flex whitespace-nowrap space-x-2 overflow-x-auto">
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1 right-0">
                     {item.dropdown.map((subItem, idx) => (
                       <div key={subItem.title}>
                         {idx > 0 && <div className="border-t border-gray-200 my-1"></div>}

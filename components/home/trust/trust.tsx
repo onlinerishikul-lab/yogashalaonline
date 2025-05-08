@@ -22,7 +22,7 @@ const Trust = () => {
             in the yoga community.
           </p>
         </div>
-        <div className="flex gap-6 sm:gap-8 md:gap-12 lg:gap-20 justify-center mt-12 sm:mt-16 md:mt-20 lg:mt-24 flex-col md:flex-row items-center">
+        <div className="flex gap-6 sm:gap-8 md:gap-5 lg:gap-3 justify-center mt-12 sm:mt-16 md:mt-20 lg:mt-24 flex-col md:flex-row items-center">
           <Image
             alt="certificate"
             height={450}

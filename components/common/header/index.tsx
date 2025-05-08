@@ -235,7 +235,7 @@ export const Header = () => {
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 {activeDropdown === item.title && (
-                  <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md min-w-[300px] z-50 p-2 space-y-1 whitespace-nowrap">>
+                  <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md min-w-[300px] z-50 p-2 space-y-1 whitespace-nowrap">
                     {item.dropdown.map((subItem, idx) => (
                       <div key={subItem.title} className="relative group">
                         {idx > 0 && <div className="border-t border-gray-200 my-1"></div>}

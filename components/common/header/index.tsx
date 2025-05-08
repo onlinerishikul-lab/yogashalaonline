@@ -258,7 +258,7 @@ export const Header = () => {
                           {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
                         </button>
                         {openSubDropdown === subItem.title && subItem.subDropdown && (
-                          <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md w-64 z-50 p-2 space-y-1">
+                          <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md min-w-[300px] z-50 p-2 space-y-1 whitespace-nowrap">
                             {subItem.subDropdown.map((nestedItem, nestedIdx) => (
                               <div key={nestedItem.title}>
                                 {nestedIdx > 0 && <div className="border-t border-gray-200 my-1"></div>}

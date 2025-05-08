@@ -235,8 +235,7 @@ export const Header = () => {
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 {activeDropdown === item.title && (
-                  <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md z-50 p-2 min-w-max max-w-[300px] whitespace-normal">
-
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
                     {item.dropdown.map((subItem, idx) => (
                       <div key={subItem.title} className="relative group">
                         {idx > 0 && <div className="border-t border-gray-200 my-1"></div>}
@@ -263,13 +262,12 @@ export const Header = () => {
                             {subItem.subDropdown.map((nestedItem, nestedIdx) => (
                               <div key={nestedItem.title}>
                                 {nestedIdx > 0 && <div className="border-t border-gray-200 my-1"></div>}
-                               <Link
+                                <Link
   href={nestedItem.href}
-  className="block px-4 py-2 text-sm text-black hover:bg-gray-100 w-full"
+  className="inline-block px-4 py-2 text-sm text-black hover:bg-gray-100 whitespace-nowrap"
 >
   {nestedItem.title}
 </Link>
-
 
                               </div>
                             ))}

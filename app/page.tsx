@@ -41,7 +41,7 @@ export default async function Home() {
       <Guarante />
       <Trust />
       <OurTeaching />
-      <Transforming courses={courses} />
+      <Transforming/>
       <OnlineYoga />
       <Blogs blogs={blogs} />
       <Join />

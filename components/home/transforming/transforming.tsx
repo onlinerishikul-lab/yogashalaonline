@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import React from "react";
-
+import { Course } from "@/types/course";
 import "./transforming.css";
 
 const Transforming = () => {

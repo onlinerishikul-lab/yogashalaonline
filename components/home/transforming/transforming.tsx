@@ -1,18 +1,9 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-import { Course } from "@/types/course";
 
 import "./transforming.css";
-import { cn } from "@/lib/utils";
 
 interface TransformingProps {
   courses: Course[];

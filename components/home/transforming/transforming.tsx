@@ -1,15 +1,12 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import React from "react";
 
 import "./transforming.css";
 
-interface TransformingProps {
-  courses: Course[];
-}
-
-const Transforming = ({ courses }: TransformingProps) => {
+const Transforming = () => {
   const router = useRouter();
 
   return (

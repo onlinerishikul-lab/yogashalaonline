@@ -263,11 +263,12 @@ export const Header = () => {
                               <div key={nestedItem.title}>
                                 {nestedIdx > 0 && <div className="border-t border-gray-200 my-1"></div>}
                                 <Link
-                                  href={nestedItem.href}
-                                  className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                                >
-                                  {nestedItem.title}
-                                </Link>
+  href={nestedItem.href}
+  className="inline-block px-4 py-2 text-sm text-black hover:bg-gray-100 whitespace-nowrap"
+>
+  {nestedItem.title}
+</Link>
+
                               </div>
                             ))}
                           </div>
@@ -305,7 +306,7 @@ export const Header = () => {
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 {activeDropdown === item.title && (
-                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1 right-0">
+                  <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md z-50 p-2 flex whitespace-nowrap space-x-2 overflow-x-auto">
                     {item.dropdown.map((subItem, idx) => (
                       <div key={subItem.title}>
                         {idx > 0 && <div className="border-t border-gray-200 my-1"></div>}

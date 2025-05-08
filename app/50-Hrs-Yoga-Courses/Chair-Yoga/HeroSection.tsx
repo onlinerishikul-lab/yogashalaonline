@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Header } from "@/components/common/header";
  // Adjust the path if it's in a different folder
 
+
 const HeroSection = () => {
   return (
     <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/Chair-Yoga.jpg")' }}>

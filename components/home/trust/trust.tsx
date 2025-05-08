@@ -37,6 +37,13 @@ const Trust = () => {
             src="/assets/certificates/certi-two.jpeg"
             className="w-full max-w-[300px] md:max-w-[350px] lg:max-w-[400px] h-auto"
           />
+          <Image
+            alt="certificate"
+            height={450}
+            width={400}
+            src="/assets/certificates/certi-three.jpg"
+            className="w-full max-w-[300px] md:max-w-[350px] lg:max-w-[400px] h-auto"
+          />
         </div>
       </div>
     </div>

@@ -8,17 +8,17 @@ const Join = () => {
   };
 
   return (
-    <div className="relative flex justify-center px-2 overflow-hidden h-[600px]">
+    <div className="relative flex justify-center px-2 overflow-hidden">
       {/* Background image layer */}
       <Image
-        src="/community.jpg" // Make sure this is your uploaded image path or change accordingly
+        src="/community.jpg" // Ensure this path points to the correct image in /public
         alt="Join background"
         fill
         className="object-cover"
         priority
       />
 
-      {/* Optional overlay for contrast */}
+      {/* Optional overlay for text readability */}
       <div className="absolute inset-0 bg-black/25" />
 
       {/* Content layer */}

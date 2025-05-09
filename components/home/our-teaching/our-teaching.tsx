@@ -40,11 +40,11 @@ const OurTeaching = () => {
             <div
               key={item.id}
               className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-12 ${
-                index % 2 !== 0 ? "md:grid-cols-2-reverse" : ""
+                index % 2 !== 0 ? "md:flex-row-reverse" : ""
               }`}
             >
               <div
-                className={`text-center md:text-left ${
+                className={`text-center md:text-left flex flex-col justify-center ${
                   index % 2 !== 0 ? "" : "order-last"
                 }`}
               >
@@ -53,17 +53,15 @@ const OurTeaching = () => {
                 </h1>
                 <p className="text-base text-justify">{item.text}</p>
               </div>
-              <Image
-                alt="image"
-                src={item.image}
-                height={500}
-                width={500}
-                className={`mb-4 rounded-[25px] md:rounded-r-[25px] md:rounded-tl-[25px] ${
-                  index % 2 === 0
-                    ? "md:rounded-bl-[0px]"
-                    : "md:rounded-br-[0px]"
-                } w-[300px] h-[300px] md:w-[500px] md:h-[500px] object-cover`}
-              />
+              <div className="w-full flex justify-center md:justify-start">
+                <Image
+                  alt={item.heading}
+                  src={item.image}
+                  width={500}
+                  height={0}
+                  className="rounded-[25px] md:rounded-r-[25px] md:rounded-tl-[25px] object-cover w-[300px] sm:w-[350px] md:w-[400px] lg:w-[450px] h-auto"
+                />
+              </div>
             </div>
           ))}
         </div>

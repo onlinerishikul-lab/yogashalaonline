@@ -64,12 +64,12 @@ const Faculty = () => {
           </div>
 
           {/* Center Image */}
-          <div className="relative bg-white rounded-3xl rounded-br-[50px] w-full md:max-w-[400px] h-[400px] overflow-hidden shadow-md">
+          <div className="relative w-full md:max-w-[400px] h-[400px] overflow-hidden rounded-3xl shadow-md">
             <Image
               src={selectedTrainer.image}
               alt={selectedTrainer.name}
               fill
-              className="object-contain"
+              className="object-cover"
               priority
             />
             <div className="h-[100px] w-[100px] bg-[#4377B2] border-[15px] border-white rounded-full absolute bottom-0 right-0 z-30"></div>

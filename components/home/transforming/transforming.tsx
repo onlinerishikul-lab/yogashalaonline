@@ -9,7 +9,7 @@ const Transforming = () => {
   const router = useRouter();
 
   return (
-    <div className="flex justify-center py-20 px-2">
+    <div className="flex justify-center">
       <div className="max-w-screen-2xl p-2 md:p-16 w-full bg-[#f1f1f1]">
         <div className="flex justify-between flex-col md:flex-row">
           <h1 className="md:w-[50%] text-2xl mb-4 md:text-4xl font-bold text-[#4377B2]">

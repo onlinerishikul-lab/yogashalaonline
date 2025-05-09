@@ -110,7 +110,7 @@ export const SiteFooter = () => {
               <Instagram className="h-5 w-5" />
             </Link>
           </div>
-          <p className="text-white">© 2021 — All Rights Reserved</p>
+          <p className="text-white">© 2025 — All Rights Reserved</p>
         </div>
       </div>
     </div>

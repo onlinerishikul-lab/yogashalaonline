@@ -8,20 +8,17 @@ const Join = () => {
   };
 
   return (
-    <div className="relative flex justify-center px-2 overflow-hidden">
-      {/* Background color layer */}
-      <div className="absolute inset-0 bg-[#65CF72]" />
-
+    <div className="relative flex justify-center px-2 overflow-hidden h-[600px]">
       {/* Background image layer */}
       <Image
-        src="/community.jpg"
+        src="/community.jpg" // Make sure this is your uploaded image path or change accordingly
         alt="Join background"
         fill
-        className="object-contain"
+        className="object-cover"
         priority
       />
 
-      {/* Overlay layer */}
+      {/* Optional overlay for contrast */}
       <div className="absolute inset-0 bg-black/25" />
 
       {/* Content layer */}
@@ -39,7 +36,7 @@ const Join = () => {
             onClick={handleJoinClick}
             className="text-white font-semibold uppercase mt-5 py-3 px-6 rounded-full bg-[#4377B2] hover:bg-[#c94d24] transition-colors"
           >
-            join us today
+            Join Us Today
           </button>
         </div>
       </div>

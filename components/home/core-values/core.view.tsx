@@ -73,8 +73,8 @@ const CoreView = ({
       )}
     >
       <div className="flex justify-center container mx-auto ">
-        <div className="p-2 w-full py-20 px-6">
-          <div className="space-y-12">
+        <div className="p-2 w-full px-6">
+          <div className="space-y-0">
             <h2 className="text-4xl font-bold text-center text-[#4377B2]">
               Core Values
             </h2>

@@ -2,7 +2,7 @@ export const teachers: { id: number; name: string; image: string }[] = [
   {
     id: 1,
     name: "Gangesha Chaitanya",
-    image: "/Gangesha Chaitanya.png"
+    image: "/Gangesha-Chaitanya.png"
   },
   {
     id: 2,

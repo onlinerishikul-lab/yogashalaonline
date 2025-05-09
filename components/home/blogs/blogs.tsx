@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Blog } from "@/types/course";
+import { DBBlog as Blog } from "@/types/course"; // Make sure this is the correct import
 
 interface BlogsProps {
   blogs: Blog[];
@@ -20,7 +20,7 @@ const Blogs = ({ blogs }: BlogsProps) => {
               className="bg-[#4377B2] p-6 rounded-2xl flex flex-col justify-between h-full"
             >
               <img
-                src={blog.image}
+                src={blog.coverImage}
                 alt={blog.title}
                 className="rounded-lg h-40 w-full object-cover mb-4"
               />

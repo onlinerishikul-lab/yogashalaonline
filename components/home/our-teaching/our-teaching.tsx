@@ -2,32 +2,32 @@ import Image from "next/image";
 import React from "react";
 
 const OurTeaching = () => {
-  const tempContent = [
-    {
-      id: 1,
-      heading: "Interactive Online Learning Experience",
-      text: "Our courses are designed to be immersive and engaging, even in a virtual environment. Whether you're attending live sessions or learning through recorded modules, you’ll receive personalized guidance, real-time feedback, and support from our expert teachers. From one-on-one Q&A sessions to interactive assignments, we make sure every student feels connected, involved, and empowered throughout their learning journey.",
-      image: "/assets/teaching/Interactive.jpg",
-    },
-    {
-      id: 2,
-      heading: "Traditional Knowledge, Modern Relevance",
-      text: "We honor the ancient teachings of yoga and Ayurveda while presenting them in a way that’s practical for today’s lifestyle. Rooted in classical texts like the Yoga Sutras, Hatha Yoga Pradipika, and Charaka Samhita, our curriculum also includes modern scientific insights and contemporary health challenges. This makes the learning not only authentic but also deeply applicable to daily life and global wellness.",
-      image: "/assets/teaching/tech-two.png",
-    },
-    {
-      id: 3,
-      heading: "Foundation in Anatomy, Alignment & Healing",
-      text: "Understanding the body is essential for both practice and teaching. Our training emphasizes functional anatomy and posture alignment to help students practice safely and effectively. We also explore Ayurvedic body types (doshas) and how yoga practices can be adapted to support individual healing. This approach empowers you to modify poses, prevent injuries, and guide others with confidence and care.",
-      image: "/assets/teaching/tech-three.png",
-    },
-    {
-      id: 4,
-      heading: "Student-Centered Virtual Classrooms",
-      text: "We prioritize individual attention and flexible learning. Our online platform allows you to join from anywhere in the world while still receiving the support and interaction you'd find in a physical classroom. Whether you’re practicing asanas or learning about Ayurvedic herbs, our instructors provide consistent mentorship, clear feedback, and a personalized learning path tailored to your pace and goals.",
-      image: "/assets/teaching/tech-two.png",
-    },
-  ];
+ const tempContent = [ 
+  {
+    id: 1,
+    heading: "Interactive Online Learning Experience",
+    text: "Our courses are thoughtfully crafted to deliver a fully immersive and interactive learning journey in the virtual space. Through a combination of live classes, high-quality recorded modules, and dynamic digital resources, students can learn at their own pace while staying actively engaged. You'll benefit from real-time Q&A sessions, collaborative group activities, and regular one-on-one feedback from our experienced teachers. The environment is supportive and personalized, ensuring that every learner feels heard, motivated, and well-guided throughout their educational path. We use modern technology to bring the essence of classroom interaction to your screen—wherever you are in the world.",
+    image: "/assets/teaching/Interactive.jpg",
+  },
+  {
+    id: 2,
+    heading: "Traditional Knowledge, Modern Relevance",
+    text: "Our teaching philosophy bridges the ancient wisdom of yoga and Ayurveda with the demands and realities of the modern world. We draw inspiration from revered classical texts like the Yoga Sutras of Patanjali, Hatha Yoga Pradipika, and Charaka Samhita, while also integrating insights from contemporary science, psychology, and health practices. This blend allows students to gain a deep understanding of tradition while learning how to apply it meaningfully in today's fast-paced lifestyle. From managing stress and improving posture to boosting immunity and mental clarity, our curriculum equips you with timeless knowledge that supports holistic well-being in the 21st century.",
+    image: "/assets/teaching/tech-two.png",
+  },
+  {
+    id: 3,
+    heading: "Foundation in Anatomy, Alignment & Healing",
+    text: "A strong grasp of anatomy and alignment is key to practicing and teaching yoga safely and effectively. Our training offers in-depth education on functional anatomy, biomechanics, and postural alignment. You'll learn how muscles, joints, and bones interact during different asanas, and how to adjust poses for various body types and limitations. In addition, we explore the principles of Ayurveda, including dosha analysis and personalized healing strategies, to create practices that support individual health goals. This dual focus empowers students to modify techniques intelligently, prevent injuries, and support others in their healing journey with clarity and confidence.",
+    image: "/assets/teaching/tech-three.png",
+  },
+  {
+    id: 4,
+    heading: "Student-Centered Virtual Classrooms",
+    text: "We believe that meaningful learning happens when students are seen, supported, and challenged at their level. Our virtual classrooms are designed to mirror the intimacy and engagement of in-person sessions. Each student receives customized attention through live mentorship, weekly progress check-ins, and flexible learning pathways tailored to their goals. Whether you're delving into yoga philosophy, mastering physical postures, or studying herbal remedies in Ayurveda, you'll experience a high-touch, responsive learning environment. Our instructors remain accessible and proactive in addressing questions, encouraging practice, and helping you grow with confidence—no matter where you're joining from.",
+    image: "/assets/teaching/tech-two.png",
+  },
+];
 
   return (
     <div className="bg-[#4377B2] bg-cover flex justify-center px-6">

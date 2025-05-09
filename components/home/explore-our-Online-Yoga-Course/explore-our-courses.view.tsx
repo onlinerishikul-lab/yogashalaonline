@@ -1,6 +1,5 @@
 "use client";
 
-
 import React from "react";
 import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -30,12 +29,16 @@ export default function ExploreOurCoursesView({
 
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3] py-3">
-      <div className="space-y-5">
-        <h2 className="text-4xl font-bold text-center text-[#4377B2]">
-          Explore Our Online Yoga  Courses
-        </h2>
+      <div className={`relative ${styles.explore_our_courses}`}>
+        {/* Centered Heading */}
+        <div className="absolute w-full top-[40%] z-10">
+          <h2 className="text-4xl font-bold text-center text-[#4377B2]">
+            Explore Our Online Yoga Courses
+          </h2>
+        </div>
 
-        <div className={`py-10 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
+        {/* Swiper Carousel */}
+        <div className="pt-24 pb-10">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={20}
@@ -82,7 +85,8 @@ export default function ExploreOurCoursesView({
           </Swiper>
         </div>
 
-        <div className="text-center">
+        {/* Explore More Button */}
+        <div className="text-center mt-4">
           <button
             className="bg-[#4377B2] text-white px-8 py-1 rounded-full font-semibold hover:bg-[#285384] transition-colors"
             onClick={() => router.push("/courses")}

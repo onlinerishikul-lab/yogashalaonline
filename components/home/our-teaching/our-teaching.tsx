@@ -13,7 +13,7 @@ const OurTeaching = () => {
       id: 2,
       heading: "Traditional Knowledge, Modern Relevance",
       text: "Our teaching philosophy bridges the ancient wisdom of yoga and Ayurveda with the demands and realities of the modern world. We draw inspiration from revered classical texts like the Yoga Sutras of Patanjali, Hatha Yoga Pradipika, and Charaka Samhita, while also integrating insights from contemporary science, psychology, and health practices. This blend allows students to gain a deep understanding of tradition while learning how to apply it meaningfully in today's fast-paced lifestyle. From managing stress and improving posture to boosting immunity and mental clarity, our curriculum equips you with timeless knowledge that supports holistic well-being in the 21st century.",
-      image: "/assets/teaching/tech-two.png",
+      image: "/assets/teaching/Traditional Knowledge.jpg",
     },
     {
       id: 3,
@@ -25,7 +25,7 @@ const OurTeaching = () => {
       id: 4,
       heading: "Student-Centered Virtual Classrooms",
       text: "We believe that meaningful learning happens when students are seen, supported, and challenged at their level. Our virtual classrooms are designed to mirror the intimacy and engagement of in-person sessions. Each student receives customized attention through live mentorship, weekly progress check-ins, and flexible learning pathways tailored to their goals. Whether you're delving into yoga philosophy, mastering physical postures, or studying herbal remedies in Ayurveda, you'll experience a high-touch, responsive learning environment. Our instructors remain accessible and proactive in addressing questions, encouraging practice, and helping you grow with confidence—no matter where you're joining from.",
-      image: "/assets/teaching/tech-two.png",
+      image: "/assets/teaching/Student-Centered.jpg",
     },
   ];
 

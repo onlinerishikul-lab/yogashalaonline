@@ -2,37 +2,37 @@ export const teachers: { id: number; name: string; image: string }[] = [
   {
     id: 1,
     name: "Gangesha Chaitanya",
-    image: "./Gangesha Chaitanya.jpg"
+    image: "/Gangesha Chaitanya.jpg"
   },
   {
     id: 2,
     name: "Sukra Chiatanya",
-    image: "./Sukra Chiatanya.jpg"
+    image: "/Sukra Chiatanya.jpg"
   },
   {
     id: 3,
     name: "Purnima Ji",
-    image: "./Purnima Ji.jpg"
+    image: "/Purnima Ji.jpg"
   },
   {
     id: 4,
     name: "Himanshu Ji",
-    image: "./Himanshu Ji.jpg"
+    image: "/Himanshu Ji.jpg"
   },
   {
     id: 5,
     name: "Akshay Nautiyal",
-    image: "./Akshay Nautiyal.jpg"
+    image: "/Akshay Nautiyal.jpg"
   },
   {
     id: 6,
     name: "Balram Baloni",
-    image: "./Balram Baloni.jpg"
+    image: "/Balram Baloni.jpg"
   },
   {
     id: 7,
     name: "Swami Amarna ji",
-    image: "./Swami Amarna ji.jpg"
+    image: "/Swami Amarna ji.jpg"
   },
 ]
 

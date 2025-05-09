@@ -4,7 +4,7 @@ import React from "react";
 const Trust = () => {
   return (
     <div className='bg-[url("/assets/CoreValues.svg")] bg-cover bg-no-repeat flex justify-center'>
-      <div className="max-w-screen-2xl w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-28">
+      <div className="max-w-screen-2xl w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 lg:py-12">
         {/* Heading */}
         <div className="flex items-center flex-col space-y-4 sm:space-y-6 mb-3">
           <h2 className="text-center font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#4377B2]">
@@ -13,7 +13,7 @@ const Trust = () => {
         </div>
 
         {/* Images */}
-        <div className="flex gap-6 sm:gap-8 md:gap-5 lg:gap-3 justify-center mb-12 sm:mb-16 md:mb-20 lg:mb-24 flex-col md:flex-row items-center">
+        <div className="flex gap-6 sm:gap-8 md:gap-5 lg:gap-3 justify-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 flex-col md:flex-row items-center">
           <Image
             alt="certificate"
             height={450}
@@ -38,7 +38,7 @@ const Trust = () => {
         </div>
 
         {/* Description */}
-        <div className="flex items-center flex-col ">
+        <div className="flex items-center flex-col space-y-4 sm:space-y-6">
           <p className="text-center text-sm sm:text-base md:w-3/4 lg:w-2/3">
             Upon successful completion of Rishikul online Yoga Teacher Training
             program, you will receive a globally recognized certificate

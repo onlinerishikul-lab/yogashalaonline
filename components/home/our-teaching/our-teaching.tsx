@@ -35,11 +35,11 @@ const OurTeaching = () => {
         <h1 className="mb-10 text-4xl font-bold md:text-left">
           Our Teaching Approach
         </h1>
-        <div className="flex flex-col w-full gap-10">
+        <div className="flex flex-col w-full gap-5">
           {tempContent.map((item, index) => (
             <div
               key={item.id}
-              className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-12 ${
+              className={`grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-5 mb-12 ${
                 index % 2 !== 0 ? "md:flex-row-reverse" : ""
               }`}
             >

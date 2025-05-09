@@ -2,11 +2,6 @@
 import { teachers } from "@/constants/about-data";
 import Image from "next/image";
 import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
 
 interface Trainer {
   id: number;
@@ -16,6 +11,19 @@ interface Trainer {
 
 const Faculty = () => {
   const [selectedTrainer, setSelectedTrainer] = useState<Trainer>(teachers[0]);
+  const [showSecondSet, setShowSecondSet] = useState(false);
+  const displayedTrainers = showSecondSet
+    ? teachers.slice(4, 8)
+    : teachers.slice(0, 4);
+
+  const handlePlusClick = () => {
+    setShowSecondSet(!showSecondSet);
+    if (showSecondSet) {
+      setSelectedTrainer(teachers[0]);
+    } else {
+      setSelectedTrainer(teachers[4]);
+    }
+  };
 
   return (
     <div className="flex justify-center pt-16 relative">
@@ -37,7 +45,7 @@ const Faculty = () => {
         </div>
 
         <div className="flex gap-4 mt-16 flex-col md:flex-row">
-          {/* Trainer selector section with Swiper */}
+          {/* Trainer selector section */}
           <div className="bg-[#4377B2] p-8 rounded-3xl flex flex-col justify-between">
             <div>
               <h1 className="text-7xl font-bold text-white">920+</h1>
@@ -45,38 +53,31 @@ const Faculty = () => {
                 Learn from the Best in the Industry
               </p>
             </div>
-
-            <div className="mt-24 w-[300px] md:w-[320px]">
-              <Swiper
-                modules={[Navigation]}
-                spaceBetween={10}
-                slidesPerView={4}
-                navigation
-                breakpoints={{
-                  320: { slidesPerView: 3 },
-                  768: { slidesPerView: 4 },
-                }}
+            <div className="mt-24 flex gap-4 items-center justify-center">
+              {displayedTrainers.map((trainer) => (
+                <button
+                  key={trainer.id}
+                  onClick={() => setSelectedTrainer(trainer)}
+                  className={`relative w-[70px] h-[70px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 -ml-4 first:ml-0 ${
+                    selectedTrainer.id === trainer.id
+                      ? "border-white scale-110 z-10"
+                      : "border-transparent scale-100"
+                  }`}
+                >
+                  <Image
+                    src={trainer.image}
+                    alt={trainer.name}
+                    fill
+                    className="object-cover"
+                  />
+                </button>
+              ))}
+              <span
+                onClick={handlePlusClick}
+                className="text-white text-3xl font-light cursor-pointer hover:opacity-80 -ml-2"
               >
-                {teachers.map((trainer) => (
-                  <SwiperSlide key={trainer.id}>
-                    <button
-                      onClick={() => setSelectedTrainer(trainer)}
-                      className={`relative w-[70px] h-[70px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 ${
-                        selectedTrainer.id === trainer.id
-                          ? "border-white scale-110 z-10"
-                          : "border-transparent"
-                      }`}
-                    >
-                      <Image
-                        src={trainer.image}
-                        alt={trainer.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </button>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+                +
+              </span>
             </div>
           </div>
 

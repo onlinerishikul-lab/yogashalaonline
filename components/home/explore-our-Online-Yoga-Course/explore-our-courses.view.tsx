@@ -84,7 +84,7 @@ export default function ExploreOurCoursesView({
 
         <div className="text-center">
           <button
-            className="bg-[#4377B2] text-white px-8 py-1 rounded-full font-semibold hover:bg-[#285384] transition-colors"
+            "bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors"
             onClick={() => router.push("/courses")}
           >
             EXPLORE MORE

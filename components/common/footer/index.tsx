@@ -10,7 +10,7 @@ export const SiteFooter = () => {
       <div className="max-w-screen-2xl p-4 px-6 w-full py-8">
         <div className="flex justify-between flex-col md:flex-row items-center mb-8">
           <Image
-            src="/assets/yrlog-01.png"
+            src="/assets/rishikulonlinlogo.png"
             alt="yoga logo"
             height={250}
             width={170}
@@ -57,7 +57,7 @@ export const SiteFooter = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <p className="w-full md:w-2/6 text-white">
-            We at Rishikul Yogshala deliver yoga and not just a skill; it is an
+            We at Rishikul Online deliver yoga and not just a skill; it is an
             ancient practice we transfer with thorough knowledge and wisdom,
             targeting bright intellect, understanding of its values, tradition,
             Yogic philosophy, and scientific explanations to our fellow
@@ -161,7 +161,7 @@ export const SiteFooter = () => {
 //             </div>
 
 //             <p className="text-sm text-white/70">
-//               © 2021 — Copyright
+//               © 2025 — Copyright
 //               <br />
 //               All Rights Reserved
 //             </p>

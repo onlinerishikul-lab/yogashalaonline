@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { DBBlog as Blog } from "@/types/course"; // Make sure this is the correct import
+import { Blog } from "@/types/course";
 
 interface BlogsProps {
   blogs: Blog[];

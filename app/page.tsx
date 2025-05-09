@@ -5,7 +5,6 @@ import GetInTouch from '@/components/home/get-in-touch/get-in-touch'
 import Join from '@/components/home/join/join'
 import OnlineYoga from '@/components/home/online-yoga/online-yoga'
 import OurTeaching from '@/components/home/our-teaching/our-teaching'
-import Testimonial from '@/components/home/experiences/experiences'
 import Transforming from '@/components/home/transforming/transforming'
 import Trust from '@/components/home/trust/trust'
 import Guarante from '@/components/home/Guarantee/Guarante'
@@ -46,7 +45,6 @@ export default async function Home() {
       <Blogs blogs={blogs} />
       <Join />
       <Faculty />
-      <Testimonial />
       <TestimonialView title="What Our Students Say" tilt={true}/>
       <GetInTouch />
     </MainWrapper>

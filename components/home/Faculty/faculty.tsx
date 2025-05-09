@@ -2,6 +2,7 @@
 import { teachers } from "@/constants/about-data";
 import Image from "next/image";
 import React, { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 
 interface Trainer {
   id: number;
@@ -11,19 +12,36 @@ interface Trainer {
 
 const Faculty = () => {
   const [selectedTrainer, setSelectedTrainer] = useState<Trainer>(teachers[0]);
-  const [showSecondSet, setShowSecondSet] = useState(false);
-  const displayedTrainers = showSecondSet
-    ? teachers.slice(4, 8)
-    : teachers.slice(0, 4);
+  const [trainerPage, setTrainerPage] = useState(0);
 
-  const handlePlusClick = () => {
-    setShowSecondSet(!showSecondSet);
-    if (showSecondSet) {
-      setSelectedTrainer(teachers[0]);
-    } else {
-      setSelectedTrainer(teachers[4]);
-    }
-  };
+  const trainersPerPage = 4;
+  const totalPages = Math.ceil(teachers.length / trainersPerPage);
+
+  const displayedTrainers = teachers.slice(
+    trainerPage * trainersPerPage,
+    (trainerPage + 1) * trainersPerPage
+  );
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      setTrainerPage((prev) => (prev + 1) % totalPages);
+      setSelectedTrainer(
+        teachers[((trainerPage + 1) % totalPages) * trainersPerPage]
+      );
+    },
+    onSwipedRight: () => {
+      setTrainerPage((prev) =>
+        prev === 0 ? totalPages - 1 : (prev - 1) % totalPages
+      );
+      setSelectedTrainer(
+        teachers[
+          (trainerPage === 0 ? totalPages - 1 : trainerPage - 1) *
+            trainersPerPage
+        ]
+      );
+    },
+    trackMouse: true,
+  });
 
   return (
     <div className="flex justify-center pt-16 relative">
@@ -53,7 +71,11 @@ const Faculty = () => {
                 Learn from the Best in the Industry
               </p>
             </div>
-            <div className="mt-24 flex gap-4 items-center justify-center">
+
+            <div
+              {...swipeHandlers}
+              className="mt-24 flex gap-4 items-center justify-center"
+            >
               {displayedTrainers.map((trainer) => (
                 <button
                   key={trainer.id}
@@ -72,8 +94,11 @@ const Faculty = () => {
                   />
                 </button>
               ))}
+
               <span
-                onClick={handlePlusClick}
+                onClick={() =>
+                  setTrainerPage((prev) => (prev + 1) % totalPages)
+                }
                 className="text-white text-3xl font-light cursor-pointer hover:opacity-80 -ml-2"
               >
                 +

@@ -5,26 +5,26 @@ const OurTeaching = () => {
   const tempContent = [
     {
       id: 1,
-      heading: "Comprehensive Learning Framework",
-      text: "Rishikul Online training program provides an all-encompassing approach to yoga, integrating physical practices like asanas and pranayama with the mental and spiritual aspects of meditation and philosophy. By fusing traditional techniques with contemporary insights, we ensure the teachings are both timeless and relevant. The focus is on creating a connection between the body and mind, supported by a welcoming community that encourages personal growth and mutual learning.",
-      image: "/assets/teaching/tech-one.png",
+      heading: "Interactive Online Learning Experience",
+      text: "Our courses are designed to be immersive and engaging, even in a virtual environment. Whether you're attending live sessions or learning through recorded modules, you’ll receive personalized guidance, real-time feedback, and support from our expert teachers. From one-on-one Q&A sessions to interactive assignments, we make sure every student feels connected, involved, and empowered throughout their learning journey.",
+      image: "/assets/teaching/Interactive.jpg",
     },
     {
       id: 2,
-      heading: "Practical Teaching Experience",
-      text: "A key aspect of Virtual YTCC program is hands-on teaching practice, allowing you to develop your skills in real-time. Through guided sessions and constructive feedback, you'll refine your teaching techniques and discover your unique style. We emphasize creating a safe and inclusive space for students, equipping you with the tools to lead classes confidently and effectively, no matter the level of your audience.",
+      heading: "Traditional Knowledge, Modern Relevance",
+      text: "We honor the ancient teachings of yoga and Ayurveda while presenting them in a way that’s practical for today’s lifestyle. Rooted in classical texts like the Yoga Sutras, Hatha Yoga Pradipika, and Charaka Samhita, our curriculum also includes modern scientific insights and contemporary health challenges. This makes the learning not only authentic but also deeply applicable to daily life and global wellness.",
       image: "/assets/teaching/tech-two.png",
     },
     {
       id: 3,
-      heading: "Authentic Yoga Philosophy & Lifestyle",
-      text: "Online YTCC training dives deep into the wisdom of ancient yoga texts, such as the Yoga Sutras and the Bhagavad Gita, exploring their significance and application in modern life. This knowledge extends beyond the mat, inspiring a lifestyle rooted in mindfulness and self-awareness. By understanding yoga's cultural origins, you'll gain a deeper appreciation for the practice and the ability to teach with authenticity and respect for its traditions.",
+      heading: "Foundation in Anatomy, Alignment & Healing",
+      text: "Understanding the body is essential for both practice and teaching. Our training emphasizes functional anatomy and posture alignment to help students practice safely and effectively. We also explore Ayurvedic body types (doshas) and how yoga practices can be adapted to support individual healing. This approach empowers you to modify poses, prevent injuries, and guide others with confidence and care.",
       image: "/assets/teaching/tech-three.png",
     },
     {
       id: 4,
-      heading: "Focus on Anatomy and Alignment",
-      text: "Understanding the human body is essential for safe and effective yoga teaching. Rishikul Online YTCC program offers detailed insights into the mechanics of movement, helping you prevent injuries and adapt postures to suit individual needs. With a strong emphasis on alignment, you'll learn to guide students into poses safely and confidently. Additionally, the training equips you to provide precise verbal instructions and hands-on adjustments, enhancing the overall learning experience for your students.",
+      heading: "Student-Centered Virtual Classrooms",
+      text: "We prioritize individual attention and flexible learning. Our online platform allows you to join from anywhere in the world while still receiving the support and interaction you'd find in a physical classroom. Whether you’re practicing asanas or learning about Ayurvedic herbs, our instructors provide consistent mentorship, clear feedback, and a personalized learning path tailored to your pace and goals.",
       image: "/assets/teaching/tech-two.png",
     },
   ];

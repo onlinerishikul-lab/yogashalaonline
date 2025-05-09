@@ -1,19 +1,19 @@
 
 "use client";
-import HeroSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/HeroSection";
-import TestimonialSlider from "@/app/25-Hrs-Yoga-Courses/face-yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/25-Hrs-Yoga-Courses/face-yoga/yogacourse";
-import LearnSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/LearnSection";
-import UniqueCourseSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/UniqueCourseSection";
-import TeachingApproach from "@/app/25-Hrs-Yoga-Courses/face-yoga/TeachingApproach";
-import CourseDetails from "@/app/25-Hrs-Yoga-Courses/face-yoga/CourseDetails";
-import YogaAccreditation from "@/app/25-Hrs-Yoga-Courses/face-yoga/YogaAccreditation";
-import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/face-yoga/CertificatePromo";
-import FacultyInfo from "@/app/25-Hrs-Yoga-Courses/face-yoga/FacultyInfo";
-import PricingOptions from "@/app/25-Hrs-Yoga-Courses/face-yoga/PricingOptions";
-import RiskFreeGuarantee from "@/app/25-Hrs-Yoga-Courses/face-yoga/RiskFreeGuarantee";
-import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/face-yoga/TestimonialCarousel";
-import Faq from "@/app/25-Hrs-Yoga-Courses/face-yoga/Faq";
+import HeroSection from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/HeroSection";
+import TestimonialSlider from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/TestimonialSlider";
+import YogaCoursePage from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/yogacourse";
+import LearnSection from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/LearnSection";
+import UniqueCourseSection from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/UniqueCourseSection";
+import TeachingApproach from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/TeachingApproach";
+import CourseDetails from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/CourseDetails";
+import YogaAccreditation from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/YogaAccreditation";
+import CertificatePromo from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/CertificatePromo";
+import FacultyInfo from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/FacultyInfo";
+import PricingOptions from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/PricingOptions";
+import RiskFreeGuarantee from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/RiskFreeGuarantee";
+import TestimonialCarousel from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/TestimonialCarousel";
+import Faq from "@/app/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/Faq";
 
 export default function Page() {
   return (

@@ -24,7 +24,8 @@ const Faculty = () => {
   return (
     <div className="flex justify-center pt-16 bg-[#f1f1f1]">
       <div className="max-w-screen-2xl w-full px-4 md:px-8 py-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-[#4377B2] mb-10">
+        {/* Centered Heading */}
+        <h1 className="text-3xl md:text-4xl font-bold text-[#4377B2] mb-10 text-center">
           Meet Our Expert Trainers
         </h1>
 

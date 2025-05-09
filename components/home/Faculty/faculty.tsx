@@ -18,47 +18,29 @@ const Faculty = () => {
 
   const handlePlusClick = () => {
     setShowSecondSet(!showSecondSet);
-    if (showSecondSet) {
-      setSelectedTrainer(teachers[0]);
-    } else {
-      setSelectedTrainer(teachers[4]);
-    }
+    setSelectedTrainer(showSecondSet ? teachers[0] : teachers[4]);
   };
 
   return (
-    <div className="flex justify-center pt-16 relative">
-      <div className="container mx-auto p-2 py-8 md:p-16 w-full bg-[#f1f1f1]">
-        <div className="flex justify-between flex-col md:flex-row">
-          <h1 className="md:w-[50%] text-2xl mb-4 md:text-4xl font-bold text-[#4377B2]">
-            Meet Our Expert Trainers
-          </h1>
-          <div className="md:w-[40%]">
-            <p className="text-[#878C91]">
-              Our team of highly skilled and experienced trainers brings decades
-              of expertise in various yoga styles. Each trainer is dedicated to
-              guiding you through your yoga journey with personalized
-              instruction and deep knowledge of both traditional and modern
-              practices. Be inspired by their passion, commitment, and wisdom as
-              they help you elevate your practice and teaching skills.
-            </p>
-          </div>
-        </div>
+    <div className="flex justify-center pt-16 bg-[#f1f1f1]">
+      <div className="max-w-screen-2xl w-full px-4 md:px-8 py-10">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#4377B2] mb-10">
+          Meet Our Expert Trainers
+        </h1>
 
-        <div className="flex gap-4 mt-16 flex-col md:flex-row">
-          {/* Trainer selector section */}
-          <div className="bg-[#4377B2] p-8 rounded-3xl flex flex-col justify-between">
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          {/* Left Card */}
+          <div className="bg-[#4377B2] p-8 rounded-3xl w-full md:max-w-[300px] flex flex-col justify-between min-h-[400px]">
             <div>
-              <h1 className="text-7xl font-bold text-white">920+</h1>
-              <p className="text-white w-1/2">
-                Learn from the Best in the Industry
-              </p>
+              <h1 className="text-6xl font-bold text-white">920+</h1>
+              <p className="text-white mt-2">Learn from the Best in the Industry</p>
             </div>
-            <div className="mt-24 flex gap-4 items-center justify-center">
+            <div className="mt-10 flex gap-3 items-center">
               {displayedTrainers.map((trainer) => (
                 <button
                   key={trainer.id}
                   onClick={() => setSelectedTrainer(trainer)}
-                  className={`relative w-[70px] h-[70px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 -ml-4 first:ml-0 ${
+                  className={`relative w-[60px] h-[60px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 -ml-3 first:ml-0 ${
                     selectedTrainer.id === trainer.id
                       ? "border-white scale-110 z-10"
                       : "border-transparent scale-100"
@@ -74,23 +56,37 @@ const Faculty = () => {
               ))}
               <span
                 onClick={handlePlusClick}
-                className="text-white text-3xl font-light cursor-pointer hover:opacity-80 -ml-2"
+                className="text-white text-3xl font-light cursor-pointer hover:opacity-80"
               >
                 +
               </span>
             </div>
           </div>
 
-          {/* Main trainer image section */}
-          <div className="relative h-[400px] bg-white rounded-3xl rounded-br-[50px] md:w-3/4 overflow-hidden transition-all duration-500">
+          {/* Center Image */}
+          <div className="relative bg-white rounded-3xl rounded-br-[50px] w-full md:max-w-[400px] h-[400px] overflow-hidden shadow-md">
             <Image
               src={selectedTrainer.image}
               alt={selectedTrainer.name}
               fill
-              className="object-contain transition-opacity duration-300"
+              className="object-contain"
               priority
             />
             <div className="h-[100px] w-[100px] bg-[#4377B2] border-[15px] border-white rounded-full absolute bottom-0 right-0 z-30"></div>
+          </div>
+
+          {/* Right Paragraph */}
+          <div className="w-full md:max-w-[400px] text-[#878C91] text-base leading-relaxed">
+            <p>
+              Our team of highly skilled and experienced trainers brings decades
+              of expertise in various yoga styles. Each trainer is dedicated to
+              guiding you through your yoga journey with personalized instruction
+              and deep knowledge of both traditional and modern practices.
+              <br />
+              <br />
+              Be inspired by their passion, commitment, and wisdom as they help
+              you elevate your practice and teaching skills.
+            </p>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 
@@ -32,14 +33,12 @@ const OurTeaching = () => {
   return (
     <div className="bg-[#4377B2] bg-cover flex justify-center px-6">
       <div className="container mx-auto p-2 w-full py-14 text-white">
-        <h1 className="mb-10 text-4xl font-bold md:text-left">
-          Our Teaching Approach
-        </h1>
+        <h1 className="mb-10 text-4xl font-bold md:text-left">Our Teaching Approach</h1>
         <div className="flex flex-col w-full gap-5">
           {tempContent.map((item, index) => (
             <div
               key={item.id}
-              className={`grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-5 mb-12 ${
+              className={`grid grid-cols-1 md:grid-cols-2 gap-5 mb-12 ${
                 index % 2 !== 0 ? "md:flex-row-reverse" : ""
               }`}
             >
@@ -48,9 +47,7 @@ const OurTeaching = () => {
                   index % 2 !== 0 ? "" : "order-last"
                 }`}
               >
-                <h1 className="text-xl font-semibold mb-4 md:text-4xl">
-                  {item.heading}
-                </h1>
+                <h2 className="text-xl font-semibold mb-4 md:text-4xl">{item.heading}</h2>
                 <p className="text-base text-justify">{item.text}</p>
               </div>
               <div className="w-full flex justify-center md:justify-start">
@@ -58,7 +55,7 @@ const OurTeaching = () => {
                   alt={item.heading}
                   src={item.image}
                   width={500}
-                  height={0}
+                  height={300}
                   className="rounded-[25px] md:rounded-r-[25px] md:rounded-tl-[25px] object-cover w-[300px] sm:w-[350px] md:w-[400px] lg:w-[450px] h-auto"
                 />
               </div>

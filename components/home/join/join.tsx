@@ -14,7 +14,7 @@ const Join = () => {
 
       {/* Background image layer */}
       <Image
-        src="/assets/community.jpg"
+        src="/community.jpg"
         alt="Join background"
         fill
         className="object-contain"

@@ -38,7 +38,7 @@ const Trust = () => {
         </div>
 
         {/* Description */}
-        <div className="flex items-center flex-col space-y-4 sm:space-y-6">
+        <div className="flex items-center flex-col ">
           <p className="text-center text-sm sm:text-base md:w-3/4 lg:w-2/3">
             Upon successful completion of Rishikul online Yoga Teacher Training
             program, you will receive a globally recognized certificate

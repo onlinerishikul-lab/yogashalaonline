@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import { Blog } from "@/types/course";
@@ -6,11 +7,10 @@ interface BlogsProps {
   blogs: Blog[];
 }
 
-
 const Blogs = ({ blogs }: BlogsProps) => {
   return (
-    <div className="flex justify-center px-2 bg-[#FCF6F3] min-h-3/4">
-      <div className="container mx-auto w-full py-20 px-6">
+    <div className="flex justify-center px-2 bg-[#FCF6F3]">
+      <div className="container mx-auto w-full py-16 px-6">
         <h2 className="text-center text-[#4377B2] font-bold text-4xl">
           Expert Tips and Insights on Yoga
         </h2>
@@ -29,7 +29,9 @@ const Blogs = ({ blogs }: BlogsProps) => {
                 <h1 className="text-white text-xl font-semibold line-clamp-2">
                   {blog.title}
                 </h1>
-                <p className="text-white/90 text-sm line-clamp-3">{blog.overview}</p>
+                <p className="text-white/90 text-sm line-clamp-3">
+                  {blog.overview}
+                </p>
               </div>
               <Link href={`/blog/${blog.slug}`}>
                 <button className="text-[#4377B2] font-semibold py-2 px-4 rounded-full bg-white mt-4 hover:bg-white/90 transition-colors w-full">

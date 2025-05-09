@@ -45,7 +45,7 @@ const Faculty = () => {
         </div>
 
         <div className="flex gap-4 mt-16 flex-col md:flex-row">
-          {/* Trainer selector section */}
+          {/* Left block */}
           <div className="bg-[#4377B2] p-8 rounded-3xl flex flex-col justify-between">
             <div>
               <h1 className="text-7xl font-bold text-white">920+</h1>
@@ -81,15 +81,17 @@ const Faculty = () => {
             </div>
           </div>
 
-          {/* Main trainer image section */}
-          <div className="relative h-[400px] bg-white rounded-3xl rounded-br-[50px] md:w-3/4 overflow-hidden transition-all duration-500">
-            <Image
-              src={selectedTrainer.image}
-              alt={selectedTrainer.name}
-              fill
-              className="object-contain transition-opacity duration-300"
-              priority
-            />
+          {/* Right image block */}
+          <div className="relative md:w-3/4 flex justify-center items-center bg-white rounded-3xl rounded-br-[50px] overflow-hidden p-4">
+            <div className="relative w-full h-[500px] max-w-[400px] mx-auto">
+              <Image
+                src={selectedTrainer.image}
+                alt={selectedTrainer.name}
+                fill
+                className="object-cover rounded-2xl shadow-lg"
+                priority
+              />
+            </div>
             <div className="h-[100px] w-[100px] bg-[#4377B2] border-[15px] border-white rounded-full absolute bottom-0 right-0 z-30"></div>
           </div>
         </div>

@@ -17,16 +17,21 @@ const Blogs = ({ blogs }: BlogsProps) => {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-[#4377B2] p-8 rounded-2xl flex flex-col justify-between h-full"
+              className="bg-[#4377B2] p-6 rounded-2xl flex flex-col justify-between h-full"
             >
-              <div className="flex flex-col gap-4">
-                <h1 className="text-white text-2xl font-semibold line-clamp-2">
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="rounded-lg h-40 w-full object-cover mb-4"
+              />
+              <div className="flex flex-col gap-2">
+                <h1 className="text-white text-xl font-semibold line-clamp-2">
                   {blog.title}
                 </h1>
-                <p className="text-white/90 line-clamp-3">{blog.overview}</p>
+                <p className="text-white/90 text-sm line-clamp-3">{blog.overview}</p>
               </div>
               <Link href={`/blog/${blog.slug}`}>
-                <button className="text-[#4377B2] font-semibold py-3 px-6 rounded-full bg-white mt-6 hover:bg-white/90 transition-colors w-full">
+                <button className="text-[#4377B2] font-semibold py-2 px-4 rounded-full bg-white mt-4 hover:bg-white/90 transition-colors w-full">
                   Read Blog
                 </button>
               </Link>

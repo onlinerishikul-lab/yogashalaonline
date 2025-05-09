@@ -19,7 +19,7 @@ export default function TestimonialView({
   tilt?: boolean;
 }) {
   return (
-    <section className="overflow-x-hidden">
+    <section className="overflow-x-hidden py-5">
       <h2 className="text-4xl font-bold text-center text-[#4377B2] capitalize py-8">
         {title}
       </h2>

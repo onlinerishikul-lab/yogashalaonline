@@ -26,13 +26,14 @@ const Faculty = () => {
   };
 
   return (
-    <div className="flex justify-center pt-16 relative">
-      <div className="container mx-auto p-2 py-8 md:p-16 w-full bg-[#f1f1f1]">
-        <div className="flex justify-between flex-col md:flex-row">
-          <h1 className="md:w-[50%] text-2xl mb-4 md:text-4xl font-bold text-[#4377B2]">
+    <div className="flex justify-center relative bg-[#f1f1f1]">
+      <div className="container mx-auto px-4 py-10 md:py-16 w-full">
+        {/* Heading and description */}
+        <div className="flex justify-between flex-col md:flex-row gap-8">
+          <h1 className="md:w-[50%] text-3xl md:text-4xl font-bold text-[#4377B2] leading-tight">
             Meet Our Expert Trainers
           </h1>
-          <div className="md:w-[40%]">
+          <div className="md:w-[45%]">
             <p className="text-[#878C91]">
               Our team of highly skilled and experienced trainers brings decades
               of expertise in various yoga styles. Each trainer is dedicated to
@@ -44,16 +45,17 @@ const Faculty = () => {
           </div>
         </div>
 
-        <div className="flex gap-4 mt-16 flex-col md:flex-row">
-          {/* Trainer selector section */}
-          <div className="bg-[#4377B2] p-8 rounded-3xl flex flex-col justify-between">
+        {/* Trainer display section */}
+        <div className="flex gap-6 mt-12 flex-col md:flex-row">
+          {/* Selector */}
+          <div className="bg-[#4377B2] p-8 rounded-3xl flex flex-col justify-between md:w-1/4">
             <div>
-              <h1 className="text-7xl font-bold text-white">920+</h1>
-              <p className="text-white w-1/2">
+              <h1 className="text-6xl md:text-7xl font-bold text-white">920+</h1>
+              <p className="text-white mt-2 text-sm">
                 Learn from the Best in the Industry
               </p>
             </div>
-            <div className="mt-24 flex gap-4 items-center justify-center">
+            <div className="mt-20 flex gap-4 items-center justify-center flex-wrap">
               {displayedTrainers.map((trainer) => (
                 <button
                   key={trainer.id}
@@ -81,8 +83,8 @@ const Faculty = () => {
             </div>
           </div>
 
-          {/* Main trainer image section */}
-          <div className="relative h-[400px] bg-white rounded-3xl rounded-br-[50px] md:w-3/4 overflow-hidden transition-all duration-500">
+          {/* Trainer Image */}
+          <div className="relative h-[400px] bg-white rounded-3xl rounded-br-[50px] md:w-3/4 overflow-hidden shadow-md">
             <Image
               src={selectedTrainer.image}
               alt={selectedTrainer.name}

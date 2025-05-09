@@ -36,7 +36,6 @@ const GetInTouch = () => {
     try {
       const validatedData = formSchema.parse(formData);
       console.log("Form data:", validatedData);
-      // Reset form after successful submission
       setFormData({ name: "", email: "", courseInterest: "" });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -59,13 +58,10 @@ const GetInTouch = () => {
     <div className="flex justify-center py-28 px-2">
       <div className="max-w-screen-2xl p-2 md:p-16 w-full rounded-3xl bg-[#FCF6F3] md:flex md:gap-28">
         <div className="md:w-[50%] mb-10">
-          <h1 className="text-[#4377B2] text-4xl font-semibold mb-4">
-            CONTACT US
-          </h1>
+          <h1 className="text-[#4377B2] text-4xl font-semibold mb-4">CONTACT US</h1>
           <p>
-            Let Rishikul Online support you on your path to Become Certified
-            Yoga Teacher Training. Stay connected with our vibrant community and
-            embrace the transformative power of these amazing yoga practices.
+            Let Rishikul Online support you on your path to Become Certified Yoga Teacher Training.
+            Stay connected with our vibrant community and embrace the transformative power of these amazing yoga practices.
           </p>
           <form onSubmit={handleSubmit} className="flex flex-col gap-6 mt-10">
             <input
@@ -140,7 +136,7 @@ const GetInTouch = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622052.696491503!2d9.844387287499998!3d50.0750835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b937cc088de5f%3A0xab1a6c291f681d4!2sOffice%20option%2C%20Ltd.!5e0!3m2!1sen!2sin!4v1737019150873!5m2!1sen!2sin"
             className="h-[300px] md:h-full w-full"
             style={{ border: 0 }}
-            allowFullScreen={true}
+            allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>

@@ -11,7 +11,7 @@ const Join = () => {
     <div className="relative flex justify-center px-2 overflow-hidden">
       {/* Background image layer */}
       <Image
-        src="/join.jpg" // Ensure this path points to the correct image in /public
+        src="/assets/join.jpg" // Ensure this path points to the correct image in /public
         alt="Join background"
         fill
         className="object-cover"

@@ -5,7 +5,9 @@ const Trust = () => {
   return (
     <div className='bg-[url("/assets/CoreValues.svg")] bg-cover bg-no-repeat flex justify-center'>
       <div className="max-w-screen-2xl w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-28">
-
+          <h2 className="text-center font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#4377B2]">
+            Certification You Can Trust
+          </h2>
         {/* Images First */}
         <div className="flex gap-6 sm:gap-8 md:gap-5 lg:gap-3 justify-center mb-12 sm:mb-16 md:mb-20 lg:mb-24 flex-col md:flex-row items-center">
           <Image
@@ -33,9 +35,6 @@ const Trust = () => {
 
         {/* Content Below */}
         <div className="flex items-center flex-col space-y-4 sm:space-y-6">
-          <h2 className="text-center font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#4377B2]">
-            Certification You Can Trust
-          </h2>
           <p className="text-center text-sm sm:text-base md:w-3/4 lg:w-2/3">
             Upon successful completion of Rishikul online Yoga Teacher Training
             program, you will receive a globally recognized certificate

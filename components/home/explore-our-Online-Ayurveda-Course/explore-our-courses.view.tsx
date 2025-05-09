@@ -30,13 +30,13 @@ const filteredCourses = courses.filter((course) =>
 
 
   return (
-    <section className="overflow-x-hidden bg-[#FBF6F3] py-3">
-      <div className="space-y-5">
+    <section className="overflow-x-hidden bg-[#FBF6F3] ">
+      <div className="space-y-0">
         <h2 className="text-4xl font-bold text-center text-[#4377B2]">
           Explore Our Online Ayurveda  Courses
         </h2>
 
-        <div className={`py-10 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
+        <div className={`py-9 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
           <Swiper
             modules={[Autoplay]}
             spaceBetween={20}

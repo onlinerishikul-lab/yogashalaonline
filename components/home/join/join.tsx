@@ -4,12 +4,11 @@ import Image from "next/image";
 
 const Join = () => {
   const handleJoinClick = () => {
-    // Replace this URL with your actual WhatsApp group invite link
     window.open("https://chat.whatsapp.com/your-group-invite-link", "_blank");
   };
 
   return (
-    <div className="relative flex justify-center px-2">
+    <div className="relative flex justify-center px-2 overflow-hidden">
       {/* Background color layer */}
       <div className="absolute inset-0 bg-[#65CF72]" />
 
@@ -26,7 +25,7 @@ const Join = () => {
       <div className="absolute inset-0 bg-black/25" />
 
       {/* Content layer */}
-      <div className="relative max-w-screen-2xl w-full py-24 px-6">
+      <div className="relative max-w-screen-2xl w-full py-12 px-6">
         <div className="md:w-2/4">
           <h2 className="text-white md:text-4xl text-2xl font-bold uppercase">
             Join Our WhatsApp Community

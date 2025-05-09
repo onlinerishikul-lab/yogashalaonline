@@ -55,7 +55,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className="flex justify-center py-28 px-2">
+    <div className="flex justify-center py-10 px-2">
       <div className="max-w-screen-2xl p-2 md:p-16 w-full rounded-3xl bg-[#FCF6F3] md:flex md:gap-28">
         <div className="md:w-[50%] mb-10">
           <h1 className="text-[#4377B2] text-4xl font-semibold mb-4">CONTACT US</h1>

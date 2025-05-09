@@ -42,24 +42,24 @@ export default async function Home() {
       {/* Section 1: Benefits + Courses */}
       <section className="py-20 bg-[#f5f5f5]">
         <div className="container mx-auto px-4 space-y-12">
-          <BenefitsOfOnlineLearning />
           <ExploreOurCoursesView courses={courses} />
+          <BenefitsOfOnlineLearning />
         </div>
       </section>
 
       {/* Section 2: Course Levels + Ayurveda Courses */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 space-y-12">
-          <CourseLevels />
           <ExploreOurAyurvedaCoursesView courses={courses} />
+          <CourseLevels />
         </div>
       </section>
 
       {/* Section 3: Yoga For Everyone + Yoga Classes */}
       <section className="py-20 bg-[#f5f5f5]">
         <div className="container mx-auto px-4 space-y-12">
-          <YogaForEveryone />
           <ExploreOurClassesView courses={courses} />
+          <YogaForEveryone />
         </div>
       </section>
 

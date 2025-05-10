@@ -20,13 +20,13 @@ const Transforming = () => {
             </h1>
 
             <div className="mt-6">
-  <Image
+{/*   <Image
     src="/community.jpg" // Replace with actual path
     alt="Life-Changing Yoga"
     width={500}
     height={200}
     className="rounded-lg w-full max-w-[450px] h-auto object-cover"
-  />
+  /> */}
 </div>
           </div>
 

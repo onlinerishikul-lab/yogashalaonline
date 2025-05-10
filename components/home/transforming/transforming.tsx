@@ -20,21 +20,19 @@ const Transforming = () => {
             </h1>
 
             <div className="mt-6">
-  <Image
-    src="/community1.jpg" // Replace with actual path
-    alt="Life-Changing Yoga"
-    width={500}
-    height={200}
-    className="rounded-lg w-full max-w-[450px] h-auto object-cover"
-  />
-</div>
-          </div>
+              <Image
+                src="/community1.jpg" // Replace with actual path
+                alt="Life-Changing Yoga"
+                width={500}
+                height={300}
+                className="rounded-lg w-full max-w-[450px] h-auto object-cover"
+              />
+            </div>
 
-          {/* Right Section */}
-          <div className="md:w-[40%] mt-10 md:mt-0">
-            <p className="text-[#878C91]">
+            <p className="text-[#878C91] mt-6">
               Rishikul online yoga courses are crafted to help you transform your mind, body, and spirit, all from the comfort of your home. Whether you’re a beginner or an advanced practitioner, we offer courses that cater to all levels. Each course is led by experienced instructors who provide personalized guidance to enhance your practice. Our comprehensive modules cover everything from physical postures to breathwork and meditation. You can practice yoga at your own pace, anytime and anywhere. Join our global community and experience the powerful transformation that yoga brings into your life.
             </p>
+
             <Button
               className="mt-10 bg-transparent text-[#4377B2] hover:bg-[#4377B2] hover:text-white font-semibold w-[252px] rounded-full border-2 border-[#4377B2] py-7 duration-300"
               onClick={() => router.push("/courses")}
@@ -42,6 +40,9 @@ const Transforming = () => {
               Explore More
             </Button>
           </div>
+
+          {/* Right Section (empty or for future use) */}
+          <div className="md:w-[40%] mt-10 md:mt-0"></div>
         </div>
       </div>
     </div>

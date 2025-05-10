@@ -29,7 +29,7 @@ export default function ExploreOurCoursesView({
   );
 
   return (
-    <section className="overflow-x-hidden bg-[#FBF6F3] py-20">
+    <section className="overflow-x-hidden bg-[#FBF6F3]">
       <div className="space-y-10">
         <h2 className="text-4xl font-bold text-center text-[#4377B2]">
           Explore Our Online Yoga  Courses

@@ -21,7 +21,7 @@ const Transforming = () => {
 
             <div className="mt-6">
   <Image
-    src="/community.j" // Replace with actual path
+    src="/community1.jpg" // Replace with actual path
     alt="Life-Changing Yoga"
     width={500}
     height={200}

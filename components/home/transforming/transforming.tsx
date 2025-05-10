@@ -19,16 +19,15 @@ const Transforming = () => {
               Life-Changing Online Yoga Courses
             </h1>
 
-            {/* Single Image Below Heading */}
             <div className="mt-6">
-              <Image
-                src="/community.jpg" // <- Replace with your image path
-                alt="Life-Changing Yoga"
-                width={600}
-                height={400}
-                className="rounded-lg w-full h-auto object-cover"
-              />
-            </div>
+  <Image
+    src="/images/yoga-main.jpg" // Replace with actual path
+    alt="Life-Changing Yoga"
+    width={500}
+    height={300}
+    className="rounded-lg w-full max-w-[450px] h-auto object-cover"
+  />
+</div>
           </div>
 
           {/* Right Section */}

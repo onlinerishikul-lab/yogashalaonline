@@ -5,24 +5,34 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What is Hatha Yoga?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "Hatha Yoga is a branch of yoga that focuses on physical postures (asanas), breath control (pranayama), and meditation. It aims to balance the mind and body, promoting health, flexibility, and mental clarity.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Is Hatha Yoga suitable for beginners?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "Yes, Hatha Yoga is perfect for beginners. The course starts with basic poses and gradually builds up to more advanced practices, helping you develop strength, flexibility, and mindfulness.",
   },
   {
-    question: "Is the course completely online?",
+    question: "What equipment do I need for Hatha Yoga?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "You only need a yoga mat for comfort. Optional accessories include yoga blocks, straps, and cushions to assist with certain poses, but they are not necessary to start the practice.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "How often should I practice Hatha Yoga?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "It's recommended to practice Hatha Yoga at least 3-4 times a week. However, you can start with a few sessions per week and gradually increase as you become more comfortable with the practice.",
+  },
+  {
+    question: "Can Hatha Yoga help with stress and anxiety?",
+    answer:
+      "Yes, Hatha Yoga is known for its calming effects. The combination of gentle movements, breathwork, and meditation can significantly reduce stress and anxiety levels.",
+  },
+  {
+    question: "Will I receive a certificate after completing the course?",
+    answer:
+      "Yes, upon successful completion of the course, you will receive a digital certificate to mark your achievement in Hatha Yoga.",
   },
 ];
 
@@ -38,10 +48,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Frequently Asked Questions
+          Hatha Yoga Course: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Get clarity before you enroll in the course
+          Find answers to your questions before beginning your Hatha Yoga journey.
         </p>
 
         <div className="space-y-4">

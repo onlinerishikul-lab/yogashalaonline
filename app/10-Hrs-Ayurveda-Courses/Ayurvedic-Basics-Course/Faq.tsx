@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What will I learn in the Ayurvedic Basics course?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "This course introduces you to the fundamental principles of Ayurveda, including the concept of the doshas (Vata, Pitta, Kapha), how to identify your body type, Ayurvedic nutrition, daily routines (Dinacharya), and simple self-care practices for balancing your body and mind.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Is this course suitable for complete beginners?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "Yes, this course is specifically designed for beginners. No prior knowledge of Ayurveda is required. It’s perfect for anyone looking to explore Ayurvedic principles and how they can enhance their health and well-being.",
   },
   {
-    question: "Is the course completely online?",
+    question: "How is the course structured?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "The course consists of 10 hours of content, including video lectures, downloadable resources, and practical exercises. The material is broken down into easy-to-understand modules, allowing you to learn at your own pace.",
   },
   {
     question: "Will I receive a certificate after completion?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "Yes, upon successful completion of the 10-hour course, you will receive a certificate of completion to mark your introduction to Ayurvedic principles.",
   },
 ];
 

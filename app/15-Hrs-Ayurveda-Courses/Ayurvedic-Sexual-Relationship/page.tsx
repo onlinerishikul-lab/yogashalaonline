@@ -1,19 +1,19 @@
 
 "use client";
-import HeroSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/HeroSection";
-import TestimonialSlider from "@/app/25-Hrs-Yoga-Courses/face-yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/25-Hrs-Yoga-Courses/face-yoga/yogacourse";
-import LearnSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/LearnSection";
-import UniqueCourseSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/UniqueCourseSection";
-import TeachingApproach from "@/app/25-Hrs-Yoga-Courses/face-yoga/TeachingApproach";
-import CourseDetails from "@/app/25-Hrs-Yoga-Courses/face-yoga/CourseDetails";
-import YogaAccreditation from "@/app/25-Hrs-Yoga-Courses/face-yoga/YogaAccreditation";
-import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/face-yoga/CertificatePromo";
-import FacultyInfo from "@/app/25-Hrs-Yoga-Courses/face-yoga/FacultyInfo";
-import PricingOptions from "@/app/25-Hrs-Yoga-Courses/face-yoga/PricingOptions";
-import RiskFreeGuarantee from "@/app/25-Hrs-Yoga-Courses/face-yoga/RiskFreeGuarantee";
-import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/face-yoga/TestimonialCarousel";
-import Faq from "@/app/25-Hrs-Yoga-Courses/face-yoga/Faq";
+import HeroSection from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/HeroSection";
+import TestimonialSlider from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/TestimonialSlider";
+import YogaCoursePage from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/yogacourse";
+import LearnSection from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/LearnSection";
+import UniqueCourseSection from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/UniqueCourseSection";
+import TeachingApproach from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/TeachingApproach";
+import CourseDetails from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/CourseDetails";
+import YogaAccreditation from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/YogaAccreditation";
+import CertificatePromo from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/CertificatePromo";
+import FacultyInfo from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/FacultyInfo";
+import PricingOptions from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/PricingOptions";
+import RiskFreeGuarantee from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/RiskFreeGuarantee";
+import TestimonialCarousel from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/TestimonialCarousel";
+import Faq from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/Faq";
 
 export default function Page() {
   return (

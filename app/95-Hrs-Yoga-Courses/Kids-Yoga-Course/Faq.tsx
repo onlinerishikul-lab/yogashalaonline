@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What is the focus of the Kids Yoga Course?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "This course trains yoga teachers to design and lead engaging, age-appropriate yoga sessions for children, blending movement, mindfulness, stories, and play to support physical, emotional, and social development",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "What age groups does the course prepare me to teach?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "The course covers teaching strategies for multiple age groups, typically ranging from toddlers (ages 3–5), young children (6–9), to pre-teens (10–13), each with tailored approaches.",
   },
   {
-    question: "Is the course completely online?",
+    question: "Do I need prior experience working with children?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "While prior experience with kids is helpful, it is not required. The course provides comprehensive guidance on classroom management, communication techniques, and developmental needs",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "Will I receive a certificate after completing the course?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "Yes, upon successful completion, you will receive a certificate and may be eligible for continuing education hours if you’re a registered yoga teacher with Yoga Alliance.",
   },
 ];
 

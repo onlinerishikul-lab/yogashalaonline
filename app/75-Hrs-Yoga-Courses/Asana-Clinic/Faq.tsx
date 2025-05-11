@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What is the Asana Clinic, and who is it for?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "The Asana Clinic is a specialized program designed for yoga teachers and advanced practitioners who want to refine their understanding of alignment, anatomy, adjustments, and teaching methodology.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "What topics are covered in the clinic?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "We cover detailed breakdowns of key asanas, safe and effective alignment cues, use of props, hands-on adjustments, modifications for injuries, and functional anatomy relevant to teaching.",
   },
   {
-    question: "Is the course completely online?",
+    question: "Is this clinic suitable for yoga teachers from all traditions?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "Yes, the clinic is designed to be inclusive and supportive of all yoga traditions. It provides universally applicable tools to enhance your teaching, regardless of your lineage.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: " Will I receive a certificate of participation or continuing education credits?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "Yes, participants will receive a certificate upon completion, and the clinic may be eligible for continuing education hours with Yoga Alliance (check course details for specifics).",
   },
 ];
 

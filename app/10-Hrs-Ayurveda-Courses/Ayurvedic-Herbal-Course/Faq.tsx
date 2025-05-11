@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What is the focus of the Ayurvedic Herbal Course?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "This course introduces you to the healing power of Ayurvedic herbs. You’ll learn about the properties, benefits, and uses of key herbs, how to prepare simple remedies, and how to apply herbal knowledge in daily life for health and balance.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Do I need any background in Ayurveda or herbal medicine to join?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "No prior experience is needed. This course is beginner-friendly and designed for wellness enthusiasts, yoga practitioners, and anyone interested in natural healing.",
   },
   {
-    question: "Is the course completely online?",
+    question: "What topics are covered in the course?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "The course covers the Ayurvedic approach to herbs, dosha-specific herbs, herbal preparation methods (like teas, oils, pastes), and how to safely use herbs for digestion, immunity, skin health, stress, and more.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "Will I get a certificate after completing the course?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "Yes, a certificate of completion will be provided, which may be used to enhance your credentials if you're a yoga teacher, wellness coach, or holistic practitioner.",
   },
 ];
 

@@ -47,9 +47,11 @@ export default function Faq() {
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="bg-white p-4 rounded-lg shadow-md">
-              <div
-                className="flex justify-between items-center cursor-pointer"
+              <button
+                type="button"
+                className="w-full text-left flex justify-between items-center cursor-pointer"
                 onClick={() => toggleFAQ(index)}
+                aria-expanded={openIndex === index}
               >
                 <h3 className="font-semibold text-sm text-[#4377b2]">
                   {faq.question}
@@ -59,8 +61,8 @@ export default function Faq() {
                 ) : (
                   <ChevronDown className="text-[#4377b2]" size={20} />
                 )}
-              </div>
-              {openIndex === index && faq.answer && (
+              </button>
+              {openIndex === index && (
                 <p className="mt-2 text-sm text-gray-600">{faq.answer}</p>
               )}
             </div>
@@ -68,7 +70,9 @@ export default function Faq() {
 
           <textarea
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+              setMessage(e.target.value)
+            }
             placeholder="Have a question not listed above? Ask us here..."
             className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4377b2]"
             rows={3}
@@ -78,7 +82,10 @@ export default function Faq() {
             We’ll get back to you with an answer via email within 24 hours.
           </div>
 
-          <button className="mt-2 bg-[#4377b2] text-white px-6 py-2 text-sm rounded-full hover:bg-[#365a90] transition">
+          <button
+            type="button"
+            className="mt-2 bg-[#4377b2] text-white px-6 py-2 text-sm rounded-full hover:bg-[#365a90] transition"
+          >
             Send
           </button>
         </div>

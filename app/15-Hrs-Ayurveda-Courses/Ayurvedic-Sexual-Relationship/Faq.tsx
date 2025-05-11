@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What is Ayurvedic Sexual Relationship?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "Ayurvedic Sexual Relationship is an approach based on Ayurveda that emphasizes balanced intimacy, emotional connection, and timing aligned with your body constitution (dosha).",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Can Ayurveda help improve sexual health?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "Yes, Ayurveda offers natural solutions like herbs, diets, and lifestyle practices to enhance libido, stamina, and overall sexual well-being.",
   },
   {
-    question: "Is the course completely online?",
+    question: "Is this advice suitable for both men and women?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "Absolutely. Ayurvedic principles apply to all genders and focus on personalized recommendations based on individual body types and imbalances.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "Are there any side effects to using Ayurvedic remedies?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "When used properly under guidance, Ayurvedic remedies are safe. However, it's best to consult a certified practitioner before starting any treatment.",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function Faq() {
           Frequently Asked Questions
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Get clarity before you enroll in the course
+          Get clarity on Ayurvedic Sexual Relationship practices
         </p>
 
         <div className="space-y-4">

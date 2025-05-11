@@ -5,24 +5,34 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What is Meditation?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "Meditation is a practice where an individual uses a technique – such as mindfulness, or focusing the mind on a particular object, thought, or activity – to train attention and awareness, and achieve a mentally clear and emotionally calm and stable state.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Is meditation suitable for beginners?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "Yes, meditation is suitable for beginners. The course is designed to help you get started with simple techniques and gradually build up your practice.",
   },
   {
-    question: "Is the course completely online?",
+    question: "How long should I meditate each day?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "It's recommended to start with 5-10 minutes of meditation per day. As you progress, you can gradually increase the duration based on your comfort level.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "Do I need any special equipment for meditation?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "No special equipment is required. You can meditate anywhere that is quiet and comfortable. Some people choose to use cushions or mats, but they are optional.",
+  },
+  {
+    question: "Can meditation help reduce stress and anxiety?",
+    answer:
+      "Yes, meditation has been shown to help reduce stress and anxiety by promoting relaxation and mindfulness, which can help you stay grounded in the present moment.",
+  },
+  {
+    question: "Will I receive a certificate after completing the course?",
+    answer:
+      "Yes, upon successful completion of the course, you will receive a digital certificate that you can proudly share.",
   },
 ];
 
@@ -38,10 +48,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Frequently Asked Questions
+          Meditation Course: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Get clarity before you enroll in the course
+          Find answers to your questions before starting your meditation journey.
         </p>
 
         <div className="space-y-4">

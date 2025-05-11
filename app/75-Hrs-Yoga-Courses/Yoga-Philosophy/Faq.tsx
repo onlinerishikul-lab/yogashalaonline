@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What will I learn in the Core Concepts of Yoga Philosophy course?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "You will explore foundational yogic ideas such as the eight limbs of Yoga (Ashtanga Yoga), the nature of the mind (Chitta), the concept of Karma, and the goal of liberation (Moksha), drawing from classical texts like the Yoga Sutras of Patanjali.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Do I need to have prior experience in yoga or philosophy to join?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "No prior experience is necessary. The course is designed to be beginner-friendly while also offering depth for continuing practitioners.",
   },
   {
-    question: "Is the course completely online?",
+    question: "Is this course theoretical or does it include practical elements too?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "While the course is primarily focused on philosophical teachings, it often integrates reflective practices like journaling, meditation, and guided discussions to deepen your understanding.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "How is this different from a regular yoga class?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      'Unlike typical physical yoga classes, this course emphasizes the intellectual and spiritual framework behind yogic practice, helping students understand the "why" behind the "how."',
   },
 ];
 

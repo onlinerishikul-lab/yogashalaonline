@@ -5,24 +5,29 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What is Pranayama?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "Pranayama is the practice of controlled breathing techniques that help to regulate energy flow, improve mental clarity, and enhance physical health.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Do I need prior experience to join this course?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "No prior experience is necessary. This course is suitable for beginners and guides you through the basics of breathing techniques.",
   },
   {
-    question: "Is the course completely online?",
+    question: "What will I learn in this Pranayama course?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "You will learn different Pranayama techniques, how to incorporate them into your daily life, and how they can improve your overall well-being.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "Is this course suitable for people with respiratory conditions?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "Pranayama can be beneficial for individuals with respiratory conditions, but we recommend consulting with a healthcare provider before starting the course.",
+  },
+  {
+    question: "Will I receive a certificate after completing the course?",
+    answer:
+      "Yes, upon successful completion, you will receive a digital certificate of completion that you can use for continuing education or personal growth.",
   },
 ];
 
@@ -38,10 +43,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Frequently Asked Questions
+          Pranayama Course: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Get clarity before you enroll in the course
+          Find answers to your questions before joining the course
         </p>
 
         <div className="space-y-4">

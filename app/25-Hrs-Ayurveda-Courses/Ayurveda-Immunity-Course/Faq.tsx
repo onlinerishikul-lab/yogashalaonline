@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "Who should take the Ayurveda Immunity Course?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "Anyone looking to strengthen their immune system naturally through Ayurvedic principles, remedies, and lifestyle practices.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Do I need prior knowledge of Ayurveda to join?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "No prior knowledge is needed. The course is designed for beginners and includes foundational teachings of Ayurveda.",
   },
   {
-    question: "Is the course completely online?",
+    question: "Is the course fully online and self-paced?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "Yes, it's 100% online and self-paced so you can study at your convenience from anywhere.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "Will I receive a certificate upon completion?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "Yes! You'll receive a digital certificate upon successful completion of the course.",
   },
 ];
 
@@ -38,10 +38,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Frequently Asked Questions
+          Ayurveda Immunity Course: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Get clarity before you enroll in the course
+          Clear your doubts before boosting your immunity naturally.
         </p>
 
         <div className="space-y-4">

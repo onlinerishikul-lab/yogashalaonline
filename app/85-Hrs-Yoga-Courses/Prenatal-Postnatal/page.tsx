@@ -1,19 +1,19 @@
 
 "use client";
-import HeroSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/HeroSection";
-import TestimonialSlider from "@/app/25-Hrs-Yoga-Courses/face-yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/25-Hrs-Yoga-Courses/face-yoga/yogacourse";
-import LearnSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/LearnSection";
-import UniqueCourseSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/UniqueCourseSection";
-import TeachingApproach from "@/app/25-Hrs-Yoga-Courses/face-yoga/TeachingApproach";
-import CourseDetails from "@/app/25-Hrs-Yoga-Courses/face-yoga/CourseDetails";
-import YogaAccreditation from "@/app/25-Hrs-Yoga-Courses/face-yoga/YogaAccreditation";
-import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/face-yoga/CertificatePromo";
-import FacultyInfo from "@/app/25-Hrs-Yoga-Courses/face-yoga/FacultyInfo";
-import PricingOptions from "@/app/25-Hrs-Yoga-Courses/face-yoga/PricingOptions";
-import RiskFreeGuarantee from "@/app/25-Hrs-Yoga-Courses/face-yoga/RiskFreeGuarantee";
-import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/face-yoga/TestimonialCarousel";
-import Faq from "@/app/25-Hrs-Yoga-Courses/face-yoga/Faq";
+import HeroSection from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/HeroSection";
+import TestimonialSlider from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/TestimonialSlider";
+import YogaCoursePage from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/yogacourse";
+import LearnSection from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/LearnSection";
+import UniqueCourseSection from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/UniqueCourseSection";
+import TeachingApproach from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/TeachingApproach";
+import CourseDetails from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/CourseDetails";
+import YogaAccreditation from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/YogaAccreditation";
+import CertificatePromo from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/CertificatePromo";
+import FacultyInfo from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/FacultyInfo";
+import PricingOptions from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/PricingOptions";
+import RiskFreeGuarantee from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/RiskFreeGuarantee";
+import TestimonialCarousel from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/TestimonialCarousel";
+import Faq from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/Faq";
 
 export default function Page() {
   return (

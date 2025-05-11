@@ -1,19 +1,19 @@
 
 "use client";
-import HeroSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/HeroSection";
-import TestimonialSlider from "@/app/25-Hrs-Yoga-Courses/face-yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/25-Hrs-Yoga-Courses/face-yoga/yogacourse";
-import LearnSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/LearnSection";
-import UniqueCourseSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/UniqueCourseSection";
-import TeachingApproach from "@/app/25-Hrs-Yoga-Courses/face-yoga/TeachingApproach";
-import CourseDetails from "@/app/25-Hrs-Yoga-Courses/face-yoga/CourseDetails";
-import YogaAccreditation from "@/app/25-Hrs-Yoga-Courses/face-yoga/YogaAccreditation";
-import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/face-yoga/CertificatePromo";
-import FacultyInfo from "@/app/25-Hrs-Yoga-Courses/face-yoga/FacultyInfo";
-import PricingOptions from "@/app/25-Hrs-Yoga-Courses/face-yoga/PricingOptions";
-import RiskFreeGuarantee from "@/app/25-Hrs-Yoga-Courses/face-yoga/RiskFreeGuarantee";
-import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/face-yoga/TestimonialCarousel";
-import Faq from "@/app/25-Hrs-Yoga-Courses/face-yoga/Faq";
+import HeroSection from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/HeroSection";
+import TestimonialSlider from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/TestimonialSlider";
+import YogaCoursePage from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/yogacourse";
+import LearnSection from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/LearnSection";
+import UniqueCourseSection from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/UniqueCourseSection";
+import TeachingApproach from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/TeachingApproach";
+import CourseDetails from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/CourseDetails";
+import YogaAccreditation from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/YogaAccreditation";
+import CertificatePromo from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/CertificatePromo";
+import FacultyInfo from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/FacultyInfo";
+import PricingOptions from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/PricingOptions";
+import RiskFreeGuarantee from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/RiskFreeGuarantee";
+import TestimonialCarousel from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/TestimonialCarousel";
+import Faq from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/Faq";
 
 export default function Page() {
   return (

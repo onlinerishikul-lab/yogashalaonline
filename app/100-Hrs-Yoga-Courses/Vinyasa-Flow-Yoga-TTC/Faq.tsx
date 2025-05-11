@@ -4,24 +4,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What is the main focus of the Vinyasa Flow Yoga TTC?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "This course focuses on teaching the principles of dynamic, breath-linked movement through Vinyasa Flow. You’ll learn to sequence intelligent, creative classes rooted in safe alignment and mindful transitions.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Is this course suitable for all levels of practitioners?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "Yes, while some foundational yoga experience is helpful, the course is designed to accommodate both dedicated beginners and intermediate students seeking to deepen their Vinyasa practice and teaching skills.",
   },
   {
-    question: "Is the course completely online?",
+    question: "What will I be certified in after completing the course?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "Graduates receive a 100-hour Yoga Alliance–recognized certificate, qualifying them to teach Vinyasa Flow yoga classes globally.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "What topics are covered in the training?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "The curriculum includes Vinyasa sequencing, breathwork (pranayama), meditation, yoga anatomy, philosophy, hands-on assists, cueing, and teaching methodology, along with practical teaching labs.",
   },
 ];
 

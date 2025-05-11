@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What styles of yoga are taught in the Multi-Style TTC?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "This course combines major yoga traditions including Hatha, Vinyasa Flow, and Ashtanga, offering a broad and adaptable foundation for teaching various class styles.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Who can join this course?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "Anyone with a consistent yoga practice can join. The course is suitable for beginners looking to become certified teachers as well as practitioners who want to deepen and diversify their practice.",
   },
   {
-    question: "Is the course completely online?",
+    question: "What certification will I receive?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "Graduates receive a 200-hour Yoga Alliance–recognized certificate, allowing you to teach globally across multiple styles of yoga.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "What does the course curriculum include?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "The curriculum covers asana (postures), pranayama (breath control), meditation, yoga philosophy, anatomy, teaching methodology, sequencing for each style, and hands-on practicum.",
   },
 ];
 

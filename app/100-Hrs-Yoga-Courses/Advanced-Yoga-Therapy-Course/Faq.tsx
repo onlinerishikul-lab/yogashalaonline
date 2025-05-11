@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What is the focus of the Hatha Yoga TTC?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "This course emphasizes traditional Hatha Yoga practices, including asana (postures), pranayama (breath control), meditation, and yogic lifestyle principles rooted in classical texts like the Hatha Yoga Pradipika.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Is this course suitable for beginners?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "Yes, the Hatha Yoga TTC is beginner-friendly and ideal for those who want to build a strong foundation in classical yoga practices and philosophy.",
   },
   {
-    question: "Is the course completely online?",
+    question: "What certification will I receive upon completion?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "You will receive a 100-hour Yoga Alliance–approved certificate, qualifying you to teach Hatha Yoga classes worldwide.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "What are the key components of the curriculum?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "The course covers asana alignment and benefits, breathwork, cleansing techniques (kriyas), yogic anatomy, philosophy, teaching methodology, and practicum sessions.",
   },
 ];
 

@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "Is this Prenatal Yoga course safe for all stages of pregnancy?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "Yes, the course is designed with modifications for each trimester. However, we recommend consulting your doctor before starting any new physical activity.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Do I need previous yoga experience?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "No prior yoga experience is required. The course is beginner-friendly and guides you through each pose safely and gently.",
   },
   {
-    question: "Is the course completely online?",
+    question: "What will I learn in this course?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "You’ll learn safe yoga poses, breathing techniques, and relaxation practices to support your body and mind during pregnancy.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "Will I get a certificate after completing the course?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "Yes, upon successful completion of the course, you’ll receive a digital certificate of completion.",
   },
 ];
 
@@ -38,10 +38,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Frequently Asked Questions
+          Prenatal Yoga Course: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Get clarity before you enroll in the course
+          Find answers to your questions before joining the course
         </p>
 
         <div className="space-y-4">

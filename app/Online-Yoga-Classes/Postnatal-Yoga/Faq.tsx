@@ -5,24 +5,34 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What is Postnatal Yoga?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "Postnatal Yoga is a gentle and restorative practice designed to help new mothers regain strength, flexibility, and overall well-being after childbirth.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Is this course suitable for all new mothers?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "Yes, this course is suitable for new mothers who are cleared by their healthcare provider to engage in physical activity post childbirth. It’s designed to be gentle and restorative.",
   },
   {
-    question: "Is the course completely online?",
+    question: "When can I start practicing Postnatal Yoga after childbirth?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "It’s recommended to wait at least 6 weeks postpartum (or as advised by your doctor) before starting any physical activity, including Postnatal Yoga.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "Will this course help with post-pregnancy weight loss?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "While Postnatal Yoga can aid in toning muscles and improving overall health, it is not specifically aimed at weight loss. It’s about rebuilding strength and creating balance in your body.",
+  },
+  {
+    question: "Do I need any previous yoga experience to join this course?",
+    answer:
+      "No prior yoga experience is required. This course is designed for beginners and new mothers who want to ease back into physical activity safely.",
+  },
+  {
+    question: "Will I receive a certificate after completing the course?",
+    answer:
+      "Yes, upon successful completion of the course, you will receive a digital certificate that you can proudly share.",
   },
 ];
 
@@ -38,10 +48,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Frequently Asked Questions
+          Postnatal Yoga Course: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Get clarity before you enroll in the course
+          Find answers to your questions before joining the course
         </p>
 
         <div className="space-y-4">

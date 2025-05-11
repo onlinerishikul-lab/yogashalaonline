@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "Who is this course designed for?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "This course is intended for certified yoga teachers who wish to safely and knowledgeably guide pregnant and postpartum students through yoga practice tailored to their unique needs.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "What will I learn in this course?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "You’ll gain a deep understanding of physiological and emotional changes during pregnancy and postpartum, trimester-specific asana adaptations, contraindications, breathwork, pelvic floor support, and how to create nurturing, inclusive class environments.",
   },
   {
-    question: "Is the course completely online?",
+    question: "Do I need prior experience with prenatal yoga to join?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "No, prior experience is not required. This course begins with foundational knowledge and progresses to advanced teaching strategies, making it accessible to teachers of all levels.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "Is this course recognized for continuing education?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "Yes, this course qualifies for continuing education credits with Yoga Alliance and includes a certificate of completion upon meeting all course requirements.",
   },
 ];
 

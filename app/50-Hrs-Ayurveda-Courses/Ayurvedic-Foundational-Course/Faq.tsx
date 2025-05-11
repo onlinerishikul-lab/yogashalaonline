@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Who is this 25-hrs Yoga Anatomy course for?",
+    question: "What is the Ayurvedic Foundational Course about?",
     answer:
-      "This course is ideal for yoga practitioners, teachers, and wellness professionals who want a deeper understanding of human anatomy in relation to yoga practice.",
+      "This course introduces the core principles of Ayurveda, including the doshas, lifestyle practices, and natural healing methods.",
   },
   {
-    question: "Do I need prior anatomy knowledge to enroll?",
+    question: "Is this course suitable for beginners?",
     answer:
-      "No prior anatomy knowledge is required. We start with the basics and gradually build a solid foundation tailored to yoga movement.",
+      "Yes, this course is perfect for beginners with no prior knowledge of Ayurveda. It starts with the fundamentals and builds up from there.",
   },
   {
-    question: "Is the course completely online?",
+    question: "How is the course structured?",
     answer:
-      "Yes, the course is 100% online and self-paced, allowing you to learn at your convenience from anywhere in the world.",
+      "The course is self-paced and fully online, with video lessons, downloadable resources, and reflective exercises.",
   },
   {
-    question: "Will I receive a certificate after completion?",
+    question: "Will I receive a certificate after completing the course?",
     answer:
-      "Absolutely! Upon successful completion, you’ll receive a digital certificate you can proudly share or use for continuing education credits.",
+      "Yes, you will receive a digital certificate upon successfully completing the course.",
   },
 ];
 
@@ -38,10 +38,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Frequently Asked Questions
+          Ayurvedic Foundational Course: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Get clarity before you enroll in the course
+          Common questions answered to guide your Ayurvedic journey
         </p>
 
         <div className="space-y-4">

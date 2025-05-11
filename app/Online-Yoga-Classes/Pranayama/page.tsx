@@ -1,19 +1,19 @@
 
 "use client";
-import HeroSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/HeroSection";
-import TestimonialSlider from "@/app/25-Hrs-Yoga-Courses/face-yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/25-Hrs-Yoga-Courses/face-yoga/yogacourse";
-import LearnSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/LearnSection";
-import UniqueCourseSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/UniqueCourseSection";
-import TeachingApproach from "@/app/25-Hrs-Yoga-Courses/face-yoga/TeachingApproach";
-import CourseDetails from "@/app/25-Hrs-Yoga-Courses/face-yoga/CourseDetails";
-import YogaAccreditation from "@/app/25-Hrs-Yoga-Courses/face-yoga/YogaAccreditation";
-import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/face-yoga/CertificatePromo";
-import FacultyInfo from "@/app/25-Hrs-Yoga-Courses/face-yoga/FacultyInfo";
-import PricingOptions from "@/app/25-Hrs-Yoga-Courses/face-yoga/PricingOptions";
-import RiskFreeGuarantee from "@/app/25-Hrs-Yoga-Courses/face-yoga/RiskFreeGuarantee";
-import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/face-yoga/TestimonialCarousel";
-import Faq from "@/app/25-Hrs-Yoga-Courses/face-yoga/Faq";
+import HeroSection from "@/app/Online-Yoga-Classes/Pranayama/HeroSection";
+import TestimonialSlider from "@/app/Online-Yoga-Classes/Pranayama/TestimonialSlider";
+import YogaCoursePage from "@/app/Online-Yoga-Classes/Pranayama/yogacourse";
+import LearnSection from "@/app/Online-Yoga-Classes/Pranayama/LearnSection";
+import UniqueCourseSection from "@/app/Online-Yoga-Classes/Pranayama/UniqueCourseSection";
+import TeachingApproach from "@/app/Online-Yoga-Classes/Pranayama/TeachingApproach";
+import CourseDetails from "@/app/Online-Yoga-Classes/Pranayama/CourseDetails";
+import YogaAccreditation from "@/app/Online-Yoga-Classes/Pranayama/YogaAccreditation";
+import CertificatePromo from "@/app/Online-Yoga-Classes/Pranayama/CertificatePromo";
+import FacultyInfo from "@/app/Online-Yoga-Classes/Pranayama/FacultyInfo";
+import PricingOptions from "@/app/Online-Yoga-Classes/Pranayama/PricingOptions";
+import RiskFreeGuarantee from "@/app/Online-Yoga-Classes/Pranayama/RiskFreeGuarantee";
+import TestimonialCarousel from "@/app/Online-Yoga-Classes/Pranayama/TestimonialCarousel";
+import Faq from "@/app/Online-Yoga-Classes/Pranayama/Faq";
 
 export default function Page() {
   return (

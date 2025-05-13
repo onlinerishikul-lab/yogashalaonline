@@ -26,7 +26,7 @@ const uspContent = [
 
 const Usp = () => {
   return (
-    <div className="flex items-center justify-center container mx-auto py-4 sm:py-6 lg:pt-10 lg:pb-5 px-2 sm:px-4">
+    <div className="flex items-center justify-center container mx-auto   px-2 sm:px-4">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 w-full">
         {uspContent.map((item, index) => (
           <div

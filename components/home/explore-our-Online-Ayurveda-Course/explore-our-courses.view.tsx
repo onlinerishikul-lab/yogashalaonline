@@ -12,7 +12,7 @@ interface ExploreOurCoursesViewProps {
   courses: Course[];
 }
 
-export default function ExploreOurCoursesView({
+export default function ExploreOurAyurvedaCoursesView({
   courses,
 }: ExploreOurCoursesViewProps) {
   const router = useRouter();
@@ -22,20 +22,21 @@ export default function ExploreOurCoursesView({
   };
 
   // Filter courses with subHeading containing "online yoga training"
-  const filteredCourses = courses.filter((course) =>
-    course.headerSection?.subHeading
-      ?.toLowerCase()
-      .includes("online yoga training")
-  );
+const filteredCourses = courses.filter((course) =>
+  course.headerSection?.subHeading
+    ?.toLowerCase()
+    .includes("online ayurveda courses".toLowerCase())
+);
+
 
   return (
-    <section className="overflow-x-hidden bg-[#FBF6F3]">
-      <div className="space-y-10">
+    <section className="overflow-x-hidden bg-[#FBF6F3] py-3">
+      <div className="space-y-5">
         <h2 className="text-4xl font-bold text-center text-[#4377B2]">
-          Explore Our Online Yoga  Courses
+          Explore Our Online Ayurveda  Courses
         </h2>
 
-        <div className={`py-16 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
+        <div className={`py-10 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
           <Swiper
             modules={[Autoplay]}
             spaceBetween={20}

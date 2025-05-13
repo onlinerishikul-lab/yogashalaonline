@@ -30,12 +30,12 @@ export default function ExploreOurCoursesView({
 
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3]">
-      <div className="space-y-10">
+      <div className="space-y-">
         <h2 className="text-4xl font-bold text-center text-[#4377B2]">
           Explore Our Online Yoga  Courses
         </h2>
 
-        <div className={`py-16 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
+        <div className={`py-2 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
           <Swiper
             modules={[Autoplay]}
             spaceBetween={20}

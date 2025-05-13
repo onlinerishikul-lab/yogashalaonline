@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-
 const uspContent = [
   {
     icon: "/assets/usp/f7_person-3.png",

@@ -1,4 +1,6 @@
-"use client"
+"use client";
+
+
 import React from "react";
 import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,7 +12,7 @@ interface ExploreOurCoursesViewProps {
   courses: Course[];
 }
 
-export default function ExploreOurCoursesView({
+export default function ExploreOurClassesView({
   courses,
 }: ExploreOurCoursesViewProps) {
   const router = useRouter();
@@ -20,26 +22,23 @@ export default function ExploreOurCoursesView({
   };
 
   // Filter courses with subHeading containing "online yoga training"
-  const filteredCourses = courses.filter((course) =>
-    course.headerSection?.subHeading?.toLowerCase().includes("online yoga training")
-  );
+const filteredCourses = courses.filter((course) =>
+  course.headerSection?.subHeading
+    ?.toLowerCase()
+    .includes("online Yoga Classes".toLowerCase())
+);
 
   return (
-    <section className="overflow-x-hidden bg-[#FBF6F3]">
-      <div>
-        {/* Text Over Yellow Background */}
-        <div className="relative py-4 pt-16"> {/* Added pt-16 here */}
-      <h2 className="text-4xl font-bold text-center>
-        Explore Our Online Yoga Courses
-      </h2>
-      <div className="absolute inset-0 bg-yellow-400 z-0"></div> {/* Yellow Background */}
-    </div>
+    <section className="overflow-x-hidden bg-[#FBF6F3] py-3">
+      <div className="space-y-10">
+        <h2 className="text-4xl font-bold text-center text-[#4377B2]">
+          Explore Our Online Yoga  Classes
+        </h2>
 
-        {/* Swiper Section */}
-        <div className={`py-8 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
+        <div className={`py-10 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
           <Swiper
             modules={[Autoplay]}
-            spaceBetween={18}
+            spaceBetween={20}
             slidesPerView={4}
             autoplay={{
               delay: 0,

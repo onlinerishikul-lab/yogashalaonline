@@ -43,7 +43,7 @@ const testimonials = [
 export default function TestimonialSlider() {
   return (
     <div className="bg-[#4377B2] w-full flex flex-col items-center justify-center">
-      <div className="w-full flex flex-col items-center justify-center px-4 py-12">
+      <div className="w-full flex flex-col items-center justify-center px-4">
         <div
           className="bg-[#333333] text-white text-[10px] md:text-xs py-4 px-2 md:px-4 uppercase tracking-wider font-medium absolute left-0"
           style={{

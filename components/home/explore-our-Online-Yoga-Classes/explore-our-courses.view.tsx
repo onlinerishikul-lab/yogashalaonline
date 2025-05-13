@@ -1,6 +1,5 @@
 "use client";
 
-
 import React from "react";
 import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,18 +22,21 @@ export default function ExploreOurCoursesView({
 
   // Filter courses with subHeading containing "online yoga training"
   const filteredCourses = courses.filter((course) =>
-    course.headerSection?.subHeading
-      ?.toLowerCase()
-      .includes("online yoga training")
+    course.headerSection?.subHeading?.toLowerCase().includes("online yoga training")
   );
 
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3]">
       <div className="space-y-10">
-        <h2 className="text-4xl font-bold text-center text-[#4377B2]">
-          Explore Our Online Yoga  Courses
-        </h2>
+        {/* Text Over Yellow Background */}
+        <div className="relative bg-[#FBF6F3] py-8">
+          <h2 className="text-4xl font-bold text-center text-[#4377B2] z-10 relative">
+            Explore Our Online Yoga Courses
+          </h2>
+          <div className="absolute inset-0 bg-yellow-400 z-0"></div> {/* Yellow Background */}
+        </div>
 
+        {/* Swiper Section */}
         <div className={`py-16 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
           <Swiper
             modules={[Autoplay]}

@@ -29,7 +29,7 @@ export default function ExploreOurCoursesView({
       <div>
         {/* Text Over Yellow Background */}
         <div className="relative py-4 pt-16"> {/* Added pt-16 here */}
-      <h2 className="text-4xl font-bold text-center text-[#4377B2]">
+      <h2 className="text-4xl font-bold text-center>
         Explore Our Online Yoga Courses
       </h2>
       <div className="absolute inset-0 bg-yellow-400 z-0"></div> {/* Yellow Background */}

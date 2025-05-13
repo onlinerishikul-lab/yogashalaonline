@@ -24,9 +24,7 @@
     transform: translate(-50%);
 }
 
-.explore_our_courses {
-    position: relative;
-}
+
 
 .explore_more::before {
     content: '';

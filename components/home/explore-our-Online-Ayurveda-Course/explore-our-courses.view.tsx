@@ -36,7 +36,7 @@ const filteredCourses = courses.filter((course) =>
           Explore Our Online Ayurveda  Courses
         </h2>
 
-        <div className={`py-10 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
+        <div className={`py-7 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
           <Swiper
             modules={[Autoplay]}
             spaceBetween={20}

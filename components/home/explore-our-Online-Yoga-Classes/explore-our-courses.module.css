@@ -1,83 +1,91 @@
 .explore_our_courses::before {
-    content: "";
-    position: absolute;
-    bottom: -2%;
-    left: 47%;
-    width: 110%;
-    height: 100px;
-    background: #FBF6F3;
-    border-radius: 50%;
-    z-index: 2;
-    transform: translate(-50%);
+  content: "";
+  position: absolute;
+  bottom: -2%;
+  left: 47%;
+  width: 110%;
+  height: 100px;
+  background: #FBF6F3;
+  border-radius: 50%;
+  z-index: 2;
+  transform: translate(-50%);
 }
 
 .explore_our_courses::after {
-    content: "";
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    width: 110%;
-    height: 100px;
-    background: #FBF6F3;
-    border-radius: 50%;
-    z-index: 2;
-    transform: translate(-50%);
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 110%;
+  height: 100px;
+  background: #FBF6F3;
+  border-radius: 50%;
+  z-index: 2;
+  transform: translate(-50%);
 }
 
 .explore_our_courses {
-    position: relative;
-    padding-bottom: 50px;
+  position: relative;
+  padding-bottom: 50px;
 }
 
 .explore_more::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    left: 50%;
-    width: 110%;
-    height: 100px;
-    background: #FBF6F3;
-    border-radius: 50%;
-    z-index: 1;
-    transform: translate(-50%, 0px);
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  width: 110%;
+  height: 100px;
+  background: #FBF6F3;
+  border-radius: 50%;
+  z-index: 1;
+  transform: translate(-50%, 0px);
 }
 
 .explore_more {
-    position: relative;
-    padding-bottom: 50px;
+  position: relative;
+  padding-bottom: 50px;
 }
 
-
 .swiper {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #FBF6F3;
+  text-align: center;
+  font-size: 18px;
+  background: #FBF6F3;
 
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 600px) {
-    .explore_our_courses::after {
-        height: 50px !important;
-        top: 10% !important;
-    }
-    .explore_our_courses::before {
-        height: 50px !important;
-        bottom: 5% !important;
-    }
+  .explore_our_courses::after {
+    height: 50px !important;
+    top: 10% !important;
   }
+  .explore_our_courses::before {
+    height: 50px !important;
+    bottom: 5% !important;
+  }
+}
+
+/* Styles for "Explore Our" text */
+.relative {
+  position: relative;
+}
+
+.bg-yellow-400 {
+  background-color: #fbbf24;
+}

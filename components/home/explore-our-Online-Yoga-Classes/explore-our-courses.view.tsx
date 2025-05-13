@@ -28,7 +28,7 @@ export default function ExploreOurCoursesView({
     <section className="overflow-x-hidden bg-[#FBF6F3]">
       <div>
         {/* Text Over Yellow Background */}
-        <div className="relative bg-[#FBF6F3] py-4 pt-16"> {/* Added pt-16 here */}
+        <div className="relative py-4 pt-16"> {/* Added pt-16 here */}
       <h2 className="text-4xl font-bold text-center text-[#4377B2]">
         Explore Our Online Yoga Courses
       </h2>

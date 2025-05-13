@@ -27,20 +27,20 @@ export default function ExploreOurCoursesView({
 
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3]">
-      <div className="space-y-10">
+      <div>
         {/* Text Over Yellow Background */}
-        <div className="relative bg-[#FBF6F3] py-8">
-          <h2 className="text-4xl font-bold text-center text-[#4377B2] z-10 relative">
+        <div className="relative bg-[#FBF6F3] py-4">
+          <h2 className="text-4xl font-bold text-center text-[#4377B2] pt-8">
             Explore Our Online Yoga Courses
           </h2>
           <div className="absolute inset-0 bg-yellow-400 z-0"></div> {/* Yellow Background */}
         </div>
 
         {/* Swiper Section */}
-        <div className={`py-16 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
+        <div className={`py-8 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
           <Swiper
             modules={[Autoplay]}
-            spaceBetween={20}
+            spaceBetween={18}
             slidesPerView={4}
             autoplay={{
               delay: 0,

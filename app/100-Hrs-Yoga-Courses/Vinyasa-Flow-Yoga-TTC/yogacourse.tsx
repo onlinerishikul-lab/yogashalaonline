@@ -10,7 +10,7 @@ const YogaCourse = () => {
         {/* Left Section */}
         <div>
           <h1 className="text-4xl md:text-5xl font-bold text-[#4377b2] leading-tight">
-            25-Hour Yoga Anatomy <br /> for a Safe Journey
+            100-Hour Vinyasa Flow Yoga <br /> Teacher Training Course
           </h1>
           <button className="mt-8 bg-[#4377b2] hover:bg-[#365a92] text-white px-6 py-3 rounded-full font-medium flex items-center space-x-2 transition">
             <span>Join Now</span>
@@ -31,7 +31,7 @@ const YogaCourse = () => {
           <div className="bg-gradient-to-r from-[#4377b2] to-[#365a92] rounded-xl p-6 text-white shadow-md">
             <h4 className="text-xl font-semibold mb-2">What You’ll Learn</h4>
             <p className="text-sm leading-relaxed">
-              Functional Anatomy for Yoga | Understanding Joints & Movement | Preventing Injuries | Safe Asana Alignment | Body Mechanics | Breath & Nervous System | Muscle Engagement | Posture Breakdown | Modifications for All Levels | Practical Application for Teaching
+              Dynamic Vinyasa Sequences | Breath-Synchronized Movement | Flow-Based Class Structuring | Safe Alignment | Transitions & Modifications | Pranayama & Meditation | Yoga Philosophy | Creative Sequencing Techniques | Teaching Methodology
             </p>
           </div>
         </div>
@@ -40,14 +40,14 @@ const YogaCourse = () => {
       {/* Section: Why Yogshala? */}
       <div className="text-center">
         <h3 className="text-2xl md:text-3xl font-semibold text-[#4377b2] mb-8">
-          Why Choose Yogshala?
+          Why Choose Yogshala for Vinyasa Flow?
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {[
-            { icon: "fas fa-user-md", text: "Anatomy-Focused Approach" },
-            { icon: "fas fa-heartbeat", text: "Injury Prevention Techniques" },
-            { icon: "fas fa-globe", text: "Globally Recognized Accreditation" },
-            { icon: "fas fa-chalkboard-teacher", text: "Led by Expert Trainers" },
+            { icon: "fas fa-running", text: "Dynamic Breath-Based Practice" },
+            { icon: "fas fa-drafting-compass", text: "Creative Class Design Techniques" },
+            { icon: "fas fa-hands-helping", text: "Supportive Training Environment" },
+            { icon: "fas fa-chalkboard-teacher", text: "Learn from Vinyasa Flow Experts" },
           ].map(({ icon, text }, idx) => (
             <div key={idx} className="flex items-center bg-white p-6 rounded-2xl shadow-md space-x-4">
               <div className="bg-[#4377b2] text-white p-4 rounded-full shadow">

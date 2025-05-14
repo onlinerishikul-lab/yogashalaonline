@@ -2,37 +2,46 @@ export const teachers: { id: number; name: string; image: string }[] = [
   {
     id: 1,
     name: "Gangesha Chaitanya",
-    image: "/Gangesha-Chaitanya.jpg"
+    image: "/Gangesha-Chaitanya.jpg",
+    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
   },
   {
     id: 2,
     name: "Sukra Chiatanya",
-    image: "/Sukra Chiatanya.png"
+    image: "/Sukra Chiatanya.png",
+    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
+
   },
   {
     id: 3,
     name: "Purnima Ji",
-    image: "/Purnima Ji.png"
+    image: "/Purnima Ji.png",
+    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
+
   },
   {
     id: 4,
     name: "Himanshu Ji",
-    image: "/Himanshu Ji.png"
+    image: "/Himanshu Ji.png",
+    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
   },
   {
     id: 5,
     name: "Akshay Nautiyal",
-    image: "/Akshay Nautiyal.jpg"
+    image: "/Akshay Nautiyal.jpg",
+    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
   },
   {
     id: 6,
     name: "Balram Baloni",
-    image: "/Balram Baloni.jpg"
+    image: "/Balram Baloni.jpg",
+    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
   },
   {
     id: 7,
     name: "Swami Amarna ji",
-    image: "/Swami Amarna ji.png"
+    image: "/Swami Amarna ji.png",
+    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
   },
 ]
 

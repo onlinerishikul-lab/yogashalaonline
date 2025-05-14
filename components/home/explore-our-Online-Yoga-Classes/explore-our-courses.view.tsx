@@ -28,7 +28,7 @@ export default function ExploreOurClassesView({
 
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3] py-3">
-      <div className="space-y-6">
+      <div className="space-y-3">
         <h2 className="text-4xl font-bold text-center text-[#4377B2]">
           Explore Our Online Yoga Classes
         </h2>

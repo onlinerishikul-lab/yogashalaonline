@@ -1,6 +1,5 @@
 "use client";
 
-
 import React from "react";
 import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,7 +11,7 @@ interface ExploreOurCoursesViewProps {
   courses: Course[];
 }
 
-export default function ExploreOurAyurvedaCoursesView({
+export default function ExploreOurClassesView({
   courses,
 }: ExploreOurCoursesViewProps) {
   const router = useRouter();
@@ -21,22 +20,22 @@ export default function ExploreOurAyurvedaCoursesView({
     router.push(`/courses/${courseId}`);
   };
 
-  // Filter courses with subHeading containing "online yoga training"
-const filteredCourses = courses.filter((course) =>
-  course.headerSection?.subHeading
-    ?.toLowerCase()
-    .includes("online ayurveda courses".toLowerCase())
-);
-
+  // Filter courses with subHeading containing "online yoga classes"
+  const filteredCourses = courses.filter((course) =>
+    course.headerSection?.subHeading
+      ?.toLowerCase()
+      .includes("online ayurveda courses".toLowerCase())
+  );
 
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3] py-3">
-      <div className="space-y-5">
-        <h2 className="text-4xl font-bold text-center text-[#4377B2]">
-          Explore Our Online Ayurveda  Courses
-        </h2>
-
+      <div className="space-y-10">
         <div className={`py-7 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
+          {/* Moved Heading Here */}
+          <h2 className="text-4xl font-bold text-center text-[#4377B2] mb-6 z-10 relative">
+            Explore Our Online Ayurveda  Courses
+          </h2>
+
           <Swiper
             modules={[Autoplay]}
             spaceBetween={20}

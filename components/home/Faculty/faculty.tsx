@@ -26,7 +26,7 @@ const Faculty = () => {
 
   return (
     <div className="flex justify-center bg-[#f1f1f1] w-full">
-      <div className="container mx-auto px-4 py-10 md:py-16">
+      <div className="container mx-auto px-4 py-5 md:py-5">
         {/* Heading */}
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <h1 className="text-3xl md:text-4xl font-bold text-[#4377B2] md:w-1/2">
@@ -80,7 +80,7 @@ const Faculty = () => {
             {/* Yellow - Trainer Description */}
             <div className="bg-white rounded-3xl p-6 shadow-lg flex-1 min-h-[400px] flex flex-col justify-center">
               <h2 className="text-2xl font-bold text-[#4377B2] mb-4">{selectedTrainer.name}</h2>
-              <h1 className="text-2xl font-bold text-[#4377B2] mb-4">{selectedTrainer.Subtitle}</h1>
+              <h4 className="text-2xl font-bold text-[#4377B2] mb-4">{selectedTrainer.Subtitle}</h4>
               <p className="text-[#555] text-base">{selectedTrainer.description}</p>
             </div>
 

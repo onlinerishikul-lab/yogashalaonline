@@ -25,14 +25,14 @@ export default function ExploreOurClassesView({
   const filteredCourses = courses.filter((course) =>
     course.headerSection?.subHeading
       ?.toLowerCase()
-      .includes("online yoga training")
+      .includes("online ayurveda courses".toLowerCase())
   );
 
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3] py-3">
       <div className={`py-7 ${styles.explore_our_courses}`}>
         <h2 className="text-4xl font-bold text-center text-[#4377B2] mb-6 z-10 relative">
-          Explore Our Online Yoga Courses
+          Explore Our Online Ayurveda  Courses
         </h2>
 
         <Swiper

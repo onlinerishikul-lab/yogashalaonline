@@ -29,8 +29,8 @@ export default function ExploreOurClassesView({
   );
 
   return (
-    <section className="overflow-x-hidden bg-[#FBF6F3] py-3">
-      <div className={`py-7 ${styles.explore_our_courses}`}>
+    <section className="overflow-x-hidden bg-[#FBF6F3]">
+      <div className={`${styles.explore_our_courses}`}>
         <h2 className="text-4xl font-bold text-center text-[#4377B2] mb-6 z-10 relative">
           Explore Our Online Yoga Courses
         </h2>
@@ -80,8 +80,8 @@ export default function ExploreOurClassesView({
           ))}
         </Swiper>
 
-        {/* Button directly below slider with no gap */}
-        <div className="text-center mt-6 z-10 relative">
+        {/* Button with no extra space below */}
+        <div className="text-center z-10 relative pt-6 pb-0">
           <button
             className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors"
             onClick={() => router.push("/courses")}

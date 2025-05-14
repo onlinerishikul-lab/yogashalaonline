@@ -8,6 +8,7 @@ interface Trainer {
   name: string;
   image: string;
   description: string;
+  Subtitle?: string;
 }
 
 const Faculty = () => {

@@ -7,6 +7,7 @@ interface Trainer {
   id: number;
   name: string;
   image: string;
+  description: string;
 }
 
 const Faculty = () => {
@@ -37,7 +38,7 @@ const Faculty = () => {
 
         {/* Main content */}
         <div className="flex flex-col md:flex-row gap-6 mt-12 items-stretch">
-          {/* Left panel (Overview and selectors) */}
+          {/* Left panel */}
           <div className="bg-[#4377B2] p-8 rounded-3xl md:w-1/4 flex flex-col justify-between">
             <div>
               <h1 className="text-white text-6xl font-bold">920+</h1>
@@ -73,17 +74,23 @@ const Faculty = () => {
             </div>
           </div>
 
-          {/* Right panel (Trainer photo) */}
-          <div className="relative bg-white rounded-3xl rounded-br-[80px] shadow-lg md:w-3/4 overflow-hidden min-h-[400px]">
-            <Image
-              src={selectedTrainer.image}
-              alt={selectedTrainer.name}
-              fill
-              className="object-cover transition-opacity duration-300"
-              priority
-            />
-            {/* Decorative circle */}
-            <div className="h-[90px] w-[90px] bg-[#4377B2] border-[12px] border-white rounded-full absolute bottom-5 right-5 z-30"></div>
+          {/* Right panel with yellow + violet sections */}
+          <div className="md:w-3/4 flex flex-col md:flex-row gap-6">
+            {/* Yellow - Trainer Description */}
+            <div className="bg-white rounded-3xl p-6 shadow-lg flex-1 min-h-[400px] flex flex-col justify-center">
+              <h2 className="text-2xl font-bold text-[#4377B2] mb-4">{selectedTrainer.name}</h2>
+              <p className="text-[#555] text-base">{selectedTrainer.description}</p>
+            </div>
+
+            {/* Violet - Trainer Image */}
+            <div className="relative flex-1 min-h-[400px] rounded-3xl shadow-lg overflow-hidden border-4 border-[#7B3FBC]">
+              <Image
+                src={selectedTrainer.image}
+                alt={selectedTrainer.name}
+                fill
+                className="object-cover transition-opacity duration-300"
+              />
+            </div>
           </div>
         </div>
       </div>

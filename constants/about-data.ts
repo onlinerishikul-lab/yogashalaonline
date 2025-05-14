@@ -31,24 +31,28 @@ Driven by a desire to share her wisdom, Purnima devoted herself to serving in as
     id: 4,
     name: "Himanshu Ji",
     image: "/Himanshu Ji.png",
+    Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
     description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
   },
   {
     id: 5,
     name: "Akshay Nautiyal",
     image: "/Akshay Nautiyal.jpg",
+    Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
     description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
   },
   {
     id: 6,
     name: "Balram Baloni",
     image: "/Balram Baloni.jpg",
+    Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
     description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
   },
   {
     id: 7,
     name: "Swami Amarna ji",
     image: "/Swami Amarna ji.png",
+    Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
     description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
   }
 ];

@@ -80,7 +80,8 @@ export default function ExploreOurClassesView({
           </Swiper>
         </div>
 
-        <div className="text-center">
+        {/* Button placed precisely below the slider */}
+        <div className="w-full flex justify-center -mt-8 pb-6">
           <button
             className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors"
             onClick={() => router.push("/courses")}

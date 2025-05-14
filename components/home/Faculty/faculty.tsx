@@ -79,6 +79,7 @@ const Faculty = () => {
             {/* Yellow - Trainer Description */}
             <div className="bg-white rounded-3xl p-6 shadow-lg flex-1 min-h-[400px] flex flex-col justify-center">
               <h2 className="text-2xl font-bold text-[#4377B2] mb-4">{selectedTrainer.name}</h2>
+              <h1 className="text-2xl font-bold text-[#4377B2] mb-4">{selectedTrainer.Subtitle}</h1>
               <p className="text-[#555] text-base">{selectedTrainer.description}</p>
             </div>
 

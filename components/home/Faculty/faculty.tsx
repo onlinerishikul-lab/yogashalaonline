@@ -12,55 +12,45 @@ interface Trainer {
 const Faculty = () => {
   const [selectedTrainer, setSelectedTrainer] = useState<Trainer>(teachers[0]);
   const [showSecondSet, setShowSecondSet] = useState(false);
+
   const displayedTrainers = showSecondSet
     ? teachers.slice(4, 8)
     : teachers.slice(0, 4);
 
   const handlePlusClick = () => {
     setShowSecondSet(!showSecondSet);
-    if (showSecondSet) {
-      setSelectedTrainer(teachers[0]);
-    } else {
-      setSelectedTrainer(teachers[4]);
-    }
+    setSelectedTrainer(showSecondSet ? teachers[0] : teachers[4]);
   };
 
   return (
-    <div className="flex justify-center relative bg-[#f1f1f1]">
-      <div className="container mx-auto px-4 py-10 md:py-16 w-full">
-        {/* Heading and description */}
-        <div className="flex justify-between flex-col md:flex-row gap-8">
-          <h1 className="md:w-[50%] text-3xl md:text-4xl font-bold text-[#4377B2] leading-tight">
+    <div className="flex justify-center bg-[#f1f1f1] w-full">
+      <div className="container mx-auto px-4 py-10 md:py-16">
+        {/* Heading */}
+        <div className="flex flex-col md:flex-row justify-between gap-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#4377B2] md:w-1/2">
             Meet Our Expert Trainers
           </h1>
-          <div className="md:w-[45%]">
-            <p className="text-[#878C91]">
-              Our team of highly skilled and experienced trainers brings decades
-              of expertise in various yoga styles. Each trainer is dedicated to
-              guiding you through your yoga journey with personalized
-              instruction and deep knowledge of both traditional and modern
-              practices. Be inspired by their passion, commitment, and wisdom as
-              they help you elevate your practice and teaching skills.
-            </p>
-          </div>
+          <p className="text-[#878C91] md:w-1/2">
+            Our team of highly skilled and experienced trainers brings decades of expertise in various yoga styles. Each trainer is dedicated to guiding you through your yoga journey with personalized instruction and deep knowledge of both traditional and modern practices.
+          </p>
         </div>
 
-        {/* Trainer display section */}
-        <div className="flex gap-6 mt-12 flex-col md:flex-row">
-          {/* Selector */}
-          <div className="bg-[#4377B2] p-8 rounded-3xl flex flex-col justify-between md:w-1/4">
+        {/* Main content */}
+        <div className="flex flex-col md:flex-row gap-6 mt-12 items-stretch">
+          {/* Left panel (Overview and selectors) */}
+          <div className="bg-[#4377B2] p-8 rounded-3xl md:w-1/4 flex flex-col justify-between">
             <div>
-              <h1 className="text-6xl md:text-7xl font-bold text-white">920+</h1>
-              <p className="text-white mt-2 text-sm">
+              <h1 className="text-white text-6xl font-bold">920+</h1>
+              <p className="text-white text-sm mt-2">
                 Learn from the Best in the Industry
               </p>
             </div>
-            <div className="mt-20 flex gap-4 items-center justify-center flex-wrap">
+            <div className="mt-16 flex gap-4 items-center justify-center flex-wrap">
               {displayedTrainers.map((trainer) => (
                 <button
                   key={trainer.id}
                   onClick={() => setSelectedTrainer(trainer)}
-                  className={`relative w-[70px] h-[70px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 -ml-4 first:ml-0 ${
+                  className={`relative w-[60px] h-[60px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 -ml-3 first:ml-0 ${
                     selectedTrainer.id === trainer.id
                       ? "border-white scale-110 z-10"
                       : "border-transparent scale-100"
@@ -83,16 +73,17 @@ const Faculty = () => {
             </div>
           </div>
 
-          {/* Trainer Image */}
-          <div className="relative h-[400px] bg-white rounded-3xl rounded-br-[50px] md:w-3/4 overflow-hidden shadow-md">
+          {/* Right panel (Trainer photo) */}
+          <div className="relative bg-white rounded-3xl rounded-br-[80px] shadow-lg md:w-3/4 overflow-hidden min-h-[400px]">
             <Image
               src={selectedTrainer.image}
               alt={selectedTrainer.name}
               fill
-              className="object-contain transition-opacity duration-300"
+              className="object-cover transition-opacity duration-300"
               priority
             />
-            <div className="h-[100px] w-[100px] bg-[#4377B2] border-[15px] border-white rounded-full absolute bottom-0 right-0 z-30"></div>
+            {/* Decorative circle */}
+            <div className="h-[90px] w-[90px] bg-[#4377B2] border-[12px] border-white rounded-full absolute bottom-5 right-5 z-30"></div>
           </div>
         </div>
       </div>

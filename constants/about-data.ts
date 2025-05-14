@@ -1,4 +1,4 @@
-export const teachers: { id: number; name: string; image: string }[] = [
+export const teachers: { id: number; name: string; image: string; description: string }[] = [
   {
     id: 1,
     name: "Gangesha Chaitanya",

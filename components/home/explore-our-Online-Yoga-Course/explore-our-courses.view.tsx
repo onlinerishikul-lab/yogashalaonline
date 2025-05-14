@@ -29,7 +29,7 @@ export default function ExploreOurClassesView({
 
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3] py-3">
-      <div className="space-y-10">
+      <div className="space-y-3">
         <div className={`py-7 bg-[#FBF6F3] ${styles.explore_our_courses}`}>
           {/* Moved Heading Here */}
           <h2 className="text-4xl font-bold text-center text-[#4377B2] mb-6 z-10 relative">

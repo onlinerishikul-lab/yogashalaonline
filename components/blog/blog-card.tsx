@@ -31,7 +31,6 @@ export function BlogCard({ post, className }: ExtendedBlogCardProps) {
             </h3>
             <p className="text-muted-foreground line-clamp-3">{post.excerpt}</p>
           </div>
-
           {/* Read More link */}
           <Link
             href="https://rishikulyogshalaonline.com/yoga-blogs/"

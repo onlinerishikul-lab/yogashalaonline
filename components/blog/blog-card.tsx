@@ -10,8 +10,8 @@ interface ExtendedBlogCardProps extends BlogCardProps {
 
 export function BlogCard({ post, className }: ExtendedBlogCardProps) {
   return (
-    <Link href={`/blog/${post.slug}`} className={cn("block h-full", className)}>
-      <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <div className={cn("block h-full", className)}>
+      <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
         <div className="relative w-full aspect-[16/9]">
           <Image
             src={post.imageUrl}
@@ -22,18 +22,28 @@ export function BlogCard({ post, className }: ExtendedBlogCardProps) {
           />
         </div>
 
-        <div className="p-6 flex flex-col h-[calc(100%-56.25%)]">
-          {" "}
-          {/* 56.25% is aspect ratio 16:9 */}
-          <time className="text-sm text-muted-foreground mb-3">
-            {post.date}
-          </time>
-          <h3 className="text-xl font-semibold mb-3 line-clamp-2 hover:text-[#4377B2] transition-colors">
-            {post.title}
-          </h3>
-          <p className="text-muted-foreground line-clamp-3">{post.excerpt}</p>
+        <div className="p-6 flex flex-col justify-between flex-1">
+          <div>
+            <time className="text-sm text-muted-foreground mb-3">
+              {post.date}
+            </time>
+            <h3 className="text-xl font-semibold mb-3 line-clamp-2 hover:text-[#4377B2] transition-colors">
+              {post.title}
+            </h3>
+            <p className="text-muted-foreground line-clamp-3">{post.excerpt}</p>
+          </div>
+
+          {/* Read More link */}
+          <Link
+            href="https://rishikulyogshalaonline.com/yoga-blogs/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 text-sm text-[#4377B2] font-medium hover:underline self-start"
+          >
+            Read More →
+          </Link>
         </div>
       </Card>
-    </Link>
+    </div>
   );
 }

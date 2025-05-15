@@ -2,6 +2,41 @@
 
 import React from "react";
 
+const features = [
+  "✅ Certificate of Completion",
+  "✅ 25-Hour Yoga Anatomy Curriculum",
+  "✅ Downloadable Training Manual",
+  "✅ Lifetime Course Access",
+  "✅ 24 Months of Instructor Support",
+];
+
+const PricingCard = ({
+  title,
+  description,
+  price,
+  note,
+}: {
+  title: string;
+  description: string;
+  price: string;
+  note: string;
+}) => (
+  <div className="border border-[#4377b2] rounded-lg p-6 w-full max-w-sm bg-white shadow-lg">
+    <h3 className="text-lg font-semibold text-[#4377b2] mb-2">{title}</h3>
+    <p className="text-sm mb-4">{description}</p>
+    <div className="text-4xl font-bold text-[#4377b2] mb-2">{price}</div>
+    <p className="text-sm mb-4">{note}</p>
+    <button className="bg-[#4377b2] hover:bg-[#365a90] text-white font-semibold py-2 px-4 rounded-full w-full transition">
+      ENROLL NOW
+    </button>
+    <ul className="mt-6 text-sm text-gray-700 space-y-2">
+      {features.map((item, idx) => (
+        <li key={idx}>{item}</li>
+      ))}
+    </ul>
+  </div>
+);
+
 const YogaCourse = () => {
   return (
     <div className="flex flex-col space-y-16 bg-gray-50 text-black p-8 md:p-16">
@@ -18,22 +53,14 @@ const YogaCourse = () => {
           </button>
         </div>
 
-        {/* Right Section */}
-        <div className="flex flex-col space-y-4 md:w-1/2">
-          <div className="relative bg-white text-black rounded-xl p-6 shadow-md">
-            <div className="absolute -top-6 left-6 bg-[#4377b2] text-white p-4 rounded-full shadow-md">
-              <i className="fas fa-language text-lg"></i>
-            </div>
-            <h3 className="text-lg font-semibold">Course Language</h3>
-            <p className="text-sm mt-2">English</p>
-          </div>
-
-          <div className="bg-gradient-to-r from-[#4377b2] to-[#365a92] rounded-xl p-6 text-white shadow-md">
-            <h4 className="text-xl font-semibold mb-2">What You’ll Learn</h4>
-            <p className="text-sm leading-relaxed">
-              Functional Anatomy for Yoga | Understanding Joints & Movement | Preventing Injuries | Safe Asana Alignment | Body Mechanics | Breath & Nervous System | Muscle Engagement | Posture Breakdown | Modifications for All Levels | Practical Application for Teaching
-            </p>
-          </div>
+        {/* Replaced Right Section */}
+        <div className="w-full md:w-1/2">
+          <PricingCard
+            title="One-Time Payment"
+            description="Get full access instantly with a single payment."
+            price="$250.00"
+            note="one-time payment"
+          />
         </div>
       </div>
 
@@ -56,6 +83,27 @@ const YogaCourse = () => {
               <p className="text-lg font-medium">{text}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Section: Additional Pricing Option */}
+      <div className="text-center">
+        <h3 className="text-2xl md:text-3xl font-semibold text-[#4377b2] mb-8">
+          Other Payment Option
+        </h3>
+        <div className="flex justify-center">
+          <PricingCard
+            title="Two-Part Installments"
+            description="Split your payment into two easy installments."
+            price="$250.00"
+            note="billed twice, monthly"
+          />
+        </div>
+        <div className="mt-10 text-xs text-gray-500 max-w-xl mx-auto">
+          <p>🔒 100% Secure Payment</p>
+          <p>
+            Not satisfied? Get a full refund within 7 days—no questions asked. We’re committed to your learning and growth!
+          </p>
         </div>
       </div>
     </div>

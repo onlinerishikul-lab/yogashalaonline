@@ -11,6 +11,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 interface BlogsProps {
   blogs: Blog[];
 }
+
 const Blogs = ({ blogs }: BlogsProps) => {
   return (
     <div className="flex justify-center px-2 bg-[#FCF6F3]">

@@ -40,7 +40,7 @@ export default async function Home() {
       <Usp />
 
       {/* Section 1: Benefits + Courses */}
-      <section className="bg-[#f5f5f5]">
+      <section className="bg-white">
         <div className="container mx-auto px-4 ">
           <ExploreOurCoursesView courses={courses} />
           <BenefitsOfOnlineLearning />
@@ -56,7 +56,7 @@ export default async function Home() {
       </section>
 
       {/* Section 3: Yoga For Everyone + Yoga Classes */}
-      <section className="bg-[#f5f5f5]">
+      <section className="bg-white">
         <div className="container mx-auto px-4 ">
           <ExploreOurClassesView courses={courses} />
           <YogaForEveryone />

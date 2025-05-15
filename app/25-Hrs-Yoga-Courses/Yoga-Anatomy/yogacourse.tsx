@@ -11,6 +11,15 @@ const features = [
   "✅ 24 Months of Instructor Support",
 ];
 
+// Related learning content
+const relatedContent = [
+  "🧠 Understand key musculoskeletal structures used in yoga",
+  "📏 Learn how to align poses safely and effectively",
+  "💪 Prevent injuries by applying anatomical awareness",
+  "🔄 Explore how breath and movement interact anatomically",
+  "🧘 Build confident cueing with anatomical insight",
+];
+
 // Pricing Card Component
 const PricingCard = ({
   title,
@@ -110,6 +119,22 @@ const RiskFreeGuarantee = () => (
   </section>
 );
 
+// Related Content Section
+const RelatedContent = () => (
+  <section className="w-full px-4 md:px-10">
+    <div className="bg-white rounded-xl p-6 shadow-sm">
+      <h2 className="text-xl md:text-2xl font-bold text-[#4377b2] mb-4 text-center md:text-left">
+        What You’ll Learn in This Course
+      </h2>
+      <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
+        {relatedContent.map((item, idx) => (
+          <li key={idx}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+);
+
 // Main Page Component
 const YogaCoursePage = () => {
   return (
@@ -137,6 +162,9 @@ const YogaCoursePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Related Content Section */}
+      <RelatedContent />
 
       {/* Risk-Free Guarantee */}
       <RiskFreeGuarantee />

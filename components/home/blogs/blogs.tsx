@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { Blog } from "@/types/course";
 
+
 interface BlogsProps {
   blogs: Blog[];
 }

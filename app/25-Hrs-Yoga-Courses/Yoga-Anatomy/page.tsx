@@ -29,7 +29,6 @@ export default function Page() {
       <YogaAccreditation/>
       <CertificatePromo/>
       <FacultyInfo/>
-      <PricingOptions/>
       <RiskFreeGuarantee/>
       <TestimonialCarousel/>
       <Faq/>

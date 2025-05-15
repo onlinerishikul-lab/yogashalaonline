@@ -124,6 +124,13 @@ const YogaCoursePage = () => {
             Master safe and effective yoga practices with in-depth anatomical
             guidance. Flexible plans to get started today.
           </p>
+          <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+            <li>Understand key muscles and joints in yoga poses.</li>
+            <li>Learn how to avoid common injuries through alignment.</li>
+            <li>Gain confidence in teaching safe, mindful movement.</li>
+            <li>Includes HD video lessons and a downloadable manual.</li>
+            <li>Perfect for yoga teachers and dedicated practitioners.</li>
+          </ul>
           <button className="bg-[#4377b2] hover:bg-[#365a92] text-white px-5 py-2.5 rounded-full font-medium flex items-center space-x-2 text-sm">
             <span>Join Now</span>
             <span>&rarr;</span>

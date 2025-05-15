@@ -31,15 +31,19 @@ Driven by a desire to share her wisdom, Purnima devoted herself to serving in as
     id: 4,
     name: "Himanshu Ji",
     image: "/Himanshu Ji.png",
-    Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
-    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
+    Subtitle: "(Philosophy, Pranayama & Meditation)",
+    description: `Himanshu Ji is not just a yoga teacher; he's a beacon of knowledge and inspiration in the world of yoga. Born and raised in the serene surroundings of Rishikesh, known as the Capital Yoga world, Himanshu Ji's connection with yoga runs deep in his roots. For several years, he has dedicated himself to teaching Ashtanga and Hatha Yoga at Pankaj Yogpeeth, where his classes are renowned for their energy and power. Himanshu Ji's journey into yoga began with humble steps as he spent years immersing himself in the practice under the guidance of numerous esteemed teachers and gurus. Each encounter enriched his understanding and proficiency in yoga, shaping him into the exceptional teacher he is today. His commitment to continuous learning led him to complete his studies in the very heart of yoga education, the vibrant city of Rishikesh.
+In every class, Himanshu Ji infuses his teachings with profound philosophy, guiding students to explore the deeper dimensions of yoga beyond just the physical postures. His deep understanding of yogic philosophy resonates through his words, inspiring practitioners to connect with their inner selves and discover the true essence of yoga.`
   },
   {
     id: 5,
     name: "Akshay Nautiyal",
     image: "/Akshay Nautiyal.jpg",
     Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
-    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
+    description: `Born in the spiritual heart of yoga, Rishikesh, I have been deeply immersed in the practice of yoga for over two years. My journey began with Hatha yoga and Astanga Vinyasa, which I have honed under the guidance of some of the most esteemed teachers of rishikesh. Alongside yoga, I am also passionate about bodyweight training, integrating strength-building techniques to enhance physical endurance and control.
+Currently pursuing my graduation in Yoga, I am continuously expanding my knowledge and refining my practice to guide students with authenticity and precision. My approach blends traditional yogic wisdom with modern movement principles, helping practitioners cultivate strength, flexibility, and inner awareness.
+Whether through dynamic Ashtanga sequences or grounding Hatha practices with proper adjustment and alignment, my goal is to make yoga accessible and transformative for all. I believe yoga is not just about physical postures but a journey toward self-discovery, balance, and well-being.
+Exploring the depths of yoga, where movement meets mindfulness, and strength merges with serenity.`
   },
   {
     id: 6,
@@ -53,7 +57,7 @@ Driven by a desire to share her wisdom, Purnima devoted herself to serving in as
     name: "Swami Amarna ji",
     image: "/Swami Amarna ji.png",
     Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
-    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
+    description:`Balram Baloni is a dedicated yoga practitioner and teacher with a deep commitment to the discipline. He began his yoga journey in 2018 in Rishikesh, a renowned hub for spiritual learning and practice. He has completed both 200-hour and 300-hour teacher training courses at Rishikul Yogashala, Rishikesh, in 2019, specializing in Hatha Yoga, adjustment, and alignment techniques. Balram’s expertise is rooted in his extensive training and ongoing study, as he is currently pursuing his Master’s degree at Uttarakhand Sanskrit University, Haridwar (2023/24). With over four years of teaching experience, he has been sharing his knowledge at Rishikul Yogashala since 2021. His teaching focuses on creating a harmonious balance between mind, body, and soul, helping students develop a deeper understanding of yoga's physical and spiritual aspects. Balram’s approach is rooted in careful attention to alignment, ensuring safe and effective practice for students of all levels. He continues to inspire and guide individuals on their path to health, well-being, and self-awareness through yoga.`
   }
 ];
 

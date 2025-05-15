@@ -13,7 +13,8 @@ import PricingOptions from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/PricingOption
 import RiskFreeGuarantee from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TestimonialCarousel";
 import Faq from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Faq";
-import Footer from "@/components/common/footer";
+import { SiteFooter } from "@/components/common/footer";
+
 
 export default function Page() {
   return (
@@ -32,7 +33,7 @@ export default function Page() {
       <RiskFreeGuarantee/>
       <TestimonialCarousel/>
       <Faq/>
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }

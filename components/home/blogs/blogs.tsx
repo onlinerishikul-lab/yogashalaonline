@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { Blog } from "@/types/course";
+
 interface BlogsProps {
   blogs: Blog[];
 }
@@ -33,7 +34,7 @@ const Blogs = ({ blogs }: BlogsProps) => {
                     {blog.overview}
                   </p>
                 </div>
-                <Link href={/blog/${blog.slug}}>
+                <Link href={`/blog/${blog.slug}`}>
                   <button className="mt-4 w-full text-white bg-[#4377B2] hover:bg-[#365f8e] transition-colors font-semibold py-2 px-4 rounded-full">
                     Read Blog
                   </button>

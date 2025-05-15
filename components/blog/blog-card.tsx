@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { BlogCardProps } from "@/types/blog";
 import { cn } from "@/lib/utils";
 
+
 interface ExtendedBlogCardProps extends BlogCardProps {
   className?: string;
 }

@@ -130,10 +130,10 @@ const YogaCoursePage = () => {
         </div>
         <div className="md:w-1/2 w-full">
           <PricingOptions />
-          <div className="mt-4 text-center text-xs text-gray-500">
-            🔒 100% Secure Payment. Full refund within 7 days if you're not
-            satisfied.
-          </div>
+          <div className="text-center text-xs text-gray-500">
+  🔒 100% Secure Payment. Full refund within 7 days if you&#39;re not satisfied.
+</div>
+
         </div>
       </section>
 

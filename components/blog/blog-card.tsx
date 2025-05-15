@@ -21,7 +21,6 @@ export function BlogCard({ post, className }: ExtendedBlogCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-
         <div className="p-6 flex flex-col justify-between flex-1">
           <div>
             <time className="text-sm text-muted-foreground mb-3">

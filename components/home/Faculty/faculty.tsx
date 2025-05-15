@@ -13,16 +13,6 @@ interface Trainer {
 
 const Faculty = () => {
   const [selectedTrainer, setSelectedTrainer] = useState<Trainer>(teachers[0]);
-  const [showSecondSet, setShowSecondSet] = useState(false);
-
-  const displayedTrainers = showSecondSet
-    ? teachers.slice(4, 8)
-    : teachers.slice(0, 4);
-
-  const handlePlusClick = () => {
-    setShowSecondSet(!showSecondSet);
-    setSelectedTrainer(showSecondSet ? teachers[0] : teachers[4]);
-  };
 
   return (
     <div className="flex justify-center bg-[#f1f1f1] w-full">
@@ -47,12 +37,13 @@ const Faculty = () => {
                 Learn from the Best in the Industry
               </p>
             </div>
-            <div className="mt-16 flex gap-4 items-center justify-center flex-wrap">
-              {displayedTrainers.map((trainer) => (
+
+            <div className="mt-10 grid grid-cols-4 gap-4">
+              {teachers.map((trainer) => (
                 <button
                   key={trainer.id}
                   onClick={() => setSelectedTrainer(trainer)}
-                  className={`relative w-[60px] h-[60px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 -ml-3 first:ml-0 ${
+                  className={`relative w-[50px] h-[50px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 ${
                     selectedTrainer.id === trainer.id
                       ? "border-white scale-110 z-10"
                       : "border-transparent scale-100"
@@ -66,25 +57,25 @@ const Faculty = () => {
                   />
                 </button>
               ))}
-              <span
-                onClick={handlePlusClick}
-                className="text-white text-3xl font-light cursor-pointer hover:opacity-80 -ml-2"
-              >
-                +
-              </span>
             </div>
           </div>
 
-          {/* Right panel with yellow + violet sections */}
+          {/* Right panel */}
           <div className="md:w-3/4 flex flex-col md:flex-row gap-6">
-            {/* Yellow - Trainer Description */}
+            {/* Trainer Description */}
             <div className="bg-white rounded-3xl p-6 shadow-lg flex-1 min-h-[400px] flex flex-col justify-center">
-              <h2 className="text-2xl font-bold text-[#4377B2] mb-4">{selectedTrainer.name}</h2>
-              <h4 className="text-2xl font-bold text-[#4377B2] mb-4">{selectedTrainer.Subtitle}</h4>
-              <p className="text-[#555] text-base">{selectedTrainer.description}</p>
+              <h2 className="text-2xl font-bold text-[#4377B2] mb-2">
+                {selectedTrainer.name}
+              </h2>
+              <h4 className="text-lg font-semibold text-[#4377B2] mb-4">
+                {selectedTrainer.Subtitle}
+              </h4>
+              <p className="text-[#555] text-base">
+                {selectedTrainer.description}
+              </p>
             </div>
 
-            {/* Violet - Trainer Image */}
+            {/* Trainer Image */}
             <div className="relative flex-1 min-h-[400px] rounded-3xl shadow-lg overflow-hidden border-4 border-[#4377b2]">
               <Image
                 src={selectedTrainer.image}

@@ -85,7 +85,7 @@ const Faculty = () => {
             </div>
 
             {/* Violet - Trainer Image */}
-            <div className="relative flex-1 min-h-[400px] rounded-3xl shadow-lg overflow-hidden border-4 border-[#7B3FBC]">
+            <div className="relative flex-1 min-h-[400px] rounded-3xl shadow-lg overflow-hidden border-4 border-[#4377b2]">
               <Image
                 src={selectedTrainer.image}
                 alt={selectedTrainer.name}

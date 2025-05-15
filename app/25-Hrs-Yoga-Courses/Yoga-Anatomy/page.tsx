@@ -14,7 +14,6 @@ import Faq from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Faq";
 import { SiteFooter } from "@/components/common/footer";
 import Faculty from "@/components/home/Faculty/faculty";
 
-
 export default function Page() {
   return (
     <div>

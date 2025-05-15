@@ -8,7 +8,6 @@ import TeachingApproach from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TeachingApp
 import CourseDetails from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/CourseDetails";
 import YogaAccreditation from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/YogaAccreditation";
 import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/CertificatePromo";
-import FacultyInfo from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/FacultyInfo";
 import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TestimonialCarousel";
 import Faq from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Faq";
 import { SiteFooter } from "@/components/common/footer";

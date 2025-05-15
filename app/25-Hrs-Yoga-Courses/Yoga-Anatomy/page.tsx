@@ -14,7 +14,6 @@ import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Testimon
 import Faq from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
-
 export default function Page() {
   return (
     <div>

@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Be
 import CourseDetails from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/CourseDetails";
 import YogaAccreditation from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/YogaAccreditation";
 import CertificatePromo from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/CertificatePromo";
-import FacultyInfo from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/FacultyInfo";
-import PricingOptions from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/PricingOptions";
-import RiskFreeGuarantee from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/TestimonialCarousel";
 import Faq from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter />
     </div>
   );
 }

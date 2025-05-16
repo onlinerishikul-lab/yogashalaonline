@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/Online-Yoga-Classes/Pranayama/TeachingApproa
 import CourseDetails from "@/app/Online-Yoga-Classes/Pranayama/CourseDetails";
 import YogaAccreditation from "@/app/Online-Yoga-Classes/Pranayama/YogaAccreditation";
 import CertificatePromo from "@/app/Online-Yoga-Classes/Pranayama/CertificatePromo";
-import FacultyInfo from "@/app/Online-Yoga-Classes/Pranayama/FacultyInfo";
-import PricingOptions from "@/app/Online-Yoga-Classes/Pranayama/PricingOptions";
-import RiskFreeGuarantee from "@/app/Online-Yoga-Classes/Pranayama/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/Online-Yoga-Classes/Pranayama/TestimonialCarousel";
 import Faq from "@/app/Online-Yoga-Classes/Pranayama/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter />
     </div>
   );
 }

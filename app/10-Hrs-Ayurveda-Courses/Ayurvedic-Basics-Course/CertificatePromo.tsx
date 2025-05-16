@@ -20,7 +20,6 @@ const CertificatePromo = () => {
             </a>
           </Link>
         </div>
-
         {/* Certificate Image */}
         <div className="md:w-1/2 flex justify-center">
           <Image

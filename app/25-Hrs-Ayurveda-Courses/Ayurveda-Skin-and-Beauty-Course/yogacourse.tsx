@@ -1,7 +1,5 @@
 "use client";
-
 import React from "react";
-
 // Shared course features
 const features = [
   "✅ Certificate of Completion",

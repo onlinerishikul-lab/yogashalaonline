@@ -150,7 +150,7 @@ export const Header = () => {
         { title: "Postnatal Yoga", href: "/Online-Yoga-Classes/postnatal-yoga/" },
         { title: "Meditation", href: "/Online-Yoga-Classes/meditation/" },
         { title: "Pranayama", href: "/Online-Yoga-Classes/pranayama/" },
-        { title: "Hatha Yoga", href: "/Online-Yoga-Classes/hatha-yoga/" },
+        { title: "Hatha Yoga", href:"/Online-Yoga-Classes/Hatha-Yoga/" },
         { title: "Vinyasa Flow", href: "/Online-Yoga-Classes/vinyasa-flow/" },
       ],
     },

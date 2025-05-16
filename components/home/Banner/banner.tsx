@@ -42,7 +42,7 @@ export function Banner() {
         <div className="container mx-auto flex flex-col md:flex-row items-center md:items-end justify-between p-4">
           <RysBadgeSection />
           <Image
-            src="/yoga-alliance.png"
+            src="/alliance.png"
             alt="Yoga Alliance"
             width={120}
             height={120}

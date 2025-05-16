@@ -8,12 +8,11 @@ import UniqueCourseSection from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-S
 import TeachingApproach from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/TeachingApproach";
 import CourseDetails from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/CourseDetails";
 import YogaAccreditation from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/YogaAccreditation";
-import CertificatePromo from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/CertificatePromo";
-import FacultyInfo from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/FacultyInfo";
-import PricingOptions from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/PricingOptions";
-import RiskFreeGuarantee from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/RiskFreeGuarantee";
+import CertificatePromo from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/CertificatePromo"
 import TestimonialCarousel from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/TestimonialCarousel";
 import Faq from "@/app/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter />
     </div>
   );
 }

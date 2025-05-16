@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/75-Hrs-Yoga-Courses/Yoga-Philosophy/Teaching
 import CourseDetails from "@/app/75-Hrs-Yoga-Courses/Yoga-Philosophy/CourseDetails";
 import YogaAccreditation from "@/app/75-Hrs-Yoga-Courses/Yoga-Philosophy/YogaAccreditation";
 import CertificatePromo from "@/app/75-Hrs-Yoga-Courses/Yoga-Philosophy/CertificatePromo";
-import FacultyInfo from "@/app/75-Hrs-Yoga-Courses/Yoga-Philosophy/FacultyInfo";
-import PricingOptions from "@/app/75-Hrs-Yoga-Courses/Yoga-Philosophy/PricingOptions";
-import RiskFreeGuarantee from "@/app/75-Hrs-Yoga-Courses/Yoga-Philosophy/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/75-Hrs-Yoga-Courses/Yoga-Philosophy/TestimonialCarousel";
 import Faq from "@/app/75-Hrs-Yoga-Courses/Yoga-Philosophy/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter />
     </div>
   );
 }

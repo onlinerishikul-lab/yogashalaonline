@@ -38,7 +38,6 @@ export default async function Home() {
     <MainWrapper>
       <Banner />
       <Usp />
-
 {/* Section 1: Benefits + Courses */}
 <section className="bg-white py-0">
   <div className="container mx-auto px-4">

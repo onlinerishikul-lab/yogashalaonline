@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/TeachingA
 import CourseDetails from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/CourseDetails";
 import YogaAccreditation from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/YogaAccreditation";
 import CertificatePromo from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/CertificatePromo";
-import FacultyInfo from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/FacultyInfo";
-import PricingOptions from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/PricingOptions";
-import RiskFreeGuarantee from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/TestimonialCarousel";
 import Faq from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter/>
     </div>
   );
 }

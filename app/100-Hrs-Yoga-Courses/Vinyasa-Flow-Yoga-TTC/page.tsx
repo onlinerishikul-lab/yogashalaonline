@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/T
 import CourseDetails from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/CourseDetails";
 import YogaAccreditation from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/YogaAccreditation";
 import CertificatePromo from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/CertificatePromo";
-import FacultyInfo from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/FacultyInfo";
-import PricingOptions from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/PricingOptions";
-import RiskFreeGuarantee from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/TestimonialCarousel";
 import Faq from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter />
     </div>
   );
 }

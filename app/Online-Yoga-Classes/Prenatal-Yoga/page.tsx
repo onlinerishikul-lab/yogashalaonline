@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/Online-Yoga-Classes/Prenatal-Yoga/TeachingAp
 import CourseDetails from "@/app/Online-Yoga-Classes/Prenatal-Yoga/CourseDetails";
 import YogaAccreditation from "@/app/Online-Yoga-Classes/Prenatal-Yoga/YogaAccreditation";
 import CertificatePromo from "@/app/Online-Yoga-Classes/Prenatal-Yoga/CertificatePromo";
-import FacultyInfo from "@/app/Online-Yoga-Classes/Prenatal-Yoga/FacultyInfo";
-import PricingOptions from "@/app/Online-Yoga-Classes/Prenatal-Yoga/PricingOptions";
-import RiskFreeGuarantee from "@/app/Online-Yoga-Classes/Prenatal-Yoga/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/Online-Yoga-Classes/Prenatal-Yoga/TestimonialCarousel";
 import Faq from "@/app/Online-Yoga-Classes/Prenatal-Yoga/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter />
     </div>
   );
 }

@@ -130,7 +130,7 @@ export const Header = () => {
           href: "/yoga/75-hours",
           subDropdown: [
             { title: "Ayurveda Immunity Course", href: "/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/" },
-            { title: "Ayurveda Skin and Beauty Course", href: "/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Courseasana-clinic/" },
+            { title: "Ayurveda Skin and Beauty Course", href: "/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/" },
           ],
         },
         {

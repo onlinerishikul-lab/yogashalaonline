@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/50-Hrs-Yoga-Courses/Kids-Yoga-Course/Teachin
 import CourseDetails from "@/app/50-Hrs-Yoga-Courses/Kids-Yoga-Course/CourseDetails";
 import YogaAccreditation from "@/app/50-Hrs-Yoga-Courses/Kids-Yoga-Course/YogaAccreditation";
 import CertificatePromo from "@/app/50-Hrs-Yoga-Courses/Kids-Yoga-Course/CertificatePromo";
-import FacultyInfo from "@/app/50-Hrs-Yoga-Courses/Kids-Yoga-Course/FacultyInfo";
-import PricingOptions from "@/app/50-Hrs-Yoga-Courses/Kids-Yoga-Course/PricingOptions";
-import RiskFreeGuarantee from "@/app/50-Hrs-Yoga-Courses/Kids-Yoga-Course/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/50-Hrs-Yoga-Courses/Kids-Yoga-Course/TestimonialCarousel";
 import Faq from "@/app/50-Hrs-Yoga-Courses/Kids-Yoga-Course/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter/>
     </div>
   );
 }

@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/Te
 import CourseDetails from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/CourseDetails";
 import YogaAccreditation from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/YogaAccreditation";
 import CertificatePromo from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/CertificatePromo";
-import FacultyInfo from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/FacultyInfo";
-import PricingOptions from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/PricingOptions";
-import RiskFreeGuarantee from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/TestimonialCarousel";
 import Faq from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter />
     </div>
   );
 }

@@ -50,15 +50,15 @@ Exploring the depths of yoga, where movement meets mindfulness, and strength mer
     name: "Balram Baloni",
     image: "/Balram Baloni.jpg",
     Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
-    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga."
+    description: `Balram Baloni is a dedicated yoga practitioner and teacher with a deep commitment to the discipline. He began his yoga journey in 2018 in Rishikesh, a renowned hub for spiritual learning and practice. He has completed both 200-hour and 300-hour teacher training courses at Rishikul Yogashala, Rishikesh, in 2019, specializing in Hatha Yoga, adjustment, and alignment techniques. Balram’s expertise is rooted in his extensive training and ongoing study, as he is currently pursuing his Master’s degree at Uttarakhand Sanskrit University, Haridwar (2023/24). With over four years of teaching experience, he has been sharing his knowledge at Rishikul Yogashala since 2021. His teaching focuses on creating a harmonious balance between mind, body, and soul, helping students develop a deeper understanding of yoga's physical and spiritual aspects. Balram’s approach is rooted in careful attention to alignment, ensuring safe and effective practice for students of all levels. He continues to inspire and guide individuals on their path to health, well-being, and self-awareness through yoga.`
+
   },
   {
     id: 7,
     name: "Swami Amarna ji",
     image: "/Swami Amarna ji.png",
     Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
-    description:`Balram Baloni is a dedicated yoga practitioner and teacher with a deep commitment to the discipline. He began his yoga journey in 2018 in Rishikesh, a renowned hub for spiritual learning and practice. He has completed both 200-hour and 300-hour teacher training courses at Rishikul Yogashala, Rishikesh, in 2019, specializing in Hatha Yoga, adjustment, and alignment techniques. Balram’s expertise is rooted in his extensive training and ongoing study, as he is currently pursuing his Master’s degree at Uttarakhand Sanskrit University, Haridwar (2023/24). With over four years of teaching experience, he has been sharing his knowledge at Rishikul Yogashala since 2021. His teaching focuses on creating a harmonious balance between mind, body, and soul, helping students develop a deeper understanding of yoga's physical and spiritual aspects. Balram’s approach is rooted in careful attention to alignment, ensuring safe and effective practice for students of all levels. He continues to inspire and guide individuals on their path to health, well-being, and self-awareness through yoga.`
-  }
+    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga." }
 ];
 
 export const reviews = [

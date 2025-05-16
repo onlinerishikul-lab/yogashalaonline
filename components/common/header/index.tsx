@@ -29,7 +29,6 @@ type NavigationItem =
 
 export const Header = () => {
   const router = useRouter();
-
   const navigationItems: NavigationItem[] = [
     {
       title: "Online Yoga Training",

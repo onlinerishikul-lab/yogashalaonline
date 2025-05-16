@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-N
 import CourseDetails from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/CourseDetails";
 import YogaAccreditation from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/YogaAccreditation";
 import CertificatePromo from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/CertificatePromo";
-import FacultyInfo from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/FacultyInfo";
-import PricingOptions from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/PricingOptions";
-import RiskFreeGuarantee from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/TestimonialCarousel";
 import Faq from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter />
     </div>
   );
 }

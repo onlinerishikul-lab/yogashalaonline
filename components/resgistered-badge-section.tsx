@@ -5,9 +5,9 @@ import { cn } from '@/lib/utils'
 const RysBadgeSection = ({ className }: { className?: string }) => {
   return (
     <div className={cn('flex items-center justify-center gap-4', className)}>
-        <Image src="/rys-200.png" alt="RY badge" width={100} height={100} />
-        <Image src="/rys-300.png" alt="RY badge" width={100} height={100} />
-        <Image src="/rpys.png" alt="RY badge" width={100} height={100} />
+        <Image src="/rpys3.png" alt="RY badge" width={100} height={100} />
+        <Image src="/rpys2.png" alt="RY badge" width={100} height={100} />
+        <Image src="/rpys1.png" alt="RY badge" width={100} height={100} />
     </div>
   )
 }

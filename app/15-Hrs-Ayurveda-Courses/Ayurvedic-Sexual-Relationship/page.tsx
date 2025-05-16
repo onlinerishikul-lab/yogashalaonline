@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Rel
 import CourseDetails from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/CourseDetails";
 import YogaAccreditation from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/YogaAccreditation";
 import CertificatePromo from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/CertificatePromo";
-import FacultyInfo from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/FacultyInfo";
-import PricingOptions from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/PricingOptions";
-import RiskFreeGuarantee from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/TestimonialCarousel";
 import Faq from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter />
     </div>
   );
 }

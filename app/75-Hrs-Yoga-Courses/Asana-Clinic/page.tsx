@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/TeachingApp
 import CourseDetails from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/CourseDetails";
 import YogaAccreditation from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/YogaAccreditation";
 import CertificatePromo from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/CertificatePromo";
-import FacultyInfo from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/FacultyInfo";
-import PricingOptions from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/PricingOptions";
-import RiskFreeGuarantee from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/TestimonialCarousel";
 import Faq from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter />
     </div>
   );
 }

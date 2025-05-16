@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/TeachingA
 import CourseDetails from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/CourseDetails";
 import YogaAccreditation from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/YogaAccreditation";
 import CertificatePromo from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/CertificatePromo";
-import FacultyInfo from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/FacultyInfo";
-import PricingOptions from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/PricingOptions";
-import RiskFreeGuarantee from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/TestimonialCarousel";
 import Faq from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter/>
     </div>
   );
 }

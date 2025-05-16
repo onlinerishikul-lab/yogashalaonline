@@ -1,4 +1,3 @@
-
 "use client";
 import HeroSection from "@/app/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/HeroSection";
 import TestimonialSlider from "@/app/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/TestimonialSlider";

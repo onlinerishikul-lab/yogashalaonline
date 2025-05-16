@@ -35,5 +35,4 @@ const CertificatePromo = () => {
     </section>
   );
 };
-
 export default CertificatePromo;

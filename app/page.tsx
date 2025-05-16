@@ -39,13 +39,16 @@ export default async function Home() {
       <Banner />
       <Usp />
 
-     {/* Section 1: Benefits + Courses */}
+{/* Section 1: Benefits + Courses */}
 <section className="bg-white py-0">
   <div className="container mx-auto px-4">
     <ExploreOurCoursesView courses={courses} />
-    <BenefitsOfOnlineLearning />
+    <div className="mt-0 mb-0 py-0">
+      <BenefitsOfOnlineLearning />
+    </div>
   </div>
 </section>
+
 
 {/* Section 2: Course Levels + Ayurveda Courses */}
 <section className="bg-white py-0">

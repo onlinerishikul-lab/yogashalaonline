@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/Online-Yoga-Classes/Meditation/TeachingAppro
 import CourseDetails from "@/app/Online-Yoga-Classes/Meditation/CourseDetails";
 import YogaAccreditation from "@/app/Online-Yoga-Classes/Meditation/YogaAccreditation";
 import CertificatePromo from "@/app/Online-Yoga-Classes/Meditation/CertificatePromo";
-import FacultyInfo from "@/app/Online-Yoga-Classes/Meditation/FacultyInfo";
-import PricingOptions from "@/app/Online-Yoga-Classes/Meditation/PricingOptions";
-import RiskFreeGuarantee from "@/app/Online-Yoga-Classes/Meditation/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/Online-Yoga-Classes/Meditation/TestimonialCarousel";
 import Faq from "@/app/Online-Yoga-Classes/Meditation/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter />
     </div>
   );
 }

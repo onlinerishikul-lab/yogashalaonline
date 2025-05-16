@@ -38,12 +38,12 @@ const Faculty = () => {
               </p>
             </div>
 
-            <div className="mt-10 grid grid-cols-4 gap-4">
+            <div className="mt-10 grid grid-cols-3 gap-4">
               {teachers.map((trainer) => (
                 <button
                   key={trainer.id}
                   onClick={() => setSelectedTrainer(trainer)}
-                  className={`relative w-[50px] h-[50px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 ${
+                  className={`relative w-[80px] h-[80px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 ${
                     selectedTrainer.id === trainer.id
                       ? "border-white scale-110 z-10"
                       : "border-transparent scale-100"

@@ -9,11 +9,10 @@ import TeachingApproach from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Co
 import CourseDetails from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/CourseDetails";
 import YogaAccreditation from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/YogaAccreditation";
 import CertificatePromo from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/CertificatePromo";
-import FacultyInfo from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/FacultyInfo";
-import PricingOptions from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/PricingOptions";
-import RiskFreeGuarantee from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/RiskFreeGuarantee";
 import TestimonialCarousel from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/TestimonialCarousel";
 import Faq from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/Faq";
+import { SiteFooter } from "@/components/common/footer";
+import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
@@ -27,11 +26,10 @@ export default function Page() {
       <CourseDetails />
       <YogaAccreditation/>
       <CertificatePromo/>
-      <FacultyInfo/>
-      <PricingOptions/>
-      <RiskFreeGuarantee/>
+      <Faculty/>
       <TestimonialCarousel/>
       <Faq/>
+      <SiteFooter />
     </div>
   );
 }

@@ -146,12 +146,12 @@ export const Header = () => {
     {
       title: "Online Yoga Classes",
       dropdown: [
-        { title: "Prenatal Yoga", href: "/Online-Yoga-Classes/prenatal-yoga/" },
-        { title: "Postnatal Yoga", href: "/Online-Yoga-Classes/postnatal-yoga/" },
-        { title: "Meditation", href: "/Online-Yoga-Classes/meditation/" },
-        { title: "Pranayama", href: "/Online-Yoga-Classes/pranayama/" },
+        { title: "Prenatal Yoga", href: "/Online-Yoga-Classes/Prenatal-Yoga/" },
+        { title: "Postnatal Yoga", href: "/Online-Yoga-Classes/Postnatal-Yoga/" },
+        { title: "Meditation", href: "/Online-Yoga-Classes/Meditation/" },
+        { title: "Pranayama", href: "/Online-Yoga-Classes/Pranayama/" },
         { title: "Hatha Yoga", href:"/Online-Yoga-Classes/Hatha-Yoga/" },
-        { title: "Vinyasa Flow", href: "/Online-Yoga-Classes/vinyasa-flow/" },
+        { title: "Vinyasa Flow", href: "/Online-Yoga-Classes/Vinyasa-Flow/" },
       ],
     },
     {

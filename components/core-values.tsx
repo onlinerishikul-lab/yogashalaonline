@@ -10,7 +10,7 @@ export const CoreValuesSection = ({
   values: { icon?: string | undefined; text?: string | undefined }[];
 }) => {
   return (
-    <div className="space-y-8 py-12">
+    <div className="space-y-8">
       <h2 className="text-3xl font-bold text-center text-[#4377B2]">{title}</h2>
 
       {/* Values section with continuous lines */}

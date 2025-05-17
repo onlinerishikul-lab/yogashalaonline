@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Ayurveda",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Explore the ancient origins, philosophy, and holistic approach of Ayurveda to health and wellness.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "The Three Doshas: Vata, Pitta, Kapha",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn about the fundamental doshas, their characteristics, and how they influence individual constitution and health.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Ayurvedic Diagnostics and Assessment",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Understand the methods of assessing dosha imbalances, including pulse diagnosis, tongue examination, and observation.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Principles of Ayurvedic Treatment",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Get familiar with the core treatment modalities such as diet, lifestyle, herbal remedies, detoxification, and Panchakarma.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            This 50-hour Ayurvedic Foundational Course offers a comprehensive introduction to the science and art of Ayurveda, equipping you with essential knowledge to understand and apply Ayurvedic principles in daily life.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

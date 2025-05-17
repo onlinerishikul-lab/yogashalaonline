@@ -8,24 +8,29 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Multi-Style Yoga",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Get an overview of multiple yoga traditions including Hatha, Vinyasa, Ashtanga, and Yin Yoga—understanding their history and philosophy.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Hatha & Vinyasa Flow Fundamentals",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Explore static and dynamic practices with emphasis on alignment, breath coordination, and transitioning between postures.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Ashtanga Primary Series Basics",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Learn the foundational structure of the Ashtanga Primary Series with attention to breath (Ujjayi), bandhas, and drishti.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Yin Yoga & Restorative Techniques",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Discover the calming, meditative aspects of Yin Yoga including long-held poses and energetic balance through fascia release.",
+    },
+    {
+      title: "Teaching Skills & Class Sequencing",
+      content:
+        "Master multi-style sequencing, cueing techniques, and class management while maintaining authenticity across different yoga styles.",
     },
   ];
 
@@ -35,10 +40,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            100-Hrs Yoga Courses: Multi-Style Yoga TTC
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Experience a diverse and balanced yoga journey by learning multiple yoga styles in one course. Ideal for aspiring teachers or practitioners looking to broaden their skills.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

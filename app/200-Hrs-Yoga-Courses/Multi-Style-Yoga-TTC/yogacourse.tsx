@@ -5,8 +5,8 @@ import React from "react";
 // Shared course features
 const features = [
   "✅ Certificate of Completion",
-  "✅ 25-Hour Yoga Anatomy Curriculum",
-  "✅ Downloadable Training Manual",
+  "✅ 200-Hour Multi-Style Yoga Curriculum",
+  "✅ Comprehensive Training Materials",
   "✅ Lifetime Course Access",
   "✅ 24 Months of Instructor Support",
 ];
@@ -49,19 +49,19 @@ const PricingOptions = () => (
     <PricingCard
       title="One-Time Payment"
       description="Pay once and get full access."
-      price="$250.00"
+      price="$1,700.00"
       note="One-time payment"
     />
     <PricingCard
       title="Two-Part Installments"
       description="Split into two monthly payments."
-      price="$125.00 x 2"
+      price="$850.00 x 2"
       note="Billed monthly"
     />
     <PricingCard
       title="Three-Part Installments"
       description="Split into three monthly payments."
-      price="$85.00 x 3"
+      price="$567.00 x 3"
       note="Billed monthly"
     />
   </div>
@@ -73,15 +73,15 @@ const RiskFreeGuarantee = () => (
     <div className="relative bg-[#e8eefb] rounded-2xl p-8 max-w-3xl w-full overflow-hidden">
       <div className="text-center md:text-left">
         <h2 className="text-xl md:text-2xl font-bold text-[#4377b2] mb-4">
-          7-Day Risk-Free Guarantee
+          30-Day Risk-Free Guarantee
         </h2>
         <p className="text-gray-700 mb-4">
           We’re confident you’ll love the{" "}
-          <strong>25-Hour Yoga Anatomy for a Safe Journey</strong> course.
-          But if it doesn’t meet your expectations, we’ve got you covered.
+          <strong>200-Hour Multi-Style Yoga TTC</strong>. But if it doesn’t meet
+          your expectations, we’ve got you covered.
         </p>
         <p className="text-gray-700 mb-4">
-          Simply email us within <strong>7 days</strong> of purchase for a full
+          Simply email us within <strong>30 days</strong> of purchase for a full
           refund—no questions asked. Explore the course, test it out, and decide
           with total peace of mind.
         </p>
@@ -118,18 +118,18 @@ const YogaCoursePage = () => {
       <section className="flex flex-col md:flex-row justify-between items-start gap-10">
         <div className="md:w-1/2 space-y-4">
           <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-            25-Hour Yoga Anatomy <br /> for a Safe Journey
+            200-Hour Multi-Style Yoga TTC
           </h1>
           <p className="text-gray-700 text-sm">
-            Master safe and effective yoga practices with in-depth anatomical
-            guidance. Flexible plans to get started today.
+            Dive deep into multiple yoga styles with this comprehensive 200-hour
+            teacher training course designed for aspiring yoga instructors.
           </p>
           <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-            <li>Understand key muscles and joints in yoga poses.</li>
-            <li>Learn how to avoid common injuries through alignment.</li>
-            <li>Gain confidence in teaching safe, mindful movement.</li>
-            <li>Includes HD video lessons and a downloadable manual.</li>
-            <li>Perfect for yoga teachers and dedicated practitioners.</li>
+            <li>Learn diverse yoga techniques including Hatha, Vinyasa, and more.</li>
+            <li>In-depth anatomy, philosophy, and teaching methodology.</li>
+            <li>Includes practical workshops and meditation practices.</li>
+            <li>Lifetime access to course materials and videos.</li>
+            <li>Perfect for future yoga teachers and serious practitioners.</li>
           </ul>
           <button className="bg-[#4377b2] hover:bg-[#365a92] text-white px-5 py-2.5 rounded-full font-medium flex items-center space-x-2 text-sm">
             <span>Join Now</span>
@@ -139,7 +139,7 @@ const YogaCoursePage = () => {
         <div className="md:w-1/2 w-full">
           <PricingOptions />
           <div className="text-center text-xs text-gray-500 mt-2">
-            🔒 100% Secure Payment. Full refund within 7 days if you&#39;re not
+            🔒 100% Secure Payment. Full refund within 30 days if you’re not
             satisfied.
           </div>
         </div>

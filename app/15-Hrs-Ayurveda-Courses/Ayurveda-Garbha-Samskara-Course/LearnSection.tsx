@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Garbha Samskara",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Discover the ancient Ayurvedic practices aimed at nurturing the fetus and preparing the mother for childbirth through physical, mental, and spiritual well-being.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Prenatal Care and Lifestyle",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn about recommended diets, daily routines, and behavioral guidelines to support healthy pregnancy and fetal development.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Herbal & Therapeutic Treatments",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Explore specific herbs, massages, and therapies used to promote optimal growth and balance during pregnancy.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Spiritual and Mental Preparation",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Understand the significance of mental conditioning, meditation, and positive influences on both mother and child according to Ayurveda.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            This 15-hour Ayurveda Garbha Samskara Course guides you through traditional prenatal practices, holistic care for mother and baby, and spiritual preparation to ensure a healthy pregnancy journey.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

@@ -9,7 +9,7 @@ const points = [
   },
   {
     number: '2',
-    text: 'Step-by-step anatomical guidance tailored to a 25-hour progressive learning plan.',
+    text: 'Step-by-step anatomical guidance tailored to a 95-hour progressive learning plan.',
   },
   {
     number: '3',
@@ -81,7 +81,7 @@ export default function TeachingApproach() {
 
       {/* Call to Action Button */}
       <button className="mt-10 bg-[#4377b2] hover:bg-[#365f91] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg transition-transform transform hover:scale-105">
-        Enroll in the 25-hr Course
+        Enroll in the 95-hr Course
       </button>
 
       {/* Decorative Icon */}

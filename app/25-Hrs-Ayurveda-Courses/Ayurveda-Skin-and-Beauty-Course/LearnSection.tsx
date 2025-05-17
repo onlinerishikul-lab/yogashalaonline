@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Ayurvedic Principles of Skin Health",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Understand the foundational Ayurvedic concepts of skin types (Vata, Pitta, Kapha) and how they affect skin health and beauty.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Natural Herbal Remedies for Glowing Skin",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Discover herbs like Neem, Turmeric, Sandalwood, and Aloe Vera that enhance skin radiance and treat common skin conditions naturally.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Ayurvedic Daily Skincare Rituals",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Learn effective daily and seasonal skincare routines, including cleansing, exfoliation, and moisturizing using Ayurvedic techniques.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Diet and Lifestyle for Healthy Skin",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Explore the impact of nutrition, hydration, and lifestyle habits on skin health and how Ayurveda recommends optimizing them.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            This 25-hour Ayurveda Skin and Beauty Course provides holistic insights and practical knowledge to nurture your natural beauty using time-tested Ayurvedic wisdom and natural remedies.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

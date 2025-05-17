@@ -15,14 +15,14 @@ import {
 const CourseDetails = () => {
   const features = [
     { id: 1, icon: <Infinity />, title: "Lifetime Access" },
-    { id: 2, icon: <Zap />, title: "Science-Based Curriculum" },
-    { id: 3, icon: <Webhook />, title: "Online Learning Flexibility" },
-    { id: 4, icon: <Clock />, title: "Self-Paced Lessons" },
-    { id: 5, icon: <CalendarDays />, title: "Complete in 25 Hours" },
+    { id: 2, icon: <Zap />, title: "Ayurvedic Sexual Health Basics" },
+    { id: 3, icon: <Webhook />, title: "Flexible Online Learning" },
+    { id: 4, icon: <Clock />, title: "Self-Paced 15-Hour Course" },
+    { id: 5, icon: <CalendarDays />, title: "Complete at Your Own Pace" },
     { id: 6, icon: <DollarSign />, title: "Affordable Enrollment" },
-    { id: 7, icon: <Settings />, title: "Anatomy Tools & Resources" },
-    { id: 8, icon: <Activity />, title: "Movement & Safety Focus" },
-    { id: 9, icon: <Users />, title: "Guidance from Yoga Experts" },
+    { id: 7, icon: <Settings />, title: "Natural Techniques & Remedies" },
+    { id: 8, icon: <Activity />, title: "Enhancing Intimacy & Vitality" },
+    { id: 9, icon: <Users />, title: "Expert Guidance & Support" },
   ];
 
   return (
@@ -32,10 +32,10 @@ const CourseDetails = () => {
           What Will You Learn?
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-lg leading-relaxed text-[#4377b2]/90">
-          Dive deep into yoga anatomy and biomechanics to build a safe, confident, and informed personal or teaching practice.
+          Discover Ayurvedic approaches to sexual health, relationships, and vitality—promoting balance, harmony, and well-being naturally.
         </p>
         <button className="mb-12 border-2 border-[#4377b2] text-[#4377b2] font-semibold px-8 py-3 rounded-full hover:bg-[#4377b2] hover:text-white transition">
-          Enroll Now
+          Enroll in Ayurvedic Sexual Relationship Course
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
@@ -50,7 +50,7 @@ const CourseDetails = () => {
                   {feature.id}. {feature.title}
                 </h3>
                 <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                  Learn natural and holistic techniques to enhance intimacy, vitality, and connection within your relationships.
                 </p>
               </div>
             </div>

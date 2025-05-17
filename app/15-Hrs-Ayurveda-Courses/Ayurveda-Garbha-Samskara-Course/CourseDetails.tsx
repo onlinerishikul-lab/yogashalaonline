@@ -15,14 +15,14 @@ import {
 const CourseDetails = () => {
   const features = [
     { id: 1, icon: <Infinity />, title: "Lifetime Access" },
-    { id: 2, icon: <Zap />, title: "Science-Based Curriculum" },
-    { id: 3, icon: <Webhook />, title: "Online Learning Flexibility" },
-    { id: 4, icon: <Clock />, title: "Self-Paced Lessons" },
-    { id: 5, icon: <CalendarDays />, title: "Complete in 25 Hours" },
-    { id: 6, icon: <DollarSign />, title: "Affordable Enrollment" },
-    { id: 7, icon: <Settings />, title: "Anatomy Tools & Resources" },
-    { id: 8, icon: <Activity />, title: "Movement & Safety Focus" },
-    { id: 9, icon: <Users />, title: "Guidance from Yoga Experts" },
+    { id: 2, icon: <Zap />, title: "Garbha Samskara Principles" },
+    { id: 3, icon: <Webhook />, title: "Flexible Online Format" },
+    { id: 4, icon: <Clock />, title: "Self-Paced 15-Hour Course" },
+    { id: 5, icon: <CalendarDays />, title: "Complete on Your Schedule" },
+    { id: 6, icon: <DollarSign />, title: "Reasonable Course Fee" },
+    { id: 7, icon: <Settings />, title: "Prenatal Care Techniques" },
+    { id: 8, icon: <Activity />, title: "Holistic Mother & Baby Wellness" },
+    { id: 9, icon: <Users />, title: "Learn from Experienced Practitioners" },
   ];
 
   return (
@@ -32,10 +32,10 @@ const CourseDetails = () => {
           What Will You Learn?
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-lg leading-relaxed text-[#4377b2]/90">
-          Dive deep into yoga anatomy and biomechanics to build a safe, confident, and informed personal or teaching practice.
+          Explore Ayurvedic Garbha Samskara, the ancient science of prenatal education and nurturing for a healthy pregnancy and baby.
         </p>
         <button className="mb-12 border-2 border-[#4377b2] text-[#4377b2] font-semibold px-8 py-3 rounded-full hover:bg-[#4377b2] hover:text-white transition">
-          Enroll Now
+          Enroll in Garbha Samskara Course
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
@@ -50,7 +50,7 @@ const CourseDetails = () => {
                   {feature.id}. {feature.title}
                 </h3>
                 <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                  Understand holistic prenatal practices that support physical, mental, and spiritual wellbeing for mother and child.
                 </p>
               </div>
             </div>

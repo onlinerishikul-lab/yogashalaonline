@@ -5,8 +5,8 @@ import React from "react";
 // Shared course features
 const features = [
   "✅ Certificate of Completion",
-  "✅ 25-Hour Yoga Anatomy Curriculum",
-  "✅ Downloadable Training Manual",
+  "✅ 25-Hour Face Yoga Curriculum",
+  "✅ Downloadable Face Yoga Manual",
   "✅ Lifetime Course Access",
   "✅ 24 Months of Instructor Support",
 ];
@@ -77,16 +77,16 @@ const RiskFreeGuarantee = () => (
         </h2>
         <p className="text-gray-700 mb-4">
           We’re confident you’ll love the{" "}
-          <strong>25-Hour Yoga Anatomy for a Safe Journey</strong> course.
+          <strong>25-Hour Face Yoga for Natural Glow</strong> course.
           But if it doesn’t meet your expectations, we’ve got you covered.
         </p>
         <p className="text-gray-700 mb-4">
           Simply email us within <strong>7 days</strong> of purchase for a full
-          refund—no questions asked. Explore the course, test it out, and decide
-          with total peace of mind.
+          refund—no questions asked. Explore the course, try the techniques, and decide
+          with complete peace of mind.
         </p>
         <p className="text-gray-900 font-semibold mb-6">
-          You’ve got nothing to lose and everything to gain.
+          You’ve got nothing to lose and a radiant face to gain.
         </p>
         <button className="bg-[#4377b2] hover:bg-[#365a90] text-white font-semibold py-2 px-6 rounded-full transition">
           Enroll Now – Risk Free!
@@ -111,25 +111,24 @@ const RiskFreeGuarantee = () => (
 );
 
 // Main Page Component
-const YogaCoursePage = () => {
+const FaceYogaCoursePage = () => {
   return (
     <div className="bg-gray-50 text-black px-4 py-10 md:px-10 space-y-16">
       {/* Header & Pricing */}
       <section className="flex flex-col md:flex-row justify-between items-start gap-10">
         <div className="md:w-1/2 space-y-4">
           <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-            25-Hour Yoga Anatomy <br /> for a Safe Journey
+            25-Hour Face Yoga <br /> for Natural Glow & Toning
           </h1>
           <p className="text-gray-700 text-sm">
-            Master safe and effective yoga practices with in-depth anatomical
-            guidance. Flexible plans to get started today.
+            Rejuvenate your facial muscles and enhance your natural beauty with our expert-led Face Yoga program. Choose a plan and start glowing today.
           </p>
           <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-            <li>Understand key muscles and joints in yoga poses.</li>
-            <li>Learn how to avoid common injuries through alignment.</li>
-            <li>Gain confidence in teaching safe, mindful movement.</li>
-            <li>Includes HD video lessons and a downloadable manual.</li>
-            <li>Perfect for yoga teachers and dedicated practitioners.</li>
+            <li>Lift and tone facial muscles naturally.</li>
+            <li>Reduce wrinkles, puffiness, and signs of stress.</li>
+            <li>Improve circulation and facial flexibility.</li>
+            <li>Includes guided video sessions and printable routines.</li>
+            <li>Ideal for wellness lovers and beauty enthusiasts.</li>
           </ul>
           <button className="bg-[#4377b2] hover:bg-[#365a92] text-white px-5 py-2.5 rounded-full font-medium flex items-center space-x-2 text-sm">
             <span>Join Now</span>
@@ -151,4 +150,4 @@ const YogaCoursePage = () => {
   );
 };
 
-export default YogaCoursePage;
+export default FaceYogaCoursePage;

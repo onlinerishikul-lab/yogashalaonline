@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Chair Yoga",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Discover the fundamentals of Chair Yoga, a gentle practice designed for all ages and abilities to improve flexibility and mobility using a chair.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Benefits of Chair Yoga",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn how Chair Yoga promotes joint health, reduces stress, enhances posture, and supports mental clarity for everyday wellness.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Step-by-Step Chair Yoga Sequences",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Practice structured sequences that adapt traditional yoga poses for the seated position, improving strength, balance, and relaxation.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Integrating Chair Yoga into Daily Life",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Explore tips for safely incorporating Chair Yoga into your routine, along with modifications for various physical conditions.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Join our comprehensive 50-hour Chair Yoga course designed to improve your physical health and mental well-being through accessible, chair-based yoga techniques.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

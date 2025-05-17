@@ -8,24 +8,29 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Yoga Philosophy",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Explore the foundational texts and teachings that form the basis of yoga philosophy, including the Yoga Sutras and Bhagavad Gita.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "The Eight Limbs of Yoga",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Understand Patanjali’s Eightfold Path and how each limb guides ethical living, meditation, and physical practice.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Concepts of Mind and Consciousness",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Delve into the nature of mind, awareness, and consciousness as described in classical yoga teachings.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Karma, Dharma, and Spiritual Practice",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Learn about the principles of karma (action), dharma (duty), and their relevance to a yogic lifestyle.",
+    },
+    {
+      title: "Applying Philosophy in Daily Life",
+      content:
+        "Discover practical ways to integrate yoga philosophy into everyday choices, relationships, and personal growth.",
     },
   ];
 
@@ -35,10 +40,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            75-Hrs Yoga Courses: Yoga Philosophy
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Deepen your understanding of the rich philosophical foundations of yoga, guiding your practice and teaching with wisdom and insight.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

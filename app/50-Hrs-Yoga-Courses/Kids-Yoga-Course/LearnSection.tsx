@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Enroll in our 50-hour Kids Yoga Course to nurture children's physical, emotional, and social development through joyful and mindful yoga practices.
+            Enroll in our 50-hour Kids Yoga Course to nurture children&#39;s physical, emotional, and social development through joyful and mindful yoga practices.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

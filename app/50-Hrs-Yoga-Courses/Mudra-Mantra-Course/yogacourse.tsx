@@ -74,7 +74,7 @@ const RiskFreeGuarantee = () => (
         <p className="text-gray-700 mb-4">
           Experience the power of ancient{" "}
           <strong>Mudras and Mantras</strong> in our 50-Hour Course. Request a full
-          refund within 7 days if you're not satisfied.
+          refund within 7 days if you&#39;re not satisfied.
         </p>
         <p className="text-gray-700 mb-4">
           Learn sacred hand gestures and sound vibrations to enhance your yoga and meditation practice.

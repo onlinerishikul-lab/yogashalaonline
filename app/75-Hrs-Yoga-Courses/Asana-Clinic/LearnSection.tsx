@@ -8,24 +8,29 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Detailed Asana Analysis",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Deep dive into individual yoga postures, focusing on alignment, muscle engagement, and common mistakes to avoid.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Corrective Techniques & Adjustments",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn how to safely correct posture misalignments and provide effective hands-on adjustments for students.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Therapeutic Applications of Asanas",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Explore how specific asanas can help address physical issues such as back pain, joint stiffness, and muscular imbalances.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Safe Practice Guidelines",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Understand contraindications and modifications to ensure students practice safely and mindfully.",
+    },
+    {
+      title: "Personalized Sequencing for Clients",
+      content:
+        "Develop skills to create tailored asana sequences that meet the individual needs and goals of your clients.",
     },
   ];
 
@@ -35,10 +40,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            75-Hrs Yoga Courses: Asana Clinic
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Enhance your understanding of yoga postures with this focused course on asana alignment, correction, and therapeutic application.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

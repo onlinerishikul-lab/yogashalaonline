@@ -81,7 +81,7 @@ export default function TeachingApproach() {
 
       {/* Call to Action Button */}
       <button className="mt-10 bg-[#4377b2] hover:bg-[#365f91] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg transition-transform transform hover:scale-105">
-        Enroll in the 25-hr Course
+        Enroll in the Course
       </button>
 
       {/* Decorative Icon */}

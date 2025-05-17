@@ -2,7 +2,7 @@
 
 import {
   Infinity,
-  Chair,
+  Armchair,
   Webhook,
   Clock,
   CalendarDays,
@@ -15,7 +15,7 @@ import {
 const CourseDetails = () => {
   const features = [
     { id: 1, icon: <Infinity />, title: "Lifetime Access" },
-    { id: 2, icon: <Chair />, title: "Chair Yoga Techniques" },
+    { id: 2, icon: <Armchair />, title: "Chair Yoga Techniques" },
     { id: 3, icon: <Webhook />, title: "Flexible Online Classes" },
     { id: 4, icon: <Clock />, title: "Self-Paced Learning" },
     { id: 5, icon: <CalendarDays />, title: "Complete in 50 Hours" },

@@ -8,24 +8,39 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Mastering Multiple Yoga Styles",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Develop expertise across diverse yoga traditions including Hatha, Vinyasa, Ashtanga, Iyengar, Kundalini, and more.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Advanced Asana & Sequencing",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Refine your asana practice with complex postures and learn to create dynamic and adaptive sequences.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Deep Dive into Yoga Philosophy",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Explore classical yoga texts and philosophies to enrich your teaching and personal practice.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Holistic Teaching Methodologies",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Master comprehensive teaching techniques, class management, and student assessment for all levels.",
+    },
+    {
+      title: "In-depth Anatomy & Physiology",
+      content:
+        "Gain advanced knowledge of human anatomy, biomechanics, and injury prevention tailored for yoga.",
+    },
+    {
+      title: "Pranayama, Meditation & Healing",
+      content:
+        "Learn sophisticated breathing techniques, meditation practices, and therapeutic applications of yoga.",
+    },
+    {
+      title: "Yoga Lifestyle & Ethics",
+      content:
+        "Integrate yogic principles into daily life and understand ethical responsibilities as a yoga teacher.",
     },
   ];
 
@@ -35,10 +50,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            300-Hrs Yoga Courses: Multi-Style Yoga TTC
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Elevate your yoga teaching skills with extensive training across multiple yoga styles, preparing you to teach with confidence, depth, and versatility.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Ayurvedic Understanding of Sexual Health",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Explore Ayurveda's holistic perspective on sexual health, vitality, and its connection to overall well-being and balance of the doshas.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Herbal Remedies for Sexual Vitality",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn about traditional Ayurvedic herbs like Ashwagandha, Shatavari, and Safed Musli that support sexual health and energy.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Lifestyle Practices and Diet",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Discover lifestyle tips and dietary guidelines in Ayurveda that promote healthy sexual function and harmonious relationships.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Emotional and Spiritual Aspects",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Understand the role of mental and emotional balance, meditation, and intimacy rituals in nurturing a fulfilling sexual relationship according to Ayurveda.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            This 15-hour Ayurvedic Sexual Relationship course delves into ancient wisdom on enhancing intimacy, sexual vitality, and emotional connection for balanced and healthy relationships.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

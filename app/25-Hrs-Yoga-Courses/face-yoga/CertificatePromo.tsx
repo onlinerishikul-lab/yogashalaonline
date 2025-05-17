@@ -26,7 +26,7 @@ const CertificatePromo = () => {
         {/* Certificate Image */}
         <div className="md:w-1/2 flex justify-center">
           <Image
-            src="/face-yoga-certificate.jpeg"
+            src="/course-certificate.jpeg"
             alt="25-Hrs Face Yoga Certificate Preview"
             width={512}
             height={212}

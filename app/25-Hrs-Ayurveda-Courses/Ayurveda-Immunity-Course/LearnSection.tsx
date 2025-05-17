@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Ayurveda and Immunity Basics",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Understand the Ayurvedic concept of immunity (Ojas), its significance, and how it supports overall health and vitality.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Factors Affecting Immunity",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Explore lifestyle, diet, stress, and environmental factors that influence your body's natural defenses from an Ayurvedic perspective.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Herbs and Natural Remedies",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Learn about potent Ayurvedic herbs like Tulsi, Guduchi, and Amalaki that help strengthen the immune system naturally.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Daily & Seasonal Immunity Practices",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Discover Dinacharya (daily routine) and Ritucharya (seasonal routine) guidelines to maintain and enhance immunity year-round.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            This comprehensive 25-hour Ayurveda Immunity Course provides you with holistic tools and knowledge to strengthen your body’s natural defense mechanisms using time-tested Ayurvedic wisdom.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

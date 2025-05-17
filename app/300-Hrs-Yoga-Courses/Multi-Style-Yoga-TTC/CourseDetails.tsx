@@ -14,25 +14,25 @@ import {
 
 const CourseDetails = () => {
   const features = [
-    { id: 1, icon: <Infinity />, title: "Lifetime Access" },
-    { id: 2, icon: <Zap />, title: "Science-Based Curriculum" },
-    { id: 3, icon: <Webhook />, title: "Online Learning Flexibility" },
-    { id: 4, icon: <Clock />, title: "Self-Paced Lessons" },
-    { id: 5, icon: <CalendarDays />, title: "Complete in 25 Hours" },
-    { id: 6, icon: <DollarSign />, title: "Affordable Enrollment" },
-    { id: 7, icon: <Settings />, title: "Anatomy Tools & Resources" },
-    { id: 8, icon: <Activity />, title: "Movement & Safety Focus" },
-    { id: 9, icon: <Users />, title: "Guidance from Yoga Experts" },
+    { id: 1, icon: <Infinity />, title: "Lifetime Access to Comprehensive Course Materials" },
+    { id: 2, icon: <Zap />, title: "Extensive Multi-Style Yoga Curriculum" },
+    { id: 3, icon: <Webhook />, title: "Flexible Online & Hybrid Learning Formats" },
+    { id: 4, icon: <Clock />, title: "300 Hours of Intensive Training" },
+    { id: 5, icon: <CalendarDays />, title: "Complete at Your Own Pace" },
+    { id: 6, icon: <DollarSign />, title: "Competitive Tuition with Flexible Payment Plans" },
+    { id: 7, icon: <Settings />, title: "Advanced Tools for Anatomy & Practice" },
+    { id: 8, icon: <Activity />, title: "Deep Focus on Safe Alignment & Movement" },
+    { id: 9, icon: <Users />, title: "Personalized Mentorship from Yoga Experts" },
   ];
 
   return (
     <section className="bg-[#f9fafb] text-[#4377b2] py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          What Will You Learn?
+          What Will You Learn in the 300-Hour Multi-Style Yoga TTC?
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-lg leading-relaxed text-[#4377b2]/90">
-          Dive deep into yoga anatomy and biomechanics to build a safe, confident, and informed personal or teaching practice.
+          Elevate your yoga teaching with an immersive program that covers diverse yoga styles, advanced anatomy, teaching methodologies, and holistic wellness practices.
         </p>
         <button className="mb-12 border-2 border-[#4377b2] text-[#4377b2] font-semibold px-8 py-3 rounded-full hover:bg-[#4377b2] hover:text-white transition">
           Enroll Now
@@ -50,7 +50,7 @@ const CourseDetails = () => {
                   {feature.id}. {feature.title}
                 </h3>
                 <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                  Gain mastery across multiple yoga disciplines, refine your teaching skills, and receive ongoing support to excel as a professional yoga instructor.
                 </p>
               </div>
             </div>

@@ -74,7 +74,7 @@ const RiskFreeGuarantee = () => (
         <p className="text-gray-700 mb-4">
           We believe in the value of our{" "}
           <strong>50-Hour Pregnancy Yoga Teacher Training</strong>. But if it
-          doesn't meet your expectations, you're protected.
+          doesn&#39;t meet your expectations, you&#39;re protected.
         </p>
         <p className="text-gray-700 mb-4">
           Request a full refund within <strong>7 days</strong>—no questions

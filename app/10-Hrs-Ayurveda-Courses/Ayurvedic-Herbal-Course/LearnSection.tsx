@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Ayurvedic Herbs",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Learn about the role of herbs in Ayurveda, their classifications, and how they support holistic health and healing.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Common Medicinal Herbs & Their Benefits",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Explore popular Ayurvedic herbs like Ashwagandha, Turmeric, Tulsi, and Neem, and understand their therapeutic properties.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Herbal Preparations & Usage",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Discover different ways herbs are prepared and used in Ayurveda, including teas, powders, oils, and tinctures.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Balancing Doshas with Herbal Remedies",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Understand how specific herbs help balance the Vata, Pitta, and Kapha doshas to promote optimal wellness.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            This 10-hour Ayurvedic Herbal Course introduces you to the healing power of traditional herbs, their uses, and how to incorporate them into daily health routines for natural balance and vitality.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

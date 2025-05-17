@@ -8,24 +8,29 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Postnatal Yoga",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Learn the fundamentals of postnatal yoga, focusing on gentle recovery and rebuilding strength after childbirth.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Safe Asanas for Postpartum",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Practice specific yoga postures that support pelvic floor health, core strengthening, and overall healing.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Breathwork & Relaxation",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Discover breathing techniques and relaxation methods to reduce stress and promote emotional wellbeing.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Mind-Body Connection",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Explore ways to reconnect with your body, boost energy, and improve mental clarity during postpartum.",
+    },
+    {
+      title: "Creating a Sustainable Practice",
+      content:
+        "Get guidance on developing a balanced and safe postnatal yoga routine tailored to individual recovery needs.",
     },
   ];
 
@@ -35,10 +40,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            Postnatal Yoga Course
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Support your postpartum journey with gentle, restorative yoga designed to promote healing, strength, and wellbeing.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Ayurveda",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Understand the origins, philosophy, and fundamental principles of Ayurveda as a holistic system of health and well-being.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "The Three Doshas: Vata, Pitta, Kapha",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Explore the three biological energies (Doshas) that govern the human body and mind. Learn how to identify and balance them.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Daily Routines & Lifestyle Practices",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Discover Ayurvedic daily habits (Dinacharya) for optimal health, including diet, sleep, hygiene, and seasonal routines.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Ayurvedic Nutrition & Digestion",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Learn how food affects the Doshas and digestion. Understand Agni (digestive fire) and guidelines for eating according to body type.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Dive into the foundational knowledge of Ayurveda. This 10-hour course provides a beginner-friendly introduction to natural healing, Dosha balancing, and holistic wellness practices.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Ayurvedic Lifestyle",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Learn the fundamentals of an Ayurvedic lifestyle focused on balance, harmony, and holistic well-being.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Daily Routine (Dinacharya)",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Explore daily practices including waking, hygiene, exercise, meditation, and diet that support dosha balance and vitality.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Seasonal Routine (Ritucharya)",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Understand how to adapt your lifestyle and habits with the changing seasons to maintain health and prevent illness.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Sleep, Stress Management, and Mental Health",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Discover Ayurvedic techniques for improving sleep quality, managing stress, and enhancing emotional wellbeing.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            This 50-hour Ayurvedic Lifestyle Course provides you with practical guidance on living in harmony with nature through time-tested Ayurvedic daily and seasonal routines.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

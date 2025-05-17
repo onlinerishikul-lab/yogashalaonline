@@ -15,27 +15,27 @@ import {
 const CourseDetails = () => {
   const features = [
     { id: 1, icon: <Infinity />, title: "Lifetime Access" },
-    { id: 2, icon: <Zap />, title: "Science-Based Curriculum" },
-    { id: 3, icon: <Webhook />, title: "Online Learning Flexibility" },
-    { id: 4, icon: <Clock />, title: "Self-Paced Lessons" },
-    { id: 5, icon: <CalendarDays />, title: "Complete in 25 Hours" },
-    { id: 6, icon: <DollarSign />, title: "Affordable Enrollment" },
-    { id: 7, icon: <Settings />, title: "Anatomy Tools & Resources" },
-    { id: 8, icon: <Activity />, title: "Movement & Safety Focus" },
-    { id: 9, icon: <Users />, title: "Guidance from Yoga Experts" },
+    { id: 2, icon: <Zap />, title: "Evidence-Based Curriculum" },
+    { id: 3, icon: <Webhook />, title: "Online Learning Convenience" },
+    { id: 4, icon: <Clock />, title: "Flexible Self-Paced Modules" },
+    { id: 5, icon: <CalendarDays />, title: "Complete Within 100 Hours" },
+    { id: 6, icon: <DollarSign />, title: "Cost-Effective Training" },
+    { id: 7, icon: <Settings />, title: "Therapeutic Tools & Practices" },
+    { id: 8, icon: <Activity />, title: "Focus on Healing & Safety" },
+    { id: 9, icon: <Users />, title: "Mentorship by Certified Therapists" },
   ];
 
   return (
     <section className="bg-[#f9fafb] text-[#4377b2] py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          What Will You Learn?
+          What Will You Gain from the Advanced Yoga Therapy Course?
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-lg leading-relaxed text-[#4377b2]/90">
-          Dive deep into yoga anatomy and biomechanics to build a safe, confident, and informed personal or teaching practice.
+          This 100-hour comprehensive course offers advanced insights into yoga therapy techniques, focusing on anatomy, healing practices, and personalized therapeutic applications.
         </p>
         <button className="mb-12 border-2 border-[#4377b2] text-[#4377b2] font-semibold px-8 py-3 rounded-full hover:bg-[#4377b2] hover:text-white transition">
-          Enroll Now
+          Join the Course
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
@@ -50,7 +50,7 @@ const CourseDetails = () => {
                   {feature.id}. {feature.title}
                 </h3>
                 <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                  Each module is crafted to deepen your therapeutic knowledge and provide practical techniques to support diverse health needs through yoga.
                 </p>
               </div>
             </div>

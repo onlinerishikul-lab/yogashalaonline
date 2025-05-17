@@ -1,26 +1,27 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
-    company: 'YogAspire',
-    title: 'Empowering and Eye-Opening',
+    company: "YogAspire",
+    title: "Empowering and Eye-Opening",
     content:
-      'The 25-hour course gave me a solid understanding of anatomy in yoga. It changed how I practice and teach — I feel safer and more confident.',
-    name: 'Anjali Mehta',
-    role: 'Certified Yoga Instructor',
-    image: 'https://randomuser.me/api/portraits/women/65.jpg',
+      "The 25-hour course gave me a solid understanding of anatomy in yoga. It changed how I practice and teach — I feel safer and more confident.",
+    name: "Anjali Mehta",
+    role: "Certified Yoga Instructor",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
   },
   {
-    company: 'InnerGlow Yoga',
-    title: 'Supportive & Insightful Journey',
+    company: "InnerGlow Yoga",
+    title: "Supportive & Insightful Journey",
     content:
-      'The instructors made complex anatomy feel approachable. Their guidance was compassionate and professional throughout the course.',
-    name: 'David Lin',
-    role: 'Yoga Therapy Practitioner',
-    image: 'https://randomuser.me/api/portraits/men/53.jpg',
+      "The instructors made complex anatomy feel approachable. Their guidance was compassionate and professional throughout the course.",
+    name: "David Lin",
+    role: "Yoga Therapy Practitioner",
+    image: "https://randomuser.me/api/portraits/men/53.jpg",
   },
 ];
 
@@ -50,6 +51,7 @@ const TestimonialCarousel = () => {
         <button
           onClick={handlePrev}
           className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+          aria-label="Previous testimonial"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
@@ -58,16 +60,21 @@ const TestimonialCarousel = () => {
         <button
           onClick={handleNext}
           className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+          aria-label="Next testimonial"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
 
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-shrink-0">
-            <img
+          <div className="flex-shrink-0 relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-[#4377b2] shadow-md">
+            <Image
               src={testimonial.image}
               alt={testimonial.name}
-              className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-[#4377b2] shadow-md"
+              fill
+              sizes="(max-width: 768px) 112px, 128px"
+              style={{ objectFit: "cover" }}
+              priority={index === 0} // preload first image
+              unoptimized={testimonial.image.startsWith("http")} // to allow external images from randomuser.me without optimization error
             />
           </div>
 
@@ -76,9 +83,7 @@ const TestimonialCarousel = () => {
               <p className="text-sm font-medium text-[#4377b2]">{testimonial.company}</p>
             </div>
 
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              {testimonial.title}
-            </h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">{testimonial.title}</h3>
             <p className="text-gray-600 mb-4 text-sm leading-relaxed">{testimonial.content}</p>
             <div className="font-medium text-gray-800">{testimonial.name}</div>
             <div className="text-sm text-gray-500">{testimonial.role}</div>

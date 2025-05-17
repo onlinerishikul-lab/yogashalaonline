@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Basics of Mudras",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Learn the significance and practice of mudras, the symbolic hand gestures used to channel energy and balance the body.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Understanding Mantras",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Explore powerful sound vibrations and their meanings to deepen meditation and spiritual practice.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Combining Mudras and Mantras",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Practice effective combinations of mudras and mantras to enhance physical, mental, and spiritual health.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Teaching Mudra & Mantra",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Gain skills to teach mudra and mantra techniques confidently to students of all levels.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            This 50-hour Mudra & Mantra course guides you through ancient hand gestures and sacred chants to uplift body and mind.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

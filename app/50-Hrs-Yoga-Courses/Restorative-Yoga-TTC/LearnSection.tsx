@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Restorative Yoga",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Discover the principles of restorative yoga focused on deep relaxation and healing.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Postures and Props",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn how to use props effectively to support the body and release tension safely.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Restorative Yoga Benefits",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Understand the therapeutic effects on the nervous system, stress reduction, and recovery.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Teaching Restorative Yoga",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Develop skills to guide students through restorative sessions with empathy and precision.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            This 50-hour Restorative Yoga TTC trains you to deliver healing-focused sessions using gentle techniques.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

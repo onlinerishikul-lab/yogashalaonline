@@ -2,16 +2,14 @@
 
 import React from "react";
 
-// Shared course features
 const features = [
   "✅ Certificate of Completion",
-  "✅ 25-Hour Yoga Anatomy Curriculum",
-  "✅ Downloadable Training Manual",
+  "✅ 50-Hour Kids Yoga Curriculum",
+  "✅ Fun and Engaging Yoga Videos",
   "✅ Lifetime Course Access",
   "✅ 24 Months of Instructor Support",
 ];
 
-// Pricing Card Component
 const PricingCard = ({
   title,
   description,
@@ -43,31 +41,29 @@ const PricingCard = ({
   </div>
 );
 
-// Pricing Section Container
 const PricingOptions = () => (
   <div className="flex flex-nowrap justify-center items-start gap-4 overflow-x-auto pb-2">
     <PricingCard
       title="One-Time Payment"
-      description="Pay once and get full access."
-      price="$250.00"
+      description="Full course access with one payment."
+      price="$450.00"
       note="One-time payment"
     />
     <PricingCard
       title="Two-Part Installments"
       description="Split into two monthly payments."
-      price="$125.00 x 2"
+      price="$230.00 x 2"
       note="Billed monthly"
     />
     <PricingCard
       title="Three-Part Installments"
       description="Split into three monthly payments."
-      price="$85.00 x 3"
+      price="$155.00 x 3"
       note="Billed monthly"
     />
   </div>
 );
 
-// Risk-Free Guarantee Section
 const RiskFreeGuarantee = () => (
   <section className="w-full flex justify-center py-12 px-4 bg-white">
     <div className="relative bg-[#e8eefb] rounded-2xl p-8 max-w-3xl w-full overflow-hidden">
@@ -76,27 +72,25 @@ const RiskFreeGuarantee = () => (
           7-Day Risk-Free Guarantee
         </h2>
         <p className="text-gray-700 mb-4">
-          We’re confident you’ll love the{" "}
-          <strong>25-Hour Yoga Anatomy for a Safe Journey</strong> course.
-          But if it doesn’t meet your expectations, we’ve got you covered.
+          We’re confident your kids will love the{" "}
+          <strong>50-Hour Kids Yoga Course</strong>. If you’re not satisfied,
+          get a full refund within 7 days.
         </p>
         <p className="text-gray-700 mb-4">
-          Simply email us within <strong>7 days</strong> of purchase for a full
-          refund—no questions asked. Explore the course, test it out, and decide
-          with total peace of mind.
+          Explore fun, easy-to-follow yoga routines designed especially for
+          children. Help your kids develop strength, balance, focus, and
+          confidence—all from home.
         </p>
         <p className="text-gray-900 font-semibold mb-6">
-          You’ve got nothing to lose and everything to gain.
+          Join risk-free and give your kids the gift of joyful yoga practice.
         </p>
         <button className="bg-[#4377b2] hover:bg-[#365a90] text-white font-semibold py-2 px-6 rounded-full transition">
           Enroll Now – Risk Free!
         </button>
       </div>
 
-      {/* Decorative circle */}
       <div className="absolute top-0 left-0 w-6 h-6 bg-[#365a90] rounded-full transform -translate-x-1/2 -translate-y-1/2" />
 
-      {/* Decorative plus signs */}
       <div className="absolute bottom-4 right-4 text-[#a8bfe7] text-lg leading-3">
         <div className="grid grid-cols-3 gap-1">
           {Array(6)
@@ -110,26 +104,24 @@ const RiskFreeGuarantee = () => (
   </section>
 );
 
-// Main Page Component
-const YogaCoursePage = () => {
+const KidsYogaCoursePage = () => {
   return (
     <div className="bg-gray-50 text-black px-4 py-10 md:px-10 space-y-16">
-      {/* Header & Pricing */}
       <section className="flex flex-col md:flex-row justify-between items-start gap-10">
         <div className="md:w-1/2 space-y-4">
           <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-            25-Hour Yoga Anatomy <br /> for a Safe Journey
+            50-Hour Kids Yoga Course <br /> Fun, Fitness & Focus
           </h1>
           <p className="text-gray-700 text-sm">
-            Master safe and effective yoga practices with in-depth anatomical
-            guidance. Flexible plans to get started today.
+            Specially designed yoga course for kids to improve strength,
+            flexibility, and concentration through fun and interactive sessions.
           </p>
           <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-            <li>Understand key muscles and joints in yoga poses.</li>
-            <li>Learn how to avoid common injuries through alignment.</li>
-            <li>Gain confidence in teaching safe, mindful movement.</li>
-            <li>Includes HD video lessons and a downloadable manual.</li>
-            <li>Perfect for yoga teachers and dedicated practitioners.</li>
+            <li>Engaging yoga routines for children of all ages.</li>
+            <li>Boosts physical fitness and mental clarity.</li>
+            <li>Develops coordination, balance, and mindfulness.</li>
+            <li>Includes animated videos and playful exercises.</li>
+            <li>Safe, easy-to-follow sessions for home practice.</li>
           </ul>
           <button className="bg-[#4377b2] hover:bg-[#365a92] text-white px-5 py-2.5 rounded-full font-medium flex items-center space-x-2 text-sm">
             <span>Join Now</span>
@@ -145,10 +137,9 @@ const YogaCoursePage = () => {
         </div>
       </section>
 
-      {/* Risk-Free Guarantee */}
       <RiskFreeGuarantee />
     </div>
   );
 };
 
-export default YogaCoursePage;
+export default KidsYogaCoursePage;

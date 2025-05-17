@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Meditation",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Understand the fundamentals of meditation, its history, and benefits for mental clarity and stress reduction.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Meditation Techniques",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn various meditation methods including mindfulness, guided meditation, and focused attention.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Teaching Meditation",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Explore effective ways to guide meditation sessions for different groups and skill levels.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Meditation in Daily Life",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Incorporate meditation practices into everyday routines for lasting mental and emotional well-being.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            This 50-hour Meditation TTC equips you with tools and skills to master meditation techniques and teach them confidently.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

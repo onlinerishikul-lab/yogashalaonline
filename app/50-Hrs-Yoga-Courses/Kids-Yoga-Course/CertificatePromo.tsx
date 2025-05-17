@@ -5,18 +5,18 @@ const CertificatePromo = () => {
   return (
     <section className="bg-[#4377b2] py-16 px-6 text-white">
       <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-        
+
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-5 leading-tight">
-            Ready to Earn Your <br /> Kids Yoga Course Certificate?
+            Ready to Earn Your <br /> 50-Hrs Kids Yoga Certificate?
           </h2>
           <p className="text-lg mb-8 text-[#f9fafb]">
-            Explore fun and mindful movement designed especially for children. 
-            Complete our Kids Yoga Course and receive your certificate to show your ability 
-            to inspire young minds through yoga.
+            Introduce children to the joys of yoga with our fun and engaging Kids Yoga course. 
+            Complete this 50-hour program online and earn a certificate celebrating your expertise 
+            in guiding young yogis toward health and happiness.
           </p>
-          <Link href="/get-certificate" passHref legacyBehavior>
+          <Link href="/50-Hrs-Yoga-Courses/Kids-Yoga-Course" passHref legacyBehavior>
             <a className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-8 py-3 rounded-full shadow-md hover:bg-white transition duration-300">
               Get Your Certificate
             </a>
@@ -27,7 +27,7 @@ const CertificatePromo = () => {
         <div className="md:w-1/2 flex justify-center">
           <Image
             src="/course-certificate.jpeg"
-            alt="Kids Yoga Course Certificate Preview"
+            alt="50-Hrs Kids Yoga Certificate Preview"
             width={512}
             height={212}
             className="w-full max-w-md h-auto rounded-lg shadow-lg"

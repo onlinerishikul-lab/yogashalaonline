@@ -5,18 +5,18 @@ const CertificatePromo = () => {
   return (
     <section className="bg-[#4377b2] py-16 px-6 text-white">
       <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-        
+
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-5 leading-tight">
-            Ready to Earn Your <br /> Kundalini Yoga Certificate?
+            Ready to Earn Your <br /> 50-Hrs Kundalini Yoga Certificate?
           </h2>
           <p className="text-lg mb-8 text-[#f9fafb]">
-            Awaken your inner energy through the ancient practice of Kundalini Yoga. 
-            Complete our course to deepen your spiritual awareness and receive a certificate 
-            that honors your transformation and learning.
+            Awaken your inner energy and transform your life through our intensive Kundalini Yoga course. 
+            Complete this 50-hour online program and receive your certificate as a mark of spiritual growth 
+            and self-awareness.
           </p>
-          <Link href="/get-certificate" passHref legacyBehavior>
+          <Link href="/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course" passHref legacyBehavior>
             <a className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-8 py-3 rounded-full shadow-md hover:bg-white transition duration-300">
               Get Your Certificate
             </a>
@@ -27,7 +27,7 @@ const CertificatePromo = () => {
         <div className="md:w-1/2 flex justify-center">
           <Image
             src="/course-certificate.jpeg"
-            alt="Kundalini Yoga Certificate Preview"
+            alt="50-Hrs Kundalini Yoga Certificate Preview"
             width={512}
             height={212}
             className="w-full max-w-md h-auto rounded-lg shadow-lg"

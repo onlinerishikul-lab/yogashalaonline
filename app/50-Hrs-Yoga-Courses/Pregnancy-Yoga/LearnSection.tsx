@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Yoga for Pregnancy Basics",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Learn safe yoga postures and breathing techniques tailored for each trimester to support maternal health.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Benefits of Pregnancy Yoga",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Understand how yoga improves physical comfort, reduces stress, and prepares the body for childbirth.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Prenatal Yoga Practice",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Explore gentle sequences and relaxation methods designed for expecting mothers.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Teaching Pregnancy Yoga Safely",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Gain skills to instruct prenatal yoga with modifications to ensure safety and comfort for all participants.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Our Pregnancy Yoga course offers 50 hours of comprehensive training to promote wellness during pregnancy.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

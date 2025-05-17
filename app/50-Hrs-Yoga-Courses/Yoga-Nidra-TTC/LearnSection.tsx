@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Yoga Nidra",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Understand the practice of yogic sleep for deep rest, stress relief, and mental clarity.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Yoga Nidra Techniques",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn guided relaxation, body scanning, and visualization techniques to induce profound relaxation.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Benefits of Yoga Nidra",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Explore the psychological and physical health benefits including improved sleep and anxiety reduction.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Teaching Yoga Nidra",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Gain expertise in guiding yoga nidra sessions safely and effectively for diverse populations.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            The Yoga Nidra TTC offers 50 hours of training in deep relaxation techniques for holistic health.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

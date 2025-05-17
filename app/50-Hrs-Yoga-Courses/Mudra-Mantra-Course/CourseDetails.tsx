@@ -1,64 +1,52 @@
-"use client";
+'use client';
 
-import {
-  Infinity,
-  Zap,
-  Webhook,
-  Clock,
-  CalendarDays,
-  DollarSign,
-  Settings,
-  Activity,
-  Users,
-} from "lucide-react";
+import React from "react";
+import { GraduationCap, Users, Sun, BarChart3 } from "lucide-react";
 
-const CourseDetails = () => {
-  const features = [
-    { id: 1, icon: <Infinity />, title: "Lifetime Access" },
-    { id: 2, icon: <Zap />, title: "Science-Based Curriculum" },
-    { id: 3, icon: <Webhook />, title: "Online Learning Flexibility" },
-    { id: 4, icon: <Clock />, title: "Self-Paced Lessons" },
-    { id: 5, icon: <CalendarDays />, title: "Complete in 25 Hours" },
-    { id: 6, icon: <DollarSign />, title: "Affordable Enrollment" },
-    { id: 7, icon: <Settings />, title: "Anatomy Tools & Resources" },
-    { id: 8, icon: <Activity />, title: "Movement & Safety Focus" },
-    { id: 9, icon: <Users />, title: "Guidance from Yoga Experts" },
+const UniqueCourseSection = () => {
+  const items = [
+    {
+      title: "Certified Mudra & Mantra Experts",
+      icon: <Users className="w-6 h-6 text-sky-600" />,
+    },
+    {
+      title: "Healing Power of Mudras & Mantras",
+      icon: <Sun className="w-6 h-6 text-sky-600" />,
+    },
+    {
+      title: "Globally Accredited Certification",
+      icon: <GraduationCap className="w-6 h-6 text-sky-600" />,
+    },
+    {
+      title: "Personalized Practice Tracking",
+      icon: <BarChart3 className="w-6 h-6 text-sky-600" />,
+    },
   ];
 
   return (
-    <section className="bg-[#f9fafb] text-[#4377b2] py-20 px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          What Will You Learn?
+    <section className="bg-white py-16 px-6 md:px-10 lg:px-20">
+      <div className="max-w-6xl mx-auto text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-sky-600">
+          What Makes Our “50-Hrs Mudra & Mantra Course” Unique?
         </h2>
-        <p className="mb-10 max-w-2xl mx-auto text-lg leading-relaxed text-[#4377b2]/90">
-          Dive deep into yoga anatomy and biomechanics to build a safe, confident, and informed personal or teaching practice.
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm md:text-base">
+          Discover the ancient techniques of mudras and mantras to enhance your physical,
+          emotional, and spiritual well-being. This course provides in-depth knowledge and practice.
         </p>
-        <button className="mb-12 border-2 border-[#4377b2] text-[#4377b2] font-semibold px-8 py-3 rounded-full hover:bg-[#4377b2] hover:text-white transition">
-          Enroll Now
-        </button>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-          {features.map((feature) => (
-            <div
-              key={feature.id}
-              className="flex items-start gap-4 bg-white p-5 rounded-xl shadow hover:shadow-lg transition"
-            >
-              <div className="text-2xl text-[#4377b2] mt-1">{feature.icon}</div>
-              <div>
-                <h3 className="font-semibold text-lg mb-1">
-                  {feature.id}. {feature.title}
-                </h3>
-                <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
-                </p>
-              </div>
+      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        {items.map((item, index) => (
+          <div key={index} className="flex flex-col items-center justify-center gap-3">
+            <div className="bg-sky-100 p-4 rounded-full shadow-sm flex items-center justify-center">
+              {item.icon}
             </div>
-          ))}
-        </div>
+            <p className="text-lg font-semibold text-gray-800">{item.title}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
-export default CourseDetails;
+export default UniqueCourseSection;

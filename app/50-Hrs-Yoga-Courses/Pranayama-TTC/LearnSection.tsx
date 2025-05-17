@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Fundamentals of Pranayama",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Understand breath control basics and the vital role of pranayama in enhancing life force (prana).",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Key Pranayama Techniques",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Practice techniques such as Nadi Shodhana, Kapalabhati, and Bhastrika for improved vitality and mental focus.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Health Benefits",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Learn how pranayama positively impacts respiratory health, stress management, and energy levels.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Teaching Pranayama",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Gain confidence to instruct pranayama safely with appropriate modifications for students of all levels.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Join our 50-hour Pranayama TTC to master breathing techniques that empower mind, body, and spirit.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Kundalini Yoga",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Explore the origins and philosophy of Kundalini Yoga, focusing on awakening the energy at the base of the spine.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Breathwork and Pranayama",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn specialized breathing techniques that energize the body and calm the mind, essential for Kundalini practice.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Kriyas and Meditation",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Practice powerful kriyas (sequences of postures and movements) combined with meditation to unlock spiritual growth.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Chakras and Energy Flow",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Understand the chakra system and how Kundalini Yoga helps balance and activate these energy centers for overall wellness.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Dive deep into the transformative practice of Kundalini Yoga with our 50-hour course, designed to awaken your inner energy and elevate your mind, body, and spirit.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

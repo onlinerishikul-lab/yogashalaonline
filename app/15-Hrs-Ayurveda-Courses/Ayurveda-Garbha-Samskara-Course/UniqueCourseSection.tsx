@@ -1,25 +1,25 @@
 'use client';
 
 import React from "react";
-import { GraduationCap, Users, Sun, BarChart3 } from "lucide-react";
+import { Baby, HeartPulse, Globe, BookOpen } from "lucide-react";
 
 const UniqueCourseSection = () => {
   const items = [
     {
-      title: "Expert Yoga Anatomy Instructors",
-      icon: <Users className="w-6 h-6 text-sky-600" />,
+      title: "Ancient Prenatal Wisdom",
+      icon: <BookOpen className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Balance Study with Life",
-      icon: <Sun className="w-6 h-6 text-sky-600" />,
+      title: "Garbha Samskara Rituals & Practices",
+      icon: <Baby className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Globally Recognized Certification",
-      icon: <GraduationCap className="w-6 h-6 text-sky-600" />,
+      title: "Promoting Holistic Fetal Development",
+      icon: <HeartPulse className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Personalized Progress Feedback",
-      icon: <BarChart3 className="w-6 h-6 text-sky-600" />,
+      title: "Guidance from Ayurveda Specialists",
+      icon: <Globe className="w-6 h-6 text-sky-600" />,
     },
   ];
 
@@ -27,12 +27,11 @@ const UniqueCourseSection = () => {
     <section className="bg-white py-16 px-6 md:px-10 lg:px-20">
       <div className="max-w-6xl mx-auto text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold text-sky-600">
-          What Makes Our “25-hrs Yoga Anatomy for a Safe Journey” Course Unique?
+          What Makes Our “15-Hrs Ayurveda Courses / Ayurveda Garbha Samskara Course” Unique?
         </h2>
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm md:text-base">
-          Dive deep into the foundations of safe movement and mindful practice.
-          This course offers insights into the human body through the lens of yoga,
-          equipping you with essential anatomical knowledge for safer, more effective teaching and practice.
+          Dive into the sacred Ayurvedic traditions of Garbha Samskara — prenatal practices aimed at nurturing the physical and mental wellbeing of the unborn child.
+          This 15-hour course teaches ancient rituals, lifestyle guidance, and spiritual techniques for a healthy pregnancy journey.
         </p>
       </div>
 

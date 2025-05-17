@@ -14,25 +14,25 @@ import {
 
 const CourseDetails = () => {
   const features = [
-    { id: 1, icon: <Infinity />, title: "Lifetime Access" },
-    { id: 2, icon: <Zap />, title: "Science-Based Curriculum" },
-    { id: 3, icon: <Webhook />, title: "Online Learning Flexibility" },
-    { id: 4, icon: <Clock />, title: "Self-Paced Lessons" },
-    { id: 5, icon: <CalendarDays />, title: "Complete in 25 Hours" },
-    { id: 6, icon: <DollarSign />, title: "Affordable Enrollment" },
-    { id: 7, icon: <Settings />, title: "Anatomy Tools & Resources" },
-    { id: 8, icon: <Activity />, title: "Movement & Safety Focus" },
-    { id: 9, icon: <Users />, title: "Guidance from Yoga Experts" },
+    { id: 1, icon: <Infinity />, title: "Lifetime Course Access" },
+    { id: 2, icon: <Zap />, title: "Authentic Hatha Yoga Curriculum" },
+    { id: 3, icon: <Webhook />, title: "Flexible Online Learning" },
+    { id: 4, icon: <Clock />, title: "Self-Paced 100-Hour Training" },
+    { id: 5, icon: <CalendarDays />, title: "Complete at Your Own Pace" },
+    { id: 6, icon: <DollarSign />, title: "Affordable Course Fee" },
+    { id: 7, icon: <Settings />, title: "Comprehensive Teaching Tools" },
+    { id: 8, icon: <Activity />, title: "Focus on Asanas, Pranayama & Meditation" },
+    { id: 9, icon: <Users />, title: "Guidance from Experienced Instructors" },
   ];
 
   return (
     <section className="bg-[#f9fafb] text-[#4377b2] py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          What Will You Learn?
+          What Will You Learn in the Hatha Yoga TTC?
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-lg leading-relaxed text-[#4377b2]/90">
-          Dive deep into yoga anatomy and biomechanics to build a safe, confident, and informed personal or teaching practice.
+          Embark on a transformative journey with our 100-hour Hatha Yoga Teacher Training Course, designed to deepen your practice and prepare you to teach with confidence.
         </p>
         <button className="mb-12 border-2 border-[#4377b2] text-[#4377b2] font-semibold px-8 py-3 rounded-full hover:bg-[#4377b2] hover:text-white transition">
           Enroll Now
@@ -50,7 +50,7 @@ const CourseDetails = () => {
                   {feature.id}. {feature.title}
                 </h3>
                 <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                  Gain practical skills in Hatha Yoga postures, breathing techniques, meditation, and teaching methodology to confidently lead yoga classes.
                 </p>
               </div>
             </div>

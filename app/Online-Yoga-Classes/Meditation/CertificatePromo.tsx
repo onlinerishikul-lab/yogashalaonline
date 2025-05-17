@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-
 const CertificatePromo = () => {
   return (
     <section className="bg-[#4377b2] py-16 px-6 text-white">
@@ -10,16 +9,15 @@ const CertificatePromo = () => {
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-5 leading-tight">
-            Ready to Earn Your <br /> 25-hrs Yoga Anatomy Certificate?
+            Journey Into Mindfulness with <br /> Meditation Practices
           </h2>
           <p className="text-lg mb-8 text-[#f9fafb]">
-            Begin your journey into the science of movement and safety in yoga. 
-            Complete our online course and proudly receive your certificate as a 
-            symbol of your growth and dedication.
+            Cultivate inner peace and focus through our guided meditation course. 
+            Enhance your mental clarity and emotional well-being.
           </p>
-          <Link href="/get-certificate" passHref legacyBehavior>
+          <Link href="/meditation" passHref legacyBehavior>
             <a className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-8 py-3 rounded-full shadow-md hover:bg-white transition duration-300">
-              Get Your Certificate
+              Start Meditating
             </a>
           </Link>
         </div>
@@ -28,7 +26,7 @@ const CertificatePromo = () => {
         <div className="md:w-1/2 flex justify-center">
           <Image
             src="/course-certificate.jpeg"
-            alt="25-hrs Yoga Anatomy Certificate Preview"
+            alt="Meditation Certificate Preview"
             width={512}
             height={212}
             className="w-full max-w-md h-auto rounded-lg shadow-lg"

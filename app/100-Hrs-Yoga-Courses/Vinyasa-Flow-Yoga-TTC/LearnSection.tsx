@@ -8,24 +8,29 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Foundations of Vinyasa Yoga",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Understand the principles of Vinyasa Flow, including its roots, evolution, and the philosophy that connects breath with movement.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Breath-Synchronized Movement",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Explore how to synchronize breath (pranayama) with dynamic postures to create fluid and mindful Vinyasa sequences.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Creative Sequencing Techniques",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Learn how to design intelligent, safe, and engaging Vinyasa flows that suit different levels of practitioners.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Sun Salutations & Flow Structure",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Master various forms of Sun Salutations (Surya Namaskar) and understand their role in building strength, balance, and rhythm.",
+    },
+    {
+      title: "Cueing, Adjustments & Teaching Skills",
+      content:
+        "Develop your teaching voice, refine your verbal cues, and learn effective hands-on adjustments and class management strategies.",
     },
   ];
 
@@ -35,10 +40,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            100-Hrs Yoga Courses: Vinyasa Flow Yoga TTC
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Dive into the dynamic and empowering world of Vinyasa Flow Yoga. This course blends breath and movement to create transformational practice and teaching experiences.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

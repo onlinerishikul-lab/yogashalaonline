@@ -8,24 +8,29 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Pranayama",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Understand the fundamentals of pranayama, the yogic art of breath control, and its benefits for mind and body.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Basic Breathing Techniques",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn essential pranayama practices like Nadi Shodhana (alternate nostril breathing) and Ujjayi breath.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Advanced Pranayama Practices",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Explore more advanced techniques such as Kapalabhati, Bhastrika, and their safe application.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Pranayama for Stress Reduction",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Discover breathing exercises designed to calm the nervous system and reduce anxiety.",
+    },
+    {
+      title: "Integrating Pranayama into Daily Life",
+      content:
+        "Get guidance on establishing a consistent pranayama practice to enhance physical vitality and mental clarity.",
     },
   ];
 
@@ -35,10 +40,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            Pranayama Course
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Master the art of breath control through pranayama techniques that improve respiratory health, mental focus, and overall wellbeing.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

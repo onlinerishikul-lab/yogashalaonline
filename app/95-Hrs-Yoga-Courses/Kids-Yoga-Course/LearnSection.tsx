@@ -8,24 +8,29 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Kids Yoga",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Learn the basics of teaching yoga to children, focusing on playful, engaging, and age-appropriate methods.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Fun & Creative Yoga Practices",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Explore creative asanas, games, and storytelling techniques that keep kids motivated and interested.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Safety & Developmental Considerations",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Understand the physical and emotional needs of children to ensure safe and supportive yoga sessions.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Mindfulness & Breathing for Kids",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Teach simple mindfulness and breathing exercises tailored for children to improve focus and calmness.",
+    },
+    {
+      title: "Structuring a Kids Yoga Class",
+      content:
+        "Learn how to design well-rounded yoga sessions that balance movement, relaxation, and fun activities.",
     },
   ];
 
@@ -35,10 +40,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            95-Hrs Yoga Courses: Kids Yoga Course
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Equip yourself with specialized skills to teach yoga to children in a fun, safe, and effective way.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

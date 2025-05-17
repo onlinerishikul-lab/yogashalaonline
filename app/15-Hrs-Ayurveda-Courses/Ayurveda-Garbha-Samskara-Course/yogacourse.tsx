@@ -5,10 +5,10 @@ import React from "react";
 // Shared course features
 const features = [
   "✅ Certificate of Completion",
-  "✅ 25-Hour Yoga Anatomy Curriculum",
-  "✅ Downloadable Training Manual",
+  "✅ 15-Hour Garbha Samskara Curriculum",
+  "✅ Downloadable Pregnancy Wellness Guide",
   "✅ Lifetime Course Access",
-  "✅ 24 Months of Instructor Support",
+  "✅ 12 Months of Instructor Support",
 ];
 
 // Pricing Card Component
@@ -49,19 +49,19 @@ const PricingOptions = () => (
     <PricingCard
       title="One-Time Payment"
       description="Pay once and get full access."
-      price="$250.00"
+      price="$220.00"
       note="One-time payment"
     />
     <PricingCard
       title="Two-Part Installments"
       description="Split into two monthly payments."
-      price="$125.00 x 2"
+      price="$115.00 x 2"
       note="Billed monthly"
     />
     <PricingCard
       title="Three-Part Installments"
       description="Split into three monthly payments."
-      price="$85.00 x 3"
+      price="$80.00 x 3"
       note="Billed monthly"
     />
   </div>
@@ -77,8 +77,7 @@ const RiskFreeGuarantee = () => (
         </h2>
         <p className="text-gray-700 mb-4">
           We’re confident you’ll love the{" "}
-          <strong>25-Hour Yoga Anatomy for a Safe Journey</strong> course.
-          But if it doesn’t meet your expectations, we’ve got you covered.
+          <strong>15-Hrs Ayurveda Garbha Samskara Course</strong>. But if it doesn’t meet your expectations, we’ve got you covered.
         </p>
         <p className="text-gray-700 mb-4">
           Simply email us within <strong>7 days</strong> of purchase for a full
@@ -118,18 +117,17 @@ const YogaCoursePage = () => {
       <section className="flex flex-col md:flex-row justify-between items-start gap-10">
         <div className="md:w-1/2 space-y-4">
           <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-            25-Hour Yoga Anatomy <br /> for a Safe Journey
+            15-Hrs Ayurveda Courses <br /> Ayurveda Garbha Samskara Course
           </h1>
           <p className="text-gray-700 text-sm">
-            Master safe and effective yoga practices with in-depth anatomical
-            guidance. Flexible plans to get started today.
+            Discover the ancient practices of Garbha Samskara to nurture prenatal wellness and spiritual development. Enroll in our comprehensive course today.
           </p>
           <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-            <li>Understand key muscles and joints in yoga poses.</li>
-            <li>Learn how to avoid common injuries through alignment.</li>
-            <li>Gain confidence in teaching safe, mindful movement.</li>
-            <li>Includes HD video lessons and a downloadable manual.</li>
-            <li>Perfect for yoga teachers and dedicated practitioners.</li>
+            <li>Understand Ayurvedic prenatal care and rituals.</li>
+            <li>Learn techniques to promote healthy pregnancy and fetal development.</li>
+            <li>Explore the spiritual and physical aspects of Garbha Samskara.</li>
+            <li>Includes HD video lessons and downloadable wellness guides.</li>
+            <li>Perfect for expectant parents and Ayurveda practitioners.</li>
           </ul>
           <button className="bg-[#4377b2] hover:bg-[#365a92] text-white px-5 py-2.5 rounded-full font-medium flex items-center space-x-2 text-sm">
             <span>Join Now</span>

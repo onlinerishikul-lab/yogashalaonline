@@ -60,5 +60,4 @@ const CourseDetails = () => {
     </section>
   );
 };
-
 export default CourseDetails;

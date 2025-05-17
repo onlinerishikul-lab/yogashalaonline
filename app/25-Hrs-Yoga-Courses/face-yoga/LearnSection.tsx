@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Face Yoga",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Understand the fundamentals of face yoga, its benefits, and how it promotes natural beauty, relaxation, and facial muscle awareness.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Facial Anatomy & Muscle Awareness",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn about key facial muscles, their functions, and how face yoga techniques target specific areas for toning and rejuvenation.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Daily Face Yoga Routines",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Practice simple, effective daily routines that help reduce wrinkles, release tension, and enhance overall facial symmetry and glow.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Holistic Self-Care & Lifestyle Tips",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Explore lifestyle habits, breathing techniques, and skin-care practices that complement your face yoga journey for lasting results.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Dive into our 25-hour Face Yoga course to discover techniques that enhance natural beauty, reduce facial tension, and promote inner confidence.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

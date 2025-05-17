@@ -8,24 +8,29 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Hatha Yoga",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Learn the fundamentals of Hatha Yoga, its philosophy, and the physical and mental benefits it offers to practitioners.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Asana Practice & Alignment",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Explore foundational Hatha Yoga postures with a focus on proper alignment, breathing techniques, and safety during practice.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Pranayama & Breath Control",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Understand various breathing techniques (pranayama) used in Hatha Yoga to enhance energy flow and improve mental clarity.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Meditation & Mindfulness",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Develop skills in meditation practices to cultivate awareness, concentration, and inner peace as part of your yoga journey.",
+    },
+    {
+      title: "Teaching Methodology & Ethics",
+      content:
+        "Gain insights into effective yoga teaching methods, class sequencing, and ethical guidelines for becoming a certified yoga instructor.",
     },
   ];
 
@@ -35,10 +40,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            100-Hrs Yoga Courses: Hatha Yoga TTC
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Immerse yourself in the timeless practice of Hatha Yoga with our comprehensive Teacher Training Course designed to build a strong foundation in both practice and teaching.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

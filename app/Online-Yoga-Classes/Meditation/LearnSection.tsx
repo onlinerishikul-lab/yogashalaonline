@@ -8,24 +8,29 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Meditation",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Discover the basics of meditation, its history, and its benefits for mental and physical well-being.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Mindfulness Techniques",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn practical mindfulness exercises to cultivate present-moment awareness and reduce stress.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Breath-Focused Meditation",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Practice breathing techniques that help calm the mind and improve concentration.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Guided and Silent Meditation",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Explore both guided meditation sessions and silent meditation practices to deepen your experience.",
+    },
+    {
+      title: "Developing a Daily Meditation Practice",
+      content:
+        "Get tips and strategies for establishing and maintaining a consistent meditation routine.",
     },
   ];
 
@@ -35,10 +40,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            Meditation Course
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Explore various meditation techniques designed to enhance your focus, calm your mind, and improve overall well-being.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

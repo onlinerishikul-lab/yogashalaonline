@@ -6,19 +6,19 @@ import { GraduationCap, Users, Sun, BarChart3 } from "lucide-react";
 const UniqueCourseSection = () => {
   const items = [
     {
-      title: "Expert Yoga Anatomy Instructors",
+      title: "Experienced Chair Yoga Instructors",
       icon: <Users className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Balance Study with Life",
+      title: "Accessible Yoga for All Abilities",
       icon: <Sun className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Globally Recognized Certification",
+      title: "Internationally Accredited Certification",
       icon: <GraduationCap className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Personalized Progress Feedback",
+      title: "Customized Progress & Wellness Tracking",
       icon: <BarChart3 className="w-6 h-6 text-sky-600" />,
     },
   ];
@@ -27,12 +27,12 @@ const UniqueCourseSection = () => {
     <section className="bg-white py-16 px-6 md:px-10 lg:px-20">
       <div className="max-w-6xl mx-auto text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold text-sky-600">
-          What Makes Our “25-hrs Yoga Anatomy for a Safe Journey” Course Unique?
+          What Makes Our “50-Hrs Chair Yoga Course” Unique?
         </h2>
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm md:text-base">
-          Dive deep into the foundations of safe movement and mindful practice.
-          This course offers insights into the human body through the lens of yoga,
-          equipping you with essential anatomical knowledge for safer, more effective teaching and practice.
+          Explore the benefits of chair yoga designed for all levels, focusing on gentle
+          movements, flexibility, and balance while seated. This 50-hour course empowers
+          you to teach safe and effective yoga accessible to seniors, beginners, and those with mobility challenges.
         </p>
       </div>
 

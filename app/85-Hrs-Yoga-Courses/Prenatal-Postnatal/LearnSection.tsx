@@ -8,24 +8,29 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Prenatal Yoga Foundations",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Learn safe and effective yoga practices tailored to support pregnancy, promoting strength, flexibility, and relaxation.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Postnatal Recovery and Care",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Explore yoga techniques to aid postpartum healing, restore core strength, and support emotional well-being.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Breathing and Relaxation Techniques",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Master pranayama and mindfulness practices that benefit both mother and baby during pregnancy and after birth.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Modifications & Safety Guidelines",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Understand necessary modifications and precautions to ensure the safety of pregnant and postpartum practitioners.",
+    },
+    {
+      title: "Supporting Emotional and Mental Health",
+      content:
+        "Learn approaches to support mental health through yoga, addressing common challenges like anxiety and fatigue in pregnancy and postpartum.",
     },
   ];
 
@@ -35,10 +40,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            85-Hrs Yoga Courses: Prenatal & Postnatal
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Specialize in yoga practices that nurture and support women through pregnancy and postpartum stages, ensuring safety and holistic well-being.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

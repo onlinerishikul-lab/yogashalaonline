@@ -8,24 +8,24 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Foundations of Ayurvedic Nutrition",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Learn the principles of Ayurveda related to food, digestion, and metabolism including the concepts of Agni (digestive fire) and Ama (toxins).",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Understanding Dosha-Specific Diets",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Explore dietary guidelines tailored for Vata, Pitta, and Kapha doshas to promote balance and health.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Seasonal and Daily Eating Practices",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Discover how to adjust your diet according to seasons (Ritucharya) and daily routines (Dinacharya) for optimal wellness.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Herbs, Spices, and Superfoods",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Gain knowledge about Ayurvedic herbs and spices like Turmeric, Ginger, and Triphala that enhance nutrition and support digestion.",
     },
   ];
 
@@ -38,7 +38,7 @@ const LearnSection = () => {
             What You Will Learn
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            This comprehensive 50-hour Ayurvedic Diet and Nutrition Course teaches you how to apply traditional dietary wisdom to promote digestion, balance doshas, and enhance overall health.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

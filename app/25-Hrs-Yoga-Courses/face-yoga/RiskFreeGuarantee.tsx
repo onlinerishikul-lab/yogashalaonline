@@ -11,7 +11,7 @@ const RiskFreeGuarantee = () => {
             7-Day Risk-Free Guarantee
           </h2>
           <p className="text-gray-700 mb-4">
-            We’re confident you’ll love the <strong>25-Hour Yoga Anatomy for a Safe Journey</strong> course.
+            We’re confident you’ll love the <strong>25-Hour Face Yoga</strong> course.
             But if it doesn’t meet your expectations, we’ve got you covered.
           </p>
           <p className="text-gray-700 mb-4">

@@ -8,24 +8,29 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Vinyasa Flow",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Discover the dynamic practice of Vinyasa Flow yoga that links breath with movement for a fluid, energizing experience.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Fundamental Vinyasa Sequences",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn core sequences that build strength, flexibility, and stamina, including sun salutations and creative flows.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Breath-Movement Coordination",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Master the art of synchronizing breath with each movement to enhance focus and mindfulness during practice.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Modifications and Variations",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Explore how to adapt poses and sequences for different levels and body types safely and effectively.",
+    },
+    {
+      title: "Building Your Own Vinyasa Practice",
+      content:
+        "Get guidance on creating personalized flows that suit your goals, energy levels, and lifestyle.",
     },
   ];
 
@@ -35,10 +40,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            Vinyasa Flow Yoga Course
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Immerse yourself in a flowing yoga practice that enhances strength, flexibility, and mindfulness by linking breath with movement.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

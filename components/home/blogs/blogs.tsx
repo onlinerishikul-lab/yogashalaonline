@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"; // ✅ Import Next Image
 import { Blog } from "@/types/course";
 
 interface BlogsProps {
@@ -20,11 +21,18 @@ const Blogs = ({ blogs }: BlogsProps) => {
               key={blog.id}
               className="bg-[#EDF2F7] rounded-3xl shadow-lg overflow-hidden transition-transform transform hover:-translate-y-2"
             >
-              <img
-                src={blog.coverImage}
-                alt={blog.title}
-                className="w-full h-48 object-cover"
-              />
+              <div className="relative w-full h-48"> {/* ✅ Maintain aspect ratio */}
+                <Image
+                  src={blog.coverImage}
+                  alt={blog.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw,
+                         (max-width: 1200px) 50vw,
+                         25vw"
+                  priority // ✅ Improves LCP for above-the-fold
+                />
+              </div>
               <div className="p-5 flex flex-col justify-between h-[calc(100%-12rem)]">
                 <div className="flex flex-col gap-2">
                   <h3 className="text-[#4377B2] text-lg font-bold line-clamp-2">

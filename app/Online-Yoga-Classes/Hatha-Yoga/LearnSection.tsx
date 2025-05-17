@@ -8,24 +8,29 @@ const LearnSection = () => {
 
   const topics = [
     {
-      title: "Foundations of Anatomy",
+      title: "Introduction to Hatha Yoga",
       content:
-        "Gain a clear understanding of anatomical terminology, systems of the body, and how they relate to safe and effective yoga practices.",
+        "Understand the foundational principles of Hatha Yoga, focusing on balance, breath control, and posture alignment.",
     },
     {
-      title: "Skeletal & Muscular Systems",
+      title: "Basic Asanas & Techniques",
       content:
-        "Explore key bones and muscle groups used in yoga. Learn how alignment and movement are affected by individual anatomical structure.",
+        "Learn essential Hatha Yoga postures and techniques to improve strength, flexibility, and relaxation.",
     },
     {
-      title: "Common Injuries & Safe Practice",
+      title: "Pranayama and Breath Awareness",
       content:
-        "Identify common yoga-related injuries and learn techniques for injury prevention, modifications, and intelligent sequencing.",
+        "Practice fundamental breathing exercises that support mental clarity and physical wellbeing.",
     },
     {
-      title: "Applied Anatomy in Yoga Poses",
+      title: "Meditation and Mindfulness",
       content:
-        "Integrate anatomy knowledge into asana practice. Understand the biomechanics behind postures and how to adapt for various bodies.",
+        "Explore meditation practices that complement Hatha Yoga to enhance focus and inner peace.",
+    },
+    {
+      title: "Developing a Personal Practice",
+      content:
+        "Discover how to create a balanced, safe, and effective personal Hatha Yoga routine.",
     },
   ];
 
@@ -35,10 +40,10 @@ const LearnSection = () => {
         {/* Left Content */}
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            What You Will Learn
+            Hatha Yoga Course
           </h2>
           <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+            Build a strong foundation in Hatha Yoga through practical asanas, breathwork, and meditation designed to balance body and mind.
           </p>
           <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
             Contact Us

@@ -6,19 +6,19 @@ import { GraduationCap, Users, Sun, BarChart3 } from "lucide-react";
 const UniqueCourseSection = () => {
   const items = [
     {
-      title: "Expert Yoga Anatomy Instructors",
+      title: "Certified Kids Yoga Instructors",
       icon: <Users className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Balance Study with Life",
+      title: "Engaging & Age-Appropriate Techniques",
       icon: <Sun className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Globally Recognized Certification",
+      title: "95-Hour Specialized Kids Yoga Training",
       icon: <GraduationCap className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Personalized Progress Feedback",
+      title: "Fostering Fun, Focus & Flexibility",
       icon: <BarChart3 className="w-6 h-6 text-sky-600" />,
     },
   ];
@@ -27,12 +27,11 @@ const UniqueCourseSection = () => {
     <section className="bg-white py-16 px-6 md:px-10 lg:px-20">
       <div className="max-w-6xl mx-auto text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold text-sky-600">
-          What Makes Our “25-hrs Yoga Anatomy for a Safe Journey” Course Unique?
+          What Makes Our “95-Hrs Yoga Courses / Kids Yoga Course” Unique?
         </h2>
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm md:text-base">
-          Dive deep into the foundations of safe movement and mindful practice.
-          This course offers insights into the human body through the lens of yoga,
-          equipping you with essential anatomical knowledge for safer, more effective teaching and practice.
+          Train to become an inspiring kids yoga teacher with our 95-hour Kids Yoga Course.  
+          Learn playful and effective methods designed to engage children, promoting health, mindfulness, and joy.
         </p>
       </div>
 

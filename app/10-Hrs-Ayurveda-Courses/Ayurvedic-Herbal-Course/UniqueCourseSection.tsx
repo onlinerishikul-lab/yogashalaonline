@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import { Leaf, Flask, Globe, HeartPulse } from "lucide-react";
+import { Leaf, FlaskConical, Globe, HeartPulse } from "lucide-react"; // 👈 Updated Flask to FlaskConical
 
 const UniqueCourseSection = () => {
   const items = [
@@ -11,7 +11,7 @@ const UniqueCourseSection = () => {
     },
     {
       title: "Herbal Preparation Techniques",
-      icon: <Flask className="w-6 h-6 text-sky-600" />,
+      icon: <FlaskConical className="w-6 h-6 text-sky-600" />, // 👈 Changed here too
     },
     {
       title: "Traditional Healing Practices",

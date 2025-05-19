@@ -37,19 +37,19 @@ export function Banner() {
       {/* Bottom Left Badges */}
       <div className="absolute bottom-4 left-4 z-20 flex flex-row gap-3">
         <Image
-          src="/rys300.png"
+          src="/rpys3.png"
           alt="RYS 300 Yoga Alliance"
           width={70}
           height={70}
         />
         <Image
-          src="/rys200.png"
+          src="/rpys2.png"
           alt="RYS 200 Yoga Alliance"
           width={70}
           height={70}
         />
         <Image
-          src="/rpys.png"
+          src="/rpys1.png"
           alt="RPYS Yoga Alliance"
           width={70}
           height={70}

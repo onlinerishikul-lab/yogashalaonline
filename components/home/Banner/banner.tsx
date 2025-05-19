@@ -1,14 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
-
-// Lazy load RysBadgeSection
-const RysBadgeSection = dynamic(
-  () => import("@/components/resgistered-badge-section"),
-  { ssr: false }
-);
 
 export function Banner() {
   const router = useRouter();

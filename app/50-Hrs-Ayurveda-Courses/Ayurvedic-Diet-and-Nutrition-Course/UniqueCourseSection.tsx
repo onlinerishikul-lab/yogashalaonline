@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import { BowlFood, Leaf, HeartPulse, BookOpen } from "lucide-react";
+import { Utensils, Leaf, HeartPulse, BookOpen } from "lucide-react"; // 👈 Replaced BowlFood with Utensils
 
 const UniqueCourseSection = () => {
   const items = [
@@ -11,7 +11,7 @@ const UniqueCourseSection = () => {
     },
     {
       title: "Personalized Diet Plans",
-      icon: <BowlFood className="w-6 h-6 text-sky-600" />,
+      icon: <Utensils className="w-6 h-6 text-sky-600" />, // 👈 Changed here
     },
     {
       title: "Herbal & Natural Food Remedies",

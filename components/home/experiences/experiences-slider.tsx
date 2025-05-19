@@ -43,28 +43,24 @@ const testimonials = [
 export default function TestimonialSlider() {
   return (
     <div className="bg-[#4377B2] w-full flex flex-col items-center justify-center">
-      <div className="w-full flex flex-col items-center justify-center px-4 py-12">
+      <div className="w-full flex flex-col items-center justify-center px-4 py-12 relative max-w-7xl mx-auto">
         <div
-          className="bg-[#333333] text-white text-[10px] md:text-xs py-4 px-2 md:px-4 uppercase tracking-wider font-medium absolute left-0"
-          style={{
-            writingMode: "vertical-rl",
-            textOrientation: "mixed",
-            transform: "rotate(180deg)",
-          }}
+          className={`${styles.verticalLabel} text-white text-[10px] md:text-xs uppercase tracking-wider font-medium`}
           role="complementary"
         >
           STUDENT CORNER
         </div>
 
-        <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4 md:px-6 text-center max-w-[80%]">
+        <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4 md:px-6 text-center max-w-[80%] mx-auto">
           Straight from Our Trainees: Experiences That Inspire
         </h2>
-        <p className="text-white text-center text-sm md:text-base mb-10 max-w-[80%]">
-          Read through our student comments to see why they love learning with us and how we can help you achieve your goals through yoga teaching.
+        <p className="text-white text-center text-sm md:text-base mb-10 max-w-[80%] mx-auto">
+          Read through our student comments to see why they love learning with
+          us and how we can help you achieve your goals through yoga teaching.
         </p>
       </div>
 
-      <div className="w-full relative px-4 pb-12">
+      <div className="w-full relative px-4 pb-16 max-w-7xl mx-auto">
         <Swiper
           effect="coverflow"
           centeredSlides={true}
@@ -83,12 +79,19 @@ export default function TestimonialSlider() {
           breakpoints={{
             0: {
               slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 1.2,
+              spaceBetween: 20,
             },
             768: {
               slidesPerView: 1.5,
+              spaceBetween: 30,
             },
             1024: {
-              slidesPerView: 1.5,
+              slidesPerView: 2,
+              spaceBetween: 40,
             },
           }}
           autoplay={{
@@ -99,7 +102,7 @@ export default function TestimonialSlider() {
           className="testimonial-swiper"
         >
           {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={index} className="opacity-70">
+            <SwiperSlide key={index} className="testimonial-slide">
               <div className="bg-[#2A2A2A] rounded-2xl p-6 md:p-8 shadow-lg transition-all duration-500">
                 <div className="text-[#FF6B35] text-4xl md:text-6xl font-serif mb-6 flex justify-between">
                   <div className="flex items-center gap-4">
@@ -125,16 +128,18 @@ export default function TestimonialSlider() {
           ))}
         </Swiper>
 
-        <div className={`${styles.swiperButtonLeft} swiper-button-prev`}>
-          <span className="custom-prev-icon">
-            <ArrowLeft size={32} color="#fff" />
-          </span>
-        </div>
-        <div className={`${styles.swiperButtonRight} swiper-button-next`}>
-          <span className="custom-next-icon">
-            <ArrowRight size={32} color="#fff" />
-          </span>
-        </div>
+        <button
+          aria-label="Previous testimonial"
+          className={`${styles.swiperButtonLeft} swiper-button-prev`}
+        >
+          <ArrowLeft size={32} color="#fff" />
+        </button>
+        <button
+          aria-label="Next testimonial"
+          className={`${styles.swiperButtonRight} swiper-button-next`}
+        >
+          <ArrowRight size={32} color="#fff" />
+        </button>
       </div>
     </div>
   );

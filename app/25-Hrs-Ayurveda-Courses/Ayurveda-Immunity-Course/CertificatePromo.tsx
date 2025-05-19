@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +13,7 @@ const CertificatePromo = () => {
             Ready to Begin Your <br /> 25-Hrs Ayurveda Immunity Course?
           </h2>
           <p className="text-lg mb-8 text-[#f9fafb]">
-            Strengthen your body's natural defenses with our comprehensive Ayurveda Immunity Course. 
+            Strengthen your body&rsquo;s natural defenses with our comprehensive Ayurveda Immunity Course. 
             Complete this 25-hour online program and earn your certificate as a mark of your commitment 
             to holistic health.
           </p>

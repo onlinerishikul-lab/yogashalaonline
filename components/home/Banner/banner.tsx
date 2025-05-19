@@ -26,20 +26,22 @@ export function Banner() {
       />
 
       {/* Center Content */}
-      <div className="relative z-10 h-full w-full flex flex-col justify-center items-center text-center px-6 sm:px-10 md:px-20 py-12">
-        <h1 className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight text-white">
-          <span className="text-[#4377B2] block">Online Yoga Teacher Training:</span>
-          <span className="text-white font-normal block mt-2">
-            Become a Certified Yoga Teacher
-          </span>
-        </h1>
+      <div className="relative z-10 h-full w-full flex flex-col justify-center items-center text-center px-4 sm:px-8 md:px-12 py-12">
+        <div className="max-w-3xl">
+          <h1 className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight text-white">
+            <span className="text-[#4377B2] block">Online Yoga Teacher Training:</span>
+            <span className="text-white font-normal block mt-2">
+              Become a Certified Yoga Teacher
+            </span>
+          </h1>
 
-        <Button
-          className="bg-[#4377B2] px-6 py-3 sm:py-4 text-sm sm:text-base md:text-lg hover:bg-[#285384] rounded-full transition"
-          onClick={() => router.push("/courses")}
-        >
-          Start Your Journey Today
-        </Button>
+          <Button
+            className="mx-auto bg-[#4377B2] px-6 py-3 sm:py-4 text-sm sm:text-base md:text-lg hover:bg-[#285384] rounded-full transition"
+            onClick={() => router.push("/courses")}
+          >
+            Start Your Journey Today
+          </Button>
+        </div>
       </div>
 
       {/* Bottom Badge Section */}

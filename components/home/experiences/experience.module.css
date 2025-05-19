@@ -1,15 +1,56 @@
-.swiperButtonRight::after, .swiperButtonLeft::after{
-    display: none;
-}
-.swiperButtonRight{
-    bottom: -20% !important;
-    left: 51% !important;
-    top: unset !important;
+/* Hide default Swiper arrow after content */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
 }
 
-.swiperButtonLeft{
-    bottom: -20% !important;
-    right: 51% !important;
-    left: unset !important;
-    top: unset !important;
+/* Position left navigation button */
+.swiperButtonLeft {
+  position: absolute;
+  bottom: -40px;
+  right: 51%;
+  left: unset !important;
+  top: unset !important;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+.swiperButtonLeft:hover {
+  transform: scale(1.1);
+}
+
+/* Position right navigation button */
+.swiperButtonRight {
+  position: absolute;
+  bottom: -40px;
+  left: 51%;
+  top: unset !important;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+.swiperButtonRight:hover {
+  transform: scale(1.1);
+}
+
+/* Vertical label styling */
+.verticalLabel {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Slide opacity */
+.testimonial-slide {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.testimonial-slide.swiper-slide-active {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease;
 }

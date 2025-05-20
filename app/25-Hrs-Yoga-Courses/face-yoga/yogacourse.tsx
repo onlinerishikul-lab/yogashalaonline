@@ -23,7 +23,7 @@ const PricingCard = ({
   price: string;
   note: string;
 }) => (
-  <div className="flex flex-col justify-between border border-[#4377b2] rounded-xl p-4 bg-white shadow-md w-[240px] transition hover:shadow-lg">
+  <div className="flex flex-col justify-between border border-[#4377b2] rounded-xl p-4 bg-white shadow-md w-full sm:w-[260px] transition hover:shadow-lg">
     <div>
       <h3 className="text-sm font-semibold text-[#4377b2] mb-1">{title}</h3>
       <p className="text-xs mb-2 text-gray-700">{description}</p>
@@ -66,7 +66,6 @@ const PricingOptions = () => (
     />
   </div>
 );
-
 // Risk-Free Guarantee Section
 const RiskFreeGuarantee = () => (
   <section className="w-full flex justify-center py-12 px-4 bg-white">

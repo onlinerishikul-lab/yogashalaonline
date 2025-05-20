@@ -26,27 +26,29 @@ const CourseDetails = () => {
   ];
 
   return (
-    <section className="bg-[#f9fafb] text-[#4377b2] py-20 px-6">
+    <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
           What Will You Learn?
         </h2>
-        <p className="mb-10 max-w-2xl mx-auto text-lg leading-relaxed text-[#4377b2]/90">
+        <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
           Dive deep into yoga anatomy and biomechanics to build a safe, confident, and informed personal or teaching practice.
         </p>
-        <button className="mb-12 border-2 border-[#4377b2] text-[#4377b2] font-semibold px-8 py-3 rounded-full hover:bg-[#4377b2] hover:text-white transition">
+        <button className="mb-12 border-2 border-[#4377b2] text-[#4377b2] font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-[#4377b2] hover:text-white transition text-sm sm:text-base">
           Enroll Now
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (
             <div
               key={feature.id}
               className="flex items-start gap-4 bg-white p-5 rounded-xl shadow hover:shadow-lg transition"
             >
-              <div className="text-2xl text-[#4377b2] mt-1">{feature.icon}</div>
+              <div className="text-2xl text-[#4377b2] mt-1 shrink-0">
+                {feature.icon}
+              </div>
               <div>
-                <h3 className="font-semibold text-lg mb-1">
+                <h3 className="font-semibold text-base sm:text-lg mb-1">
                   {feature.id}. {feature.title}
                 </h3>
                 <p className="text-sm text-[#4377b2]/80">

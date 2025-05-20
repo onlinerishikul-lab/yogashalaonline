@@ -36,11 +36,11 @@ const UniqueCourseSection = () => {
         </p>
       </div>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center gap-4 px-4 sm:px-6 md:px-2"
+            className="flex flex-col items-center justify-center gap-4 px-2 sm:px-6 md:px-2"
           >
             <div className="bg-sky-100 p-5 rounded-full shadow-md flex items-center justify-center transition-transform duration-300 hover:scale-110">
               {item.icon}

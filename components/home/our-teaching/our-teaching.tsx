@@ -31,38 +31,44 @@ const OurTeaching = () => {
   ];
 
   return (
-    <div className="bg-[#4377B2] bg-cover flex justify-center px-6">
-      <div className="container mx-auto py-14 text-white w-full">
-        <h1 className="mb-10 text-4xl font-bold md:text-left text-center">Our Teaching Approach</h1>
-        <div className="flex flex-col w-full gap-10">
+    <section className="bg-[#4377B2] text-white px-4 md:px-6 py-12 lg:py-20">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-3xl md:text-4xl font-bold text-center md:text-left mb-10">
+          Our Teaching Approach
+        </h1>
+        <div className="flex flex-col gap-14">
           {tempContent.map((item, index) => (
             <div
               key={item.id}
-              className={`flex flex-col-reverse md:flex-row items-center gap-6 ${
-                index % 2 !== 0 ? "md:flex-row-reverse" : ""
-              }`}
+              className={`flex flex-col ${
+                index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
+              } items-center gap-8`}
             >
-              {/* Text Section */}
-              <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left px-4">
-                <h2 className="text-2xl md:text-4xl font-semibold mb-4">{item.heading}</h2>
-                <p className="text-base text-justify">{item.text}</p>
+              {/* Text */}
+              <div className="w-full md:w-1/2 px-2 md:px-4 text-center md:text-left">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+                  {item.heading}
+                </h2>
+                <p className="text-base leading-relaxed text-justify">
+                  {item.text}
+                </p>
               </div>
 
-              {/* Image Section */}
+              {/* Image */}
               <div className="w-full md:w-1/2 flex justify-center md:justify-center">
                 <Image
-                  alt={item.heading}
                   src={item.image}
+                  alt={item.heading}
                   width={500}
                   height={300}
-                  className="rounded-[25px] shadow-lg object-cover w-[300px] sm:w-[350px] md:w-[400px] lg:w-[500px] h-auto"
+                  className="rounded-[20px] shadow-lg object-cover w-full max-w-[500px] h-auto"
                 />
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

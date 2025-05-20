@@ -45,7 +45,7 @@ const PricingCard = ({
 
 // Pricing Section Container
 const PricingOptions = () => (
-  <div className="flex flex-nowrap justify-center items-start gap-4 overflow-x-auto pb-2">
+  <div className="flex flex-col sm:flex-row justify-center items-center sm:items-stretch sm:gap-4 gap-6 w-full">
     <PricingCard
       title="One-Time Payment"
       description="Pay once and get full access."

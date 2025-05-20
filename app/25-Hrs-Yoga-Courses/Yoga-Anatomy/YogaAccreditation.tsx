@@ -11,7 +11,7 @@ const YogaAccreditation = () => {
         <div className="flex flex-wrap justify-center items-center gap-6 mb-10">
           <div className="w-36 sm:w-40 md:w-44 lg:w-48 relative">
             <Image
-              src="/rpys.png"
+              src="/rpys1.png"
               alt="Yoga Alliance Certification 1"
               width={160}
               height={120}
@@ -21,7 +21,7 @@ const YogaAccreditation = () => {
           </div>
           <div className="w-36 sm:w-40 md:w-44 lg:w-48 relative">
             <Image
-              src="/rys-200.png"
+              src="/rpys2.png"
               alt="Yoga Alliance Certification 2"
               width={160}
               height={120}
@@ -31,7 +31,7 @@ const YogaAccreditation = () => {
           </div>
           <div className="w-36 sm:w-40 md:w-44 lg:w-48 relative">
             <Image
-              src="/rys-300.png"
+              src="/rpys3.png"
               alt="Yoga Alliance Certification 3"
               width={160}
               height={120}

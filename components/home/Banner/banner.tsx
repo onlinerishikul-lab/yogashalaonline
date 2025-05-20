@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 
 export function Banner() {
   const router = useRouter();
-
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Image */}

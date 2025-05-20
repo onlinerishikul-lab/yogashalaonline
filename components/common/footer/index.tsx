@@ -2,7 +2,6 @@ import { Instagram, Send, Facebook } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
 export const SiteFooter = () => {
   return (
     <footer className="bg-[#4377B2] bg-cover flex justify-center">

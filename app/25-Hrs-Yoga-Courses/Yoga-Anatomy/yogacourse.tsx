@@ -23,7 +23,7 @@ const PricingCard = ({
   price: string;
   note: string;
 }) => (
-  <div className="flex flex-col justify-between border border-[#4377b2] rounded-xl p-6 bg-white shadow-md min-w-[220px] max-w-xs transition hover:shadow-lg flex-shrink-0">
+  <div className="flex flex-col justify-between border border-[#4377b2] rounded-xl p-6 bg-white shadow-md w-full sm:w-[300px] md:w-[280px] lg:w-[250px] transition hover:shadow-lg">
     <div>
       <h3 className="text-base font-semibold text-[#4377b2] mb-2">{title}</h3>
       <p className="text-sm mb-3 text-gray-700">{description}</p>
@@ -43,9 +43,9 @@ const PricingCard = ({
   </div>
 );
 
-// Pricing Section Container
+// Pricing Section Container (updated to be responsive without scrollbar)
 const PricingOptions = () => (
-  <div className="flex flex-nowrap justify-start items-start gap-6 overflow-x-auto no-scrollbar px-2 sm:px-4 md:px-0">
+  <div className="flex flex-wrap justify-center gap-6">
     <PricingCard
       title="One-Time Payment"
       description="Pay once and get full access."

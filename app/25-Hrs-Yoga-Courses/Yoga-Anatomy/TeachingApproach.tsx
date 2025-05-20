@@ -36,9 +36,36 @@ export default function TeachingApproach() {
         Our Yoga Teaching Approach
       </h2>
 
-      <div className="flex flex-col md:flex-row md:justify-between items-center w-full max-w-6xl gap-10">
+      {/* Mobile: All points stacked */}
+      <div className="flex flex-col space-y-6 max-w-xl w-full md:hidden mb-12">
+        {points.map((point) => (
+          <div
+            key={point.number}
+            className="bg-white p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition duration-200"
+          >
+            <div className="w-7 h-7 flex items-center justify-center bg-[#4377b2] text-white text-sm font-bold rounded-full">
+              {point.number}
+            </div>
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{point.text}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Image below points on mobile */}
+      <div className="relative w-[280px] md:w-[380px] lg:w-[420px] mx-auto md:mx-0 mb-12 md:mb-0 md:hidden">
+        <Image
+          src="/teaching-image.jpg"
+          alt="Yoga Teaching"
+          width={400}
+          height={500}
+          className="rounded-[24px] shadow-xl object-cover w-full h-auto transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+
+      {/* Desktop and Tablet layout */}
+      <div className="hidden md:flex md:flex-row md:justify-between items-center w-full max-w-6xl gap-10">
         {/* Left Column */}
-        <div className="flex flex-col space-y-6 w-full md:w-1/3">
+        <div className="flex flex-col space-y-6 w-1/3">
           {points.slice(0, 3).map((point) => (
             <div
               key={point.number}
@@ -47,13 +74,13 @@ export default function TeachingApproach() {
               <div className="w-7 h-7 flex items-center justify-center bg-[#4377b2] text-white text-sm font-bold rounded-full">
                 {point.number}
               </div>
-              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{point.text}</p>
+              <p className="text-base text-gray-700 leading-relaxed">{point.text}</p>
             </div>
           ))}
         </div>
 
         {/* Center Image */}
-        <div className="relative w-[280px] md:w-[380px] lg:w-[420px] mx-auto md:mx-0">
+        <div className="relative w-[380px] lg:w-[420px] mx-auto">
           <Image
             src="/teaching-image.jpg"
             alt="Yoga Teaching"
@@ -64,7 +91,7 @@ export default function TeachingApproach() {
         </div>
 
         {/* Right Column */}
-        <div className="flex flex-col space-y-6 w-full md:w-1/3">
+        <div className="flex flex-col space-y-6 w-1/3">
           {points.slice(3).map((point) => (
             <div
               key={point.number}
@@ -73,7 +100,7 @@ export default function TeachingApproach() {
               <div className="w-7 h-7 flex items-center justify-center bg-[#4377b2] text-white text-sm font-bold rounded-full">
                 {point.number}
               </div>
-              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{point.text}</p>
+              <p className="text-base text-gray-700 leading-relaxed">{point.text}</p>
             </div>
           ))}
         </div>

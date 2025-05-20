@@ -31,56 +31,56 @@ const points = [
 
 export default function TeachingApproach() {
   return (
-    <section className="relative bg-[#f5f5f5] text-[#101828] py-16 flex flex-col items-center overflow-hidden">
-      <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-10">
+    <section className="relative bg-[#f5f5f5] text-[#101828] py-16 flex flex-col items-center overflow-hidden px-4 sm:px-6">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-12 text-center">
         Our Yoga Teaching Approach
       </h2>
 
-      <div className="flex flex-col items-center md:flex-row md:justify-center w-full max-w-6xl px-4">
-        {/* Left Side */}
-        <div className="flex flex-col space-y-6 w-full md:w-1/3 z-10">
+      <div className="flex flex-col md:flex-row md:justify-between items-center w-full max-w-6xl gap-10">
+        {/* Left Column */}
+        <div className="flex flex-col space-y-6 w-full md:w-1/3">
           {points.slice(0, 3).map((point) => (
             <div
               key={point.number}
-              className="bg-white p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition"
+              className="bg-white p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition duration-200"
             >
               <div className="w-7 h-7 flex items-center justify-center bg-[#4377b2] text-white text-sm font-bold rounded-full">
                 {point.number}
               </div>
-              <p className="text-sm leading-relaxed text-gray-700">{point.text}</p>
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{point.text}</p>
             </div>
           ))}
         </div>
 
         {/* Center Image */}
-        <div className="relative w-[280px] md:w-[400px] mx-4 my-10 md:my-0 z-0">
+        <div className="relative w-[280px] md:w-[380px] lg:w-[420px] mx-auto md:mx-0">
           <Image
-            src="/teaching-image.jpg" // Replace with a relevant yoga image
+            src="/teaching-image.jpg"
             alt="Yoga Teaching"
             width={400}
             height={500}
-            className="rounded-[24px] shadow-2xl object-cover w-full h-auto"
+            className="rounded-[24px] shadow-xl object-cover w-full h-auto transition-transform duration-300 hover:scale-105"
           />
         </div>
 
-        {/* Right Side */}
-        <div className="flex flex-col space-y-6 w-full md:w-1/3 z-10">
+        {/* Right Column */}
+        <div className="flex flex-col space-y-6 w-full md:w-1/3">
           {points.slice(3).map((point) => (
             <div
               key={point.number}
-              className="bg-white p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition"
+              className="bg-white p-5 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-lg transition duration-200"
             >
               <div className="w-7 h-7 flex items-center justify-center bg-[#4377b2] text-white text-sm font-bold rounded-full">
                 {point.number}
               </div>
-              <p className="text-sm leading-relaxed text-gray-700">{point.text}</p>
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{point.text}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Call to Action Button */}
-      <button className="mt-10 bg-[#4377b2] hover:bg-[#365f91] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg transition-transform transform hover:scale-105">
+      {/* CTA Button */}
+      <button className="mt-12 bg-[#4377b2] hover:bg-[#365f91] text-white px-8 py-3 rounded-full text-sm sm:text-base font-semibold shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#4377b2] focus:ring-offset-2">
         Enroll in the 25-hr Course
       </button>
 

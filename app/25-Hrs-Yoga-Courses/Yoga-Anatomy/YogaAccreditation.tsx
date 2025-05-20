@@ -39,6 +39,16 @@ const YogaAccreditation = () => {
               priority
             />
           </div>
+           <div className="w-36 sm:w-40 md:w-44 lg:w-48 relative">
+            <Image
+              src="/rpys4.jpg"
+              alt="Yoga Alliance Certification 3"
+              width={160}
+              height={120}
+              className="object-contain hover:scale-105 transition-transform duration-300"
+              priority
+            />
+          </div>
         </div>
 
         {/* Heading and Description */}

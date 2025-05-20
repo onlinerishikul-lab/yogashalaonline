@@ -13,8 +13,8 @@ const YogaAccreditation = () => {
             <Image
               src="/rpys.png"
               alt="Yoga Alliance Certification 1"
-              width={192}
-              height={144}
+              width={160}
+              height={120}
               className="object-contain rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
               priority
             />
@@ -23,9 +23,9 @@ const YogaAccreditation = () => {
             <Image
               src="/rys-200.png"
               alt="Yoga Alliance Certification 2"
-              width={192}
-              height={144}
-              className="object-contain rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+              width={160}
+              height={120}
+              className="object-contain  hover:scale-105 transition-transform duration-300"
               priority
             />
           </div>
@@ -33,9 +33,9 @@ const YogaAccreditation = () => {
             <Image
               src="/rys-300.png"
               alt="Yoga Alliance Certification 3"
-              width={192}
-              height={144}
-              className="object-contain rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+              width={160}
+              height={120}
+              className="object-contain hover:scale-105 transition-transform duration-300"
               priority
             />
           </div>

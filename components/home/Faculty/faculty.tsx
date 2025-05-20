@@ -58,7 +58,7 @@ const Faculty = () => {
                     src={trainer.image}
                     alt={trainer.name}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </button>
               ))}
@@ -86,7 +86,7 @@ const Faculty = () => {
                 src={selectedTrainer.image}
                 alt={selectedTrainer.name}
                 fill
-                className="object-cover transition-opacity duration-300"
+                className="object-cover object-top transition-opacity duration-300"
               />
             </div>
           </div>

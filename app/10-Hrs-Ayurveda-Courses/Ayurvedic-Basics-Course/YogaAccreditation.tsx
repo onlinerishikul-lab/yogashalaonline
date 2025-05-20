@@ -9,9 +9,9 @@ return (
 <div className="max-w-6xl mx-auto">
 {/* Horizontal Image Section */}
 <div className="flex flex-wrap justify-center items-center gap-6 mb-10">
-<Image src="/rpys.png" alt="Yoga Alliance Certification 1" width={160} height={120} className="w-auto h-auto max-w-full" />
-<Image src="/rys-200.png" alt="Yoga Alliance Certification 2" width={160} height={120} className="w-auto h-auto max-w-full" />
-<Image src="/rys-300.png" alt="Yoga Alliance Certification 3" width={160} height={120} className="w-auto h-auto max-w-full" />
+<Image src="/rpys1.png" alt="Yoga Alliance Certification 1" width={160} height={120} className="w-auto h-auto max-w-full" />
+<Image src="/rpys2png" alt="Yoga Alliance Certification 2" width={160} height={120} className="w-auto h-auto max-w-full" />
+<Image src="/rpys3.png" alt="Yoga Alliance Certification 3" width={160} height={120} className="w-auto h-auto max-w-full" />
 </div>
   {/* Heading and Description */}
     <h2 className="text-3xl md:text-4xl font-bold text-sky-600 mb-6">

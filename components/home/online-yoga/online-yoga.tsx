@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 
 const onlineYogaSchema = z.object({
@@ -34,19 +34,23 @@ const OnlineYoga = () => {
   };
 
   return (
-    <div className="w-full m-0 p-0">
+    <div className="w-full p-0 m-0">
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className='h-[200px] bg-[url("/assets/contact-image.png")] bg-cover w-full md:h-auto'></div>
-        <div className="bg-[#4377B2] p-4 md:p-12 flex items-center">
-          <div className='w-full bg-[url("/assets/yogavector.png")] bg-center bg-contain bg-no-repeat'>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <h1 className="uppercase font-bold text-white text-xl">
+        {/* Left Image Section */}
+        <div className='h-[200px] md:h-auto bg-[url("/assets/contact-image.png")] bg-cover bg-center w-full' />
+
+        {/* Form Section */}
+        <div className="bg-[#4377B2] p-6 sm:p-10 md:p-12 flex items-center justify-center">
+          <div className='w-full max-w-xl bg-[url("/assets/yogavector.png")] bg-no-repeat bg-contain bg-center'>
+            <form onSubmit={handleSubmit(onSubmit)} className="backdrop-blur-sm bg-[#4377B2]/70 p-4 md:p-6">
+              <h1 className="uppercase font-bold text-white text-lg md:text-xl">
                 Want to learn more about our Yoga Teacher Training? Just fill
                 out the form below, and we&apos;ll provide you with all the
                 details.
               </h1>
 
-              <div className="grid grid-cols-1 gap-2 pt-4 md:w-3/4">
+              {/* Name Field */}
+              <div className="pt-4">
                 <label
                   htmlFor="name"
                   className="text-white text-base font-semibold uppercase"
@@ -57,16 +61,17 @@ const OnlineYoga = () => {
                   {...register("name")}
                   type="text"
                   id="name"
-                  className="outline-none p-1 bg-transparent text-white border-white border-2"
+                  className="w-full outline-none p-2 bg-transparent text-white border-white border-2 rounded mt-1"
                 />
                 {errors.name && (
-                  <span className="text-white text-sm">
+                  <p className="text-white text-sm mt-1">
                     {errors.name.message}
-                  </span>
+                  </p>
                 )}
               </div>
 
-              <div className="grid grid-cols-1 gap-2 pt-4 md:w-3/4">
+              {/* Email Field */}
+              <div className="pt-4">
                 <label
                   htmlFor="email"
                   className="text-white text-base font-semibold uppercase"
@@ -77,16 +82,17 @@ const OnlineYoga = () => {
                   {...register("email")}
                   type="email"
                   id="email"
-                  className="outline-none p-1 bg-transparent text-white border-white border-2"
+                  className="w-full outline-none p-2 bg-transparent text-white border-white border-2 rounded mt-1"
                 />
                 {errors.email && (
-                  <span className="text-white text-sm">
+                  <p className="text-white text-sm mt-1">
                     {errors.email.message}
-                  </span>
+                  </p>
                 )}
               </div>
 
-              <div className="grid grid-cols-1 gap-2 pt-4 md:w-3/4">
+              {/* Phone Number Field */}
+              <div className="pt-4">
                 <label
                   htmlFor="phoneNumber"
                   className="text-white text-base font-semibold uppercase"
@@ -97,19 +103,20 @@ const OnlineYoga = () => {
                   {...register("phoneNumber")}
                   type="tel"
                   id="phoneNumber"
-                  className="outline-none p-1 bg-transparent text-white border-white border-2"
+                  className="w-full outline-none p-2 bg-transparent text-white border-white border-2 rounded mt-1"
                 />
                 {errors.phoneNumber && (
-                  <span className="text-white text-sm">
+                  <p className="text-white text-sm mt-1">
                     {errors.phoneNumber.message}
-                  </span>
+                  </p>
                 )}
               </div>
 
-              <div className="grid grid-cols-1 gap-2 pt-4">
+              {/* Submit Button */}
+              <div className="pt-6">
                 <Button
                   type="submit"
-                  className="bg-white text-[#4377B2] py-3 text-xl font-semibold md:w-min md:px-5 rounded-none"
+                  className="bg-white text-[#4377B2] text-lg font-semibold py-3 px-6 rounded-full hover:bg-gray-200 transition-colors"
                 >
                   Start now
                 </Button>

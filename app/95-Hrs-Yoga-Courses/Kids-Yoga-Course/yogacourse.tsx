@@ -23,7 +23,7 @@ const PricingCard = ({
   price: string;
   note: string;
 }) => (
-  <div className="flex flex-col justify-between border border-[#4377b2] rounded-xl p-4 bg-white shadow-md w-[240px] transition hover:shadow-lg">
+  <div className="flex flex-col justify-between border border-[#4377b2] rounded-xl p-4 bg-white shadow-md w-full sm:w-[260px] transition hover:shadow-lg">
     <div>
       <h3 className="text-sm font-semibold text-[#4377b2] mb-1">{title}</h3>
       <p className="text-xs mb-2 text-gray-700">{description}</p>
@@ -45,23 +45,23 @@ const PricingCard = ({
 
 // Pricing Section Container
 const PricingOptions = () => (
-  <div className="flex flex-nowrap justify-center items-start gap-4 overflow-x-auto pb-2">
+  <div className="flex flex-col sm:flex-row justify-center items-center sm:items-stretch sm:gap-4 gap-6 w-full">
     <PricingCard
       title="One-Time Payment"
       description="Pay once and get full access."
-      price="$855.00"
+      price="$250.00"
       note="One-time payment"
     />
     <PricingCard
       title="Two-Part Installments"
       description="Split into two monthly payments."
-      price="$427.50 x 2"
+      price="$125.00 x 2"
       note="Billed monthly"
     />
     <PricingCard
       title="Three-Part Installments"
       description="Split into three monthly payments."
-      price="$285.00 x 3"
+      price="$85.00 x 3"
       note="Billed monthly"
     />
   </div>

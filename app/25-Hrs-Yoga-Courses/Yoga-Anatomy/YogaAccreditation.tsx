@@ -15,7 +15,7 @@ const YogaAccreditation = () => {
               alt="Yoga Alliance Certification 1"
               width={160}
               height={120}
-              className="object-contain rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+              className="object-contain hover:scale-105 transition-transform duration-300"
               priority
             />
           </div>

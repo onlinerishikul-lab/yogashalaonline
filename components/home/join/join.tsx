@@ -8,33 +8,31 @@ const Join = () => {
   };
 
   return (
-    <div className="relative flex justify-center px-2 overflow-hidden">
-      {/* Background image layer */}
-      <Image
-        src="/assets/join.jpg" // Ensure this path points to the correct image in /public
-        alt="Join background"
-        fill
-        className="object-cover"
-        priority
-      />
+    <div className="relative w-full min-h-[400px] flex justify-center items-center px-4 py-12">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/assets/join.jpg" // Place your image inside /public/assets/join.jpg
+          alt="Join background"
+          fill
+          className="object-cover w-full h-full"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40 z-10" />
+      </div>
 
-      {/* Optional overlay for text readability */}
-      <div className="absolute inset-0 bg-black/25" />
-
-      {/* Content layer */}
-      <div className="relative max-w-screen-2xl w-full py-12 px-6">
-        <div className="md:w-2/4">
-          <h2 className="text-white md:text-4xl text-2xl font-bold uppercase">
+      {/* Content */}
+      <div className="relative z-20 max-w-4xl w-full text-center md:text-left">
+        <div className="md:max-w-xl mx-auto md:mx-0">
+          <h2 className="text-white text-2xl md:text-4xl font-bold uppercase">
             Join Our WhatsApp Community
           </h2>
-          <p className="text-white mt-4 text-lg">
-            Get ready to connect with fellow yoga enthusiasts, receive course
-            updates, and engage in meaningful discussions. Click below to join
-            our exclusive WhatsApp group and be part of the journey!
+          <p className="text-white mt-4 text-base md:text-lg">
+            Get ready to connect with fellow yoga enthusiasts, receive course updates, and engage in meaningful discussions. Click below to join our exclusive WhatsApp group and be part of the journey!
           </p>
           <button
             onClick={handleJoinClick}
-            className="text-white font-semibold uppercase mt-5 py-3 px-6 rounded-full bg-[#4377B2] hover:bg-[#c94d24] transition-colors"
+            className="mt-6 inline-block bg-[#4377B2] hover:bg-[#c94d24] text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
           >
             Join Us Today
           </button>

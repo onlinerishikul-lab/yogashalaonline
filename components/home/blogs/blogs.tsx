@@ -49,7 +49,7 @@ const Blogs = ({ blogs }: BlogsProps) => {
 
                 <Link href={`/blog/${blog.slug}`} passHref>
                   <button className="mt-auto w-full text-white bg-[#4377B2] hover:bg-[#365f8e] transition-colors font-semibold py-2 px-4 rounded-full">
-                    Read Blog
+                    Read more
                   </button>
                 </Link>
               </div>

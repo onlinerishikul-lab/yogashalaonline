@@ -9,7 +9,7 @@ const points = [
   },
   {
     number: '2',
-    text: 'Step-by-step anatomical guidance tailored to a 25-hour progressive learning plan.',
+    text: 'Step-by-step anatomical guidance tailored to a  progressive learning plan.',
   },
   {
     number: '3',

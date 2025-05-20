@@ -20,7 +20,7 @@ export default function TestimonialView({
 }) {
   return (
     <section className="overflow-x-hidden py-5">
-      <h2 className="text-4xl font-bold text-center text-[#4377B2] capitalize py-8">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#4377B2] capitalize py-8">
         {title}
       </h2>
 
@@ -30,31 +30,31 @@ export default function TestimonialView({
           initial={{ x: 0 }}
           animate={{ x: `-${10 * TESTIMONIALS.length}%` }}
           transition={{
-            duration: 10,
+            duration: 20,
             ease: "linear",
             repeat: Infinity,
           }}
-          whileHover={{ animationPlayState: "paused" }}
         >
-          <ul
-            className={`flex gap-10 ${styles.marquee__list} ${styles.marquee}`}
-          >
+          <ul className={`flex gap-6 sm:gap-10 ${styles.marquee__list}`}>
             {duplicatedTestimonials.map((testimonial, index) => (
-              <div className="max-w-md mx-auto my-4" key={index}>
+              <li
+                key={index}
+                className="flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[400px] mx-auto my-4"
+              >
                 <div
-                  className={`bg-[#F5F2ED] rounded-2xl ${
-                    tilt ? "rotate-[10deg]" : ""
-                  } p-8 w-[400px] relative`}
+                  className={`bg-[#F5F2ED] rounded-2xl p-6 sm:p-8 relative ${
+                    tilt ? "rotate-[1deg] sm:rotate-[5deg] md:rotate-[10deg]" : ""
+                  }`}
                 >
-                  <div className="text-[#4377B2] text-8xl font-serif leading-none mb-4">
+                  <div className="text-[#4377B2] mb-4">
                     <Image
-                      src={`/assets/quote.png`}
+                      src="/assets/quote.png"
                       alt="Quote"
-                      width={50}
-                      height={50}
+                      width={40}
+                      height={40}
                     />
                   </div>
-                  <blockquote className="text-gray-800 text-2xl text-left font-medium leading-relaxed mb-6 line-clamp-5">
+                  <blockquote className="text-gray-800 text-base sm:text-xl font-medium leading-relaxed mb-6 line-clamp-5 text-left">
                     {testimonial.quote}
                   </blockquote>
                   <div className="text-gray-600 text-sm text-left">
@@ -64,7 +64,7 @@ export default function TestimonialView({
                     <p className="text-gray-500">{testimonial.context}</p>
                   </div>
                 </div>
-              </div>
+              </li>
             ))}
           </ul>
         </motion.div>

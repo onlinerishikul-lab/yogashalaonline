@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-
 const uspContent = [
   {
     icon: "/assets/usp/f7_person-3.png",
@@ -20,38 +19,38 @@ const uspContent = [
   {
     icon: "/assets/usp/100+.svg",
     count: "100+ Countries",
-    text: "Unite Globally",
+    text: "unite globally",
   },
 ];
 
 const Usp = () => {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+    <div className="flex items-center justify-center container mx-auto   px-2 sm:px-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 w-full">
         {uspContent.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:scale-105 transition-transform duration-300"
+            className="flex flex-col items-center p-3 sm:p-4 lg:p-6 hover:transform hover:scale-105 transition-transform duration-300"
           >
-            <div className="bg-gradient-to-b from-[#4377B2] to-[#285384] rounded-full p-4 flex items-center justify-center mb-4">
+            <div className="bg-gradient-to-b from-[#4377B2] to-[#285384] rounded-full h-[80px] w-[80px] sm:h-[90px] sm:w-[90px] lg:h-[100px] lg:w-[100px] p-2 flex items-center justify-center mb-2 sm:mb-3">
               <Image
                 src={item.icon}
-                height={40}
-                width={40}
-                alt={`${item.count} - ${item.text}`}
-                className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14"
+                height={20}
+                width={20}
+                alt="usp icon"
+                className="w-[25px] h-[25px] sm:w-[30px] sm:h-[30px] lg:w-[40px] lg:h-[40px]"
               />
             </div>
-            <h2 className="text-[#4377B2] text-xl sm:text-2xl font-semibold text-center">
+            <h2 className="text-[#4377B2] text-xl sm:text-2xl lg:text-2xl font-semibold text-center">
               {item.count}
             </h2>
-            <p className="text-[#4377B2] text-sm sm:text-base font-semibold text-center mt-1">
+            <p className="text-[#4377B2] text-sm sm:text-base lg:text-base font-semibold text-center mt-1">
               {item.text}
             </p>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

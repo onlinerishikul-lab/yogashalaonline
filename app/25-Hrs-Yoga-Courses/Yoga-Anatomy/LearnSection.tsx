@@ -30,17 +30,19 @@ const LearnSection = () => {
   ];
 
   return (
-    <section className="bg-[#F5F5F5] p-6 md:p-12">
-      <div className="bg-white rounded-2xl p-6 md:p-12 flex flex-col md:flex-row gap-12">
+    <section className="bg-[#F5F5F5] px-4 sm:px-6 py-10 sm:py-16">
+      <div className="bg-white rounded-2xl px-6 sm:px-10 py-8 sm:py-12 max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
         {/* Left Content */}
         <div className="md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
             What You Will Learn
           </h2>
-          <p className="text-gray-500 mb-6">
-            Dive into essential anatomical knowledge that enhances your yoga teaching and personal practice—ensuring safety, awareness, and confidence.
+          <p className="text-gray-600 text-sm sm:text-base mb-6 leading-relaxed">
+            Dive into essential anatomical knowledge that enhances your yoga
+            teaching and personal practice—ensuring safety, awareness, and
+            confidence.
           </p>
-          <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
+          <button className="bg-[#4377b2] text-white text-sm sm:text-base font-medium rounded-full px-6 py-2 transition hover:bg-[#365f91] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4377b2]">
             Contact Us
           </button>
         </div>
@@ -62,7 +64,7 @@ const LearnSection = () => {
                 aria-expanded={active === index}
                 aria-controls={`topic-content-${index}`}
               >
-                <h3 className="font-semibold text-lg text-[#4377b2]">
+                <h3 className="font-semibold text-sm sm:text-base text-[#4377b2]">
                   {topic.title}
                 </h3>
                 {active === index ? (
@@ -71,14 +73,17 @@ const LearnSection = () => {
                   <Plus size={20} className="text-[#4377b2]" />
                 )}
               </div>
-              {active === index && (
-                <p
-                  id={`topic-content-${index}`}
-                  className="mt-2 text-gray-500 text-sm"
-                >
+
+              <div
+                id={`topic-content-${index}`}
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  active === index ? "max-h-40 mt-2" : "max-h-0"
+                }`}
+              >
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {topic.content}
                 </p>
-              )}
+              </div>
             </div>
           ))}
         </div>

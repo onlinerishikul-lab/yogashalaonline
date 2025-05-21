@@ -4,7 +4,7 @@ import { Header } from "@/components/common/header";
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-export default function Page() {
+export default function PaymentPage() {
   const [selectedPlan, setSelectedPlan] = useState('one-time');
   const [selectedCourse, setSelectedCourse] = useState('200-hour-yoga');
 

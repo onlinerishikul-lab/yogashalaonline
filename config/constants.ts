@@ -4,40 +4,46 @@ export const IMAGES = {
   };
   
 export const TESTIMONIALS = [
-    {
-        quote: "I never thought I could practice yoga effectively from home, but these online classes have completely changed my perspective. The instructors are amazing!",
-        name: "Sarah",
-        location: "United States",
-        context: "on online yoga experience"
-    },
-    {
-        quote: "I was sceptical about online yoga at first, but the interactive nature of the classes and the personalized feedback have made me a convert!",
-        name: "Carlos",
-        location: "Brazil",
-        context: "on interactive learning"
-    },
-    {
-        quote: "Living in a remote area, I never had access to quality yoga instruction before. These online classes have opened up a whole new world for me.",
-        name: "Olivia",
-        location: "Australia",
-        context: "on accessibility"
-    },
-    {
-        quote: "The variety of classes available is incredible. From beginner to advanced, there's something for everyone, no matter where you are on your yoga journey.",
-        name: "Yuki",
-        location: "Japan",
-        context: "on course variety"
-    },
-    {
-        quote: "I love how these online classes have connected me with a global community of yoga enthusiasts. It's inspiring to practice alongside people from all over the world.",
-        name: "Lena",
-        location: "Germany",
-        context: "on global community"
-    },
-    {
-        quote: "The set class times have helped me create a consistent yoga routine, which has been great for my overall well-being.",
-        name: "Nitu",
-        location: "India",
-        context: "on routine building"
-    }
-]
+  {
+    quote: "The school is amazing! The lineage of the teachers is incredible and the teachings are very traditional and complete. Super grateful of studying with them.",
+    name: "Alejandro Godinez",
+    location: "Mexico",
+    context: "on traditional teachings"
+  },
+  {
+    quote: "I recently completed the Prenatal Yoga course at Rishikul Yogshala and it was a truly enriching experience. The teachers were kind, knowledgeable, and supportive throughout.",
+    name: "Ramkishan Kugathas",
+    location: "Canada",
+    context: "on Prenatal Yoga course"
+  },
+  {
+    quote: "Very good school! They have provided detailed training. Teachers and instructor are well trained and knowledgeable.",
+    name: "Varsha Ambardekar",
+    location: "India",
+    context: "on detailed training"
+  },
+  {
+    quote: "Absolutely loved my experience at this yoga training school. The quality of the teachers is exceptional — each one brings deep knowledge and passion.",
+    name: "Charmaine Wardenberg",
+    location: "New Zealand",
+    context: "on instructor quality"
+  },
+  {
+    quote: "It was a very good experience overall. The teachers were very nice and the learning environment is very good.",
+    name: "Aurora Proyecto",
+    location: "Spain",
+    context: "on overall experience"
+  },
+  {
+    quote: "Rishikul Yogshala is a professionally run school for yoga teachers in Rishikesh. Everything oozes professionalism — from contact to certification.",
+    name: "Jan",
+    location: "Germany",
+    context: "on professionalism"
+  },
+  {
+    quote: "I truly enjoyed my 500 Hours program at Rishikul Yogshala. Beautiful spaces, beautiful teachers, beautiful teachings. It was the start of a beautiful career as a Yoga Teacher that will always stay in my heart.",
+    name: "Alchemy Of Fire",
+    location: "USA",
+    context: "on 500-hour YTT experience"
+  }
+];

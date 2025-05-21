@@ -53,6 +53,12 @@ export function Banner() {
           width={70}
           height={70}
         />
+        <Image
+          src="/rpys4.png"
+          alt="RYS 300 Yoga Alliance"
+          width={70}
+          height={70}
+        />
       </div>
 
       {/* Bottom Right Yoga Alliance Logo */}

@@ -55,7 +55,7 @@ export default function PaymentPage() {
         {/* Hero Image */}
         <div className="relative w-full h-64 mb-8 rounded-xl overflow-hidden shadow-lg">
           <Image
-            src="/1.jpg"
+            src="/1.png"
             alt="Peaceful yoga practice"
             fill
             className="object-cover"

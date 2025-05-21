@@ -162,7 +162,7 @@ export const Header = () => {
       ],
     },
     { title: "Contact Us", href: "/contact" },
-    { title: "Payment", href: "/payment" },
+    { title: "Payment", href: "/payments" },
   ];
 
   const [isOpen, setOpen] = useState(false);

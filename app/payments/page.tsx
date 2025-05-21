@@ -1,13 +1,11 @@
 "use client";
-import { Header } from "@/components/common/header";
 import { SiteFooter } from "@/components/common/footer";
-import PaymentPage from "@/app/payments/payments";
+import Page from "@/app/payments/payments";
 
 export default function Page() {
   return (
     <div>
-      <Header />
-      <PaymentPage />
+      <Page />
       <SiteFooter />
     </div>
   );

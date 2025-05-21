@@ -41,9 +41,9 @@ export const TESTIMONIALS = [
     context: "on professionalism"
   },
   {
-    quote: "I truly enjoyed my 500 Hours program at Rishikul Yogshala. Beautiful spaces, beautiful teachers, beautiful teachings. It was the start of a beautiful career as a Yoga Teacher that will always stay in my heart.",
-    name: "Alchemy Of Fire",
-    location: "USA",
-    context: "on 500-hour YTT experience"
+    quote: "The teachers and organizers were incredible. They were the most balanced, wonderful people I’ve ever had the chance to learn from and I am forever grateful. The school is beautiful and the curriculum was very well planned. I hope to go back again when my children grow older.",
+    name: "Michelle Akhavan",
+    location: "United States",
+    context: "on heartfelt gratitude"
   }
 ];

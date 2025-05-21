@@ -1,9 +1,12 @@
 // pages/payment.tsx
 "use client";
 import React, { useState } from 'react';
+
 export default function PaymentPage() {
   const [selectedPlan, setSelectedPlan] = useState('one-time');
-  const [selectedCourse, setSelectedCourse] = useState('200-hour-yoga');
+  const [selectedCourse, setSelectedCourse] = useState('');
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
   const paymentLinks: Record<string, { razorpay: string; paypal: string }> = {
     'one-time': {
       razorpay: 'https://razorpay.me/@Rishikul',
@@ -41,10 +44,57 @@ export default function PaymentPage() {
   ];
 
   const courses = [
-    { id: '200-hour-yoga', name: '200-Hour Yoga Teacher Training' },
-    { id: '300-hour-yoga', name: '300-Hour Yoga Teacher Training' },
-    { id: 'prenatal-yoga', name: 'Prenatal Yoga Course' },
-    { id: 'meditation-course', name: 'Meditation and Mindfulness' },
+    {
+      title: "Online Yoga Training",
+      dropdown: [
+        {
+          title: "25 Hrs Yoga Courses",
+          subDropdown: [
+            { title: "Yoga Anatomy For Safety", href: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/" },
+            { title: "Face Yoga TTC", href: "/25-Hrs-Yoga-Courses/face-yoga/" },
+          ],
+        },
+        {
+          title: "50 Hrs Yoga Courses",
+          subDropdown: [
+            { title: "Restorative Yoga TTC", href: "/50-Hrs-Yoga-Courses/Restorative-Yoga-TTC/" },
+            { title: "Meditation TTC", href: "/50-Hrs-Yoga-Courses/Meditation-TTC/" },
+            { title: "Pranayama TTC", href: "/50-Hrs-Yoga-Courses/Pranayama-TTC/" },
+            { title: "Yoga Nidra TTC", href: "/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/" },
+            { title: "Chair Yoga TTC", href: "/50-Hrs-Yoga-Courses/Chair-Yoga/" },
+            { title: "Mudra & Mantra Course", href: "/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/" },
+            { title: "Kundalini Yoga Course", href: "/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/" },
+            { title: "Kids Yoga Course", href: "/50-Hrs-Yoga-Courses/Kids-Yoga-Course/" },
+            { title: "Yoga Therapy Course", href: "/50-Hrs-Yoga-Courses/Yoga-Therapy-Course/" },
+            { title: "Pregnancy Yoga", href: "/50-Hrs-Yoga-Courses/Pregnancy-Yoga/" },
+          ],
+        },
+        {
+          title: "200 Hrs Yoga Courses",
+          subDropdown: [
+            { title: "Multi Style Yoga TTC", href: "/200-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/" },
+          ],
+        },
+        {
+          title: "300 Hrs Yoga Courses",
+          subDropdown: [
+            { title: "Multi Style Yoga TTC", href: "/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/" },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Online Ayurveda Courses",
+      dropdown: [
+        {
+          title: "10 Hrs Ayurveda Courses",
+          subDropdown: [
+            { title: "Ayurvedic Basics Course for Beginners", href: "/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/" },
+            { title: "Ayurvedic Herbal Course", href: "/10-Hrs-Ayurveda-Courses/Ayurvedic-Herbal-Course/" },
+          ],
+        },
+      ],
+    },
   ];
 
   return (
@@ -55,17 +105,45 @@ export default function PaymentPage() {
         {/* Course Selector */}
         <div className="mb-10">
           <label className="block text-lg font-medium text-gray-700 mb-2">Select Course</label>
-          <select
-            value={selectedCourse}
-            onChange={(e) => setSelectedCourse(e.target.value)}
-            className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4377b2]"
-          >
-            {courses.map(course => (
-              <option key={course.id} value={course.id}>{course.name}</option>
+          <div className="border border-gray-300 rounded-md overflow-hidden">
+            {courses.map((category, i) => (
+              <div key={i}>
+                <button
+                  className="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold text-[#4377b2]"
+                  onClick={() =>
+                    setOpenDropdown(openDropdown === category.title ? null : category.title)
+                  }
+                >
+                  {category.title}
+                </button>
+                {openDropdown === category.title &&
+                  category.dropdown.map((group, j) => (
+                    <div key={j} className="pl-6 bg-white">
+                      <p className="text-gray-800 font-medium pt-3">{group.title}</p>
+                      <ul className="mb-3">
+                        {group.subDropdown.map((item, k) => (
+                          <li
+                            key={k}
+                            className={`py-1 px-2 cursor-pointer hover:bg-blue-100 text-sm text-gray-700 ${
+                              selectedCourse === item.title ? 'bg-blue-100' : ''
+                            }`}
+                            onClick={() => setSelectedCourse(item.title)}
+                          >
+                            {item.title}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+              </div>
             ))}
-          </select>
+          </div>
+          {selectedCourse && (
+            <div className="mt-2 text-sm text-green-600">Selected: {selectedCourse}</div>
+          )}
         </div>
 
+        {/* Plans */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {plans.map(plan => (
             <div key={plan.id} className={`border rounded-xl p-6 shadow-lg ${selectedPlan === plan.id ? 'border-[#4377b2]' : 'border-gray-200'}`}>
@@ -89,6 +167,7 @@ export default function PaymentPage() {
           ))}
         </div>
 
+        {/* Payment Buttons */}
         <div className="text-center mb-10">
           <h2 className="text-2xl font-semibold text-[#4377b2] mb-4">Pay With</h2>
           <div className="flex justify-center space-x-4">
@@ -111,13 +190,14 @@ export default function PaymentPage() {
           </div>
         </div>
 
+        {/* Policy Section */}
         <div className="border-t pt-6 text-sm text-gray-700">
           <h3 className="text-lg font-semibold text-[#4377b2] mb-2">Privacy Policy</h3>
           <p className="mb-4">We respect your privacy and ensure that your personal information is safe. We do not share your details with any third party without your consent.</p>
-
           <h3 className="text-lg font-semibold text-[#4377b2] mb-2">Cancellation & Refund Policy</h3>
           <p>If you wish to cancel your enrollment, please contact us within 7 days of purchase. Refunds will be processed based on the course access and materials consumed. Once course material has been downloaded or accessed, refund requests may not be entertained.</p>
         </div>
       </div>
-    </div> );
+    </div>
+  );
 }

@@ -62,7 +62,6 @@ export default function PaymentPage() {
             priority
           />
         </div>
-
         {/* Inspirational Quote */}
         <div className="mb-10 text-center">
           <blockquote className="text-xl italic text-gray-600 max-w-2xl mx-auto">

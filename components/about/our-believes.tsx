@@ -8,7 +8,6 @@ export default function OurBelieves() {
     "Access high-quality, carefully curated content designed to support practitioners of all experience levels.",
     "Become part of a supportive, inclusive community of yoga practitioners from around the globe.",
   ];
-
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-4 text-center">

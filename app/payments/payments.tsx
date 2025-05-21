@@ -54,7 +54,6 @@ const paymentLinks = {
 };
 
 export default function PaymentPage() {
-  const [selectedCourse, setSelectedCourse] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [plan, setPlan] = useState("one-time");
@@ -94,17 +93,17 @@ export default function PaymentPage() {
             </div>
             <div>
               <Label htmlFor="course">Select Course</Label>
-              <Select onValueChange={setSelectedCourse}>
+              <Select onValueChange={() => {}}>
                 {courses.map((cat, i) => (
                   <optgroup label={cat.category} key={i}>
                     {cat.subcategories.map((sub, j) => (
-                      <>
+                      <React.Fragment key={`${i}-${j}`}>
                         {sub.options.map((option, k) => (
                           <SelectItem value={option.title} key={`${i}-${j}-${k}`}>
                             {option.title}
                           </SelectItem>
                         ))}
-                      </>
+                      </React.Fragment>
                     ))}
                   </optgroup>
                 ))}

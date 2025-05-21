@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import { Header } from "@/components/common/header";
 import { SiteFooter } from "@/components/common/footer";
 export default function PaymentPage() {
+    <Header/>
   const [selectedPlan, setSelectedPlan] = useState('one-time');
   const [selectedCourse, setSelectedCourse] = useState('200-hour-yoga');
-  <Header/>
   const paymentLinks: Record<string, { razorpay: string; paypal: string }> = {
     'one-time': {
       razorpay: 'https://razorpay.me/@Rishikul',
@@ -121,8 +121,8 @@ export default function PaymentPage() {
           <h3 className="text-lg font-semibold text-[#4377b2] mb-2">Cancellation & Refund Policy</h3>
           <p>If you wish to cancel your enrollment, please contact us within 7 days of purchase. Refunds will be processed based on the course access and materials consumed. Once course material has been downloaded or accessed, refund requests may not be entertained.</p>
         </div>
-              <SiteFooter />
       </div>
+      <SiteFooter />
     </div>
   );
 }

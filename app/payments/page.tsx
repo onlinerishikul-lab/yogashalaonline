@@ -122,7 +122,7 @@ export default function PaymentPage() {
           <p>If you wish to cancel your enrollment, please contact us within 7 days of purchase. Refunds will be processed based on the course access and materials consumed. Once course material has been downloaded or accessed, refund requests may not be entertained.</p>
         </div>
       </div>
-      <SiteFooter />
     </div>
   );
+        <SiteFooter />
 }

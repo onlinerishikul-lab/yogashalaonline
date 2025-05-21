@@ -1,48 +1,87 @@
 // pages/teachers.tsx
+"use client";
 import Image from "next/image";
 
 export const teachers = [
-  {
+ {
     id: 1,
     name: "Gangesha Chaitanya",
     image: "/Gangesha-Chaitanya.jpg",
     Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
-    description: `Explore the captivating world of Yoga Philosophy, Meditation, and Pranayama with Gangesha Chaitanya, a revered spiritual guide. His wisdom and profound teachings help students connect deeply with their inner selves and embrace the essence of yogic living.`,
+    description: `Explore the captivating world of Yogi Gangesha Chaitanya, a master of Yoga Philosophy, Meditation, Pranayama, and Spiritual Guidance. Guided by the revered saint Swami Rama from a young age, Yogi Gangesha has become a beacon of wisdom and compassion.
+Immerse yourself in the transformative teachings of Yogi Gangesha Chaitanya, a master of Yoga Philosophy, Meditation, Pranayama, and Spiritual Guidance. With guidance from revered saints and immersion in renowned yoga traditions, Yogi Gangesha offers a harmonious blend of ancient wisdom and modern insights. Experience the serene aura of his classes as he leads you on a journey to awaken your kundalini energy and explore higher consciousness. Join him to unlock the limitless potential of your mind and spirit, embracing the magic of meditation and spiritual wisdom. Let Yogi Gangesha illuminate your path to inner harmony and enlightenment.`
   },
   {
     id: 2,
     name: "Sukra Chiatanya",
     image: "/Sukra Chiatanya.png",
-    Subtitle: "(Meditation, Mantra And Pranayama)",
-    description: `Welcome to the serene world of Sukra Chiatanya, where Meditation, Mantra, and Pranayama are pathways to self-discovery. With a calm presence and deep understanding, he inspires students to find peace and clarity through ancient techniques.`,
+    Subtitle:"(Meditation, Mantra And Pranayama)",
+    description: `
+Welcome to the serene world of Yogi Sukra Chaitanya, hailing from the charming villages of West Odisha, India. He immersed himself in the study of human nature and the environment, mastering educational psychology and environmental sciences at Sambalpur University. Seeking deeper wisdom, he ventured into the spiritual realm, diving into Yoga Sciences and Indian Philosophy at Dev Sanskriti Haridwar University.
+
+Under the guidance of renowned masters like Swami Veda Bharati from the Himalayan Tradition, Yogi Sukra Chaitanya embarked on a journey to greater heights. He further honed his skills in traditional Kriya yoga under the wise mentorship of Swami Sankaranand Giri and Swami Nityanandaji of the Yoga Satsang Society, India.
+
+Yogi Sukra Chaitanya's teachings resonate like a beautiful symphony, bringing harmony to the mind, body, and soul, attracting seekers from around the world. With each breath, his students uncover the profound treasures within themselves, guided by the wisdom of a true master.`
   },
   {
     id: 3,
-    name: "Yoga Guru Praveen Raj",
-    image: "/Praveen Raj.jpg",
-    Subtitle: "(Hatha Yoga, Vinyasa Yoga, Ayurveda And Kalaripayattu)",
-    description: `A master of movement and healing, Yoga Guru Praveen Raj blends Hatha Yoga, Vinyasa Flow, Ayurveda, and the martial art of Kalaripayattu. His classes are dynamic, energizing, and deeply rooted in traditional Indian wellness practices.`,
+    name: "Purnima Ji",
+    image: "/Purnima Ji.png",
+    Subtitle:"(Pranayama & Meditation)",
+    description: `Embark on a transformative journey with Purnima, whose spiritual quest began in the sacred lands of Karnataka, steeped in the teachings of Basavanna. Through her deep-rooted spiritual upbringing, Purnima found herself drawn to the path of inner awakening at an early age. Guided by revered mentors like Sri Ganeswer Avadhut and Swami Veda Bharthi, she delved into the profound practices of pranayama, meditation, and philosophy, enriching her spiritual journey.
+Driven by a desire to share her wisdom, Purnima devoted herself to serving in ashrams, touching the lives of countless individuals across 42 villages in Karnataka. Her innate ability to forge deep connections resonated deeply with all those she encountered. Upon her arrival in Rishikesh in 2015, Purnima's passion for yoga soared to new heights as she immersed herself in the teachings of skilled yogis, igniting a divine spark within her soul.`
   },
   {
     id: 4,
-    name: "Jayasree",
-    image: "/Jayasree.png",
-    Subtitle: "(Meditation, Yoga Nidra, Mantra And Yoga Therapy)",
-    description: `Jayasree brings a nurturing energy to her teachings in Meditation, Yoga Nidra, and Yoga Therapy. Her sessions offer gentle guidance, helping students experience deep relaxation, emotional healing, and holistic well-being.`,
+    name: "Himanshu Ji",
+    image: "/Himanshu Ji.png",
+    Subtitle: "(Philosophy, Pranayama & Meditation)",
+    description: `Himanshu Ji is not just a yoga teacher; he's a beacon of knowledge and inspiration in the world of yoga. Born and raised in the serene surroundings of Rishikesh, known as the Capital Yoga world, Himanshu Ji's connection with yoga runs deep in his roots. For several years, he has dedicated himself to teaching Ashtanga and Hatha Yoga at Pankaj Yogpeeth, where his classes are renowned for their energy and power. Himanshu Ji's journey into yoga began with humble steps as he spent years immersing himself in the practice under the guidance of numerous esteemed teachers and gurus. Each encounter enriched his understanding and proficiency in yoga, shaping him into the exceptional teacher he is today. His commitment to continuous learning led him to complete his studies in the very heart of yoga education, the vibrant city of Rishikesh.
+In every class, Himanshu Ji infuses his teachings with profound philosophy, guiding students to explore the deeper dimensions of yoga beyond just the physical postures. His deep understanding of yogic philosophy resonates through his words, inspiring practitioners to connect with their inner selves and discover the true essence of yoga.`
   },
   {
     id: 5,
-    name: "Dhyana",
-    image: "/Dhyana.png",
-    Subtitle: "(Hatha Yoga, Vinyasa Yoga And Sound Healing)",
-    description: `Dhyana combines the strength of Hatha Yoga and Vinyasa Flow with the transformative power of Sound Healing. Her soulful sessions promote alignment, energy balance, and inner harmony.`,
+    name: "Akshay Nautiyal",
+    image: "/Akshay Nautiyal.jpg",
+    Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
+    description: `Born in the spiritual heart of yoga, Rishikesh, I have been deeply immersed in the practice of yoga for over two years. My journey began with Hatha yoga and Astanga Vinyasa, which I have honed under the guidance of some of the most esteemed teachers of rishikesh. Alongside yoga, I am also passionate about bodyweight training, integrating strength-building techniques to enhance physical endurance and control.
+Currently pursuing my graduation in Yoga, I am continuously expanding my knowledge and refining my practice to guide students with authenticity and precision. My approach blends traditional yogic wisdom with modern movement principles, helping practitioners cultivate strength, flexibility, and inner awareness.
+Whether through dynamic Ashtanga sequences or grounding Hatha practices with proper adjustment and alignment, my goal is to make yoga accessible and transformative for all. I believe yoga is not just about physical postures but a journey toward self-discovery, balance, and well-being.
+Exploring the depths of yoga, where movement meets mindfulness, and strength merges with serenity.`
   },
   {
     id: 6,
-    name: "Athira",
-    image: "/Athira.png",
-    Subtitle: "(Ashtanga Yoga, Prenatal Yoga And Yoga Therapy)",
-    description: `With a warm and compassionate approach, Athira guides students through Ashtanga Yoga, Prenatal Yoga, and therapeutic practices. Her deep knowledge and care create a safe space for growth and healing.`,
+    name: "Balram Baloni",
+    image: "/Balram Baloni.jpg",
+    Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
+    description: `Balram Baloni is a dedicated yoga practitioner and teacher with a deep commitment to the discipline. He began his yoga journey in 2018 in Rishikesh, a renowned hub for spiritual learning and practice. He has completed both 200-hour and 300-hour teacher training courses at Rishikul Yogashala, Rishikesh, in 2019, specializing in Hatha Yoga, adjustment, and alignment techniques. Balram’s expertise is rooted in his extensive training and ongoing study, as he is currently pursuing his Master’s degree at Uttarakhand Sanskrit University, Haridwar (2023/24). With over four years of teaching experience, he has been sharing his knowledge at Rishikul Yogashala since 2021. His teaching focuses on creating a harmonious balance between mind, body, and soul, helping students develop a deeper understanding of yoga's physical and spiritual aspects. Balram’s approach is rooted in careful attention to alignment, ensuring safe and effective practice for students of all levels. He continues to inspire and guide individuals on their path to health, well-being, and self-awareness through yoga.`
+
+  },
+  {
+    id: 7,
+    name: "Swami Amarna ji",
+    image: "/Swami Amarna ji.png",
+    Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
+    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga." },
+  {
+    id: 8,
+    name: "Gangesha Chaitanya",
+    image: "/Gangesha-Chaitanya.jpg",
+    Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
+    description: `Explore the captivating world of Yogi Gangesha Chaitanya, a master of Yoga Philosophy, Meditation, Pranayama, and Spiritual Guidance. Guided by the revered saint Swami Rama from a young age, Yogi Gangesha has become a beacon of wisdom and compassion.
+Immerse yourself in the transformative teachings of Yogi Gangesha Chaitanya, a master of Yoga Philosophy, Meditation, Pranayama, and Spiritual Guidance. With guidance from revered saints and immersion in renowned yoga traditions, Yogi Gangesha offers a harmonious blend of ancient wisdom and modern insights. Experience the serene aura of his classes as he leads you on a journey to awaken your kundalini energy and explore higher consciousness. Join him to unlock the limitless potential of your mind and spirit, embracing the magic of meditation and spiritual wisdom. Let Yogi Gangesha illuminate your path to inner harmony and enlightenment.`
+  },
+  {
+    id: 9,
+    name: "Sukra Chiatanya",
+    image: "/Sukra Chiatanya.png",
+    Subtitle:"(Meditation, Mantra And Pranayama)",
+    description: `
+Welcome to the serene world of Yogi Sukra Chaitanya, hailing from the charming villages of West Odisha, India. He immersed himself in the study of human nature and the environment, mastering educational psychology and environmental sciences at Sambalpur University. Seeking deeper wisdom, he ventured into the spiritual realm, diving into Yoga Sciences and Indian Philosophy at Dev Sanskriti Haridwar University.
+
+Under the guidance of renowned masters like Swami Veda Bharati from the Himalayan Tradition, Yogi Sukra Chaitanya embarked on a journey to greater heights. He further honed his skills in traditional Kriya yoga under the wise mentorship of Swami Sankaranand Giri and Swami Nityanandaji of the Yoga Satsang Society, India.
+
+Yogi Sukra Chaitanya's teachings resonate like a beautiful symphony, bringing harmony to the mind, body, and soul, attracting seekers from around the world. With each breath, his students uncover the profound treasures within themselves, guided by the wisdom of a true master.`
   },
 ];
 

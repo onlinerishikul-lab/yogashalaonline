@@ -62,27 +62,7 @@ Exploring the depths of yoga, where movement meets mindfulness, and strength mer
     name: "Swami Amarna ji",
     image: "/Swami Amarna ji.png",
     Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
-    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga." },
-  {
-    id: 8,
-    name: "Gangesha Chaitanya",
-    image: "/Gangesha-Chaitanya.jpg",
-    Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
-    description: `Explore the captivating world of Yogi Gangesha Chaitanya, a master of Yoga Philosophy, Meditation, Pranayama, and Spiritual Guidance. Guided by the revered saint Swami Rama from a young age, Yogi Gangesha has become a beacon of wisdom and compassion.
-Immerse yourself in the transformative teachings of Yogi Gangesha Chaitanya, a master of Yoga Philosophy, Meditation, Pranayama, and Spiritual Guidance. With guidance from revered saints and immersion in renowned yoga traditions, Yogi Gangesha offers a harmonious blend of ancient wisdom and modern insights. Experience the serene aura of his classes as he leads you on a journey to awaken your kundalini energy and explore higher consciousness. Join him to unlock the limitless potential of your mind and spirit, embracing the magic of meditation and spiritual wisdom. Let Yogi Gangesha illuminate your path to inner harmony and enlightenment.`
-  },
-  {
-    id: 9,
-    name: "Sukra Chiatanya",
-    image: "/Sukra Chiatanya.png",
-    Subtitle:"(Meditation, Mantra And Pranayama)",
-    description: `
-Welcome to the serene world of Yogi Sukra Chaitanya, hailing from the charming villages of West Odisha, India. He immersed himself in the study of human nature and the environment, mastering educational psychology and environmental sciences at Sambalpur University. Seeking deeper wisdom, he ventured into the spiritual realm, diving into Yoga Sciences and Indian Philosophy at Dev Sanskriti Haridwar University.
-
-Under the guidance of renowned masters like Swami Veda Bharati from the Himalayan Tradition, Yogi Sukra Chaitanya embarked on a journey to greater heights. He further honed his skills in traditional Kriya yoga under the wise mentorship of Swami Sankaranand Giri and Swami Nityanandaji of the Yoga Satsang Society, India.
-
-Yogi Sukra Chaitanya's teachings resonate like a beautiful symphony, bringing harmony to the mind, body, and soul, attracting seekers from around the world. With each breath, his students uncover the profound treasures within themselves, guided by the wisdom of a true master.`
-  },
+    description: "John is a certified yoga instructor with 10+ years of experience in Hatha and Vinyasa yoga." }
 ];
 
 export default function TeachersPage() {

@@ -1,11 +1,10 @@
 // pages/payment.tsx
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
 
 export default function PaymentPage() {
   const [selectedPlan, setSelectedPlan] = useState('one-time');
-  const [selectedCourse, setSelectedCourse] = useState('200-hour-ytt');
+  const [selectedCourse, setSelectedCourse] = useState('200-hour-yoga');
 
   const paymentLinks: Record<string, { razorpay: string; paypal: string }> = {
     'one-time': {
@@ -44,9 +43,10 @@ export default function PaymentPage() {
   ];
 
   const courses = [
-    { id: '200-hour-ytt', name: '200-Hour Yoga Teacher Training' },
-    { id: '300-hour-ytt', name: '300-Hour Yoga Teacher Training' },
+    { id: '200-hour-yoga', name: '200-Hour Yoga Teacher Training' },
+    { id: '300-hour-yoga', name: '300-Hour Yoga Teacher Training' },
     { id: 'prenatal-yoga', name: 'Prenatal Yoga Course' },
+    { id: 'meditation-course', name: 'Meditation and Mindfulness' },
   ];
 
   return (
@@ -54,12 +54,13 @@ export default function PaymentPage() {
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold text-[#4377b2] mb-6">Choose Your Payment Plan</h1>
 
-        <div className="mb-8">
-          <label className="block text-lg font-semibold text-[#4377b2] mb-2">Select Course</label>
+        {/* Course Selector */}
+        <div className="mb-10">
+          <label className="block text-lg font-medium text-gray-700 mb-2">Select Course</label>
           <select
-            className="w-full p-3 border border-gray-300 rounded-lg"
             value={selectedCourse}
             onChange={(e) => setSelectedCourse(e.target.value)}
+            className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4377b2]"
           >
             {courses.map(course => (
               <option key={course.id} value={course.id}>{course.name}</option>
@@ -97,6 +98,7 @@ export default function PaymentPage() {
               href={paymentLinks[selectedPlan].razorpay}
               target="_blank"
               className="bg-[#4377b2] text-white px-6 py-2 rounded-md hover:bg-[#365e93]"
+              rel="noreferrer"
             >
               Razorpay
             </a>
@@ -104,6 +106,7 @@ export default function PaymentPage() {
               href={paymentLinks[selectedPlan].paypal}
               target="_blank"
               className="bg-[#4377b2] text-white px-6 py-2 rounded-md hover:bg-[#365e93]"
+              rel="noreferrer"
             >
               PayPal
             </a>

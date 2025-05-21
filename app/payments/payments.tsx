@@ -1,12 +1,13 @@
-// app/payments/page.tsx
 "use client";
+
 import { Header } from "@/components/common/header";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 
 export default function PaymentPage() {
   const [selectedPlan, setSelectedPlan] = useState('one-time');
   const [selectedCourse, setSelectedCourse] = useState('200-hour-yoga');
+  const payRef = useRef<HTMLDivElement>(null);
 
   const paymentLinks: Record<string, { razorpay: string; paypal: string }> = {
     'one-time': {
@@ -50,6 +51,13 @@ export default function PaymentPage() {
     { id: 'prenatal-yoga', name: 'Prenatal Yoga Course' },
     { id: 'meditation-course', name: 'Meditation and Mindfulness' },
   ];
+
+  const handleEnrollClick = (planId: string) => {
+    setSelectedPlan(planId);
+    setTimeout(() => {
+      payRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
 
   return (
     <div>
@@ -110,7 +118,7 @@ export default function PaymentPage() {
                 </ul>
                 <button
                   className="w-full bg-[#4377b2] text-white py-2 rounded-lg hover:bg-[#365e93]"
-                  onClick={() => setSelectedPlan(plan.id)}
+                  onClick={() => handleEnrollClick(plan.id)}
                 >
                   ENROLL NOW
                 </button>
@@ -119,7 +127,7 @@ export default function PaymentPage() {
           </div>
 
           {/* Payment Buttons */}
-          <div className="text-center mb-10">
+          <div ref={payRef} className="text-center mb-10">
             <h2 className="text-2xl font-semibold text-[#4377b2] mb-4">Pay With</h2>
             <div className="flex justify-center space-x-4">
               <a

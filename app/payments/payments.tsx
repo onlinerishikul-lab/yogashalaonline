@@ -1,6 +1,6 @@
-// pages/payment.tsx
 "use client";
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 export default function PaymentPage() {
   const [selectedPlan, setSelectedPlan] = useState('one-time');
@@ -52,20 +52,21 @@ export default function PaymentPage() {
   return (
     <div className="bg-white min-h-screen py-10 px-4 sm:px-10">
       <div className="max-w-5xl mx-auto">
-        
         {/* Hero Image */}
-        <div className="mb-8">
-          <img
+        <div className="relative w-full h-64 mb-8 rounded-xl overflow-hidden shadow-lg">
+          <Image
             src="/images/yoga-hero.jpg"
             alt="Peaceful yoga practice"
-            className="w-full h-64 object-cover rounded-xl shadow-lg"
+            fill
+            className="object-cover"
+            priority
           />
         </div>
 
         {/* Inspirational Quote */}
         <div className="mb-10 text-center">
           <blockquote className="text-xl italic text-gray-600 max-w-2xl mx-auto">
-            "Yoga is the journey of the self, through the self, to the self." – Bhagavad Gita
+            &ldquo;Yoga is the journey of the self, through the self, to the self.&rdquo; &mdash; Bhagavad Gita
           </blockquote>
         </div>
 
@@ -85,7 +86,7 @@ export default function PaymentPage() {
           </select>
         </div>
 
-        {/* Plans */}
+        {/* Payment Plans */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {plans.map(plan => (
             <div
@@ -114,7 +115,7 @@ export default function PaymentPage() {
           ))}
         </div>
 
-        {/* Payment Options */}
+        {/* Payment Buttons */}
         <div className="text-center mb-10">
           <h2 className="text-2xl font-semibold text-[#4377b2] mb-4">Pay With</h2>
           <div className="flex justify-center space-x-4">
@@ -137,7 +138,7 @@ export default function PaymentPage() {
           </div>
         </div>
 
-        {/* Policy Section */}
+        {/* Policies */}
         <div className="border-t pt-6 text-sm text-gray-700">
           <h3 className="text-lg font-semibold text-[#4377b2] mb-2">Privacy Policy</h3>
           <p className="mb-4">

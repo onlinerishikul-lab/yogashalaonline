@@ -99,7 +99,6 @@ export default function PaymentPage() {
               <p className="text-3xl font-bold text-black mb-4">{plan.price}</p>
               <ul className="text-sm text-gray-700 mb-4 space-y-2">
                 <li>✅ Certificate of Completion</li>
-                <li>✅ 25-Hour Yoga Anatomy Curriculum</li>
                 <li>✅ Downloadable Training Manual</li>
                 <li>✅ Lifetime Course Access</li>
                 <li>✅ 24 Months of Instructor Support</li>

@@ -38,7 +38,7 @@ const courses = [
   },
 ];
 
-const paymentLinks = {
+const paymentLinks: Record<'one-time' | 'two-part' | 'three-part', { razorpay: string; paypal: string }> = {
   'one-time': {
     razorpay: 'https://razorpay.me/@Rishikul',
     paypal: 'https://www.paypal.me/rishikulyogshala',
@@ -56,7 +56,7 @@ const paymentLinks = {
 export default function PaymentPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [plan, setPlan] = useState("one-time");
+  const [plan, setPlan] = useState<'one-time' | 'two-part' | 'three-part'>('one-time');
 
   const handlePayment = () => {
     const links = paymentLinks[plan];
@@ -111,7 +111,7 @@ export default function PaymentPage() {
             </div>
             <div>
               <Label htmlFor="plan">Select Payment Plan</Label>
-              <Select onValueChange={setPlan} defaultValue="one-time">
+              <Select onValueChange={(value) => setPlan(value as 'one-time' | 'two-part' | 'three-part')} defaultValue="one-time">
                 <SelectItem value="one-time">One-Time Payment ($250)</SelectItem>
                 <SelectItem value="two-part">Two-Part Payment</SelectItem>
                 <SelectItem value="three-part">Three-Part Payment</SelectItem>

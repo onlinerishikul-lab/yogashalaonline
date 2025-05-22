@@ -10,7 +10,7 @@ interface BlogsProps {
 
 const Blogs = ({ blogs }: BlogsProps) => {
   return (
-    <div className="flex justify-center px-4 bg-[#ffffff]">
+    <div className="flex justify-center px-4 bg-[#FCF6F3]">
       <div className="container mx-auto w-full py-16 px-4 sm:px-6">
         <h2 className="text-center text-[#4377B2] font-bold text-3xl sm:text-4xl mb-12">
           Expert Tips and Insights on Yoga
@@ -20,7 +20,7 @@ const Blogs = ({ blogs }: BlogsProps) => {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-[#EDF2F7] rounded-3xl shadow-lg overflow-hidden flex flex-col transition-transform hover:-translate-y-1 hover:shadow-xl duration-300"
+              className="bg-[#ffffff] rounded-3xl shadow-lg overflow-hidden flex flex-col transition-transform hover:-translate-y-1 hover:shadow-xl duration-300"
             >
               {/* Blog Image */}
               <div className="relative w-full h-48">

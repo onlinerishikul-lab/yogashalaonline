@@ -6,6 +6,7 @@ import {
   onlineAyurvedaTrainingMenu,
   onlineYogaTrainingMenu 
 } from "@/constants/course-data";
+
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
@@ -21,9 +22,10 @@ const GetInTouch = () => {
     courseInterest: "",
   });
 
+  // Flatten arrays of courses into a single array
   const allCourses = [
-onlineAyurvedaTrainingMenu,
-    onlineYogaTrainingMenu
+    ...onlineAyurvedaTrainingMenu,
+    ...onlineYogaTrainingMenu,
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -85,7 +87,7 @@ onlineAyurvedaTrainingMenu,
             >
               <option value="">Select a Course</option>
               {allCourses.map((course) => (
-                <option key={course.id} value={course.title}>
+                <option key={course.title} value={course.title}>
                   {course.title}
                 </option>
               ))}
@@ -132,18 +134,16 @@ onlineAyurvedaTrainingMenu,
         </div>
 
         {/* Right Section - Map */}
-        {/* Right Section - Map */}
-<div className="w-full md:w-1/2 h-[300px] md:h-auto">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497700.1123005915!2d77.30127814132629!3d12.95379021332858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1747747101265!5m2!1sen!2sin"
-   className="h-[300px] md:h-full w-full"
+        <div className="w-full md:w-1/2 h-[300px] md:h-auto">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497700.1123005915!2d77.30127814132629!3d12.95379021332858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1747747101265!5m2!1sen!2sin"
+            className="h-[300px] md:h-full w-full"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-  />
-</div>
-
+          />
+        </div>
       </div>
     </div>
   );

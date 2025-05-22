@@ -15,7 +15,7 @@ const Join = () => {
         onClick={handleJoinClick}
       >
         <Image
-          src="/whatsapp-icon.png" // Save your icon as /public/whatsapp-icon.png
+          src="/whatsapp-icons.png" // Save your icon as /public/whatsapp-icon.png
           alt="WhatsApp"
           width={80}
           height={80}

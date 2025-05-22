@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 const CertificatePromo = () => {
   return (
     <section className="bg-[#4377b2] py-16 px-6 text-white">

@@ -8,35 +8,34 @@ const Join = () => {
   };
 
   return (
-    <div className="w-full min-h-[400px] flex justify-center items-center px-4 py-12 bg-[#167d3d]">
-      <div className="relative z-10 max-w-4xl w-full flex flex-col md:flex-row items-center md:items-start gap-8 text-white">
-        {/* Text Content */}
-        <div className="md:max-w-xl w-full text-center md:text-left">
-          <h2 className="text-2xl md:text-4xl font-bold uppercase">
+    <div className="relative w-full min-h-[400px] flex justify-center items-center px-4 py-12">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/join.jpg" // Place your image inside /public/assets/join.jpg
+          alt="Join background"
+          fill
+          className="object-cover w-full h-full"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40 z-10" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-20 max-w-4xl w-full text-center md:text-left">
+        <div className="md:max-w-xl mx-auto md:mx-0">
+          <h2 className="text-white text-2xl md:text-4xl font-bold uppercase">
             Join Our WhatsApp Community
           </h2>
-          <p className="mt-4 text-base md:text-lg">
+          <p className="text-white mt-4 text-base md:text-lg">
             Get ready to connect with fellow yoga enthusiasts, receive course updates, and engage in meaningful discussions. Click below to join our exclusive WhatsApp group and be part of the journey!
           </p>
           <button
             onClick={handleJoinClick}
-            className="mt-6 inline-block bg-white text-[#167d3d] hover:bg-[#c94d24] hover:text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
+            className="mt-6 inline-block bg-[#4377B2] hover:bg-[#c94d24] text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
           >
             Join Us Today
           </button>
-        </div>
-
-        {/* WhatsApp Icon - Next to Text */}
-        <div
-          className="cursor-pointer"
-          onClick={handleJoinClick}
-        >
-          <Image
-            src="/join.jpg" // Make sure this file is saved in the /public folder
-            alt="Join WhatsApp"
-            width={100}
-            height={100}
-          />
         </div>
       </div>
     </div>

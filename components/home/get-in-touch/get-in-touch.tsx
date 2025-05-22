@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import * as z from "zod";
 import {
   onlineAyurvedaTrainingMenu,
-  onlineYogaTrainingMenu 
+  onlineYogaTrainingMenu,
 } from "@/constants/course-data";
 
 const formSchema = z.object({
@@ -22,10 +22,10 @@ const GetInTouch = () => {
     courseInterest: "",
   });
 
-  // Flatten arrays of courses into a single array
+  // Corrected: Extract courses from nested dropdown arrays
   const allCourses = [
-    ...onlineAyurvedaTrainingMenu,
-    ...onlineYogaTrainingMenu,
+    ...(onlineAyurvedaTrainingMenu.dropdown || []),
+    ...(onlineYogaTrainingMenu.dropdown || []),
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -56,7 +56,9 @@ const GetInTouch = () => {
       <div className="max-w-screen-2xl w-full bg-[#FCF6F3] rounded-3xl p-4 sm:p-10 md:p-16 flex flex-col md:flex-row gap-10 md:gap-20">
         {/* Left Section */}
         <div className="w-full md:w-1/2">
-          <h1 className="text-[#4377B2] text-3xl sm:text-4xl font-semibold mb-4">CONTACT US</h1>
+          <h1 className="text-[#4377B2] text-3xl sm:text-4xl font-semibold mb-4">
+            CONTACT US
+          </h1>
           <p className="text-sm sm:text-base leading-relaxed">
             Let Rishikul Online support you on your path to Become Certified Yoga Teacher Training.
             Stay connected with our vibrant community and embrace the transformative power of these amazing yoga practices.

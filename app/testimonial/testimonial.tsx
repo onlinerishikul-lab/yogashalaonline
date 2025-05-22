@@ -2,9 +2,8 @@
 import React from "react";
 import Slider from "react-slick";
 import { Header } from "@/components/common/header";
-import "~slick-carousel/slick/slick.css";
-import "~slick-carousel/slick/slick-theme.css";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 type Testimonial = {
   rating: number;

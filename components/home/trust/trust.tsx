@@ -4,7 +4,7 @@ import React from "react";
 const Trust = () => {
   return (
     <div className='bg-[url("/assets/CoreValues.svg")] bg-cover bg-no-repeat flex justify-center'>
-      <div className="max-w-screen-2xl w-full px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-20">
+      <div className="max-w-screen-2xl w-full px-4 sm:px-6 lg:px-8 py-5 md:py-10 lg:py-10">
         {/* Heading */}
         <div className="flex items-center flex-col mb-8 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#4377B2]">

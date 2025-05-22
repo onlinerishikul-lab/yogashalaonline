@@ -3,10 +3,6 @@ import Image from "next/image";
 import React, { useState } from "react";
 import * as z from "zod";
 import {
-  fiftyHourCourses,
-  hundredHourCourses,
-  twoHundredHourCourses,
-  threeHundredHourCourses,
   onlineAyurvedaTrainingMenu,
   onlineYogaTrainingMenu 
 } from "@/constants/course-data";

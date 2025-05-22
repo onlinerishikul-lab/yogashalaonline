@@ -7,6 +7,8 @@ import {
   hundredHourCourses,
   twoHundredHourCourses,
   threeHundredHourCourses,
+  onlineAyurvedaTrainingMenu,
+  onlineYogaTrainingMenu 
 } from "@/constants/course-data";
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -24,10 +26,8 @@ const GetInTouch = () => {
   });
 
   const allCourses = [
-    ...fiftyHourCourses,
-    ...hundredHourCourses,
-    ...twoHundredHourCourses,
-    ...threeHundredHourCourses,
+onlineAyurvedaTrainingMenu,
+    onlineYogaTrainingMenu
   ];
 
   const handleSubmit = (e: React.FormEvent) => {

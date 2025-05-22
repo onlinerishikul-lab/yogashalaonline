@@ -39,7 +39,7 @@ const Trust = () => {
 
         {/* Description */}
         <div className="flex flex-col items-center space-y-4 text-center">
-          <p className="text-sm sm:text-base md:text-lg md:w-4/5 lg:w-2/3 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg px-4 leading-relaxed">
             Upon successful completion of Rishikul online Yoga Teacher Training program, you will receive a globally recognized certificate accredited by Rishikul. This certification not only validates your expertise but also qualifies you to teach yoga anywhere in the world.
           </p>
           <p className="text-sm sm:text-base md:text-lg px-4 leading-relaxed">

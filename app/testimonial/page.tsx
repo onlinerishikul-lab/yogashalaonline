@@ -1,8 +1,12 @@
-export default function OurTeachersPage() {
+"use client";
+import { SiteFooter } from "@/components/common/footer";
+import TestimonialsPage from "@/app/testimonial/testimonial";
+
+export default function Page() {
   return (
     <div>
-      <h1>Our Teachers</h1>
-      {/* Your content here */}
+      <TestimonialsPage />
+      <SiteFooter />
     </div>
   );
 }

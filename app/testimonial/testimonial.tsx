@@ -2,8 +2,6 @@
 import React from "react";
 import Slider from "react-slick";
 import { Header } from "@/components/common/header";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 type Testimonial = {
   rating: number;
@@ -20,7 +18,7 @@ const testimonials: Testimonial[] = [
     date: "May 20, 2025",
     review:
       "Rishikul Yogshala was absolutely amazing. I gained much more than just asana training...",
-    videoUrl: "https://www.youtube.com/embed/ScMzIvxBSi4", // example video
+    videoUrl: "https://www.youtube.com/embed/ScMzIvxBSi4",
   },
   {
     rating: 5,
@@ -44,7 +42,6 @@ const testimonials: Testimonial[] = [
     review:
       "Absolutely loved my experience at this yoga training school...",
   },
-  // Add more testimonials as needed
 ];
 
 const TestimonialCard = ({ rating, author, date, review, videoUrl }: Testimonial) => (

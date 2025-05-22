@@ -54,7 +54,7 @@ export function Banner() {
           height={70}
         />
         <Image
-          src="/rpys5.png"
+          src="/rpys6.png"
           alt="RYS 300 Yoga Alliance"
           width={70}
           height={70}

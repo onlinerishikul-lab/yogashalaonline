@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
   },
   {
     rating: 5,
-    author: "jan",
+    author: "Jan",
     date: "Mar 06, 2025",
     review: "Class after class, you'll get saturated with information in an easily digestible way.",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -46,12 +46,12 @@ const testimonials: Testimonial[] = [
 ];
 
 const TestimonialCard = ({ rating, author, date, review, videoUrl }: Testimonial) => (
-  <div className="bg-white text-[#4377b2] rounded-xl shadow-lg p-6 mx-2">
-    <div className="flex items-center justify-between mb-2">
-      <div className="font-semibold text-lg">{author}</div>
-      <span className="text-sm">{date}</span>
+  <div className="bg-white text-[#1e3a8a] rounded-xl shadow-md p-6 mx-2 md:mx-4">
+    <div className="flex justify-between items-center mb-2">
+      <h3 className="text-lg font-semibold">{author}</h3>
+      <span className="text-sm text-gray-500">{date}</span>
     </div>
-    <div className="flex items-center mb-2">
+    <div className="flex items-center mb-3">
       {[...Array(5)].map((_, i) => (
         <span
           key={i}
@@ -60,20 +60,20 @@ const TestimonialCard = ({ rating, author, date, review, videoUrl }: Testimonial
           ★
         </span>
       ))}
-      <span className="ml-2 text-sm">{rating} out of 5</span>
+      <span className="ml-2 text-sm text-gray-600">{rating} out of 5</span>
     </div>
-    {videoUrl ? (
-      <div className="aspect-video mb-3">
+    {videoUrl && (
+      <div className="aspect-video mb-4 rounded overflow-hidden">
         <iframe
           src={videoUrl}
-          title={`Video by ${author}`}
+          title={`Testimonial video by ${author}`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          className="w-full h-64 rounded-md"
+          className="w-full h-full"
         />
       </div>
-    ) : null}
-    <p className="text-sm">{review || "No full review provided."}</p>
+    )}
+    <p className="text-sm text-gray-700">{review || "No full review provided."}</p>
   </div>
 );
 
@@ -82,33 +82,38 @@ export default function TestimonialPage() {
   const remainingTestimonials = testimonials.filter((t) => !videoTestimonials.includes(t));
 
   return (
-    <div className="bg-[#ffffff] min-h-screen px-4 py-8">
+    <div className="bg-gradient-to-b from-[#e0f2fe] to-white min-h-screen px-4 py-10">
       <Header />
-      <h1 className="text-3xl font-bold mb-6 text-center text-[#4377b2]">
-        Student Testimonials
+      <h1 className="text-4xl font-bold text-center text-[#1e3a8a] mb-10">
+        What Our Students Say
       </h1>
 
-      {/* Featured Videos */}
-      <div className="grid md:grid-cols-2 gap-8 mb-10 max-w-6xl mx-auto">
+      {/* Featured Video Testimonials */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
         {videoTestimonials.map((t, index) => (
-          <div key={index} className="rounded-lg overflow-hidden shadow-md">
-            <iframe
-              src={t.videoUrl!}
-              title={`Video by ${t.author}`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-64 md:h-80"
-            />
-            <div className="p-4 text-[#4377b2]">
-              <div className="font-semibold text-lg">{t.author}</div>
-              <div className="text-sm mb-2">{t.date}</div>
-              <p className="text-sm">{t.review}</p>
+          <div
+            key={index}
+            className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
+          >
+            <div className="aspect-video">
+              <iframe
+                src={t.videoUrl!}
+                title={`Video by ${t.author}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <div className="p-5 text-[#1e3a8a]">
+              <h3 className="text-lg font-semibold">{t.author}</h3>
+              <p className="text-sm text-gray-500 mb-2">{t.date}</p>
+              <p className="text-sm text-gray-700">{t.review}</p>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Swiper Slider for Remaining Testimonials */}
+      {/* Swiper Slider for Text Testimonials */}
       <div className="max-w-4xl mx-auto">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -116,7 +121,7 @@ export default function TestimonialPage() {
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
-          autoplay={{ delay: 6000 }}
+          autoplay={{ delay: 5000 }}
           loop={true}
         >
           {remainingTestimonials.map((t, index) => (

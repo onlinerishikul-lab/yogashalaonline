@@ -1,4 +1,3 @@
-// components/TestimonialPage.tsx
 "use client";
 
 import React from "react";
@@ -27,16 +26,16 @@ const testimonials: Testimonial[] = [
   },
   {
     rating: 5,
-    author: "Alejandro Godinez",
-    date: "May 20, 2025",
-    review: "The lineage of the teachers is incredible. Super grateful of studying with them.",
-  },
-  {
-    rating: 5,
     author: "jan",
     date: "Mar 06, 2025",
     review: "Class after class, you'll get saturated with information in an easily digestible way.",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  },
+  {
+    rating: 5,
+    author: "Alejandro Godinez",
+    date: "May 20, 2025",
+    review: "The lineage of the teachers is incredible. Super grateful of studying with them.",
   },
   {
     rating: 4,
@@ -79,12 +78,37 @@ const TestimonialCard = ({ rating, author, date, review, videoUrl }: Testimonial
 );
 
 export default function TestimonialPage() {
+  const videoTestimonials = testimonials.filter((t) => t.videoUrl).slice(0, 2);
+  const remainingTestimonials = testimonials.filter((t) => !videoTestimonials.includes(t));
+
   return (
     <div className="bg-[#ffffff] min-h-screen px-4 py-8">
       <Header />
       <h1 className="text-3xl font-bold mb-6 text-center text-[#4377b2]">
         Student Testimonials
       </h1>
+
+      {/* Featured Videos */}
+      <div className="grid md:grid-cols-2 gap-8 mb-10 max-w-6xl mx-auto">
+        {videoTestimonials.map((t, index) => (
+          <div key={index} className="rounded-lg overflow-hidden shadow-md">
+            <iframe
+              src={t.videoUrl!}
+              title={`Video by ${t.author}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-64 md:h-80"
+            />
+            <div className="p-4 text-[#4377b2]">
+              <div className="font-semibold text-lg">{t.author}</div>
+              <div className="text-sm mb-2">{t.date}</div>
+              <p className="text-sm">{t.review}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Swiper Slider for Remaining Testimonials */}
       <div className="max-w-4xl mx-auto">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -95,7 +119,7 @@ export default function TestimonialPage() {
           autoplay={{ delay: 6000 }}
           loop={true}
         >
-          {testimonials.map((t, index) => (
+          {remainingTestimonials.map((t, index) => (
             <SwiperSlide key={index}>
               <TestimonialCard {...t} />
             </SwiperSlide>

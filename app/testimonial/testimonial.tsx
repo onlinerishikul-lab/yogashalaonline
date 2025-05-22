@@ -1,7 +1,13 @@
 // components/TestimonialPage.tsx
+"use client";
+
 import React from "react";
-import Slider from "react-slick";
 import { Header } from "@/components/common/header";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 type Testimonial = {
   rating: number;
@@ -16,36 +22,32 @@ const testimonials: Testimonial[] = [
     rating: 5,
     author: "Dimple Malkan",
     date: "May 20, 2025",
-    review:
-      "Rishikul Yogshala was absolutely amazing. I gained much more than just asana training...",
+    review: "Rishikul Yogshala was absolutely amazing. I gained much more than just asana training...",
     videoUrl: "https://www.youtube.com/embed/ScMzIvxBSi4",
   },
   {
     rating: 5,
     author: "Alejandro Godinez",
     date: "May 20, 2025",
-    review:
-      "The lineage of the teachers is incredible. Super grateful of studying with them.",
+    review: "The lineage of the teachers is incredible. Super grateful of studying with them.",
   },
   {
     rating: 5,
     author: "jan",
     date: "Mar 06, 2025",
-    review:
-      "Class after class, you'll get saturated with information in an easily digestible way.",
+    review: "Class after class, you'll get saturated with information in an easily digestible way.",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     rating: 4,
     author: "Charmaine Wardenberg",
     date: "Apr 03, 2025",
-    review:
-      "Absolutely loved my experience at this yoga training school...",
+    review: "Absolutely loved my experience at this yoga training school...",
   },
 ];
 
 const TestimonialCard = ({ rating, author, date, review, videoUrl }: Testimonial) => (
-  <div className="bg-[#ffffff] text-[#4377b2] rounded-xl shadow-lg p-6 mx-2">
+  <div className="bg-white text-[#4377b2] rounded-xl shadow-lg p-6 mx-2">
     <div className="flex items-center justify-between mb-2">
       <div className="font-semibold text-lg">{author}</div>
       <span className="text-sm">{date}</span>
@@ -62,7 +64,7 @@ const TestimonialCard = ({ rating, author, date, review, videoUrl }: Testimonial
       <span className="ml-2 text-sm">{rating} out of 5</span>
     </div>
     {videoUrl ? (
-      <div className="aspect-w-16 aspect-h-9 mb-3">
+      <div className="aspect-video mb-3">
         <iframe
           src={videoUrl}
           title={`Video by ${author}`}
@@ -77,17 +79,6 @@ const TestimonialCard = ({ rating, author, date, review, videoUrl }: Testimonial
 );
 
 export default function TestimonialPage() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 6000,
-    arrows: true,
-  };
-
   return (
     <div className="bg-[#ffffff] min-h-screen px-4 py-8">
       <Header />
@@ -95,18 +86,21 @@ export default function TestimonialPage() {
         Student Testimonials
       </h1>
       <div className="max-w-4xl mx-auto">
-        <Slider {...settings}>
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 6000 }}
+          loop={true}
+        >
           {testimonials.map((t, index) => (
-            <TestimonialCard
-              key={index}
-              rating={t.rating}
-              author={t.author}
-              date={t.date}
-              review={t.review}
-              videoUrl={t.videoUrl}
-            />
+            <SwiperSlide key={index}>
+              <TestimonialCard {...t} />
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
       </div>
     </div>
   );

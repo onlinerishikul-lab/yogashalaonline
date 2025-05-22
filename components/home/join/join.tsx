@@ -12,7 +12,7 @@ const Join = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/join.jpg" // Place your image inside /public/assets/join.jpg
+          src="/join.jpg" // Place your image inside /public/assets/join.jpg
           alt="Join background"
           fill
           className="object-cover w-full h-full"

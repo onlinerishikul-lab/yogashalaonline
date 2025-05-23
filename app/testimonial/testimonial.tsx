@@ -67,14 +67,7 @@ const testimonials: Testimonial[] = [
     review:
       "The lineage of the teachers is incredible. They genuinely care for your growth. I’m super grateful for studying with them and this experience has changed my life and my view on yoga forever.",
 
-  },
-  {
-    rating: 4,
-    author: "Charmaine Wardenberg",
-    date: "Apr 03, 2025",
-    review:
-      "Absolutely loved my experience at this yoga training school. The campus, curriculum, and care from staff made the journey enjoyable and enlightening. Would recommend it to serious learners.",
-  },
+  }
 ];
 
 const TestimonialCard = ({ rating, author, date, review }: Testimonial) => (

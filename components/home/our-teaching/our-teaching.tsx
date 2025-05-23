@@ -33,23 +33,23 @@ const OurTeaching = () => {
   return (
     <section className="bg-[#4377B2] text-white px-4 md:px-6 py-12 lg:py-20">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold text-center md:text-left mb-10">
+        <h1 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-12">
           Our Teaching Approach
         </h1>
-        <div className="flex flex-col gap-14">
+        <div className="flex flex-col gap-20">
           {tempContent.map((item, index) => (
             <div
               key={item.id}
               className={`flex flex-col ${
                 index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
-              } items-center gap-8`}
+              } items-center gap-10`}
             >
               {/* Text */}
               <div className="w-full md:w-1/2 px-2 md:px-4 text-center md:text-left">
-                <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+                <h2 className="text-3xl md:text-4xl font-semibold mb-6">
                   {item.heading}
                 </h2>
-                <p className="text-base leading-relaxed text-justify">
+                <p className="text-lg md:text-xl leading-relaxed text-justify">
                   {item.text}
                 </p>
               </div>
@@ -59,9 +59,9 @@ const OurTeaching = () => {
                 <Image
                   src={item.image}
                   alt={item.heading}
-                  width={500}
-                  height={300}
-                  className="rounded-[20px] shadow-lg object-cover w-full max-w-[500px] h-auto"
+                  width={600}
+                  height={400}
+                  className="rounded-[20px] shadow-lg object-cover w-full max-w-[600px] h-auto"
                 />
               </div>
             </div>

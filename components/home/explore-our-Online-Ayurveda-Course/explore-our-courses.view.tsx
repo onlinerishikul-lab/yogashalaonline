@@ -21,7 +21,6 @@ export default function ExploreOurClassesView({
     router.push(`/courses/${courseId}`);
   };
 
-  // Filter courses with subHeading containing "online ayurveda courses"
   const filteredCourses = courses.filter((course) =>
     course.headerSection?.subHeading
       ?.toLowerCase()
@@ -62,22 +61,22 @@ export default function ExploreOurClassesView({
                   backgroundImage: `url(${course.headerSection.image})`,
                   cursor: "pointer",
                 }}
-                className="overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity"
+                className="overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center group"
               >
                 {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+                <div className="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/50" />
 
-                {/* Course Language Tag */}
-                <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white z-10">
+                {/* Language Badge */}
+                <div className="bg-[#4377B2] absolute top-2 left-2 text-sm px-2 py-1 text-white z-10 font-medium rounded">
                   <p>Online</p>
                 </div>
 
-                {/* Course Title & Price */}
-                <div className="absolute bottom-[20%] w-full px-2 py-1 flex space-x-2 items-end justify-between z-10">
-                  <div className="text-sm text-white w-2/3">
+                {/* Title & Price Full Width Background */}
+                <div className="absolute bottom-0 w-full bg-black/80 text-white px-4 py-3 flex justify-between items-center z-10">
+                  <div className="text-base font-semibold max-w-[75%]">
                     {course.headerSection.title}
                   </div>
-                  <div className="text-sm text-white font-bold text-right">
+                  <div className="text-base font-bold">
                     ${course.pricing.fullPayment.amount}
                   </div>
                 </div>

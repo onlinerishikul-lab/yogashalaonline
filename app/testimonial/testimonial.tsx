@@ -44,6 +44,37 @@ const testimonials: Testimonial[] = [
       "Absolutely loved my experience at this yoga training school. The campus, curriculum, and care from staff made the journey enjoyable and enlightening. Would recommend it to serious learners.",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
+    {
+    rating: 5,
+    author: "Dimple Malkan",
+    date: "May 20, 2025",
+    review:
+      "Rishikul Yogshala was absolutely amazing. I gained much more than just asana training. The environment, teachers, and overall experience were transformative. I highly recommend it to anyone seeking authentic yoga.",
+
+  },
+  {
+    rating: 5,
+    author: "Jan",
+    date: "Mar 06, 2025",
+    review:
+      "Class after class, you'll get saturated with information in an easily digestible way. The pace, the structure, and the teachers are top-notch. I left with a deep understanding and great friends.",
+
+  },
+  {
+    rating: 5,
+    author: "Alejandro Godinez",
+    date: "May 20, 2025",
+    review:
+      "The lineage of the teachers is incredible. They genuinely care for your growth. I’m super grateful for studying with them and this experience has changed my life and my view on yoga forever.",
+
+  },
+  {
+    rating: 4,
+    author: "Charmaine Wardenberg",
+    date: "Apr 03, 2025",
+    review:
+      "Absolutely loved my experience at this yoga training school. The campus, curriculum, and care from staff made the journey enjoyable and enlightening. Would recommend it to serious learners.",
+  },
 ];
 
 const TestimonialCard = ({ rating, author, date, review }: Testimonial) => (

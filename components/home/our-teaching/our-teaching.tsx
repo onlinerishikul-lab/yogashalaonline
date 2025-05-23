@@ -18,7 +18,7 @@ const OurTeaching = () => {
     },
     {
       id: 3,
-      heading: "Foundation in Anatomy, Alignment & Healing",
+      heading: "Foundation in Anatomy, Alignment",
       text: "A strong grasp of anatomy and alignment is key to practicing and teaching yoga safely and effectively. Our training offers in-depth education on functional anatomy, biomechanics, and postural alignment. You'll learn how muscles, joints, and bones interact during different asanas, and how to adjust poses for various body types and limitations. In addition, we explore the principles of Ayurveda, including dosha analysis and personalized healing strategies, to create practices that support individual health goals. This dual focus empowers students to modify techniques intelligently, prevent injuries, and support others in their healing journey with clarity and confidence.",
       image: "/assets/teaching/Foundation.jpg",
     },

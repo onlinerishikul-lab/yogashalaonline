@@ -12,7 +12,7 @@ const Join = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/join.jpg" // Place your image inside /public/assets/join.jpg
+          src="/join.jpg" // Ensure this image is in your public folder as /public/join.jpg
           alt="Join background"
           fill
           className="object-cover w-full h-full"
@@ -24,7 +24,7 @@ const Join = () => {
       {/* Content */}
       <div className="relative z-20 max-w-4xl w-full text-center md:text-left">
         <div className="md:max-w-xl mx-auto md:mx-0">
-          <h2 className="text-white text-2xl md:text-4xl font-bold uppercase">
+          <h2 className="text-white text-2xl md:text-4xl font-bold uppercase whitespace-nowrap">
             Join Our WhatsApp Community
           </h2>
           <p className="text-white mt-4 text-base md:text-lg">

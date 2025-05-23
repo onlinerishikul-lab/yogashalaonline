@@ -7,7 +7,7 @@ type Testimonial = {
   rating: number;
   author: string;
   date: string;
-  review?: string;
+  review: string;
   videoUrl?: string;
 };
 
@@ -16,28 +16,32 @@ const testimonials: Testimonial[] = [
     rating: 5,
     author: "Dimple Malkan",
     date: "May 20, 2025",
-    review: "Rishikul Yogshala was absolutely amazing. I gained much more than just asana training...",
+    review:
+      "Rishikul Yogshala was absolutely amazing. I gained much more than just asana training. The environment, teachers, and overall experience were transformative. I highly recommend it to anyone seeking authentic yoga.",
     videoUrl: "https://www.youtube.com/embed/ScMzIvxBSi4",
   },
   {
     rating: 5,
     author: "Jan",
     date: "Mar 06, 2025",
-    review: "Class after class, you'll get saturated with information in an easily digestible way.",
+    review:
+      "Class after class, you'll get saturated with information in an easily digestible way. The pace, the structure, and the teachers are top-notch. I left with a deep understanding and great friends.",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     rating: 5,
     author: "Alejandro Godinez",
     date: "May 20, 2025",
-    review: "The lineage of the teachers is incredible. Super grateful of studying with them.",
+    review:
+      "The lineage of the teachers is incredible. They genuinely care for your growth. I’m super grateful for studying with them and this experience has changed my life and my view on yoga forever.",
     videoUrl: "https://www.youtube.com/embed/ScMzIvxBSi4",
   },
   {
     rating: 4,
     author: "Charmaine Wardenberg",
     date: "Apr 03, 2025",
-    review: "Absolutely loved my experience at this yoga training school...",
+    review:
+      "Absolutely loved my experience at this yoga training school. The campus, curriculum, and care from staff made the journey enjoyable and enlightening. Would recommend it to serious learners.",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
 ];
@@ -59,7 +63,7 @@ const TestimonialCard = ({ rating, author, date, review }: Testimonial) => (
       ))}
       <span className="ml-2 text-sm text-gray-600">{rating} out of 5</span>
     </div>
-    <p className="text-sm text-gray-700">{review || "No full review provided."}</p>
+    <p className="text-sm text-gray-700">{review}</p>
   </div>
 );
 
@@ -73,7 +77,7 @@ export default function TestimonialPage() {
 
       {/* Grid Layout: Text on Left, Videos on Right */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Left: Text Testimonials */}
+        {/* Left: Full Text Testimonials */}
         <div>
           {testimonials.map((t, index) => (
             <TestimonialCard

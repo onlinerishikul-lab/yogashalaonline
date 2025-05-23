@@ -73,10 +73,10 @@ export default function ExploreOurClassesView({
 
                 {/* Title & Price */}
                 <div className="absolute bottom-[20%] w-full px-3 flex justify-between items-end z-10">
-                  <div className="text-sm font-bold text-white drop-shadow max-w-[65%] truncate">
+                  <div className="text-white text-lg font-semibold bg-black/60 px-3 py-1 rounded max-w-[70%]">
                     {course.headerSection.title}
                   </div>
-                  <div className="text-sm text-white font-bold text-right drop-shadow">
+                  <div className="text-white text-md font-bold bg-black/60 px-2 py-1 rounded">
                     ${course.pricing.fullPayment.amount}
                   </div>
                 </div>

@@ -49,7 +49,7 @@ const OurTeaching = () => {
                 <h2 className="text-2xl md:text-3xl font-semibold mb-4">
                   {item.heading}
                 </h2>
-                <p className="text-base leading-relaxed text-justify">
+                <p className="text-lg leading-relaxed text-justify">
                   {item.text}
                 </p>
               </div>

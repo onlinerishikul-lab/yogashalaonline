@@ -10,7 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        jost: ["Jost", "sans-serif"],
+        // Add Times New Roman fallback
+        times: ['"Times New Roman"', 'serif'],
       },
       colors: {
         background: "hsl(var(--background))",

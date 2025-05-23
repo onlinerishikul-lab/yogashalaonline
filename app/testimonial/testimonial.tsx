@@ -75,11 +75,10 @@ export default function TestimonialPage() {
         What Our Students Say
       </h1>
 
-      {/* Grid Layout: Video Left, Text Right */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Left: Video Testimonials */}
+        {/* Left: Video Testimonials only (no text description) */}
         <div className="space-y-8">
-          {testimonials.slice(0, 4).map(
+          {testimonials.map(
             (t, index) =>
               t.videoUrl && (
                 <div
@@ -94,11 +93,6 @@ export default function TestimonialPage() {
                       allowFullScreen
                       className="w-full h-full"
                     />
-                  </div>
-                  <div className="p-5 text-[#1e3a8a]">
-                    <h3 className="text-lg font-semibold">{t.author}</h3>
-                    <p className="text-sm text-gray-500 mb-2">{t.date}</p>
-                    <p className="text-sm text-gray-700">{t.review}</p>
                   </div>
                 </div>
               )

@@ -69,7 +69,7 @@ export default function ExploreOurClassesView({
 
                 {/* Course Language Badge */}
                 <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white z-10">
-                  {course.yogaCoursesForBeginners.courseLanguage}
+                 <p>Online</p>
                 </div>
 
                 {/* Course Title and Price */}

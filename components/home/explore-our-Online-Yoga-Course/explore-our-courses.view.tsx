@@ -67,16 +67,16 @@ export default function ExploreOurClassesView({
                 <div className="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/50" />
 
                 {/* Language Badge */}
-                <div className="bg-[#4377B2] absolute top-[10%] left-2 text-sm px-2 py-1 text-white z-10 font-medium rounded">
+                <div className="bg-[#4377B2] absolute top-2 left-2 text-sm px-2 py-1 text-white z-10 font-medium rounded">
                   {course.yogaCoursesForBeginners.courseLanguage}
                 </div>
 
-                {/* Title & Price */}
-                <div className="absolute bottom-[20%] w-full px-3 flex justify-between items-end z-10">
-                  <div className="text-white text-lg font-semibold bg-black/60 px-3 py-1 rounded max-w-[70%]">
+                {/* Title & Price Full Width Background */}
+                <div className="absolute bottom-0 w-full bg-black/80 text-white px-4 py-3 flex justify-between items-center z-10">
+                  <div className="text-base font-semibold max-w-[75%]">
                     {course.headerSection.title}
                   </div>
-                  <div className="text-white text-md font-bold bg-black/60 px-2 py-1 rounded">
+                  <div className="text-base font-bold">
                     ${course.pricing.fullPayment.amount}
                   </div>
                 </div>

@@ -47,7 +47,7 @@ const testimonials: Testimonial[] = [
 ];
 
 const TestimonialCard = ({ rating, author, date, review }: Testimonial) => (
-  <div className="bg-white text-[#1e3a8a] rounded-xl shadow-md p-6">
+  <div className="bg-white text-[#1e3a8a] rounded-xl shadow-md p-6 mb-6">
     <div className="flex justify-between items-center mb-2">
       <h3 className="text-lg font-semibold">{author}</h3>
       <span className="text-sm text-gray-500">{date}</span>
@@ -75,36 +75,48 @@ export default function TestimonialPage() {
         What Our Students Say
       </h1>
 
-      {/* Combined Grid for Text + Video */}
+      {/* Grid Layout: Video Left, Text Right */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        {testimonials.map((t, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.01]"
-          >
-            {/* Video Section if available */}
-            {t.videoUrl && (
-              <div className="aspect-video">
-                <iframe
-                  src={t.videoUrl}
-                  title={`Video by ${t.author}`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
-              </div>
-            )}
-            {/* Text Section */}
-            <div className="p-6">
-              <TestimonialCard
-                author={t.author}
-                date={t.date}
-                rating={t.rating}
-                review={t.review}
-              />
-            </div>
-          </div>
-        ))}
+        {/* Left: Video Testimonials */}
+        <div className="space-y-8">
+          {testimonials.slice(0, 4).map(
+            (t, index) =>
+              t.videoUrl && (
+                <div
+                  key={index}
+                  className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
+                >
+                  <div className="aspect-video">
+                    <iframe
+                      src={t.videoUrl}
+                      title={`Video by ${t.author}`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <div className="p-5 text-[#1e3a8a]">
+                    <h3 className="text-lg font-semibold">{t.author}</h3>
+                    <p className="text-sm text-gray-500 mb-2">{t.date}</p>
+                    <p className="text-sm text-gray-700">{t.review}</p>
+                  </div>
+                </div>
+              )
+          )}
+        </div>
+
+        {/* Right: Text Testimonials */}
+        <div>
+          {testimonials.map((t, index) => (
+            <TestimonialCard
+              key={index}
+              author={t.author}
+              date={t.date}
+              rating={t.rating}
+              review={t.review}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

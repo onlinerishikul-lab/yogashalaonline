@@ -12,13 +12,13 @@ const OurTeaching = () => {
     },
     {
       id: 2,
-      heading: "Traditional Knowledge,Modern Relevance",
+      heading: "Traditional Knowledge, Modern Relevance",
       text: "Our teaching philosophy bridges the ancient wisdom of yoga and Ayurveda with the demands and realities of the modern world. We draw inspiration from revered classical texts like the Yoga Sutras of Patanjali, Hatha Yoga Pradipika, and Charaka Samhita, while also integrating insights from contemporary science, psychology, and health practices. This blend allows students to gain a deep understanding of tradition while learning how to apply it meaningfully in today's fast-paced lifestyle. From managing stress and improving posture to boosting immunity and mental clarity, our curriculum equips you with timeless knowledge that supports holistic well-being in the 21st century.",
       image: "/assets/teaching/Traditional Knowledge.jpg",
     },
     {
       id: 3,
-      heading: "Foundation in Anatomy&Alignment",
+      heading: "Foundation in Anatomy & Alignment",
       text: "A strong grasp of anatomy and alignment is key to practicing and teaching yoga safely and effectively. Our training offers in-depth education on functional anatomy, biomechanics, and postural alignment. You'll learn how muscles, joints, and bones interact during different asanas, and how to adjust poses for various body types and limitations. In addition, we explore the principles of Ayurveda, including dosha analysis and personalized healing strategies, to create practices that support individual health goals. This dual focus empowers students to modify techniques intelligently, prevent injuries, and support others in their healing journey with clarity and confidence.",
       image: "/assets/teaching/Foundation.jpg",
     },
@@ -33,7 +33,7 @@ const OurTeaching = () => {
   return (
     <section className="bg-[#4377B2] text-white px-4 md:px-6 py-12 lg:py-20">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold text-center md:text-left mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
           Our Teaching Approach
         </h1>
         <div className="flex flex-col gap-14">

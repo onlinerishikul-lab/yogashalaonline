@@ -44,35 +44,6 @@ const testimonials: Testimonial[] = [
       "Absolutely loved my experience at this yoga training school. The campus, curriculum, and care from staff made the journey enjoyable and enlightening. Would recommend it to serious learners.",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
-  // Extra text-only testimonials
-  {
-    rating: 5,
-    author: "Sneha Kapoor",
-    date: "Feb 15, 2025",
-    review:
-      "The training was intense but worth every moment. I learned not just yoga but also about myself. Incredible journey!",
-  },
-  {
-    rating: 4,
-    author: "Liam Thomas",
-    date: "Jan 11, 2025",
-    review:
-      "Wonderful curriculum and insightful instructors. Would love to come back for advanced courses.",
-  },
-  {
-    rating: 5,
-    author: "Priya Sharma",
-    date: "Dec 28, 2024",
-    review:
-      "Loved the energy and spirit of this place. It changed my lifestyle and mindset completely.",
-  },
-  {
-    rating: 4,
-    author: "David Kim",
-    date: "Nov 03, 2024",
-    review:
-      "Teachers are highly knowledgeable. Great mix of theory and practice!",
-  },
 ];
 
 const TestimonialCard = ({ rating, author, date, review }: Testimonial) => (
@@ -108,46 +79,43 @@ export default function TestimonialPage() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left: Video Testimonials */}
         <div className="space-y-8">
-          {testimonials
-            .filter((t) => t.videoUrl)
-            .slice(0, 4)
-            .map((t, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
-              >
-                <div className="aspect-video">
-                  <iframe
-                    src={t.videoUrl}
-                    title={`Video by ${t.author}`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
+          {testimonials.slice(0, 4).map(
+            (t, index) =>
+              t.videoUrl && (
+                <div
+                  key={index}
+                  className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
+                >
+                  <div className="aspect-video">
+                    <iframe
+                      src={t.videoUrl}
+                      title={`Video by ${t.author}`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <div className="p-5 text-[#1e3a8a]">
+                    <h3 className="text-lg font-semibold">{t.author}</h3>
+                    <p className="text-sm text-gray-500 mb-2">{t.date}</p>
+                    <p className="text-sm text-gray-700">{t.review}</p>
+                  </div>
                 </div>
-                <div className="p-5 text-[#1e3a8a]">
-                  <h3 className="text-lg font-semibold">{t.author}</h3>
-                  <p className="text-sm text-gray-500 mb-2">{t.date}</p>
-                  <p className="text-sm text-gray-700">{t.review}</p>
-                </div>
-              </div>
-            ))}
+              )
+          )}
         </div>
 
         {/* Right: Text Testimonials */}
         <div>
-          {testimonials
-            .filter((t) => !t.videoUrl)
-            .slice(0, 6)
-            .map((t, index) => (
-              <TestimonialCard
-                key={index}
-                author={t.author}
-                date={t.date}
-                rating={t.rating}
-                review={t.review}
-              />
-            ))}
+          {testimonials.map((t, index) => (
+            <TestimonialCard
+              key={index}
+              author={t.author}
+              date={t.date}
+              rating={t.rating}
+              review={t.review}
+            />
+          ))}
         </div>
       </div>
     </div>

@@ -21,11 +21,11 @@ export default function ExploreOurClassesView({
     router.push(`/courses/${courseId}`);
   };
 
-  // Filter courses with subHeading containing "online yoga training"
+  // Filter courses with subHeading containing "online yoga classes"
   const filteredCourses = courses.filter((course) =>
     course.headerSection?.subHeading
       ?.toLowerCase()
-      .includes("online yoga classes".toLowerCase())
+      .includes("online yoga classes")
   );
 
   return (
@@ -62,12 +62,18 @@ export default function ExploreOurClassesView({
                   backgroundImage: `url(${course.headerSection.image})`,
                   cursor: "pointer",
                 }}
-                className="overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity"
+                className="relative overflow-hidden shadow-lg rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity"
               >
-                <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white">
+                {/* Dark Overlay for better readability */}
+                <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
+
+                {/* Course Language Badge */}
+                <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white z-10">
                   {course.yogaCoursesForBeginners.courseLanguage}
                 </div>
-                <div className="absolute bottom-[20%] w-full px-2 py-1 flex space-x-2 items-end justify-between">
+
+                {/* Course Title and Price */}
+                <div className="absolute bottom-[20%] w-full px-2 py-1 flex space-x-2 items-end justify-between z-10">
                   <div className="text-sm text-white w-2/3">
                     {course.headerSection.title}
                   </div>
@@ -80,7 +86,7 @@ export default function ExploreOurClassesView({
           ))}
         </Swiper>
 
-        {/* Button directly below slider with no gap */}
+        {/* Explore More Button */}
         <div className="text-center mt-6 z-10 relative">
           <button
             className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors"

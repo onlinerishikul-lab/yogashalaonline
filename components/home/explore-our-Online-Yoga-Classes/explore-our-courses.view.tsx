@@ -64,15 +64,15 @@ export default function ExploreOurClassesView({
                 }}
                 className="relative overflow-hidden shadow-lg rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity"
               >
-                {/* Dark Overlay for better readability */}
+                {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
 
-                {/* Course Language Badge */}
+                {/* Course Tag */}
                 <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white z-10">
-                 <p>Online</p>
+                  <p>Online</p>
                 </div>
 
-                {/* Course Title and Price */}
+                {/* Course Info */}
                 <div className="absolute bottom-[20%] w-full px-2 py-1 flex space-x-2 items-end justify-between z-10">
                   <div className="text-sm text-white w-2/3">
                     {course.headerSection.title}
@@ -86,7 +86,7 @@ export default function ExploreOurClassesView({
           ))}
         </Swiper>
 
-        {/* Explore More Button */}
+        {/* Button */}
         <div className="text-center mt-6 z-10 relative">
           <button
             className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors"

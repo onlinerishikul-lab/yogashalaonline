@@ -5,10 +5,10 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useBlogs } from '@/hooks/useBlogs';
 import { Blog } from '@/types/blog';
-import { BlogCard } from '@/components/shared/blog-card';
-import { BlogTopics } from '@/components/shared/blog-topics';
-import { HeroCarousel } from '@/components/shared/hero-carousel';
-import { MainWrapper } from '@/components/shared/main-wrapper';
+import { BlogCard } from '@/components/blog/blog-card';
+import { BlogTopics } from '@/components/blog/blog-topics';
+import { HeroCarousel } from '@/components/blog/hero-carousel';
+import { MainWrapper } from '@/components/blog/main-wrapper';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 

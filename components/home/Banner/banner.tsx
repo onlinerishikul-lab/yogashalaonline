@@ -2,9 +2,9 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+
 export function Banner() {
   const router = useRouter();
-
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Image */}
@@ -18,7 +18,7 @@ export function Banner() {
 
       {/* Overlay Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-12 min-h-screen">
-        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-snug text-white">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-snug text-white">
           <span className="text-[#4377B2] block">Online Yoga Teacher Training:</span>
           <span className="text-white font-normal block mt-2">
             Become a Certified Yoga Teacher
@@ -26,56 +26,44 @@ export function Banner() {
         </h1>
 
         <Button
-          className="mt-6 bg-[#4377B2] px-6 py-2 sm:px-8 sm:py-3 text-sm sm:text-lg hover:bg-[#2e5b91] rounded-full transition"
+          className="mt-6 bg-[#4377B2] px-8 py-3 text-base sm:text-lg hover:bg-[#2e5b91] rounded-full transition"
           onClick={() => router.push("/courses")}
         >
           Start Your Journey Today
         </Button>
       </div>
 
-      {/* Bottom Badges (RYS) - stack on mobile */}
-     {/* Bottom Left RYS Badges */}
-<div className="absolute bottom-4 left-4 z-20 flex flex-wrap sm:flex-nowrap gap-1 sm:gap-3 max-w-[90vw] sm:max-w-none">
-  <Image
-    src="/rpys3.png"
-    alt="RYS 300 Yoga Alliance"
-    width={50}
-    height={50}
-    className="w-10 sm:w-14 h-auto"
-  />
-  <Image
-    src="/rpys2.png"
-    alt="RYS 200 Yoga Alliance"
-    width={50}
-    height={50}
-    className="w-10 sm:w-14 h-auto"
-  />
-  <Image
-    src="/rpys1.png"
-    alt="RPYS Yoga Alliance"
-    width={50}
-    height={50}
-    className="w-10 sm:w-14 h-auto"
-  />
-  <Image
-    src="/rpys6.png"
-    alt="RYS 300 Yoga Alliance"
-    width={50}
-    height={50}
-    className="w-10 sm:w-14 h-auto"
-  />
-</div>
+      {/* Bottom Left Badges */}
+      <div className="absolute bottom-4 left-4 z-20 flex flex-row gap-3">
+        <Image
+          src="/rpys3.png"
+          alt="RYS 300 Yoga Alliance"
+          width={70}
+          height={70}
+        />
+        <Image
+          src="/rpys2.png"
+          alt="RYS 200 Yoga Alliance"
+          width={70}
+          height={70}
+        />
+        <Image
+          src="/rpys1.png"
+          alt="RPYS Yoga Alliance"
+          width={70}
+          height={70}
+        />
+      </div>
 
-{/* Bottom Right Yoga Alliance Logo */}
-<div className="absolute bottom-4 right-4 z-20">
-  <Image
-    src="/alliance.png"
-    alt="Yoga Alliance Logo"
-    width={50}
-    height={50}
-    className="w-10 sm:w-14 h-auto"
-  />
-</div>
-</div>
+      {/* Bottom Right Yoga Alliance Logo */}
+      <div className="absolute bottom-4 right-4 z-20">
+        <Image
+          src="/alliance.png"
+          alt="Yoga Alliance Logo"
+          width={70}
+          height={70}
+        />
+      </div>
+    </div>
   );
 }

@@ -26,7 +26,7 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
     activeCategory === "All"
       ? posts
       : posts.filter((post) => post.category === activeCategory);
-  const [activeCategory, setActiveCategory] = useState<string>('All')
+  const [activeCategory] = useState<string>('All')
 
 
   return (

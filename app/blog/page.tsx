@@ -7,13 +7,10 @@ import MainWrapper from '@/components/wrappers/main-wrapper'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Button } from '@/components/ui/button'
 import { useBlogs } from '@/hooks/use-blogs'
-import type { BlogCategory } from '@/types/blog'; // update path as needed
-
 
 export default function BlogPage() {
   const [page, setPage] = useState(1)
-const [selectedCategory, setSelectedCategory] = useState<BlogCategory>('All')
-
+  const [selectedCategory] = useState('All')
 
   const {
     allBlogs,
@@ -76,12 +73,7 @@ const [selectedCategory, setSelectedCategory] = useState<BlogCategory>('All')
         <HeroCarousel posts={heroPosts} />
         <div className="container mx-auto px-4 pb-16">
 
-          <BlogTopics
-  posts={remainingPosts}
-  activeCategory={selectedCategory}
-  onCategoryChange={setSelectedCategory}
-/>
-
+          <BlogTopics posts={remainingPosts} />
           
           {/* Load More Button */}
           {page < totalPages && (
@@ -102,4 +94,3 @@ const [selectedCategory, setSelectedCategory] = useState<BlogCategory>('All')
     </MainWrapper>
   )
 }
-

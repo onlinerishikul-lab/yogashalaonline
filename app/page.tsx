@@ -60,7 +60,7 @@ export default async function Home() {
 {/* Section 3: Yoga For Everyone + Yoga Classes */}
 <section className="bg-white py-0">
   <div className="container mx-auto px-4">
-    <ExploreOurClassesView />
+    <ExploreOurClassesView courses={courses} />
     <YogaForEveryone />
   </div>
 </section>

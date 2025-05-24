@@ -70,16 +70,6 @@ export default function ExploreOurClassesView({
                 <div className="bg-[#4377B2] absolute top-2 left-2 text-sm px-2 py-1 text-white z-10 font-medium rounded">
                   <p>Online</p>
                 </div>
-
-                {/* Title & Price Full Width Background */}
-                <div className="absolute bottom-0 w-full bg-black/80 text-white px-4 py-3 flex justify-between items-center z-10">
-                  <div className="text-lg font-bold max-w-[75%] leading-snug">
-                    {course.headerSection.title}
-                  </div>
-                  <div className="text-lg font-extrabold">
-                    ${course.pricing.fullPayment.amount}
-                  </div>
-                </div>
               </div>
             </SwiperSlide>
           ))}

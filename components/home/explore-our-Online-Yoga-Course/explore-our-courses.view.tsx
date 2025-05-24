@@ -21,7 +21,6 @@ export default function ExploreOurClassesView({
     router.push(`/courses/${courseId}`);
   };
 
-  // Filter courses with subHeading containing "online yoga training"
   const filteredCourses = courses.filter((course) =>
     course.headerSection?.subHeading
       ?.toLowerCase()
@@ -60,19 +59,26 @@ export default function ExploreOurClassesView({
                 onClick={() => handleCourseClick(course.id)}
                 style={{
                   backgroundImage: `url(${course.headerSection.image})`,
-                  cursor: "pointer",
                 }}
-                className="overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity"
+                className="overflow-hidden shadow-lg relative rounded-md h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity cursor-pointer"
               >
-                <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white">
-                  <p>Online</p>
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
+
+                {/* Title */}
+                <div className="absolute top-4 left-4 right-4 text-white z-20 text-lg font-bold leading-snug drop-shadow-lg">
+                  {course.headerSection.title}
+                </div>
+
+                {/* Online badge */}
+                <div className="absolute bottom-4 right-4 bg-[#4377B2] text-white text-sm px-3 py-1 rounded z-20 shadow-md">
+                  Online
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* Button directly below slider with no gap */}
         <div className="text-center mt-6 z-10 relative">
           <button
             className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors"

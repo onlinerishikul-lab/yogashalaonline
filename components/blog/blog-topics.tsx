@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { BlogCard } from "./blog-card";

@@ -34,47 +34,48 @@ export function Banner() {
       </div>
 
       {/* Bottom Badges (RYS) - stack on mobile */}
-      <div className="absolute bottom-4 left-4 z-20 flex flex-wrap sm:flex-nowrap gap-2 sm:gap-3 max-w-[90vw] sm:max-w-none">
-        <Image
-          src="/rpys3.png"
-          alt="RYS 300 Yoga Alliance"
-          width={60}
-          height={60}
-          className="w-12 sm:w-[70px] h-auto"
-        />
-        <Image
-          src="/rpys2.png"
-          alt="RYS 200 Yoga Alliance"
-          width={60}
-          height={60}
-          className="w-12 sm:w-[70px] h-auto"
-        />
-        <Image
-          src="/rpys1.png"
-          alt="RPYS Yoga Alliance"
-          width={60}
-          height={60}
-          className="w-12 sm:w-[70px] h-auto"
-        />
-        <Image
-          src="/rpys6.png"
-          alt="RYS 300 Yoga Alliance"
-          width={60}
-          height={60}
-          className="w-12 sm:w-[70px] h-auto"
-        />
-      </div>
+     {/* Bottom Left RYS Badges */}
+<div className="absolute bottom-4 left-4 z-20 flex flex-wrap sm:flex-nowrap gap-1 sm:gap-3 max-w-[90vw] sm:max-w-none">
+  <Image
+    src="/rpys3.png"
+    alt="RYS 300 Yoga Alliance"
+    width={50}
+    height={50}
+    className="w-10 sm:w-14 h-auto"
+  />
+  <Image
+    src="/rpys2.png"
+    alt="RYS 200 Yoga Alliance"
+    width={50}
+    height={50}
+    className="w-10 sm:w-14 h-auto"
+  />
+  <Image
+    src="/rpys1.png"
+    alt="RPYS Yoga Alliance"
+    width={50}
+    height={50}
+    className="w-10 sm:w-14 h-auto"
+  />
+  <Image
+    src="/rpys6.png"
+    alt="RYS 300 Yoga Alliance"
+    width={50}
+    height={50}
+    className="w-10 sm:w-14 h-auto"
+  />
+</div>
 
-      {/* Bottom Right Yoga Alliance Logo */}
-      <div className="absolute bottom-4 right-4 z-20">
-        <Image
-          src="/alliance.png"
-          alt="Yoga Alliance Logo"
-          width={60}
-          height={60}
-          className="w-12 sm:w-[70px] h-auto"
-        />
-      </div>
-    </div>
+{/* Bottom Right Yoga Alliance Logo */}
+<div className="absolute bottom-4 right-4 z-20">
+  <Image
+    src="/alliance.png"
+    alt="Yoga Alliance Logo"
+    width={50}
+    height={50}
+    className="w-10 sm:w-14 h-auto"
+  />
+</div>
+</div>
   );
 }

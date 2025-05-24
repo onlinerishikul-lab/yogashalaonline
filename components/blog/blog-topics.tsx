@@ -26,6 +26,8 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
     activeCategory === "All"
       ? posts
       : posts.filter((post) => post.category === activeCategory);
+  const [activeCategory, setActiveCategory] = useState<string>('All')
+
 
   return (
     <section className="space-y-8">

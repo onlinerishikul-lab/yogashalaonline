@@ -21,6 +21,7 @@ export default function ExploreOurClassesView({
     router.push(`/courses/${courseId}`);
   };
 
+  // Filter courses with subHeading containing "online yoga training"
   const filteredCourses = courses.filter((course) =>
     course.headerSection?.subHeading
       ?.toLowerCase()
@@ -61,21 +62,25 @@ export default function ExploreOurClassesView({
                   backgroundImage: `url(${course.headerSection.image})`,
                   cursor: "pointer",
                 }}
-                className="relative overflow-hidden shadow-lg rounded-none h-[320px] bg-cover bg-center group"
+                className="overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity"
               >
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/50" />
-
-                {/* Language Badge */}
-                <div className="bg-[#4377B2] absolute top-2 left-2 text-sm px-2 py-1 text-white z-10 font-medium rounded">
-                  <p>Online</p>
+                <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white">
+                  <P>Online</P>
+                </div>
+                <div className="absolute bottom-[20%] w-full px-2 py-1 flex space-x-2 items-end justify-between">
+                  <div className="text-sm text-white w-2/3">
+                    {course.headerSection.title}
+                  </div>
+                  <div className="text-sm text-white font-bold text-right">
+                    ${course.pricing.fullPayment.amount}
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* Button */}
+        {/* Button directly below slider with no gap */}
         <div className="text-center mt-6 z-10 relative">
           <button
             className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors"

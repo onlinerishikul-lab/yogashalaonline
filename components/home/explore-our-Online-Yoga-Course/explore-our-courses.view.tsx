@@ -65,7 +65,7 @@ export default function ExploreOurClassesView({
                 className="overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity"
               >
                 <div className="bg-[#4377B2] absolute top-[10%] text-sm px-2 py-1 text-white">
-                  <P>Online</P>
+                  <p>Online</p>
                 </div>
                 <div className="absolute bottom-[20%] w-full px-2 py-1 flex space-x-2 items-end justify-between">
                   <div className="text-sm text-white w-2/3">

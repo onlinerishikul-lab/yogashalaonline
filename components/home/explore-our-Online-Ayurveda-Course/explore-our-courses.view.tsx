@@ -31,7 +31,7 @@ export default function ExploreOurClassesView({
     <section className="overflow-x-hidden bg-[#FBF6F3] py-3">
       <div className={`py-7 ${styles.explore_our_courses}`}>
         <h2 className="text-4xl font-bold text-center text-[#4377B2] mb-6 z-10 relative">
-          Explore Our Online Ayurveda Courses
+          Explore Our Online Yoga Courses
         </h2>
 
         <Swiper
@@ -59,33 +59,20 @@ export default function ExploreOurClassesView({
                 onClick={() => handleCourseClick(course.id)}
                 style={{
                   backgroundImage: `url(${course.headerSection.image})`,
-                  cursor: "pointer",
                 }}
-                className="overflow-hidden shadow-lg relative rounded-none h-[320px] bg-cover bg-center group"
+                className="overflow-hidden shadow-lg relative rounded-md h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity cursor-pointer"
               >
-                {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-black/40 z-0 transition-opacity duration-300 group-hover:bg-black/50" />
+                {/* Removed dark overlay */}
 
-                {/* Language Badge */}
-                <div className="bg-[#4377B2] absolute top-2 left-2 text-sm px-2 py-1 text-white z-10 font-medium rounded">
-                  <p>Online</p>
-                </div>
-
-                {/* Title & Price Full Width Background */}
-                <div className="absolute bottom-0 w-full bg-black/80 text-white px-4 py-3 flex justify-between items-center z-10">
-                  <div className="text-base font-semibold max-w-[75%]">
-                    {course.headerSection.title}
-                  </div>
-                  <div className="text-base font-bold">
-                    ${course.pricing.fullPayment.amount}
-                  </div>
+                {/* Online badge */}
+                <div className="absolute bottom-4 right-4 bg-[#4377B2] text-white text-sm px-3 py-1 rounded z-20 shadow-md">
+                  Online
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* Button */}
         <div className="text-center mt-6 z-10 relative">
           <button
             className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors"

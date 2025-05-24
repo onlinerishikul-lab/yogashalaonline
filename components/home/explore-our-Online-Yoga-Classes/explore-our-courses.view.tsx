@@ -5,10 +5,28 @@ import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import styles from "./explore-our-courses.module.css";
+import { Course } from "@/types/course";
 import "swiper/css";
 
-export default function ExploreOurClassesView() {
+interface ExploreOurCoursesViewProps {
+  courses: Course[];
+}
+
+export default function ExploreOurClassesView({
+  courses,
+}: ExploreOurCoursesViewProps) {
   const router = useRouter();
+
+  const handleCourseClick = (courseId: string) => {
+    router.push(`/courses/${courseId}`);
+  };
+
+  // Filter courses with subHeading containing "online yoga classes"
+  const filteredCourses = courses.filter((course) =>
+    course.headerSection?.subHeading
+      ?.toLowerCase()
+      .includes("online yoga classes")
+  );
 
   return (
     <section className="overflow-x-hidden bg-[#FBF6F3] py-3">
@@ -36,31 +54,39 @@ export default function ExploreOurClassesView() {
           }}
           className="w-full custom-swiper"
         >
-          <SwiperSlide>
-            <div
-              onClick={() => router.push("/courses/restorative-yoga-ttc")}
-              style={{
-                backgroundImage: `url(/d6a03382-c5cb-49cf-9b1a-308a0ef4e936.jpg)`,
-                cursor: "pointer",
-              }}
-              className="relative overflow-hidden shadow-lg rounded-none h-[320px] bg-cover bg-center group transition-opacity hover:opacity-90"
-            >
-              <div className="absolute inset-0 bg-black bg-opacity-50 z-0 transition-opacity duration-300 group-hover:bg-opacity-60" />
-              <div className="bg-[#4377B2] absolute top-2 left-2 text-sm px-2 py-1 text-white z-10 font-medium rounded">
-                <p>Online</p>
-              </div>
-              <div className="absolute bottom-0 w-full bg-black/70 text-white px-4 py-3 flex justify-between items-center z-10">
-                <div className="text-base font-semibold max-w-[75%] line-clamp-2">
-                  Restorative Yoga TTC
+          {filteredCourses.map((course, index) => (
+            <SwiperSlide key={course.id + index}>
+              <div
+                onClick={() => handleCourseClick(course.id)}
+                style={{
+                  backgroundImage: `url(${course.headerSection.image})`,
+                  cursor: "pointer",
+                }}
+                className="relative overflow-hidden shadow-lg rounded-none h-[320px] bg-cover bg-center group transition-opacity hover:opacity-90"
+              >
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black bg-opacity-50 z-0 transition-opacity duration-300 group-hover:bg-opacity-60" />
+
+                {/* Online Badge */}
+                <div className="bg-[#4377B2] absolute top-2 left-2 text-sm px-2 py-1 text-white z-10 font-medium rounded">
+                  <p>Online</p>
                 </div>
-                <div className="text-base font-bold whitespace-nowrap">
-                  $199
+
+                {/* Course Info */}
+                <div className="absolute bottom-0 w-full bg-black/70 text-white px-4 py-3 flex justify-between items-center z-10">
+                  <div className="text-base font-semibold max-w-[75%] line-clamp-2">
+                    {course.headerSection.title}
+                  </div>
+                  <div className="text-base font-bold whitespace-nowrap">
+                    ${course.pricing.fullPayment.amount}
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
 
+        {/* Button */}
         <div className="text-center mt-6 z-10 relative">
           <button
             className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors"

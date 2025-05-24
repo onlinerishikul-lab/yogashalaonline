@@ -1,13 +1,16 @@
 // app/(main)/blog/page.tsx
 'use client';
 
-import { useState } from 'react'
-import { HeroCarousel } from '@/components/blog/hero-carousel'
-import { BlogTopics } from '@/components/blog/blog-topics'
-import MainWrapper from '@/components/wrappers/main-wrapper'
-import { Skeleton } from '@/components/ui/skeleton'
-import { Button } from '@/components/ui/button'
-import { useBlogs } from '@/hooks/use-blogs'
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { HeroCarousel } from '@/components/blog/hero-carousel';
+import { BlogTopics } from '@/components/blog/blog-topics';
+import MainWrapper from '@/components/wrappers/main-wrapper';
+import { Skeleton } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { useBlogs } from '@/hooks/use-blogs';
+import { BlogCard } from '@/components/blog/blog-card'; // ✅ FIX: Import BlogCard
+import { Blog } from '@/types/blog'; // ✅ FIX: Import Blog type
 
 export default function BlogPage() {
   const searchParams = useSearchParams();
@@ -22,16 +25,16 @@ export default function BlogPage() {
     blogs,
     isLoading,
     isFetching,
-    error,
     fetchNextPage,
     refetch,
-  } = useBlogs(selectedCategory, currentPage);
+  } = useBlogs(selectedCategory, currentPage); // ✅ FIX: Removed unused `error`
 
   useEffect(() => {
     setDisplayedBlogs([]);
     setCurrentPage(1);
     setHasMore(true);
-    refetch();
+    refetch(); // ✅ FIX: Hook dependency
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCategory]);
 
   useEffect(() => {
@@ -39,15 +42,15 @@ export default function BlogPage() {
       if (currentPage === 1) {
         setDisplayedBlogs(blogs);
       } else {
-        setDisplayedBlogs(prev => [...prev, ...blogs]);
+        setDisplayedBlogs((prev) => [...prev, ...blogs]);
       }
     } else {
       setHasMore(false);
     }
-  }, [blogs]);
+  }, [blogs, currentPage]); // ✅ FIX: Included currentPage as dependency
 
   const handleLoadMore = () => {
-    setCurrentPage(prev => prev + 1);
+    setCurrentPage((prev) => prev + 1);
     fetchNextPage();
   };
 

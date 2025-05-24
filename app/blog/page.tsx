@@ -10,7 +10,8 @@ import { useBlogs } from '@/hooks/use-blogs'
 
 export default function BlogPage() {
   const [page, setPage] = useState(1)
-  const [selectedCategory] = useState('All')
+const [selectedCategory, setSelectedCategory] = useState<BlogCategory>('All')
+
 
   const {
     allBlogs,
@@ -73,7 +74,12 @@ export default function BlogPage() {
         <HeroCarousel posts={heroPosts} />
         <div className="container mx-auto px-4 pb-16">
 
-          <BlogTopics posts={remainingPosts} />
+          <BlogTopics
+  posts={remainingPosts}
+  activeCategory={selectedCategory}
+  onCategoryChange={setSelectedCategory}
+/>
+
           
           {/* Load More Button */}
           {page < totalPages && (

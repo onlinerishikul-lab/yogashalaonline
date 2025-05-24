@@ -7,6 +7,8 @@ import MainWrapper from '@/components/wrappers/main-wrapper'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Button } from '@/components/ui/button'
 import { useBlogs } from '@/hooks/use-blogs'
+import type { BlogCategory } from '@/types/blogs'; // update path as needed
+
 
 export default function BlogPage() {
   const [page, setPage] = useState(1)

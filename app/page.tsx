@@ -38,33 +38,30 @@ export default async function Home() {
     <MainWrapper>
       <Banner />
       <Usp />
-{/* Section 1: Benefits + Courses */}
-<section className="bg-white py-0">
-  <div className="container mx-auto px-4">
-    <ExploreOurCoursesView courses={courses} />
-    <div className="mt-0 mb-0 py-0">
-      <BenefitsOfOnlineLearning />
-    </div>
-  </div>
-</section>
 
+      {/* Section 1: Benefits + Courses */}
+      <section className="bg-[#f5f5f5]">
+        <div className="container mx-auto px-4 ">
+          <ExploreOurCoursesView courses={courses} />
+          <BenefitsOfOnlineLearning />
+        </div>
+      </section>
 
-{/* Section 2: Course Levels + Ayurveda Courses */}
-<section className="bg-white py-0">
-  <div className="container mx-auto px-4">
-    <ExploreOurAyurvedaCoursesView courses={courses} />
-    <CourseLevels />
-  </div>
-</section>
+      {/* Section 2: Course Levels + Ayurveda Courses */}
+      <section className=" bg-white">
+        <div className="container mx-auto px-4 ">
+          <ExploreOurAyurvedaCoursesView courses={courses} />
+          <CourseLevels />
+        </div>
+      </section>
 
-{/* Section 3: Yoga For Everyone + Yoga Classes */}
-<section className="bg-white py-0">
-  <div className="container mx-auto px-4">
-    <ExploreOurClassesView courses={courses} />
-    <YogaForEveryone />
-  </div>
-</section>
-
+      {/* Section 3: Yoga For Everyone + Yoga Classes */}
+      <section className="bg-[#f5f5f5]">
+        <div className="container mx-auto px-4 ">
+          <ExploreOurClassesView courses={courses} />
+          <YogaForEveryone />
+        </div>
+      </section>
 
       {/* Remaining Sections */}
       <Guarante />

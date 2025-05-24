@@ -1,110 +1,96 @@
-// app/(main)/blog/page.tsx
-'use client';
+'use client'
 
-import { useState, useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { HeroCarousel } from '@/components/blog/hero-carousel';
-import { BlogTopics } from '@/components/blog/blog-topics';
-import MainWrapper from '@/components/wrappers/main-wrapper';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import { useBlogs } from '@/hooks/use-blogs';
-import { BlogCard } from '@/components/blog/blog-card';
-import type { BlogPost } from '@/types/blog'; // Use BlogPost instead of Blog
+import { useState } from 'react'
+import { HeroCarousel } from '@/components/blog/hero-carousel'
+import { BlogTopics } from '@/components/blog/blog-topics'
+import MainWrapper from '@/components/wrappers/main-wrapper'
+import { Skeleton } from '@/components/ui/skeleton'
+import { Button } from '@/components/ui/button'
+import { useBlogs } from '@/hooks/use-blogs'
 
 export default function BlogPage() {
-  const searchParams = useSearchParams();
-  const initialCategory = searchParams.get('category') || 'all';
-
-  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
-  const [displayedBlogs, setDisplayedBlogs] = useState<BlogPost[]>([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [hasMore, setHasMore] = useState(true);
+  const [page, setPage] = useState(1)
+  const [selectedCategory] = useState('All')
 
   const {
-    blogs,
+    allBlogs,
+    paginatedBlogs,
+    totalPages,
     isLoading,
-    isFetching,
-    fetchNextPage,
-    refetch,
-  } = useBlogs(selectedCategory, currentPage);
+    error,
+    isFetching
+  } = useBlogs({
+    page,
+    limit: 6,
+    category: selectedCategory
+  })
 
-  useEffect(() => {
-    setDisplayedBlogs([]);
-    setCurrentPage(1);
-    setHasMore(true);
-    refetch();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedCategory]);
+  const loadMore = () => {
+    setPage(prev => prev + 1)
+  }
 
-  useEffect(() => {
-    if (blogs && blogs.length > 0) {
-      if (currentPage === 1) {
-        setDisplayedBlogs(blogs);
-      } else {
-        setDisplayedBlogs((prev) => [...prev, ...blogs]);
-      }
-    } else {
-      setHasMore(false);
-    }
-  }, [blogs, currentPage]);
+  // Show loading state
+  if (isLoading) {
+    return (
+      <MainWrapper>
+        <main className="space-y-16">
+          <div className="w-full h-[400px]">
+            <Skeleton className="w-full h-full" />
+          </div>
+          <div className="container mx-auto px-4 pb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <Skeleton key={i} className="h-[300px] w-full" />
+              ))}
+            </div>
+          </div>
+        </main>
+      </MainWrapper>
+    )
+  }
 
-  const handleLoadMore = () => {
-    setCurrentPage((prev) => prev + 1);
-    fetchNextPage();
-  };
+  // Show error state
+  if (error) {
+    return (
+      <MainWrapper>
+        <main className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <h2 className="text-2xl font-semibold text-gray-900">Something went wrong</h2>
+            <p className="text-gray-600 mt-2">{error.message}</p>
+          </div>
+        </main>
+      </MainWrapper>
+    )
+  }
+
+  // Split blogs for hero section and remaining posts
+  const heroPosts = allBlogs.slice(0, 3)
+  const remainingPosts = paginatedBlogs
 
   return (
     <MainWrapper>
-      <main className="flex flex-col space-y-8">
-        {/* Hero Section */}
-        <section className="w-full">
-          <HeroCarousel category={selectedCategory} />
-        </section>
+      <main className="space-y-16">
+        <HeroCarousel posts={heroPosts} />
+        <div className="container mx-auto px-4 pb-16">
 
-        {/* Topic Filter Tabs */}
-        <section className="w-full">
-          <BlogTopics
-            selectedCategory={selectedCategory}
-            onSelectCategory={setSelectedCategory}
-          />
-        </section>
-
-        {/* Blog Grid */}
-        <section className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {isLoading && (
-            <>
-              {Array.from({ length: 6 }).map((_, idx) => (
-                <Skeleton key={idx} className="h-[300px] w-full rounded-xl" />
-              ))}
-            </>
+          <BlogTopics posts={remainingPosts} />
+          
+          {/* Load More Button */}
+          {page < totalPages && (
+            <div className="mt-8 text-center">
+              <Button
+                onClick={loadMore}
+                variant="outline"
+                size="lg"
+                className="mx-auto"
+                disabled={isFetching}
+              >
+                {isFetching ? 'Loading...' : 'Load More Posts'}
+              </Button>
+            </div>
           )}
-
-          {!isLoading && displayedBlogs.length === 0 && (
-            <p className="col-span-full text-center text-muted-foreground">
-              No blogs found for this category.
-            </p>
-          )}
-
-          {!isLoading &&
-            displayedBlogs.map((blog: BlogPost) => (
-              <BlogCard key={blog.id} blog={blog} />
-            ))}
-        </section>
-
-        {/* Load More */}
-        {hasMore && (
-          <div className="w-full flex justify-center pt-4">
-            <Button
-              onClick={handleLoadMore}
-              disabled={isFetching}
-              className="px-6"
-            >
-              {isFetching ? 'Loading...' : 'Load More'}
-            </Button>
-          </div>
-        )}
+        </div>
       </main>
     </MainWrapper>
-  );
+  )
 }

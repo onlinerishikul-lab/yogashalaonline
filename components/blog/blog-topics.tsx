@@ -11,7 +11,6 @@ interface BlogTopicsProps {
 }
 
 export function BlogTopics({ posts }: BlogTopicsProps) {
-  // Get unique categories from posts
   const categories = useMemo(() => {
     const uniqueCategories = Array.from(
       new Set(posts.map((post) => post.category))
@@ -29,7 +28,7 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
   return (
     <section className="space-y-8">
       <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-bold" style={{ color: "#4377B2" }}>
+        <h2 className="text-3xl font-bold text-[#4377B2]">
           Popular topics
         </h2>
         <Link

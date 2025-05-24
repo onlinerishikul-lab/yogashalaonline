@@ -7,8 +7,11 @@ import { BlogCard } from "./blog-card";
 import type { BlogCategory, BlogPost } from "@/types/blog";
 
 interface BlogTopicsProps {
-  posts: BlogPost[];
+  posts: BlogPost[]
+  activeCategory: BlogCategory
+  onCategoryChange: (category: BlogCategory) => void
 }
+
 
 export function BlogTopics({ posts }: BlogTopicsProps) {
   // Get unique categories from posts
@@ -18,8 +21,6 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
     );
     return ["All", ...uniqueCategories];
   }, [posts]);
-
-  const [activeCategory, setActiveCategory] = useState<BlogCategory>("All");
 
   const filteredPosts =
     activeCategory === "All"
@@ -42,18 +43,19 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
 
       <div className="flex gap-4 overflow-x-auto pb-2 -mx-4 px-4 scrollbar-hide">
         {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setActiveCategory(category)}
-            className={cn(
-              "whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors",
-              activeCategory === category
-                ? "bg-[#4377B2] text-white"
-                : "text-muted-foreground hover:text-[#4377B2]"
-            )}
-          >
-            {category}
-          </button>
+         <button
+  key={category}
+  onClick={() => onCategoryChange(category)}
+  className={cn(
+    "whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors",
+    activeCategory === category
+      ? "bg-[#4377B2] text-white"
+      : "text-muted-foreground hover:text-[#4377B2]"
+  )}
+>
+  {category}
+</button>
+
         ))}
       </div>
 

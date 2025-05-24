@@ -1,8 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Card } from "@/components/ui/card";
-import { BlogCardProps } from "@/types/blog";
-import { cn } from "@/lib/utils";
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+import { Card } from '@/components/ui/card';
+import { BlogCardProps } from '@/types/blog';
+import { cn } from '@/lib/utils';
 
 interface ExtendedBlogCardProps extends BlogCardProps {
   className?: string;
@@ -10,7 +12,7 @@ interface ExtendedBlogCardProps extends BlogCardProps {
 
 export function BlogCard({ post, className }: ExtendedBlogCardProps) {
   return (
-    <Link href={`/blog/${post.slug}`} className={cn("block h-full", className)}>
+    <Link href={`/blog/${post.slug}`} className={cn('block h-full', className)}>
       <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow duration-300">
         <div className="relative w-full aspect-[16/9]">
           <Image

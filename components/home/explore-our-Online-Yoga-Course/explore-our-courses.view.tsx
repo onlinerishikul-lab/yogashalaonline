@@ -66,9 +66,7 @@ export default function ExploreOurClassesView({
                 <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
 
                 {/* Title */}
-                <div className="absolute top-4 left-4 right-4 text-white z-20 text-lg font-bold leading-snug drop-shadow-lg">
-                  {course.headerSection.title}
-                </div>
+               
 
                 {/* Online badge */}
                 <div className="absolute bottom-4 right-4 bg-[#4377B2] text-white text-sm px-3 py-1 rounded z-20 shadow-md">

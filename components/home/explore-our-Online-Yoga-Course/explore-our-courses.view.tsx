@@ -64,11 +64,6 @@ export default function ExploreOurClassesView({
               >
                 {/* Removed dark overlay */}
 
-                {/* Optional: Add title with shadow for visibility if needed */}
-                <div className="absolute top-4 left-4 right-4 text-white text-lg font-bold z-20 drop-shadow-md">
-                  {course.headerSection.title}
-                </div>
-
                 {/* Online badge */}
                 <div className="absolute bottom-4 right-4 bg-[#4377B2] text-white text-sm px-3 py-1 rounded z-20 shadow-md">
                   Online

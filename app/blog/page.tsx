@@ -9,15 +9,15 @@ import MainWrapper from '@/components/wrappers/main-wrapper';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { useBlogs } from '@/hooks/use-blogs';
-import { BlogCard } from '@/components/blog/blog-card'; // ✅ FIX: Import BlogCard
-import { Blog } from '@/types/blog'; // ✅ FIX: Import Blog type
+import { BlogCard } from '@/components/blog/blog-card';
+import type { BlogPost } from '@/types/blog'; // Use BlogPost instead of Blog
 
 export default function BlogPage() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get('category') || 'all';
 
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
-  const [displayedBlogs, setDisplayedBlogs] = useState<Blog[]>([]);
+  const [displayedBlogs, setDisplayedBlogs] = useState<BlogPost[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
@@ -27,13 +27,13 @@ export default function BlogPage() {
     isFetching,
     fetchNextPage,
     refetch,
-  } = useBlogs(selectedCategory, currentPage); // ✅ FIX: Removed unused `error`
+  } = useBlogs(selectedCategory, currentPage);
 
   useEffect(() => {
     setDisplayedBlogs([]);
     setCurrentPage(1);
     setHasMore(true);
-    refetch(); // ✅ FIX: Hook dependency
+    refetch();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCategory]);
 
@@ -47,7 +47,7 @@ export default function BlogPage() {
     } else {
       setHasMore(false);
     }
-  }, [blogs, currentPage]); // ✅ FIX: Included currentPage as dependency
+  }, [blogs, currentPage]);
 
   const handleLoadMore = () => {
     setCurrentPage((prev) => prev + 1);
@@ -87,7 +87,7 @@ export default function BlogPage() {
           )}
 
           {!isLoading &&
-            displayedBlogs.map((blog: Blog) => (
+            displayedBlogs.map((blog: BlogPost) => (
               <BlogCard key={blog.id} blog={blog} />
             ))}
         </section>

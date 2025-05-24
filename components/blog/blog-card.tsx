@@ -19,12 +19,11 @@ export function BlogCard({ post, className }: ExtendedBlogCardProps) {
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
           />
         </div>
 
-        <div className="p-6 flex flex-col h-[calc(100%-56.25%)]">
-          {" "}
-          {/* 56.25% is aspect ratio 16:9 */}
+        <div className="p-6 flex flex-col grow">
           <time className="text-sm text-muted-foreground mb-3">
             {post.date}
           </time>

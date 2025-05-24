@@ -21,12 +21,12 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
     );
     return ["All", ...uniqueCategories];
   }, [posts]);
-
+  const [activeCategory] = useState<string>('All')
   const filteredPosts =
     activeCategory === "All"
       ? posts
       : posts.filter((post) => post.category === activeCategory);
-  const [activeCategory] = useState<string>('All')
+
 
 
   return (

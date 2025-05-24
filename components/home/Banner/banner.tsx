@@ -33,26 +33,12 @@ export function Banner() {
         </Button>
       </div>
 
-      {/* Bottom Left Badges */}
-      <div className="absolute bottom-4 left-4 z-20 flex flex-row gap-3">
-        <Image
-          src="/rpys3.png"
-          alt="RYS 300 Yoga Alliance"
-          width={70}
-          height={70}
-        />
-        <Image
-          src="/rpys2.png"
-          alt="RYS 200 Yoga Alliance"
-          width={70}
-          height={70}
-        />
-        <Image
-          src="/rpys1.png"
-          alt="RPYS Yoga Alliance"
-          width={70}
-          height={70}
-        />
+      {/* Bottom Left Badges with one extra image */}
+      <div className="absolute bottom-4 left-4 z-20 flex flex-wrap sm:flex-nowrap gap-3 max-w-[90vw]">
+        <Image src="/rpys4.png" alt="Additional Badge" width={70} height={70} />
+        <Image src="/rpys3.png" alt="RYS 300 Yoga Alliance" width={70} height={70} />
+        <Image src="/rpys2.png" alt="RYS 200 Yoga Alliance" width={70} height={70} />
+        <Image src="/rpys1.png" alt="RPYS Yoga Alliance" width={70} height={70} />
       </div>
 
       {/* Bottom Right Yoga Alliance Logo */}

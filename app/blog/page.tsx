@@ -1,16 +1,13 @@
 // app/(main)/blog/page.tsx
 'use client';
 
-import { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { useBlogs } from '@/hooks/useBlogs';
-import { Blog } from '@/types/blog';
-import { BlogCard } from '@/components/blog/blog-card';
-import { BlogTopics } from '@/components/blog/blog-topics';
-import { HeroCarousel } from '@/components/blog/hero-carousel';
-import { MainWrapper } from '@/components/blog/main-wrapper';
-import { Button } from '@/components/ui/button';
-import { Skeleton } from '@/components/ui/skeleton';
+import { useState } from 'react'
+import { HeroCarousel } from '@/components/blog/hero-carousel'
+import { BlogTopics } from '@/components/blog/blog-topics'
+import MainWrapper from '@/components/wrappers/main-wrapper'
+import { Skeleton } from '@/components/ui/skeleton'
+import { Button } from '@/components/ui/button'
+import { useBlogs } from '@/hooks/use-blogs'
 
 export default function BlogPage() {
   const searchParams = useSearchParams();

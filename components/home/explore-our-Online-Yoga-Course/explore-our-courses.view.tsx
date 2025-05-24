@@ -62,11 +62,12 @@ export default function ExploreOurClassesView({
                 }}
                 className="overflow-hidden shadow-lg relative rounded-md h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity cursor-pointer"
               >
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
+                {/* Removed dark overlay */}
 
-                {/* Title */}
-               
+                {/* Optional: Add title with shadow for visibility if needed */}
+                <div className="absolute top-4 left-4 right-4 text-white text-lg font-bold z-20 drop-shadow-md">
+                  {course.headerSection.title}
+                </div>
 
                 {/* Online badge */}
                 <div className="absolute bottom-4 right-4 bg-[#4377B2] text-white text-sm px-3 py-1 rounded z-20 shadow-md">

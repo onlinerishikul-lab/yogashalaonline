@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import Blogs from '@/components/home/blogs/blogs'
 import Faculty from '@/components/home/Faculty/faculty'
@@ -38,66 +36,64 @@ export default async function Home() {
 
   return (
     <MainWrapper>
-      <div className="w-full overflow-hidden">
-        <Banner />
-        <Usp />
+      <Banner />
+      <Usp />
 
-        {/* Section 1: Benefits + Courses */}
-        <section className="bg-[#f5f5f5] py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <ExploreOurCoursesView courses={courses} />
-            <div className="mt-10">
-              <BenefitsOfOnlineLearning />
-            </div>
+      {/* Section 1: Benefits + Courses */}
+      <section className="bg-[#f5f5f5] py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ExploreOurCoursesView courses={courses} />
+          <div className="mt-10">
+            <BenefitsOfOnlineLearning />
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Section 2: Course Levels + Ayurveda Courses */}
-        <section className="bg-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <ExploreOurAyurvedaCoursesView courses={courses} />
-            <div className="mt-10">
-              <CourseLevels />
-            </div>
+      {/* Section 2: Course Levels + Ayurveda Courses */}
+      <section className="bg-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ExploreOurAyurvedaCoursesView courses={courses} />
+          <div className="mt-10">
+            <CourseLevels />
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Section 3: Yoga For Everyone + Yoga Classes */}
-        <section className="bg-[#f5f5f5] py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <ExploreOurClassesView courses={courses} />
-            <div className="mt-10">
-              <YogaForEveryone />
-            </div>
+      {/* Section 3: Yoga For Everyone + Yoga Classes */}
+      <section className="bg-[#f5f5f5] py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ExploreOurClassesView courses={courses} />
+          <div className="mt-10">
+            <YogaForEveryone />
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Remaining Sections */}
-        <section className="py-12 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 w-full">
-            <Guarante />
-            <Trust />
-            <OurTeaching />
-            <Transforming />
-            <OnlineYoga />
-          </div>
-        </section>
+      {/* Remaining Sections */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <Guarante />
+          <Trust />
+          <OurTeaching />
+          <Transforming />
+          <OnlineYoga />
+        </div>
+      </section>
 
-        <section className="bg-[#f5f5f5] py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <Blogs blogs={blogs} />
-          </div>
-        </section>
+      <section className="bg-[#f5f5f5] py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Blogs blogs={blogs} />
+        </div>
+      </section>
 
-        <section className="bg-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 w-full">
-            <Join />
-            <Faculty />
-            <TestimonialView title="What Our Students Say" tilt={true} />
-            <GetInTouch />
-          </div>
-        </section>
-      </div>
+      <section className="bg-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <Join />
+          <Faculty />
+          <TestimonialView title="What Our Students Say" tilt={true} />
+          <GetInTouch />
+        </div>
+      </section>
     </MainWrapper>
   )
 }

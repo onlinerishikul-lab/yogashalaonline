@@ -9,7 +9,6 @@ import type { BlogCategory, BlogPost } from '@/types/blog';
 interface BlogTopicsProps {
   posts: BlogPost[];
 }
-
 export function BlogTopics({ posts }: BlogTopicsProps) {
   const categories = useMemo(() => {
     const uniqueCategories = Array.from(

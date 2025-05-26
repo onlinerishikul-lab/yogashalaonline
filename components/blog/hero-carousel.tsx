@@ -19,7 +19,7 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
   }, [posts.length])
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000)
+    const timer = setInterval(nextSlide, 7000)
     return () => clearInterval(timer)
   }, [nextSlide])
 
@@ -31,24 +31,19 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1, ease: 'easeInOut' }}
+          transition={{ duration: 1 }}
           className="absolute inset-0"
         >
           <Image
             src={posts[currentIndex].imageUrl}
             alt={posts[currentIndex].title}
             fill
+            priority // ✅ Critical for LCP
+            sizes="100vw"
             className="object-cover"
-            priority
           />
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="absolute inset-0 flex flex-col justify-end bg-black/30 backdrop-blur-sm p-6 sm:p-10"
-          >
-            <div className="max-w-3xl space-y-3 text-white">
+          <div className="absolute inset-0 flex flex-col justify-end bg-black/40 p-6 sm:p-10 text-white">
+            <div className="max-w-3xl space-y-3">
               <div className="text-sm opacity-80">
                 <time>{posts[currentIndex].date}</time> &mdash;{' '}
                 <span>{posts[currentIndex].category}</span>
@@ -65,11 +60,11 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
               >
                 Read More →
               </Link>
-
               <div className="flex space-x-2 mt-4">
                 {posts.map((_, idx) => (
                   <button
                     key={idx}
+                    aria-label={`Go to slide ${idx + 1}`}
                     onClick={() => setCurrentIndex(idx)}
                     className={cn(
                       'h-[2px]',
@@ -79,7 +74,7 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </AnimatePresence>
     </div>

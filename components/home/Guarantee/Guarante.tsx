@@ -7,8 +7,8 @@ const Guarante = () => {
   const router = useRouter();
 
   return (
-    <div className="bg-[#4377B2] bg-cover w-full py-8 sm:py-10">
-      <div className="w-full text-white text-center px-4 sm:px-6">
+    <div className="bg-[#4377B2] bg-cover w-full py-10 sm:py-12">
+      <div className="max-w-5xl mx-auto text-white text-center px-4 sm:px-6">
         <h2 className="mb-6 text-2xl sm:text-3xl md:text-4xl font-bold leading-snug">
           Ready to begin your Online Yoga Teacher Training journey from the
           comfort of your home?
@@ -22,7 +22,8 @@ const Guarante = () => {
         </p>
         <div className="flex justify-center">
           <Button
-            className="bg-white text-[#4377B2] hover:text-white hover:border-white border hover:bg-[#4377B2] font-semibold w-full sm:w-[252px] py-4 rounded-full transition-all duration-300"
+            aria-label="Join Yoga Training Course"
+            className="bg-white text-[#4377B2] hover:text-white hover:border-white border hover:bg-[#365e92] font-semibold w-full sm:w-[240px] py-4 rounded-full transition-all duration-300"
             onClick={() => router.push("/courses")}
           >
             JOIN TODAY!

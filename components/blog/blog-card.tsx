@@ -11,14 +11,15 @@ interface ExtendedBlogCardProps extends BlogCardProps {
 export function BlogCard({ post, className }: ExtendedBlogCardProps) {
   return (
     <div className={cn('block h-full', className)}>
-      <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+      <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
         <div className="relative w-full aspect-[16/9]">
           <Image
             src={post.imageUrl}
             alt={post.title}
             fill
-            className="object-cover"
+            loading="lazy" // ✅ Defer non-critical images
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover"
           />
         </div>
         <div className="p-4 flex flex-col justify-between flex-1">

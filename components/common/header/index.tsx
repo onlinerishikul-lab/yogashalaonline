@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
-
+import { Menu, MoveRight, X, ChevronDown, ChevronRight, ChevronUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 type SubDropdownItem = {
   title: string;
   href: string;
@@ -28,14 +28,7 @@ type NavigationItem =
 
 export const Header = () => {
   const router = useRouter();
-  const [isOpen, setOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
-  const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
-  const [expandedMobileSubItems, setExpandedMobileSubItems] = useState<string[]>([]);
-
- const navigationItems: NavigationItem[] = [
+  const navigationItems: NavigationItem[] = [
     {
       title: "Online Yoga Training",
       dropdown: [
@@ -172,6 +165,14 @@ export const Header = () => {
     { title: "Payment", href: "/payments" },
   ];
 
+  const [isOpen, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
+  
+  // Mobile dropdown states
+  const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
+  const [expandedMobileSubItems, setExpandedMobileSubItems] = useState<string[]>([]);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY >= window.innerHeight / 2);
@@ -191,15 +192,21 @@ export const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Toggle mobile dropdown
   const toggleMobileDropdown = (title: string) => {
-    setExpandedMobileItems((prev) =>
-      prev.includes(title) ? prev.filter((item) => item !== title) : [...prev, title]
+    setExpandedMobileItems(prev => 
+      prev.includes(title) 
+        ? prev.filter(item => item !== title) 
+        : [...prev, title]
     );
   };
 
+  // Toggle mobile subdropdown
   const toggleMobileSubDropdown = (title: string) => {
-    setExpandedMobileSubItems((prev) =>
-      prev.includes(title) ? prev.filter((item) => item !== title) : [...prev, title]
+    setExpandedMobileSubItems(prev => 
+      prev.includes(title) 
+        ? prev.filter(item => item !== title) 
+        : [...prev, title]
     );
   };
 
@@ -209,15 +216,10 @@ export const Header = () => {
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex-shrink-0">
-          <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />
-        </Link>
-
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-6 text-white text-sm font-medium">
-          {navigationItems.map((item) =>
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Left Nav */}
+        <div className="hidden lg:flex flex-1 items-center gap-x-8 text-white text-sm font-medium">
+          {navigationItems.slice(0, 3).map((item) =>
             "dropdown" in item ? (
               <div key={item.title} className="relative dropdown-parent">
                 <button
@@ -233,7 +235,7 @@ export const Header = () => {
                   <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
                     {item.dropdown.map((subItem, idx) => (
                       <div key={subItem.title} className="relative group">
-                        {idx > 0 && <div className="border-t border-gray-200 my-1" />}
+                        {idx > 0 && <div className="border-t border-gray-200 my-1"></div>}
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
@@ -256,7 +258,7 @@ export const Header = () => {
                           <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md min-w-[300px] z-50 p-2 space-y-1 whitespace-nowrap">
                             {subItem.subDropdown.map((nestedItem, nestedIdx) => (
                               <div key={nestedItem.title}>
-                                {nestedIdx > 0 && <div className="border-t border-gray-200 my-1" />}
+                                {nestedIdx > 0 && <div className="border-t border-gray-200 my-1"></div>}
                                 <Link
                                   href={nestedItem.href}
                                   className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
@@ -280,64 +282,157 @@ export const Header = () => {
           )}
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <div className="lg:hidden">
-          <button
-            className="text-white"
-            onClick={() => setOpen((prev) => !prev)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-      </div>
+        {/* Logo */}
+        <Link href="/" className="flex-shrink-0">
+          <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />
+        </Link>
 
-      {/* Mobile Nav */}
-      {isOpen && (
-        <div className="lg:hidden bg-[#4377B2] text-white px-4 pb-4 space-y-2">
-          {navigationItems.map((item) =>
+        {/* Right Nav */}
+        <div className="hidden lg:flex flex-1 justify-end items-center gap-x-8 text-white text-sm font-medium">
+          {navigationItems.slice(3).map((item) =>
             "dropdown" in item ? (
-              <div key={item.title}>
+              <div key={item.title} className="relative dropdown-parent">
                 <button
-                  onClick={() => toggleMobileDropdown(item.title)}
-                  className="w-full text-left flex justify-between items-center py-2"
+                  className="flex items-center gap-1 hover:text-white/80"
+                  onClick={() =>
+                    setActiveDropdown((prev) => (prev === item.title ? null : item.title))
+                  }
                 >
                   {item.title}
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                {expandedMobileItems.includes(item.title) &&
-                  item.dropdown.map((subItem) => (
-                    <div key={subItem.title} className="pl-4">
-                      <button
-                        onClick={() =>
-                          subItem.subDropdown
-                            ? toggleMobileSubDropdown(subItem.title)
-                            : router.push(subItem.href)
-                        }
-                        className="w-full text-left py-1"
-                      >
-                        {subItem.title}
-                        {subItem.subDropdown && <ChevronRight className="inline w-3 h-3 ml-2" />}
-                      </button>
-                      {expandedMobileSubItems.includes(subItem.title) &&
-                        subItem.subDropdown?.map((nestedItem) => (
-                          <Link
-                            key={nestedItem.title}
-                            href={nestedItem.href}
-                            className="block pl-6 py-1 text-sm text-white/90"
-                          >
-                            {nestedItem.title}
-                          </Link>
-                        ))}
-                    </div>
-                  ))}
+                {activeDropdown === item.title && (
+                  <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1 right-0">
+                    {item.dropdown.map((subItem, idx) => (
+                      <div key={subItem.title}>
+                        {idx > 0 && <div className="border-t border-gray-200 my-1"></div>}
+                        <Link
+                          href={subItem.href}
+                          className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        >
+                          {subItem.title}
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ) : (
-              <Link key={item.title} href={item.href} className="block py-2">
+              <Link key={item.title} href={item.href} className="hover:text-white/80">
                 {item.title}
               </Link>
             )
           )}
+
+          {/* Login Button */}
+          <Button
+            onClick={() => router.push("/login")}
+            className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
+          >
+            Sign In / Log In
+          </Button>
+        </div>
+
+        {/* Mobile Toggle */}
+        <div className="lg:hidden absolute right-4 top-1/2 transform -translate-y-1/2">
+          <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
+            {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+          </Button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="lg:hidden bg-[#4377B2] text-white shadow-md w-full absolute top-full left-0 z-40 max-h-[80vh] overflow-y-auto">
+          <div className="p-4 space-y-4">
+            {navigationItems.map((item) => (
+              <div key={item.title} className="border-b border-white/20 pb-2">
+                {"href" in item ? (
+                  <Link
+                    href={item.href}
+                    className="flex items-center justify-between text-lg py-2 hover:text-white/80"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.title}
+                    <MoveRight className="w-4 h-4" />
+                  </Link>
+                ) : (
+                  <div>
+                    <button
+                      className="flex items-center justify-between w-full text-lg py-2 hover:text-white/80"
+                      onClick={() => toggleMobileDropdown(item.title)}
+                    >
+                      {item.title}
+                      {expandedMobileItems.includes(item.title) ? (
+                        <ChevronUp className="w-5 h-5" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5" />
+                      )}
+                    </button>
+                    
+                    {expandedMobileItems.includes(item.title) && (
+                      <div className="pl-4 space-y-2 mt-2 border-l-2 border-white/20">
+                        {item.dropdown.map((subItem, subIdx) => (
+                          <div key={subItem.title} className="py-1">
+                            {subIdx > 0 && <div className="border-t border-white/10 my-2"></div>}
+                            {subItem.subDropdown ? (
+                              <div>
+                                <button
+                                  className="flex items-center justify-between w-full text-base hover:text-white/80"
+                                  onClick={() => toggleMobileSubDropdown(subItem.title)}
+                                >
+                                  {subItem.title}
+                                  {expandedMobileSubItems.includes(subItem.title) ? (
+                                    <ChevronUp className="w-4 h-4" />
+                                  ) : (
+                                    <ChevronDown className="w-4 h-4" />
+                                  )}
+                                </button>
+                                
+                                {expandedMobileSubItems.includes(subItem.title) && (
+                                  <div className="pl-4 mt-2 space-y-2 border-l border-white/20">
+                                    {subItem.subDropdown.map((nestedItem, nestedIdx) => (
+                                      <div key={nestedItem.title}>
+                                        {nestedIdx > 0 && <div className="border-t border-white/10 my-2"></div>}
+                                        <Link
+                                          href={nestedItem.href}
+                                          className="block text-sm hover:text-white/80 py-1"
+                                          onClick={() => setOpen(false)}
+                                        >
+                                          {nestedItem.title}
+                                        </Link>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            ) : (
+                              <Link
+                                href={subItem.href}
+                                className="block text-base hover:text-white/80"
+                                onClick={() => setOpen(false)}
+                              >
+                                {subItem.title}
+                              </Link>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+            <Button
+              onClick={() => {
+                setOpen(false);
+                router.push("/login");
+              }}
+              className="w-full mt-4 text-white bg-[#ffffff78] hover:bg-[#285384] rounded-full py-2"
+            >
+              Sign In / Log In
+            </Button>
+          </div>
         </div>
       )}
     </header>

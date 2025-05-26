@@ -134,7 +134,6 @@ const GetInTouch = () => {
             </div>
           </div>
         </div>
-
         {/* Right Section - Map */}
       </div>
     </div>

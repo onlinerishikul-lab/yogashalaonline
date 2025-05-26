@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-
 export default function CertificateCTA({ body }: { body: string }) {
   return (
     <section className="bg-[#4377B2] py-24 relative overflow-hidden">

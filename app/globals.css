@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font setup */
 body {
   font-family: 'Times New Roman', Times, serif;
 }
 
+/* Light & Dark Mode Variables (Raw CSS for fallback support) */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -18,11 +20,13 @@ body {
   }
 }
 
+/* Swiper slide visibility override */
 .swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active {
   opacity: 1 !important;
   /* transform: translateY(-40px) !important; */
 }
 
+/* Tailwind base theme variables using @layer */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -93,7 +97,6 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }

@@ -8,6 +8,7 @@ const RysBadgeSection = ({ className }: { className?: string }) => {
         <Image src="/rpys3.png" alt="RY badge" width={100} height={100} />
         <Image src="/rpys2.png" alt="RY badge" width={100} height={100} />
         <Image src="/rpys1.png" alt="RY badge" width={100} height={100} />
+        <Image src="/rpys6.png" alt="RY badge" width={100} height={100} />
     </div>
   )
 }

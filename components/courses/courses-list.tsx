@@ -31,7 +31,7 @@ export function CoursesList({ initialCourses = [] }: CoursesListProps) {
       {Object.entries(groupedCourses).map(([category, coursesInCategory]: [string, Course[]]) => (
         <CourseGrid
           key={category}
-          title={`Yoga Teacher Training Courses`}
+          title={`Our Online Courses`}
           courses={coursesInCategory.map((course: Course) => ({
             id: course.id,
             title: course.headerSection.title,

@@ -15,7 +15,6 @@ export function Banner() {
         className="object-cover brightness-75"
         priority
       />
-
       {/* Overlay Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-4 pt-24 sm:pt-28 md:pt-32 lg:pt-36 min-h-screen">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug max-w-4xl drop-shadow-lg">

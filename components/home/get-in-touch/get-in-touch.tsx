@@ -51,23 +51,23 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-[#FCF6F3]">
-      <div className="w-full max-w-3xl bg-white rounded-3xl shadow-lg p-6 sm:p-10 flex flex-col items-center text-center">
-        <h1 className="text-[#4377B2] text-3xl sm:text-4xl font-semibold mb-4">
+    <div className="w-full px-4 py-12 flex justify-center">
+      <div className="w-full max-w-xl">
+        <h1 className="text-[#4377B2] text-2xl sm:text-3xl font-semibold mb-4 text-center">
           CONTACT US
         </h1>
-        <p className="text-sm sm:text-base leading-relaxed max-w-xl mb-6 text-gray-700">
+        <p className="text-sm sm:text-base text-center text-gray-700 mb-6">
           Let Rishikul Online support you on your path to Become Certified Yoga Teacher Training.
           Stay connected with our vibrant community and embrace the transformative power of these amazing yoga practices.
         </p>
 
-        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-5 max-w-md">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-md bg-transparent outline-none text-sm"
+            className="p-3 border border-gray-300 rounded-md text-sm"
             placeholder="Name"
           />
           <input
@@ -75,14 +75,14 @@ const GetInTouch = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-md bg-transparent outline-none text-sm"
+            className="p-3 border border-gray-300 rounded-md text-sm"
             placeholder="Email"
           />
           <select
             name="courseInterest"
             value={formData.courseInterest}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-md bg-transparent outline-none text-sm"
+            className="p-3 border border-gray-300 rounded-md text-sm"
           >
             <option value="">Select a Course</option>
             {allCourses.map((course) => (
@@ -101,32 +101,30 @@ const GetInTouch = () => {
         </form>
 
         {/* Contact Info */}
-        <div className="flex flex-col sm:flex-row justify-center gap-8 mt-10">
-          <div className="flex gap-4 items-start">
+        <div className="flex flex-col sm:flex-row justify-center gap-6 mt-8">
+          <div className="flex gap-3 items-start">
             <Image
               alt="phone"
               src="/assets/icons/phone.png"
-              width={24}
-              height={24}
+              width={20}
+              height={20}
             />
-            <div className="text-left">
-              <h4 className="font-semibold text-sm">Phone</h4>
-              <p className="text-xs text-[#4377B2]">+91 74486 77761</p>
+            <div className="text-sm text-left">
+              <p className="font-semibold">Phone</p>
+              <p className="text-[#4377B2] text-xs">+91 74486 77761</p>
             </div>
           </div>
 
-          <div className="flex gap-4 items-start">
+          <div className="flex gap-3 items-start">
             <Image
               alt="mail"
               src="/assets/icons/mail.png"
-              width={24}
-              height={24}
+              width={20}
+              height={20}
             />
-            <div className="text-left">
-              <h4 className="font-semibold text-sm">E-Mail</h4>
-              <p className="text-xs text-[#4377B2]">
-                contact@rishikulyogshalaonline.com
-              </p>
+            <div className="text-sm text-left">
+              <p className="font-semibold">E-Mail</p>
+              <p className="text-[#4377B2] text-xs">contact@rishikulyogshalaonline.com</p>
             </div>
           </div>
         </div>

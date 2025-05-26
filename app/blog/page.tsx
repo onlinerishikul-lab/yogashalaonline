@@ -29,7 +29,6 @@ export default function BlogPage() {
     setPage(prev => prev + 1)
   }
 
-  // Show loading state
   if (isLoading) {
     return (
       <MainWrapper>
@@ -39,7 +38,7 @@ export default function BlogPage() {
           </div>
           <div className="container mx-auto px-4 pb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
+              {[...Array(6)].map((_, i) => (
                 <Skeleton key={i} className="h-[300px] w-full" />
               ))}
             </div>
@@ -49,7 +48,6 @@ export default function BlogPage() {
     )
   }
 
-  // Show error state
   if (error) {
     return (
       <MainWrapper>
@@ -63,7 +61,6 @@ export default function BlogPage() {
     )
   }
 
-  // Split blogs for hero section and remaining posts
   const heroPosts = allBlogs.slice(0, 3)
   const remainingPosts = paginatedBlogs
 
@@ -72,10 +69,8 @@ export default function BlogPage() {
       <main className="space-y-16">
         <HeroCarousel posts={heroPosts} />
         <div className="container mx-auto px-4 pb-16">
-
           <BlogTopics posts={remainingPosts} />
-          
-          {/* Load More Button */}
+
           {page < totalPages && (
             <div className="mt-8 text-center">
               <Button

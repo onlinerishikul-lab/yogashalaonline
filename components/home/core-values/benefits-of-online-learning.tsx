@@ -1,3 +1,4 @@
+import React from "react";
 import { CoreValuesSection } from "@/components/core-values";
 
 const BenefitsOfOnlineLearning = () => {

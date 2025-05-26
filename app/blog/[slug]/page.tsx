@@ -1,25 +1,26 @@
-import Image from "next/image";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { BlogCard } from "@/components/blog/blog-card";
-import MainWrapper from "@/components/wrappers/main-wrapper";
-import { getAllBlogs } from "@/app/actions/blog.action";
+import Image from 'next/image'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { BlogCard } from '@/components/blog/blog-card'
+import MainWrapper from '@/components/wrappers/main-wrapper'
+import { getAllBlogs } from '@/app/actions/blog.action'
 
-type BlogParams = Promise<{ slug: string }>;
+type BlogParams = {
+  slug: string
+}
 
-export default async function BlogDetailsPage(props: { params: BlogParams }) {
-  const { slug } = await props.params;
-  const blogs = await getAllBlogs();
-  const post = blogs.find((blog) => blog.slug === slug);
+export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
+  const { slug } = params
+  const blogs = await getAllBlogs()
+  const post = blogs.find((blog) => blog.slug === slug)
 
   if (!post) {
-    notFound();
+    notFound()
   }
 
-  // Get related posts with same category/tag
   const relatedPosts = blogs
     .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
-    .slice(0, 3);
+    .slice(0, 3)
 
   return (
     <MainWrapper>
@@ -51,7 +52,7 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
                     {new Date(post.createdAt).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",
-                      day: "numeric",
+                      day: "numeric"
                     })}
                   </time>
                   <span>•</span>
@@ -65,14 +66,13 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
         {/* Content Section */}
         <div className="container mx-auto max-w-4xl px-4 py-12">
           <div className="relative flex gap-8">
-            {/* Sticky Sidebar */}
             <div className="hidden lg:block sticky top-8 h-fit w-auto text-muted-foreground">
               <div className="flex items-center gap-2 text-sm">
                 <time>
                   {new Date(post.createdAt).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
-                    day: "numeric",
+                    day: "numeric"
                   })}
                 </time>
                 <span>-</span>
@@ -80,7 +80,6 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
               </div>
             </div>
 
-            {/* Main Content */}
             <div
               className="prose prose-lg dark:prose-invert flex-1"
               dangerouslySetInnerHTML={{ __html: post.content }}
@@ -108,22 +107,14 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
                 )}
                 <div>
                   <p className="font-medium">{post.author.name}</p>
-                  <p className="text-sm text-muted-foreground">
-                    {post.author.email}
-                  </p>
+                  <p className="text-sm text-muted-foreground">{post.author.email}</p>
                 </div>
               </div>
               <div className="flex space-x-4">
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-[#4377B2]"
-                >
+                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">
                   Twitter
                 </Link>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-[#4377B2]"
-                >
+                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">
                   LinkedIn
                 </Link>
               </div>
@@ -149,16 +140,13 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
                       excerpt: post.overview,
                       content: post.content,
                       imageUrl: post.coverImage,
-                      date: new Date(post.createdAt).toLocaleDateString(
-                        "en-US",
-                        {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        }
-                      ),
+                      date: new Date(post.createdAt).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric"
+                      }),
                       category: post.tags[0] || "Uncategorized",
-                      author: post.author.name,
+                      author: post.author.name
                     }}
                   />
                 ))}
@@ -168,5 +156,5 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
         )}
       </article>
     </MainWrapper>
-  );
+  )
 }

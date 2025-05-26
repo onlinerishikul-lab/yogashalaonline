@@ -12,7 +12,6 @@ import Usp from '@/components/home/usp/usp'
 import TestimonialView from '@/components/home/testimonial/testimonial'
 import MainWrapper from '@/components/wrappers/main-wrapper'
 import { Banner } from '@/components/home/Banner/banner'
-
 import ExploreOurCoursesView from '@/components/home/explore-our-Online-Yoga-Course/explore-our-courses.view'
 import ExploreOurAyurvedaCoursesView from '@/components/home/explore-our-Online-Ayurveda-Course/explore-our-courses.view'
 import ExploreOurClassesView from '@/components/home/explore-our-Online-Yoga-Classes/explore-our-courses.view'

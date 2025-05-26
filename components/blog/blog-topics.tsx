@@ -18,10 +18,11 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
 
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('All')
 
-  const filteredPosts =
-    activeCategory === 'All'
+  const filteredPosts = useMemo(() => {
+    return activeCategory === 'All'
       ? posts
       : posts.filter((post) => post.category === activeCategory)
+  }, [activeCategory, posts])
 
   return (
     <section className="space-y-8">

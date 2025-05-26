@@ -5,14 +5,10 @@ import { BlogCard } from "@/components/blog/blog-card";
 import MainWrapper from "@/components/wrappers/main-wrapper";
 import { getAllBlogs } from "@/app/actions/blog.action";
 
-type BlogDetailsPageProps = {
-  params: {
-    slug: string;
-  };
-};
+type BlogParams = Promise<{ slug: string }>;
 
-export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) {
-  const { slug } = params;
+export default async function BlogDetailsPage(props: { params: BlogParams }) {
+  const { slug } = await props.params;
   const blogs = await getAllBlogs();
   const post = blogs.find((blog) => blog.slug === slug);
 
@@ -20,6 +16,7 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
     notFound();
   }
 
+  // Get related posts with same category/tag
   const relatedPosts = blogs
     .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
     .slice(0, 3);

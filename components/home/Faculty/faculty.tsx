@@ -19,7 +19,7 @@ const Faculty = () => {
       <div className="container mx-auto px-4 py-10">
         {/* Heading Section */}
         <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-10">
-          <h1 className="text-3xl sm:text-4xl font-bold text-[#4377B2] lg:w-1/2">
+          <h1 className="text-2xl sm:text-4xl font-bold text-[#4377B2] lg:w-1/2">
             Meet Our Expert Trainers
           </h1>
           <p className="text-[#878C91] text-base lg:text-lg lg:w-1/2">
@@ -35,7 +35,7 @@ const Faculty = () => {
           {/* Left Panel */}
           <div className="bg-[#4377B2] p-6 sm:p-8 rounded-3xl lg:w-1/4 flex flex-col justify-between">
             <div>
-              <h1 className="text-white text-4xl sm:text-6xl font-bold">
+              <h1 className="text-white text-3xl sm:text-5xl font-bold">
                 920+
               </h1>
               <p className="text-white text-sm mt-2">
@@ -43,12 +43,13 @@ const Faculty = () => {
               </p>
             </div>
 
-            <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-4">
+            <div className="mt-8 grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4">
               {teachers.map((trainer) => (
                 <button
                   key={trainer.id}
                   onClick={() => setSelectedTrainer(trainer)}
-                  className={`relative w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 ${
+                  aria-label={`Select trainer ${trainer.name}`}
+                  className={`relative w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 ${
                     selectedTrainer.id === trainer.id
                       ? "border-white scale-110 z-10"
                       : "border-transparent scale-100"
@@ -68,20 +69,22 @@ const Faculty = () => {
           {/* Right Panel */}
           <div className="lg:w-3/4 flex flex-col xl:flex-row gap-6">
             {/* Description Box */}
-            <div className="bg-white rounded-3xl p-6 shadow-lg flex-1 min-h-[300px] sm:min-h-[400px] flex flex-col justify-center">
-              <h2 className="text-xl sm:text-2xl font-bold text-[#4377B2] mb-2">
+            <div className="bg-white rounded-3xl p-5 sm:p-6 shadow-lg flex-1 min-h-[280px] sm:min-h-[380px] flex flex-col justify-center">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#4377B2] mb-1">
                 {selectedTrainer.name}
               </h2>
-              <h4 className="text-md sm:text-lg font-semibold text-[#4377B2] mb-4">
-                {selectedTrainer.Subtitle}
-              </h4>
-              <p className="text-[#555] text-sm sm:text-base">
+              {selectedTrainer.Subtitle && (
+                <h4 className="text-md sm:text-lg font-semibold text-[#4377B2] mb-3">
+                  {selectedTrainer.Subtitle}
+                </h4>
+              )}
+              <p className="text-[#555] text-sm sm:text-base leading-relaxed">
                 {selectedTrainer.description}
               </p>
             </div>
 
             {/* Trainer Image */}
-            <div className="relative flex-1 min-h-[300px] sm:min-h-[400px] rounded-3xl shadow-lg overflow-hidden border-4 border-[#4377b2]">
+            <div className="relative flex-1 min-h-[280px] sm:min-h-[380px] rounded-3xl shadow-lg overflow-hidden border-4 border-[#4377b2]">
               <Image
                 src={selectedTrainer.image}
                 alt={selectedTrainer.name}

@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { Card } from '@/components/ui/card'
@@ -12,12 +14,12 @@ export function BlogCard({ post, className }: ExtendedBlogCardProps) {
   return (
     <div className={cn('block h-full', className)}>
       <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
-        <div className="relative w-full aspect-[16/9]">
+        <div className="relative w-full aspect-[16/9] bg-gray-200">
           <Image
             src={post.imageUrl}
             alt={post.title}
             fill
-            loading="lazy" // ✅ Defer non-critical images
+            loading="lazy"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
           />

@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 export function Banner() {
   const router = useRouter();
-
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
       {/* Background Image */}

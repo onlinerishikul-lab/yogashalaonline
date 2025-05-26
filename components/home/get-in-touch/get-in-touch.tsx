@@ -52,7 +52,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className="flex justify-center py-4 px-4 sm:px-6 lg:px-12">
+    <div className="flex items-center justify-center min-h-screen py-4 px-4 sm:px-6 lg:px-12">
       <div className="max-w-screen-2xl w-full bg-[#FCF6F3] rounded-3xl p-4 sm:p-10 md:p-16 flex flex-col md:flex-row gap-10 md:gap-20">
         {/* Left Section */}
         <div className="w-full md:w-1/2">

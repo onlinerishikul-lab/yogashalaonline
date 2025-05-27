@@ -1,10 +1,9 @@
 "use client";
+
 import Image from "next/image";
 import React, { useState } from "react";
 import * as z from "zod";
-import {
-  onlineYogaTrainingMenu,
-} from "@/constants/course-data";
+import { onlineYogaTrainingMenu } from "@/constants/course-data";
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -21,9 +20,8 @@ const GetInTouch = () => {
     courseInterest: "",
   });
 
-  const allCourses = [
-    ...(onlineYogaTrainingMenu.dropdown || []),
-  ];
+  // FIXED: Use the array directly
+  const allCourses = [...onlineYogaTrainingMenu];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -84,7 +82,7 @@ const GetInTouch = () => {
           >
             <option value="">Select a Course</option>
             {allCourses.map((course) => (
-              <option key={course.title} value={course.title}>
+              <option key={course.id} value={course.title}>
                 {course.title}
               </option>
             ))}

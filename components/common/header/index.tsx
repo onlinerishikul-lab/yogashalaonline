@@ -283,15 +283,9 @@ export const Header = () => {
         </div>
 
         {/* Logo */}
-      <Image
-  src="/assets/rishikulonlinlogo.png"
-  alt="Yoga Logo"
-  width={120}
-  height={80}
-  priority={true} // ✅ Preloads this image early
-  decoding="async"
-/>
-
+        <Link href="/" className="flex-shrink-0">
+          <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />
+        </Link>
 
         {/* Right Nav */}
         <div className="hidden lg:flex flex-1 justify-end items-center gap-x-8 text-white text-sm font-medium">

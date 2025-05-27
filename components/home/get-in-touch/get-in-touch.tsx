@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, { useState } from "react";
 import * as z from "zod";
 import {
-  onlineAyurvedaTrainingMenu,
   onlineYogaTrainingMenu,
 } from "@/constants/course-data";
 
@@ -23,7 +22,6 @@ const GetInTouch = () => {
   });
 
   const allCourses = [
-    ...(onlineAyurvedaTrainingMenu.dropdown || []),
     ...(onlineYogaTrainingMenu.dropdown || []),
   ];
 

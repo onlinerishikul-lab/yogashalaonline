@@ -3,6 +3,7 @@
   padding-bottom: 50px;
   background-color: #FBF6F3;
 }
+
 .explore_our_courses::before {
   content: "";
   position: absolute;

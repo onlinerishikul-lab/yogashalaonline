@@ -16,7 +16,7 @@ const Faculty = () => {
 
   return (
     <div className="flex justify-center bg-[#f1f1f1] w-full">
-      <div className="container mx-auto px-4 py-10">
+      <div className="container mx-auto px-4 py-3">
         {/* Heading Section */}
         <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-10">
           <h1 className="text-3xl sm:text-4xl font-bold text-[#4377B2] lg:w-1/2">

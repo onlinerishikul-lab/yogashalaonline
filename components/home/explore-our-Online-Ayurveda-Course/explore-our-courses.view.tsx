@@ -56,7 +56,7 @@ export default function ExploreOurClassesView({
           {filteredCourses.map((course, index) => (
             <SwiperSlide key={course.id + index}>
               <div
-                onClick={() => handleCourseClick(course.id)}
+                 onClick={handleExploreMoreClick}
                 style={{
                   backgroundImage: `url(${course.headerSection.image})`,
                 }}

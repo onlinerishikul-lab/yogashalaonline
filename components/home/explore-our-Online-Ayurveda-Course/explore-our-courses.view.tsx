@@ -17,10 +17,6 @@ export default function ExploreOurClassesView({
 }: ExploreOurCoursesViewProps) {
   const router = useRouter();
 
-  const handleCourseClick = (courseId: string) => {
-    router.push(`/courses/${courseId}`);
-  };
-
   const filteredCourses = courses.filter((course) =>
     course.headerSection?.subHeading
       ?.toLowerCase()

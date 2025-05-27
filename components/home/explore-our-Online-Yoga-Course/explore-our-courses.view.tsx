@@ -17,8 +17,8 @@ export default function ExploreOurClassesView({
 }: ExploreOurCoursesViewProps) {
   const router = useRouter();
 
-  const handleCourseClick = (courseId: string) => {
-    router.push(`/courses/${courseId}`);
+  const handleExploreMoreClick = () => {
+    router.push("/courses");
   };
 
   const filteredCourses = courses.filter((course) =>
@@ -56,7 +56,7 @@ export default function ExploreOurClassesView({
           {filteredCourses.map((course, index) => (
             <SwiperSlide key={course.id + index}>
               <div
-                onClick={() => handleCourseClick(course.id)}
+                onClick={handleExploreMoreClick}
                 style={{
                   backgroundImage: `url(${course.headerSection.image})`,
                 }}
@@ -74,7 +74,7 @@ export default function ExploreOurClassesView({
         <div className="text-center mt-6 z-10 relative">
           <button
             className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors"
-            onClick={() => router.push("/courses")}
+            onClick={handleExploreMoreClick}
           >
             EXPLORE MORE
           </button>

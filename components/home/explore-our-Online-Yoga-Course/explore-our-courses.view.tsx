@@ -62,8 +62,6 @@ export default function ExploreOurClassesView({
                 }}
                 className="overflow-hidden shadow-lg relative rounded-md h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity cursor-pointer"
               >
-                {/* Removed dark overlay */}
-
                 {/* Online badge */}
                 <div className="absolute bottom-4 right-4 bg-[#4377B2] text-white text-sm px-3 py-1 rounded z-20 shadow-md">
                   Online

@@ -30,7 +30,7 @@ export const Header = () => {
   const router = useRouter();
   const navigationItems: NavigationItem[] = [
     {
-      title: "Online Yoga Training",
+      title: "Yoga Training",
       dropdown: [
         {
           title: "25 Hrs Yoga Courses",
@@ -105,7 +105,7 @@ export const Header = () => {
       ],
     },
     {
-      title: "Online Ayurveda Courses",
+      title: "Ayurveda Courses",
       dropdown: [
         {
           title: "10 Hrs Ayurveda Courses",
@@ -143,7 +143,7 @@ export const Header = () => {
       ],
     },
     {
-      title: "Online Yoga Classes",
+      title: "Yoga Classes",
       dropdown: [
         { title: "Prenatal Yoga", href: "/Online-Yoga-Classes/Prenatal-Yoga/" },
         { title: "Postnatal Yoga", href: "/Online-Yoga-Classes/Postnatal-Yoga/" },

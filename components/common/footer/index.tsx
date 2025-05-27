@@ -40,11 +40,11 @@ export const SiteFooter = () => {
 
           <div className="md:w-1/3 flex flex-col md:items-end space-y-3">
             <h2 className="text-xl font-semibold mb-1">Contact Us</h2>
-            <Link href="tel:+917448677761" className="hover:underline">
-              +91 74486 77761
+            <Link href="tel:+919845271423" className="hover:underline">
+              +91 98452 71423
             </Link>
-            <Link href="mailto:contact@rishikulyogshalaonline.com" className="hover:underline break-words">
-              contact@rishikulyogshalaonline.com
+            <Link href="mailto:contact@rishikulonline108@gmail.com" className="hover:underline break-words">
+              contact@rishikulonline108@gmail.com
             </Link>
           </div>
         </div>

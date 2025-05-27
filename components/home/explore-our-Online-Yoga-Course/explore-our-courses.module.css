@@ -4,41 +4,11 @@
   background-color: #FBF6F3;
 }
 
-.explore_our_courses::before {
-  content: "";
-  position: absolute;
-  bottom: -2%;
-  left: 47%;
-  width: 110%;
-  height: 100px;
-  background: #FBF6F3;
-  border-radius: 50%;
-  z-index: 2;
-  transform: translate(-50%);
-}
-
-.explore_our_courses::after {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  width: 110%;
-  height: 100px;
-  background: #FBF6F3;
-  border-radius: 50%;
-  z-index: 2;
-  transform: translate(-50%);
-}
+/* Removed the ::before and ::after pseudo-elements */
 
 @media only screen and (max-width: 600px) {
-  .explore_our_courses::after {
-    height: 50px !important;
-    top: 10% !important;
-  }
-
-  .explore_our_courses::before {
-    height: 50px !important;
-    bottom: 5% !important;
+  .explore_our_courses {
+    padding-bottom: 30px;
   }
 }
 

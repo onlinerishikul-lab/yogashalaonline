@@ -107,7 +107,7 @@ const GetInTouch = () => {
             />
             <div className="text-sm text-left">
               <p className="font-semibold">Phone</p>
-              <p className="text-[#4377B2] text-xs">+91 74486 77761</p>
+              <p className="text-[#4377B2] text-xs">+91 98452 71423</p>
             </div>
           </div>
 
@@ -120,7 +120,7 @@ const GetInTouch = () => {
             />
             <div className="text-sm text-left">
               <p className="font-semibold">E-Mail</p>
-              <p className="text-[#4377B2] text-xs">contact@rishikulyogshalaonline.com</p>
+              <p className="text-[#4377B2] text-xs">contact@rishikulonline108@gmail.com</p>
             </div>
           </div>
         </div>

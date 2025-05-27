@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rishikul ",
-  description: "Rishikul ",
+  title: "Rishikul Online",
+  description: "Rishikul Online",
 };
 
 export default function RootLayout({

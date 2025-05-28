@@ -31,7 +31,7 @@ const OurTeaching = () => {
   ];
 
   return (
-    <section className="bg-[#4377B2] text-white px-4 md:px-6 py-12 lg:py-20">
+    <section className="bg-[#4377B2] text-white px-4 md:px-6 py-5 lg:py-5">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
           Our Teaching Approach

@@ -51,6 +51,11 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
       link: "/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship",
       image: "/Sexual-Relationship.jpg",
     },
+    {
+      title: "Ayurvedic Sexual Relationship Course",
+      link: "/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship",
+      image: "/Sexual-Relationship.jpg",
+    },
   ];
 
   return (

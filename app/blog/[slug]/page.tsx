@@ -64,7 +64,7 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
         {/* Content Section with Sidebar */}
         <div className="container mx-auto max-w-7xl px-4 py-12">
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Left Sidebar – Explore Courses */}
+            {/* Sidebar */}
             <aside className="w-full lg:w-1/4 space-y-4">
               <h2 className="text-xl font-bold text-[#4377B2]">Explore Courses</h2>
               {[
@@ -96,9 +96,7 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
 
             {/* Main Content */}
             <div className="prose prose-lg dark:prose-invert flex-1">
-              <div
-                dangerouslySetInnerHTML={{ __html: post.content }}
-              />
+              <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
           </div>
 
@@ -138,13 +136,11 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
           </div>
         </div>
 
-        {/* Related Posts */}
+        {/* Related Posts with Images */}
         {relatedPosts.length > 0 && (
           <div className="container mx-auto px-4 py-16">
             <div className="space-y-8">
-              <h2 className="text-2xl font-bold" style={{ color: "#4377B2" }}>
-                Related Posts
-              </h2>
+              <h2 className="text-2xl font-bold text-[#4377B2]">Related Posts</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {relatedPosts.map((post) => (
                   <BlogCard

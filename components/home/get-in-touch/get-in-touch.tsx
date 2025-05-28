@@ -47,7 +47,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className="w-full px-4 py-12 flex justify-center">
+    <div className="w-full px-4 py-5 flex justify-center">
       <div className="w-full max-w-xl">
         <h1 className="text-[#4377B2] text-2xl sm:text-3xl font-semibold mb-4 text-center">
           CONTACT US

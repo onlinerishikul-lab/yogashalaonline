@@ -6,22 +6,25 @@ import { cn } from '@/lib/utils'
 
 interface ExtendedBlogCardProps extends BlogCardProps {
   className?: string
+  isFirst?: boolean // New prop to prioritize LCP image
 }
 
-export function BlogCard({ post, className }: ExtendedBlogCardProps) {
+export function BlogCard({ post, className, isFirst = false }: ExtendedBlogCardProps) {
   return (
     <div className={cn('block h-full', className)}>
-      <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
-        <div className="relative w-full aspect-[16/9] bg-gray-200">
+      <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-md">
+        <div className="relative w-full aspect-[16/9] bg-gray-100">
           <Image
             src={post.imageUrl}
             alt={post.title}
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+            sizes="(max-width: 768px) 100vw, 50vw"
             style={{ objectFit: 'cover' }}
             quality={60}
-            loading="lazy"
-            priority={false}
+            loading={isFirst ? 'eager' : 'lazy'}
+            priority={isFirst}
+            placeholder="blur"
+            blurDataURL="/placeholder.jpg" // Add a small base64 or low-res placeholder
           />
         </div>
         <div className="p-4 flex flex-col justify-between flex-1">

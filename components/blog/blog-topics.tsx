@@ -11,13 +11,16 @@ interface BlogTopicsProps {
 }
 
 export function BlogTopics({ posts }: BlogTopicsProps) {
-  const categories = useMemo(() => ['All', ...new Set(posts.map((post) => post.category))], [posts])
+  const categories = useMemo(
+    () => ['All', ...new Set(posts.map((post) => post.category))],
+    [posts]
+  )
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('All')
 
-  const filteredPosts = useMemo(
-    () => (activeCategory === 'All' ? posts : posts.filter((post) => post.category === activeCategory)),
-    [activeCategory, posts]
-  )
+  const filteredPosts = useMemo(() => {
+    if (activeCategory === 'All') return posts
+    return posts.filter((post) => post.category === activeCategory)
+  }, [activeCategory, posts])
 
   return (
     <section className="space-y-8">
@@ -36,6 +39,7 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
+            aria-pressed={activeCategory === category}
             className={cn(
               'whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors',
               activeCategory === category
@@ -49,9 +53,17 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredPosts.map((post) => (
-          <BlogCard key={post.id} post={post} />
-        ))}
+        {filteredPosts.length > 0 ? (
+          filteredPosts.map((post, index) => (
+            <BlogCard
+              key={post.id}
+              post={post}
+              isFirst={index === 0}
+            />
+          ))
+        ) : (
+          <p className="text-muted-foreground col-span-full">No posts available in this category.</p>
+        )}
       </div>
     </section>
   )

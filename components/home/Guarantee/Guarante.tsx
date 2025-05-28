@@ -7,7 +7,7 @@ const Guarante = () => {
   const router = useRouter();
 
   return (
-    <div className="bg-[#4377B2] bg-cover w-full py-12 sm:py-16">
+    <div className="bg-[#4377B2] bg-cover w-full py-5 sm:py-3">
       <div className="max-w-5xl mx-auto text-white text-center px-4 sm:px-6">
         <h2 className="mb-6 text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
           Ready to begin your Online Yoga Teacher Training journey from the comfort of your home?

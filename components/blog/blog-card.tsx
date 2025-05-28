@@ -12,30 +12,25 @@ export function BlogCard({ post, className }: ExtendedBlogCardProps) {
   return (
     <div className={cn('block h-full', className)}>
       <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
-        <div className="bg-gray-200 w-full">
+        <div className="relative w-full aspect-[16/9] bg-gray-200">
           <Image
             src={post.imageUrl}
             alt={post.title}
-            width={600} // Set appropriate image width
-            height={337} // 16:9 aspect ratio (600 / 337.5)
-            loading="lazy"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+            style={{ objectFit: 'cover' }}
             quality={60}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover w-full h-auto"
+            loading="lazy"
             priority={false}
           />
         </div>
         <div className="p-4 flex flex-col justify-between flex-1">
           <div>
-            <time className="text-xs text-muted-foreground mb-2">
-              {post.date}
-            </time>
+            <time className="text-xs text-muted-foreground mb-2">{post.date}</time>
             <h3 className="text-lg font-semibold mb-2 line-clamp-2 hover:text-[#4377B2] transition-colors">
               {post.title}
             </h3>
-            <p className="text-sm text-muted-foreground line-clamp-3">
-              {post.excerpt}
-            </p>
+            <p className="text-sm text-muted-foreground line-clamp-3">{post.excerpt}</p>
           </div>
           <Link
             href={`/blog/${post.slug}`}

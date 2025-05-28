@@ -12,7 +12,7 @@ export const SiteFooter = () => {
           <div className="flex-shrink-0">
             <Image
               src="/assets/rishikulonlinlogo.png"
-              alt="yoga logo"
+              alt="Rishikul Online Yoga Logo"
               height={120}
               width={80}
               className="object-contain"
@@ -50,13 +50,14 @@ export const SiteFooter = () => {
           </div>
         </div>
 
-        {/* Bottom Section: Social Icons and Copyright */}
+        {/* Bottom Section: Social Icons */}
         <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-white text-sm">
           <div className="flex space-x-4">
             <Link
               href="https://youtube.com/@rishikulyogshalaonline?si=IdyfN2kaCIIKtI1w"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit our YouTube channel"
               className="rounded-full bg-white/80 p-2 hover:bg-white/20 transition"
             >
               <Youtube className="h-5 w-5 text-[#4377B2]" />
@@ -65,6 +66,7 @@ export const SiteFooter = () => {
               href="https://www.instagram.com/rishikul.online/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit our Instagram profile"
               className="rounded-full bg-white/80 p-2 hover:bg-white/20 transition"
             >
               <Instagram className="h-5 w-5 text-[#4377B2]" />
@@ -73,6 +75,7 @@ export const SiteFooter = () => {
               href="https://twitter.com/Rishikulonline"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit our Twitter profile"
               className="rounded-full bg-white/80 p-2 hover:bg-white/20 transition"
             >
               <Twitter className="h-5 w-5 text-[#4377B2]" />

@@ -16,7 +16,6 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
     notFound();
   }
 
-  // Get related posts with same category/tag
   const relatedPosts = blogs
     .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
     .slice(0, 3);
@@ -62,29 +61,45 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
           </div>
         </div>
 
-        {/* Content Section */}
-        <div className="container mx-auto max-w-4xl px-4 py-12">
-          <div className="relative flex gap-8">
-            {/* Sticky Sidebar */}
-            <div className="hidden lg:block sticky top-8 h-fit w-auto text-muted-foreground">
-              <div className="flex items-center gap-2 text-sm">
-                <time>
-                  {new Date(post.createdAt).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </time>
-                <span>-</span>
-                <p>{Math.ceil(post.content.length / 1000)} min</p>
-              </div>
-            </div>
+        {/* Content Section with Sidebar */}
+        <div className="container mx-auto max-w-7xl px-4 py-12">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Left Sidebar – Explore Courses */}
+            <aside className="w-full lg:w-1/4 space-y-4">
+              <h2 className="text-xl font-bold text-[#4377B2]">Explore Courses</h2>
+              {[
+                {
+                  title: "Yoga Anatomy",
+                  link: "/25-Hrs-Yoga-Courses/Yoga-Anatomy",
+                },
+                {
+                  title: "Pranayama & Meditation",
+                  link: "/25-Hrs-Yoga-Courses/Pranayama-Meditation",
+                },
+                {
+                  title: "Yoga Philosophy",
+                  link: "/25-Hrs-Yoga-Courses/Yoga-Philosophy",
+                },
+                {
+                  title: "Adjustment & Alignment",
+                  link: "/25-Hrs-Yoga-Courses/Adjustment-Alignment",
+                },
+              ].map((course) => (
+                <Link key={course.title} href={course.link}>
+                  <div className="border rounded-lg p-4 hover:bg-[#f0f8ff] hover:border-[#4377B2] cursor-pointer transition-all">
+                    <h3 className="font-semibold text-[#4377B2]">{course.title}</h3>
+                    <p className="text-sm text-muted-foreground">Explore this course</p>
+                  </div>
+                </Link>
+              ))}
+            </aside>
 
             {/* Main Content */}
-            <div
-              className="prose prose-lg dark:prose-invert flex-1"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
+            <div className="prose prose-lg dark:prose-invert flex-1">
+              <div
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              />
+            </div>
           </div>
 
           {/* Author Section */}
@@ -108,22 +123,14 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
                 )}
                 <div>
                   <p className="font-medium">{post.author.name}</p>
-                  <p className="text-sm text-muted-foreground">
-                    {post.author.email}
-                  </p>
+                  <p className="text-sm text-muted-foreground">{post.author.email}</p>
                 </div>
               </div>
               <div className="flex space-x-4">
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-[#4377B2]"
-                >
+                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">
                   Twitter
                 </Link>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-[#4377B2]"
-                >
+                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">
                   LinkedIn
                 </Link>
               </div>
@@ -131,7 +138,7 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
           </div>
         </div>
 
-        {/* Related Posts Section */}
+        {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <div className="container mx-auto px-4 py-16">
             <div className="space-y-8">
@@ -149,14 +156,11 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
                       excerpt: post.overview,
                       content: post.content,
                       imageUrl: post.coverImage,
-                      date: new Date(post.createdAt).toLocaleDateString(
-                        "en-US",
-                        {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        }
-                      ),
+                      date: new Date(post.createdAt).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      }),
                       category: post.tags[0] || "Uncategorized",
                       author: post.author.name,
                     }}

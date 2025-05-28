@@ -8,7 +8,7 @@ const Join = () => {
   };
 
   return (
-    <div className="relative w-full min-h-[400px] flex justify-center items-center px-4 py-12">
+    <div className="relative w-full min-h-[400px] flex justify-center items-center px-4 py-5">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

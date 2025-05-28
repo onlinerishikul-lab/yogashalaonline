@@ -11,18 +11,13 @@ interface BlogTopicsProps {
 }
 
 export function BlogTopics({ posts }: BlogTopicsProps) {
-  const categories = useMemo(() => {
-    const unique = Array.from(new Set(posts.map((post) => post.category)))
-    return ['All', ...unique]
-  }, [posts])
-
+  const categories = useMemo(() => ['All', ...new Set(posts.map((post) => post.category))], [posts])
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('All')
 
-  const filteredPosts = useMemo(() => {
-    return activeCategory === 'All'
-      ? posts
-      : posts.filter((post) => post.category === activeCategory)
-  }, [activeCategory, posts])
+  const filteredPosts = useMemo(
+    () => (activeCategory === 'All' ? posts : posts.filter((post) => post.category === activeCategory)),
+    [activeCategory, posts]
+  )
 
   return (
     <section className="space-y-8">

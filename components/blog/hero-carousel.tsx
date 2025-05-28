@@ -15,7 +15,7 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % posts.length)
+    setCurrentIndex((prev) => (prev + 1) % posts.length)
   }, [posts.length])
 
   useEffect(() => {
@@ -26,10 +26,15 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
   const currentPost = posts[currentIndex]
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden bg-gray-200">
+    <div
+      role="group"
+      aria-roledescription="carousel"
+      aria-label="Hero blog carousel"
+      className="relative w-full h-[400px] overflow-hidden bg-gray-200"
+    >
       <AnimatePresence initial={false} mode="wait">
         <motion.div
-          key={currentIndex}
+          key={currentPost.id}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -40,19 +45,17 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
             src={currentPost.imageUrl}
             alt={currentPost.title}
             fill
-            priority={currentIndex === 0} // Only first is priority
+            priority={currentIndex === 0}
             sizes="100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 flex flex-col justify-end bg-black/40 p-6 sm:p-10 text-white">
-            <div className="max-w-3xl space-y-3">
+            <div className="max-w-3xl space-y-3" aria-live="polite">
               <div className="text-sm opacity-80">
                 <time>{currentPost.date}</time> &mdash;{' '}
                 <span>{currentPost.category}</span>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-bold">
-                {currentPost.title}
-              </h1>
+              <h1 className="text-2xl sm:text-3xl font-bold">{currentPost.title}</h1>
               <p className="text-white/90 text-sm sm:text-base line-clamp-2">
                 {currentPost.excerpt}
               </p>
@@ -62,15 +65,17 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
               >
                 Read More →
               </Link>
+
               <div className="flex space-x-2 mt-4">
                 {posts.map((_, idx) => (
                   <button
                     key={idx}
-                    aria-label={`Go to slide ${idx + 1}`}
                     onClick={() => setCurrentIndex(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                    aria-current={idx === currentIndex ? 'true' : undefined}
                     className={cn(
-                      'h-[2px]',
-                      idx === currentIndex ? 'w-6 bg-white' : 'w-4 bg-white/50 hover:bg-white'
+                      'w-2 h-2 rounded-full transition-all',
+                      idx === currentIndex ? 'bg-white w-3' : 'bg-white/50 hover:bg-white'
                     )}
                   />
                 ))}

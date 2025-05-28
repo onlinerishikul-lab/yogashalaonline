@@ -22,24 +22,34 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
 
   const courses = [
     {
-      title: "Yoga Anatomy",
+      title: "Yoga Anatomy For Safety",
       link: "/25-Hrs-Yoga-Courses/Yoga-Anatomy",
-      image: "/images/yoga-anatomy.jpg",
+      image: "/25.hrs.png",
     },
     {
-      title: "Pranayama & Meditation",
-      link: "/25-Hrs-Yoga-Courses/Pranayama-Meditation",
-      image: "/images/pranayama.jpg",
+      title: "Face Yoga TTC",
+      link: "/25-Hrs-Yoga-Courses/face-yoga",
+      image: "/Face-Yoga.jpg",
     },
     {
-      title: "Yoga Philosophy",
-      link: "/25-Hrs-Yoga-Courses/Yoga-Philosophy",
-      image: "/images/yoga-philosophy.jpg",
+      title: "Ayurveda Immunity Course",
+      link: "/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course",
+      image: "/Immunity.jpg",
     },
     {
-      title: "Adjustment & Alignment",
-      link: "/25-Hrs-Yoga-Courses/Adjustment-Alignment",
-      image: "/images/alignment.jpg",
+      title: "Ayurveda Skin and Beauty Course",
+      link: "/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course",
+      image: "/Beauty.jpg",
+    },
+    {
+      title: "Ayurveda Garbha Samskara Course",
+      link: "/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course",
+      image: "/Garbha-Samskara.jpg",
+    },
+    {
+      title: "Ayurvedic Sexual Relationship Course",
+      link: "/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship",
+      image: "/Sexual-Relationship.jpg",
     },
   ];
 

@@ -99,45 +99,42 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
           </div>
         </div>
 
-        {/* Main Content */}
+        {/* Content Section with Sidebar */}
         <div className="container mx-auto max-w-7xl px-4 py-12">
-          <div className="prose prose-lg dark:prose-invert mx-auto">
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
-          </div>
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Sidebar with Image Cards */}
+            <aside className="w-full lg:w-1/4 space-y-4">
+              <h2 className="text-xl font-bold text-[#4377B2]">Explore Courses</h2>
+              <div className="grid grid-cols-1 gap-4">
+                {courses.map((course) => (
+                  <Link key={course.title} href={course.link}>
+                    <div className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300 cursor-pointer group">
+                      <div className="relative h-40 w-full overflow-hidden">
+                        <Image
+                          src={course.image}
+                          alt={course.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-semibold text-[#4377B2] text-lg">{course.title}</h3>
+                        <p className="text-sm text-muted-foreground">Explore this course</p>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </aside>
 
-          {/* Explore Courses Section */}
-          <div className="mt-20">
-            <h2 className="text-2xl font-bold text-center text-[#4377B2] mb-8">
-              Explore Courses
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {courses.map((course) => (
-                <Link key={course.title} href={course.link}>
-                  <div className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300 cursor-pointer group">
-                    <div className="relative h-40 w-full overflow-hidden">
-                      <Image
-                        src={course.image}
-                        alt={course.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="font-semibold text-[#4377B2] text-lg">
-                        {course.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        Explore this course
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              ))}
+            {/* Main Content */}
+            <div className="prose prose-lg dark:prose-invert flex-1">
+              <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
           </div>
 
           {/* Author Section */}
-          <div className="mt-20 border-t pt-8">
+          <div className="mt-16 border-t pt-8">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 {post.author.image ? (
@@ -157,9 +154,7 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
                 )}
                 <div>
                   <p className="font-medium">{post.author.name}</p>
-                  <p className="text-sm text-muted-foreground">
-                    {post.author.email}
-                  </p>
+                  <p className="text-sm text-muted-foreground">{post.author.email}</p>
                 </div>
               </div>
               <div className="flex space-x-4">

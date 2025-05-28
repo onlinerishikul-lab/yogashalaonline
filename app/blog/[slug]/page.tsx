@@ -20,6 +20,29 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
     .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
     .slice(0, 3);
 
+  const courses = [
+    {
+      title: "Yoga Anatomy",
+      link: "/25-Hrs-Yoga-Courses/Yoga-Anatomy",
+      image: "/images/yoga-anatomy.jpg",
+    },
+    {
+      title: "Pranayama & Meditation",
+      link: "/25-Hrs-Yoga-Courses/Pranayama-Meditation",
+      image: "/images/pranayama.jpg",
+    },
+    {
+      title: "Yoga Philosophy",
+      link: "/25-Hrs-Yoga-Courses/Yoga-Philosophy",
+      image: "/images/yoga-philosophy.jpg",
+    },
+    {
+      title: "Adjustment & Alignment",
+      link: "/25-Hrs-Yoga-Courses/Adjustment-Alignment",
+      image: "/images/alignment.jpg",
+    },
+  ];
+
   return (
     <MainWrapper>
       <article className="min-h-screen">
@@ -64,34 +87,30 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
         {/* Content Section with Sidebar */}
         <div className="container mx-auto max-w-7xl px-4 py-12">
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Sidebar */}
+            {/* Sidebar with Image Cards */}
             <aside className="w-full lg:w-1/4 space-y-4">
               <h2 className="text-xl font-bold text-[#4377B2]">Explore Courses</h2>
-              {[
-                {
-                  title: "Yoga Anatomy",
-                  link: "/25-Hrs-Yoga-Courses/Yoga-Anatomy",
-                },
-                {
-                  title: "Pranayama & Meditation",
-                  link: "/25-Hrs-Yoga-Courses/Pranayama-Meditation",
-                },
-                {
-                  title: "Yoga Philosophy",
-                  link: "/25-Hrs-Yoga-Courses/Yoga-Philosophy",
-                },
-                {
-                  title: "Adjustment & Alignment",
-                  link: "/25-Hrs-Yoga-Courses/Adjustment-Alignment",
-                },
-              ].map((course) => (
-                <Link key={course.title} href={course.link}>
-                  <div className="border rounded-lg p-4 hover:bg-[#f0f8ff] hover:border-[#4377B2] cursor-pointer transition-all">
-                    <h3 className="font-semibold text-[#4377B2]">{course.title}</h3>
-                    <p className="text-sm text-muted-foreground">Explore this course</p>
-                  </div>
-                </Link>
-              ))}
+              <div className="grid grid-cols-1 gap-4">
+                {courses.map((course) => (
+                  <Link key={course.title} href={course.link}>
+                    <div className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300 cursor-pointer group">
+                      <div className="relative h-40 w-full">
+                        <Image
+                          src={course.image}
+                          alt={course.title}
+                          layout="fill"
+                          objectFit="cover"
+                          className="group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-semibold text-[#4377B2] text-lg">{course.title}</h3>
+                        <p className="text-sm text-muted-foreground">Explore this course</p>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </aside>
 
             {/* Main Content */}

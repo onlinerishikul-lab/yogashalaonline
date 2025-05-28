@@ -109,13 +109,12 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
                 {courses.map((course) => (
                   <Link key={course.title} href={course.link}>
                     <div className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300 cursor-pointer group">
-                      <div className="relative h-40 w-full">
+                      <div className="relative h-40 w-full overflow-hidden">
                         <Image
                           src={course.image}
                           alt={course.title}
-                          layout="fill"
-                          objectFit="cover"
-                          className="group-hover:scale-105 transition-transform duration-300"
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                       <div className="p-4">
@@ -170,7 +169,7 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
           </div>
         </div>
 
-        {/* Related Posts with Images */}
+        {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <div className="container mx-auto px-4 py-16">
             <div className="space-y-8">

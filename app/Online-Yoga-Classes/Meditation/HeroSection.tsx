@@ -14,10 +14,11 @@ const HeroSection = () => {
       {/* Hero Content Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white px-4 pt-20">
         <h1 className="text-4xl md:text-5xl font-bold text-center leading-snug drop-shadow-lg">
-          Postnatal Yoga Course 
-          <br />
-          Heal, Strengthen & Reconnect After Birth.
-        </h1>
+  Meditation Course
+  <br />
+  Cultivate Inner Peace & Mental Clarity.
+</h1>
+
         <button className="mt-6 bg-[#4377b2] hover:bg-[#365e8f] transition-colors duration-300 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg">
           Enroll Now
         </button>

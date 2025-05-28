@@ -67,7 +67,7 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
             src={post.coverImage}
             alt={post.title}
             fill
-            className="object-contain" // changed from object-cover
+            className="object-cover"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent" />
@@ -109,12 +109,12 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
                 {courses.map((course) => (
                   <Link key={course.title} href={course.link}>
                     <div className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300 cursor-pointer group">
-                      <div className="relative h-40 w-full overflow-hidden bg-white">
+                      <div className="relative h-40 w-full overflow-hidden">
                         <Image
                           src={course.image}
                           alt={course.title}
                           fill
-                          className="object-contain group-hover:scale-105 transition-transform duration-300"
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                       <div className="p-4">

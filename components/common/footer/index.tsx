@@ -1,7 +1,8 @@
-import { Instagram, Send, Facebook } from "lucide-react";
+import { Instagram, Twitter, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
 export const SiteFooter = () => {
   return (
     <footer className="bg-[#4377B2] bg-cover flex justify-center">
@@ -52,14 +53,29 @@ export const SiteFooter = () => {
         {/* Bottom Section: Social Icons and Copyright */}
         <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-white text-sm">
           <div className="flex space-x-4">
-            <Link href="#" className="rounded-full bg-white/80 p-2 hover:bg-white/20 transition">
-              <Send className="h-5 w-5 text-[#4377B2]" />
+            <Link
+              href="https://youtube.com/@rishikulyogshalaonline?si=IdyfN2kaCIIKtI1w"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-white/80 p-2 hover:bg-white/20 transition"
+            >
+              <Youtube className="h-5 w-5 text-[#4377B2]" />
             </Link>
-            <Link href="#" className="rounded-full bg-white/80 p-2 hover:bg-white/20 transition">
-              <Facebook className="h-5 w-5 text-[#4377B2]" />
-            </Link>
-            <Link href="#" className="rounded-full bg-white/80 p-2 hover:bg-white/20 transition">
+            <Link
+              href="https://www.instagram.com/rishikul.online/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-white/80 p-2 hover:bg-white/20 transition"
+            >
               <Instagram className="h-5 w-5 text-[#4377B2]" />
+            </Link>
+            <Link
+              href="https://twitter.com/Rishikulonline"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-white/80 p-2 hover:bg-white/20 transition"
+            >
+              <Twitter className="h-5 w-5 text-[#4377B2]" />
             </Link>
           </div>
           <p className="text-center md:text-right w-full md:w-auto">

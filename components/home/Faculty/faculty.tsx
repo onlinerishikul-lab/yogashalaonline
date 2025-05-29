@@ -2,18 +2,36 @@
 
 import { teachers } from "@/constants/about-data";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+
 const Faculty = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Auto-slide logic
+  // Function to go to next trainer
+  const goToNextTrainer = () => {
+    setSelectedIndex((prevIndex) => (prevIndex + 1) % teachers.length);
+  };
+
+  // Auto-slide setup
   useEffect(() => {
-    const interval = setInterval(() => {
-      setSelectedIndex((prevIndex) => (prevIndex + 1) % teachers.length);
-    }, 3000); // Slide every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup on unmount
+    startAutoSlide();
+    return () => stopAutoSlide(); // Cleanup on unmount
   }, []);
+
+  const startAutoSlide = () => {
+    stopAutoSlide();
+    intervalRef.current = setInterval(goToNextTrainer, 3000); // Change every 3 seconds
+  };
+
+  const stopAutoSlide = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+  };
+
+  const handleTrainerClick = (index: number) => {
+    setSelectedIndex(index);
+    startAutoSlide(); // Reset auto-slide on manual click
+  };
 
   const selectedTrainer = teachers[selectedIndex];
 
@@ -38,7 +56,7 @@ const Faculty = () => {
           {/* Left Panel */}
           <div className="bg-[#4377B2] p-6 sm:p-8 rounded-3xl lg:w-1/4 flex flex-col justify-between">
             <div>
-              <h1 className="text-white text-4xl sm:text-6xl font-bold">Our Experts</h1>
+              <h1 className="text-white text-4xl sm:text-6xl font-bold">920+</h1>
               <p className="text-white text-sm mt-2">
                 Learn from the Best in the Industry
               </p>
@@ -46,9 +64,10 @@ const Faculty = () => {
 
             <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-4">
               {teachers.map((trainer, index) => (
-                <div
+                <button
                   key={trainer.id}
-                  className={`relative w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] rounded-full overflow-hidden border-4 transition-all ${
+                  onClick={() => handleTrainerClick(index)}
+                  className={`relative w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 ${
                     selectedIndex === index
                       ? "border-white scale-110 z-10"
                       : "border-transparent scale-100"
@@ -60,7 +79,7 @@ const Faculty = () => {
                     fill
                     className="object-cover object-top"
                   />
-                </div>
+                </button>
               ))}
             </div>
           </div>

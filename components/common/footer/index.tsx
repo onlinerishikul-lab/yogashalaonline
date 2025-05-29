@@ -45,7 +45,7 @@ export const SiteFooter = () => {
               +91 98452 71423
             </Link>
             <Link href="mailto:contact@rishikulonline108@gmail.com" className="hover:underline break-words">
-              contact@rishikulonline108@gmail.com
+              rishikulonline108@gmail.com
             </Link>
           </div>
         </div>

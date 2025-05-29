@@ -1,7 +1,8 @@
 "use client";
+
 import { teachers } from "@/constants/about-data";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface Trainer {
   id: number;
@@ -12,7 +13,18 @@ interface Trainer {
 }
 
 const Faculty = () => {
-  const [selectedTrainer, setSelectedTrainer] = useState<Trainer>(teachers[0]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  // Auto-slide logic
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSelectedIndex((prevIndex) => (prevIndex + 1) % teachers.length);
+    }, 3000); // Slide every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
+  const selectedTrainer = teachers[selectedIndex];
 
   return (
     <div className="flex justify-center bg-[#f1f1f1] w-full">
@@ -35,21 +47,18 @@ const Faculty = () => {
           {/* Left Panel */}
           <div className="bg-[#4377B2] p-6 sm:p-8 rounded-3xl lg:w-1/4 flex flex-col justify-between">
             <div>
-              <h1 className="text-white text-4xl sm:text-6xl font-bold">
-                920+
-              </h1>
+              <h1 className="text-white text-4xl sm:text-6xl font-bold">920+</h1>
               <p className="text-white text-sm mt-2">
                 Learn from the Best in the Industry
               </p>
             </div>
 
             <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-4">
-              {teachers.map((trainer) => (
-                <button
+              {teachers.map((trainer, index) => (
+                <div
                   key={trainer.id}
-                  onClick={() => setSelectedTrainer(trainer)}
-                  className={`relative w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 ${
-                    selectedTrainer.id === trainer.id
+                  className={`relative w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] rounded-full overflow-hidden border-4 transition-all ${
+                    selectedIndex === index
                       ? "border-white scale-110 z-10"
                       : "border-transparent scale-100"
                   }`}
@@ -60,7 +69,7 @@ const Faculty = () => {
                     fill
                     className="object-cover object-top"
                   />
-                </button>
+                </div>
               ))}
             </div>
           </div>

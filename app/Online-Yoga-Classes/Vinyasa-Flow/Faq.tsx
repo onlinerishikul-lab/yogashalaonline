@@ -5,34 +5,34 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "What is Hatha Yoga?",
+    question: "What is Vinyasa-Flow Yoga?",
     answer:
-      "Hatha Yoga is a branch of yoga that focuses on physical postures (asanas), breath control (pranayama), and meditation. It aims to balance the mind and body, promoting health, flexibility, and mental clarity.",
+      "Vinyasa-Flow is a dynamic style of yoga that links breath with movement through a continuous sequence of postures. It improves flexibility, builds strength, and boosts mental focus.",
   },
   {
-    question: "Is Hatha Yoga suitable for beginners?",
+    question: "Is Vinyasa-Flow suitable for beginners?",
     answer:
-      "Yes, Hatha Yoga is perfect for beginners. The course starts with basic poses and gradually builds up to more advanced practices, helping you develop strength, flexibility, and mindfulness.",
+      "Yes, Vinyasa-Flow can be adapted for beginners. The course includes foundational sequences and gradually increases intensity, allowing beginners to grow with confidence.",
   },
   {
-    question: "What equipment do I need for Hatha Yoga?",
+    question: "What equipment do I need for Vinyasa-Flow Yoga?",
     answer:
-      "You only need a yoga mat for comfort. Optional accessories include yoga blocks, straps, and cushions to assist with certain poses, but they are not necessary to start the practice.",
+      "A yoga mat is essential. Optional props like yoga blocks and straps can enhance your practice but are not required.",
   },
   {
-    question: "How often should I practice Hatha Yoga?",
+    question: "How often should I practice Vinyasa-Flow Yoga?",
     answer:
-      "It's recommended to practice Hatha Yoga at least 3-4 times a week. However, you can start with a few sessions per week and gradually increase as you become more comfortable with the practice.",
+      "Practicing 3–5 times a week is ideal for building consistency and progress. Even short daily sessions can offer noticeable benefits.",
   },
   {
-    question: "Can Hatha Yoga help with stress and anxiety?",
+    question: "Can Vinyasa-Flow help with stress and anxiety?",
     answer:
-      "Yes, Hatha Yoga is known for its calming effects. The combination of gentle movements, breathwork, and meditation can significantly reduce stress and anxiety levels.",
+      "Yes, the breath-focused sequences in Vinyasa-Flow help calm the nervous system, reduce anxiety, and promote emotional balance.",
   },
   {
     question: "Will I receive a certificate after completing the course?",
     answer:
-      "Yes, upon successful completion of the course, you will receive a digital certificate to mark your achievement in Hatha Yoga.",
+      "Yes, after completing the Vinyasa-Flow course, you’ll receive a digital certificate recognizing your participation and progress.",
   },
 ];
 
@@ -48,10 +48,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Hatha Yoga Course: FAQ
+          Vinyasa-Flow: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Find answers to your questions before beginning your Hatha Yoga journey.
+          Get clarity on everything before you begin your Vinyasa-Flow journey.
         </p>
 
         <div className="space-y-4">

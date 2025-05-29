@@ -120,7 +120,7 @@ const GetInTouch = () => {
             />
             <div className="text-sm text-left">
               <p className="font-semibold">E-Mail</p>
-              <p className="text-[#4377B2] text-xs">contact@rishikulonline108@gmail.com</p>
+              <p className="text-[#4377B2] text-xs">rishikulonline108@gmail.com</p>
             </div>
           </div>
         </div>

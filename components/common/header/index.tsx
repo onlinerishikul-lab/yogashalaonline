@@ -30,7 +30,7 @@ export const Header = () => {
   const router = useRouter();
   const navigationItems: NavigationItem[] = [
     {
-      title: "Yoga Training",
+      title: "Yoga Courses",
       dropdown: [
         {
           title: "25 Hrs Yoga Courses",

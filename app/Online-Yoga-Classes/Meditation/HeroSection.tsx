@@ -28,6 +28,7 @@ const HeroSection = () => {
           <Image src="/rpys3.png" alt="RYS 200" width={64} height={64} />
           <Image src="/rpys2.png" alt="RYS 300" width={64} height={64} />
           <Image src="/rpys1.png" alt="RPYS" width={64} height={64} />
+         <Image src="/rpys6.png" alt="RPYS" width={64} height={64} />
         </div>
       </div>
     </div>

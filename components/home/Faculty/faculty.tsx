@@ -38,7 +38,7 @@ const Faculty = () => {
           {/* Left Panel */}
           <div className="bg-[#4377B2] p-6 sm:p-8 rounded-3xl lg:w-1/4 flex flex-col justify-between">
             <div>
-              <h1 className="text-white text-4xl sm:text-6xl font-bold">920+</h1>
+              <h1 className="text-white text-4xl sm:text-6xl font-bold">Our Experts</h1>
               <p className="text-white text-sm mt-2">
                 Learn from the Best in the Industry
               </p>

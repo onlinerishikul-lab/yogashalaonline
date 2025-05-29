@@ -3,15 +3,6 @@
 import { teachers } from "@/constants/about-data";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-
-interface Trainer {
-  id: number;
-  name: string;
-  image: string;
-  description: string;
-  Subtitle?: string;
-}
-
 const Faculty = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 

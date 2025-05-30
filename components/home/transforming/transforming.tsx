@@ -15,10 +15,6 @@ const Transforming = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start md:gap-8">
           {/* Left Section */}
           <div className="md:w-1/2 w-full">
-            <h1 className="text-2xl mb-4 md:text-4xl font-bold text-[#4377B2]">
-              Online Yoga Courses
-            </h1>
-
             <div className="mt-6">
               <Image
                 src="/community1.jpg"
@@ -27,6 +23,11 @@ const Transforming = () => {
                 height={300}
                 className="rounded-lg w-full max-w-full h-auto object-cover"
               />
+            </div>
+            <div className="text-center mt-6">
+              <h1 className="text-2xl md:text-4xl font-bold text-[#4377B2]">
+                Online Yoga Courses
+              </h1>
             </div>
           </div>
 

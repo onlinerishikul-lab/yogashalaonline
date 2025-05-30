@@ -8,25 +8,25 @@ const OurTeaching = () => {
       id: 1,
       heading: "Interactive Online Learning Experience",
       text: "Enjoy a fully immersive learning journey with live classes, recorded modules, and engaging digital resources. Get real-time Q&A, group activities, and one-on-one guidance from expert teachers. Learn at your own pace with a supportive, classroom-like environment—anywhere in the world.",
-      image: "/assets/teaching/Interactive.jpg",
+      image: "/assets/teaching/interactivee.jpg",
     },
     {
       id: 2,
       heading: "Our Teaching Philosophy",
       text: "We blend the ancient wisdom of yoga and Ayurveda with modern science and lifestyle needs. Inspired by classical texts and contemporary health practices, our approach helps you apply traditional knowledge to today’s world. Learn to manage stress, improve posture, boost immunity, and enhance mental clarity for holistic well-being.",
-      image: "/assets/teaching/Traditional Knowledge.jpg",
+      image: "/assets/teaching/tradition.jpg",
     },
     {
       id: 3,
       heading: "Foundation in Anatomy & Alignment",
       text: "Gain a clear understanding of anatomy, alignment, and biomechanics for safe and effective yoga practice. Learn how to adapt poses for different body types and avoid injuries with smart adjustments. We also include Ayurvedic principles like dosha analysis to help personalize healing and support holistic health.",
-      image: "/assets/teaching/Foundation.jpg",
+      image: "/assets/teaching/anatomy.jpg",
     },
     {
       id: 4,
       heading: "Student-Centered Virtual Classrooms",
       text: "Our online classes offer personalized guidance, live mentorship, and flexible learning paths tailored to your goals. You’ll receive individual attention through progress check-ins and interactive sessions that feel just like in-person learning. Whether exploring yoga, Ayurveda, or philosophy, our supportive instructors are here to help you grow with confidence.",
-      image: "/assets/teaching/Student-Centered.jpg",
+      image: "/assets/teaching/virtural.jpg",
     },
   ];
 

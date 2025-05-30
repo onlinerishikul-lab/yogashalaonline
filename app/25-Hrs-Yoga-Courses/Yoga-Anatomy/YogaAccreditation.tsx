@@ -4,54 +4,27 @@ import Image from "next/image";
 
 const YogaAccreditation = () => {
   return (
-    <section className="py-16 px-6 bg-white text-center">
+    <section className="py-16 px-4 bg-white text-center">
       <div className="max-w-6xl mx-auto">
         {/* Horizontal Image Section */}
-        <div className="flex flex-wrap justify-center items-center gap-6 mb-10">
-          <div className="w-36 sm:w-40 md:w-44 lg:w-48 relative">
-            <Image
-              src="/rpys1.png"
-              alt="Yoga Alliance Certification 1"
-              width={70}
-              height={70}
-              className="object-contain hover:scale-105 transition-transform duration-300"
-              priority
-            />
-          </div>
-          <div className="w-36 sm:w-40 md:w-44 lg:w-48 relative">
-            <Image
-              src="/rpys2.png"
-              alt="Yoga Alliance Certification 2"
-              width={70}
-              height={70}
-              className="object-contain  hover:scale-105 transition-transform duration-300"
-              priority
-            />
-          </div>
-          <div className="w-36 sm:w-40 md:w-44 lg:w-48 relative">
-            <Image
-              src="/rpys3.png"
-              alt="Yoga Alliance Certification 3"
-              width={70}
-              height={70}
-              className="object-contain hover:scale-105 transition-transform duration-300"
-              priority
-            />
-          </div>
-           <div className="w-36 sm:w-40 md:w-44 lg:w-48 relative">
-            <Image
-              src="/rpys4.jpg"
-              alt="Yoga Alliance Certification 3"
-              width={70}
-              height={70}
-              className="object-contain hover:scale-105 transition-transform duration-300"
-              priority
-            />
-          </div>
+        <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-10 mb-12">
+          {[1, 2, 3, 4].map((num, index) => (
+            <div key={index} className="w-28 sm:w-32 md:w-36 lg:w-40 flex flex-col items-center">
+              <div className="relative w-full aspect-square">
+                <Image
+                  src={`/rpys${num}.png`}
+                  alt={`Yoga Alliance Certification ${num}`}
+                  fill
+                  className="object-contain rounded-md hover:scale-105 transition-transform duration-300"
+                  priority
+                />
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Heading and Description */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-sky-600 mb-6">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#4377b2] mb-6">
           Yoga Alliance Accreditation
         </h2>
         <p className="text-gray-700 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed px-2 sm:px-0">

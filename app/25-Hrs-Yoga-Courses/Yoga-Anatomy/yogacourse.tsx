@@ -10,39 +10,6 @@ const features = [
   "✅ Lifetime Course Access",
   "✅ 24 Months of Instructor Support",
 ];
-
-// Pricing Card Component
-const PricingCard = ({
-  title,
-  description,
-  price,
-  note,
-}: {
-  title: string;
-  description: string;
-  price: string;
-  note: string;
-}) => (
-  <div className="flex flex-col justify-between border border-[#4377b2] rounded-xl p-4 bg-white shadow-md w-full sm:w-[260px] transition hover:shadow-lg">
-    <div>
-      <h3 className="text-sm font-semibold text-[#4377b2] mb-1">{title}</h3>
-      <p className="text-xs mb-2 text-gray-700">{description}</p>
-      <div className="text-xl font-bold text-[#4377b2] mb-1">{price}</div>
-      <p className="text-xs mb-3 text-gray-600">{note}</p>
-    </div>
-    <div className="mt-2">
-      <button className="bg-[#4377b2] hover:bg-[#365a90] text-white font-medium py-2 px-4 rounded-full w-full text-sm transition">
-        ENROLL NOW
-      </button>
-      <ul className="mt-4 text-xs text-gray-700 space-y-1">
-        {features.map((item, idx) => (
-          <li key={idx}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  </div>
-);
-
 // Risk-Free Guarantee Section
 const RiskFreeGuarantee = () => (
   <section className="w-full flex justify-center py-12 px-4 bg-white">
@@ -101,12 +68,6 @@ const YogaCoursePage = () => {
           </p>
         </div>
         <div className="md:w-1/2 w-full">
-          <PricingCard
-            title="Yoga Anatomy Course"
-            description="Understand the human body for safer yoga practice."
-            price="₹3,999"
-            note="One-time payment for lifetime access"
-          />
         </div>
       </section>
 

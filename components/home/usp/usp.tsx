@@ -32,7 +32,7 @@ const Usp = () => {
             key={index}
             className="flex flex-col items-center p-3 sm:p-4 lg:p-6 hover:transform hover:scale-105 transition-transform duration-300"
           >
-            <div className="bg-gradient-to-b from-[#4377B2] to-[#285384] rounded-full h-[80px] w-[80px] sm:h-[90px] sm:w-[90px] lg:h-[100px] lg:w-[100px] p-2 flex items-center justify-center mb-2 sm:mb-3">
+            <div className="rounded-full h-[80px] w-[80px] sm:h-[90px] sm:w-[90px] lg:h-[100px] lg:w-[100px] p-2 flex items-center justify-center mb-2 sm:mb-3">
               <Image
                 src={item.icon}
                 height={20}

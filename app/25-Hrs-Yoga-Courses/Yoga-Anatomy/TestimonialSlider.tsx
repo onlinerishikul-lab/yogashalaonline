@@ -1,78 +1,30 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+import React from "react";
 
-const slides = [
-  {
-    image: '/slide1.jpg',
-    text: 'This course deepened my understanding of how anatomy supports safe yoga practice. Truly enlightening!',
-    avatar: '/avatar1.jpg',
-    name: 'Priya Sharma',
-  },
-  {
-    image: '/slide2.jpg',
-    text: 'An essential course for every yoga teacher. The blend of science and spirituality was beautifully delivered.',
-    avatar: '/avatar2.jpg',
-    name: 'Liam Matthews',
-  },
-  {
-    image: '/slide3.jpg',
-    text: 'I now teach with so much more awareness and intention. This was a turning point in my yoga journey.',
-    avatar: '/avatar3.jpg',
-    name: 'Mei Tanaka',
-  },
-];
-
-const TestimonialSlider = () => {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
+const StickyCourseCard = () => {
   return (
-    <section className="w-full bg-[#f5f5f5] py-16 flex justify-center items-center px-4">
-      <div className="relative w-full max-w-4xl h-[400px] md:h-[450px] rounded-3xl overflow-hidden shadow-xl">
-        {slides.map((slide, idx) => (
-          <div
-            key={idx}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              current === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'
-            }`}
-          >
-            <Image
-              src={slide.image}
-              alt={`Slide ${idx + 1}`}
-              fill
-              style={{ objectFit: 'cover' }}
-              className="rounded-3xl"
-              priority={idx === 0}
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-6 flex flex-col justify-end">
-              <div className="bg-white bg-opacity-90 p-4 rounded-xl shadow-md max-w-md mx-auto text-center">
-                <div className="flex flex-col items-center mb-2">
-                  <Image
-                    src={slide.avatar}
-                    alt="Avatar"
-                    width={64}
-                    height={64}
-                    className="rounded-full border-2 border-[#4377b2] shadow-lg"
-                  />
-                  <h4 className="text-lg font-semibold mt-2 text-[#4377b2]">{slide.name}</h4>
-                </div>
-                <p className="text-gray-700 text-sm">{slide.text}</p>
-              </div>
-            </div>
-          </div>
-        ))}
+    <div className="hidden lg:block sticky top-24 h-fit w-80">
+      <div className="bg-white border border-gray-200 shadow-lg rounded-xl p-6 space-y-4">
+        <h3 className="text-xl font-bold text-[#4377b2]">Course Info</h3>
+        <p className="text-sm text-gray-700">
+          <strong>Duration:</strong> 15 Days<br />
+          <strong>Time:</strong> Morning (6:00 – 7:30 AM IST) or Evening (6:00 – 7:30 PM IST)<br />
+          <strong>Start Date:</strong> 1st of every month<br />
+          <strong>Language:</strong> English<br />
+          <strong>Certification:</strong> Yoga Alliance
+        </p>
+        <div>
+          <p className="text-2xl font-bold text-[#4377b2]">USD 250</p>
+          <p className="text-xs text-gray-500">(All taxes included)</p>
+        </div>
+        <button className="bg-[#4377b2] hover:bg-[#365a92] text-white px-5 py-2.5 rounded-full font-medium flex items-center justify-center space-x-2 text-sm w-full">
+          <span>BOOK YOUR SEAT NOW</span>
+          <span>&rarr;</span>
+        </button>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default TestimonialSlider;
+export default StickyCourseCard;

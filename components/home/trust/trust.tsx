@@ -8,7 +8,7 @@ const Trust = () => {
         {/* Heading */}
         <div className="flex items-center flex-col mb-8 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#4377B2]">
-            Certification You Can Trust
+            Internationally Accredited Yoga Certification
           </h2>
         </div>
 
@@ -40,10 +40,7 @@ const Trust = () => {
         {/* Description */}
         <div className="flex flex-col items-center space-y-4 text-center">
           <p className="text-sm sm:text-base md:text-lg px-4 leading-relaxed">
-            Upon successful completion of Rishikul online Yoga Teacher Training program, you will receive a globally recognized certificate accredited by Rishikul. This certification not only validates your expertise but also qualifies you to teach yoga anywhere in the world.
-          </p>
-          <p className="text-sm sm:text-base md:text-lg px-4 leading-relaxed">
-            Whether you aim to teach professionally or deepen your practice, this certification is your key to unlocking limitless opportunities in the yoga community.
+           Earn a globally recognized Rishikul certification that qualifies you to teach yoga worldwide or deepen your personal practice.
           </p>
         </div>
       </div>

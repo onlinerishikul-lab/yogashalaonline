@@ -12,7 +12,6 @@ import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Certificate
 import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TestimonialCarousel";
 import Faq from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Faq";
 import { SiteFooter } from "@/components/common/footer";
-import Faculty from "@/components/home/Faculty/faculty";
 export default function Page() {
   return (
     <div className="flex flex-col gap-10">
@@ -30,7 +29,6 @@ export default function Page() {
           <CourseDetails />
           <YogaAccreditation />
           <CertificatePromo />
-          <Faculty />
           <TestimonialCarousel />
           <Faq />
         </div>

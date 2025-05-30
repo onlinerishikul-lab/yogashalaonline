@@ -14,19 +14,19 @@ const OurTeaching = () => {
       id: 2,
       heading: "Our Teaching Philosophy",
       text: "We blend the ancient wisdom of yoga and Ayurveda with modern science and lifestyle needs. Inspired by classical texts and contemporary health practices, our approach helps you apply traditional knowledge to today’s world. Learn to manage stress, improve posture, boost immunity, and enhance mental clarity for holistic well-being.",
-      image: "/assets/teaching/tradition.jpg",
+      image: "/assets/teaching/teacher.png",
     },
     {
       id: 3,
       heading: "Foundation in Anatomy & Alignment",
       text: "Gain a clear understanding of anatomy, alignment, and biomechanics for safe and effective yoga practice. Learn how to adapt poses for different body types and avoid injuries with smart adjustments. We also include Ayurvedic principles like dosha analysis to help personalize healing and support holistic health.",
-      image: "/assets/teaching/anatomy.jpg",
+      image: "/assets/teaching/anatomy.png",
     },
     {
       id: 4,
       heading: "Student-Centered Virtual Classrooms",
       text: "Our online classes offer personalized guidance, live mentorship, and flexible learning paths tailored to your goals. You’ll receive individual attention through progress check-ins and interactive sessions that feel just like in-person learning. Whether exploring yoga, Ayurveda, or philosophy, our supportive instructors are here to help you grow with confidence.",
-      image: "/assets/teaching/virtural.jpg",
+      image: "/assets/teaching/virtural.png",
     },
   ];
 

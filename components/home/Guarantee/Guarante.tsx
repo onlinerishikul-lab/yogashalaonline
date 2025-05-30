@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { useRouter } from "next/navigation";
+
 const Guarante = () => {
   const router = useRouter();
 
@@ -11,8 +12,10 @@ const Guarante = () => {
         <h2 className="mb-6 text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
           What is Rishikul Online Yoga Teacher Training?
         </h2>
-        <p className="mb-10 text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
-         A certified online program with live classes, expert instructors, and flexible learning from home.
+        <p className="mb-10 text-base sm:text-lg md:text-xl leading-relaxed text-white/90 max-w-3xl mx-auto">
+          A certified online program with live classes, expert instructors,
+          <br className="hidden sm:block" />
+          and flexible learning from home.
         </p>
         <div className="flex justify-center">
           <Button

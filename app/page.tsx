@@ -67,9 +67,10 @@ export default async function Home() {
 
       {/* Remaining Sections */}
       <Guarante />
-      <Trust />
+     
       <OurTeaching />
       <Transforming />
+      <Trust />
       <OnlineYoga />
       <Blogs blogs={blogs} />
       <Join />

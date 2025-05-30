@@ -12,23 +12,21 @@ const Transforming = () => {
   return (
     <div className="flex justify-center">
       <div className="max-w-7xl p-4 md:p-6 w-full bg-[#f1f1f1]">
+        {/* Heading moved outside flex container */}
+        <h1 className="text-2xl mb-8 md:text-4xl font-bold text-[#4377B2] text-center md:text-left">
+          Online Yoga Courses
+        </h1>
+
         <div className="flex flex-col md:flex-row items-center md:items-start md:gap-8">
           {/* Left Section */}
           <div className="md:w-1/2 w-full">
-            <div className="mt-6">
-              <Image
-                src="/community1.jpg"
-                alt="Life-Changing Yoga"
-                width={500}
-                height={300}
-                className="rounded-lg w-full max-w-full h-auto object-cover"
-              />
-            </div>
-            <div className="text-center mt-6">
-              <h1 className="text-2xl md:text-4xl font-bold text-[#4377B2]">
-                Online Yoga Courses
-              </h1>
-            </div>
+            <Image
+              src="/community1.jpg"
+              alt="Life-Changing Yoga"
+              width={500}
+              height={300}
+              className="rounded-lg w-full max-w-full h-auto object-cover"
+            />
           </div>
 
           {/* Right Section */}

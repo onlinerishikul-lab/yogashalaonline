@@ -43,7 +43,6 @@ const PricingCard = ({
   </div>
 );
 
-
 // Risk-Free Guarantee Section
 const RiskFreeGuarantee = () => (
   <section className="w-full flex justify-center py-12 px-4 bg-white">
@@ -98,11 +97,16 @@ const YogaCoursePage = () => {
             25-Hour Yoga Anatomy <br /> for a Safe Journey
           </h1>
           <p className="text-gray-700 text-sm">
-           Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+            Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
           </p>
         </div>
         <div className="md:w-1/2 w-full">
-          <PricingOptions />
+          <PricingCard
+            title="Yoga Anatomy Course"
+            description="Understand the human body for safer yoga practice."
+            price="₹3,999"
+            note="One-time payment for lifetime access"
+          />
         </div>
       </section>
 

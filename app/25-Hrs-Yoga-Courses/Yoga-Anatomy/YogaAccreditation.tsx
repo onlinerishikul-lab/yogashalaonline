@@ -8,7 +8,7 @@ const YogaAccreditation = () => {
       <div className="max-w-6xl mx-auto">
         {/* Horizontal Image Section */}
         <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-10 mb-12">
-          {[1, 2, 3, 4].map((num, index) => (
+          {[1, 2, 3, 6].map((num, index) => (
             <div key={index} className="w-28 sm:w-32 md:w-36 lg:w-40 flex flex-col items-center">
               <div className="relative w-full aspect-square">
                 <Image

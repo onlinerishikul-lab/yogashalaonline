@@ -12,7 +12,7 @@ const uspContent = [
     text: "Practices Perfected",
   },
   {
-    icon: "/assets/usp/2.jpg",
+    icon: "/assets/usp/5.jpg",
     count: "10+ Years",
     text: "of Expertise",
   },

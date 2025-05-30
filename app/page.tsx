@@ -3,7 +3,6 @@ import Blogs from '@/components/home/blogs/blogs'
 import Faculty from '@/components/home/Faculty/faculty'
 import GetInTouch from '@/components/home/get-in-touch/get-in-touch'
 import Join from '@/components/home/join/join'
-import OnlineYoga from '@/components/home/online-yoga/online-yoga'
 import OurTeaching from '@/components/home/our-teaching/our-teaching'
 import Transforming from '@/components/home/transforming/transforming'
 import Trust from '@/components/home/trust/trust'
@@ -71,7 +70,6 @@ export default async function Home() {
       <OurTeaching />
       <Transforming />
       <Trust />
-      <OnlineYoga />
       <Blogs blogs={blogs} />
       <Join />
       <Faculty />

@@ -33,7 +33,7 @@ const Transforming = () => {
           {/* Right Section */}
           <div className="md:w-[40%] mt-10">
             <p className="text-[#878C91]">
-              Rishikul Yogshala is India&rsquo;s premier online yoga school, known for its authentic teachings and highly experienced instructors. We offer a peaceful sanctuary for the mind, body, and spirit—right from the comfort of your home. Join us to experience the true magic of yoga through our transformative retreats and internationally certified teacher training programs. With some of the most trusted and recommended yoga teachers, our interactive classes follow a holistic approach that nurtures personal growth and well-being. Whether you&rsquo;re a beginner or a seasoned practitioner, we warmly welcome you to begin a journey of self-discovery and inner harmony with Rishikul Yogshala.
+              Rishikul Online is India&rsquo;s premier online yoga school, known for its authentic teachings and highly experienced instructors. We offer a peaceful sanctuary for the mind, body, and spirit—right from the comfort of your home. Join us to experience the true magic of yoga through our transformative retreats and internationally certified teacher training programs. With some of the most trusted and recommended yoga teachers, our interactive classes follow a holistic approach that nurtures personal growth and well-being. Whether you&rsquo;re a beginner or a seasoned practitioner, we warmly welcome you to begin a journey of self-discovery and inner harmony with Rishikul Online.
             </p>
             <Button
               className="mt-10 bg-transparent text-[#4377B2] hover:bg-[#4377B2] hover:text-white font-semibold w-[252px] rounded-full border-2 border-[#4377B2] py-7 duration-300"

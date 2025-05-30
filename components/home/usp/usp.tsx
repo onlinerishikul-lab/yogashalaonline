@@ -2,22 +2,22 @@ import Image from "next/image";
 import React from "react";
 const uspContent = [
   {
-    icon: "/assets/usp/f7_person-3.png",
+    icon: "/assets/usp/1.jpg",
     count: "10,000+",
     text: "Satisfied Yoga Students",
   },
   {
-    icon: "/assets/usp/uit_process.png",
+    icon: "/assets/usp/4.jpg",
     count: "20,000+",
     text: "Practices Perfected",
   },
   {
-    icon: "/assets/usp/solar_star-linear.png",
+    icon: "/assets/usp/2.jpg",
     count: "10+ Years",
     text: "of Expertise",
   },
   {
-    icon: "/assets/usp/100+.svg",
+    icon: "/assets/usp/3.jpg",
     count: "100+ Countries",
     text: "unite globally",
   },

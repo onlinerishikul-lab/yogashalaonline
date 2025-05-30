@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 
-// Define time zones
+// Time zone options
 type TimeZoneKey = "IST" | "PST" | "EST" | "GMT" | "CET" | "JST";
 
 interface TimeZone {
@@ -19,13 +19,13 @@ const timeZones: Record<TimeZoneKey, TimeZone> = {
   JST: { label: "Japan (JST)", offset: 9 },
 };
 
-// Convert IST time to selected time zone
-function convertTime(istHour: number, istMin: number, offset: number): string {
-  const istOffset = 5.5;
+// Convert IST time to another timezone
+function convertTime(istHour: number, istMin: number, targetOffset: number): string {
+  const IST_OFFSET = 5.5;
   const date = new Date();
-  date.setUTCHours(istHour - istOffset, istMin, 0, 0); // convert IST to UTC
-  const localTime = new Date(date.getTime() + offset * 60 * 60 * 1000);
-  return localTime.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: true });
+  date.setUTCHours(istHour - IST_OFFSET, istMin, 0, 0); // IST to UTC
+  const localDate = new Date(date.getTime() + targetOffset * 3600000); // UTC to local
+  return localDate.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: true });
 }
 
 const StickyCourseCard: React.FC = () => {
@@ -35,16 +35,8 @@ const StickyCourseCard: React.FC = () => {
 
   useEffect(() => {
     const offset = timeZones[selectedZone].offset;
-
-    // Morning Session: 6:00 AM – 7:30 AM IST
-    const morningStart = convertTime(6, 0, offset);
-    const morningEnd = convertTime(7, 30, offset);
-    setMorningTime(`${morningStart} - ${morningEnd}`);
-
-    // Evening Session: 6:00 PM – 7:30 PM IST
-    const eveningStart = convertTime(18, 0, offset);
-    const eveningEnd = convertTime(19, 30, offset);
-    setEveningTime(`${eveningStart} - ${eveningEnd}`);
+    setMorningTime(`${convertTime(6, 0, offset)} – ${convertTime(7, 30, offset)}`);
+    setEveningTime(`${convertTime(18, 0, offset)} – ${convertTime(19, 30, offset)}`);
   }, [selectedZone]);
 
   return (

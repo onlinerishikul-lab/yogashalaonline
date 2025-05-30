@@ -44,10 +44,7 @@ const Faculty = () => {
             Meet Our Expert Trainers
           </h1>
           <p className="text-[#878C91] text-base lg:text-lg lg:w-1/2">
-            Our team of highly skilled and experienced trainers brings decades
-            of expertise in various yoga styles. Each trainer is dedicated to
-            guiding you through your yoga journey with personalized instruction
-            and deep knowledge of both traditional and modern practices.
+           Our experienced trainers bring decades of wisdom in diverse yoga styles.They offer personalized guidance, blending traditional roots with modern techniques, to support you every step of your yoga journey.
           </p>
         </div>
 

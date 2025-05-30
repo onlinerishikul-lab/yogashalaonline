@@ -16,7 +16,7 @@ const Transforming = () => {
           {/* Left Section */}
           <div className="md:w-[50%]">
             <h1 className="text-2xl mb-4 md:text-4xl font-bold text-[#4377B2]">
-              Life-Changing Online Yoga Courses
+              Online Yoga Courses
             </h1>
 
             <div className="mt-6">

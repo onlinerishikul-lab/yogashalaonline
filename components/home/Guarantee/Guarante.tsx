@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { useRouter } from "next/navigation";
-
 const Guarante = () => {
   const router = useRouter();
 

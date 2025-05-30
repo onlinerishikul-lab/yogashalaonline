@@ -2,8 +2,15 @@
 
 import React, { useState, useEffect } from "react";
 
-// Time mapping (start and end in 24-hr format)
-const timeZones = {
+// Define types
+type TimeZoneKey = "IST" | "PST" | "EST" | "GMT" | "CET" | "JST";
+
+interface TimeZone {
+  label: string;
+  offset: number;
+}
+
+const timeZones: Record<TimeZoneKey, TimeZone> = {
   IST: { label: "India (IST)", offset: 5.5 },
   PST: { label: "US Pacific (PST)", offset: -8 },
   EST: { label: "US Eastern (EST)", offset: -5 },
@@ -13,20 +20,15 @@ const timeZones = {
 };
 
 // Converts IST times to selected timezone
-function convertTime(istHour, istMin, offset) {
+function convertTime(istHour: number, istMin: number, offset: number): string {
   const date = new Date();
-  date.setHours(istHour);
-  date.setMinutes(istMin);
-  date.setSeconds(0);
-  date.setMilliseconds(0);
-  const istOffset = 5.5;
-  const diff = offset - istOffset;
-  date.setMinutes(date.getMinutes() + diff * 60);
+  date.setUTCHours(istHour - 5, istMin); // Convert from IST to UTC
+  date.setMinutes(date.getMinutes() + offset * 60); // Apply offset
   return date.toTimeString().slice(0, 5);
 }
 
-const StickyCourseCard = () => {
-  const [selectedZone, setSelectedZone] = useState("IST");
+const StickyCourseCard: React.FC = () => {
+  const [selectedZone, setSelectedZone] = useState<TimeZoneKey>("IST");
   const [morningTime, setMorningTime] = useState("");
   const [eveningTime, setEveningTime] = useState("");
 
@@ -60,7 +62,7 @@ const StickyCourseCard = () => {
                 <label className="mb-1">Choose Timezone:</label>
                 <select
                   value={selectedZone}
-                  onChange={(e) => setSelectedZone(e.target.value)}
+                  onChange={(e) => setSelectedZone(e.target.value as TimeZoneKey)}
                   className="text-black px-2 py-1 rounded"
                 >
                   {Object.entries(timeZones).map(([key, tz]) => (

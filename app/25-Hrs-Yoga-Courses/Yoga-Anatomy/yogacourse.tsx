@@ -100,17 +100,9 @@ const YogaCoursePage = () => {
           <p className="text-gray-700 text-sm">
            Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
           </p>
-          <button className="bg-[#4377b2] hover:bg-[#365a92] text-white px-5 py-2.5 rounded-full font-medium flex items-center space-x-2 text-sm">
-            <span>Join Now</span>
-            <span>&rarr;</span>
-          </button>
         </div>
         <div className="md:w-1/2 w-full">
           <PricingOptions />
-          <div className="text-center text-xs text-gray-500 mt-2">
-            🔒 100% Secure Payment. Full refund within 7 days if you&#39;re not
-            satisfied.
-          </div>
         </div>
       </section>
 

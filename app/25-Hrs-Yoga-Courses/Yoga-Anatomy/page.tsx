@@ -21,9 +21,9 @@ export default function Page() {
       <HeroSection />
 
       {/* Main content with sticky card */}
-      <div className="flex flex-col lg:flex-row gap-6 px-4 md:px-10">
+      <div className="flex flex-col lg:flex-row gap-10 px-4 md:px-8 xl:px-20">
         {/* Left content */}
-        <div className="flex-1 space-y-8">
+        <div className="w-full lg:w-[68%] space-y-10">
           <YogaCoursePage />
           <LearnSection />
           <UniqueCourseSection />
@@ -37,7 +37,7 @@ export default function Page() {
         </div>
 
         {/* Right sticky card */}
-        <div className="hidden lg:block w-full lg:w-1/3">
+        <div className="hidden lg:block w-full lg:w-[32%]">
           <div className="sticky top-24">
             <StickyCourseCard />
           </div>

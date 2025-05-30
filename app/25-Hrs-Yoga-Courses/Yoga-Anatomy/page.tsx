@@ -1,6 +1,7 @@
 "use client";
+
 import HeroSection from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/HeroSection";
-import TestimonialSlider from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TestimonialSlider";
+import StickyCourseCard from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TestimonialSlider";
 import YogaCoursePage from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/yogacourse";
 import LearnSection from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/LearnSection";
 import UniqueCourseSection from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/UniqueCourseSection";
@@ -15,20 +16,25 @@ import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
-    <div>
-      <HeroSection />
-      <TestimonialSlider />
-      <YogaCoursePage />
-      < LearnSection/>
-      <UniqueCourseSection />
-      <TeachingApproach />
-      <CourseDetails />
-      <YogaAccreditation/>
-      <CertificatePromo/>
-      <Faculty/>
-      <TestimonialCarousel/>
-      <Faq/>
-      <SiteFooter />
+    <div className="flex flex-col lg:flex-row gap-6 px-4 md:px-10">
+      {/* LEFT: All main page content */}
+      <div className="flex-1 space-y-8">
+        <HeroSection />
+        <YogaCoursePage />
+        <LearnSection />
+        <UniqueCourseSection />
+        <TeachingApproach />
+        <CourseDetails />
+        <YogaAccreditation />
+        <CertificatePromo />
+        <Faculty />
+        <TestimonialCarousel />
+        <Faq />
+        <SiteFooter />
+      </div>
+
+      {/* RIGHT: Sticky course card */}
+      <StickyCourseCard />
     </div>
   );
 }

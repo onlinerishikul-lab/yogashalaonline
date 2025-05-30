@@ -47,31 +47,29 @@ const LearnSection = () => {
 
   return (
     <section className="bg-[#F5F5F5] px-4 sm:px-6 py-12 sm:py-20">
-      <div className="max-w-6xl mx-auto space-y-20">
+      <div className="max-w-6xl mx-auto space-y-24">
         {sections.map((section, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row gap-10 items-start ${
+            className={`flex flex-col md:flex-row ${
               index % 2 === 1 ? "md:flex-row-reverse" : ""
-            }`}
+            } items-stretch gap-0`}
           >
             {/* Title */}
-            <div className="md:w-1/2">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#4377b2]">
+            <div className="md:w-1/2 px-6 py-6 flex items-center justify-center bg-white rounded-l-2xl md:rounded-l-2xl md:rounded-r-none shadow-md">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#4377b2] text-center">
                 {section.title}
               </h2>
             </div>
 
-            {/* Content */}
-            <div className="md:w-1/2 space-y-3 text-gray-700 text-sm sm:text-base">
-              {section.content.map((line, i) => (
-                <p key={i}>{line}</p>
-              ))}
-            </div>
-
             {/* Divider */}
-            <div className="w-full mt-10">
-              <div className="border-t-2 border-[#4377b2]" />
+            <div className="w-[2px] bg-[#4377b2] hidden md:block" />
+
+            {/* Content */}
+            <div className="md:w-1/2 px-6 py-6 flex flex-col justify-center bg-white rounded-r-2xl md:rounded-r-2xl md:rounded-l-none shadow-md space-y-2 text-gray-700 text-sm sm:text-base">
+              {section.content.map((line, i) => (
+                <p key={i}>• {line}</p>
+              ))}
             </div>
           </div>
         ))}

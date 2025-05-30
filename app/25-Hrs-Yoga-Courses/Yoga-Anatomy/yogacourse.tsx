@@ -43,29 +43,6 @@ const PricingCard = ({
   </div>
 );
 
-// Pricing Section Container
-const PricingOptions = () => (
-  <div className="flex flex-col sm:flex-row justify-center items-center sm:items-stretch sm:gap-4 gap-6 w-full">
-    <PricingCard
-      title="One-Time Payment"
-      description="Pay once and get full access."
-      price="$250.00"
-      note="One-time payment"
-    />
-    <PricingCard
-      title="Two-Part Installments"
-      description="Split into two monthly payments."
-      price="$125.00 x 2"
-      note="Billed monthly"
-    />
-    <PricingCard
-      title="Three-Part Installments"
-      description="Split into three monthly payments."
-      price="$85.00 x 3"
-      note="Billed monthly"
-    />
-  </div>
-);
 
 // Risk-Free Guarantee Section
 const RiskFreeGuarantee = () => (
@@ -121,16 +98,8 @@ const YogaCoursePage = () => {
             25-Hour Yoga Anatomy <br /> for a Safe Journey
           </h1>
           <p className="text-gray-700 text-sm">
-            Master safe and effective yoga practices with in-depth anatomical
-            guidance. Flexible plans to get started today.
+           Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
           </p>
-          <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-            <li>Understand key muscles and joints in yoga poses.</li>
-            <li>Learn how to avoid common injuries through alignment.</li>
-            <li>Gain confidence in teaching safe, mindful movement.</li>
-            <li>Includes HD video lessons and a downloadable manual.</li>
-            <li>Perfect for yoga teachers and dedicated practitioners.</li>
-          </ul>
           <button className="bg-[#4377b2] hover:bg-[#365a92] text-white px-5 py-2.5 rounded-full font-medium flex items-center space-x-2 text-sm">
             <span>Join Now</span>
             <span>&rarr;</span>

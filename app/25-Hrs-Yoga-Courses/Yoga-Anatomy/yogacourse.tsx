@@ -2,116 +2,51 @@
 
 import React from "react";
 
-// Shared course features
-const features = [
-  "✅ Certificate of Completion",
-  "✅ 25-Hour Yoga Anatomy Curriculum",
-  "✅ Downloadable Training Manual",
-  "✅ Lifetime Course Access",
-  "✅ 24 Months of Instructor Support",
-];
-
-// Pricing Card Component
-const PricingCard = ({
-  title,
-  description,
-  price,
-  note,
-}: {
-  title: string;
-  description: string;
-  price: string;
-  note: string;
-}) => (
-  <div className="flex flex-col justify-between border border-[#4377b2] rounded-xl p-4 bg-white shadow-md w-full sm:w-[260px] transition hover:shadow-lg">
-    <div>
-      <h3 className="text-sm font-semibold text-[#4377b2] mb-1">{title}</h3>
-      <p className="text-xs mb-2 text-gray-700">{description}</p>
-      <div className="text-xl font-bold text-[#4377b2] mb-1">{price}</div>
-      <p className="text-xs mb-3 text-gray-600">{note}</p>
-    </div>
-    <div className="mt-2">
-      <button className="bg-[#4377b2] hover:bg-[#365a90] text-white font-medium py-2 px-4 rounded-full w-full text-sm transition">
-        ENROLL NOW
-      </button>
-      <ul className="mt-4 text-xs text-gray-700 space-y-1">
-        {features.map((item, idx) => (
-          <li key={idx}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  </div>
-);
-
-// Risk-Free Guarantee Section
-const RiskFreeGuarantee = () => (
-  <section className="w-full flex justify-center py-12 px-4 bg-white">
-    <div className="relative bg-[#e8eefb] rounded-2xl p-8 max-w-3xl w-full overflow-hidden">
-      <div className="text-center md:text-left">
-        <h2 className="text-xl md:text-2xl font-bold text-[#4377b2] mb-4">
-          7-Day Risk-Free Guarantee
-        </h2>
-        <p className="text-gray-700 mb-4">
-          We’re confident you’ll love the{" "}
-          <strong>25-Hour Yoga Anatomy for a Safe Journey</strong> course.
-          But if it doesn’t meet your expectations, we’ve got you covered.
-        </p>
-        <p className="text-gray-700 mb-4">
-          Simply email us within <strong>7 days</strong> of purchase for a full
-          refund—no questions asked. Explore the course, test it out, and decide
-          with total peace of mind.
-        </p>
-        <p className="text-gray-900 font-semibold mb-6">
-          You’ve got nothing to lose and everything to gain.
-        </p>
-        <button className="bg-[#4377b2] hover:bg-[#365a90] text-white font-semibold py-2 px-6 rounded-full transition">
-          Enroll Now – Risk Free!
-        </button>
-      </div>
-
-      {/* Decorative circle */}
-      <div className="absolute top-0 left-0 w-6 h-6 bg-[#365a90] rounded-full transform -translate-x-1/2 -translate-y-1/2" />
-
-      {/* Decorative plus signs */}
-      <div className="absolute bottom-4 right-4 text-[#a8bfe7] text-lg leading-3">
-        <div className="grid grid-cols-3 gap-1">
-          {Array(6)
-            .fill("+")
-            .map((char, idx) => (
-              <span key={idx}>{char}</span>
-            ))}
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-// Main Page Component
 const YogaCoursePage = () => {
   return (
-    <div className="bg-gray-50 text-black px-4 py-10 md:px-10 space-y-16">
-      {/* Header & Pricing */}
-      <section className="flex flex-col md:flex-row justify-between items-start gap-10">
-        <div className="md:w-1/2 space-y-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-            25-Hour Yoga Anatomy <br /> for a Safe Journey
-          </h1>
-          <p className="text-gray-700 text-sm">
-            Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
-          </p>
-        </div>
-        <div className="md:w-1/2 w-full">
-          <PricingCard
-            title="Yoga Anatomy Course"
-            description="Understand the human body for safer yoga practice."
-            price="₹3,999"
-            note="One-time payment for lifetime access"
-          />
-        </div>
+    <div className="bg-gray-50 text-black px-4 py-10 md:px-10 space-y-12">
+      {/* Header */}
+      <section className="max-w-4xl mx-auto text-center space-y-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
+          25-Hour Yoga Anatomy <br /> for a Safe Journey
+        </h1>
+        <p className="text-gray-700 text-sm md:text-base">
+          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+        </p>
       </section>
 
-      {/* Risk-Free Guarantee */}
-      <RiskFreeGuarantee />
+      {/* Key Skills */}
+      <section className="max-w-4xl mx-auto bg-white p-6 md:p-10 rounded-2xl shadow-md space-y-6">
+        <h2 className="text-2xl font-bold text-[#4377b2] text-center">
+          Key Skills You’ll Learn
+        </h2>
+        <div className="space-y-6 text-gray-700 text-sm md:text-base">
+          <div>
+            <h3 className="font-semibold text-[#4377b2]">1. Anatomy & Biomechanics</h3>
+            <p>Understand how the body moves through yoga with practical insights into functional anatomy.<br />Learn the mechanics behind each posture to enhance safety and effectiveness.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-[#4377b2]">2. Muscles & Joints</h3>
+            <p>Explore how muscles, joints, and connective tissues work during different asanas.<br />Gain clarity on body movement patterns and alignment principles.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-[#4377b2]">3. Injury Prevention</h3>
+            <p>Learn how to modify poses to suit individual needs and avoid common yoga injuries.<br />Build a safe practice for yourself and your students.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-[#4377b2]">4. Breath & Body Awareness</h3>
+            <p>Discover the link between breath, movement, and mental focus.<br />Improve overall body awareness and deepen your practice.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-[#4377b2]">5. Key Body Areas</h3>
+            <p>Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses.<br />Understand how to protect and strengthen these vital areas.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-[#4377b2]">6. For All Levels</h3>
+            <p>This course is designed for both beginners and experienced yoga teachers.<br />The content is easy to follow, insightful, and immediately applicable.</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

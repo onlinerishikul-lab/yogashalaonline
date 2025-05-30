@@ -11,7 +11,7 @@ const Transforming = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="max-w-screen-2xl p-2 md:p-16 w-full bg-[#f1f1f1]">
+      <div className="max-w-screen-2xl p-2 md:p-3 w-full bg-[#f1f1f1]">
         <div className="flex justify-between flex-col md:flex-row">
           {/* Left Section */}
           <div className="md:w-[50%]">

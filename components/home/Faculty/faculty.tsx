@@ -43,13 +43,10 @@ const Faculty = () => {
           <h1 className="text-3xl sm:text-4xl font-bold text-[#4377B2] lg:w-1/2">
             Meet Our Expert Trainers
           </h1>
-          <p className="text-[#878C91] text-base lg:text-lg lg:w-1/2">
-           Our experienced trainers bring decades of wisdom in diverse yoga styles.They offer personalized guidance, blending traditional roots with modern techniques, to support you every step of your yoga journey.
-          </p>
         </div>
 
         {/* Main Content */}
-        <div className="flex flex-col lg:flex-row gap-6 mt-10">
+        <div className="flex flex-col lg:flex-row gap-4 mt-10">
           {/* Left Panel */}
           <div className="bg-[#4377B2] p-6 sm:p-8 rounded-3xl lg:w-1/4 flex flex-col justify-between">
             <div>

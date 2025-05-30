@@ -16,26 +16,36 @@ import Faculty from "@/components/home/Faculty/faculty";
 
 export default function Page() {
   return (
-    <div className="flex flex-col lg:flex-row gap-6 px-4 md:px-10">
-      {/* LEFT: All main page content */}<div>
-         <HeroSection />
-      <div className="flex-1 space-y-8">
-        <YogaCoursePage />
-        <LearnSection />
-        <UniqueCourseSection />
-        <TeachingApproach />
-        <CourseDetails />
-        <YogaAccreditation />
-        <CertificatePromo />
-        <Faculty />
-        <TestimonialCarousel />
-        <Faq />
-        <SiteFooter />
+    <div className="flex flex-col gap-10">
+      {/* Full-width Hero Section */}
+      <HeroSection />
+
+      {/* Main content with sticky card */}
+      <div className="flex flex-col lg:flex-row gap-6 px-4 md:px-10">
+        {/* Left content */}
+        <div className="flex-1 space-y-8">
+          <YogaCoursePage />
+          <LearnSection />
+          <UniqueCourseSection />
+          <TeachingApproach />
+          <CourseDetails />
+          <YogaAccreditation />
+          <CertificatePromo />
+          <Faculty />
+          <TestimonialCarousel />
+          <Faq />
+        </div>
+
+        {/* Right sticky card */}
+        <div className="hidden lg:block w-full lg:w-1/3">
+          <div className="sticky top-24">
+            <StickyCourseCard />
+          </div>
+        </div>
       </div>
 
-      {/* RIGHT: Sticky course card */}
-      <StickyCourseCard />
+      {/* Full-width Footer */}
+      <SiteFooter />
     </div>
-      </div>
   );
 }

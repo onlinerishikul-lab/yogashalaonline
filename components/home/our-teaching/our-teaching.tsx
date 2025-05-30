@@ -42,12 +42,13 @@ const OurTeaching = () => {
               key={item.id}
               className={`flex flex-col ${
                 index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
-              } items-center gap-8 border-l-4 pl-4 border-[#4377B2]`}
+              } items-center gap-8`}
             >
               {/* Text */}
-              <div className="w-full md:w-1/2 px-2 md:px-4 text-center md:text-left">
-                <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-[#4377B2]">
-                  {item.heading}
+              <div className="w-full md:w-1/2 px-2 md:px-4 text-center md:text-left relative">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-[#4377B2] relative inline-block z-10">
+                  <span className="relative z-10">{item.heading}</span>
+                  <span className="absolute -inset-1 bg-[#4377B2] opacity-10 rounded-full blur-md z-0"></span>
                 </h2>
                 <p className="text-lg leading-relaxed text-justify">
                   {item.text}

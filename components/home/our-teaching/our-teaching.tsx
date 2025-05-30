@@ -14,7 +14,7 @@ const OurTeaching = () => {
       id: 2,
       heading: "Our Teaching Philosophy",
       text: "We blend the ancient wisdom of yoga and Ayurveda with modern science and lifestyle needs. Inspired by classical texts and contemporary health practices, our approach helps you apply traditional knowledge to today’s world. Learn to manage stress, improve posture, boost immunity, and enhance mental clarity for holistic well-being.",
-      image: "/assets/teaching/t1.jpg",
+      image: "/t1.jpg",
     },
     {
       id: 3,

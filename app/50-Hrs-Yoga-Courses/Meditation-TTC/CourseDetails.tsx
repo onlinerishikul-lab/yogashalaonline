@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  Chair,
+  Couch,
   ShieldCheck,
   SlidersHorizontal,
   Wind,
@@ -16,7 +16,7 @@ const CourseDetails = () => {
   const features = [
     {
       id: 1,
-      icon: <Chair />,
+      icon: <Couch />,
       title: "Posture & Comfort",
       description:
         "Learn how to guide proper seated posture for longer, pain-free meditation. Comfort supports deeper stillness and focus.",

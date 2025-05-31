@@ -35,10 +35,10 @@ const Usp = () => {
             <div className="rounded-full h-[80px] w-[80px] sm:h-[90px] sm:w-[90px] lg:h-[100px] lg:w-[100px] p-2 flex items-center justify-center mb-2 sm:mb-3">
               <Image
                 src={item.icon}
-                height={20}
-                width={20}
+                height={50}
+                width={50}
                 alt="usp icon"
-                className="w-[25px] h-[25px] sm:w-[30px] sm:h-[30px] lg:w-[40px] lg:h-[40px]"
+                className="w-[50px] h-[50px] sm:w-[50px] sm:h-[50px] lg:w-[50px] lg:h-[50px]"
               />
             </div>
             <h2 className="text-[#4377B2] text-xl sm:text-2xl lg:text-2xl font-semibold text-center">

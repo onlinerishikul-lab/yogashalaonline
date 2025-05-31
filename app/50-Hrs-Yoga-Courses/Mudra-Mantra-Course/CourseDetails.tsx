@@ -1,63 +1,72 @@
 "use client";
 
 import {
-  HeartPulse,
-  ShieldCheck,
-  StretchHorizontal,
+  Sparkles,
   Brain,
-  Star,
-  Move3D,
-  Shield,
-  BookOpenCheck,
-  Ruler,
+  Heart,
+  Infinity,
+  CloudSun,
+  Dumbbell,
+  BedDouble,
+  ShieldCheck,
+  Users2,
 } from "lucide-react";
 
 const CourseDetails = () => {
   const features = [
     {
       id: 1,
-      icon: <HeartPulse />,
-      title: "Improve posture and alignment in yoga practice",
+      icon: <Sparkles />,
+      title: "Energy Awakening",
+      desc: "Activate dormant Kundalini energy for vitality.\nExperience heightened awareness and creativity.",
     },
     {
       id: 2,
-      icon: <ShieldCheck />,
-      title: "Prevent injuries through anatomical awareness",
+      icon: <Brain />,
+      title: "Mental Clarity",
+      desc: "Clear mental fog and sharpen focus.\nImprove decision-making and mindfulness.",
     },
     {
       id: 3,
-      icon: <StretchHorizontal />,
-      title: "Learn to modify poses for different body types",
+      icon: <Heart />,
+      title: "Emotional Balance",
+      desc: "Release stored emotions and reduce anxiety.\nCultivate calmness and emotional resilience.",
     },
     {
       id: 4,
-      icon: <Brain />,
-      title: "Enhance mind-body-breath connection",
+      icon: <Infinity />,
+      title: "Spiritual Growth",
+      desc: "Deepen connection to your higher self.\nExperience expanded consciousness and peace.",
     },
     {
       id: 5,
-      icon: <Star />,
-      title: "Build confidence in teaching and self-practice",
+      icon: <CloudSun />,
+      title: "Stress Relief",
+      desc: "Activate relaxation through breath and movement.\nLower cortisol and balance the nervous system.",
     },
     {
       id: 6,
-      icon: <Move3D />,
-      title: "Understand key muscle and joint functions",
+      icon: <Dumbbell />,
+      title: "Physical Strength & Flexibility",
+      desc: "Build endurance and tone the body.\nSupport healthy joints and muscles.",
     },
     {
       id: 7,
-      icon: <Shield />,
-      title: "Support safe and effective movement",
+      icon: <BedDouble />,
+      title: "Improved Sleep",
+      desc: "Regulate sleep patterns with calming practices.\nWake feeling refreshed and rejuvenated.",
     },
     {
       id: 8,
-      icon: <BookOpenCheck />,
-      title: "Apply anatomy knowledge to real-life yoga sessions",
+      icon: <ShieldCheck />,
+      title: "Self-Empowerment",
+      desc: "Gain confidence through energetic mastery.\nTake control of your health and well-being.",
     },
     {
       id: 9,
-      icon: <Ruler />,
-      title: "Master alignment techniques for injury-free sessions",
+      icon: <Users2 />,
+      title: "Community Connection",
+      desc: "Join a supportive network of like-minded practitioners.\nShare growth and inspiration on your journey.",
     },
   ];
 
@@ -65,11 +74,10 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Benefits of the Yoga Anatomy Course
+          9 Key Benefits of This Course
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course is designed to transform your yoga journey with deep
-          anatomical understanding, supporting both personal growth and safe teaching.
+          This transformational training is designed to elevate your energy, focus, and inner power—supporting your growth at every level: physical, mental, emotional, and spiritual.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (
@@ -84,8 +92,8 @@ const CourseDetails = () => {
                 <h3 className="font-semibold text-base sm:text-lg mb-1">
                   {feature.id}. {feature.title}
                 </h3>
-                <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                <p className="text-sm text-[#4377b2]/80 whitespace-pre-line">
+                  {feature.desc}
                 </p>
               </div>
             </div>

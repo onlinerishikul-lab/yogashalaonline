@@ -4,34 +4,34 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Class Sequencing",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Learn to create calm, balanced yoga flows that guide students into deep relaxation.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Using Props",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Use blankets, bolsters, and blocks to support the body and enhance comfort in every pose.",
   },
   {
-    title: "Injury Prevention",
+    title: "Mindful Teaching",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Teach with awareness, compassion, and a heart-centered approach that inspires trust.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Nervous System Basics",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Understand how restorative yoga soothes stress and supports the body’s healing response.",
   },
   {
-    title: "Key Body Areas",
+    title: "Holding Space",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Develop a calm, steady presence that makes students feel safe, seen, and supported.",
   },
   {
-    title: "For All Levels",
+    title: "Personalized Sessions",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Customize practices to meet the unique needs of each student for deeper healing.",
   },
 ];
 
@@ -41,10 +41,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          Restorative Yoga Teacher Training Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+         Learn the art of deep relaxation and healing through gentle, supported poses and mindful breathing.This course equips you to guide others into stillness, reduce stress, and restore balance.Perfect for yoga teachers, therapists, and anyone seeking calm and renewal.
         </p>
       </section>
 

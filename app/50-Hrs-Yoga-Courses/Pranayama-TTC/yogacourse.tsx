@@ -4,34 +4,34 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Breath Awareness",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Gain a deep understanding of your natural breath and how to enhance it.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Pranayama Techniques",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Master powerful breathing methods to increase energy and calm the mind.",
   },
   {
-    title: "Injury Prevention",
+    title: "Safe Teaching Practices",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Learn how to guide students safely through pranayama exercises.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Mind-Body Connection",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Explore how breath influences mental clarity and emotional balance.",
   },
   {
-    title: "Key Body Areas",
+    title: "Daily Breathwork",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Build easy, effective routines to improve wellbeing and focus.",
   },
   {
-    title: "For All Levels",
+    title: "Teaching Confidence",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Develop clear communication and compassionate guidance skills",
   },
 ];
 
@@ -41,11 +41,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          50 Hrs Online Pranayama TTC
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
-        </p>
+          Pranayama connects your breath with your life force, helping you cultivate peace and energy.Regular practice strengthens the respiratory system and improves overall well-being.        </p>
       </section>
 
       {/* Key Skills */}

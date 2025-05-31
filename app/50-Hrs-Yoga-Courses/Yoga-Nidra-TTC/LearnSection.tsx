@@ -37,10 +37,10 @@ const LearnSection = () => {
     {
       title: "Is This Course for You? NO, if you are:",
       content: [
-        "Looking for a quick online certification without in-depth study",
-        "Only interested in basic or surface-level knowledge of anatomy",
-        "Unable to dedicate at least 6 hours per week to learning",
-        "Not interested in engaging with a supportive learning community",
+        "You’re not interested in guided meditation practices",
+        "You prefer fast-paced or highly active yoga styles",
+        "You can’t commit at least 3 hours/week",
+        "You want a physical yoga workout rather than stillness and healing",
       ],
     },
   ];

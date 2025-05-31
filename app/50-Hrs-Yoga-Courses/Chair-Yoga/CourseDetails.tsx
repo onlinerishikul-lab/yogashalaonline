@@ -17,47 +17,47 @@ const CourseDetails = () => {
     {
       id: 1,
       icon: <HeartPulse />,
-      title: "Improve posture and alignment in yoga practice",
+      title: "Boost circulation and energy gently",
     },
     {
       id: 2,
       icon: <ShieldCheck />,
-      title: "Prevent injuries through anatomical awareness",
+      title: "Practice yoga safely with guided support",
     },
     {
       id: 3,
       icon: <StretchHorizontal />,
-      title: "Learn to modify poses for different body types",
+      title: "Adapt poses for all ages and abilities",
     },
     {
       id: 4,
       icon: <Brain />,
-      title: "Enhance mind-body-breath connection",
+      title: "Calm the mind and reduce stress",
     },
     {
       id: 5,
       icon: <Star />,
-      title: "Build confidence in teaching and self-practice",
+      title: "Gain confidence to teach chair yoga",
     },
     {
       id: 6,
       icon: <Move3D />,
-      title: "Understand key muscle and joint functions",
+      title: "Understand movement without strain",
     },
     {
       id: 7,
       icon: <Shield />,
-      title: "Support safe and effective movement",
+      title: "Support students with limited mobility",
     },
     {
       id: 8,
       icon: <BookOpenCheck />,
-      title: "Apply anatomy knowledge to real-life yoga sessions",
+      title: "Apply simple anatomy in real classes",
     },
     {
       id: 9,
       icon: <Ruler />,
-      title: "Master alignment techniques for injury-free sessions",
+      title: "Learn safe posture and alignment tips",
     },
   ];
 
@@ -65,11 +65,10 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Benefits of the Yoga Anatomy Course
+          Why Join the Chair Yoga TTC?
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course is designed to transform your yoga journey with deep
-          anatomical understanding, supporting both personal growth and safe teaching.
+          This course helps you teach and practice chair yoga with ease, confidence, and care—perfect for seniors, office workers, and anyone seeking a gentler approach.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (
@@ -85,7 +84,7 @@ const CourseDetails = () => {
                   {feature.id}. {feature.title}
                 </h3>
                 <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                  Learn practical tools and thoughtful techniques to make yoga truly accessible for everyone.
                 </p>
               </div>
             </div>

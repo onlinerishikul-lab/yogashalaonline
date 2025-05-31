@@ -14,7 +14,7 @@ const skills = [
       "Master tone, pace, and breath to guide deeply.Lead soothing sessions that help students fully relax.",
   },
   {
-    title: "Understanding Brainwaves,
+    title: "Understanding Brainwaves",
     description:
       "Explore the journey from beta to delta states.Teach from a place of scientific clarity and insight.",
   },

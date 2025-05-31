@@ -4,34 +4,34 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Kundalini Kriyas",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Master dynamic movement sequences to awaken energy.Practice safely and effectively to build vitality.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Pranayama Techniques",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Learn breath controls that balance and energize the nervous system.Use breathing to unlock deeper states of awareness.",
   },
   {
-    title: "Injury Prevention",
+    title: "Mantra Chanting",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Use sacred sounds to elevate consciousness and focus.Integrate mantras into daily practice and teaching.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Meditation & Visualization",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Guide students into deep meditative states.Use visualization to clear and energize chakras.",
   },
   {
-    title: "Key Body Areas",
+    title: "Chakra Anatomy",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Understand the chakra system’s role in Kundalini awakening.Balance and align energy centers for holistic health.",
   },
   {
-    title: "For All Levels",
+    title: "Energy Safety",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Recognize signs of safe and excessive energy activation.Implement techniques to manage and ground Kundalini energy.",
   },
 ];
 
@@ -41,10 +41,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          50 Hrs Online Kundalini Yoga Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+          Awaken your inner energy with Kundalini Yoga, combining breath, movement, mantra, and meditation to elevate consciousness. This course guides you to safely practice and teach Kundalini Yoga for holistic transformation.
         </p>
       </section>
 

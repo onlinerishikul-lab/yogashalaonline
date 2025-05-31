@@ -3,35 +3,35 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights for Yoga Anatomy course:",
+      title: "Course Highlights for Yoga-Nidra-TTC course:",
       content: [
-        "Comprehensive study of muscles, joints, and biomechanics",
-        "Focus on safe alignment and injury prevention",
-        "Integration of breath and body awareness techniques",
-        "Detailed anatomy of spine, hips, shoulders, and core",
-        "Practical lessons suitable for all skill levels",
-        "Interactive learning with visuals and guided sessions",
-        "Personalized tips for teaching and practicing yoga safely",
+        "Certified Online Yoga Nidra Teacher Training",
+        " Learn to guide deeply restorative sessions",
+        "Understand science behind yogic sleep & brainwaves",
+        "Includes guided scripts, cues, and class templates",
+        "Covers stress relief, subconscious work & deep relaxation",
+        "Self-paced study with flexible access",
+        "Certificate of Completion included",
       ],
     },
     {
       title: "What’s Inside The Course – Practical Aspects",
       content: [
-        "Hands-on guidance to safely perform and adjust yoga poses",
-        "Step-by-step breakdown of muscle and joint functions during asanas",
-        "Techniques to modify postures for different body types and limitations",
-        "Exercises to improve breath control and body awareness",
-        "Real-life applications to prevent injuries and enhance alignment",
-        "Interactive sessions with feedback to deepen your understanding",
+        "Daily and weekly practice templates",
+        "Creating custom Yoga Nidra scripts",
+        "Understanding brainwave states",
+        "Student case studies and feedback",
+        "Sequencing short & long sessions",
+        "Audio recording and practice teaching",
       ],
     },
     {
       title: "Is This Course for You? YES!",
       content: [
-        "Seeking quick online certification in Yoga Anatomy",
-        "Need only basic foundational knowledge of Yoga Anatomy",
-        "Can’t commit to more than 6 hours per week for study",
-        "No preference for a peer community during Yoga Anatomy practice",
+        "You seek a deep, meditative teaching path",
+        "You want to help others with stress, anxiety, or sleep issues",
+        "You enjoy guiding and holding space for others",
+        "You’re ready to invest time in subtle, powerful transformation",
       ],
     },
     {

@@ -4,34 +4,34 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Script Creation",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Write personalized, theme-based Yoga Nidra scripts.Craft calming, transformative sessions for various needs.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Voice Guidance",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Master tone, pace, and breath to guide deeply.Lead soothing sessions that help students fully relax.",
   },
   {
-    title: "Injury Prevention",
+    title: "Understanding Brainwaves,
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Explore the journey from beta to delta states.Teach from a place of scientific clarity and insight.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Session Structuring",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Design short or full-length sessions with intention.Include body scan, intention-setting, breath, and more.",
   },
   {
-    title: "Key Body Areas",
+    title: "Holding Safe Space",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Learn how to create a warm, calm, and supportive space.Help students feel safe, heard, and guided.",
   },
   {
-    title: "For All Levels",
+    title: "Emotional Awareness",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Understand how Yoga Nidra affects the subconscious.Support emotional release and personal growth.",
   },
 ];
 
@@ -41,10 +41,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          50 Hrs Online Yoga Nidra
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+          Dive into the transformative practice of Yoga Nidra — a guided meditative technique that promotes deep rest and inner healing. This course equips you to teach Yoga Nidra with clarity, compassion, and confidence.
         </p>
       </section>
 

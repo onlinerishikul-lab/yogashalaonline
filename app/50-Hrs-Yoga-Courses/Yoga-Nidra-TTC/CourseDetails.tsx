@@ -1,63 +1,72 @@
 "use client";
 
 import {
-  HeartPulse,
-  ShieldCheck,
-  StretchHorizontal,
-  Brain,
-  Star,
-  Move3D,
-  Shield,
-  BookOpenCheck,
-  Ruler,
+  Bed,
+  BrainCog,
+  CloudSun,
+  Heart,
+  ScanEye,
+  Power,
+  SmilePlus,
+  UserCheck,
+  Sparkles,
 } from "lucide-react";
 
 const CourseDetails = () => {
   const features = [
     {
       id: 1,
-      icon: <HeartPulse />,
-      title: "Improve posture and alignment in yoga practice",
+      icon: <CloudSun />,
+      title: "Deep Relaxation",
+      desc: "Encourages physical, mental, and emotional rest.\nFeel rejuvenated after just one session.",
     },
     {
       id: 2,
-      icon: <ShieldCheck />,
-      title: "Prevent injuries through anatomical awareness",
+      icon: <Bed />,
+      title: "Better Sleep",
+      desc: "Improves sleep quality and eases insomnia naturally.\nRegular practice supports long-term restfulness.",
     },
     {
       id: 3,
-      icon: <StretchHorizontal />,
-      title: "Learn to modify poses for different body types",
+      icon: <Heart />,
+      title: "Stress & Anxiety Relief",
+      desc: "Releases built-up mental tension and emotional overload.\nGuides the mind to peace and stillness.",
     },
     {
       id: 4,
-      icon: <Brain />,
-      title: "Enhance mind-body-breath connection",
+      icon: <BrainCog />,
+      title: "Improved Focus",
+      desc: "Clears mental fog and improves clarity.\nBoosts memory, attention, and productivity.",
     },
     {
       id: 5,
-      icon: <Star />,
-      title: "Build confidence in teaching and self-practice",
+      icon: <ScanEye />,
+      title: "Emotional Healing",
+      desc: "Allows repressed emotions to surface and release.\nSupports gentle inner healing and awareness.",
     },
     {
       id: 6,
-      icon: <Move3D />,
-      title: "Understand key muscle and joint functions",
+      icon: <Power />,
+      title: "Nervous System Reset",
+      desc: "Activates the parasympathetic system for rest.\nLowers cortisol and balances hormones.",
     },
     {
       id: 7,
-      icon: <Shield />,
-      title: "Support safe and effective movement",
+      icon: <SmilePlus />,
+      title: "Inner Connection",
+      desc: "Reconnects you to your inner self and intuition.\nSupports mindfulness and spiritual growth.",
     },
     {
       id: 8,
-      icon: <BookOpenCheck />,
-      title: "Apply anatomy knowledge to real-life yoga sessions",
+      icon: <UserCheck />,
+      title: "Accessible for All",
+      desc: "No movement required – suitable for all ages.\nSafe for injuries, fatigue, or anxiety.",
     },
     {
       id: 9,
-      icon: <Ruler />,
-      title: "Master alignment techniques for injury-free sessions",
+      icon: <Sparkles />,
+      title: "Self-Awareness & Growth",
+      desc: "Deepens self-reflection and personal transformation.\nYoga Nidra is a tool for healing and awakening.",
     },
   ];
 
@@ -65,11 +74,10 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Benefits of the Yoga Anatomy Course
+          9 Key Benefits of Yoga Nidra
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course is designed to transform your yoga journey with deep
-          anatomical understanding, supporting both personal growth and safe teaching.
+          This course helps you master Yoga Nidra techniques to unlock deep relaxation, emotional healing, and inner growth—for yourself and your students.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (
@@ -84,8 +92,8 @@ const CourseDetails = () => {
                 <h3 className="font-semibold text-base sm:text-lg mb-1">
                   {feature.id}. {feature.title}
                 </h3>
-                <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                <p className="text-sm text-[#4377b2]/80 whitespace-pre-line">
+                  {feature.desc}
                 </p>
               </div>
             </div>

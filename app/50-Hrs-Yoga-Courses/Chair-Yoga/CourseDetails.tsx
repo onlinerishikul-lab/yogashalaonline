@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  Chair,
+  Armchair,
   Move,
   SlidersHorizontal,
   Wind,
@@ -16,7 +16,7 @@ const CourseDetails = () => {
   const features = [
     {
       id: 1,
-      icon: <Chair />,
+      icon: <Armchair />,
       title: "Posture & Alignment on the Chair",
       description:
         "Learn how to guide correct posture using a chair for safety and support. Proper alignment ensures stability and ease in every pose.",

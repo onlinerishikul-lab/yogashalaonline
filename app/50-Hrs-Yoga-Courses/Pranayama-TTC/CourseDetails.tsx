@@ -1,63 +1,81 @@
 "use client";
 
 import {
-  HeartPulse,
+  Wind,
   ShieldCheck,
-  StretchHorizontal,
-  Brain,
-  Star,
-  Move3D,
-  Shield,
-  BookOpenCheck,
-  Ruler,
+  SlidersHorizontal,
+  InfinityIcon,
+  UserCheck,
+  ActivitySquare,
+  SunMoon,
+  Landmark,
+  Heart,
 } from "lucide-react";
 
-const CourseDetails = () => {
+const PranayamaCourse = () => {
   const features = [
     {
       id: 1,
-      icon: <HeartPulse />,
-      title: "Improve posture and alignment in yoga practice",
+      icon: <Wind />,
+      title: "Breath Awareness & Control",
+      description:
+        "Learn how to guide conscious breathing for better focus and energy. Breath control forms the foundation of all pranayama practice.",
     },
     {
       id: 2,
       icon: <ShieldCheck />,
-      title: "Prevent injuries through anatomical awareness",
+      title: "Safe Breathing Techniques",
+      description:
+        "Understand how to teach pranayama safely for all levels. Avoid strain by building breath practices gradually and mindfully.",
     },
     {
       id: 3,
-      icon: <StretchHorizontal />,
-      title: "Learn to modify poses for different body types",
+      icon: <SlidersHorizontal />,
+      title: "Technique Modifications",
+      description:
+        "Adapt breathwork for different ages, health conditions, and needs. Make pranayama accessible and supportive for every body.",
     },
     {
       id: 4,
-      icon: <Brain />,
-      title: "Enhance mind-body-breath connection",
+      icon: <InfinityIcon />,
+      title: "Mind-Body Connection",
+      description:
+        "Use breath to bridge the body and mind for inner harmony. Pranayama deepens awareness and emotional balance.",
     },
     {
       id: 5,
-      icon: <Star />,
-      title: "Build confidence in teaching and self-practice",
+      icon: <UserCheck />,
+      title: "Confident Teaching Skills",
+      description:
+        "Develop the confidence to lead pranayama sessions clearly and effectively. Teach with calm, clarity, and purpose.",
     },
     {
       id: 6,
-      icon: <Move3D />,
-      title: "Understand key muscle and joint functions",
+      icon: <ActivitySquare />,
+      title: "Anatomy of Breath",
+      description:
+        "Explore how the lungs, diaphragm, and nervous system work in pranayama. Teach from a place of scientific understanding.",
     },
     {
       id: 7,
-      icon: <Shield />,
-      title: "Support safe and effective movement",
+      icon: <SunMoon />,
+      title: "Calm & Energizing Practices",
+      description:
+        "Learn techniques to calm the mind or boost vitality depending on need. Balance energy using breath as your tool.",
     },
     {
       id: 8,
-      icon: <BookOpenCheck />,
-      title: "Apply anatomy knowledge to real-life yoga sessions",
+      icon: <Landmark />,
+      title: "Real-Life Integration",
+      description:
+        "Apply pranayama to daily life, yoga classes, and wellness routines. Design practices for students, clients, or personal use.",
     },
     {
       id: 9,
-      icon: <Ruler />,
-      title: "Master alignment techniques for injury-free sessions",
+      icon: <Heart />,
+      title: "Inner Peace & Clarity",
+      description:
+        "Guide students toward stillness, focus, and mental clarity through breath. Pranayama cultivates peace from the inside out.",
     },
   ];
 
@@ -65,11 +83,10 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Benefits of the Yoga Anatomy Course
+          What You’ll Learn in the Pranayama Teacher Training
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course is designed to transform your yoga journey with deep
-          anatomical understanding, supporting both personal growth and safe teaching.
+          Learn to guide breath-based practices that calm the mind, energize the body, and cultivate deep awareness.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (
@@ -84,9 +101,7 @@ const CourseDetails = () => {
                 <h3 className="font-semibold text-base sm:text-lg mb-1">
                   {feature.id}. {feature.title}
                 </h3>
-                <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
-                </p>
+                <p className="text-sm text-[#4377b2]/80">{feature.description}</p>
               </div>
             </div>
           ))}
@@ -96,4 +111,4 @@ const CourseDetails = () => {
   );
 };
 
-export default CourseDetails;
+export default PranayamaCourse;

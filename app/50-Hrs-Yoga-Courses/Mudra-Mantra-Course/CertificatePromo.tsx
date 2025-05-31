@@ -9,10 +9,10 @@ const CertificatePromo = () => {
         {/* Text Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">
-            Earn Your Kundalini Yoga Certificate
+            Earn Your Mudra & Mantra Certificate
           </h2>
           <p className="text-base sm:text-lg mb-8 text-[#f9fafb]">
-           Begin your transformative journey with our online Kundalini Yoga Teacher Training. Complete the course and receive a certificate recognizing your dedication and mastery of Kundalini Yoga.
+          Begin your journey into the sacred arts of mudras and mantras. Complete our online course and receive a certificate recognizing your dedication and mastery of these powerful yogic tools.
           </p>
           <Link href="/contact">
             <a className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-md hover:bg-white transition duration-300 text-sm sm:text-base">

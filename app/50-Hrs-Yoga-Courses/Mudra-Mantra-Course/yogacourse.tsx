@@ -4,34 +4,34 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Enhanced Focus",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Sharpen mental clarity and concentration.Mudras and mantras anchor your attention deeply.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Emotional Balance",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Release stress and regulate emotions naturally.Promote calmness and inner peace.",
   },
   {
-    title: "Injury Prevention",
+    title: " Energy Alignment",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Balance chakras and subtle energy channels.Feel vibrant and grounded in your daily life.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Improved Meditation",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Deepen your meditative experience.Sound and gesture enhance stillness and awareness.",
   },
   {
-    title: "Key Body Areas",
+    title: "Spiritual Growth",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Connect with ancient traditions and your inner self.Experience transformation on a deeper level.",
   },
   {
-    title: "For All Levels",
+    title: "Healing Support",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Aid physical and emotional healing processes.Use mudras and mantras as complementary therapies.",
   },
 ];
 
@@ -41,10 +41,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          50 Hrs Online Mudra-Mantra-Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+          Explore the ancient power of mudras (hand gestures) and mantras (sacred sounds) to deepen your yoga and meditation practice. This course teaches you how to use these tools for healing, focus, and spiritual growth.
         </p>
       </section>
 

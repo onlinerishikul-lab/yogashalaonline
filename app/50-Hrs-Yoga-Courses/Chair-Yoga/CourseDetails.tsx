@@ -1,63 +1,81 @@
 "use client";
 
 import {
-  HeartPulse,
-  ShieldCheck,
+  Chair,
+  Move,
+  SlidersHorizontal,
+  Wind,
+  UserCheck,
+  Eye,
   StretchHorizontal,
-  Brain,
-  Star,
-  Move3D,
-  Shield,
-  BookOpenCheck,
-  Ruler,
+  Landmark,
+  Smile,
 } from "lucide-react";
 
 const CourseDetails = () => {
   const features = [
     {
       id: 1,
-      icon: <HeartPulse />,
-      title: "Boost circulation and energy gently",
+      icon: <Chair />,
+      title: "Posture & Alignment on the Chair",
+      description:
+        "Learn how to guide correct posture using a chair for safety and support. Proper alignment ensures stability and ease in every pose.",
     },
     {
       id: 2,
-      icon: <ShieldCheck />,
-      title: "Practice yoga safely with guided support",
+      icon: <Move />,
+      title: "Safe & Gentle Movements",
+      description:
+        "Teach low-impact movements that protect joints and muscles. Perfect for seniors, beginners, or those with limited mobility.",
     },
     {
       id: 3,
-      icon: <StretchHorizontal />,
-      title: "Adapt poses for all ages and abilities",
+      icon: <SlidersHorizontal />,
+      title: "Pose Adaptations",
+      description:
+        "Modify traditional yoga poses into seated variations. Offer an inclusive experience without needing to get on the floor.",
     },
     {
       id: 4,
-      icon: <Brain />,
-      title: "Calm the mind and reduce stress",
+      icon: <Wind />,
+      title: "Breath & Relaxation",
+      description:
+        "Use breathwork and relaxation techniques to reduce stress and tension. Combine gentle movement with calming breath for a full-body reset.",
     },
     {
       id: 5,
-      icon: <Star />,
-      title: "Gain confidence to teach chair yoga",
+      icon: <UserCheck />,
+      title: "Teaching with Confidence",
+      description:
+        "Gain the skills to teach chair yoga classes with clarity and compassion. Learn how to guide groups or individuals confidently.",
     },
     {
       id: 6,
-      icon: <Move3D />,
-      title: "Understand movement without strain",
+      icon: <Eye />,
+      title: "Understanding Body Needs",
+      description:
+        "Recognize physical limitations and how to adapt accordingly. Learn how to serve older adults, office workers, or recovery clients.",
     },
     {
       id: 7,
-      icon: <Shield />,
-      title: "Support students with limited mobility",
+      icon: <StretchHorizontal />,
+      title: "Balanced & Safe Sequences",
+      description:
+        "Create balanced class flows focused on mobility, strength, and calm. Design routines that energize without overwhelming.",
     },
     {
       id: 8,
-      icon: <BookOpenCheck />,
-      title: "Apply simple anatomy in real classes",
+      icon: <Landmark />,
+      title: "Practical Applications",
+      description:
+        "Bring chair yoga to homes, workplaces, and wellness centers. Expand your reach by making yoga more accessible.",
     },
     {
       id: 9,
-      icon: <Ruler />,
-      title: "Learn safe posture and alignment tips",
+      icon: <Smile />,
+      title: "Improved Mobility & Well-being",
+      description:
+        "Support physical and mental health through gentle, regular practice. Help students regain strength, balance, and inner peace.",
     },
   ];
 
@@ -65,10 +83,10 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Why Join the Chair Yoga TTC?
+          What You’ll Learn in the Chair Yoga Teacher Training
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course helps you teach and practice chair yoga with ease, confidence, and care—perfect for seniors, office workers, and anyone seeking a gentler approach.
+          Learn to safely guide chair yoga practices that support mobility, comfort, and calm for every body and age.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (
@@ -83,9 +101,7 @@ const CourseDetails = () => {
                 <h3 className="font-semibold text-base sm:text-lg mb-1">
                   {feature.id}. {feature.title}
                 </h3>
-                <p className="text-sm text-[#4377b2]/80">
-                  Learn practical tools and thoughtful techniques to make yoga truly accessible for everyone.
-                </p>
+                <p className="text-sm text-[#4377b2]/80">{feature.description}</p>
               </div>
             </div>
           ))}

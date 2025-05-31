@@ -8,18 +8,23 @@ interface TimeZone {
   label: string;
   offset: number;
   currency: string;
+  exchangeRateToUSD?: number; // only for non-USD currencies
 }
 
 const timeZones: Record<TimeZoneKey, TimeZone> = {
-  IST: { label: "India (IST)", offset: 5.5, currency: "INR" },
+  IST: { label: "India (IST)", offset: 5.5, currency: "INR", exchangeRateToUSD: 83 },
   PST: { label: "US Pacific (PST)", offset: -8, currency: "USD" },
   EST: { label: "US Eastern (EST)", offset: -5, currency: "USD" },
   GMT: { label: "Greenwich Mean Time (GMT)", offset: 0, currency: "USD" },
-  CET: { label: "Central Europe (CET)", offset: 1, currency: "EUR" },
-  JST: { label: "Japan (JST)", offset: 9, currency: "JPY" },
+  CET: { label: "Central Europe (CET)", offset: 1, currency: "EUR", exchangeRateToUSD: 0.92 },
+  JST: { label: "Japan (JST)", offset: 9, currency: "JPY", exchangeRateToUSD: 156 },
 };
 
-function convertTime(istHour: number, istMin: number, targetOffset: number): string {
+function convertISTToTarget(
+  istHour: number,
+  istMin: number,
+  targetOffset: number
+): string {
   const IST_OFFSET = 5.5;
   const utcDate = new Date();
   utcDate.setUTCHours(istHour - IST_OFFSET, istMin, 0, 0);
@@ -27,7 +32,7 @@ function convertTime(istHour: number, istMin: number, targetOffset: number): str
   return localDate.toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
-    hour12: false, // railway timing
+    hour12: false,
   });
 }
 
@@ -36,12 +41,26 @@ const StickyCourseCard: React.FC = () => {
   const [morningTime, setMorningTime] = useState("");
   const [eveningTime, setEveningTime] = useState("");
   const [currency, setCurrency] = useState("INR");
+  const [price, setPrice] = useState(250);
 
   useEffect(() => {
-    const { offset, currency } = timeZones[selectedZone];
-    setMorningTime(`${convertTime(6, 0, offset)} – ${convertTime(7, 30, offset)}`);
-    setEveningTime(`${convertTime(18, 0, offset)} – ${convertTime(19, 30, offset)}`);
+    const { offset, currency, exchangeRateToUSD } = timeZones[selectedZone];
+
+    // Fixed IST base times (6:00–7:30 and 18:00–19:30)
+    setMorningTime(
+      `${convertISTToTarget(6, 0, offset)} – ${convertISTToTarget(7, 30, offset)}`
+    );
+    setEveningTime(
+      `${convertISTToTarget(18, 0, offset)} – ${convertISTToTarget(19, 30, offset)}`
+    );
+
     setCurrency(currency);
+
+    if (currency === "USD") {
+      setPrice(250);
+    } else if (exchangeRateToUSD) {
+      setPrice(Math.round(250 * exchangeRateToUSD));
+    }
   }, [selectedZone]);
 
   return (
@@ -85,7 +104,9 @@ const StickyCourseCard: React.FC = () => {
 
         <div className="bg-white/10 rounded-xl p-4 text-center">
           <p className="text-sm font-medium mb-1">Discounted Course Fees:</p>
-          <p className="text-2xl font-bold">{currency} 250</p>
+          <p className="text-2xl font-bold">
+            {currency} {price}
+          </p>
           <p className="text-xs text-white/80">(Included All Tax)</p>
         </div>
 

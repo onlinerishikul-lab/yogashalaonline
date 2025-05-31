@@ -8,8 +8,8 @@ const LearnSection = () => {
        "Yoga Alliance Certified Restorative TTC",
        "Learn to guide deeply relaxing, healing sessions",
        "Master the use of props for full body support",
-        "Explore the mind-body connection & nervous system"
-        "Self-paced learning with lifetime access"
+        "Explore the mind-body connection & nervous system",
+        "Self-paced learning with lifetime access",
         "Step-by-step video lessons & practice sessions"
       ],
     },

@@ -3,44 +3,44 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights for Yoga Anatomy course:",
+      title: "Course Highlights for Chair Yoga TTC:",
       content: [
-        "Comprehensive study of muscles, joints, and biomechanics",
-        "Focus on safe alignment and injury prevention",
-        "Integration of breath and body awareness techniques",
-        "Detailed anatomy of spine, hips, shoulders, and core",
-        "Practical lessons suitable for all skill levels",
-        "Interactive learning with visuals and guided sessions",
-        "Personalized tips for teaching and practicing yoga safely",
+        "Teach yoga safely using a chair as a prop",
+        "Accessible techniques for seniors and limited mobility",
+        "Focus on breath, posture, and gentle movements",
+        "Learn safe alignment and injury prevention",
+        "Adapt traditional poses for seated practice",
+        "Inclusive methods for all body types and ages",
+        "Build confidence in teaching relaxing and therapeutic classes",
       ],
     },
     {
       title: "What’s Inside The Course – Practical Aspects",
       content: [
-        "Hands-on guidance to safely perform and adjust yoga poses",
-        "Step-by-step breakdown of muscle and joint functions during asanas",
-        "Techniques to modify postures for different body types and limitations",
-        "Exercises to improve breath control and body awareness",
-        "Real-life applications to prevent injuries and enhance alignment",
-        "Interactive sessions with feedback to deepen your understanding",
+        "Step-by-step guidance for chair-based yoga poses",
+        "Real-time demos on modifying common asanas",
+        "Tips for working with seniors and beginners",
+        "Exercises to support mobility, strength, and relaxation",
+        "Guided breathwork and mindfulness techniques",
+        "Live feedback sessions to improve your teaching style",
       ],
     },
     {
-      title: "Is This Course for You? YES!",
+      title: "Is This Course for You? YES! If You:",
       content: [
-        "Seeking quick online certification in Yoga Anatomy",
-        "Need only basic foundational knowledge of Yoga Anatomy",
-        "Can’t commit to more than 6 hours per week for study",
-        "No preference for a peer community during Yoga Anatomy practice",
+        "Want to offer yoga to people of all mobility levels",
+        "Prefer a gentle and therapeutic yoga style",
+        "Are looking for a certified and structured chair yoga TTC",
+        "Have limited time but strong dedication to learning",
       ],
     },
     {
-      title: "Is This Course for You? NO, if you are:",
+      title: "This Course May Not Be for You If:",
       content: [
-        "Looking for a quick online certification without in-depth study",
-        "Only interested in basic or surface-level knowledge of anatomy",
-        "Unable to dedicate at least 6 hours per week to learning",
-        "Not interested in engaging with a supportive learning community",
+        "You only want fast certification without real skills",
+        "You’re looking for physically intense yoga styles",
+        "You’re not open to working with gentle movement practices",
+        "You can’t commit to at least 6 hours/week for learning",
       ],
     },
   ];
@@ -77,4 +77,5 @@ const LearnSection = () => {
     </section>
   );
 };
+
 export default LearnSection;

@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/25-Hrs-Yoga-Courses/Meditation-TTC/HeroSection";
-import StickyCourseCard from "@/app/25-Hrs-Yoga-Courses/Meditation-TTC/TestimonialSlider";
-import YogaCoursePage from "@/app/25-Hrs-Yoga-Courses/Meditation-TTC/yogacourse";
-import LearnSection from "@/app/25-Hrs-Yoga-Courses/Meditation-TTC/LearnSection";
-import CourseDetails from "@/app/25-Hrs-Yoga-Courses/Meditation-TTC/CourseDetails";
-import YogaAccreditation from "@/app/25-Hrs-Yoga-Courses/Meditation-TTC/YogaAccreditation";
-import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/Meditation-TTC/CertificatePromo";
-import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/Meditation-TTC/TestimonialCarousel";
-import Faq from "@/app/25-Hrs-Yoga-Courses/Meditation-TTC/Faq";
+import HeroSection from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/HeroSection";
+import StickyCourseCard from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/TestimonialSlider";
+import YogaCoursePage from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/yogacourse";
+import LearnSection from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/LearnSection";
+import CourseDetails from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/CourseDetails";
+import YogaAccreditation from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/YogaAccreditation";
+import CertificatePromo from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/CertificatePromo";
+import TestimonialCarousel from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/TestimonialCarousel";
+import Faq from "@/app/50-Hrs-Yoga-Courses/Meditation-TTC/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

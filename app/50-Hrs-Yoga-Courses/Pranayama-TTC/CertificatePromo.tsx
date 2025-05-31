@@ -9,10 +9,10 @@ const CertificatePromo = () => {
         {/* Text Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">
-            Earn Your Yoga Anatomy Certificate
+            Earn Your Pranayama TTC Certificate
           </h2>
           <p className="text-base sm:text-lg mb-8 text-[#f9fafb]">
-            Begin your journey into yoga anatomy and safe practice. Complete our online 25-hour course and receive a certificate that reflects your growth and commitment.
+            Deepen your understanding of breathwork and safe teaching with our 50-hour online Pranayama Teacher Training Course. Gain a certificate that honors your knowledge and dedication.
           </p>
           <Link href="/contact">
             <a className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-md hover:bg-white transition duration-300 text-sm sm:text-base">
@@ -24,8 +24,8 @@ const CertificatePromo = () => {
         {/* Certificate Image */}
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
-            src="/course-certificate.jpeg"
-            alt="25-hrs Yoga Anatomy Certificate Preview"
+            src="/course-certificate.jpeg" // Replace if you have a Pranayama-specific certificate image
+            alt="25-Hour Pranayama TTC Certificate Preview"
             width={512}
             height={212}
             className="w-full max-w-md h-auto rounded-lg shadow-lg"

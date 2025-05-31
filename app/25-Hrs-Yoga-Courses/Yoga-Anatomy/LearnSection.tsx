@@ -3,7 +3,7 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights section for your Yoga Anatomy course:",
+      title: "Course Highlights for Yoga Anatomy course:",
       content: [
         "Comprehensive study of muscles, joints, and biomechanics",
         "Focus on safe alignment and injury prevention",
@@ -77,5 +77,4 @@ const LearnSection = () => {
     </section>
   );
 };
-
 export default LearnSection;

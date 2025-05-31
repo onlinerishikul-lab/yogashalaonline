@@ -46,8 +46,8 @@ const LearnSection = () => {
   ];
 
   return (
-    <section className="bg-[#F5F5F5] px-4 sm:px-6 py-12 sm:py-20">
-      <div className="max-w-6xl mx-auto space-y-24">
+    <section className="bg-[#F5F5F5] px-4 sm:px-6 py-5 sm:py-10">
+      <div className="max-w-6xl mx-auto space-y-5">
         {sections.map((section, index) => (
           <div
             key={index}

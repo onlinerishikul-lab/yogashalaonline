@@ -1,52 +1,99 @@
-'use client';
+"use client";
 
-import React from "react";
-import { GraduationCap, Users, Sun, BarChart3 } from "lucide-react";
+import {
+  HeartPulse,
+  ShieldCheck,
+  StretchHorizontal,
+  Brain,
+  Star,
+  Move3D,
+  Shield,
+  BookOpenCheck,
+  Ruler,
+} from "lucide-react";
 
-const UniqueCourseSection = () => {
-  const items = [
+const CourseDetails = () => {
+  const features = [
     {
-      title: "Certified Mudra & Mantra Experts",
-      icon: <Users className="w-6 h-6 text-sky-600" />,
+      id: 1,
+      icon: <HeartPulse />,
+      title: "Improve posture and alignment in yoga practice",
     },
     {
-      title: "Healing Power of Mudras & Mantras",
-      icon: <Sun className="w-6 h-6 text-sky-600" />,
+      id: 2,
+      icon: <ShieldCheck />,
+      title: "Prevent injuries through anatomical awareness",
     },
     {
-      title: "Globally Accredited Certification",
-      icon: <GraduationCap className="w-6 h-6 text-sky-600" />,
+      id: 3,
+      icon: <StretchHorizontal />,
+      title: "Learn to modify poses for different body types",
     },
     {
-      title: "Personalized Practice Tracking",
-      icon: <BarChart3 className="w-6 h-6 text-sky-600" />,
+      id: 4,
+      icon: <Brain />,
+      title: "Enhance mind-body-breath connection",
+    },
+    {
+      id: 5,
+      icon: <Star />,
+      title: "Build confidence in teaching and self-practice",
+    },
+    {
+      id: 6,
+      icon: <Move3D />,
+      title: "Understand key muscle and joint functions",
+    },
+    {
+      id: 7,
+      icon: <Shield />,
+      title: "Support safe and effective movement",
+    },
+    {
+      id: 8,
+      icon: <BookOpenCheck />,
+      title: "Apply anatomy knowledge to real-life yoga sessions",
+    },
+    {
+      id: 9,
+      icon: <Ruler />,
+      title: "Master alignment techniques for injury-free sessions",
     },
   ];
 
   return (
-    <section className="bg-white py-16 px-6 md:px-10 lg:px-20">
-      <div className="max-w-6xl mx-auto text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-sky-600">
-          What Makes Our “50-Hrs Mudra & Mantra Course” Unique?
+    <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+          Benefits of the Yoga Anatomy Course
         </h2>
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm md:text-base">
-          Discover the ancient techniques of mudras and mantras to enhance your physical,
-          emotional, and spiritual well-being. This course provides in-depth knowledge and practice.
+        <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
+          This course is designed to transform your yoga journey with deep
+          anatomical understanding, supporting both personal growth and safe teaching.
         </p>
-      </div>
-
-      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        {items.map((item, index) => (
-          <div key={index} className="flex flex-col items-center justify-center gap-3">
-            <div className="bg-sky-100 p-4 rounded-full shadow-sm flex items-center justify-center">
-              {item.icon}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
+          {features.map((feature) => (
+            <div
+              key={feature.id}
+              className="flex items-start gap-4 bg-white p-5 rounded-xl shadow hover:shadow-lg transition"
+            >
+              <div className="text-2xl text-[#4377b2] mt-1 shrink-0">
+                {feature.icon}
+              </div>
+              <div>
+                <h3 className="font-semibold text-base sm:text-lg mb-1">
+                  {feature.id}. {feature.title}
+                </h3>
+                <p className="text-sm text-[#4377b2]/80">
+                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                </p>
+              </div>
             </div>
-            <p className="text-lg font-semibold text-gray-800">{item.title}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-export default UniqueCourseSection;
+export default CourseDetails;

@@ -2,26 +2,31 @@
 
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
 
 const testimonials = [
   {
-    company: "YogAspire",
-    title: "Empowering and Eye-Opening",
+    name: "Charmaine Wardenberg",
+    title: "A Warm, Inspiring Environment to Grow In",
+    company: "Rishikul Online",
     content:
-      "The 25-hour course gave me a solid understanding of anatomy in yoga. It changed how I practice and teach — I feel safer and more confident.",
-    name: "Anjali Mehta",
-    role: "Certified Yoga Instructor",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
+      "Absolutely loved my experience at this yoga training school. The quality of the teachers is exceptional — each one brings deep knowledge, passion, and a truly supportive presence to the training. I also really appreciated the flexibility in their approach, allowing space for different styles of yoga teaching and encouraging us to find our own unique voice as instructors. A warm, inspiring environment to grow in.",
+    role: "",
   },
   {
-    company: "InnerGlow Yoga",
-    title: "Supportive & Insightful Journey",
+    name: "RAMKISHAN KUGATHAS",
+    title: "Truly Enriching Experience",
+    company: "Rishikul Online",
     content:
-      "The instructors made complex anatomy feel approachable. Their guidance was compassionate and professional throughout the course.",
-    name: "David Lin",
-    role: "Yoga Therapy Practitioner",
-    image: "https://randomuser.me/api/portraits/men/53.jpg",
+      "I recently completed the Prenatal Yoga course at Rishikul Yogshala and it was a truly enriching experience. The teachers were kind, knowledgeable, and supportive throughout. I learned safe and effective yoga practices for pregnancy, along with breathing techniques and relaxation methods. The environment was peaceful and well-organized. I highly recommend Rishikul Yogshala for anyone seeking authentic and caring yoga education.",
+    role: "",
+  },
+  {
+    name: "Dimple Malkan",
+    title: "Much More Than Asana Training",
+    company: "Rishikul Online",
+    content:
+      "Rishikul Yogshala was absolutely amazing. I am very fortunate that I did my 200 hours there. I gained much more than just asana training. The yogic philosophy taught by Krishna is part of my daily life now. Every class and every teacher is extremely knowledgeable and always available to help and answer questions. Highly recommend! 🙏",
+    role: "",
   },
 ];
 
@@ -43,7 +48,7 @@ const TestimonialCarousel = () => {
         What Our Students Say
       </h2>
       <p className="text-gray-600 text-center mb-10 text-sm md:text-base">
-        Honest reflections from those who’ve grown through our 25-hour yoga anatomy journey.
+        Honest reflections from those who’ve grown through our yoga training programs.
       </p>
 
       <div className="relative max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-8 md:p-10 transition-all">
@@ -65,29 +70,12 @@ const TestimonialCarousel = () => {
           <ChevronRight className="w-5 h-5" />
         </button>
 
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-shrink-0 relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-[#4377b2] shadow-md">
-            <Image
-              src={testimonial.image}
-              alt={testimonial.name}
-              fill
-              sizes="(max-width: 768px) 112px, 128px"
-              style={{ objectFit: "cover" }}
-              priority={index === 0} // preload first image
-              unoptimized={testimonial.image.startsWith("http")} // to allow external images from randomuser.me without optimization error
-            />
-          </div>
-
-          <div className="flex-1 text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-              <p className="text-sm font-medium text-[#4377b2]">{testimonial.company}</p>
-            </div>
-
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">{testimonial.title}</h3>
-            <p className="text-gray-600 mb-4 text-sm leading-relaxed">{testimonial.content}</p>
-            <div className="font-medium text-gray-800">{testimonial.name}</div>
-            <div className="text-sm text-gray-500">{testimonial.role}</div>
-          </div>
+        <div className="flex flex-col items-center text-center gap-6">
+          <p className="text-sm font-medium text-[#4377b2]">{testimonial.company}</p>
+          <h3 className="text-lg font-semibold text-gray-900">{testimonial.title}</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">{testimonial.content}</p>
+          <div className="font-medium text-gray-800">{testimonial.name}</div>
+          {testimonial.role && <div className="text-sm text-gray-500">{testimonial.role}</div>}
         </div>
       </div>
     </section>

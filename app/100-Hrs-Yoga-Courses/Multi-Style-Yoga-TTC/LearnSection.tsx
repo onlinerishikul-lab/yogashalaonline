@@ -1,95 +1,80 @@
 "use client";
 
-import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
-
 const LearnSection = () => {
-  const [active, setActive] = useState<number>(-1);
-
-  const topics = [
+  const sections = [
     {
-      title: "Introduction to Multi-Style Yoga",
-      content:
-        "Get an overview of multiple yoga traditions including Hatha, Vinyasa, Ashtanga, and Yin Yoga—understanding their history and philosophy.",
+      title: "Course Highlights for Yoga Anatomy course:",
+      content: [
+        "Comprehensive study of muscles, joints, and biomechanics",
+        "Focus on safe alignment and injury prevention",
+        "Integration of breath and body awareness techniques",
+        "Detailed anatomy of spine, hips, shoulders, and core",
+        "Practical lessons suitable for all skill levels",
+        "Interactive learning with visuals and guided sessions",
+        "Personalized tips for teaching and practicing yoga safely",
+      ],
     },
     {
-      title: "Hatha & Vinyasa Flow Fundamentals",
-      content:
-        "Explore static and dynamic practices with emphasis on alignment, breath coordination, and transitioning between postures.",
+      title: "What’s Inside The Course – Practical Aspects",
+      content: [
+        "Hands-on guidance to safely perform and adjust yoga poses",
+        "Step-by-step breakdown of muscle and joint functions during asanas",
+        "Techniques to modify postures for different body types and limitations",
+        "Exercises to improve breath control and body awareness",
+        "Real-life applications to prevent injuries and enhance alignment",
+        "Interactive sessions with feedback to deepen your understanding",
+      ],
     },
     {
-      title: "Ashtanga Primary Series Basics",
-      content:
-        "Learn the foundational structure of the Ashtanga Primary Series with attention to breath (Ujjayi), bandhas, and drishti.",
+      title: "Is This Course for You? YES!",
+      content: [
+        "Seeking quick online certification in Yoga Anatomy",
+        "Need only basic foundational knowledge of Yoga Anatomy",
+        "Can’t commit to more than 6 hours per week for study",
+        "No preference for a peer community during Yoga Anatomy practice",
+      ],
     },
     {
-      title: "Yin Yoga & Restorative Techniques",
-      content:
-        "Discover the calming, meditative aspects of Yin Yoga including long-held poses and energetic balance through fascia release.",
-    },
-    {
-      title: "Teaching Skills & Class Sequencing",
-      content:
-        "Master multi-style sequencing, cueing techniques, and class management while maintaining authenticity across different yoga styles.",
+      title: "Is This Course for You? NO, if you are:",
+      content: [
+        "Looking for a quick online certification without in-depth study",
+        "Only interested in basic or surface-level knowledge of anatomy",
+        "Unable to dedicate at least 6 hours per week to learning",
+        "Not interested in engaging with a supportive learning community",
+      ],
     },
   ];
 
   return (
-    <section className="bg-[#F5F5F5] p-6 md:p-12">
-      <div className="bg-white rounded-2xl p-6 md:p-12 flex flex-col md:flex-row gap-12">
-        {/* Left Content */}
-        <div className="md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            100-Hrs Yoga Courses: Multi-Style Yoga TTC
-          </h2>
-          <p className="text-gray-500 mb-6">
-            Experience a diverse and balanced yoga journey by learning multiple yoga styles in one course. Ideal for aspiring teachers or practitioners looking to broaden their skills.
-          </p>
-          <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
-            Contact Us
-          </button>
-        </div>
-
-        {/* Accordion */}
-        <div className="md:w-1/2">
-          {topics.map((topic, index) => (
-            <div key={index} className="border-b py-4">
-              <div
-                role="button"
-                tabIndex={0}
-                onClick={() => setActive(index === active ? -1 : index)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    setActive(index === active ? -1 : index);
-                  }
-                }}
-                className="flex justify-between items-center cursor-pointer"
-                aria-expanded={active === index}
-                aria-controls={`topic-content-${index}`}
-              >
-                <h3 className="font-semibold text-lg text-[#4377b2]">
-                  {topic.title}
-                </h3>
-                {active === index ? (
-                  <Minus size={20} className="text-[#4377b2]" />
-                ) : (
-                  <Plus size={20} className="text-[#4377b2]" />
-                )}
-              </div>
-              {active === index && (
-                <p
-                  id={`topic-content-${index}`}
-                  className="mt-2 text-gray-500 text-sm"
-                >
-                  {topic.content}
-                </p>
-              )}
+    <section className="bg-[#F5F5F5] px-4 sm:px-6 py-5 sm:py-10">
+      <div className="max-w-6xl mx-auto space-y-5">
+        {sections.map((section, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row ${
+              index % 2 === 1 ? "md:flex-row-reverse" : ""
+            } items-stretch gap-0`}
+          >
+            {/* Title */}
+            <div className="md:w-1/2 px-6 py-6 flex items-center justify-center bg-white rounded-l-2xl md:rounded-l-2xl md:rounded-r-none shadow-md">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#4377b2] text-center">
+                {section.title}
+              </h2>
             </div>
-          ))}
-        </div>
+
+            {/* Divider */}
+            <div className="w-[2px] bg-[#4377b2] hidden md:block" />
+
+            {/* Content */}
+            <div className="md:w-1/2 px-6 py-6 flex flex-col justify-center bg-white rounded-r-2xl md:rounded-r-2xl md:rounded-l-none shadow-md space-y-2 text-gray-700 text-sm sm:text-base">
+              {section.content.map((line, i) => (
+                <p key={i}>• {line}</p>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
-
 export default LearnSection;

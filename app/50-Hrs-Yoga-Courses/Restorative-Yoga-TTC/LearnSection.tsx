@@ -3,44 +3,43 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights for Yoga Anatomy course:",
+      title: "Course Highlights for Restorative Yoga TTC:",
       content: [
-        "Comprehensive study of muscles, joints, and biomechanics",
-        "Focus on safe alignment and injury prevention",
-        "Integration of breath and body awareness techniques",
-        "Detailed anatomy of spine, hips, shoulders, and core",
-        "Practical lessons suitable for all skill levels",
-        "Interactive learning with visuals and guided sessions",
-        "Personalized tips for teaching and practicing yoga safely",
+       "Yoga Alliance Certified Restorative TTC",
+       "Learn to guide deeply relaxing, healing sessions",
+       "Master the use of props for full body support",
+        "Explore the mind-body connection & nervous system"
+        "Self-paced learning with lifetime access"
+        "Step-by-step video lessons & practice sessions"
       ],
     },
     {
       title: "What’s Inside The Course – Practical Aspects",
       content: [
-        "Hands-on guidance to safely perform and adjust yoga poses",
-        "Step-by-step breakdown of muscle and joint functions during asanas",
-        "Techniques to modify postures for different body types and limitations",
-        "Exercises to improve breath control and body awareness",
-        "Real-life applications to prevent injuries and enhance alignment",
-        "Interactive sessions with feedback to deepen your understanding",
+        "Gentle, supported yoga poses using props like bolsters and blankets",
+        "Step-by-step guidance on sequencing calming and healing classes",
+        "Breathwork and relaxation techniques to soothe the nervous system",
+        "Mindfulness and meditation practices integrated into sessions",
+        "Safe adjustments and modifications for individual needs",
+        "Instructions on creating a nurturing and peaceful teaching environment",
       ],
     },
     {
       title: "Is This Course for You? YES!",
       content: [
-        "Seeking quick online certification in Yoga Anatomy",
-        "Need only basic foundational knowledge of Yoga Anatomy",
-        "Can’t commit to more than 6 hours per week for study",
-        "No preference for a peer community during Yoga Anatomy practice",
+        "Seeking a quick, online certification in Restorative Yoga",
+        "Want to learn the basics of relaxation, healing, and prop-based yoga",
+        "Can dedicate up to 6 hours per week to gentle, self-paced study",
+        "Prefer solo learning without needing peer interaction or group sessions",
       ],
     },
     {
       title: "Is This Course for You? NO, if you are:",
       content: [
-        "Looking for a quick online certification without in-depth study",
-        "Only interested in basic or surface-level knowledge of anatomy",
-        "Unable to dedicate at least 6 hours per week to learning",
-        "Not interested in engaging with a supportive learning community",
+        "Looking for a fast-paced, dynamic or physically intense yoga style",
+        "Want in-depth anatomy, therapy, or advanced yoga philosophy training",
+        "Unable to commit at least a few quiet hours each week for gentle practice",
+        "Prefer highly interactive group learning with frequent live sessions",
       ],
     },
   ];

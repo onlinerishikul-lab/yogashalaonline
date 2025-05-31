@@ -2,46 +2,51 @@
 
 import React, { useState, useEffect } from "react";
 
-// Time zone options
 type TimeZoneKey = "IST" | "PST" | "EST" | "GMT" | "CET" | "JST";
 
 interface TimeZone {
   label: string;
   offset: number;
+  currency: string;
 }
 
 const timeZones: Record<TimeZoneKey, TimeZone> = {
-  IST: { label: "India (IST)", offset: 5.5 },
-  PST: { label: "US Pacific (PST)", offset: -8 },
-  EST: { label: "US Eastern (EST)", offset: -5 },
-  GMT: { label: "Greenwich Mean Time (GMT)", offset: 0 },
-  CET: { label: "Central Europe (CET)", offset: 1 },
-  JST: { label: "Japan (JST)", offset: 9 },
+  IST: { label: "India (IST)", offset: 5.5, currency: "INR" },
+  PST: { label: "US Pacific (PST)", offset: -8, currency: "USD" },
+  EST: { label: "US Eastern (EST)", offset: -5, currency: "USD" },
+  GMT: { label: "Greenwich Mean Time (GMT)", offset: 0, currency: "USD" },
+  CET: { label: "Central Europe (CET)", offset: 1, currency: "EUR" },
+  JST: { label: "Japan (JST)", offset: 9, currency: "JPY" },
 };
 
-// Convert IST time to another timezone
 function convertTime(istHour: number, istMin: number, targetOffset: number): string {
   const IST_OFFSET = 5.5;
-  const date = new Date();
-  date.setUTCHours(istHour - IST_OFFSET, istMin, 0, 0); // IST to UTC
-  const localDate = new Date(date.getTime() + targetOffset * 3600000); // UTC to local
-  return localDate.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: true });
+  const utcDate = new Date();
+  utcDate.setUTCHours(istHour - IST_OFFSET, istMin, 0, 0);
+  const localDate = new Date(utcDate.getTime() + targetOffset * 3600000);
+  return localDate.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false, // railway timing
+  });
 }
 
 const StickyCourseCard: React.FC = () => {
   const [selectedZone, setSelectedZone] = useState<TimeZoneKey>("IST");
   const [morningTime, setMorningTime] = useState("");
   const [eveningTime, setEveningTime] = useState("");
+  const [currency, setCurrency] = useState("INR");
 
   useEffect(() => {
-    const offset = timeZones[selectedZone].offset;
+    const { offset, currency } = timeZones[selectedZone];
     setMorningTime(`${convertTime(6, 0, offset)} – ${convertTime(7, 30, offset)}`);
     setEveningTime(`${convertTime(18, 0, offset)} – ${convertTime(19, 30, offset)}`);
+    setCurrency(currency);
   }, [selectedZone]);
 
   return (
-    <div className="hidden lg:flex sticky top-24 h-fit w-full justify-end">
-      <div className="bg-gradient-to-br from-[#4377b2] to-[#365a92] border border-gray-300 shadow-lg rounded-2xl p-6 space-y-4 w-80 text-white">
+    <div className="w-full flex justify-center lg:justify-end">
+      <div className="bg-gradient-to-br from-[#4377b2] to-[#365a92] border border-gray-300 shadow-lg rounded-2xl p-6 space-y-4 w-full max-w-md text-white">
         <h2 className="text-lg font-semibold uppercase tracking-wide text-center">
           25 Hrs Online Yoga Anatomy For Safety
         </h2>
@@ -53,7 +58,6 @@ const StickyCourseCard: React.FC = () => {
             <li>Ends 15th of every month</li>
             <li>15 Days Program</li>
             <li>Daily 3 hrs</li>
-
             <li>
               <div className="flex flex-col">
                 <label className="mb-1">Choose Timezone:</label>
@@ -70,7 +74,6 @@ const StickyCourseCard: React.FC = () => {
                 </select>
               </div>
             </li>
-
             <li>Morning Session: {morningTime}</li>
             <li>Evening Session: {eveningTime}</li>
             <li>Instructed in English</li>
@@ -82,7 +85,7 @@ const StickyCourseCard: React.FC = () => {
 
         <div className="bg-white/10 rounded-xl p-4 text-center">
           <p className="text-sm font-medium mb-1">Discounted Course Fees:</p>
-          <p className="text-2xl font-bold">USD 250</p>
+          <p className="text-2xl font-bold">{currency} 250</p>
           <p className="text-xs text-white/80">(Included All Tax)</p>
         </div>
 

@@ -3,7 +3,7 @@
 import {
   Smile,
   Eye,
-  FaceIcon,
+  UserCircle,
   HeartPulse,
   Star,
   ShieldCheck,
@@ -26,7 +26,7 @@ const CourseDetails = () => {
     },
     {
       id: 3,
-      icon: <FaceIcon />,
+      icon: <UserCircle />,
       title: "Enhance facial symmetry and glow",
     },
     {

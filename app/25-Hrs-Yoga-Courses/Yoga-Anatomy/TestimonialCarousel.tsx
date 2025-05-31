@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Charmaine Wardenberg",
     title: "A Warm, Inspiring Environment to Grow In",
-    company: "Rishikul Yogshala",
+    company: "Rishikul Online",
     content:
       "Absolutely loved my experience at this yoga training school. The quality of the teachers is exceptional — each one brings deep knowledge, passion, and a truly supportive presence to the training. I also really appreciated the flexibility in their approach, allowing space for different styles of yoga teaching and encouraging us to find our own unique voice as instructors. A warm, inspiring environment to grow in.",
     role: "",
@@ -15,7 +15,7 @@ const testimonials = [
   {
     name: "RAMKISHAN KUGATHAS",
     title: "Truly Enriching Experience",
-    company: "Rishikul Yogshala",
+    company: "Rishikul Online",
     content:
       "I recently completed the Prenatal Yoga course at Rishikul Yogshala and it was a truly enriching experience. The teachers were kind, knowledgeable, and supportive throughout. I learned safe and effective yoga practices for pregnancy, along with breathing techniques and relaxation methods. The environment was peaceful and well-organized. I highly recommend Rishikul Yogshala for anyone seeking authentic and caring yoga education.",
     role: "",
@@ -23,7 +23,7 @@ const testimonials = [
   {
     name: "Dimple Malkan",
     title: "Much More Than Asana Training",
-    company: "Rishikul Yogshala",
+    company: "Rishikul Online",
     content:
       "Rishikul Yogshala was absolutely amazing. I am very fortunate that I did my 200 hours there. I gained much more than just asana training. The yogic philosophy taught by Krishna is part of my daily life now. Every class and every teacher is extremely knowledgeable and always available to help and answer questions. Highly recommend! 🙏",
     role: "",

@@ -40,7 +40,7 @@ const StickyCourseCard: React.FC = () => {
   }, [selectedZone]);
 
   return (
-    <div className="hidden lg:flex justify-center sticky top-24 h-fit w-full">
+    <div className="hidden lg:flex justify-end sticky top-24 h-fit w-full pr-8">
       <div className="bg-gradient-to-br from-[#4377b2] to-[#365a92] border border-gray-300 shadow-lg rounded-2xl p-6 space-y-4 w-80 text-white">
         <h2 className="text-lg font-semibold uppercase tracking-wide text-center">
           25 Hrs Online Yoga Anatomy For Safety

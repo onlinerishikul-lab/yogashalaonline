@@ -1,63 +1,81 @@
 "use client";
 
 import {
-  HeartPulse,
+  LayoutDashboard,
   ShieldCheck,
-  StretchHorizontal,
+  SlidersHorizontal,
+  Wind,
+  UserCheck,
   Brain,
-  Star,
-  Bed,
   HandHeart,
   BookOpenCheck,
-  Ruler,
+  Sparkles,
 } from "lucide-react";
 
 const CourseDetails = () => {
   const features = [
     {
       id: 1,
-      icon: <Bed />,
-      title: "Promote deep relaxation and nervous system healing",
+      icon: <LayoutDashboard />,
+      title: "Supportive Posture & Alignment",
+      description:
+        "Learn how to position the body with props for maximum comfort and relaxation. Correct alignment promotes deep rest and healing.",
     },
     {
       id: 2,
-      icon: <HandHeart />,
-      title: "Create a safe and nurturing space for all students",
+      icon: <ShieldCheck />,
+      title: "Injury Prevention",
+      description:
+        "Understand how gentle movement and support reduce risk of strain or discomfort. Teach safely, especially for those recovering or with limitations.",
     },
     {
       id: 3,
-      icon: <StretchHorizontal />,
-      title: "Use props effectively for maximum comfort and support",
+      icon: <SlidersHorizontal />,
+      title: "Pose Adaptations",
+      description:
+        "Customize poses for different needs, ages, and body types. Make restorative yoga accessible and inclusive for all.",
     },
     {
       id: 4,
-      icon: <Brain />,
-      title: "Understand the mind-body connection in restorative practice",
+      icon: <Wind />,
+      title: "Breath & Stillness",
+      description:
+        "Use breath awareness to calm the mind and body deeply. Stillness and breathwork are the heart of restorative yoga.",
     },
     {
       id: 5,
-      icon: <Star />,
-      title: "Build confidence in teaching slow, mindful yoga",
+      icon: <UserCheck />,
+      title: "Teaching with Confidence",
+      description:
+        "Gain the skills and presence to lead peaceful, grounding sessions. Hold space with assurance and empathy.",
     },
     {
       id: 6,
-      icon: <HeartPulse />,
-      title: "Support emotional release and energetic balance",
+      icon: <Brain />,
+      title: "Understanding the Nervous System",
+      description:
+        "Learn how restorative yoga soothes the nervous system and reduces stress. Teach practices that activate rest and repair.",
     },
     {
       id: 7,
-      icon: <ShieldCheck />,
-      title: "Adapt restorative yoga for different needs and conditions",
+      icon: <HandHeart />,
+      title: "Calm, Safe Movements",
+      description:
+        "Focus on slow, intentional movements and long holds. Create an environment where students feel safe and nurtured.",
     },
     {
       id: 8,
       icon: <BookOpenCheck />,
-      title: "Design complete restorative yoga sequences",
+      title: "Practical Teaching Skills",
+      description:
+        "Apply what you learn to real-world sessions and private clients. Build your class structure with hands-on practice.",
     },
     {
       id: 9,
-      icon: <Ruler />,
-      title: "Master posture setup and alignment for healing outcomes",
+      icon: <Sparkles />,
+      title: "Healing Through Stillness",
+      description:
+        "Master the art of deep rest and inner healing through still postures. Support emotional release and balance with mindful teaching.",
     },
   ];
 
@@ -65,10 +83,11 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Benefits of the Restorative Yoga TTC
+          What You’ll Learn in the Restorative Yoga Course
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This training is crafted to help you guide others into deep rest and renewal while building your own resilience and confidence as a restorative yoga teacher.
+          This course helps you create deeply healing experiences through restorative yoga—
+          guiding students into stillness, safety, and inner peace.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (
@@ -83,9 +102,7 @@ const CourseDetails = () => {
                 <h3 className="font-semibold text-base sm:text-lg mb-1">
                   {feature.id}. {feature.title}
                 </h3>
-                <p className="text-sm text-[#4377b2]/80">
-                  Learn to hold space, use breathwork, and deliver deep healing through gentle, supported practice.
-                </p>
+                <p className="text-sm text-[#4377b2]/80">{feature.description}</p>
               </div>
             </div>
           ))}

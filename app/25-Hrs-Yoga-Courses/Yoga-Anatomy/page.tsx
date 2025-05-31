@@ -17,7 +17,7 @@ export default function Page() {
       {/* Full-width Hero Section */}
       <HeroSection />
 
-      {/* Main content with sticky card */}
+      {/* Main content with sticky card on desktop */}
       <div className="flex flex-col lg:flex-row gap-10 px-4 md:px-8 xl:px-20">
         {/* Left content */}
         <div className="w-full lg:w-[75%] space-y-10">
@@ -36,6 +36,11 @@ export default function Page() {
             <StickyCourseCard />
           </div>
         </div>
+      </div>
+
+      {/* Mobile view: sticky card appears below all content */}
+      <div className="block lg:hidden px-4 md:px-8 xl:px-20">
+        <StickyCourseCard />
       </div>
 
       {/* Full-width Footer */}

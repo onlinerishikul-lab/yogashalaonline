@@ -17,47 +17,65 @@ const CourseDetails = () => {
     {
       id: 1,
       icon: <HeartPulse />,
-      title: "Improve posture and alignment in yoga practice",
+      title: "Posture & Alignment",
+      description:
+        "Learn how to improve posture and body alignment for better balance and stability in yoga. Good alignment enhances effectiveness and reduces the risk of strain.",
     },
     {
       id: 2,
       icon: <ShieldCheck />,
-      title: "Prevent injuries through anatomical awareness",
+      title: "Injury Prevention",
+      description:
+        "Understand how anatomical awareness can help prevent common yoga injuries. Practice smarter and safer with proper movement techniques.",
     },
     {
       id: 3,
       icon: <StretchHorizontal />,
-      title: "Learn to modify poses for different body types",
+      title: "Pose Modifications",
+      description:
+        "Discover how to adapt yoga poses for different body types and limitations. Make your classes inclusive and accessible to all.",
     },
     {
       id: 4,
       icon: <Brain />,
-      title: "Enhance mind-body-breath connection",
+      title: "Mind-Body-Breath Connection",
+      description:
+        "Deepen your awareness of how breath, body, and mind work together. Use this connection to build a more mindful and grounded practice.",
     },
     {
       id: 5,
       icon: <Star />,
-      title: "Build confidence in teaching and self-practice",
+      title: "Teaching & Self-Practice Confidence",
+      description:
+        "Gain confidence in applying anatomy knowledge to your teaching and personal practice. Feel empowered to lead safe, informed sessions.",
     },
     {
       id: 6,
       icon: <Move3D />,
-      title: "Understand key muscle and joint functions",
+      title: "Muscle & Joint Basics",
+      description:
+        "Understand key muscles and joints used in yoga movements. Learn how they function to support better flow and control.",
     },
     {
       id: 7,
       icon: <Shield />,
-      title: "Support safe and effective movement",
+      title: "Safe & Smart Movement",
+      description:
+        "Build a strong foundation in moving safely and effectively through yoga sequences. Prevent overuse and imbalance with informed movement.",
     },
     {
       id: 8,
       icon: <BookOpenCheck />,
-      title: "Apply anatomy knowledge to real-life yoga sessions",
+      title: "Anatomy in Practice",
+      description:
+        "Apply what you learn directly to real-life yoga classes and sessions. Make your practice more precise and purposeful.",
     },
     {
       id: 9,
       icon: <Ruler />,
-      title: "Master alignment techniques for injury-free sessions",
+      title: "Alignment Mastery",
+      description:
+        "Master alignment techniques that keep your practice injury-free. Focus on small adjustments that make a big difference.",
     },
   ];
 
@@ -68,8 +86,8 @@ const CourseDetails = () => {
           Benefits of the Yoga Anatomy Course
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course is designed to transform your yoga journey with deep
-          anatomical understanding, supporting both personal growth and safe teaching.
+          This course is designed to transform your yoga journey with deep anatomical
+          understanding, supporting both personal growth and safe teaching.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (
@@ -84,9 +102,7 @@ const CourseDetails = () => {
                 <h3 className="font-semibold text-base sm:text-lg mb-1">
                   {feature.id}. {feature.title}
                 </h3>
-                <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
-                </p>
+                <p className="text-sm text-[#4377b2]/80">{feature.description}</p>
               </div>
             </div>
           ))}

@@ -1,5 +1,4 @@
 "use client";
-
 import HeroSection from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/HeroSection";
 import StickyCourseCard from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/TestimonialSlider";
 import YogaCoursePage from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/yogacourse";

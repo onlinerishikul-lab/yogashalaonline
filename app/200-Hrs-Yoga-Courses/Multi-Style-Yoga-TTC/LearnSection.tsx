@@ -3,44 +3,45 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights for Yoga Anatomy course:",
+      title: "Course Highlights",
       content: [
-        "Comprehensive study of muscles, joints, and biomechanics",
-        "Focus on safe alignment and injury prevention",
-        "Integration of breath and body awareness techniques",
-        "Detailed anatomy of spine, hips, shoulders, and core",
-        "Practical lessons suitable for all skill levels",
-        "Interactive learning with visuals and guided sessions",
-        "Personalized tips for teaching and practicing yoga safely",
+        "200-Hour Yoga Alliance Certification",
+        "Learn various yoga styles: Hatha, Vinyasa, Ashtanga, Yin, and more",
+        "Study anatomy, philosophy, and teaching methodology",
+        "Flexible online learning with live interactive sessions",
+        "Develop well-rounded practice and teaching skills",
+        "Certificate of Completion provided",
       ],
     },
     {
-      title: "What’s Inside The Course – Practical Aspects",
+      title: "What’s Inside the Course – Practical Aspects",
       content: [
-        "Hands-on guidance to safely perform and adjust yoga poses",
-        "Step-by-step breakdown of muscle and joint functions during asanas",
-        "Techniques to modify postures for different body types and limitations",
-        "Exercises to improve breath control and body awareness",
-        "Real-life applications to prevent injuries and enhance alignment",
-        "Interactive sessions with feedback to deepen your understanding",
+        "Core asanas from multiple yoga traditions",
+        "Pranayama and breathwork practices",
+        "Meditation and mindfulness techniques",
+        "Class sequencing for different yoga styles",
+        "Teaching methods and class management",
+        "Anatomy and alignment principles",
+        "Practice teaching and feedback",
+        "Yoga philosophy and ethics",
+        "Community support and live Q&A",
+      ],
+    },
+    {
+      title: "Is This Course for You? NO!",
+      content: [
+        "You want to specialize in only one yoga style",
+        "You prefer only in-person training",
+        "You cannot dedicate regular study time",
       ],
     },
     {
       title: "Is This Course for You? YES!",
       content: [
-        "Seeking quick online certification in Yoga Anatomy",
-        "Need only basic foundational knowledge of Yoga Anatomy",
-        "Can’t commit to more than 6 hours per week for study",
-        "No preference for a peer community during Yoga Anatomy practice",
-      ],
-    },
-    {
-      title: "Is This Course for You? NO, if you are:",
-      content: [
-        "Looking for a quick online certification without in-depth study",
-        "Only interested in basic or surface-level knowledge of anatomy",
-        "Unable to dedicate at least 6 hours per week to learning",
-        "Not interested in engaging with a supportive learning community",
+        "You want a broad understanding of different yoga styles",
+        "You’re aiming to teach versatile classes confidently",
+        "You seek flexible, online learning with expert guidance",
+        "You want to deepen your personal practice across traditions",
       ],
     },
   ];
@@ -77,4 +78,5 @@ const LearnSection = () => {
     </section>
   );
 };
+
 export default LearnSection;

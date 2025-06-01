@@ -26,8 +26,7 @@ const skills = [
   {
     title: "Yoga for Common Ailments",
     description:
-      "Address issues like back pain, arthritis, stress, and diabetes.Adapt yoga tools for chronic health conditions
-",
+      "Address issues like back pain, arthritis, stress, and diabetes.Adapt yoga tools for chronic health conditions",
   },
   {
     title: "Props & Modifications",

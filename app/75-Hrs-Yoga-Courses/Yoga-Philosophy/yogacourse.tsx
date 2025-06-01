@@ -4,36 +4,37 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Yogic Ethics",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Master the Yamas and Niyamas to cultivate discipline and compassion. Bring spiritual clarity and intention to everyday life.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Understanding the Sutras",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Explore Patanjali’s Yoga Sutras for insight into the mind and liberation. Discover tools for stillness, focus, and inner peace.",
   },
   {
-    title: "Injury Prevention",
+    title: "Gita’s Wisdom",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Unpack timeless lessons from the Bhagavad Gita. Learn about action, devotion, and surrender in life’s journey.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Karma & Rebirth",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Understand how actions shape destiny and future lives. Align your choices with conscious, mindful living.",
   },
   {
-    title: "Key Body Areas",
+    title: "Eight Limbs of Yoga",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Gain clarity on asana, breath, concentration, and meditation. Use this holistic path to deepen personal or teaching practice.",
   },
   {
-    title: "For All Levels",
+    title: "Gunas & Mind Qualities",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Learn about Sattva, Rajas, and Tamas in human behavior. Balance energy for peace, focus, and harmony.",
   },
 ];
+
 
 const YogaCoursePage = () => {
   return (
@@ -41,10 +42,11 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          75-Hour Core Concept of Yoga Philosophy
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+Dive deep into the timeless wisdom of yoga philosophy. This course explores the foundational texts, concepts, and ethical principles that shape the heart of authentic yoga practice, helping you align your life with purpose and awareness.
+
         </p>
       </section>
 

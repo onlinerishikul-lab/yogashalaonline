@@ -3,44 +3,48 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights for Yoga Anatomy course:",
+      title: "Course Highlights",
       content: [
-        "Comprehensive study of muscles, joints, and biomechanics",
-        "Focus on safe alignment and injury prevention",
-        "Integration of breath and body awareness techniques",
-        "Detailed anatomy of spine, hips, shoulders, and core",
-        "Practical lessons suitable for all skill levels",
-        "Interactive learning with visuals and guided sessions",
-        "Personalized tips for teaching and practicing yoga safely",
+        "Certified 95-hour Kids Yoga Teacher Training (Yoga Alliance Continuing Education)",
+        "Age-specific teaching for toddlers to teens",
+        "Yoga through storytelling, games, music, and art",
+        "Learn child development, classroom management, and safety",
+        "Teaching resources, lesson plans, and creativity tools",
+        "Video demos, real class recordings & activity worksheets",
+        "Self-paced with live mentorship sessions",
+        "Certificate of Completion included",
       ],
     },
     {
-      title: "What’s Inside The Course – Practical Aspects",
+      title: "What’s Inside the Course – Practical Aspects",
       content: [
-        "Hands-on guidance to safely perform and adjust yoga poses",
-        "Step-by-step breakdown of muscle and joint functions during asanas",
-        "Techniques to modify postures for different body types and limitations",
-        "Exercises to improve breath control and body awareness",
-        "Real-life applications to prevent injuries and enhance alignment",
-        "Interactive sessions with feedback to deepen your understanding",
+        "Foundations of kids’ yoga and how it differs from adult yoga",
+        "Creating age-appropriate classes for different age groups",
+        "Breathing, mindfulness, and relaxation techniques for children",
+        "Yoga games, partner poses, and creative movement",
+        "Teaching through themes, stories, music, and art",
+        "Addressing behavioral challenges and building connection",
+        "Managing group dynamics and classroom flow",
+        "Trauma-awareness and inclusivity in children’s yoga",
+        "Real teaching practice and feedback",
+      ],
+    },
+    {
+      title: "Is This Course for You? NO!",
+      content: [
+        "You only want to teach adult yoga classes",
+        "You’re not comfortable working with children",
+        "You’re looking for a fast track without learning classroom skills",
+        "You’re not interested in using creativity, stories, or play in yoga",
       ],
     },
     {
       title: "Is This Course for You? YES!",
       content: [
-        "Seeking quick online certification in Yoga Anatomy",
-        "Need only basic foundational knowledge of Yoga Anatomy",
-        "Can’t commit to more than 6 hours per week for study",
-        "No preference for a peer community during Yoga Anatomy practice",
-      ],
-    },
-    {
-      title: "Is This Course for You? NO, if you are:",
-      content: [
-        "Looking for a quick online certification without in-depth study",
-        "Only interested in basic or surface-level knowledge of anatomy",
-        "Unable to dedicate at least 6 hours per week to learning",
-        "Not interested in engaging with a supportive learning community",
+        "You want to teach yoga to kids in schools, studios, or at home",
+        "You enjoy working with children and using creativity in learning",
+        "You want to help children build confidence, focus, and calm",
+        "You’re looking for a professional, structured, and certified course",
       ],
     },
   ];
@@ -77,4 +81,5 @@ const LearnSection = () => {
     </section>
   );
 };
+
 export default LearnSection;

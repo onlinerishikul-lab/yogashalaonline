@@ -3,44 +3,48 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights for Yoga Anatomy course:",
+      title: "Course Highlights",
       content: [
-        "Comprehensive study of muscles, joints, and biomechanics",
-        "Focus on safe alignment and injury prevention",
-        "Integration of breath and body awareness techniques",
-        "Detailed anatomy of spine, hips, shoulders, and core",
-        "Practical lessons suitable for all skill levels",
-        "Interactive learning with visuals and guided sessions",
-        "Personalized tips for teaching and practicing yoga safely",
+        "Certified Pregnancy Yoga Teacher Training",
+        "Learn trimester-specific asanas & breathwork",
+        "Understand physical & emotional changes in pregnancy",
+        "Includes restorative & relaxation-based practices",
+        "Self-paced content + live Q&A sessions",
+        "Teaching scripts, safety guidelines & class plans",
+        "Guided meditations for moms-to-be",
+        "Certificate of Completion provided",
       ],
     },
     {
-      title: "What’s Inside The Course – Practical Aspects",
+      title: "What’s Inside the Course – Practical Aspects",
       content: [
-        "Hands-on guidance to safely perform and adjust yoga poses",
-        "Step-by-step breakdown of muscle and joint functions during asanas",
-        "Techniques to modify postures for different body types and limitations",
-        "Exercises to improve breath control and body awareness",
-        "Real-life applications to prevent injuries and enhance alignment",
-        "Interactive sessions with feedback to deepen your understanding",
+        "Anatomy & physiology during pregnancy",
+        "Trimester-wise yoga sequences",
+        "Safe asanas, pranayama & meditation",
+        "Yoga for labor preparation & birth",
+        "Addressing pregnancy discomforts (back pain, nausea, stress)",
+        "Emotional support through yoga & mindfulness",
+        "Postnatal yoga basics for recovery",
+        "Modifications for high-risk pregnancies",
+        "Teaching real-life pregnant students (case studies)",
+      ],
+    },
+    {
+      title: "Is This Course for You? NO!",
+      content: [
+        "You’re looking for general yoga teacher training",
+        "You don’t want to teach special populations",
+        "You have no interest in working with pregnant women",
+        "You’re unable to commit time for practical learning",
       ],
     },
     {
       title: "Is This Course for You? YES!",
       content: [
-        "Seeking quick online certification in Yoga Anatomy",
-        "Need only basic foundational knowledge of Yoga Anatomy",
-        "Can’t commit to more than 6 hours per week for study",
-        "No preference for a peer community during Yoga Anatomy practice",
-      ],
-    },
-    {
-      title: "Is This Course for You? NO, if you are:",
-      content: [
-        "Looking for a quick online certification without in-depth study",
-        "Only interested in basic or surface-level knowledge of anatomy",
-        "Unable to dedicate at least 6 hours per week to learning",
-        "Not interested in engaging with a supportive learning community",
+        "You want to help expecting mothers feel strong and supported",
+        "You’re a yoga teacher ready to specialize in prenatal yoga",
+        "You want in-depth knowledge of pregnancy-safe practices",
+        "You’re passionate about women’s health and emotional well-being",
       ],
     },
   ];
@@ -77,4 +81,5 @@ const LearnSection = () => {
     </section>
   );
 };
+
 export default LearnSection;

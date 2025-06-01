@@ -4,36 +4,37 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Advanced Therapeutic Postures",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Master postures designed to aid recovery and healing. Modify safely for diverse client needs.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Personalized Program Design",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Create yoga plans tailored to individual health conditions. Support long-term wellness and rehabilitation.",
   },
   {
-    title: "Injury Prevention",
+    title: "Breathwork for Healing",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Use pranayama techniques to improve respiratory and mental health. Enhance relaxation and energy flow.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Understanding Chronic Conditions",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Learn how yoga supports common chronic illnesses. Apply safe and effective modifications.",
   },
   {
-    title: "Key Body Areas",
+    title: "Anatomy & Pathology Insights",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Deepen knowledge of body systems relevant to therapy. Improve assessment and client care.",
   },
   {
-    title: "For All Levels",
+    title: "Client Assessment Skills",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Evaluate physical and mental needs accurately. Develop safe practice guidelines.",
   },
 ];
+
 
 const YogaCoursePage = () => {
   return (
@@ -41,10 +42,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          100-Hour Advanced Yoga Therapy Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+          Deepen your understanding of yoga therapy with advanced techniques to support healing and wellness. Learn to tailor yoga practices for specific health conditions and enhance your ability to guide clients safely and effectively.
         </p>
       </section>
 

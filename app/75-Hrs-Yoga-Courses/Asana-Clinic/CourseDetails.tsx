@@ -1,63 +1,81 @@
 "use client";
 
 import {
-  HeartPulse,
-  ShieldCheck,
   StretchHorizontal,
-  Brain,
-  Star,
-  Move3D,
-  Shield,
-  BookOpenCheck,
-  Ruler,
+  UserCheck,
+  ShieldCheck,
+  ScanFace,
+  Mic,
+  Dumbbell,
+  Sparkles,
+  Layers3,
+  BadgeCheck,
 } from "lucide-react";
 
 const CourseDetails = () => {
   const features = [
     {
       id: 1,
-      icon: <HeartPulse />,
-      title: "Improve posture and alignment in yoga practice",
+      icon: <StretchHorizontal />,
+      title: "Deepen Asana Knowledge",
+      description:
+        "Explore each posture beyond the surface. Understand the purpose, alignment, and benefit of every pose.",
     },
     {
       id: 2,
-      icon: <ShieldCheck />,
-      title: "Prevent injuries through anatomical awareness",
+      icon: <UserCheck />,
+      title: "Elevate Teaching Confidence",
+      description:
+        "Feel ready to offer corrections, modifications, and adjustments. Handle diverse student needs with skill.",
     },
     {
       id: 3,
-      icon: <StretchHorizontal />,
-      title: "Learn to modify poses for different body types",
+      icon: <ShieldCheck />,
+      title: "Enhance Student Safety",
+      description:
+        "Prevent injuries through proper alignment and awareness. Keep your classes safe, accessible, and professional.",
     },
     {
       id: 4,
-      icon: <Brain />,
-      title: "Enhance mind-body-breath connection",
+      icon: <ScanFace />,
+      title: "Improve Body Awareness",
+      description:
+        "Recognize body imbalances and asymmetries. Use practice to support healthy movement habits.",
     },
     {
       id: 5,
-      icon: <Star />,
-      title: "Build confidence in teaching and self-practice",
+      icon: <Mic />,
+      title: "Master Verbal Cueing",
+      description:
+        "Deliver clear, insightful instructions. Use language that resonates and educates.",
     },
     {
       id: 6,
-      icon: <Move3D />,
-      title: "Understand key muscle and joint functions",
+      icon: <Dumbbell />,
+      title: "Learn Functional Anatomy",
+      description:
+        "Understand how muscles and joints work in yoga. Make anatomy easy, practical, and teachable.",
     },
     {
       id: 7,
-      icon: <Shield />,
-      title: "Support safe and effective movement",
+      icon: <Sparkles />,
+      title: "Build Class Creativity",
+      description:
+        "Design sequences with intelligence and variety. Keep your classes engaging, safe, and impactful.",
     },
     {
       id: 8,
-      icon: <BookOpenCheck />,
-      title: "Apply anatomy knowledge to real-life yoga sessions",
+      icon: <Layers3 />,
+      title: "Support All Levels",
+      description:
+        "Offer pose variations for beginners to advanced students. Be ready for mixed-level classes with confidence.",
     },
     {
       id: 9,
-      icon: <Ruler />,
-      title: "Master alignment techniques for injury-free sessions",
+      icon: <BadgeCheck />,
+      title: "Get Certified",
+      description:
+        "Add a respected certification to your credentials. Showcase your continued growth as a yoga professional.",
     },
   ];
 
@@ -65,11 +83,10 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Benefits of the Yoga Anatomy Course
+          Benefits of Advanced Yoga Teacher Training
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course is designed to transform your yoga journey with deep
-          anatomical understanding, supporting both personal growth and safe teaching.
+          Take your teaching and personal practice to the next level with a training that focuses on in-depth knowledge, practical application, and professional growth.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (
@@ -85,7 +102,7 @@ const CourseDetails = () => {
                   {feature.id}. {feature.title}
                 </h3>
                 <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                  {feature.description}
                 </p>
               </div>
             </div>

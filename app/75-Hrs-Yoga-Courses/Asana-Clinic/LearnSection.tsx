@@ -3,44 +3,48 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights for Yoga Anatomy course:",
+      title: "Course Highlights",
       content: [
-        "Comprehensive study of muscles, joints, and biomechanics",
-        "Focus on safe alignment and injury prevention",
-        "Integration of breath and body awareness techniques",
-        "Detailed anatomy of spine, hips, shoulders, and core",
-        "Practical lessons suitable for all skill levels",
-        "Interactive learning with visuals and guided sessions",
-        "Personalized tips for teaching and practicing yoga safely",
+        "Professional-Level Asana Refinement Certification",
+        "Detailed breakdown of 50+ foundational & advanced poses",
+        "Learn alignment, modifications, and common mistakes",
+        "Adjustments and assists with safety and sensitivity",
+        "HD video demonstrations by expert instructors",
+        "Worksheets, pose manuals, and teaching templates",
+        "Anatomy-focused insights to prevent injury",
+        "Self-paced with lifetime access",
+        "Certificate of Completion included",
       ],
     },
     {
-      title: "What’s Inside The Course – Practical Aspects",
+      title: "What’s Inside the Course – Practical Aspects",
       content: [
-        "Hands-on guidance to safely perform and adjust yoga poses",
-        "Step-by-step breakdown of muscle and joint functions during asanas",
-        "Techniques to modify postures for different body types and limitations",
-        "Exercises to improve breath control and body awareness",
-        "Real-life applications to prevent injuries and enhance alignment",
-        "Interactive sessions with feedback to deepen your understanding",
+        "In-depth analysis of standing, seated, twisting, and balancing poses",
+        "Step-by-step instruction for safe entry, hold, and exit in asanas",
+        "Corrective alignment cues for diverse body types",
+        "Hands-on adjustment techniques and safety practices",
+        "Common misalignments and how to address them",
+        "Anatomy-informed sequencing and cueing",
+        "Asana-based injury prevention techniques",
+        "Teaching labs and peer reviews",
+        "Class planning with layered pose options",
+      ],
+    },
+    {
+      title: "Is This Course for You? NO!",
+      content: [
+        "You’re a complete beginner to yoga",
+        "You’re only interested in general yoga practice, not teaching",
+        "You don’t want to dive into technical or anatomical detail",
+        "You prefer follow-along classes over structured learning",
       ],
     },
     {
       title: "Is This Course for You? YES!",
       content: [
-        "Seeking quick online certification in Yoga Anatomy",
-        "Need only basic foundational knowledge of Yoga Anatomy",
-        "Can’t commit to more than 6 hours per week for study",
-        "No preference for a peer community during Yoga Anatomy practice",
-      ],
-    },
-    {
-      title: "Is This Course for You? NO, if you are:",
-      content: [
-        "Looking for a quick online certification without in-depth study",
-        "Only interested in basic or surface-level knowledge of anatomy",
-        "Unable to dedicate at least 6 hours per week to learning",
-        "Not interested in engaging with a supportive learning community",
+        "You’re a yoga teacher wanting to refine your teaching and practice",
+        "You want to offer safer, more effective asana guidance",
+        "You aim to build confidence with hands-on adjustments",
       ],
     },
   ];
@@ -77,4 +81,5 @@ const LearnSection = () => {
     </section>
   );
 };
+
 export default LearnSection;

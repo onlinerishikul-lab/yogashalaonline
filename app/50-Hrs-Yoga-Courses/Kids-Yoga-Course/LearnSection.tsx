@@ -39,7 +39,7 @@ const LearnSection = () => {
       content: [
         "You’re looking to teach only adult yoga",
         "You’re not comfortable engaging with children",
-        "You want a purely academic, text-based yoga course,
+        "You want a purely academic, text-based yoga course",
         "You’re not open to using play and imagination in yoga sessions",
       ],
     },

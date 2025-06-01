@@ -4,36 +4,37 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Multi-Style Asanas",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Learn foundational poses from various yoga traditions. Build a flexible and diverse practice.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Breath Awareness",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Practice pranayama techniques for energy and calm. Enhance mind-body connection.",
   },
   {
-    title: "Injury Prevention",
+    title: "Meditation & Mindfulness",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Explore techniques to improve focus and relaxation. Support mental clarity.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Class Sequencing",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Design balanced sessions across different styles. Keep classes engaging and safe.",
   },
   {
-    title: "Key Body Areas",
+    title: "Teaching Techniques",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Communicate instructions clearly and effectively. Manage diverse student needs.",
   },
   {
-    title: "For All Levels",
+    title: "Anatomy & Alignment",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Understand body mechanics for safe practice. Prevent injuries.",
   },
 ];
+
 
 const YogaCoursePage = () => {
   return (
@@ -41,10 +42,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          200-Hour Multi Style Yoga TTC
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+          Experience a diverse and comprehensive yoga training blending multiple yoga styles. Build a solid foundation in asanas, pranayama, meditation, and teaching techniques to confidently lead versatile yoga classes.
         </p>
       </section>
 

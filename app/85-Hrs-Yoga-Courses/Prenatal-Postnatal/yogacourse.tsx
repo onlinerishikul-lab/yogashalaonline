@@ -4,36 +4,37 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Safe Asana Modifications",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Learn how to modify common poses for pregnancy and postpartum needs. Support comfort, alignment, and safety in every stage.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Breathwork & Meditation",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Teach calming techniques for stress, anxiety, and labor preparation. Help students connect deeply to body and baby.",
   },
   {
-    title: "Injury Prevention",
+    title: "Trimester-Based Sequencing",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Design classes suited to the changing needs of each trimester. Support flexibility, strength, and energy levels appropriately.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Postnatal Recovery Techniques",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Guide women safely through postpartum healing and re-strengthening. Focus on pelvic floor, abdominal integrity, and rest.",
   },
   {
-    title: "Key Body Areas",
+    title: "Anatomy of Pregnancy",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Understand how the body changes through each phase. Support alignment and address common physical challenges.",
   },
   {
-    title: "For All Levels",
+    title: "Emotional Support Tools",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Develop presence and empathy as a yoga teacher. Create space for trust, connection, and compassion.",
   },
 ];
+
 
 const YogaCoursePage = () => {
   return (
@@ -41,10 +42,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          85-Hour Prenatal & Postnatal Yoga Course for Teachers
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+         Support mothers through every stage of pregnancy and postpartum with safe, nurturing yoga. This course equips teachers with the knowledge, confidence, and tools to guide women in building strength, relieving discomfort, and connecting deeply with their bodies and babies.
         </p>
       </section>
 

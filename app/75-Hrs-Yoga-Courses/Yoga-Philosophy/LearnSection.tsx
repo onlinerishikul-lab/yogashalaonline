@@ -3,44 +3,48 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights for Yoga Anatomy course:",
+      title: "Course Highlights",
       content: [
-        "Comprehensive study of muscles, joints, and biomechanics",
-        "Focus on safe alignment and injury prevention",
-        "Integration of breath and body awareness techniques",
-        "Detailed anatomy of spine, hips, shoulders, and core",
-        "Practical lessons suitable for all skill levels",
-        "Interactive learning with visuals and guided sessions",
-        "Personalized tips for teaching and practicing yoga safely",
+        "Online Certification in Core Yoga Philosophy",
+        "Covers Yoga Sutras, Bhagavad Gita, & Hatha Yoga Pradipika",
+        "Learn Yamas, Niyamas, Karma, Dharma & more",
+        "Audio/video lectures from experienced Indian teachers",
+        "Self-paced modules with downloadable study materials",
+        "Apply ancient wisdom to modern life and teaching",
+        "Reflection prompts, quizzes & real-life application tasks",
+        "Certificate of Completion included",
       ],
     },
     {
-      title: "What’s Inside The Course – Practical Aspects",
+      title: "What’s Inside the Course – Practical Aspects",
       content: [
-        "Hands-on guidance to safely perform and adjust yoga poses",
-        "Step-by-step breakdown of muscle and joint functions during asanas",
-        "Techniques to modify postures for different body types and limitations",
-        "Exercises to improve breath control and body awareness",
-        "Real-life applications to prevent injuries and enhance alignment",
-        "Interactive sessions with feedback to deepen your understanding",
+        "Study of key yogic texts: Yoga Sutras, Gita, Upanishads",
+        "In-depth understanding of Yamas & Niyamas",
+        "Exploration of the Eight Limbs of Yoga",
+        "Concepts of Karma, Rebirth, and Liberation (Moksha)",
+        "Role of the Gunas (qualities of nature)",
+        "Dharma & life purpose according to yoga",
+        "Philosophical roots of meditation and asana practice",
+        "Integration of philosophy into daily life and teaching",
+        "Guided reflections and personal journaling exercises",
+      ],
+    },
+    {
+      title: "Is This Course for You? NO!",
+      content: [
+        "You’re only interested in physical yoga (asanas)",
+        "You’re looking for a quick-fix or shortcut",
+        "You don’t enjoy reflective or theoretical learning",
+        "You’re not interested in ancient scriptures or texts",
       ],
     },
     {
       title: "Is This Course for You? YES!",
       content: [
-        "Seeking quick online certification in Yoga Anatomy",
-        "Need only basic foundational knowledge of Yoga Anatomy",
-        "Can’t commit to more than 6 hours per week for study",
-        "No preference for a peer community during Yoga Anatomy practice",
-      ],
-    },
-    {
-      title: "Is This Course for You? NO, if you are:",
-      content: [
-        "Looking for a quick online certification without in-depth study",
-        "Only interested in basic or surface-level knowledge of anatomy",
-        "Unable to dedicate at least 6 hours per week to learning",
-        "Not interested in engaging with a supportive learning community",
+        "You want to understand the deeper meaning behind yoga",
+        "You're a yoga teacher or student seeking spiritual growth",
+        "You enjoy reflective study and exploring ancient wisdom",
+        "You want to teach or live yoga more authentically",
       ],
     },
   ];
@@ -77,4 +81,5 @@ const LearnSection = () => {
     </section>
   );
 };
+
 export default LearnSection;

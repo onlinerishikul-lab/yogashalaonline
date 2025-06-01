@@ -4,36 +4,37 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Age-Based Teaching Tools",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Design fun and effective classes for toddlers, kids, and teens. Understand what works best at each developmental stage.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Creative Class Planning",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Use storytelling, songs, art, and games to make yoga engaging. Build themes that are both meaningful and playful.",
   },
   {
-    title: "Injury Prevention",
+    title: "Mindfulness for Kids",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Teach children how to calm their minds and stay focused. Use breathwork, guided visuals, and quiet time.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Yoga Safety for Children",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Learn anatomy basics and safety cues for growing bodies. Avoid common risks and ensure safe, supportive movement.",
   },
   {
-    title: "Key Body Areas",
+    title: "Classroom Management",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Create a balanced, respectful, and joyful environment. Build trust, manage energy levels, and keep flow.",
   },
   {
-    title: "For All Levels",
+    title: "Inclusive & Trauma-Aware Teaching",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Respect emotional needs and diverse backgrounds. Build a space where every child feels seen and heard.",
   },
 ];
+
 
 const YogaCoursePage = () => {
   return (
@@ -41,10 +42,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          95-Hour Kids Yoga Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+         Learn how to teach yoga to children with creativity, safety, and fun. This 95-hour training equips you with tools to support physical, emotional, and mental well-being in kids through yoga, storytelling, games, and mindful play.
         </p>
       </section>
 

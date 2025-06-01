@@ -1,63 +1,81 @@
 "use client";
 
 import {
-  HeartPulse,
+  Baby,
+  GraduationCap,
   ShieldCheck,
-  StretchHorizontal,
-  Brain,
-  Star,
-  Move3D,
-  Shield,
-  BookOpenCheck,
-  Ruler,
+  Heart,
+  Smile,
+  HeartPulse,
+  ThumbsUp,
+  Sparkle,
+  Laptop2,
 } from "lucide-react";
 
 const CourseDetails = () => {
   const features = [
     {
       id: 1,
-      icon: <HeartPulse />,
-      title: "Improve posture and alignment in yoga practice",
+      icon: <Baby />,
+      title: "Empower Moms-to-Be",
+      description:
+        "Support women in one of life’s most powerful transitions. Help them feel strong, safe, and nurtured.",
     },
     {
       id: 2,
-      icon: <ShieldCheck />,
-      title: "Prevent injuries through anatomical awareness",
+      icon: <GraduationCap />,
+      title: "Specialized Expertise",
+      description:
+        "Stand out with skills tailored for prenatal care. Become a trusted guide in the wellness space.",
     },
     {
       id: 3,
-      icon: <StretchHorizontal />,
-      title: "Learn to modify poses for different body types",
+      icon: <ShieldCheck />,
+      title: "Safe Yoga Practices",
+      description:
+        "Understand what to include or avoid each trimester. Ensure physical safety and emotional ease.",
     },
     {
       id: 4,
-      icon: <Brain />,
-      title: "Enhance mind-body-breath connection",
+      icon: <Heart />,
+      title: "Support for Labor",
+      description:
+        "Teach tools that help during childbirth. Breathing, visualization, and strength training included.",
     },
     {
       id: 5,
-      icon: <Star />,
-      title: "Build confidence in teaching and self-practice",
+      icon: <Smile />,
+      title: "Mind-Body Bonding",
+      description:
+        "Help mothers connect with their baby through mindful movement. Foster calmness and confidence through every pose.",
     },
     {
       id: 6,
-      icon: <Move3D />,
-      title: "Understand key muscle and joint functions",
+      icon: <HeartPulse />,
+      title: "Reduce Pregnancy Discomforts",
+      description:
+        "Address pain, swelling, stress, and insomnia. Offer natural relief through targeted sequences.",
     },
     {
       id: 7,
-      icon: <Shield />,
-      title: "Support safe and effective movement",
+      icon: <ThumbsUp />,
+      title: "Build Teaching Confidence",
+      description:
+        "Gain clear, professional teaching techniques. Lead classes with clarity and care.",
     },
     {
       id: 8,
-      icon: <BookOpenCheck />,
-      title: "Apply anatomy knowledge to real-life yoga sessions",
+      icon: <Sparkle />,
+      title: "Holistic Wellness Approach",
+      description:
+        "Blend physical, emotional, and spiritual practices. Go beyond fitness into true pregnancy wellness.",
     },
     {
       id: 9,
-      icon: <Ruler />,
-      title: "Master alignment techniques for injury-free sessions",
+      icon: <Laptop2 />,
+      title: "Flexible Online Learning",
+      description:
+        "Study from home, at your pace, while gaining full certification. Balance your life while investing in your future.",
     },
   ];
 
@@ -65,11 +83,10 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Benefits of the Yoga Anatomy Course
+          Benefits of Prenatal Yoga Training
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course is designed to transform your yoga journey with deep
-          anatomical understanding, supporting both personal growth and safe teaching.
+          This course empowers you to support pregnant women through safe, nurturing, and holistic yoga practices that enhance both mental and physical wellness.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (
@@ -85,7 +102,7 @@ const CourseDetails = () => {
                   {feature.id}. {feature.title}
                 </h3>
                 <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                  {feature.description}
                 </p>
               </div>
             </div>

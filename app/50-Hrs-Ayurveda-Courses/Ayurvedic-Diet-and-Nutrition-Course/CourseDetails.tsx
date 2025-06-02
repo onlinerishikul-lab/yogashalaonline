@@ -2,7 +2,7 @@
 
 import {
   Utensils,
-  Scales,
+  Scale,
   BatteryFull,
   Eye,
   Bed,
@@ -22,7 +22,7 @@ const CourseDetails = () => {
     },
     {
       id: 2,
-      icon: <Scales />,
+      icon: <Scale />,
       title: "Balanced Weight",
       description: "Reach and maintain your natural body weight without dieting.",
     },

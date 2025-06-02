@@ -74,7 +74,7 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          9 Key Benefits of This Course
+          Key Benefits of This Course
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
           This transformational training is designed to elevate your energy, focus, and inner power—supporting your growth at every level: physical, mental, emotional, and spiritual.

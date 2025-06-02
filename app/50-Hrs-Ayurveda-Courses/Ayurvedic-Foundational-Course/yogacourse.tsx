@@ -4,36 +4,37 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Dosha Understanding",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Identify your unique body-mind constitution and learn to keep it balanced through lifestyle and awareness.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Agni & Digestion",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Understand your digestive fire (Agni) and how it influences your health, immunity, and energy levels.",
   },
   {
-    title: "Injury Prevention",
+    title: "Daily Routine (Dinacharya)",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Design a daily routine that supports cleansing, vitality, and mental clarity in alignment with Ayurvedic wisdom.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Seasonal Living (Ritucharya)",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Adjust your food, habits, and self-care practices with the changing seasons for sustained well-being.",
   },
   {
-    title: "Key Body Areas",
+    title: "Ayurvedic Nutrition",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Learn how food choices affect your doshas, digestion, and energy, and how to eat in harmony with your constitution.",
   },
   {
-    title: "For All Levels",
+    title: "Mind-Body Connection",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Discover how emotions and mental patterns influence your physical health, and how to restore balance holistically.",
   },
 ];
+
 
 const YogaCoursePage = () => {
   return (
@@ -41,10 +42,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          50-Hour Ayurvedic Foundational Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+          Start your journey into the world of Ayurveda with a simple and practical foundational course. Learn how to balance your body, mind, and lifestyle with timeless Ayurvedic principles and natural healing techniques.
         </p>
       </section>
 

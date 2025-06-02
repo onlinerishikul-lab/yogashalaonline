@@ -35,7 +35,6 @@ const skills = [
   },
 ];
 
-
 const YogaCoursePage = () => {
   return (
     <div className="bg-gray-50 text-black px-4 py-10 md:px-10 space-y-12">
@@ -45,7 +44,8 @@ const YogaCoursePage = () => {
           15-Hour Ayurvedic Relationship Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-         Discover how Ayurveda helps build deeper, more conscious relationships. This course blends dosha-based insights, emotional balance, and daily rituals to nurture love, understanding, and connection—both within and with others.
+          Discover how Ayurveda helps build deeper, more conscious relationships. This course blends dosha-based insights, emotional balance, and daily rituals to nurture love, understanding, and connection—both within and with others.
+        </p>
       </section>
 
       {/* Key Skills */}

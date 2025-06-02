@@ -4,34 +4,34 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Herb Identification",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Learn how to recognize, categorize, and choose Ayurvedic herbs for various needs.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Herbal Preparations",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Make teas, decoctions, oils, and pastes using kitchen-friendly ingredients.",
   },
   {
-    title: "Injury Prevention",
+    title: "Healing with Spices",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Use common spices like turmeric, cumin, and ginger to support digestion, immunity, and detoxification.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Skin & Beauty Recipes",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Create natural masks, oils, and tonics for glowing skin and healthy hair.",
   },
   {
-    title: "Key Body Areas",
+    title: "Balancing Doshas with Herbs",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Understand which herbs help pacify Vata, Pitta, and Kapha for holistic balance and healing.",
   },
   {
-    title: "For All Levels",
+    title: "Women’s Herbal Wellness",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Learn herbal remedies for menstruation, menopause, fertility, and hormone balance.",
   },
 ];
 
@@ -41,10 +41,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          10-Hour Ayurvedic Herbal Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+         Discover the healing power of Ayurvedic herbs in this practical, beginner-friendly course. Learn to identify, use, and prepare herbs for common health concerns, immunity, digestion, beauty, and daily wellness.
         </p>
       </section>
 

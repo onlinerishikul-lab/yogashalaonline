@@ -4,36 +4,37 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Nurture Baby’s Physical & Mental Growth",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Provide optimal womb care for healthy development using Ayurvedic guidance.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Support Mother’s Strength & Calm",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Reduce stress, fatigue, and imbalances through holistic and nurturing care.",
   },
   {
-    title: "Injury Prevention",
+    title: "Promote Conscious Parenting",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Build a deeper spiritual connection with your child even before birth.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Reduce Pregnancy Discomfort",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Ease nausea, fatigue, and physical tension with safe, natural techniques.",
   },
   {
-    title: "Key Body Areas",
+    title: "Empower Natural Birthing",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Prepare both body and mind for a safe, confident, and empowered birth experience.",
   },
   {
-    title: "For All Levels",
+    title: "Improve Postnatal Recovery",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Restore balance, strength, and vitality after birth through Ayurvedic diet and rituals.",
   },
 ];
+
 
 const YogaCoursePage = () => {
   return (
@@ -41,10 +42,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          15-Hour Ayurveda Garbha Samskara Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+          Garbha Samskara is the ancient Ayurvedic wisdom of conscious conception and prenatal care. This course guides you through holistic practices that nurture the body, mind, and spirit of both mother and baby—before, during, and after pregnancy.
         </p>
       </section>
 

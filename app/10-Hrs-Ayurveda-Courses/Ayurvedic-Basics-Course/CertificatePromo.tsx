@@ -12,11 +12,13 @@ const CertificatePromo = () => {
             Earn Your Ayurvedic Beginner Certificate
           </h2>
           <p className="text-base sm:text-lg mb-8 text-[#f9fafb]">
-            Complete this easy-to-follow course and earn a certificate that reflects your growing wisdom in natural health and self-care through Ayurveda.
-          <Link href="/contact">
-            <a className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-md hover:bg-white transition duration-300 text-sm sm:text-base">
-              Join Us
-            </a>
+            Complete this easy-to-follow course and earn a certificate that reflects your growing wisdom in natural health and self-care through Ayurveda.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-md hover:bg-white transition duration-300 text-sm sm:text-base"
+          >
+            Join Us
           </Link>
         </div>
 

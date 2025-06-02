@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/HeroSection";
-import StickyCourseCard from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TestimonialSlider";
-import YogaCoursePage from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/yogacourse";
-import LearnSection from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/LearnSection";
-import CourseDetails from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/CourseDetails";
-import YogaAccreditation from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/YogaAccreditation";
-import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/CertificatePromo";
-import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TestimonialCarousel";
-import Faq from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Faq";
+import HeroSection from "@/app/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/HeroSection";
+import StickyCourseCard from "@/app/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/TestimonialSlider";
+import YogaCoursePage from "@/app/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/yogacourse";
+import LearnSection from "@/app/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/LearnSection";
+import CourseDetails from "@/app/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/CourseDetails";
+import YogaAccreditation from "@/app/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/YogaAccreditation";
+import CertificatePromo from "@/app/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/CertificatePromo";
+import TestimonialCarousel from "@/app/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/TestimonialCarousel";
+import Faq from "@/app/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

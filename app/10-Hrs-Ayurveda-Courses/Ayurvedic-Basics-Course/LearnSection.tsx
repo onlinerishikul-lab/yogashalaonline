@@ -3,44 +3,44 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights for Yoga Anatomy course:",
+      title: "Course Highlights for Ayurveda Certificate Course:",
       content: [
-        "Comprehensive study of muscles, joints, and biomechanics",
-        "Focus on safe alignment and injury prevention",
-        "Integration of breath and body awareness techniques",
-        "Detailed anatomy of spine, hips, shoulders, and core",
-        "Practical lessons suitable for all skill levels",
-        "Interactive learning with visuals and guided sessions",
-        "Personalized tips for teaching and practicing yoga safely",
+        "Introductory Ayurveda Certificate",
+        "Learn basics of doshas (Vata, Pitta, Kapha)",
+        "Understand Ayurvedic daily routine (Dinacharya)",
+        "Basics of Ayurvedic nutrition & digestion",
+        "Simple home remedies for common issues",
+        "Mind-body balance through lifestyle changes",
+        "Certificate of Completion provided",
       ],
     },
     {
-      title: "What’s Inside The Course – Practical Aspects",
+      title: "What’s Inside the Course – Practical Aspects",
       content: [
-        "Hands-on guidance to safely perform and adjust yoga poses",
-        "Step-by-step breakdown of muscle and joint functions during asanas",
-        "Techniques to modify postures for different body types and limitations",
-        "Exercises to improve breath control and body awareness",
-        "Real-life applications to prevent injuries and enhance alignment",
-        "Interactive sessions with feedback to deepen your understanding",
+        "Self-assessment to determine your dosha",
+        "Daily routines to balance your energy and health",
+        "Introduction to Ayurvedic diet and seasonal foods",
+        "Ayurvedic home remedies using herbs and spices",
+        "Natural detox and rejuvenation practices",
+        "Basics of Ayurvedic body care and massage",
+        "Lifestyle recommendations for stress, sleep, and digestion",
+      ],
+    },
+    {
+      title: "Is This Course for You? NO!",
+      content: [
+        "You’re looking for advanced clinical-level Ayurvedic training",
+        "You want to become an Ayurvedic practitioner or therapist",
+        "You’re not interested in natural healing or lifestyle changes",
       ],
     },
     {
       title: "Is This Course for You? YES!",
       content: [
-        "Seeking quick online certification in Yoga Anatomy",
-        "Need only basic foundational knowledge of Yoga Anatomy",
-        "Can’t commit to more than 6 hours per week for study",
-        "No preference for a peer community during Yoga Anatomy practice",
-      ],
-    },
-    {
-      title: "Is This Course for You? NO, if you are:",
-      content: [
-        "Looking for a quick online certification without in-depth study",
-        "Only interested in basic or surface-level knowledge of anatomy",
-        "Unable to dedicate at least 6 hours per week to learning",
-        "Not interested in engaging with a supportive learning community",
+        "You’re curious about Ayurveda and want to learn from scratch",
+        "You want to improve your daily habits and health naturally",
+        "You’re looking for easy, practical wellness tips rooted in ancient science",
+        "You want to integrate Ayurvedic wisdom into your yoga or wellness journey",
       ],
     },
   ];
@@ -77,4 +77,5 @@ const LearnSection = () => {
     </section>
   );
 };
+
 export default LearnSection;

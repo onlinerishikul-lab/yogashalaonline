@@ -1,63 +1,81 @@
 "use client";
 
 import {
-  HeartPulse,
   ShieldCheck,
-  StretchHorizontal,
+  CloudSun,
+  Flame,
+  Zap,
+  Leaf,
   Brain,
-  Star,
-  Move3D,
-  Shield,
-  BookOpenCheck,
-  Ruler,
+  Bed,
+  CalendarCheck,
+  LifeBuoy,
 } from "lucide-react";
 
 const CourseDetails = () => {
   const features = [
     {
       id: 1,
-      icon: <HeartPulse />,
-      title: "Improve posture and alignment in yoga practice",
+      icon: <ShieldCheck />,
+      title: "Stronger Immunity Naturally",
+      description:
+        "Build lasting immune strength through natural Ayurvedic wisdom.",
     },
     {
       id: 2,
-      icon: <ShieldCheck />,
-      title: "Prevent injuries through anatomical awareness",
+      icon: <CloudSun />,
+      title: "Fewer Seasonal Illnesses",
+      description:
+        "Prevent colds, flu, and allergies with seasonal care tips.",
     },
     {
       id: 3,
-      icon: <StretchHorizontal />,
-      title: "Learn to modify poses for different body types",
+      icon: <Flame />,
+      title: "Healthier Digestion = Stronger Immunity",
+      description:
+        "Balance Agni (digestive fire) to support overall vitality.",
     },
     {
       id: 4,
-      icon: <Brain />,
-      title: "Enhance mind-body-breath connection",
+      icon: <Zap />,
+      title: "More Energy & Clarity",
+      description:
+        "Feel energized and mentally clear by removing toxins and fatigue.",
     },
     {
       id: 5,
-      icon: <Star />,
-      title: "Build confidence in teaching and self-practice",
+      icon: <Leaf />,
+      title: "Safe Herbal Support",
+      description:
+        "Use proven herbs to support immunity for all ages.",
     },
     {
       id: 6,
-      icon: <Move3D />,
-      title: "Understand key muscle and joint functions",
+      icon: <Brain />,
+      title: "Stress Reduction",
+      description:
+        "Calm the nervous system, which helps protect the immune system.",
     },
     {
       id: 7,
-      icon: <Shield />,
-      title: "Support safe and effective movement",
+      icon: <Bed />,
+      title: "Better Sleep & Recovery",
+      description:
+        "Support restorative sleep, essential for immune renewal.",
     },
     {
       id: 8,
-      icon: <BookOpenCheck />,
-      title: "Apply anatomy knowledge to real-life yoga sessions",
+      icon: <CalendarCheck />,
+      title: "Daily Holistic Habits",
+      description:
+        "Incorporate wellness routines that easily fit into your life.",
     },
     {
       id: 9,
-      icon: <Ruler />,
-      title: "Master alignment techniques for injury-free sessions",
+      icon: <LifeBuoy />,
+      title: "Lifelong Health Awareness",
+      description:
+        "Gain tools you can use for yourself and others for years to come.",
     },
   ];
 
@@ -65,11 +83,10 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Benefits of the Yoga Anatomy Course
+          Benefits of the Ayurveda Immunity Course
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course is designed to transform your yoga journey with deep
-          anatomical understanding, supporting both personal growth and safe teaching.
+          Discover how to naturally boost your immune system, prevent illness, and develop lifelong wellness habits with ancient Ayurvedic principles.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (
@@ -85,7 +102,7 @@ const CourseDetails = () => {
                   {feature.id}. {feature.title}
                 </h3>
                 <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                  {feature.description}
                 </p>
               </div>
             </div>

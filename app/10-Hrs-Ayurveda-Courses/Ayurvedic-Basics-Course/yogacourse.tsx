@@ -33,7 +33,38 @@ const skills = [
     description:
       "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
   },
+  {
+    title: "Dosha Understanding",
+    description:
+      "Learn your mind-body type and how to maintain balance. Recognize symptoms of imbalance and restore harmony.",
+  },
+  {
+    title: "Daily Routine (Dinacharya)",
+    description:
+      "Practice self-care habits for better health and energy. Align your daily activities with nature’s rhythm.",
+  },
+  {
+    title: "Basic Diet & Digestion",
+    description:
+      "Understand Ayurvedic food principles and eating habits. Support strong digestion and overall immunity.",
+  },
+  {
+    title: "Herbal Home Remedies",
+    description:
+      "Use common kitchen herbs for natural healing. Address minor health issues like colds, headaches, or stress.",
+  },
+  {
+    title: "Mind-Body Connection",
+    description:
+      "Explore the deep connection between mental and physical health. Learn stress-reducing techniques rooted in Ayurveda.",
+  },
+  {
+    title: "Seasonal Living (Ritucharya)",
+    description:
+      "Adapt your lifestyle and diet according to seasonal changes. Maintain balance and vitality throughout the year.",
+  },
 ];
+
 
 const YogaCoursePage = () => {
   return (
@@ -41,10 +72,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          10-Hour Ayurvedic Basics Course for Beginners
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+          Begin your journey into the ancient healing science of Ayurveda. This beginner-friendly course introduces core principles, daily wellness routines, body types (doshas), and natural remedies for a balanced, healthy life.
         </p>
       </section>
 

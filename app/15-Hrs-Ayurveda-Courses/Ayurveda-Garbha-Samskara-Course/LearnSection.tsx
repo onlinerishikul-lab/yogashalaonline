@@ -3,44 +3,46 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights for Yoga Anatomy course:",
+      title: "Course Highlights for Ayurvedic Certification in Garbha Samskara:",
       content: [
-        "Comprehensive study of muscles, joints, and biomechanics",
-        "Focus on safe alignment and injury prevention",
-        "Integration of breath and body awareness techniques",
-        "Detailed anatomy of spine, hips, shoulders, and core",
-        "Practical lessons suitable for all skill levels",
-        "Interactive learning with visuals and guided sessions",
-        "Personalized tips for teaching and practicing yoga safely",
+        "Ayurvedic Certification in Garbha Samskara",
+        "Ancient Vedic techniques for conscious pregnancy",
+        "Understand dosha balance in pre-conception and pregnancy",
+        "Ayurvedic diet, herbs & routines for mother and fetus",
+        "Prenatal yoga, pranayama, and meditative practices",
+        "Mantras, music & rituals for fetal development",
+        "Daily care routines from conception to postnatal phase",
+        "Certificate of Completion provided",
       ],
     },
     {
-      title: "What’s Inside The Course – Practical Aspects",
+      title: "What’s Inside the Course – Practical Aspects",
       content: [
-        "Hands-on guidance to safely perform and adjust yoga poses",
-        "Step-by-step breakdown of muscle and joint functions during asanas",
-        "Techniques to modify postures for different body types and limitations",
-        "Exercises to improve breath control and body awareness",
-        "Real-life applications to prevent injuries and enhance alignment",
-        "Interactive sessions with feedback to deepen your understanding",
+        "Guidelines for ideal conception (ritucharya, preparation for parents)",
+        "Pregnancy care for each trimester through Ayurvedic lens",
+        "Garbhini Paricharya (monthly guidelines for pregnant women)",
+        "Ayurvedic nutrition for fetal growth & maternal vitality",
+        "Safe herbs, oils, and self-care rituals during pregnancy",
+        "Mantras and music therapy for fetal mind-body harmony",
+        "Gentle prenatal yoga, breathwork & visualization",
+        "Postnatal recovery and lactation support",
+      ],
+    },
+    {
+      title: "Is This Course for You? NO!",
+      content: [
+        "You're not interested in holistic or spiritual approaches to pregnancy",
+        "You seek only clinical or modern medical prenatal care",
+        "You can't commit time for self-practice and lifestyle integration",
       ],
     },
     {
       title: "Is This Course for You? YES!",
       content: [
-        "Seeking quick online certification in Yoga Anatomy",
-        "Need only basic foundational knowledge of Yoga Anatomy",
-        "Can’t commit to more than 6 hours per week for study",
-        "No preference for a peer community during Yoga Anatomy practice",
-      ],
-    },
-    {
-      title: "Is This Course for You? NO, if you are:",
-      content: [
-        "Looking for a quick online certification without in-depth study",
-        "Only interested in basic or surface-level knowledge of anatomy",
-        "Unable to dedicate at least 6 hours per week to learning",
-        "Not interested in engaging with a supportive learning community",
+        "You’re pregnant or planning for conscious conception",
+        "You’re a yoga teacher, doula, or wellness practitioner",
+        "You want to support mothers using Ayurvedic and yogic traditions",
+        "You believe in nurturing emotional, spiritual, and physical wellbeing in pregnancy",
       ],
     },
   ];
@@ -77,4 +79,5 @@ const LearnSection = () => {
     </section>
   );
 };
+
 export default LearnSection;

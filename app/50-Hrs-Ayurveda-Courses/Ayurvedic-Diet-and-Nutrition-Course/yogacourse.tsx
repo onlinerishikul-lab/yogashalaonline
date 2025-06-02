@@ -4,36 +4,37 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Dosha-Specific Diets",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Learn to eat in harmony with your unique constitution (Vata, Pitta, or Kapha) for long-term balance and wellness.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Mastering Agni (Digestive Fire)",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Support digestion, vitality, and immunity with meals that strengthen your metabolic fire (Agni).",
   },
   {
-    title: "Injury Prevention",
+    title: "Food Combining Rules",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Understand how improper food combinations can create toxins (ama) and how to make better choices for optimal digestion.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Seasonal & Cyclical Eating",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Adapt your diet through the seasons and life cycles to stay energized, nourished, and dosha-balanced.",
   },
   {
-    title: "Key Body Areas",
+    title: "6 Tastes of Ayurveda",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Explore the six rasas (tastes) and how they influence digestion, emotions, and dosha balance in every meal.",
   },
   {
-    title: "For All Levels",
+    title: "Daily Food Rituals",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Build mindful eating practices that enhance digestion, satisfaction, and your relationship with food.",
   },
 ];
+
 
 const YogaCoursePage = () => {
   return (
@@ -41,10 +42,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          50-Hour YAyurvedic Diet and Nutrition Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+          Explore the ancient wisdom of Ayurvedic nutrition to create a balanced, healing relationship with food. Learn how to eat for your unique constitution and support digestion, immunity, and overall well-being naturally.
         </p>
       </section>
 

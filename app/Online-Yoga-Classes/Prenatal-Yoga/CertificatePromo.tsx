@@ -9,11 +9,10 @@ const CertificatePromo = () => {
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-5 leading-tight">
-            Nurture Yourself with <br /> Prenatal Yoga
+            Earn Your Prenatal Yoga Certificate
           </h2>
           <p className="text-lg mb-8 text-[#f9fafb]">
-            Embrace safe and gentle practices designed to support your pregnancy journey. 
-            Our Prenatal Yoga course helps you stay strong, flexible, and calm.
+           Start your journey to support expectant mothers through yoga. Complete this Prenatal Yoga Course and receive your certificate as a mark of care, competence, and commitment.
           </p>
           <Link href="/prenatal-yoga" passHref legacyBehavior>
             <a className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-8 py-3 rounded-full shadow-md hover:bg-white transition duration-300">

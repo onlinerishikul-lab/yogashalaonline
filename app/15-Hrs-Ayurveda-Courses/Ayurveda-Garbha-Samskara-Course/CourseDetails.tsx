@@ -1,63 +1,81 @@
 "use client";
 
 import {
-  HeartPulse,
+  Baby,
+  HeartHands,
+  Sparkles,
+  Flower2,
   ShieldCheck,
-  StretchHorizontal,
+  RefreshCcw,
+  GraduationCap,
   Brain,
-  Star,
-  Move3D,
-  Shield,
-  BookOpenCheck,
-  Ruler,
+  Sun,
 } from "lucide-react";
 
 const CourseDetails = () => {
   const features = [
     {
       id: 1,
-      icon: <HeartPulse />,
-      title: "Improve posture and alignment in yoga practice",
+      icon: <Baby />,
+      title: "Nurture Baby’s Physical & Mental Growth",
+      description:
+        "Provide optimal womb care for healthy development using Ayurvedic guidance.",
     },
     {
       id: 2,
-      icon: <ShieldCheck />,
-      title: "Prevent injuries through anatomical awareness",
+      icon: <HeartHands />,
+      title: "Support Mother’s Strength & Calm",
+      description:
+        "Reduce stress, fatigue, and imbalances through holistic care.",
     },
     {
       id: 3,
-      icon: <StretchHorizontal />,
-      title: "Learn to modify poses for different body types",
+      icon: <Sparkles />,
+      title: "Promote Conscious Parenting",
+      description:
+        "Build a deeper spiritual connection with your child before birth.",
     },
     {
       id: 4,
-      icon: <Brain />,
-      title: "Enhance mind-body-breath connection",
+      icon: <Flower2 />,
+      title: "Reduce Pregnancy Discomfort",
+      description:
+        "Ease nausea, fatigue, and tension with natural techniques.",
     },
     {
       id: 5,
-      icon: <Star />,
-      title: "Build confidence in teaching and self-practice",
+      icon: <ShieldCheck />,
+      title: "Empower Natural Birthing",
+      description:
+        "Prepare body and mind for a safe, empowered birthing experience.",
     },
     {
       id: 6,
-      icon: <Move3D />,
-      title: "Understand key muscle and joint functions",
+      icon: <RefreshCcw />,
+      title: "Improve Postnatal Recovery",
+      description:
+        "Restore balance and vitality after birth through diet and rituals.",
     },
     {
       id: 7,
-      icon: <Shield />,
-      title: "Support safe and effective movement",
+      icon: <GraduationCap />,
+      title: "Guide Others Professionally",
+      description:
+        "Use your certification to support clients as a Garbha Samskara practitioner.",
     },
     {
       id: 8,
-      icon: <BookOpenCheck />,
-      title: "Apply anatomy knowledge to real-life yoga sessions",
+      icon: <Brain />,
+      title: "Harmonize Body-Mind Connection",
+      description:
+        "Cultivate sattva (mental clarity) through meditative practices.",
     },
     {
       id: 9,
-      icon: <Ruler />,
-      title: "Master alignment techniques for injury-free sessions",
+      icon: <Sun />,
+      title: "Uplift the Next Generation",
+      description:
+        "Contribute to birthing conscious, balanced children through ancient wisdom.",
     },
   ];
 
@@ -65,11 +83,10 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Benefits of the Yoga Anatomy Course
+          Benefits of the Ayurveda Garbha Samskara Course
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course is designed to transform your yoga journey with deep
-          anatomical understanding, supporting both personal growth and safe teaching.
+          This sacred course helps mothers and professionals foster conscious, healthy pregnancies using timeless Ayurvedic wisdom and holistic care practices.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (
@@ -85,7 +102,7 @@ const CourseDetails = () => {
                   {feature.id}. {feature.title}
                 </h3>
                 <p className="text-sm text-[#4377b2]/80">
-                  Gain real skills and insights with our in-depth, engaging sessions tailored to support safe and effective yoga practice.
+                  {feature.description}
                 </p>
               </div>
             </div>

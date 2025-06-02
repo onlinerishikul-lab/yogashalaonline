@@ -4,36 +4,37 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Dosha Compatibility Understanding",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Explore how Vata, Pitta, and Kapha influence behavior, emotional needs, and communication styles in relationships.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Emotional Balance Through Ayurveda",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Identify signs of emotional imbalance and apply Ayurvedic tools—like diet, herbs, and routines—for inner harmony.",
   },
   {
-    title: "Injury Prevention",
+    title: "Mindful Communication Techniques",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Practice sattvic communication to foster empathy, clarity, and deeper connection in conversations.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Sacred Relationship Rituals",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Incorporate bonding practices like shared gratitude, abhyanga (oil massage), or meditative silence into daily life.",
   },
   {
-    title: "Key Body Areas",
+    title: "Ayurveda & Love Languages",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Understand how each dosha gives and receives love, and discover personalized ways to nurture your partner.",
   },
   {
-    title: "For All Levels",
+    title: "Healing with Breath & Meditation",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Use pranayama and meditation techniques to soothe emotions, enhance self-awareness, and deepen relationships.",
   },
 ];
+
 
 const YogaCoursePage = () => {
   return (
@@ -41,11 +42,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          15-Hour Ayurvedic Relationship Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
-        </p>
+         Discover how Ayurveda helps build deeper, more conscious relationships. This course blends dosha-based insights, emotional balance, and daily rituals to nurture love, understanding, and connection—both within and with others.
       </section>
 
       {/* Key Skills */}

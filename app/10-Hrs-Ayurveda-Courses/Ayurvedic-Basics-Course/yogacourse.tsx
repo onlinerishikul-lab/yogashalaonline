@@ -4,36 +4,6 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
-    description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
-  },
-  {
-    title: "Muscles & Joints",
-    description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
-  },
-  {
-    title: "Injury Prevention",
-    description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
-  },
-  {
-    title: "Breath & Body Awareness",
-    description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
-  },
-  {
-    title: "Key Body Areas",
-    description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
-  },
-  {
-    title: "For All Levels",
-    description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
-  },
-  {
     title: "Dosha Understanding",
     description:
       "Learn your mind-body type and how to maintain balance. Recognize symptoms of imbalance and restore harmony.",
@@ -64,7 +34,6 @@ const skills = [
       "Adapt your lifestyle and diet according to seasonal changes. Maintain balance and vitality throughout the year.",
   },
 ];
-
 
 const YogaCoursePage = () => {
   return (

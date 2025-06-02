@@ -4,36 +4,37 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Ojas & Immune Vitality",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Understand the Ayurvedic concept of Ojas—the vital essence that supports immunity, vitality, and overall well-being.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Dosha-Specific Immunity",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Learn how Vata, Pitta, and Kapha influence immune strength and how to balance each type for optimal health.",
   },
   {
-    title: "Injury Prevention",
+    title: "Herbal Immunity Boosters",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Explore Ayurvedic herbs like Ashwagandha, Guduchi, and Tulsi to naturally support your immune system.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Detox & Nourishment Routines",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Implement daily and seasonal rituals that gently cleanse and nourish the body to maintain strong immunity.",
   },
   {
-    title: "Key Body Areas",
+    title: "Mind-Body Practices",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Use yoga, breathwork, and meditation to build emotional resilience and boost your immune response.",
   },
   {
-    title: "For All Levels",
+    title: "Seasonal Wellness Tips",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Adjust your lifestyle and diet with Ayurvedic seasonal guidance to stay balanced and well all year long.",
   },
 ];
+
 
 const YogaCoursePage = () => {
   return (
@@ -41,10 +42,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          25-Hour Ayurveda Immunity Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+          The Ayurveda Immunity Course offers timeless strategies to build strong, resilient health through dosha balance, herbal wisdom, and mindful living. Learn how to naturally boost your immune system and prevent disease the Ayurvedic way.
         </p>
       </section>
 

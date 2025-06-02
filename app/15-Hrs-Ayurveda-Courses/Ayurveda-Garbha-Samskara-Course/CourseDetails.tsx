@@ -2,7 +2,7 @@
 
 import {
   Baby,
-  HeartHands,
+  Heart,
   Sparkles,
   Flower2,
   ShieldCheck,
@@ -23,7 +23,7 @@ const CourseDetails = () => {
     },
     {
       id: 2,
-      icon: <HeartHands />,
+      icon: <Heart />,
       title: "Support Mother’s Strength & Calm",
       description:
         "Reduce stress, fatigue, and imbalances through holistic care.",

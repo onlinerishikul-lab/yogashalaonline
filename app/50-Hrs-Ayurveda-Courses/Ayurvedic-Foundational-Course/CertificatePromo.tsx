@@ -9,15 +9,16 @@ const CertificatePromo = () => {
         {/* Text Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">
-             Earn Your Ayurvedic Foundation Certificate
+            Earn Your Ayurvedic Foundation Certificate
           </h2>
           <p className="text-base sm:text-lg mb-8 text-[#f9fafb]">
-            Upon completing this course, you'll receive a certificate that celebrates your first step into Ayurveda and empowers your personal wellness journey.
+            Upon completing this course, you&#39;ll receive a certificate that celebrates your first step into Ayurveda and empowers your personal wellness journey.
           </p>
-          <Link href="/contact">
-            <a className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-md hover:bg-white transition duration-300 text-sm sm:text-base">
-              Join Us
-            </a>
+          <Link
+            href="/contact"
+            className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-md hover:bg-white transition duration-300 text-sm sm:text-base"
+          >
+            Join Us
           </Link>
         </div>
 

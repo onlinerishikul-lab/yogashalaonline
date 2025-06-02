@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/HeroSection";
-import StickyCourseCard from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TestimonialSlider";
-import YogaCoursePage from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/yogacourse";
-import LearnSection from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/LearnSection";
-import CourseDetails from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/CourseDetails";
-import YogaAccreditation from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/YogaAccreditation";
-import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/CertificatePromo";
-import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/TestimonialCarousel";
-import Faq from "@/app/25-Hrs-Yoga-Courses/Yoga-Anatomy/Faq";
+import HeroSection from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/HeroSection";
+import StickyCourseCard from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/TestimonialSlider";
+import YogaCoursePage from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/yogacourse";
+import LearnSection from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/LearnSection";
+import CourseDetails from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/CourseDetails";
+import YogaAccreditation from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/YogaAccreditation";
+import CertificatePromo from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/CertificatePromo";
+import TestimonialCarousel from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/TestimonialCarousel";
+import Faq from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

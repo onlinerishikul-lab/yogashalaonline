@@ -8,7 +8,7 @@ import CourseDetails from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutr
 import YogaAccreditation from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/YogaAccreditation";
 import CertificatePromo from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/CertificatePromo";
 import TestimonialCarousel from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/TestimonialCarousel";
-import Faq from "@/app/50-Hrs-Ayurveda-Courses/Yoga-Anatomy/Faq";
+import Faq from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

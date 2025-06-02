@@ -4,34 +4,34 @@ import React from "react";
 
 const skills = [
   {
-    title: "Anatomy & Biomechanics",
+    title: "Creating Daily Routines",
     description:
-      "Understand how the body moves through yoga with practical insights into functional anatomy. Learn the mechanics behind each posture to enhance safety and effectiveness.",
+      "Design a lifestyle that promotes vitality by following consistent, natural rhythms aligned with Ayurvedic principles.",
   },
   {
-    title: "Muscles & Joints",
+    title: "Seasonal Lifestyle Adjustments",
     description:
-      "Explore how muscles, joints, and connective tissues work during different asanas. Gain clarity on body movement patterns and alignment principles.",
+      "Align your habits, routines, and self-care with the changing seasons for sustained health and dosha balance.",
   },
   {
-    title: "Injury Prevention",
+    title: "Self-Care & Cleansing",
     description:
-      "Learn how to modify poses to suit individual needs and avoid common yoga injuries. Build a safe practice for yourself and your students.",
+      "Learn Ayurvedic self-care rituals like oil pulling, abhyanga (self-massage), tongue scraping, and gentle detox techniques.",
   },
   {
-    title: "Breath & Body Awareness",
+    title: "Stress & Sleep Support",
     description:
-      "Discover the link between breath, movement, and mental focus. Improve overall body awareness and deepen your practice.",
+      "Use Ayurvedic herbs, evening rituals, and calming practices to improve sleep quality and manage stress naturally.",
   },
   {
-    title: "Key Body Areas",
+    title: "Mindful Eating Habits",
     description:
-      "Focus on the anatomy of the spine, hips, shoulders, and core—the foundations of most yoga poses. Understand how to protect and strengthen these vital areas.",
+      "Incorporate mindful eating, optimal meal timing, and digestion-friendly habits to support health and energy.",
   },
   {
-    title: "For All Levels",
+    title: "Yoga & Breath for Balance",
     description:
-      "This course is designed for both beginners and experienced yoga teachers. The content is easy to follow, insightful, and immediately applicable.",
+      "Pair dosha-specific yoga and breathwork practices to restore inner harmony and boost overall well-being.",
   },
 ];
 
@@ -41,10 +41,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          25-Hour Yoga Anatomy <br /> for a Safe Journey
+          50-Hour Ayurvedic Lifestyle Course
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-          Deepen your understanding of the human body with our 25-hour Yoga Anatomy course, designed to help you practice and teach yoga safely. Learn about muscles, joints, bones, and movement patterns to prevent injuries and improve alignment. This course is ideal for yoga teachers and dedicated practitioners seeking a strong foundation in anatomy for a more mindful and informed yoga journey.
+          Discover how to live in sync with nature using ancient Ayurvedic wisdom. This course helps you build a daily routine (Dinacharya), seasonal habits (Ritucharya), and balanced practices that support lifelong well-being and harmony of mind, body, and spirit.
         </p>
       </section>
 

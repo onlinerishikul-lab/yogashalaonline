@@ -67,7 +67,7 @@ const StickyCourseCard: React.FC = () => {
     <div className="w-full flex justify-center lg:justify-end">
       <div className="bg-gradient-to-br from-[#4377b2] to-[#365a92] border border-gray-300 shadow-lg rounded-2xl p-6 space-y-4 w-full max-w-md text-white">
         <h2 className="text-lg font-semibold uppercase tracking-wide text-center">
-          25 Hrs Online Yoga Anatomy For Safety
+          25 Hrs Online Ayurveda Immunity Course
         </h2>
 
         <div className="border-t border-b border-white/30 py-3 text-sm space-y-2">

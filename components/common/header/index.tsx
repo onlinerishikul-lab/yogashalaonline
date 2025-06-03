@@ -151,6 +151,7 @@ export const Header = () => {
         { title: "Pranayama", href: "/Online-Yoga-Classes/Pranayama/" },
         { title: "Hatha Yoga", href:"/Online-Yoga-Classes/Hatha-Yoga/" },
         { title: "Vinyasa Flow", href: "/Online-Yoga-Classes/Vinyasa-Flow/" },
+        { title: "Therapeutic Yoga", href: "/Online-Yoga-Classes/Therapeutic-Yoga/" },
       ],
     },
     {

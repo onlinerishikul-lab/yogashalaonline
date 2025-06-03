@@ -1,92 +1,80 @@
 "use client";
 
-import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
-
 const LearnSection = () => {
-  const [active, setActive] = useState<number>(-1);
-
-  const topics = [
+  const sections = [
     {
-      title: "Introduction to Prenatal Yoga",
-      content:
-        "Learn safe and effective yoga practices designed specifically for pregnancy to support physical and emotional wellbeing.",
+      title: "Course Highlights",
+      content: [
+        "Certified Prenatal Yoga Training",
+        "Trimester-specific yoga sequences",
+        "Breathwork & meditation for labor prep",
+        "Gentle asanas for comfort & strength",
+        "Anatomy & safety guidelines for pregnancy",
+        "Emotional & mental well-being tools",
+        "Teaching methodology for prenatal groups",
+        "Certificate of Completion included",
+      ],
     },
     {
-      title: "Gentle Asanas for Pregnancy",
-      content:
-        "Practice gentle postures that help ease common pregnancy discomforts and prepare the body for childbirth.",
+      title: "What’s Inside the Course – Practical Aspects",
+      content: [
+        "Safe postures and movement during each trimester",
+        "Pelvic floor strengthening and core stability",
+        "Breathing techniques for labor preparation",
+        "Meditation and visualization practices",
+        "Common pregnancy symptoms & modifications",
+        "Teaching methodology & prenatal class planning",
+        "Emotional support tools & creating a nurturing space",
+        "Contraindications and safety checks",
+      ],
     },
     {
-      title: "Breath Awareness & Relaxation",
-      content:
-        "Discover breathing techniques and relaxation methods to reduce stress and enhance connection with your baby.",
+      title: "Is This Course for You? NO!",
+      content: [
+        "You're looking for intense or advanced physical practice",
+        "You’re not open to working with subtle, gentle approaches",
+        "You don’t want to adapt your teaching style for pregnancy",
+      ],
     },
     {
-      title: "Pelvic Floor & Core Strengthening",
-      content:
-        "Focus on strengthening key muscles to support a healthy pregnancy and recovery after birth.",
-    },
-    {
-      title: "Creating a Prenatal Yoga Routine",
-      content:
-        "Get guidance on developing a safe, balanced, and effective prenatal yoga practice throughout pregnancy.",
+      title: "Is This Course for You? YES!",
+      content: [
+        "You're a yoga teacher wanting to guide pregnant students safely",
+        "You're pregnant and want to practice yoga safely at home",
+        "You seek a deeper mind-body connection during pregnancy",
+        "You want to support women through a transformative life stage",
+      ],
     },
   ];
 
   return (
-    <section className="bg-[#F5F5F5] p-6 md:p-12">
-      <div className="bg-white rounded-2xl p-6 md:p-12 flex flex-col md:flex-row gap-12">
-        {/* Left Content */}
-        <div className="md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            Prenatal Yoga Course
-          </h2>
-          <p className="text-gray-500 mb-6">
-            Support your pregnancy journey with specialized yoga practices that promote strength, flexibility, and relaxation.
-          </p>
-          <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
-            Contact Us
-          </button>
-        </div>
-
-        {/* Accordion */}
-        <div className="md:w-1/2">
-          {topics.map((topic, index) => (
-            <div key={index} className="border-b py-4">
-              <div
-                role="button"
-                tabIndex={0}
-                onClick={() => setActive(index === active ? -1 : index)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    setActive(index === active ? -1 : index);
-                  }
-                }}
-                className="flex justify-between items-center cursor-pointer"
-                aria-expanded={active === index}
-                aria-controls={`topic-content-${index}`}
-              >
-                <h3 className="font-semibold text-lg text-[#4377b2]">
-                  {topic.title}
-                </h3>
-                {active === index ? (
-                  <Minus size={20} className="text-[#4377b2]" />
-                ) : (
-                  <Plus size={20} className="text-[#4377b2]" />
-                )}
-              </div>
-              {active === index && (
-                <p
-                  id={`topic-content-${index}`}
-                  className="mt-2 text-gray-500 text-sm"
-                >
-                  {topic.content}
-                </p>
-              )}
+    <section className="bg-[#F5F5F5] px-4 sm:px-6 py-5 sm:py-10">
+      <div className="max-w-6xl mx-auto space-y-5">
+        {sections.map((section, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row ${
+              index % 2 === 1 ? "md:flex-row-reverse" : ""
+            } items-stretch gap-0`}
+          >
+            {/* Title */}
+            <div className="md:w-1/2 px-6 py-6 flex items-center justify-center bg-white rounded-l-2xl md:rounded-l-2xl md:rounded-r-none shadow-md">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#4377b2] text-center">
+                {section.title}
+              </h2>
             </div>
-          ))}
-        </div>
+
+            {/* Divider */}
+            <div className="w-[2px] bg-[#4377b2] hidden md:block" />
+
+            {/* Content */}
+            <div className="md:w-1/2 px-6 py-6 flex flex-col justify-center bg-white rounded-r-2xl md:rounded-r-2xl md:rounded-l-none shadow-md space-y-2 text-gray-700 text-sm sm:text-base">
+              {section.content.map((line, i) => (
+                <p key={i}>• {line}</p>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

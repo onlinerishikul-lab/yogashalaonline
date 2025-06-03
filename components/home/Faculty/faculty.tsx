@@ -13,23 +13,29 @@ const Faculty = () => {
   };
 
   useEffect(() => {
+    // Define the slide functions inside useEffect to avoid missing dependencies warning
+    const startAutoSlide = () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      intervalRef.current = setInterval(goToNextTrainer, 3000);
+    };
+
+    const stopAutoSlide = () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+
     startAutoSlide();
+
     return () => stopAutoSlide();
   }, []);
-
-  const startAutoSlide = () => {
-    stopAutoSlide();
-    intervalRef.current = setInterval(goToNextTrainer, 3000);
-  };
-
-  const stopAutoSlide = () => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-  };
 
   const handleTrainerClick = (index: number) => {
     if (index !== selectedIndex) {
       setSelectedIndex(index);
-      startAutoSlide();
+      // Restart the auto slide on manual click
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      intervalRef.current = setInterval(() => {
+        setSelectedIndex((prevIndex) => (prevIndex + 1) % teachers.length);
+      }, 3000);
     }
   };
 
@@ -60,9 +66,7 @@ const Faculty = () => {
                   key={trainer.id}
                   onClick={() => handleTrainerClick(index)}
                   className={`relative w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white ${
-                    selectedIndex === index
-                      ? "border-white scale-110 z-10"
-                      : "border-transparent scale-100"
+                    selectedIndex === index ? "border-white scale-110 z-10" : "border-transparent scale-100"
                   }`}
                   aria-label={`View trainer ${trainer.name}`}
                 >
@@ -82,12 +86,8 @@ const Faculty = () => {
           <div className="lg:w-3/4 flex flex-col xl:flex-row gap-6">
             {/* Description Box */}
             <div className="bg-white rounded-3xl p-6 shadow-lg flex-1 min-h-[300px] sm:min-h-[400px] flex flex-col justify-center">
-              <h2 className="text-xl sm:text-2xl font-bold text-[#4377B2] mb-2">
-                {selectedTrainer.name}
-              </h2>
-              <h4 className="text-md sm:text-lg font-semibold text-[#4377B2] mb-4">
-                {selectedTrainer.Subtitle}
-              </h4>
+              <h2 className="text-xl sm:text-2xl font-bold text-[#4377B2] mb-2">{selectedTrainer.name}</h2>
+              <h4 className="text-md sm:text-lg font-semibold text-[#4377B2] mb-4">{selectedTrainer.Subtitle}</h4>
               <p className="text-[#555] text-sm sm:text-base">{selectedTrainer.description}</p>
             </div>
 

@@ -9,7 +9,7 @@ import {
   Eye,
   MoveDiagonal,
   UserCheck,
-  Hands,
+  Hand, // ✅ Correct icon
 } from "lucide-react";
 
 const CourseDetails = () => {
@@ -72,7 +72,7 @@ const CourseDetails = () => {
     },
     {
       id: 9,
-      icon: <Hands />,
+      icon: <Hand />, // ✅ Replaced invalid Hands with valid Hand
       title: "Be a Healing Presence",
       description:
         "Hold space for others with compassion, empathy, and confidence.",
@@ -86,7 +86,8 @@ const CourseDetails = () => {
           Benefits of the Therapeutic Yoga Course
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course empowers you to use yoga as a tool for healing, empathy, and deeper connection—both for yourself and those you teach.
+          This course empowers you to use yoga as a tool for healing, empathy,
+          and deeper connection—both for yourself and those you teach.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (

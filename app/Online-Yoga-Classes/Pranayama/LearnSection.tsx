@@ -1,92 +1,80 @@
 "use client";
 
-import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
-
 const LearnSection = () => {
-  const [active, setActive] = useState<number>(-1);
-
-  const topics = [
+  const sections = [
     {
-      title: "Introduction to Pranayama",
-      content:
-        "Understand the fundamentals of pranayama, the yogic art of breath control, and its benefits for mind and body.",
+      title: "Course Highlights",
+      content: [
+        "Certified Pranayama Teacher Training (Online/Offline)",
+        "Learn foundational and advanced breathing techniques",
+        "Explore breath-mind-body connection in depth",
+        "Self-paced learning modules with live support",
+        "Guided breathwork videos & audios included",
+        "Teaching sequences, cues, and safety guidelines",
+        "Includes kriyas, mudras, and meditation integration",
+        "Certificate of Completion awarded",
+      ],
     },
     {
-      title: "Basic Breathing Techniques",
-      content:
-        "Learn essential pranayama practices like Nadi Shodhana (alternate nostril breathing) and Ujjayi breath.",
+      title: "What’s Inside the Course – Practical Aspects",
+      content: [
+        "Daily breathwork practice with guidance",
+        "Techniques like Nadi Shodhana, Kapalabhati, Bhastrika",
+        "Use of breath to calm, energize, and balance the mind",
+        "Breath awareness for emotional and nervous system health",
+        "Integration with meditation and asana",
+        "How to cue and sequence Pranayama classes",
+        "Safety precautions and contraindications",
+        "Building personalized breath programs",
+      ],
     },
     {
-      title: "Advanced Pranayama Practices",
-      content:
-        "Explore more advanced techniques such as Kapalabhati, Bhastrika, and their safe application.",
+      title: "Is This Course for You? NO!",
+      content: [
+        "You’re only interested in physical postures (asanas)",
+        "You’re not ready to explore inner stillness or subtle energy",
+        "You are unable to sit calmly for breath-based practices",
+      ],
     },
     {
-      title: "Pranayama for Stress Reduction",
-      content:
-        "Discover breathing exercises designed to calm the nervous system and reduce anxiety.",
-    },
-    {
-      title: "Integrating Pranayama into Daily Life",
-      content:
-        "Get guidance on establishing a consistent pranayama practice to enhance physical vitality and mental clarity.",
+      title: "Is This Course for You? YES!",
+      content: [
+        "You want to deepen your personal breath practice",
+        "You’re a yoga teacher or practitioner ready to guide others",
+        "You seek tools for managing stress, energy, and emotions",
+        "You enjoy learning how ancient science supports modern wellness",
+      ],
     },
   ];
 
   return (
-    <section className="bg-[#F5F5F5] p-6 md:p-12">
-      <div className="bg-white rounded-2xl p-6 md:p-12 flex flex-col md:flex-row gap-12">
-        {/* Left Content */}
-        <div className="md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] mb-4">
-            Pranayama Course
-          </h2>
-          <p className="text-gray-500 mb-6">
-            Master the art of breath control through pranayama techniques that improve respiratory health, mental focus, and overall wellbeing.
-          </p>
-          <button className="bg-[#4377b2] text-white font-medium rounded-full px-6 py-2 transition duration-200 hover:bg-[#365f91]">
-            Contact Us
-          </button>
-        </div>
-
-        {/* Accordion */}
-        <div className="md:w-1/2">
-          {topics.map((topic, index) => (
-            <div key={index} className="border-b py-4">
-              <div
-                role="button"
-                tabIndex={0}
-                onClick={() => setActive(index === active ? -1 : index)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    setActive(index === active ? -1 : index);
-                  }
-                }}
-                className="flex justify-between items-center cursor-pointer"
-                aria-expanded={active === index}
-                aria-controls={`topic-content-${index}`}
-              >
-                <h3 className="font-semibold text-lg text-[#4377b2]">
-                  {topic.title}
-                </h3>
-                {active === index ? (
-                  <Minus size={20} className="text-[#4377b2]" />
-                ) : (
-                  <Plus size={20} className="text-[#4377b2]" />
-                )}
-              </div>
-              {active === index && (
-                <p
-                  id={`topic-content-${index}`}
-                  className="mt-2 text-gray-500 text-sm"
-                >
-                  {topic.content}
-                </p>
-              )}
+    <section className="bg-[#F5F5F5] px-4 sm:px-6 py-5 sm:py-10">
+      <div className="max-w-6xl mx-auto space-y-5">
+        {sections.map((section, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row ${
+              index % 2 === 1 ? "md:flex-row-reverse" : ""
+            } items-stretch gap-0`}
+          >
+            {/* Title */}
+            <div className="md:w-1/2 px-6 py-6 flex items-center justify-center bg-white rounded-l-2xl md:rounded-l-2xl md:rounded-r-none shadow-md">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#4377b2] text-center">
+                {section.title}
+              </h2>
             </div>
-          ))}
-        </div>
+
+            {/* Divider */}
+            <div className="w-[2px] bg-[#4377b2] hidden md:block" />
+
+            {/* Content */}
+            <div className="md:w-1/2 px-6 py-6 flex flex-col justify-center bg-white rounded-r-2xl md:rounded-r-2xl md:rounded-l-none shadow-md space-y-2 text-gray-700 text-sm sm:text-base">
+              {section.content.map((line, i) => (
+                <p key={i}>• {line}</p>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

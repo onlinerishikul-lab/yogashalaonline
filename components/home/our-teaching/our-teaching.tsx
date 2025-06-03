@@ -1,9 +1,10 @@
 "use client";
+
 import Image from "next/image";
 import React from "react";
 
 const OurTeaching = () => {
-  const tempContent = [
+  const content = [
     {
       id: 1,
       heading: "Interactive Online Learning Experience",
@@ -36,36 +37,36 @@ const OurTeaching = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#4377B2]">
           Our Teaching Approach
         </h1>
+
         <div className="flex flex-col gap-14">
-          {tempContent.map((item, index) => (
-            <div
+          {content.map((item, index) => (
+            <article
               key={item.id}
               className={`flex flex-col ${
-                index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
+                index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
               } items-center gap-8`}
             >
-              {/* Text */}
+              {/* Text Section */}
               <div className="w-full md:w-1/2 px-2 md:px-4 text-center md:text-left relative">
                 <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-[#4377B2] relative inline-block z-10">
                   <span className="relative z-10">{item.heading}</span>
                   <span className="absolute -inset-1 bg-[#4377B2] opacity-10 rounded-full blur-md z-0"></span>
                 </h2>
-                <p className="text-lg leading-relaxed text-justify">
-                  {item.text}
-                </p>
+                <p className="text-lg leading-relaxed text-justify">{item.text}</p>
               </div>
 
-              {/* Image */}
-              <div className="w-full md:w-1/2 flex justify-center md:justify-center">
+              {/* Image Section */}
+              <div className="w-full md:w-1/2 flex justify-center">
                 <Image
                   src={item.image}
                   alt={item.heading}
                   width={500}
                   height={300}
                   className="rounded-[20px] shadow-lg object-cover w-full max-w-[500px] h-auto"
+                  priority={index === 0} // prioritize first image for faster LCP
                 />
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

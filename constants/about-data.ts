@@ -30,7 +30,7 @@ Driven by a desire to share her wisdom, Purnima devoted herself to serving in as
   {
     id: 4,
     name: "Himanshu Ji",
-    image: "/Himanshu Ji.png",
+    image: "/himanshu.jpg",
     Subtitle: "(Philosophy, Pranayama & Meditation)",
     description: `Himanshu Ji is not just a yoga teacher; he's a beacon of knowledge and inspiration in the world of yoga. Born and raised in the serene surroundings of Rishikesh, known as the Capital Yoga world, Himanshu Ji's connection with yoga runs deep in his roots. For several years, he has dedicated himself to teaching Ashtanga and Hatha Yoga at Pankaj Yogpeeth, where his classes are renowned for their energy and power. Himanshu Ji's journey into yoga began with humble steps as he spent years immersing himself in the practice under the guidance of numerous esteemed teachers and gurus. Each encounter enriched his understanding and proficiency in yoga, shaping him into the exceptional teacher he is today. His commitment to continuous learning led him to complete his studies in the very heart of yoga education, the vibrant city of Rishikesh.
 In every class, Himanshu Ji infuses his teachings with profound philosophy, guiding students to explore the deeper dimensions of yoga beyond just the physical postures. His deep understanding of yogic philosophy resonates through his words, inspiring practitioners to connect with their inner selves and discover the true essence of yoga.`
@@ -56,7 +56,7 @@ Exploring the depths of yoga, where movement meets mindfulness, and strength mer
   {
     id: 7,
     name: "Swami Amarna ji",
-    image: "/Swami Amarna ji.png",
+    image: "/swami.jpg",
     Subtitle: "(Meditation Fecilitator)",
     description: "Meet Yogesh from Nepal, a passionate yoga professional with qualifications in meditation, Reiki healing, singing bowl therapy, yoga therapy, and classical music. His inspiring dedication and friendly demeanor make him approachable to all, with a great sense of humor.As you journey alongside Yogesh Ji, immerse yourself in the transformative power of his teachings. With his wealth of knowledge in yoga, meditation, and holistic healing practices, discover new depths of inner peace and well-being. Allow Yogesh Ji's gentle guidance to lead you towards a life filled with balance, serenity, and spiritual growth. Surrender to the wisdom he shares, embracing each moment as an opportunity for personal transformation. Let Yogesh Ji be your trusted companion on this sacred journey of self-discovery and enlightenment. Together, explore the boundless potential of mind, body, and spirit, as you awaken to your true essence.He completed various yoga training courses in India, including Yoga for Wellbeing Training in 2007, Yoga Teacher Training Course in 2014, and Science of Yoga Therapy (MSc) in 2019. Additionally, he began practicing Reiki in Nepal in 2006, completing level 2 in 2012." },
   {

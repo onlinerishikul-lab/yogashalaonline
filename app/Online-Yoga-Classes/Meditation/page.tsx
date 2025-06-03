@@ -1,14 +1,14 @@
 
 "use client";
-import HeroSection from "@/app/Online-Yoga-Classes/Prenatal-Yoga/HeroSection";
-import StickyCourseCard  from "@/app/Online-Yoga-Classes/Prenatal-Yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/Online-Yoga-Classes/Prenatal-Yoga/yogacourse";
-import LearnSection from "@/app/Online-Yoga-Classes/Prenatal-Yoga/LearnSection";
-import CourseDetails from "@/app/Online-Yoga-Classes/Prenatal-Yoga/CourseDetails";
-import YogaAccreditation from "@/app/Online-Yoga-Classes/Prenatal-Yoga/YogaAccreditation";
-import CertificatePromo from "@/app/Online-Yoga-Classes/Prenatal-Yoga/CertificatePromo";
-import TestimonialCarousel from "@/app/Online-Yoga-Classes/Prenatal-Yoga/TestimonialCarousel";
-import Faq from "@/app/Online-Yoga-Classes/Prenatal-Yoga/Faq";
+import HeroSection from "@/app/Online-Yoga-Classes/Meditation/HeroSection";
+import StickyCourseCard  from "@/app/Online-Yoga-Classes/Meditation/TestimonialSlider";
+import YogaCoursePage from "@/app/Online-Yoga-Classes/Meditation/yogacourse";
+import LearnSection from "@/app/Online-Yoga-Classes/Meditation/LearnSection";
+import CourseDetails from "@/app/Online-Yoga-Classes/Meditation/CourseDetails";
+import YogaAccreditation from "@/app/Online-Yoga-Classes/Meditation/YogaAccreditation";
+import CertificatePromo from "@/app/Online-Yoga-Classes/Meditation/CertificatePromo";
+import TestimonialCarousel from "@/app/Online-Yoga-Classes/Meditation/TestimonialCarousel";
+import Faq from "@/app/Online-Yoga-Classes/Meditation/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

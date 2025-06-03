@@ -25,10 +25,10 @@ const Join = () => {
       <div className="relative z-20 max-w-4xl w-full text-center md:text-left">
         <div className="md:max-w-xl mx-auto md:mx-0">
           <h2 className="text-white text-2xl md:text-4xl font-bold uppercase whitespace-nowrap">
-            Join Our WhatsApp Community
+            Be Part of Our Yoga Tribe on WhatsApp
           </h2>
           <p className="text-white mt-4 text-base md:text-lg">
-            Get ready to connect with fellow yoga enthusiasts, receive course updates, and engage in meaningful discussions. Click below to join our exclusive WhatsApp group and be part of the journey!
+            Connect with like-minded yoga lovers, stay updated on courses, and share your experiences in a vibrant community. Tap below to join our exclusive WhatsApp group!
           </p>
           <button
             onClick={handleJoinClick}

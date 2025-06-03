@@ -9,15 +9,14 @@ const CertificatePromo = () => {
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-5 leading-tight">
-            Flow with Grace in <br /> Vinyasa Flow Yoga
+            Earn Your Vinyasa Yoga Teacher Certificate
           </h2>
           <p className="text-lg mb-8 text-[#f9fafb]">
-            Experience a dynamic and energizing practice that links breath with movement. 
-            Our Vinyasa Flow course is designed to build strength, flexibility, and mindfulness.
+           Start your Vinyasa teaching journey with our immersive training. Complete the 100/200/300-hour course and earn your internationally recognized certification.
           </p>
           <Link href="/vinyasa-flow" passHref legacyBehavior>
             <a className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-8 py-3 rounded-full shadow-md hover:bg-white transition duration-300">
-              Begin Your Flow
+              Join Now
             </a>
           </Link>
         </div>

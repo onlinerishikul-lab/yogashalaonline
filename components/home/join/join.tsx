@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 
@@ -28,7 +29,7 @@ const Join = () => {
             Stay Connected – Join Our WhatsApp Group
           </h2>
           <p className="text-white mt-4 text-base md:text-lg">
-            Don't miss out on insights, updates, and shared energy from our yoga family. Join our WhatsApp group and keep your yoga journey flowing with support and inspiration!
+            Don&apos;t miss out on insights, updates, and shared energy from our yoga family. Join our WhatsApp group and keep your yoga journey flowing with support and inspiration!
           </p>
           <button
             onClick={handleJoinClick}

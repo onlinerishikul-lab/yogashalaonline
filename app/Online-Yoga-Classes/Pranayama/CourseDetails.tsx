@@ -4,7 +4,7 @@ import {
   HeartPulse,
   Wind,
   Brain,
-  Lotus,
+  Sparkles,
   ShieldCheck,
   Bed,
   SunMoon,
@@ -37,7 +37,7 @@ const CourseDetails = () => {
     },
     {
       id: 4,
-      icon: <Lotus />,
+      icon: <Sparkles />,
       title: "Deep Inner Peace",
       description:
         "Experience tranquility and inner stability with regular breathwork.",

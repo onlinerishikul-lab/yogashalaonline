@@ -6,22 +6,20 @@ import React, { useEffect, useState, useRef } from "react";
 
 const Faculty = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Function to go to next trainer
   const goToNextTrainer = () => {
     setSelectedIndex((prevIndex) => (prevIndex + 1) % teachers.length);
   };
 
-  // Auto-slide setup
   useEffect(() => {
     startAutoSlide();
-    return () => stopAutoSlide(); // Cleanup on unmount
+    return () => stopAutoSlide();
   }, []);
 
   const startAutoSlide = () => {
     stopAutoSlide();
-    intervalRef.current = setInterval(goToNextTrainer, 3000); // Change every 3 seconds
+    intervalRef.current = setInterval(goToNextTrainer, 3000);
   };
 
   const stopAutoSlide = () => {
@@ -29,8 +27,10 @@ const Faculty = () => {
   };
 
   const handleTrainerClick = (index: number) => {
-    setSelectedIndex(index);
-    startAutoSlide(); // Reset auto-slide on manual click
+    if (index !== selectedIndex) {
+      setSelectedIndex(index);
+      startAutoSlide();
+    }
   };
 
   const selectedTrainer = teachers[selectedIndex];
@@ -51,9 +51,7 @@ const Faculty = () => {
           <div className="bg-[#4377B2] p-6 sm:p-8 rounded-3xl lg:w-1/4 flex flex-col justify-between">
             <div>
               <h1 className="text-white text-4xl sm:text-6xl font-bold">Our Trainers</h1>
-              <p className="text-white text-sm mt-2">
-                Learn from the Best in the Industry
-              </p>
+              <p className="text-white text-sm mt-2">Learn from the Best in the Industry</p>
             </div>
 
             <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-4">
@@ -61,17 +59,19 @@ const Faculty = () => {
                 <button
                   key={trainer.id}
                   onClick={() => handleTrainerClick(index)}
-                  className={`relative w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 ${
+                  className={`relative w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] rounded-full overflow-hidden border-4 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white ${
                     selectedIndex === index
                       ? "border-white scale-110 z-10"
                       : "border-transparent scale-100"
                   }`}
+                  aria-label={`View trainer ${trainer.name}`}
                 >
                   <Image
                     src={trainer.image}
                     alt={trainer.name}
                     fill
                     className="object-cover object-top"
+                    loading="lazy"
                   />
                 </button>
               ))}
@@ -88,9 +88,7 @@ const Faculty = () => {
               <h4 className="text-md sm:text-lg font-semibold text-[#4377B2] mb-4">
                 {selectedTrainer.Subtitle}
               </h4>
-              <p className="text-[#555] text-sm sm:text-base">
-                {selectedTrainer.description}
-              </p>
+              <p className="text-[#555] text-sm sm:text-base">{selectedTrainer.description}</p>
             </div>
 
             {/* Trainer Image */}
@@ -100,6 +98,8 @@ const Faculty = () => {
                 alt={selectedTrainer.name}
                 fill
                 className="object-cover object-top transition-opacity duration-300"
+                loading="eager"
+                priority
               />
             </div>
           </div>

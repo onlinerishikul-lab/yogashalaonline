@@ -22,7 +22,7 @@ export default function ExploreOurClassesView({
   };
 
   const filteredCourses = courses.filter((course) =>
-    course.headerSection?.subHeading
+    course?.headerSection?.subHeading
       ?.toLowerCase()
       .includes("online ayurveda courses")
   );
@@ -58,10 +58,13 @@ export default function ExploreOurClassesView({
               <div
                 onClick={handleExploreMoreClick}
                 style={{
-                  backgroundImage: `url(${course.headerSection.image})`,
+                  backgroundImage: `url(${course?.headerSection?.image || "/fallback.jpg"})`,
                 }}
-                className="overflow-hidden shadow-lg relative rounded-md h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity cursor-pointer"
+                className="overflow-hidden shadow-lg relative rounded-md h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity duration-300 cursor-pointer"
               >
+                <span className="sr-only">
+                  {course?.headerSection?.title || "Ayurveda Course"}
+                </span>
                 <div className="absolute bottom-4 right-4 bg-[#4377B2] text-white text-sm px-3 py-1 rounded z-20 shadow-md">
                   Online
                 </div>
@@ -72,8 +75,9 @@ export default function ExploreOurClassesView({
 
         <div className="text-center mt-6 z-10 relative">
           <button
-            className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors"
             onClick={handleExploreMoreClick}
+            className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors duration-300"
+            aria-label="Explore more ayurveda courses"
           >
             EXPLORE MORE
           </button>

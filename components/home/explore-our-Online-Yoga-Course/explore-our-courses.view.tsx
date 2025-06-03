@@ -33,7 +33,6 @@ export default function ExploreOurClassesView({
         <h2 className="text-4xl font-bold text-center text-[#4377B2] mb-6 z-10 relative">
           Explore Our Online Yoga Courses
         </h2>
-
         <Swiper
           modules={[Autoplay]}
           spaceBetween={20}

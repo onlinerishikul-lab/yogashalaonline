@@ -9,11 +9,10 @@ const CertificatePromo = () => {
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-5 leading-tight">
-            Master Your Breath with <br /> Pranayama Techniques
+            Earn Your Pranayama Teaching Certificate
           </h2>
           <p className="text-lg mb-8 text-[#f9fafb]">
-            Explore the ancient art of breath control to enhance your vitality, calm your mind, 
-            and deepen your yoga practice through our focused Pranayama course.
+            Begin your journey into the healing power of breath. Complete the 25- or 50-hour Pranayama TTC and receive your certificate, honoring your knowledge, practice, and ability to teach.
           </p>
           <Link href="/pranayama" passHref legacyBehavior>
             <a className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-8 py-3 rounded-full shadow-md hover:bg-white transition duration-300">

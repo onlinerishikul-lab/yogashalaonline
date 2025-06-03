@@ -61,23 +61,33 @@ Exploring the depths of yoga, where movement meets mindfulness, and strength mer
     description: "Meet Yogesh from Nepal, a passionate yoga professional with qualifications in meditation, Reiki healing, singing bowl therapy, yoga therapy, and classical music. His inspiring dedication and friendly demeanor make him approachable to all, with a great sense of humor.As you journey alongside Yogesh Ji, immerse yourself in the transformative power of his teachings. With his wealth of knowledge in yoga, meditation, and holistic healing practices, discover new depths of inner peace and well-being. Allow Yogesh Ji's gentle guidance to lead you towards a life filled with balance, serenity, and spiritual growth. Surrender to the wisdom he shares, embracing each moment as an opportunity for personal transformation. Let Yogesh Ji be your trusted companion on this sacred journey of self-discovery and enlightenment. Together, explore the boundless potential of mind, body, and spirit, as you awaken to your true essence.He completed various yoga training courses in India, including Yoga for Wellbeing Training in 2007, Yoga Teacher Training Course in 2014, and Science of Yoga Therapy (MSc) in 2019. Additionally, he began practicing Reiki in Nepal in 2006, completing level 2 in 2012." },
   {
     id: 8,
-    name: "Gangesha Chaitanya",
-    image: "/Gangesha-Chaitanya.jpg",
-    Subtitle: "(Yoga Philosophy, Meditation, Pranayama And Spiritual Guidance)",
-    description: `Explore the captivating world of Yogi Gangesha Chaitanya, a master of Yoga Philosophy, Meditation, Pranayama, and Spiritual Guidance. Guided by the revered saint Swami Rama from a young age, Yogi Gangesha has become a beacon of wisdom and compassion.
-Immerse yourself in the transformative teachings of Yogi Gangesha Chaitanya, a master of Yoga Philosophy, Meditation, Pranayama, and Spiritual Guidance. With guidance from revered saints and immersion in renowned yoga traditions, Yogi Gangesha offers a harmonious blend of ancient wisdom and modern insights. Experience the serene aura of his classes as he leads you on a journey to awaken your kundalini energy and explore higher consciousness. Join him to unlock the limitless potential of your mind and spirit, embracing the magic of meditation and spiritual wisdom. Let Yogi Gangesha illuminate your path to inner harmony and enlightenment.`
+    name: "Rajat Purwal",
+    image: "/rajat.jpg",
+    Subtitle: "(Yoga Teacher)",
+    description: `Rajat started his yoga learning journey in 2016 and received a one-year diploma in yoga and naturopathy in 2017.He belongs to Uttarakhand and does yogic Karma work in the village itself from his childhood. That gives him stability during yoga education.During the Yoga Yatra, Rajat learned Yoga twice from Yoga Vidya Guru Swami Ramdev. After that, he completed 200 hours of YTTC from Shri Praveen Guruji in the year 2019.He has completed his graduation in Yoga from Uttarakhand Open University. During this entire time, he taught Yoga to international students in Rishikesh, south India and Nepal at Rishikul Yoga Shala. He is working in Triguna and Alakh yoga for 3 years. He is proficient in taking classes in traditional Hatha Yoga, Ashtanga Vinyasa Yoga, Pranayama and Naturopathy. Now he is pursuing higher education in Yoga and trying to learning more depth knowledge.`
   },
   {
     id: 9,
-    name: "Sukra Chiatanya",
-    image: "/Sukra Chiatanya.png",
-    Subtitle:"(Meditation, Mantra And Pranayama)",
+    name: "Dr. Reshma R.S",
+    image: "/reshma.jpg",
+    Subtitle:"(Ayurvedic physician)",
     description: `
-Welcome to the serene world of Yogi Sukra Chaitanya, hailing from the charming villages of West Odisha, India. He immersed himself in the study of human nature and the environment, mastering educational psychology and environmental sciences at Sambalpur University. Seeking deeper wisdom, he ventured into the spiritual realm, diving into Yoga Sciences and Indian Philosophy at Dev Sanskriti Haridwar University.
+Dr. Reshma R.S. is a dedicated Ayurvedic physician renowned for her integrative approach to health and wellness. With a passion for blending the time-honored principles of Ayurveda with modern, evidence-based practices, she offers a truly holistic path to healing and vitality.
 
-Under the guidance of renowned masters like Swami Veda Bharati from the Himalayan Tradition, Yogi Sukra Chaitanya embarked on a journey to greater heights. He further honed his skills in traditional Kriya yoga under the wise mentorship of Swami Sankaranand Giri and Swami Nityanandaji of the Yoga Satsang Society, India.
+Her diverse expertise spans Sports Medicine, Women’s Wellness, Cosmetology, Panchakarma therapies, and Joint Disorder management, allowing her to address a wide range of health concerns with precision and compassion. Dr. Reshma is also a highly experienced Dietician, which enhances her ability to offer well-rounded, personalized treatment plans tailored to each individual's constitution and lifestyle.
 
-Yogi Sukra Chaitanya's teachings resonate like a beautiful symphony, bringing harmony to the mind, body, and soul, attracting seekers from around the world. With each breath, his students uncover the profound treasures within themselves, guided by the wisdom of a true master.`
+At the core of Dr. Reshma’s practice is the belief that true healing comes from balance—of body, mind, and spirit. She empowers her patients with the tools and knowledge needed to take charge of their own wellness journey, combining traditional Ayurvedic therapies with contemporary healthcare strategies for optimal results.
+
+Whether you're seeking relief from chronic conditions, support for women-specific health issues, or guidance on diet and rejuvenation, Dr. Reshma provides comprehensive care to help you achieve harmony and a more vibrant, healthier life.`
+  },
+  {
+    id: 10,
+    name: "Bipin Baloni",
+    image: "/Bipin.png",
+    Subtitle: "(Ashtanga Vinyasa Yoga, Hatha Yoga & Pranayama)",
+    description: `Born in a Brahmin Family, the art of yoga flowed naturally in Yogi Bipin. Upon acquiring qualification in Hatha Yoga, Ashtanga Vinyasa, Pranayama and Meditation he began his teaching practices after being registered as a Yoga teacher with Yoga Alliance.
+
+Learning from some great yogis and receiving his Spiritual training from experts, he is specialized in Hatha Yoga and Ashtanga Vinyasa. With a firm belief that Yoga is a Science and exceeds the body practices, he shares the mystical and spiritual aspects attached to it.`
   },
 ];
 

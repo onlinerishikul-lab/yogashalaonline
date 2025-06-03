@@ -2,152 +2,72 @@
 
 import React from "react";
 
-// Shared course features
-const features = [
-  "✅ Certificate of Completion",
-  "✅ Comprehensive Pranayama Techniques",
-  "✅ Downloadable Pranayama Guide",
-  "✅ Lifetime Course Access",
-  "✅ 24 Months of Instructor Support",
+const skills = [
+  {
+    title: "Teaching Core Pranayama Techniques",
+    description:
+      "Learn to teach breath techniques like Anulom Vilom, Ujjayi, and Bhramari with precision.",
+  },
+  {
+    title: "Breath Awareness & Control",
+    description:
+      "Develop the skill to observe and consciously shape the breath for healing and clarity.",
+  },
+  {
+    title: "Energy Channel Cleansing",
+    description:
+      "Practice techniques to purify nadis and awaken subtle energy flow.",
+  },
+  {
+    title: "Voice & Cue Mastery",
+    description:
+      "Use calming, clear instructions to lead safe and effective sessions.",
+  },
+  {
+    title: "Creating Breath Sequences",
+    description:
+      "Design daily or therapeutic breathing routines for different needs.",
+  },
+  {
+    title: "Mind & Breath Synchronization",
+    description:
+      "Cultivate presence by aligning mental focus with rhythmic breathing.",
+  },
 ];
 
-// Pricing Card Component
-const PricingCard = ({
-  title,
-  description,
-  price,
-  note,
-}: {
-  title: string;
-  description: string;
-  price: string;
-  note: string;
-}) => (
-  <div className="flex flex-col justify-between border border-[#4377b2] rounded-xl p-4 bg-white shadow-md w-full sm:w-[260px] transition hover:shadow-lg">
-    <div>
-      <h3 className="text-sm font-semibold text-[#4377b2] mb-1">{title}</h3>
-      <p className="text-xs mb-2 text-gray-700">{description}</p>
-      <div className="text-xl font-bold text-[#4377b2] mb-1">{price}</div>
-      <p className="text-xs mb-3 text-gray-600">{note}</p>
-    </div>
-    <div className="mt-2">
-      <button className="bg-[#4377b2] hover:bg-[#365a90] text-white font-medium py-2 px-4 rounded-full w-full text-sm transition">
-        ENROLL NOW
-      </button>
-      <ul className="mt-4 text-xs text-gray-700 space-y-1">
-        {features.map((item, idx) => (
-          <li key={idx}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  </div>
-);
 
-// Pricing Section Container
-const PricingOptions = () => (
-  <div className="flex flex-col sm:flex-row justify-center items-center sm:items-stretch sm:gap-4 gap-6 w-full">
-    <PricingCard
-      title="One-Time Payment"
-      description="Pay once and get full access."
-      price="$250.00"
-      note="One-time payment"
-    />
-    <PricingCard
-      title="Two-Part Installments"
-      description="Split into two monthly payments."
-      price="$125.00 x 2"
-      note="Billed monthly"
-    />
-    <PricingCard
-      title="Three-Part Installments"
-      description="Split into three monthly payments."
-      price="$85.00 x 3"
-      note="Billed monthly"
-    />
-  </div>
-);
-
-// Risk-Free Guarantee Section
-const RiskFreeGuarantee = () => (
-  <section className="w-full flex justify-center py-12 px-4 bg-white">
-    <div className="relative bg-[#e8eefb] rounded-2xl p-8 max-w-3xl w-full overflow-hidden">
-      <div className="text-center md:text-left">
-        <h2 className="text-xl md:text-2xl font-bold text-[#4377b2] mb-4">
-          30-Day Risk-Free Guarantee
-        </h2>
-        <p className="text-gray-700 mb-4">
-          We’re confident you’ll love the{" "}
-          <strong>Pranayama Course</strong>. But if it doesn’t meet your
-          expectations, we’ve got you covered.
-        </p>
-        <p className="text-gray-700 mb-4">
-          Simply email us within <strong>30 days</strong> of purchase for a full
-          refund—no questions asked. Explore the course, test it out, and decide
-          with total peace of mind.
-        </p>
-        <p className="text-gray-900 font-semibold mb-6">
-          You’ve got nothing to lose and everything to gain.
-        </p>
-        <button className="bg-[#4377b2] hover:bg-[#365a90] text-white font-semibold py-2 px-6 rounded-full transition">
-          Enroll Now – Risk Free!
-        </button>
-      </div>
-
-      {/* Decorative circle */}
-      <div className="absolute top-0 left-0 w-6 h-6 bg-[#365a90] rounded-full transform -translate-x-1/2 -translate-y-1/2" />
-
-      {/* Decorative plus signs */}
-      <div className="absolute bottom-4 right-4 text-[#a8bfe7] text-lg leading-3">
-        <div className="grid grid-cols-3 gap-1">
-          {Array(6)
-            .fill("+")
-            .map((char, idx) => (
-              <span key={idx}>{char}</span>
-            ))}
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-// Main Page Component
 const YogaCoursePage = () => {
   return (
-    <div className="bg-gray-50 text-black px-4 py-10 md:px-10 space-y-16">
-      {/* Header & Pricing */}
-      <section className="flex flex-col md:flex-row justify-between items-start gap-10">
-        <div className="md:w-1/2 space-y-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-            Pranayama Course
-          </h1>
-          <p className="text-gray-700 text-sm">
-            Learn powerful breathing techniques to enhance your energy, calm
-            the mind, and improve overall wellness through this comprehensive
-            pranayama training.
-          </p>
-          <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-            <li>Master foundational and advanced pranayama methods.</li>
-            <li>Boost respiratory health and mental clarity.</li>
-            <li>Improve focus, relaxation, and emotional balance.</li>
-            <li>Includes guided video sessions and downloadable materials.</li>
-            <li>Suitable for beginners and experienced practitioners.</li>
-          </ul>
-          <button className="bg-[#4377b2] hover:bg-[#365a92] text-white px-5 py-2.5 rounded-full font-medium flex items-center space-x-2 text-sm">
-            <span>Join Now</span>
-            <span>&rarr;</span>
-          </button>
-        </div>
-        <div className="md:w-1/2 w-full">
-          <PricingOptions />
-          <div className="text-center text-xs text-gray-500 mt-2">
-            🔒 100% Secure Payment. Full refund within 30 days if you’re not
-            satisfied.
-          </div>
-        </div>
+    <div className="bg-gray-50 text-black px-4 py-10 md:px-10 space-y-12">
+      {/* Header */}
+      <section className="max-w-4xl mx-auto text-center space-y-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
+          Online Pranayama Yoga Classes
+        </h1>
+        <p className="text-gray-700 text-sm md:text-base">
+       Master the ancient science of breath with this Pranayama Teacher Training Course. Learn how to harness the breath for energy, clarity, and healing, and gain the skills to teach powerful breathing techniques safely and effectively.
+        </p>
       </section>
 
-      {/* Risk-Free Guarantee */}
-      <RiskFreeGuarantee />
+      {/* Key Skills */}
+      <section className="max-w-6xl mx-auto px-2">
+        <h2 className="text-2xl font-bold text-[#4377b2] text-center mb-8">
+          Key Skills You’ll Learn
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skills.map((skill, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-xl shadow-md p-5 border border-[#e0e7f8] hover:shadow-lg transition"
+            >
+              <h3 className="text-[#4377b2] font-semibold mb-2 text-lg">
+                {skill.title}
+              </h3>
+              <p className="text-gray-700 text-sm">{skill.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };

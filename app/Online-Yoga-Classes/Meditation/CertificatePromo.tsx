@@ -9,15 +9,14 @@ const CertificatePromo = () => {
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-5 leading-tight">
-            Journey Into Mindfulness with <br /> Meditation Practices
+            Earn Your Meditation Teaching Certificate
           </h2>
           <p className="text-lg mb-8 text-[#f9fafb]">
-            Cultivate inner peace and focus through our guided meditation course. 
-            Enhance your mental clarity and emotional well-being.
+           Begin your journey into stillness and teaching. Complete the Meditation TTC and receive your certificate as a symbol of your commitment and inner growth.
           </p>
           <Link href="/meditation" passHref legacyBehavior>
             <a className="inline-block bg-[#f9fafb] text-[#4377b2] font-semibold px-8 py-3 rounded-full shadow-md hover:bg-white transition duration-300">
-              Start Meditating
+              Join Now
             </a>
           </Link>
         </div>

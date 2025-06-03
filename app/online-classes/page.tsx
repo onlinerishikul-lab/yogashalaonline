@@ -1,8 +1,15 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
-const courseList = [
+type Course = {
+  title: string;
+  teacher: string;
+  image: string;
+};
+
+const courseList: Course[] = [
   {
     title: "Prenatal Yoga",
     teacher: "By Experienced Yoga Teachers",
@@ -41,7 +48,7 @@ const courseList = [
 ];
 
 export default function ClassesPage() {
-  const handleExport = (course: any) => {
+  const handleExport = (course: Course) => {
     const data = {
       ...course,
       schedule: {
@@ -76,11 +83,13 @@ export default function ClassesPage() {
               key={index}
               className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between"
             >
-              <div className="h-48 w-full">
-                <img
+              <div className="relative h-48 w-full">
+                <Image
                   src={course.image}
                   alt={course.title}
-                  className="w-full h-full object-cover"
+                  layout="fill"
+                  objectFit="cover"
+                  priority
                 />
               </div>
 

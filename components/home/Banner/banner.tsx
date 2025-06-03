@@ -1,32 +1,39 @@
 "use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export function Banner() {
   const router = useRouter();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Ensures client-side hydration for visual transitions
+    setIsMounted(true);
+  }, []);
 
   return (
     <section className="relative w-full min-h-screen overflow-hidden">
       {/* Background Image */}
-      <Image
-        src="/onlinebg.webp"
-        alt="Yoga pose on a serene beach background"
-        fill
-        priority
-        placeholder="blur"
-        blurDataURL="/blur/onlinebg-blur.jpg"
-        className="absolute top-0 left-0 z-0 object-cover brightness-75"
-        sizes="100vw"
-      />
+      {isMounted && (
+        <Image
+          src="/onlinebg.webp" // Compressed format for better performance
+          alt="Yoga pose on a serene beach background"
+          fill
+          priority
+          placeholder="blur"
+          blurDataURL="/blur/onlinebg-blur.jpg"
+          className="absolute top-0 left-0 z-0 object-cover brightness-75 opacity-0 animate-fadeIn"
+          sizes="100vw"
+        />
+      )}
 
-      {/* Text Content - move out of hydration */}
+      {/* Overlay Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-4 pt-24 sm:pt-28 md:pt-32 lg:pt-36 min-h-screen">
         <header>
-          <h1
-            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug max-w-4xl drop-shadow-lg"
-            style={{ fontDisplay: "swap" }} // ensure text isn't blocked
-          >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug max-w-4xl drop-shadow-lg">
             <span className="text-[#4377B2] block text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
               Online Yoga Teacher Training:
             </span>
@@ -44,7 +51,7 @@ export function Banner() {
         </Button>
       </div>
 
-      {/* Badges Bottom Left */}
+      {/* Bottom Left Badges */}
       <div className="absolute bottom-4 left-4 z-20 flex flex-wrap justify-start items-center gap-2 sm:gap-3">
         <Image
           src="/rpys3.png"
@@ -76,7 +83,7 @@ export function Banner() {
         />
       </div>
 
-      {/* Yoga Alliance Logo Bottom Right */}
+      {/* Bottom Right Yoga Alliance Logo */}
       <div className="absolute bottom-4 right-4 z-20">
         <Image
           src="/alliance.png"

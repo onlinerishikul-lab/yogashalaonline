@@ -13,7 +13,7 @@ const Transforming = () => {
     <div className="flex justify-center">
       <div className="max-w-7xl p-4 md:p-6 w-full bg-[#f1f1f1]">
         {/* Heading moved outside flex container */}
-        <h1 className="text-2xl mb-8 md:text-4xl font-bold text-[#4377B2] text-center md:text-left">
+        <h1 className="text-2xl mb-8 md:text-4xl font-bold text-[#4377B2] text-center md:text-center">
           Online Yoga Courses
         </h1>
 

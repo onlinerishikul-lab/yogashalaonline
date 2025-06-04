@@ -1,9 +1,9 @@
 "use client";
 
 import {
-  Lotus,
+  Feather,
   Bed,
-  Focus,
+  Brain,
   Heart,
   BatteryCharging,
   Accessibility,
@@ -16,7 +16,7 @@ const CourseDetails = () => {
   const features = [
     {
       id: 1,
-      icon: <Lotus />,
+      icon: <Feather />,
       title: "Deep Stress Relief",
       description: "Release physical and emotional tension with profound relaxation.",
     },
@@ -28,7 +28,7 @@ const CourseDetails = () => {
     },
     {
       id: 3,
-      icon: <Focus />,
+      icon: <Brain />,
       title: "Enhance Focus & Awareness",
       description: "Improve mental clarity through deep conscious rest.",
     },

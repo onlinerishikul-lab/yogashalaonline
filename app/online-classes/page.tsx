@@ -2,6 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
+import { Header } from "@/components/common/header";
+import { SiteFooter } from "@/components/common/footer";
 
 type Course = {
   title: string;
@@ -45,16 +47,16 @@ const courseList: Course[] = [
     teacher: "By Exclusive Reversing Diabetic Yoga Instructors",
     image: "/DiabeticYoga.jpg",
   },
-    {
+  {
     title: "Power Yoga",
     teacher: "By Power Yoga Professionals",
     image: "/PowerYoga.jpg",
   },
-    {
+  {
     title: "Yoga Nidra",
     teacher: "By Yoga Nidra Professionals",
     image: "/YogaNidra.jpg",
-  }
+  },
 ];
 
 export default function ClassesPage() {
@@ -83,6 +85,7 @@ export default function ClassesPage() {
 
   return (
     <>
+      <Header />
       <section className="min-h-screen bg-[#FBF6F3] py-10 px-6">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold text-center text-[#4377B2] mb-10">
@@ -151,6 +154,7 @@ export default function ClassesPage() {
           </div>
         </div>
       </section>
+      <SiteFooter />
     </>
   );
 }

@@ -15,38 +15,48 @@ const courseList: Course[] = [
   {
     title: "Prenatal Yoga",
     teacher: "By Experienced Yoga Teachers",
-    image: "/images/prenatal.jpg",
+    image: "/Prenatal.jpg",
   },
   {
     title: "Postnatal Yoga",
     teacher: "By Certified Postnatal Experts",
-    image: "/images/postnatal.jpg",
+    image: "/Postnatal.jpg",
   },
   {
     title: "Meditation",
     teacher: "By Mindfulness Coaches",
-    image: "/images/meditation.jpg",
+    image: "/meditation.png",
   },
   {
     title: "Pranayama",
     teacher: "By Breathing Technique Specialists",
-    image: "/images/pranayama.jpg",
+    image: "/pranayama.jpg",
   },
   {
     title: "Hatha Yoga",
     teacher: "By Traditional Yoga Gurus",
-    image: "/images/hatha.jpg",
+    image: "/hatha-yoga.jpg",
   },
   {
     title: "Vinyasa Flow",
     teacher: "By Flow Yoga Professionals",
-    image: "/images/vinyasa.jpg",
+    image: "/vinyasaflow.jpg",
   },
   {
-    title: "Therapeutic Yoga",
-    teacher: "By Therapeutic Yoga Instructors",
-    image: "/images/therapeutic.jpg",
+    title: "Exclusive Reversing Diabetic Yoga",
+    teacher: "By Exclusive Reversing Diabetic Yoga Instructors",
+    image: "/DiabeticYoga.jpg",
   },
+    {
+    title: "Power Yoga",
+    teacher: "By Power Yoga Professionals",
+    image: "/PowerYoga.jpg",
+  },
+    {
+    title: "Yoga Nidra",
+    teacher: "By Yoga Nidra Professionals",
+    image: "/YogaNidra.jpg",
+  }
 ];
 
 export default function ClassesPage() {

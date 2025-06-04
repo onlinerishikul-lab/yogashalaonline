@@ -7,21 +7,22 @@ import { Header } from "@/components/common/header";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/vinyasaflow.jpg")' }}>
+    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/PowerYoga.jpg")' }}>
       {/* Header Menu */}
       <Header />
 
       {/* Hero Content Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white px-4 pt-20">
-       <h1 className="text-4xl md:text-5xl font-bold text-center leading-snug drop-shadow-lg">
-  Vinyasa-Flow
-  <br />
-  Energize Your Body, Harmonize Your Breath.
-</h1>
+  <h1 className="text-4xl md:text-5xl font-bold text-center leading-snug drop-shadow-lg">
+    Power Yoga
+    <br />
+    Energize the Body, Ignite the Mind.
+  </h1>
+  <button className="mt-6 bg-[#4377b2] hover:bg-[#365e8f] transition-colors duration-300 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg">
+    Enroll Now
+  </button>
+</div>
 
-        <button className="mt-6 bg-[#4377b2] hover:bg-[#365e8f] transition-colors duration-300 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg">
-          Enroll Now
-        </button>
 
         {/* Logos at the Bottom */}
         <div className="absolute bottom-6 flex space-x-6">

@@ -1,14 +1,14 @@
 
 "use client";
-import HeroSection from "@/app/Online-Yoga-Classes/Therapeutic-Yoga/HeroSection";
-import StickyCourseCard  from "@/app/Online-Yoga-Classes/Therapeutic-Yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/Online-Yoga-Classes/Therapeutic-Yoga/yogacourse";
-import LearnSection from "@/app/Online-Yoga-Classes/Therapeutic-Yoga/LearnSection";
-import CourseDetails from "@/app/Online-Yoga-Classes/Therapeutic-Yoga/CourseDetails";
-import YogaAccreditation from "@/app/Online-Yoga-Classes/Therapeutic-Yoga/YogaAccreditation";
-import CertificatePromo from "@/app/Online-Yoga-Classes/Therapeutic-Yoga/CertificatePromo";
-import TestimonialCarousel from "@/app/Online-Yoga-Classes/Therapeutic-Yoga/TestimonialCarousel";
-import Faq from "@/app/Online-Yoga-Classes/Therapeutic-Yoga/Faq";
+import HeroSection from "@/app/Online-Yoga-Classes/Exclusive Reversing Diabetic Yoga/HeroSectionabetic Yoga/HeroSection";
+import StickyCourseCard  from "@/app/Online-Yoga-Classes/Exclusive Reversing Diabetic Yoga/TestimonialSlider";
+import YogaCoursePage from "@/app/Online-Yoga-Classes/Exclusive Reversing Diabetic Yoga/yogacourse";
+import LearnSection from "@/app/Online-Yoga-Classes/Exclusive Reversing Diabetic Yoga/LearnSection";
+import CourseDetails from "@/app/Online-Yoga-Classes/Exclusive Reversing Diabetic Yoga/CourseDetailsetic Yoga/CourseDetails";
+import YogaAccreditation from "@/app/Online-Yoga-Classes/Exclusive Reversing Diabetic Yoga/YogaAccreditation";
+import CertificatePromo from "@/app/Online-Yoga-Classes/Exclusive Reversing Diabetic Yoga/CertificatePromoc Yoga/CertificatePromo";
+import TestimonialCarousel from "@/app/Online-Yoga-Classes/Exclusive Reversing Diabetic Yoga/TestimonialCarouseloga/TestimonialCarousel";
+import Faq from "@/app/Online-Yoga-Classes/Exclusive Reversing Diabetic Yoga/Faqrsing Diabetic Yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

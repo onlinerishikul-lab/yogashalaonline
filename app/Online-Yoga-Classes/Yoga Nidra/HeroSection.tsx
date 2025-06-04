@@ -7,22 +7,21 @@ import { Header } from "@/components/common/header";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/Prenatal.jpg")' }}>
+    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/YogaNidra.jpg")' }}>
       {/* Header Menu */}
       <Header />
 
       {/* Hero Content Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white px-4 pt-20">
-        <h1 className="text-4xl md:text-5xl font-bold text-center leading-snug drop-shadow-lg">
-          Prenatal Yoga Course 
-          <br />
-          Gentle Movement for a Healthy Pregnancy.
-        </h1>
-        <button className="mt-6 bg-[#4377b2] hover:bg-[#365e8f] transition-colors duration-300 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg">
-          Enroll Now
-        </button>
-
-        {/* Logos at the Bottom */}
+  <h1 className="text-4xl md:text-5xl font-bold text-center leading-snug drop-shadow-lg">
+    Yoga Nidra
+    <br />
+    Awaken Deep Rest, Restore Inner Balance.
+  </h1>
+  <button className="mt-6 bg-[#4377b2] hover:bg-[#365e8f] transition-colors duration-300 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg">
+    Enroll Now
+  </button>
+</div>       {/* Logos at the Bottom */}
         <div className="absolute bottom-6 flex space-x-6">
           <Image src="/rpys3.png" alt="RYS 200" width={64} height={64} />
           <Image src="/rpys2.png" alt="RYS 300" width={64} height={64} />

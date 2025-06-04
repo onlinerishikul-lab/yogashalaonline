@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Is this Prenatal Yoga course safe for all stages of pregnancy?",
+    question: "Do I need to be a yoga teacher to enroll in this course?",
     answer:
-      "Yes, the course is designed with modifications for each trimester. However, we recommend consulting your doctor before starting any new physical activity.",
+      "No. This course is open to everyone—whether you're a yoga teacher, therapist, healer, or simply someone seeking to deepen your personal practice of relaxation and inner awareness.",
   },
   {
-    question: "Do I need previous yoga experience?",
+    question: "Will I be certified to teach Yoga Nidra after completing the course?",
     answer:
-      "No prior yoga experience is required. The course is beginner-friendly and guides you through each pose safely and gently.",
+      "Yes. Upon successful completion, you’ll receive a Yoga Nidra Teacher Training Certificate that qualifies you to guide others through Yoga Nidra sessions.",
   },
   {
-    question: "What will I learn in this course?",
+    question: "Is this course theoretical or practical?",
     answer:
-      "You’ll learn safe yoga poses, breathing techniques, and relaxation practices to support your body and mind during pregnancy.",
+      "Both. The training combines deep philosophical understanding with guided practice sessions so you can experience, learn, and confidently lead Yoga Nidra.",
   },
   {
-    question: "Will I get a certificate after completing the course?",
+    question: "Can I complete this course at my own pace?",
     answer:
-      "Yes, upon successful completion of the course, you’ll receive a digital certificate of completion.",
+      "Yes. The course is self-paced and fully online, allowing you to progress through the lessons whenever it suits your schedule.",
   },
 ];
 
@@ -38,10 +38,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Prenatal Yoga Course: FAQ
+          Yoga Nidra Teacher Training: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Find answers to your questions before joining the course
+          Find answers to your questions before beginning your Yoga Nidra TTC journey.
         </p>
 
         <div className="space-y-4">

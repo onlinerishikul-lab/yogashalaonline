@@ -4,34 +4,34 @@ import React from "react";
 
 const skills = [
   {
-    title: "Individualized Assessment",
+    title: "Diabetic-Specific Yoga Sequences",
     description:
-      "Learn to assess and adapt yoga practices for different conditions.",
+      "Learn gentle, effective poses tailored for blood sugar balance.",
   },
   {
-    title: "Adaptive Sequencing",
+    title: "Pranayama for Pancreatic Health",
     description:
-      "Design safe and effective classes for pain relief and healing.",
+      "Use breath to improve insulin sensitivity and reduce cortisol.",
   },
   {
-    title: "Breath & Nervous System Regulation",
+    title: "Understanding Diabetes & Yoga",
     description:
-      "Use breath to calm anxiety and activate the parasympathetic response.",
+      "Explore how yoga influences glucose metabolism and organ function.",
   },
   {
-    title: "Restorative & Gentle Asanas",
+    title: "Meditation & Stress Reduction",
     description:
-      "Incorporate supported poses that ease tension and promote recovery.",
+      "Manage emotional triggers that affect blood sugar levels.",
   },
   {
-    title: "Chair & Bed Yoga",
+    title: "Ayurvedic Nutrition Tips",
     description:
-      "Make yoga accessible to those with limited mobility or chronic conditions.",
+      "Incorporate diabetic-friendly eating habits naturally and holistically.",
   },
   {
-    title: "Trauma-Informed Teaching",
+    title: "Daily Routine & Discipline",
     description:
-      "Create safe, supportive, and inclusive spaces for all students.",
+      "Build consistent habits that promote long-term reversal.",
   },
 ];
 
@@ -42,10 +42,10 @@ const YogaCoursePage = () => {
       {/* Header */}
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-[#4377b2] leading-snug">
-          Online Therapeutic Yoga Classes
+          Online Exclusive Reversing Diabetic Yoga Classes
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-       Learn to guide yoga for healing and recovery with our Therapeutic Yoga TTC. Gain the skills to support students with physical, mental, or emotional challenges using gentle practices rooted in safety, anatomy, and compassion.
+      Discover a holistic, yogic approach to managing and reversing Type 2 diabetes. This exclusive course blends therapeutic yoga, breathwork, diet guidance, and lifestyle awareness to help regulate blood sugar and restore balance naturally.
         </p>
       </section>
 

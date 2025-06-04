@@ -6,19 +6,19 @@ import { GraduationCap, Users, Sun, BarChart3 } from "lucide-react";
 const UniqueCourseSection = () => {
   const items = [
     {
-      title: "Experienced Prenatal Yoga Teachers",
+      title: "Experienced Hatha Yoga Instructors",
       icon: <Users className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Safe Practices for Mother and Baby",
+      title: "Focus on Breath & Posture Alignment",
       icon: <Sun className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Focus on Comfort, Strength & Flexibility",
+      title: "Traditional & Modern Techniques",
       icon: <GraduationCap className="w-6 h-6 text-sky-600" />,
     },
     {
-      title: "Personalized Support Throughout Pregnancy",
+      title: "Personalized Guidance for All Levels",
       icon: <BarChart3 className="w-6 h-6 text-sky-600" />,
     },
   ];
@@ -27,11 +27,11 @@ const UniqueCourseSection = () => {
     <section className="bg-white py-16 px-6 md:px-10 lg:px-20">
       <div className="max-w-6xl mx-auto text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold text-sky-600">
-          What Makes Our “Prenatal Yoga” Course Unique?
+          What Makes Our “Hatha Yoga” Course Unique?
         </h2>
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm md:text-base">
-          Nurture yourself and your baby with our Prenatal Yoga course.  
-          Learn gentle, effective techniques designed to enhance wellbeing, ease pregnancy discomforts, and prepare for childbirth.
+          Experience the perfect balance of strength and flexibility with our Hatha Yoga course.  
+          Learn foundational asanas, pranayama, and meditation techniques designed to enhance your physical and mental well-being.
         </p>
       </div>
 

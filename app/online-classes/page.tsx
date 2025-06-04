@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 
-
 type Course = {
   title: string;
   teacher: string;

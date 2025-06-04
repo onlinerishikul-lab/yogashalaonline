@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  Relax,
+  Lotus,
   Bed,
   Focus,
   Heart,
@@ -16,7 +16,7 @@ const CourseDetails = () => {
   const features = [
     {
       id: 1,
-      icon: <Relax />,
+      icon: <Lotus />,
       title: "Deep Stress Relief",
       description: "Release physical and emotional tension with profound relaxation.",
     },

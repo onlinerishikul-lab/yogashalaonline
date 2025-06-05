@@ -72,29 +72,6 @@ function slugify(title: string): string {
 }
 
 export default function ClassesPage() {
-  const handleExport = (course: Course) => {
-    const data = {
-      ...course,
-      schedule: {
-        english: ["6:00am", "7:30am", "6:00pm", "7:30pm IST"],
-        hindi: ["6:00am", "7:30am", "5:00pm", "6:00pm IST"],
-      },
-      duration: "1 Hour",
-      frequency: "6 Days a Week & All Time",
-    };
-
-    const blob = new Blob([JSON.stringify(data, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = `${course.title.replace(/\s+/g, "_")}_Info.json`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <>
       <Header />
@@ -156,13 +133,6 @@ export default function ClassesPage() {
                         Enroll Now
                       </button>
                     </div>
-
-                    <button
-                      onClick={() => handleExport(course)}
-                      className="mt-3 text-sm underline text-[#4377B2] hover:text-[#285384] transition text-left"
-                    >
-                      Export Course Info
-                    </button>
                   </div>
                 </div>
               );

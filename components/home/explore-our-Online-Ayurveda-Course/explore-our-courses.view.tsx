@@ -64,7 +64,6 @@ export default function ExploreOurClassesView({
                   src={course?.headerSection?.image || "/fallback.jpg"}
                   alt={course?.headerSection?.title || "Ayurveda Course"}
                   layout="fill"
-                  objectFit="cover"
                   quality={75}
                   loading="lazy"
                   className="transition-opacity duration-300 group-hover:opacity-90"

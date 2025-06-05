@@ -5,12 +5,13 @@ import { BlogCard } from "@/components/blog/blog-card";
 import MainWrapper from "@/components/wrappers/main-wrapper";
 import { getAllBlogs } from "@/app/actions/blog.action";
 
-type BlogParams = Promise<{ slug: string }>;
+interface PageProps {
+  params: { slug: string };
+}
 
-export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
-  const { slug } = await params;
+export default async function BlogDetailsPage({ params }: PageProps) {
   const blogs = await getAllBlogs();
-  const post = blogs.find((blog) => blog.slug === slug);
+  const post = blogs.find((blog) => blog.slug === params.slug);
 
   if (!post) notFound();
 
@@ -18,7 +19,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
     .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
     .slice(0, 3);
 
- const courses = [
+  const courses = [
     {
       title: "Yoga Anatomy For Safety",
       link: "/25-Hrs-Yoga-Courses/Yoga-Anatomy",
@@ -55,10 +56,11 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
       image: "/meditation.png",
     },
   ];
+
   return (
     <MainWrapper>
       <article className="min-h-screen">
-        {/* LCP-Optimized Hero Image */}
+        {/* Hero Image */}
         <div className="relative h-[70vh] w-full">
           <Image
             src={post.coverImage}
@@ -67,7 +69,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
             sizes="(max-width: 768px) 100vw, 80vw"
             quality={60}
             className="object-cover"
-            priority // Only LCP image should have this
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent" />
           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-10 lg:p-16">
@@ -97,7 +99,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
         {/* Content + Sidebar */}
         <div className="container max-w-7xl mx-auto px-4 py-12">
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Sidebar - Lazy Loaded Images */}
+            {/* Sidebar */}
             <aside className="w-full lg:w-1/4 space-y-4">
               <h2 className="text-xl font-bold text-[#4377B2]">Explore Courses</h2>
               <div className="grid gap-4">
@@ -125,7 +127,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
               </div>
             </aside>
 
-            {/* Main Blog Content */}
+            {/* Main Content */}
             <div className="prose prose-lg dark:prose-invert flex-1">
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
@@ -157,8 +159,8 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
                 </div>
               </div>
               <div className="flex space-x-4 text-sm">
-                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">Twitter</Link>
-                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">LinkedIn</Link>
+                <Link href="#" className="text-muted-foreground hover:text-[#4377B2] hover:underline">Twitter</Link>
+                <Link href="#" className="text-muted-foreground hover:text-[#4377B2] hover:underline">LinkedIn</Link>
               </div>
             </div>
           </div>
@@ -170,23 +172,23 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
             <div className="space-y-8">
               <h2 className="text-2xl font-bold text-[#4377B2]">Related Posts</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {relatedPosts.map((post) => (
+                {relatedPosts.map((related) => (
                   <BlogCard
-                    key={post.id}
+                    key={related.id}
                     post={{
-                      id: post.id,
-                      title: post.title,
-                      slug: post.slug,
-                      excerpt: post.overview,
-                      content: post.content,
-                      imageUrl: post.coverImage,
-                      date: new Date(post.createdAt).toLocaleDateString("en-US", {
+                      id: related.id,
+                      title: related.title,
+                      slug: related.slug,
+                      excerpt: related.overview,
+                      content: related.content,
+                      imageUrl: related.coverImage,
+                      date: new Date(related.createdAt).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
                         day: "numeric",
                       }),
-                      category: post.tags[0] || "Uncategorized",
-                      author: post.author.name,
+                      category: related.tags[0] || "Uncategorized",
+                      author: related.author.name,
                     }}
                   />
                 ))}

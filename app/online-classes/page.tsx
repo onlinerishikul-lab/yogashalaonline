@@ -60,14 +60,14 @@ const courseList: Course[] = [
   },
 ];
 
-// Updated slugify to handle non-breaking spaces and sanitize better
+// Converts course titles to clean URL slugs
 function slugify(title: string): string {
   return title
-    .normalize("NFKD")                      // Normalize special chars
-    .replace(/\u00A0/g, " ")                // Replace non-breaking space with normal space
-    .replace(/\s+/g, "-")                   // Replace spaces with hyphens
-    .replace(/[^\w\-]+/g, "")               // Remove non-word characters
-    .replace(/\-+/g, "-")                   // Collapse multiple hyphens
+    .normalize("NFKD")
+    .replace(/\u00A0/g, " ")        // non-breaking space to normal
+    .replace(/\s+/g, "-")           // space to dash
+    .replace(/[^\w\-]+/g, "")       // remove special characters
+    .replace(/\-+/g, "-")           // collapse dashes
     .trim();
 }
 
@@ -134,12 +134,10 @@ export default function ClassesPage() {
                           <strong>Everyday:</strong> 6 Days a Week & All Time
                         </li>
                         <li>
-                          <strong>English:</strong> 6:00am, 7:30am, 6:00pm,
-                          7:30pm IST
+                          <strong>English:</strong> 6:00am, 7:30am, 6:00pm, 7:30pm IST
                         </li>
                         <li>
-                          <strong>Hindi:</strong> 6:00am, 7:30am, 5:00pm, 6:00pm
-                          IST
+                          <strong>Hindi:</strong> 6:00am, 7:30am, 5:00pm, 6:00pm IST
                         </li>
                         <li>
                           <strong>Session Duration:</strong> 1 Hour Class
@@ -158,6 +156,13 @@ export default function ClassesPage() {
                         Enroll Now
                       </button>
                     </div>
+
+                    <button
+                      onClick={() => handleExport(course)}
+                      className="mt-3 text-sm underline text-[#4377B2] hover:text-[#285384] transition text-left"
+                    >
+                      Export Course Info
+                    </button>
                   </div>
                 </div>
               );

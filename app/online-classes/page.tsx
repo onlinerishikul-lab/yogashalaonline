@@ -44,12 +44,12 @@ const courseList: Course[] = [
     image: "/vinyasaflow.jpg",
   },
   {
-    title: "Exclusive Reversing Diabetic Yoga",
+    title: "Exclusive Reversing Diabetic Yoga",
     teacher: "By Exclusive Reversing Diabetic Yoga Instructors",
     image: "/DiabeticYoga.jpg",
   },
   {
-    title: "Power Yoga",
+    title: "Power Yoga",
     teacher: "By Power Yoga Professionals",
     image: "/PowerYoga.jpg",
   },
@@ -60,11 +60,14 @@ const courseList: Course[] = [
   },
 ];
 
+// Updated slugify to handle non-breaking spaces and sanitize better
 function slugify(title: string): string {
   return title
-    .replace(/\s+/g, "-") // Replace spaces with hyphens
-    .replace(/[^\w\-]+/g, "") // Remove non-word characters
-    .replace(/\-+/g, "-") // Replace multiple hyphens with one
+    .normalize("NFKD")                      // Normalize special chars
+    .replace(/\u00A0/g, " ")                // Replace non-breaking space with normal space
+    .replace(/\s+/g, "-")                   // Replace spaces with hyphens
+    .replace(/[^\w\-]+/g, "")               // Remove non-word characters
+    .replace(/\-+/g, "-")                   // Collapse multiple hyphens
     .trim();
 }
 
@@ -155,13 +158,6 @@ export default function ClassesPage() {
                         Enroll Now
                       </button>
                     </div>
-
-                    <button
-                      onClick={() => handleExport(course)}
-                      className="mt-3 text-sm underline text-[#4377B2] hover:text-[#285384] transition text-left"
-                    >
-                      Export Course Info
-                    </button>
                   </div>
                 </div>
               );

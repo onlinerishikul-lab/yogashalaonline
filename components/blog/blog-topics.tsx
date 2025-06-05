@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { BlogCard } from './blog-card'
@@ -11,19 +11,17 @@ interface BlogTopicsProps {
 }
 
 export function BlogTopics({ posts }: BlogTopicsProps) {
-  const categories = useMemo(
-    () => ['All', ...new Set(posts.map((post) => post.category))],
-    [posts]
-  )
+  const categories: BlogCategory[] = ['All', ...Array.from(new Set(posts.map((p) => p.category)))]
+
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('All')
 
-  const filteredPosts = useMemo(() => {
-    if (activeCategory === 'All') return posts
-    return posts.filter((post) => post.category === activeCategory)
-  }, [activeCategory, posts])
+  const filteredPosts = activeCategory === 'All'
+    ? posts
+    : posts.filter((post) => post.category === activeCategory)
 
   return (
     <section className="space-y-8">
+      {/* Header */}
       <div className="flex items-center justify-between">
         <h2 className="text-3xl font-bold text-[#4377B2]">Popular Topics</h2>
         <Link
@@ -34,12 +32,18 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
         </Link>
       </div>
 
-      <div className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 scrollbar-hide">
+      {/* Category Tabs */}
+      <nav
+        role="tablist"
+        aria-label="Blog category tabs"
+        className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 scrollbar-hide"
+      >
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
-            aria-pressed={activeCategory === category}
+            role="tab"
+            aria-selected={activeCategory === category}
             className={cn(
               'whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors',
               activeCategory === category
@@ -50,19 +54,22 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
             {category}
           </button>
         ))}
-      </div>
+      </nav>
 
+      {/* Blog Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post, index) => (
             <BlogCard
               key={post.id}
               post={post}
-              isFirst={index === 0} // ✅ Only first card loads eagerly
+              isFirst={index === 0} // ✅ First image loads eagerly
             />
           ))
         ) : (
-          <p className="text-muted-foreground col-span-full">No posts available in this category.</p>
+          <p className="text-muted-foreground col-span-full">
+            No posts available in this category.
+          </p>
         )}
       </div>
     </section>

@@ -12,24 +12,32 @@ interface ExtendedBlogCardProps extends BlogCardProps {
 export function BlogCard({ post, className, isFirst = false }: ExtendedBlogCardProps) {
   return (
     <div className={cn('block h-full', className)}>
-      <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-md">
+      <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
+        {/* Image Section */}
         <div className="relative w-full aspect-[16/9] bg-gray-100">
           <Image
             src={post.imageUrl}
             alt={post.title}
             fill
-            quality={70}
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            style={{ objectFit: 'cover' }}
-            loading={isFirst ? 'eager' : 'lazy'} // ✅ Only eager-load 1st
+            className="object-cover"
+            loading={isFirst ? 'eager' : 'lazy'}
             priority={isFirst}
+            quality={70}
             placeholder={post.blurDataURL ? 'blur' : 'empty'}
             blurDataURL={post.blurDataURL}
           />
         </div>
+
+        {/* Content Section */}
         <div className="p-4 flex flex-col justify-between flex-1">
           <div>
-            <time className="text-xs text-muted-foreground mb-2">{post.date}</time>
+            <time
+              className="text-xs text-muted-foreground mb-2 block"
+              dateTime={new Date(post.date).toISOString()}
+            >
+              {post.date}
+            </time>
             <h3 className="text-lg font-semibold mb-2 line-clamp-2 hover:text-[#4377B2] transition-colors">
               {post.title}
             </h3>

@@ -69,6 +69,7 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
             fill
             className="object-cover"
             priority
+            sizes="(max-width: 768px) 100vw, 70vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent" />
           <div className="absolute inset-0 flex flex-col items-center justify-center p-8 md:p-12 lg:p-16">
@@ -84,7 +85,7 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
                 <div className="flex items-center justify-center space-x-4 text-white/80">
                   <p>By {post.author.name}</p>
                   <span>•</span>
-                  <time>
+                  <time dateTime={post.createdAt}>
                     {new Date(post.createdAt).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",
@@ -107,34 +108,41 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
               <h2 className="text-xl font-bold text-[#4377B2]">Explore Courses</h2>
               <div className="grid grid-cols-1 gap-4">
                 {courses.map((course) => (
-                  <Link key={course.title} href={course.link}>
-                    <div className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300 cursor-pointer group">
+                  <Link key={course.title} href={course.link} passHref>
+                    <a
+                      className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300 cursor-pointer group block"
+                      aria-label={`Explore course: ${course.title}`}
+                    >
                       <div className="relative h-40 w-full overflow-hidden">
                         <Image
                           src={course.image}
                           alt={course.title}
-                          fill
+                          width={400}  // Set width and height instead of fill for sidebar images
+                          height={160}
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                          sizes="(max-width: 768px) 100vw, 25vw"
+                          priority={false}
                         />
                       </div>
                       <div className="p-4">
                         <h3 className="font-semibold text-[#4377B2] text-lg">{course.title}</h3>
                         <p className="text-sm text-muted-foreground">Explore this course</p>
                       </div>
-                    </div>
+                    </a>
                   </Link>
                 ))}
               </div>
             </aside>
 
             {/* Main Content */}
-            <div className="prose prose-lg dark:prose-invert flex-1">
+            <section className="prose prose-lg dark:prose-invert flex-1 max-w-none">
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
-            </div>
+            </section>
           </div>
 
           {/* Author Section */}
-          <div className="mt-16 border-t pt-8">
+          <section className="mt-16 border-t pt-8">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 {post.author.image ? (
@@ -144,6 +152,7 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
                     width={48}
                     height={48}
                     className="rounded-full"
+                    loading="lazy"
                   />
                 ) : (
                   <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center">
@@ -158,20 +167,24 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
                 </div>
               </div>
               <div className="flex space-x-4">
-                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">
-                  Twitter
+                <Link href="#" passHref>
+                  <a className="text-muted-foreground hover:text-[#4377B2]" aria-label="Twitter profile">
+                    Twitter
+                  </a>
                 </Link>
-                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">
-                  LinkedIn
+                <Link href="#" passHref>
+                  <a className="text-muted-foreground hover:text-[#4377B2]" aria-label="LinkedIn profile">
+                    LinkedIn
+                  </a>
                 </Link>
               </div>
             </div>
-          </div>
+          </section>
         </div>
 
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
-          <div className="container mx-auto px-4 py-16">
+          <section className="container mx-auto px-4 py-16">
             <div className="space-y-8">
               <h2 className="text-2xl font-bold text-[#4377B2]">Related Posts</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -197,7 +210,7 @@ export default async function BlogDetailsPage(props: { params: BlogParams }) {
                 ))}
               </div>
             </div>
-          </div>
+          </section>
         )}
       </article>
     </MainWrapper>

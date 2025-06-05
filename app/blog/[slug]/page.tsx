@@ -12,7 +12,6 @@ interface PageProps {
 export default async function BlogDetailsPage({ params }: PageProps) {
   const blogs = await getAllBlogs();
   const post = blogs.find((blog) => blog.slug === params.slug);
-
   if (!post) notFound();
 
   const relatedPosts = blogs

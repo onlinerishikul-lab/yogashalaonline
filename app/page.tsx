@@ -37,40 +37,66 @@ export default async function Home() {
       <Banner />
       <Usp />
 
-      {/* Section 1: Benefits + Courses */}
-      <section className="bg-white py-0 sm:py-0 lg:py-0">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Section 1: Benefits + Yoga Courses */}
+      <section className="bg-white py-6 sm:py-8 md:py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <ExploreOurCoursesView courses={courses} />
           <BenefitsOfOnlineLearning />
         </div>
       </section>
 
-      {/* Section 2: Course Levels + Ayurveda Courses */}
-      <section className="bg-white py-0 sm:py-0 lg:py-0">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Section 2: Ayurveda Courses + Course Levels */}
+      <section className="bg-[#F9F9F9] py-6 sm:py-8 md:py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <ExploreOurAyurvedaCoursesView courses={courses} />
           <CourseLevels />
         </div>
       </section>
 
-      {/* Section 3: Yoga For Everyone + Yoga Classes */}
-      <section className="bg-white py-0 sm:py-0 lg:py-0">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Section 3: Yoga Classes + Yoga For Everyone */}
+      <section className="bg-white py-6 sm:py-8 md:py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <ExploreOurClassesView courses={courses} />
           <YogaForEveryone />
         </div>
       </section>
 
-      {/* Remaining Sections */}
-      <Guarante />
-      <OurTeaching />
-      <Transforming />
-      <Trust />
-      <Blogs blogs={blogs} />
-      <Join />
-      <Faculty />
-      <TestimonialView title="What Our Students Say" tilt={true} />
-      <GetInTouch />
+      {/* Other Key Sections */}
+      <section className="bg-[#F9F9F9]">
+        <Guarante />
+      </section>
+
+      <section className="bg-white">
+        <OurTeaching />
+      </section>
+
+      <section className="bg-[#F9F9F9]">
+        <Transforming />
+      </section>
+
+      <section className="bg-white">
+        <Trust />
+      </section>
+
+      <section className="bg-[#F9F9F9] py-6 sm:py-8 md:py-10">
+        <Blogs blogs={blogs} />
+      </section>
+
+      <section className="bg-white py-6 sm:py-8 md:py-10">
+        <Join />
+      </section>
+
+      <section className="bg-[#F9F9F9]">
+        <Faculty />
+      </section>
+
+      <section className="bg-white py-6 sm:py-8 md:py-10">
+        <TestimonialView title="What Our Students Say" tilt={true} />
+      </section>
+
+      <section className="bg-[#F9F9F9] py-6 sm:py-8 md:py-10">
+        <GetInTouch />
+      </section>
     </MainWrapper>
   )
 }

@@ -38,24 +38,24 @@ export default async function Home() {
       <Usp />
 
       {/* Section 1: Benefits + Yoga Courses */}
-      <section className="bg-white py-6 sm:py-8 md:py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <section className="bg-white py-0 sm:py-0 md:py-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <ExploreOurCoursesView courses={courses} />
           <BenefitsOfOnlineLearning />
         </div>
       </section>
 
       {/* Section 2: Ayurveda Courses + Course Levels */}
-      <section className="bg-[#F9F9F9] py-6 sm:py-8 md:py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <section className="bg-[#F9F9F9] py-0 sm:py-0 md:py-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ExploreOurAyurvedaCoursesView courses={courses} />
           <CourseLevels />
         </div>
       </section>
 
       {/* Section 3: Yoga Classes + Yoga For Everyone */}
-      <section className="bg-white py-6 sm:py-8 md:py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <section className="bg-white py-0 sm:py-0 md:py-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ExploreOurClassesView courses={courses} />
           <YogaForEveryone />
         </div>

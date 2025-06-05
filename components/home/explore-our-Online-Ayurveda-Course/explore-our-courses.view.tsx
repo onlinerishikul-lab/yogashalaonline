@@ -19,7 +19,7 @@ export default function ExploreOurClassesView({
   const router = useRouter();
 
   const handleExploreMoreClick = () => {
-    router.push("/courses");
+    router.push("/Online-ayurveda");
   };
 
   const filteredCourses = courses.filter((course) =>

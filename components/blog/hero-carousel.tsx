@@ -30,7 +30,7 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
       role="group"
       aria-roledescription="carousel"
       aria-label="Hero blog carousel"
-      className="relative w-full max-w-[1440px] h-[400px] mx-auto overflow-hidden bg-gray-200"
+      className="relative w-full h-[400px] overflow-hidden bg-gray-200"
     >
       <AnimatePresence initial={false} mode="wait">
         <motion.div
@@ -45,9 +45,12 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
             src={currentPost.imageUrl}
             alt={currentPost.title}
             fill
-            priority={currentIndex === 0}
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 70vw"
+            sizes="100vw"
             className="object-cover"
+            priority={currentIndex === 0} // ✅ Preload first slide for LCP
+            loading={currentIndex === 0 ? 'eager' : 'lazy'}
+            placeholder={currentPost.blurDataURL ? 'blur' : 'empty'}
+            blurDataURL={currentPost.blurDataURL}
           />
           <div className="absolute inset-0 flex flex-col justify-end bg-black/40 p-6 sm:p-10 text-white">
             <div className="max-w-3xl space-y-3" aria-live="polite">

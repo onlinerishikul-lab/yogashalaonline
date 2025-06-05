@@ -8,7 +8,7 @@ export function Banner() {
     <div className="relative w-full min-h-screen overflow-hidden">
       {/* Background Image */}
       <Image
-        src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=2000&auto=format&fit=crop"
+        src="/onlinebg.jpg"
         alt="Yoga pose on beach"
         fill
         className="object-cover brightness-75"
@@ -35,10 +35,10 @@ export function Banner() {
 
       {/* Bottom Left Badges */}
       <div className="absolute bottom-4 left-4 z-20 flex flex-wrap justify-start items-center gap-2 sm:gap-3">
-        <Image src="/rpys3.png" alt="RYS 300 Yoga Alliance" width={50} height={50} />
-        <Image src="/rpys2.png" alt="RYS 200 Yoga Alliance" width={50} height={50} />
-        <Image src="/rpys1.png" alt="RPYS Yoga Alliance" width={50} height={50} />
-        <Image src="/rpys6.png" alt="RYS 300 Yoga Alliance" width={50} height={50} />
+        <Image src="/rpys3.png" alt="RYS 300 Yoga Alliance" width={70} height={70} />
+        <Image src="/rpys2.png" alt="RYS 200 Yoga Alliance" width={70} height={70} />
+        <Image src="/rpys1.png" alt="RPYS Yoga Alliance" width={70} height={70} />
+        <Image src="/rpys6.png" alt="RYS 300 Yoga Alliance" width={70} height={70} />
       </div>
 
       {/* Bottom Right Yoga Alliance Logo */}

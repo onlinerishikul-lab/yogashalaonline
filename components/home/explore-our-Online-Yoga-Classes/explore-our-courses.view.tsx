@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import styles from "./explore-our-courses.module.css";
 import { Course } from "@/types/course";
+import Image from "next/image";
 import "swiper/css";
 
 interface ExploreOurCoursesViewProps {
@@ -18,7 +19,7 @@ export default function ExploreOurClassesView({
   const router = useRouter();
 
   const handleExploreMoreClick = () => {
-    router.push("/online-classes"); // 🔁 Updated path here
+    router.push("/online-classes");
   };
 
   const filteredCourses = courses.filter((course) =>
@@ -57,14 +58,20 @@ export default function ExploreOurClassesView({
             <SwiperSlide key={course.id + index}>
               <div
                 onClick={handleExploreMoreClick}
-                style={{
-                  backgroundImage: `url(${
-                    course.headerSection?.image || "/fallback.jpg"
-                  })`,
-                }}
-                className="overflow-hidden shadow-lg relative rounded-md h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity duration-300 cursor-pointer"
+                className="relative h-[320px] rounded-md overflow-hidden shadow-lg cursor-pointer group"
                 aria-label={course.headerSection?.title || "Yoga Course"}
               >
+                <Image
+                  src={course.headerSection?.image || "/fallback.jpg"}
+                  alt={course.headerSection?.title || "Yoga Course"}
+                  fill
+                  className="object-cover transition-opacity duration-300 group-hover:opacity-90"
+                  quality={70}
+                  sizes="(max-width: 768px) 100vw,
+                         (max-width: 1200px) 50vw,
+                         25vw"
+                  loading="lazy"
+                />
                 <div className="absolute bottom-4 right-4 bg-[#4377B2] text-white text-sm px-3 py-1 rounded z-20 shadow-md">
                   Online
                 </div>

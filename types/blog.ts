@@ -1,15 +1,15 @@
 // Types for UI components
 export interface BlogPost {
   id: string
-  slug: string
   title: string
+  slug: string
   excerpt: string
+  imageUrl: string
   date: string
   category: string
-  imageUrl: string
-  author: string
-  content: string
+  blurDataURL?: string // ✅ Add this optional field
 }
+
 
 export interface BlogCardProps {
   post: BlogPost

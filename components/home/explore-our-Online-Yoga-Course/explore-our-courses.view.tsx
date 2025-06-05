@@ -19,7 +19,7 @@ export default function ExploreOurClassesView({
   const router = useRouter();
 
   const handleExploreMoreClick = () => {
-    router.push("/courses");
+    router.push("/online-course");
   };
 
   const filteredCourses = courses.filter((course) =>

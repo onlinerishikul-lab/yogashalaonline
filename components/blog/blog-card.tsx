@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 
 interface ExtendedBlogCardProps extends BlogCardProps {
   className?: string
-  isFirst?: boolean // Used to prioritize LCP
+  isFirst?: boolean
 }
 
 export function BlogCard({ post, className, isFirst = false }: ExtendedBlogCardProps) {
@@ -18,13 +18,13 @@ export function BlogCard({ post, className, isFirst = false }: ExtendedBlogCardP
             src={post.imageUrl}
             alt={post.title}
             fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             quality={70}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            style={{ objectFit: 'cover' }}
+            loading={isFirst ? 'eager' : 'lazy'} // ✅ Only eager-load 1st
             priority={isFirst}
-            loading={isFirst ? 'eager' : 'lazy'}
-            placeholder="blur"
-            blurDataURL={post.blurDataURL || '/placeholder.jpg'} // fallback to low-res placeholder
+            placeholder={post.blurDataURL ? 'blur' : 'empty'}
+            blurDataURL={post.blurDataURL}
           />
         </div>
         <div className="p-4 flex flex-col justify-between flex-1">

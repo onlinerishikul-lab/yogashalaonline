@@ -65,7 +65,7 @@ export default function ExploreOurClassesView({
                   src={course.headerSection?.image || "/fallback.jpg"}
                   alt={course.headerSection?.title || "Yoga Course"}
                   fill
-                  className="object-cover transition-opacity duration-300 group-hover:opacity-90"
+                  className="transition-opacity duration-300 group-hover:opacity-90"
                   quality={70}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   loading="lazy"

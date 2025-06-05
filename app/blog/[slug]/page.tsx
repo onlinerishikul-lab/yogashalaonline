@@ -5,13 +5,11 @@ import { BlogCard } from "@/components/blog/blog-card";
 import MainWrapper from "@/components/wrappers/main-wrapper";
 import { getAllBlogs } from "@/app/actions/blog.action";
 
-interface PageProps {
-  params: { slug: string };
-}
-
-export default async function BlogDetailsPage({ params }: PageProps) {
+export default async function BlogDetailsPage({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   const blogs = await getAllBlogs();
-  const post = blogs.find((blog) => blog.slug === params.slug);
+  const post = blogs.find((blog) => blog.slug === slug);
+
   if (!post) notFound();
 
   const relatedPosts = blogs
@@ -95,7 +93,7 @@ export default async function BlogDetailsPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Content + Sidebar */}
+        {/* Content & Sidebar */}
         <div className="container max-w-7xl mx-auto px-4 py-12">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Sidebar */}
@@ -126,7 +124,7 @@ export default async function BlogDetailsPage({ params }: PageProps) {
               </div>
             </aside>
 
-            {/* Main Content */}
+            {/* Main Blog Content */}
             <div className="prose prose-lg dark:prose-invert flex-1">
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
@@ -158,8 +156,12 @@ export default async function BlogDetailsPage({ params }: PageProps) {
                 </div>
               </div>
               <div className="flex space-x-4 text-sm">
-                <Link href="#" className="text-muted-foreground hover:text-[#4377B2] hover:underline">Twitter</Link>
-                <Link href="#" className="text-muted-foreground hover:text-[#4377B2] hover:underline">LinkedIn</Link>
+                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">
+                  Twitter
+                </Link>
+                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">
+                  LinkedIn
+                </Link>
               </div>
             </div>
           </div>
@@ -171,23 +173,23 @@ export default async function BlogDetailsPage({ params }: PageProps) {
             <div className="space-y-8">
               <h2 className="text-2xl font-bold text-[#4377B2]">Related Posts</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {relatedPosts.map((related) => (
+                {relatedPosts.map((post) => (
                   <BlogCard
-                    key={related.id}
+                    key={post.id}
                     post={{
-                      id: related.id,
-                      title: related.title,
-                      slug: related.slug,
-                      excerpt: related.overview,
-                      content: related.content,
-                      imageUrl: related.coverImage,
-                      date: new Date(related.createdAt).toLocaleDateString("en-US", {
+                      id: post.id,
+                      title: post.title,
+                      slug: post.slug,
+                      excerpt: post.overview,
+                      content: post.content,
+                      imageUrl: post.coverImage,
+                      date: new Date(post.createdAt).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
                         day: "numeric",
                       }),
-                      category: related.tags[0] || "Uncategorized",
-                      author: related.author.name,
+                      category: post.tags[0] || "Uncategorized",
+                      author: post.author.name,
                     }}
                   />
                 ))}

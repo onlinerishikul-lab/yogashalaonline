@@ -3,8 +3,16 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Menu, MoveRight, X, ChevronDown, ChevronRight, ChevronUp } from "lucide-react";
+import {
+  Menu,
+  MoveRight,
+  X,
+  ChevronDown,
+  ChevronRight,
+  ChevronUp,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 type SubDropdownItem = {
   title: string;
   href: string;
@@ -17,17 +25,10 @@ type DropdownItem = {
 };
 
 type NavigationItem =
-  | {
-      title: string;
-      href: string;
-    }
-  | {
-      title: string;
-      dropdown: DropdownItem[];
-    };
+  | { title: string; href: string }
+  | { title: string; dropdown: DropdownItem[] };
 
-export const Header = () => {
-  const router = useRouter();
+// 🟡 Replace this with your real navigation items
   const navigationItems: NavigationItem[] = [
     {
       title: "Yoga Courses",
@@ -167,21 +168,25 @@ export const Header = () => {
     { title: "Contact Us", href: "/contact" },
     { title: "Payment", href: "/payments" },
   ];
-
+export const Header = () => {
+  const router = useRouter();
   const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
-  
-  // Mobile dropdown states
   const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
   const [expandedMobileSubItems, setExpandedMobileSubItems] = useState<string[]>([]);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY >= window.innerHeight / 2);
+    const handleScroll = () =>
+      setIsScrolled(window.scrollY >= window.innerHeight / 2);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -195,21 +200,15 @@ export const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Toggle mobile dropdown
   const toggleMobileDropdown = (title: string) => {
-    setExpandedMobileItems(prev => 
-      prev.includes(title) 
-        ? prev.filter(item => item !== title) 
-        : [...prev, title]
+    setExpandedMobileItems((prev) =>
+      prev.includes(title) ? prev.filter((item) => item !== title) : [...prev, title]
     );
   };
 
-  // Toggle mobile subdropdown
   const toggleMobileSubDropdown = (title: string) => {
-    setExpandedMobileSubItems(prev => 
-      prev.includes(title) 
-        ? prev.filter(item => item !== title) 
-        : [...prev, title]
+    setExpandedMobileSubItems((prev) =>
+      prev.includes(title) ? prev.filter((item) => item !== title) : [...prev, title]
     );
   };
 
@@ -219,7 +218,7 @@ export const Header = () => {
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="w-full max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between relative">
         {/* Left Nav */}
         <div className="hidden lg:flex flex-1 items-center gap-x-8 text-white text-sm font-medium">
           {navigationItems.slice(0, 3).map((item) =>
@@ -238,7 +237,7 @@ export const Header = () => {
                   <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
                     {item.dropdown.map((subItem, idx) => (
                       <div key={subItem.title} className="relative group">
-                        {idx > 0 && <div className="border-t border-gray-200 my-1"></div>}
+                        {idx > 0 && <div className="border-t border-gray-200 my-1" />}
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
@@ -261,7 +260,7 @@ export const Header = () => {
                           <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md min-w-[300px] z-50 p-2 space-y-1 whitespace-nowrap">
                             {subItem.subDropdown.map((nestedItem, nestedIdx) => (
                               <div key={nestedItem.title}>
-                                {nestedIdx > 0 && <div className="border-t border-gray-200 my-1"></div>}
+                                {nestedIdx > 0 && <div className="border-t border-gray-200 my-1" />}
                                 <Link
                                   href={nestedItem.href}
                                   className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
@@ -286,8 +285,13 @@ export const Header = () => {
         </div>
 
         {/* Logo */}
-        <Link href="/" className="flex-shrink-0">
-          <Image src="/assets/rishikulonlinlogo.png" alt="Yoga Logo" width={120} height={80} />
+        <Link href="/" className="flex-shrink-0 z-50">
+          <Image
+            src="/assets/rishikulonlinlogo.png"
+            alt="Yoga Logo"
+            width={120}
+            height={80}
+          />
         </Link>
 
         {/* Right Nav */}
@@ -308,7 +312,7 @@ export const Header = () => {
                   <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1 right-0">
                     {item.dropdown.map((subItem, idx) => (
                       <div key={subItem.title}>
-                        {idx > 0 && <div className="border-t border-gray-200 my-1"></div>}
+                        {idx > 0 && <div className="border-t border-gray-200 my-1" />}
                         <Link
                           href={subItem.href}
                           className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
@@ -327,7 +331,6 @@ export const Header = () => {
             )
           )}
 
-          {/* Login Button */}
           <Button
             onClick={() => router.push("/login")}
             className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full"
@@ -336,10 +339,14 @@ export const Header = () => {
           </Button>
         </div>
 
-        {/* Mobile Toggle */}
-        <div className="lg:hidden absolute right-4 top-1/2 transform -translate-y-1/2">
+        {/* Mobile Menu Toggle */}
+        <div className="lg:hidden z-50">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-            {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+            {isOpen ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <Menu className="w-6 h-6 text-white" />
+            )}
           </Button>
         </div>
       </div>
@@ -372,12 +379,12 @@ export const Header = () => {
                         <ChevronDown className="w-5 h-5" />
                       )}
                     </button>
-                    
+
                     {expandedMobileItems.includes(item.title) && (
                       <div className="pl-4 space-y-2 mt-2 border-l-2 border-white/20">
                         {item.dropdown.map((subItem, subIdx) => (
                           <div key={subItem.title} className="py-1">
-                            {subIdx > 0 && <div className="border-t border-white/10 my-2"></div>}
+                            {subIdx > 0 && <div className="border-t border-white/10 my-2" />}
                             {subItem.subDropdown ? (
                               <div>
                                 <button
@@ -391,12 +398,12 @@ export const Header = () => {
                                     <ChevronDown className="w-4 h-4" />
                                   )}
                                 </button>
-                                
+
                                 {expandedMobileSubItems.includes(subItem.title) && (
                                   <div className="pl-4 mt-2 space-y-2 border-l border-white/20">
                                     {subItem.subDropdown.map((nestedItem, nestedIdx) => (
                                       <div key={nestedItem.title}>
-                                        {nestedIdx > 0 && <div className="border-t border-white/10 my-2"></div>}
+                                        {nestedIdx > 0 && <div className="border-t border-white/10 my-2" />}
                                         <Link
                                           href={nestedItem.href}
                                           className="block text-sm hover:text-white/80 py-1"
@@ -426,6 +433,7 @@ export const Header = () => {
                 )}
               </div>
             ))}
+
             <Button
               onClick={() => {
                 setOpen(false);

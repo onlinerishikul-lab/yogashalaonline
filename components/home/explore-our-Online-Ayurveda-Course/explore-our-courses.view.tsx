@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import styles from "./explore-our-courses.module.css";
 import { Course } from "@/types/course";
+import Image from "next/image";
 import "swiper/css";
 
 interface ExploreOurCoursesViewProps {
@@ -57,14 +58,17 @@ export default function ExploreOurClassesView({
             <SwiperSlide key={course.id + index}>
               <div
                 onClick={handleExploreMoreClick}
-                style={{
-                  backgroundImage: `url(${course?.headerSection?.image || "/fallback.jpg"})`,
-                }}
-                className="overflow-hidden shadow-lg relative rounded-md h-[320px] bg-cover bg-center hover:opacity-90 transition-opacity duration-300 cursor-pointer"
+                className="relative overflow-hidden shadow-lg rounded-md h-[320px] cursor-pointer group"
               >
-                <span className="sr-only">
-                  {course?.headerSection?.title || "Ayurveda Course"}
-                </span>
+                <Image
+                  src={course?.headerSection?.image || "/fallback.jpg"}
+                  alt={course?.headerSection?.title || "Ayurveda Course"}
+                  layout="fill"
+                  objectFit="cover"
+                  quality={75}
+                  loading="lazy"
+                  className="transition-opacity duration-300 group-hover:opacity-90"
+                />
                 <div className="absolute bottom-4 right-4 bg-[#4377B2] text-white text-sm px-3 py-1 rounded z-20 shadow-md">
                   Online
                 </div>

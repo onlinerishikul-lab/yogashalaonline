@@ -5,8 +5,10 @@ import { BlogCard } from "@/components/blog/blog-card";
 import MainWrapper from "@/components/wrappers/main-wrapper";
 import { getAllBlogs } from "@/app/actions/blog.action";
 
-export default async function BlogDetailsPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+type BlogParams = Promise<{ slug: string }>;
+
+export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
+  const { slug } = await params;
   const blogs = await getAllBlogs();
   const post = blogs.find((blog) => blog.slug === slug);
 
@@ -16,7 +18,7 @@ export default async function BlogDetailsPage({ params }: { params: { slug: stri
     .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
     .slice(0, 3);
 
-  const courses = [
+ const courses = [
     {
       title: "Yoga Anatomy For Safety",
       link: "/25-Hrs-Yoga-Courses/Yoga-Anatomy",
@@ -53,11 +55,10 @@ export default async function BlogDetailsPage({ params }: { params: { slug: stri
       image: "/meditation.png",
     },
   ];
-
   return (
     <MainWrapper>
       <article className="min-h-screen">
-        {/* Hero Image */}
+        {/* LCP-Optimized Hero Image */}
         <div className="relative h-[70vh] w-full">
           <Image
             src={post.coverImage}
@@ -66,7 +67,7 @@ export default async function BlogDetailsPage({ params }: { params: { slug: stri
             sizes="(max-width: 768px) 100vw, 80vw"
             quality={60}
             className="object-cover"
-            priority
+            priority // Only LCP image should have this
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent" />
           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-10 lg:p-16">
@@ -93,10 +94,10 @@ export default async function BlogDetailsPage({ params }: { params: { slug: stri
           </div>
         </div>
 
-        {/* Content & Sidebar */}
+        {/* Content + Sidebar */}
         <div className="container max-w-7xl mx-auto px-4 py-12">
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Sidebar */}
+            {/* Sidebar - Lazy Loaded Images */}
             <aside className="w-full lg:w-1/4 space-y-4">
               <h2 className="text-xl font-bold text-[#4377B2]">Explore Courses</h2>
               <div className="grid gap-4">
@@ -156,12 +157,8 @@ export default async function BlogDetailsPage({ params }: { params: { slug: stri
                 </div>
               </div>
               <div className="flex space-x-4 text-sm">
-                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">
-                  Twitter
-                </Link>
-                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">
-                  LinkedIn
-                </Link>
+                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">Twitter</Link>
+                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">LinkedIn</Link>
               </div>
             </div>
           </div>

@@ -68,6 +68,7 @@ export default function ExploreOurClassesView({
                   sizes="(max-width: 768px) 100vw,
                          (max-width: 1200px) 50vw,
                          25vw"
+                  fill
                   className="object-cover transition-opacity duration-300 group-hover:opacity-90"
                   quality={70}
                   loading="lazy"

@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import styles from "./explore-our-courses.module.css";
 import { Course } from "@/types/course";
+import Image from "next/image";
 import "swiper/css";
 
 interface ExploreOurCoursesViewProps {
@@ -33,6 +34,7 @@ export default function ExploreOurClassesView({
         <h2 className="text-4xl font-bold text-center text-[#4377B2] mb-6 z-10 relative">
           Explore Our Online Yoga Courses
         </h2>
+
         <Swiper
           modules={[Autoplay]}
           spaceBetween={20}
@@ -56,17 +58,20 @@ export default function ExploreOurClassesView({
             <SwiperSlide key={course.id + index}>
               <div
                 onClick={handleExploreMoreClick}
-                className="relative overflow-hidden shadow-lg rounded-md h-[320px] bg-cover bg-center cursor-pointer hover:opacity-90 transition-opacity duration-300"
-                style={{
-                  backgroundImage: `url(${course?.headerSection?.image || "/fallback.jpg"})`,
-                }}
+                className="relative overflow-hidden shadow-lg rounded-md h-[320px] cursor-pointer group"
+                aria-label={course?.headerSection?.title || "Yoga Course"}
               >
-                {/* Accessible image fallback (for screen readers) */}
-                <span className="sr-only">
-                  {course?.headerSection?.title || "Yoga Course Image"}
-                </span>
-
-                {/* Online badge */}
+                <Image
+                  src={course?.headerSection?.image || "/fallback.jpg"}
+                  alt={course?.headerSection?.title || "Yoga Course"}
+                  fill
+                  sizes="(max-width: 768px) 100vw,
+                         (max-width: 1200px) 50vw,
+                         25vw"
+                  className="object-cover transition-opacity duration-300 group-hover:opacity-90"
+                  quality={70}
+                  loading="lazy"
+                />
                 <div className="absolute bottom-4 right-4 bg-[#4377B2] text-white text-sm px-3 py-1 rounded z-20 shadow-md">
                   Online
                 </div>

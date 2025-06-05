@@ -12,14 +12,16 @@ interface BlogTopicsProps {
 
 export function BlogTopics({ posts }: BlogTopicsProps) {
   const categories = useMemo(
-    () => ['All', ...new Set(posts.map((post) => post.category))],
+    () => ['All', ...Array.from(new Set(posts.map((post) => post.category)))],
     [posts]
   )
+
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('All')
 
   const filteredPosts = useMemo(() => {
-    if (activeCategory === 'All') return posts
-    return posts.filter((post) => post.category === activeCategory)
+    return activeCategory === 'All'
+      ? posts
+      : posts.filter((post) => post.category === activeCategory)
   }, [activeCategory, posts])
 
   return (
@@ -58,11 +60,13 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
             <BlogCard
               key={post.id}
               post={post}
-              isFirst={index === 0}
+              isFirst={index === 0 && activeCategory === 'All'} // only prioritize LCP on first visible post in 'All'
             />
           ))
         ) : (
-          <p className="text-muted-foreground col-span-full">No posts available in this category.</p>
+          <p className="text-muted-foreground col-span-full">
+            No posts available in this category.
+          </p>
         )}
       </div>
     </section>

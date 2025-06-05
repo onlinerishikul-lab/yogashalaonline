@@ -285,15 +285,14 @@ export const Header = () => {
         </div>
 
         {/* Logo */}
-      <Link href="/" className="flex-shrink-0 z-50 mx-auto lg:mx-0">
-    <Image
-      src="/assets/rishikulonlinlogo.png"
-      alt="Yoga Logo"
-      width={120}
-      height={80}
-      className="w-auto h-12 sm:h-16 lg:h-20 max-w-[120px]" // Responsive sizing
-    />
-  </Link>
+        <Link href="/" className="flex-shrink-0 z-50">
+          <Image
+            src="/assets/rishikulonlinlogo.png"
+            alt="Yoga Logo"
+            width={120}
+            height={80}
+          />
+        </Link>
 
         {/* Right Nav */}
         <div className="hidden lg:flex flex-1 justify-end items-center gap-x-8 text-white text-sm font-medium">
@@ -341,16 +340,16 @@ export const Header = () => {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="lg:hidden z-50 absolute right-4"> {/* Absolute positioning */}
-    <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-      {isOpen ? (
-        <X className="w-6 h-6 text-white" />
-      ) : (
-        <Menu className="w-6 h-6 text-white" />
-      )}
-    </Button>
-  </div>
-</div>
+        <div className="lg:hidden z-50">
+          <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
+            {isOpen ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <Menu className="w-6 h-6 text-white" />
+            )}
+          </Button>
+        </div>
+      </div>
 
       {/* Mobile Menu */}
       {isOpen && (

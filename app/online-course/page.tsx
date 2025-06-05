@@ -2,139 +2,209 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Header } from "@/components/common/header";
+import { SiteFooter } from "@/components/common/footer";
 
 type Course = {
   title: string;
   teacher: string;
   image: string;
+  url: string;
 };
 
 const courseList: Course[] = [
   {
-    title: "Prenatal Yoga",
-    teacher: "By Experienced Yoga Teachers",
-    image: "/images/prenatal.jpg",
+    title: "Yoga Anotomy For Safety",
+    teacher: "By Certified Anatomy Experts",
+    image: "/yoga-anatomy.jpg",
+    url: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/",
   },
   {
-    title: "Postnatal Yoga",
-    teacher: "By Certified Postnatal Experts",
-    image: "/images/postnatal.jpg",
+    title: "Face Yoga TTC",
+    teacher: "By Face Yoga Professionals",
+    image: "/face-yoga.jpg",
+    url: "/25-Hrs-Yoga-Courses/face-yoga/",
   },
   {
-    title: "Meditation",
-    teacher: "By Mindfulness Coaches",
-    image: "/images/meditation.jpg",
+    title: "Restorative Yoga TTC",
+    teacher: "By Restorative Yoga Teachers",
+    image: "/restorative-yoga.jpg",
+    url: "/50-Hrs-Yoga-Courses/Restorative-Yoga-TTC/",
   },
   {
-    title: "Pranayama",
-    teacher: "By Breathing Technique Specialists",
-    image: "/images/pranayama.jpg",
+    title: "Meditation TTC",
+    teacher: "By Meditation Experts",
+    image: "/meditation.jpg",
+    url: "/50-Hrs-Yoga-Courses/Meditation-TTC/",
   },
   {
-    title: "Hatha Yoga",
-    teacher: "By Traditional Yoga Gurus",
-    image: "/images/hatha.jpg",
+    title: "Pranayama TTC",
+    teacher: "By Breathing Technique Experts",
+    image: "/pranayama.jpg",
+    url: "/50-Hrs-Yoga-Courses/Pranayama-TTC/",
   },
   {
-    title: "Vinyasa Flow",
-    teacher: "By Flow Yoga Professionals",
-    image: "/images/vinyasa.jpg",
+    title: "Yoga Nidra TTC",
+    teacher: "By Yoga Nidra Instructors",
+    image: "/yoga-nidra.jpg",
+    url: "/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/",
   },
   {
-    title: "Therapeutic Yoga",
-    teacher: "By Therapeutic Yoga Instructors",
-    image: "/images/therapeutic.jpg",
+    title: "Chair Yoga TTC",
+    teacher: "By Adaptive Yoga Teachers",
+    image: "/chair-yoga.jpg",
+    url: "/50-Hrs-Yoga-Courses/Chair-Yoga/",
+  },
+  {
+    title: "Mudra & Mantra Course",
+    teacher: "By Yogic Sound Practitioners",
+    image: "/mudra-mantra.jpg",
+    url: "/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/",
+  },
+  {
+    title: "Kundalini Yoga Course",
+    teacher: "By Kundalini Masters",
+    image: "/kundalini-yoga.jpg",
+    url: "/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/",
+  },
+  {
+    title: "Kids Yoga Course",
+    teacher: "By Certified Kids Yoga Teachers",
+    image: "/kids-yoga.jpg",
+    url: "/50-Hrs-Yoga-Courses/Kids-Yoga-Course/",
+  },
+  {
+    title: "Yoga Therapy Course",
+    teacher: "By Yoga Therapists",
+    image: "/yoga-therapy.jpg",
+    url: "/50-Hrs-Yoga-Courses/Yoga-Therapy-Course/",
+  },
+  {
+    title: "Pregnancy Yoga",
+    teacher: "By Prenatal Yoga Teachers",
+    image: "/pregnancy-yoga.jpg",
+    url: "/50-Hrs-Yoga-Courses/Pregnancy-Yoga/",
+  },
+  {
+    title: "Core Concept of Yoga Philosophy",
+    teacher: "By Yoga Scholars",
+    image: "/yoga-philosophy.jpg",
+    url: "/75-Hrs-Yoga-Courses/Yoga-Philosophy/",
+  },
+  {
+    title: "Asana Clinic for Yoga Professionals",
+    teacher: "By Advanced Asana Trainers",
+    image: "/asana-clinic.jpg",
+    url: "/75-Hrs-Yoga-Courses/Asana-Clinic/",
+  },
+  {
+    title: "Prenatal & Postnatal Yoga Course for Teachers",
+    teacher: "By Pregnancy Yoga Experts",
+    image: "/prenatal-postnatal.jpg",
+    url: "/85-Hrs-Yoga-Courses/Prenatal-Postnatal/",
+  },
+  {
+    title: "Kids Yoga Course (95 Hrs)",
+    teacher: "By Experienced Kids Yoga Trainers",
+    image: "/kids-yoga-95.jpg",
+    url: "/95-Hrs-Yoga-Courses/Kids-Yoga-Course/",
+  },
+  {
+    title: "Multi Style Yoga TTC (100 Hrs)",
+    teacher: "By Master Yoga Trainers",
+    image: "/multi-style-100.jpg",
+    url: "/100-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/",
+  },
+  {
+    title: "Vinyasa Flow Yoga TTC",
+    teacher: "By Flow Yoga Experts",
+    image: "/vinyasa-flow.jpg",
+    url: "/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/",
+  },
+  {
+    title: "Hatha Yoga TTC",
+    teacher: "By Traditional Hatha Yoga Instructors",
+    image: "/hatha-yoga.jpg",
+    url: "/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/",
+  },
+  {
+    title: "Advanced Yoga Therapy Course",
+    teacher: "By Therapeutic Yoga Professionals",
+    image: "/advanced-therapy.jpg",
+    url: "/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/",
+  },
+  {
+    title: "Multi Style Yoga TTC (200 Hrs)",
+    teacher: "By International Yoga Masters",
+    image: "/multi-style-200.jpg",
+    url: "/200-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/",
+  },
+  {
+    title: "Multi Style Yoga TTC (300 Hrs)",
+    teacher: "By Expert Yoga Teachers",
+    image: "/multi-style-300.jpg",
+    url: "/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/",
   },
 ];
 
 export default function ClassesPage() {
-  const handleExport = (course: Course) => {
-    const data = {
-      ...course,
-      schedule: {
-        english: ["6:00am", "7:30am", "6:00pm", "7:30pm IST"],
-        hindi: ["6:00am", "7:30am", "5:00pm", "6:00pm IST"],
-      },
-      duration: "1 Hour",
-      frequency: "6 Days a Week & All Time",
-    };
-
-    const blob = new Blob([JSON.stringify(data, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = `${course.title.replace(/\s+/g, "_")}_Info.json`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
-    <section className="min-h-screen bg-[#FBF6F3] py-10 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-[#4377B2] mb-10">
-          Our Yoga & Wellness Classes
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courseList.map((course, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between"
-            >
-              <div className="relative h-48 w-full">
-                <Image
-                  src={course.image}
-                  alt={course.title}
-                  layout="fill"
-                  objectFit="cover"
-                  priority
-                />
-              </div>
-
-              <div className="p-6 flex flex-col justify-between flex-grow">
-                <div>
-                  <h2 className="text-2xl font-semibold text-[#4377B2] mb-1">
-                    {course.title}
-                  </h2>
-                  <p className="text-sm text-gray-600 mb-3">{course.teacher}</p>
-                  <ul className="text-sm text-gray-700 mb-4 space-y-1">
-                    <li>
-                      <strong>Everyday:</strong> 6 Days a Week & All Time
-                    </li>
-                    <li>
-                      <strong>English:</strong> 6:00am, 7:30am, 6:00pm, 7:30pm IST
-                    </li>
-                    <li>
-                      <strong>Hindi:</strong> 6:00am, 7:30am, 5:00pm, 6:00pm IST
-                    </li>
-                    <li>
-                      <strong>Session Duration:</strong> 1 Hour Class
-                    </li>
-                  </ul>
+    <>
+      <Header />
+      <section className="min-h-screen bg-[#FBF6F3] py-10 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl font-bold text-center text-[#4377B2] mb-10">
+            Our Yoga Courses
+          </h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {courseList.map((course, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between"
+              >
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={course.image}
+                    alt={course.title}
+                    layout="fill"
+                    objectFit="cover"
+                    priority
+                  />
                 </div>
 
-                <div className="flex gap-2 mt-4">
-                  <button className="bg-[#4377B2] text-white px-4 py-2 rounded hover:bg-[#285384] transition w-full">
-                    View Detail
-                  </button>
-                  <button className="border border-[#4377B2] text-[#4377B2] px-4 py-2 rounded hover:bg-[#4377B2] hover:text-white transition w-full">
-                    Enroll Now
-                  </button>
-                </div>
+                <div className="p-6 flex flex-col justify-between flex-grow">
+                  <div>
+                    <h2 className="text-2xl font-semibold text-[#4377B2] mb-1">
+                      {course.title}
+                    </h2>
+                    <p className="text-sm text-gray-600 mb-3">{course.teacher}</p>
+                    <ul className="text-sm text-gray-700 mb-4 space-y-1">
+                      <li><strong>Everyday:</strong> 6 Days a Week & All Time</li>
+                      <li><strong>English:</strong> 6:00am, 7:30am, 6:00pm, 7:30pm IST</li>
+                      <li><strong>Hindi:</strong> 6:00am, 7:30am, 5:00pm, 6:00pm IST</li>
+                      <li><strong>Session Duration:</strong> 1 Hour Class</li>
+                    </ul>
+                  </div>
 
-                <button
-                  onClick={() => handleExport(course)}
-                  className="mt-3 text-sm underline text-[#4377B2] hover:text-[#285384] transition text-left"
-                >
-                  Export Course Info
-                </button>
+                  <div className="flex gap-2 mt-4">
+                    <Link
+                      href={course.url}
+                      className="bg-[#4377B2] text-white px-4 py-2 rounded hover:bg-[#285384] transition w-full text-center"
+                    >
+                      View Detail
+                    </Link>
+                    <button className="border border-[#4377B2] text-[#4377B2] px-4 py-2 rounded hover:bg-[#4377B2] hover:text-white transition w-full">
+                      Enroll Now
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <SiteFooter />
+    </>
   );
 }

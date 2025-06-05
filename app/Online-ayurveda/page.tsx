@@ -2,139 +2,139 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Header } from "@/components/common/header";
+import { SiteFooter } from "@/components/common/footer";
 
 type Course = {
   title: string;
   teacher: string;
   image: string;
+  url: string;
 };
 
 const courseList: Course[] = [
   {
-    title: "Prenatal Yoga",
-    teacher: "By Experienced Yoga Teachers",
-    image: "/images/prenatal.jpg",
+    title: "Ayurvedic Basics Course for Beginners",
+    teacher: "By Certified Ayurveda Instructors",
+    image: "/ayurvedic-basics.jpg",
+    url: "/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/",
   },
   {
-    title: "Postnatal Yoga",
-    teacher: "By Certified Postnatal Experts",
-    image: "/images/postnatal.jpg",
+    title: "Ayurvedic Herbal Course",
+    teacher: "By Herbal Science Experts",
+    image: "/ayurvedic-herbal.jpg",
+    url: "/10-Hrs-Ayurveda-Courses/Ayurvedic-Herbal-Course/",
   },
   {
-    title: "Meditation",
-    teacher: "By Mindfulness Coaches",
-    image: "/images/meditation.jpg",
+    title: "Ayurvedic Relationship Course",
+    teacher: "By Certified Ayurvedic Counselors",
+    image: "/ayurvedic-relationship.jpg",
+    url: "/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/",
   },
   {
-    title: "Pranayama",
-    teacher: "By Breathing Technique Specialists",
-    image: "/images/pranayama.jpg",
+    title: "Ayurveda Garbha Samskara Course",
+    teacher: "By Ayurvedic Fertility Specialists",
+    image: "/garbha-samskara.jpg",
+    url: "/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/",
   },
   {
-    title: "Hatha Yoga",
-    teacher: "By Traditional Yoga Gurus",
-    image: "/images/hatha.jpg",
+    title: "Ayurveda Immunity Course",
+    teacher: "By Ayurvedic Immunity Coaches",
+    image: "/ayurveda-immunity.jpg",
+    url: "/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/",
   },
   {
-    title: "Vinyasa Flow",
-    teacher: "By Flow Yoga Professionals",
-    image: "/images/vinyasa.jpg",
+    title: "Ayurveda Skin and Beauty Course",
+    teacher: "By Ayurvedic Beauty Experts",
+    image: "/skin-beauty.jpg",
+    url: "/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/",
   },
   {
-    title: "Therapeutic Yoga",
-    teacher: "By Therapeutic Yoga Instructors",
-    image: "/images/therapeutic.jpg",
+    title: "Ayurvedic Foundational Course",
+    teacher: "By Senior Ayurveda Professionals",
+    image: "/ayurvedic-foundation.jpg",
+    url: "/50-Hrs-Ayurveda-Courses/Ayurvedic-Foundational-Course/",
+  },
+  {
+    title: "Ayurvedic Diet and Nutrition Course",
+    teacher: "By Ayurvedic Nutritionists",
+    image: "/diet-nutrition.jpg",
+    url: "/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/",
+  },
+  {
+    title: "Ayurvedic Lifestyle Course",
+    teacher: "By Holistic Ayurveda Coaches",
+    image: "/lifestyle-course.jpg",
+    url: "/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/",
   },
 ];
 
 export default function ClassesPage() {
-  const handleExport = (course: Course) => {
-    const data = {
-      ...course,
-      schedule: {
-        english: ["6:00am", "7:30am", "6:00pm", "7:30pm IST"],
-        hindi: ["6:00am", "7:30am", "5:00pm", "6:00pm IST"],
-      },
-      duration: "1 Hour",
-      frequency: "6 Days a Week & All Time",
-    };
-
-    const blob = new Blob([JSON.stringify(data, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = `${course.title.replace(/\s+/g, "_")}_Info.json`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
-    <section className="min-h-screen bg-[#FBF6F3] py-10 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-[#4377B2] mb-10">
-          Our Yoga & Wellness Classes
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courseList.map((course, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between"
-            >
-              <div className="relative h-48 w-full">
-                <Image
-                  src={course.image}
-                  alt={course.title}
-                  layout="fill"
-                  objectFit="cover"
-                  priority
-                />
-              </div>
-
-              <div className="p-6 flex flex-col justify-between flex-grow">
-                <div>
-                  <h2 className="text-2xl font-semibold text-[#4377B2] mb-1">
-                    {course.title}
-                  </h2>
-                  <p className="text-sm text-gray-600 mb-3">{course.teacher}</p>
-                  <ul className="text-sm text-gray-700 mb-4 space-y-1">
-                    <li>
-                      <strong>Everyday:</strong> 6 Days a Week & All Time
-                    </li>
-                    <li>
-                      <strong>English:</strong> 6:00am, 7:30am, 6:00pm, 7:30pm IST
-                    </li>
-                    <li>
-                      <strong>Hindi:</strong> 6:00am, 7:30am, 5:00pm, 6:00pm IST
-                    </li>
-                    <li>
-                      <strong>Session Duration:</strong> 1 Hour Class
-                    </li>
-                  </ul>
+    <>
+      <Header />
+      <section className="min-h-screen bg-[#FBF6F3] py-10 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl font-bold text-center text-[#4377B2] mb-10">
+            Our Ayurveda Courses
+          </h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {courseList.map((course, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between"
+              >
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={course.image}
+                    alt={course.title}
+                    layout="fill"
+                    objectFit="cover"
+                    priority
+                  />
                 </div>
 
-                <div className="flex gap-2 mt-4">
-                  <button className="bg-[#4377B2] text-white px-4 py-2 rounded hover:bg-[#285384] transition w-full">
-                    View Detail
-                  </button>
-                  <button className="border border-[#4377B2] text-[#4377B2] px-4 py-2 rounded hover:bg-[#4377B2] hover:text-white transition w-full">
-                    Enroll Now
-                  </button>
-                </div>
+                <div className="p-6 flex flex-col justify-between flex-grow">
+                  <div>
+                    <h2 className="text-2xl font-semibold text-[#4377B2] mb-1">
+                      {course.title}
+                    </h2>
+                    <p className="text-sm text-gray-600 mb-3">{course.teacher}</p>
+                    <ul className="text-sm text-gray-700 mb-4 space-y-1">
+                      <li>
+                        <strong>Everyday:</strong> 6 Days a Week & All Time
+                      </li>
+                      <li>
+                        <strong>English:</strong> 6:00am, 7:30am, 6:00pm, 7:30pm IST
+                      </li>
+                      <li>
+                        <strong>Hindi:</strong> 6:00am, 7:30am, 5:00pm, 6:00pm IST
+                      </li>
+                      <li>
+                        <strong>Session Duration:</strong> 1 Hour Class
+                      </li>
+                    </ul>
+                  </div>
 
-                <button
-                  onClick={() => handleExport(course)}
-                  className="mt-3 text-sm underline text-[#4377B2] hover:text-[#285384] transition text-left"
-                >
-                  Export Course Info
-                </button>
+                  <div className="flex gap-2 mt-4">
+                    <Link
+                      href={course.url}
+                      className="bg-[#4377B2] text-white px-4 py-2 rounded hover:bg-[#285384] transition w-full text-center"
+                    >
+                      View Detail
+                    </Link>
+                    <button className="border border-[#4377B2] text-[#4377B2] px-4 py-2 rounded hover:bg-[#4377B2] hover:text-white transition w-full">
+                      Enroll Now
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <SiteFooter />
+    </>
   );
 }

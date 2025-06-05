@@ -38,7 +38,7 @@ export default async function Home() {
       <Usp />
 
       {/* Section 1: Benefits + Courses */}
-      <section className="bg-white py-8 sm:py-12 lg:py-16">
+      <section className="bg-white py-0 sm:py-0 lg:py-0">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ExploreOurCoursesView courses={courses} />
           <BenefitsOfOnlineLearning />
@@ -46,7 +46,7 @@ export default async function Home() {
       </section>
 
       {/* Section 2: Course Levels + Ayurveda Courses */}
-      <section className="bg-white py-8 sm:py-12 lg:py-16">
+      <section className="bg-white py-0 sm:py-0 lg:py-0">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ExploreOurAyurvedaCoursesView courses={courses} />
           <CourseLevels />
@@ -54,7 +54,7 @@ export default async function Home() {
       </section>
 
       {/* Section 3: Yoga For Everyone + Yoga Classes */}
-      <section className="bg-white py-8 sm:py-12 lg:py-16">
+      <section className="bg-white py-0 sm:py-0 lg:py-0">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ExploreOurClassesView courses={courses} />
           <YogaForEveryone />

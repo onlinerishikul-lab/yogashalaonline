@@ -30,7 +30,7 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
       role="group"
       aria-roledescription="carousel"
       aria-label="Hero blog carousel"
-      className="relative w-full h-[400px] overflow-hidden bg-gray-200"
+      className="relative w-full max-w-[1440px] h-[400px] mx-auto overflow-hidden bg-gray-200"
     >
       <AnimatePresence initial={false} mode="wait">
         <motion.div
@@ -46,7 +46,7 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
             alt={currentPost.title}
             fill
             priority={currentIndex === 0}
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 70vw"
             className="object-cover"
           />
           <div className="absolute inset-0 flex flex-col justify-end bg-black/40 p-6 sm:p-10 text-white">

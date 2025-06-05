@@ -1,14 +1,11 @@
-"use client";
-
-import React from "react";
+import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Header } from "@/components/common/header";
-import { SiteFooter } from "@/components/common/footer";
 
 type Course = {
   title: string;
   teacher: string;
   image: string;
+  description: string;
 };
 
 const courseList: Course[] = [
@@ -16,145 +13,87 @@ const courseList: Course[] = [
     title: "Prenatal Yoga",
     teacher: "By Experienced Yoga Teachers",
     image: "/Prenatal.jpg",
+    description: "A gentle yoga practice designed for expecting mothers to strengthen and relax their bodies.",
   },
   {
     title: "Postnatal Yoga",
     teacher: "By Certified Postnatal Experts",
     image: "/Postnatal.jpg",
+    description: "Support your postpartum recovery through safe, healing yoga flows.",
   },
   {
     title: "Meditation",
     teacher: "By Mindfulness Coaches",
     image: "/meditation.png",
+    description: "Learn to calm your mind and improve emotional resilience through guided meditation.",
   },
   {
     title: "Pranayama",
     teacher: "By Breathing Technique Specialists",
     image: "/pranayama.jpg",
+    description: "Master the ancient breathing techniques for better lung function and mental clarity.",
   },
   {
     title: "Hatha Yoga",
     teacher: "By Traditional Yoga Gurus",
     image: "/hatha-yoga.jpg",
+    description: "Classic yoga postures and breathwork to build strength, flexibility, and balance.",
   },
   {
     title: "Vinyasa Flow",
     teacher: "By Flow Yoga Professionals",
     image: "/vinyasaflow.jpg",
+    description: "A dynamic sequence of poses synced with breath to energize the body.",
   },
   {
-    title: "Exclusive Reversing Diabetic Yoga",
-    teacher: "By Exclusive Reversing Diabetic Yoga Instructors",
+    title: "Exclusive Reversing Diabetic Yoga",
+    teacher: "By Exclusive Reversing Diabetic Yoga Instructors",
     image: "/DiabeticYoga.jpg",
+    description: "Specialized yoga routines tailored to support and reverse diabetes symptoms naturally.",
   },
   {
-    title: "Power Yoga",
-    teacher: "By Power Yoga Professionals",
+    title: "Power Yoga",
+    teacher: "By Power Yoga Professionals",
     image: "/PowerYoga.jpg",
+    description: "Intense, fitness-oriented yoga for improved strength, stamina, and focus.",
   },
   {
     title: "Yoga Nidra",
     teacher: "By Yoga Nidra Professionals",
     image: "/YogaNidra.jpg",
+    description: "Deep relaxation and guided meditation for stress relief and better sleep.",
   },
 ];
 
-export default function ClassesPage() {
-  const handleExport = (course: Course) => {
-    const data = {
-      ...course,
-      schedule: {
-        english: ["6:00am", "7:30am", "6:00pm", "7:30pm IST"],
-        hindi: ["6:00am", "7:30am", "5:00pm", "6:00pm IST"],
-      },
-      duration: "1 Hour",
-      frequency: "6 Days a Week & All Time",
-    };
+function getCourseBySlug(slug: string): Course | undefined {
+  return courseList.find((course) => {
+    const formatted = course.title.replace(/\s+/g, "-").replace(/[^\w-]/g, "");
+    return formatted.toLowerCase() === slug.toLowerCase();
+  });
+}
 
-    const blob = new Blob([JSON.stringify(data, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = `${course.title.replace(/\s+/g, "_")}_Info.json`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+export default function CourseDetailPage({ params }: { params: { courseName: string } }) {
+  const course = getCourseBySlug(params.courseName);
+
+  if (!course) return notFound();
 
   return (
-    <>
-      <Header />
-      <section className="min-h-screen bg-[#FBF6F3] py-10 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold text-center text-[#4377B2] mb-10">
-            Our Yoga & Wellness Classes
-          </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {courseList.map((course, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between"
-              >
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={course.image}
-                    alt={course.title}
-                    layout="fill"
-                    objectFit="cover"
-                    priority
-                  />
-                </div>
-
-                <div className="p-6 flex flex-col justify-between flex-grow">
-                  <div>
-                    <h2 className="text-2xl font-semibold text-[#4377B2] mb-1">
-                      {course.title}
-                    </h2>
-                    <p className="text-sm text-gray-600 mb-3">
-                      {course.teacher}
-                    </p>
-                    <ul className="text-sm text-gray-700 mb-4 space-y-1">
-                      <li>
-                        <strong>Everyday:</strong> 6 Days a Week & All Time
-                      </li>
-                      <li>
-                        <strong>English:</strong> 6:00am, 7:30am, 6:00pm,
-                        7:30pm IST
-                      </li>
-                      <li>
-                        <strong>Hindi:</strong> 6:00am, 7:30am, 5:00pm, 6:00pm
-                        IST
-                      </li>
-                      <li>
-                        <strong>Session Duration:</strong> 1 Hour Class
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="flex gap-2 mt-4">
-                    <button className="bg-[#4377B2] text-white px-4 py-2 rounded hover:bg-[#285384] transition w-full">
-                      View Detail
-                    </button>
-                    <button className="border border-[#4377B2] text-[#4377B2] px-4 py-2 rounded hover:bg-[#4377B2] hover:text-white transition w-full">
-                      Enroll Now
-                    </button>
-                  </div>
-
-                  <button
-                    onClick={() => handleExport(course)}
-                    className="mt-3 text-sm underline text-[#4377B2] hover:text-[#285384] transition text-left"
-                  >
-                    Export Course Info
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
+    <div className="min-h-screen bg-[#FBF6F3] px-6 py-12">
+      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6">
+        <h1 className="text-4xl font-bold text-[#4377B2] mb-4">{course.title}</h1>
+        <p className="text-sm text-gray-600 mb-4">{course.teacher}</p>
+        <div className="relative w-full h-64 mb-6">
+          <Image src={course.image} alt={course.title} fill style={{ objectFit: "cover" }} className="rounded" />
         </div>
-      </section>
-      <SiteFooter />
-    </>
+        <p className="text-gray-700 text-lg">{course.description}</p>
+
+        <div className="mt-6 text-sm text-gray-700 space-y-1">
+          <p><strong>Schedule (English):</strong> 6:00am, 7:30am, 6:00pm, 7:30pm IST</p>
+          <p><strong>Schedule (Hindi):</strong> 6:00am, 7:30am, 5:00pm, 6:00pm IST</p>
+          <p><strong>Duration:</strong> 1 Hour</p>
+          <p><strong>Frequency:</strong> 6 Days a Week & All Time</p>
+        </div>
+      </div>
+    </div>
   );
 }

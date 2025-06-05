@@ -1,4 +1,5 @@
 // Types for UI components
+// types/blog.ts
 export interface BlogPost {
   id: string
   slug: string
@@ -9,8 +10,9 @@ export interface BlogPost {
   imageUrl: string
   author: string
   content: string
-  blurDataURL?: string // ✅ Optional placeholder for blur loading
+  blurDataURL?: string // ✅ Add this to support blur placeholder
 }
+
 
 
 

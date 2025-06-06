@@ -17,19 +17,19 @@ const courseList: Course[] = [
   {
     title: "Yoga Anotomy For Safety",
     teacher: "By Certified Anatomy Experts",
-    image: "/yoga-anatomy.jpg",
+    image: "/25.hrs.png",
     url: "/25-Hrs-Yoga-Courses/Yoga-Anatomy/",
   },
   {
     title: "Face Yoga TTC",
     teacher: "By Face Yoga Professionals",
-    image: "/face-yoga.jpg",
+    image: "/face.jpg",
     url: "/25-Hrs-Yoga-Courses/face-yoga/",
   },
   {
     title: "Restorative Yoga TTC",
     teacher: "By Restorative Yoga Teachers",
-    image: "/restorative-yoga.jpg",
+    image: "/Restoration-yoga.jpg",
     url: "/50-Hrs-Yoga-Courses/Restorative-Yoga-TTC/",
   },
   {
@@ -53,19 +53,19 @@ const courseList: Course[] = [
   {
     title: "Chair Yoga TTC",
     teacher: "By Adaptive Yoga Teachers",
-    image: "/chair-yoga.jpg",
+    image: "/Chair-Yoga.jpg",
     url: "/50-Hrs-Yoga-Courses/Chair-Yoga/",
   },
   {
     title: "Mudra & Mantra Course",
     teacher: "By Yogic Sound Practitioners",
-    image: "/mudra-mantra.jpg",
+    image: "/Mudra-Mantra-Course.jpg",
     url: "/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/",
   },
   {
     title: "Kundalini Yoga Course",
     teacher: "By Kundalini Masters",
-    image: "/kundalini-yoga.jpg",
+    image: "/Kundalini-Yoga-Course.jpg",
     url: "/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/",
   },
   {
@@ -77,19 +77,19 @@ const courseList: Course[] = [
   {
     title: "Yoga Therapy Course",
     teacher: "By Yoga Therapists",
-    image: "/yoga-therapy.jpg",
+    image: "/Yoga-Therapy-Course.jpg",
     url: "/50-Hrs-Yoga-Courses/Yoga-Therapy-Course/",
   },
   {
     title: "Pregnancy Yoga",
     teacher: "By Prenatal Yoga Teachers",
-    image: "/pregnancy-yoga.jpg",
+    image: "/Pregnancy-Yoga.jpg",
     url: "/50-Hrs-Yoga-Courses/Pregnancy-Yoga/",
   },
   {
     title: "Core Concept of Yoga Philosophy",
     teacher: "By Yoga Scholars",
-    image: "/yoga-philosophy.jpg",
+    image: "/Yoga-philosophy.jpg",
     url: "/75-Hrs-Yoga-Courses/Yoga-Philosophy/",
   },
   {
@@ -101,31 +101,31 @@ const courseList: Course[] = [
   {
     title: "Prenatal & Postnatal Yoga Course for Teachers",
     teacher: "By Pregnancy Yoga Experts",
-    image: "/prenatal-postnatal.jpg",
+    image: "/Prenatal-Postnatal.jpg",
     url: "/85-Hrs-Yoga-Courses/Prenatal-Postnatal/",
   },
   {
     title: "Kids Yoga Course (95 Hrs)",
     teacher: "By Experienced Kids Yoga Trainers",
-    image: "/kids-yoga-95.jpg",
+    image: "/kids-Yoga.jpg",
     url: "/95-Hrs-Yoga-Courses/Kids-Yoga-Course/",
   },
   {
     title: "Multi Style Yoga TTC (100 Hrs)",
     teacher: "By Master Yoga Trainers",
-    image: "/multi-style-100.jpg",
+    image: "/multistyle-yoga.jpg",
     url: "/100-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/",
   },
   {
     title: "Vinyasa Flow Yoga TTC",
     teacher: "By Flow Yoga Experts",
-    image: "/vinyasa-flow.jpg",
+    image: "/vinyasaflow-yoga.png",
     url: "/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/",
   },
   {
     title: "Hatha Yoga TTC",
     teacher: "By Traditional Hatha Yoga Instructors",
-    image: "/hatha-yoga.jpg",
+    image: "/hatha-yoga.png",
     url: "/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/",
   },
   {
@@ -137,13 +137,13 @@ const courseList: Course[] = [
   {
     title: "Multi Style Yoga TTC (200 Hrs)",
     teacher: "By International Yoga Masters",
-    image: "/multi-style-200.jpg",
+    image: "/multistyle-yoga.jpg",
     url: "/200-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/",
   },
   {
     title: "Multi Style Yoga TTC (300 Hrs)",
     teacher: "By Expert Yoga Teachers",
-    image: "/multi-style-300.jpg",
+    image: "/multi-style.jpg",
     url: "/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/",
   },
 ];

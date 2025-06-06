@@ -3,13 +3,14 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  output: "standalone", // ✅ enables standalone build for deployment
   images: {
     formats: ["image/avif", "image/webp"],
     domains: [
       "images.unsplash.com",
       "plus.unsplash.com",
       "utfs.io",
-      "rishikulonlineadmin.vercel.app" // ✅ added missing domain
+      "rishikulonlineadmin.vercel.app"
     ],
     remotePatterns: [
       {
@@ -23,12 +24,10 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       }
     ],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
-  },
-  experimental: {
-    legacyBrowsers: false, // ✅ disables legacy JS polyfills
   },
 };
 

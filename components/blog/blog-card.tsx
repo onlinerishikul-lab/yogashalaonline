@@ -23,7 +23,8 @@ export function BlogCard({ post, className, isFirst = false }: ExtendedBlogCardP
             className="object-cover"
             loading={isFirst ? 'eager' : 'lazy'}
             priority={isFirst}
-            quality={70}
+            fetchPriority={isFirst ? 'high' : 'auto'}
+            quality={60} // reduced from 70 for faster load
             placeholder={post.blurDataURL ? 'blur' : 'empty'}
             blurDataURL={post.blurDataURL}
           />
@@ -41,7 +42,9 @@ export function BlogCard({ post, className, isFirst = false }: ExtendedBlogCardP
             <h3 className="text-lg font-semibold mb-2 line-clamp-2 hover:text-[#4377B2] transition-colors">
               {post.title}
             </h3>
-            <p className="text-sm text-muted-foreground line-clamp-3">{post.excerpt}</p>
+            <p className="text-sm text-muted-foreground line-clamp-3">
+              {post.excerpt}
+            </p>
           </div>
           <Link
             href={`/blog/${post.slug}`}

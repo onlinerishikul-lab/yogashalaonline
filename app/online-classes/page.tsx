@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Header } from "@/components/common/header";
 import { SiteFooter } from "@/components/common/footer";
 
@@ -11,6 +12,17 @@ type Course = {
   teacher: string;
   image: string;
 };
+
+// Converts course titles to clean URL slugs
+function slugify(title: string): string {
+  return title
+    .normalize("NFKD")
+    .replace(/\u00A0/g, " ")        // non-breaking space to normal
+    .replace(/\s+/g, "-")           // space to dash
+    .replace(/[^\w\-]+/g, "")       // remove special characters
+    .replace(/\-+/g, "-")           // collapse dashes
+    .trim();
+}
 
 const courseList: Course[] = [
   {
@@ -60,18 +72,9 @@ const courseList: Course[] = [
   },
 ];
 
-// Converts course titles to clean URL slugs
-function slugify(title: string): string {
-  return title
-    .normalize("NFKD")
-    .replace(/\u00A0/g, " ")        // non-breaking space to normal
-    .replace(/\s+/g, "-")           // space to dash
-    .replace(/[^\w\-]+/g, "")       // remove special characters
-    .replace(/\-+/g, "-")           // collapse dashes
-    .trim();
-}
-
 export default function ClassesPage() {
+  const router = useRouter();
+
   return (
     <>
       <Header />
@@ -129,7 +132,10 @@ export default function ClassesPage() {
                       >
                         View Detail
                       </Link>
-                      <button className="border border-[#4377B2] text-[#4377B2] px-4 py-2 rounded hover:bg-[#4377B2] hover:text-white transition w-full">
+                      <button
+                        onClick={() => router.push("/contact")}
+                        className="border border-[#4377B2] text-[#4377B2] px-4 py-2 rounded hover:bg-[#4377B2] hover:text-white transition w-full"
+                      >
                         Enroll Now
                       </button>
                     </div>

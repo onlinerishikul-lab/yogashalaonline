@@ -171,7 +171,6 @@ export default function ClassesPage() {
                     src={course.image}
                     alt={course.title}
                     layout="fill"
-                    objectFit="cover"
                     priority
                   />
                 </div>

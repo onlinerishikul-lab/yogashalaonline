@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -151,17 +151,43 @@ const courseList: Course[] = [
 
 export default function ClassesPage() {
   const router = useRouter();
+  const [filter, setFilter] = useState("All");
+
+  const filteredCourses = courseList.filter((course) => {
+    if (filter === "All") return true;
+    return course.url.includes(`/${filter}-Hrs-Yoga-Courses/`);
+  });
 
   return (
     <>
       <Header />
       <section className="min-h-screen bg-[#FBF6F3] py-10 px-6">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold text-center text-[#4377B2] mb-10">
+          <h1 className="text-4xl font-bold text-center text-[#4377B2] mb-8">
             Our Yoga Courses
           </h1>
+
+          {/* Filter Dropdown */}
+          <div className="flex justify-center mb-8">
+            <select
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+              className="border border-gray-300 rounded px-4 py-2 text-[#4377B2] font-medium"
+            >
+              <option value="All">All</option>
+              <option value="25">25 Hrs</option>
+              <option value="50">50 Hrs</option>
+              <option value="75">75 Hrs</option>
+              <option value="85">85 Hrs</option>
+              <option value="95">95 Hrs</option>
+              <option value="100">100 Hrs</option>
+              <option value="200">200 Hrs</option>
+              <option value="300">300 Hrs</option>
+            </select>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {courseList.map((course, index) => (
+            {filteredCourses.map((course, index) => (
               <div
                 key={index}
                 className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between"

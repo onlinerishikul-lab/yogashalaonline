@@ -21,6 +21,12 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { onlineYogaTrainingMenu } from "@/constants/course-data";
+
+// You can also fetch country list from an API if needed
+const countries = [
+  "India", "United States", "United Kingdom", "Canada", "Australia", "Germany", "France", "Japan", "China", "Brazil", "South Africa", "Italy", "Netherlands", "New Zealand", "Singapore", "Mexico", "Spain", "Russia", "Switzerland", "Sweden", "Norway", "Denmark", "Ireland", "UAE", "Saudi Arabia", "Pakistan", "Bangladesh", "Sri Lanka", "Nepal", "Thailand", "Malaysia", "Indonesia"
+];
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -50,13 +56,14 @@ export default function ContactForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
-    // TODO: Implement form submission
+    // TODO: Handle form submission
   }
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
+          {/* Name */}
           <FormField
             control={form.control}
             name="name"
@@ -75,6 +82,7 @@ export default function ContactForm() {
             )}
           />
 
+          {/* Email */}
           <FormField
             control={form.control}
             name="email"
@@ -83,8 +91,8 @@ export default function ContactForm() {
                 <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="Email address"
                     type="email"
+                    placeholder="Email address"
                     {...field}
                     className="rounded-full border-gray-200"
                   />
@@ -94,6 +102,7 @@ export default function ContactForm() {
             )}
           />
 
+          {/* Phone */}
           <FormField
             control={form.control}
             name="phone"
@@ -112,27 +121,25 @@ export default function ContactForm() {
             )}
           />
 
+          {/* Course Name */}
           <FormField
             control={form.control}
             name="courseName"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Course Name</FormLabel>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger className="rounded-full border-gray-200">
                       <SelectValue placeholder="Select a course" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="beginner">Beginner Yoga</SelectItem>
-                    <SelectItem value="intermediate">
-                      Intermediate Yoga
-                    </SelectItem>
-                    <SelectItem value="advanced">Advanced Yoga</SelectItem>
+                    {onlineYogaTrainingMenu.map((course) => (
+                      <SelectItem key={course.title} value={course.title}>
+                        {course.title}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
                 <FormMessage />
@@ -140,42 +147,33 @@ export default function ContactForm() {
             )}
           />
 
+          {/* Course Date */}
           <FormField
             control={form.control}
             name="courseDate"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Course Date</FormLabel>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
-                  <FormControl>
-                    <SelectTrigger className="rounded-full border-gray-200">
-                      <SelectValue placeholder="Choose" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value="jan">January 2024</SelectItem>
-                    <SelectItem value="feb">February 2024</SelectItem>
-                    <SelectItem value="mar">March 2024</SelectItem>
-                  </SelectContent>
-                </Select>
+                <FormControl>
+                  <Input
+                    type="date"
+                    {...field}
+                    className="rounded-full border-gray-200"
+                  />
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
 
+          {/* Gender */}
           <FormField
             control={form.control}
             name="gender"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Gender</FormLabel>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger className="rounded-full border-gray-200">
                       <SelectValue placeholder="Choose" />
@@ -192,26 +190,25 @@ export default function ContactForm() {
             )}
           />
 
+          {/* Country */}
           <FormField
             control={form.control}
             name="country"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Country</FormLabel>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger className="rounded-full border-gray-200">
                       <SelectValue placeholder="Choose" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="india">India</SelectItem>
-                    <SelectItem value="usa">USA</SelectItem>
-                    <SelectItem value="uk">UK</SelectItem>
-                    <SelectItem value="canada">Canada</SelectItem>
+                    {countries.map((country) => (
+                      <SelectItem key={country} value={country.toLowerCase()}>
+                        {country}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
                 <FormMessage />
@@ -220,6 +217,7 @@ export default function ContactForm() {
           />
         </div>
 
+        {/* Message */}
         <FormField
           control={form.control}
           name="message"
@@ -238,6 +236,7 @@ export default function ContactForm() {
           )}
         />
 
+        {/* Submit Button */}
         <div className="flex justify-center">
           <Button
             type="submit"

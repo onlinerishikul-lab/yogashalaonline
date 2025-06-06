@@ -1,85 +1,122 @@
 "use client";
 
-import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState, useEffect } from "react";
 
-const testimonials = [
-  {
-    name: "Charmaine Wardenberg",
-    title: "A Warm, Inspiring Environment to Grow In",
-    company: "Rishikul Online",
-    content:
-      "Absolutely loved my experience at this yoga training school. The quality of the teachers is exceptional — each one brings deep knowledge, passion, and a truly supportive presence to the training. I also really appreciated the flexibility in their approach, allowing space for different styles of yoga teaching and encouraging us to find our own unique voice as instructors. A warm, inspiring environment to grow in.",
-    role: "",
-  },
-  {
-    name: "RAMKISHAN KUGATHAS",
-    title: "Truly Enriching Experience",
-    company: "Rishikul Online",
-    content:
-      "I recently completed the Prenatal Yoga course at Rishikul Yogshala and it was a truly enriching experience. The teachers were kind, knowledgeable, and supportive throughout. I learned safe and effective yoga practices for pregnancy, along with breathing techniques and relaxation methods. The environment was peaceful and well-organized. I highly recommend Rishikul Yogshala for anyone seeking authentic and caring yoga education.",
-    role: "",
-  },
-  {
-    name: "Dimple Malkan",
-    title: "Much More Than Asana Training",
-    company: "Rishikul Online",
-    content:
-      "Rishikul Yogshala was absolutely amazing. I am very fortunate that I did my 200 hours there. I gained much more than just asana training. The yogic philosophy taught by Krishna is part of my daily life now. Every class and every teacher is extremely knowledgeable and always available to help and answer questions. Highly recommend! 🙏",
-    role: "",
-  },
-];
+type TimeZoneKey = "IST" | "PST" | "EST" | "GMT" | "CET" | "JST";
 
-const TestimonialCarousel = () => {
-  const [index, setIndex] = useState(0);
-  const testimonial = testimonials[index];
+interface TimeZone {
+  label: string;
+  offset: number;
+  currency: string;
+  exchangeRateToUSD?: number; // only for non-USD currencies
+}
 
-  const handlePrev = () => {
-    setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
+const timeZones: Record<TimeZoneKey, TimeZone> = {
+  IST: { label: "India (IST)", offset: 5.5, currency: "INR", exchangeRateToUSD: 83 },
+  PST: { label: "US Pacific (PST)", offset: -8, currency: "USD" },
+  EST: { label: "US Eastern (EST)", offset: -5, currency: "USD" },
+  GMT: { label: "Greenwich Mean Time (GMT)", offset: 0, currency: "USD" },
+  CET: { label: "Central Europe (CET)", offset: 1, currency: "EUR", exchangeRateToUSD: 0.92 },
+  JST: { label: "Japan (JST)", offset: 9, currency: "JPY", exchangeRateToUSD: 156 },
+};
 
-  const handleNext = () => {
-    setIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
+function convertISTToTarget(
+  istHour: number,
+  istMin: number,
+  targetOffset: number
+): string {
+  const IST_OFFSET = 5.5;
+  const utcDate = new Date();
+  utcDate.setUTCHours(istHour - IST_OFFSET, istMin, 0, 0);
+  const localDate = new Date(utcDate.getTime() + targetOffset * 3600000);
+  return localDate.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
+}
+
+const StickyCourseCard: React.FC = () => {
+  const [selectedZone, setSelectedZone] = useState<TimeZoneKey>("IST");
+  const [morningTime, setMorningTime] = useState("");
+  const [eveningTime, setEveningTime] = useState("");
+  const [currency, setCurrency] = useState("INR");
+  const [price, setPrice] = useState(250);
+
+  useEffect(() => {
+    const { offset, currency, exchangeRateToUSD } = timeZones[selectedZone];
+
+    // Fixed IST base times (6:00–7:30 and 18:00–19:30)
+    setMorningTime(
+      `${convertISTToTarget(6, 0, offset)} – ${convertISTToTarget(7, 30, offset)}`
+    );
+    setEveningTime(
+      `${convertISTToTarget(18, 0, offset)} – ${convertISTToTarget(19, 30, offset)}`
+    );
+
+    setCurrency(currency);
+
+    if (currency === "USD") {
+      setPrice(250);
+    } else if (exchangeRateToUSD) {
+      setPrice(Math.round(250 * exchangeRateToUSD));
+    }
+  }, [selectedZone]);
 
   return (
-    <section className="py-16 bg-[#f5f5f5] w-full flex flex-col items-center px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] text-center mb-3">
-        What Our Students Say
-      </h2>
-      <p className="text-gray-600 text-center mb-10 text-sm md:text-base">
-        Honest reflections from those who’ve grown through our yoga training programs.
-      </p>
+    <div className="w-full flex justify-center lg:justify-end">
+      <div className="bg-gradient-to-br from-[#4377b2] to-[#365a92] border border-gray-300 shadow-lg rounded-2xl p-6 space-y-4 w-full max-w-md text-white">
+        <h2 className="text-lg font-semibold uppercase tracking-wide text-center">
+          75 Hrs Online Asana Clinic for Yoga Professionals
+        </h2>
 
-      <div className="relative max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-8 md:p-10 transition-all">
-        {/* Left Arrow Button */}
-        <button
-          onClick={handlePrev}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
-          aria-label="Previous testimonial"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-
-        {/* Right Arrow Button */}
-        <button
-          onClick={handleNext}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[#4377b2] hover:bg-[#365f91] text-white p-3 rounded-full shadow-md hover:scale-110 transition"
-          aria-label="Next testimonial"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button>
-
-        <div className="flex flex-col items-center text-center gap-6">
-          <p className="text-sm font-medium text-[#4377b2]">{testimonial.company}</p>
-          <h3 className="text-lg font-semibold text-gray-900">{testimonial.title}</h3>
-          <p className="text-gray-600 text-sm leading-relaxed">{testimonial.content}</p>
-          <div className="font-medium text-gray-800">{testimonial.name}</div>
-          {testimonial.role && <div className="text-sm text-gray-500">{testimonial.role}</div>}
+        <div className="border-t border-b border-white/30 py-3 text-sm space-y-2">
+          <p className="font-semibold">Course Highlights:</p>
+          <ul className="list-disc list-inside space-y-1">
+            <li>Starting 1st of every month</li>
+            <li>Ends 15th of every month</li>
+            <li>15 Days Program</li>
+            <li>Daily 3 hrs</li>
+            <li>
+              <div className="flex flex-col">
+                <label className="mb-1">Choose Timezone:</label>
+                <select
+                  value={selectedZone}
+                  onChange={(e) => setSelectedZone(e.target.value as TimeZoneKey)}
+                  className="text-black px-2 py-1 rounded"
+                >
+                  {Object.entries(timeZones).map(([key, tz]) => (
+                    <option key={key} value={key}>
+                      {tz.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </li>
+            <li>Morning Session: {morningTime}</li>
+            <li>Evening Session: {eveningTime}</li>
+            <li>Instructed in English</li>
+            <li>Weekly Sunday Off</li>
+            <li>Most Recommended Teacher</li>
+            <li>Accredited by Yoga Alliance</li>
+          </ul>
         </div>
+
+        <div className="bg-white/10 rounded-xl p-4 text-center">
+          <p className="text-sm font-medium mb-1">Discounted Course Fees:</p>
+          <p className="text-2xl font-bold">
+            {currency} {price}
+          </p>
+          <p className="text-xs text-white/80">(Included All Tax)</p>
+        </div>
+
+        <button className="bg-white hover:bg-gray-200 text-[#4377b2] px-5 py-2.5 rounded-full font-medium flex items-center justify-center space-x-2 text-sm w-full transition duration-200">
+          <span>BOOK YOUR SEAT NOW</span>
+          <span>&rarr;</span>
+        </button>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default TestimonialCarousel;
+export default StickyCourseCard;

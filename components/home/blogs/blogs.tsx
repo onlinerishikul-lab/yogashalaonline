@@ -10,7 +10,7 @@ interface BlogsProps {
 
 const Blogs = ({ blogs }: BlogsProps) => {
   return (
-    <div className="bg-[#FCF6F3] py-10 px-4">
+    <div className="bg-[#FCF6F3] py-0 px-4">
       <div className="max-w-7xl mx-auto w-full">
         <h2 className="text-center text-[#4377B2] font-bold text-3xl sm:text-4xl mb-12">
           Expert Tips and Insights on Yoga

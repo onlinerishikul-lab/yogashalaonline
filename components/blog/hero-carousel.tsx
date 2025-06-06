@@ -45,13 +45,20 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
             src={currentPost.imageUrl}
             alt={currentPost.title}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
             className="object-cover"
-            priority={currentIndex === 0} // ✅ preload LCP image
+            // ✅ Responsive hints for optimization
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 768px"
+            // ✅ Improve FCP/LCP
+            priority={currentIndex === 0}
             loading={currentIndex === 0 ? 'eager' : 'lazy'}
-            fetchPriority={currentIndex === 0 ? 'high' : undefined} // ✅ fetch priority for LCP
+            fetchPriority={currentIndex === 0 ? 'high' : 'low'}
+            // ✅ Lightweight quality
+            quality={60}
+            // ✅ Blur placeholder
             placeholder={currentPost.blurDataURL ? 'blur' : 'empty'}
             blurDataURL={currentPost.blurDataURL}
+            // ✅ Ensure image optimization for remote URLs
+            unoptimized={false}
           />
 
           <div className="absolute inset-0 flex flex-col justify-end bg-black/40 p-6 sm:p-10 text-white">

@@ -62,39 +62,39 @@ export default async function Home() {
       </section>
 
       {/* Other Key Sections */}
-      <section className="bg-[#F9F9F9]">
+      <section >
         <Guarante />
       </section>
 
-      <section className="bg-white">
+      <section >
         <OurTeaching />
       </section>
 
-      <section className="bg-[#F9F9F9]">
+      <section">
         <Transforming />
       </section>
 
-      <section className="bg-white">
+      <section>
         <Trust />
       </section>
 
-      <section className="bg-[#F9F9F9] py-6 sm:py-8 md:py-10">
+      <section>
         <Blogs blogs={blogs} />
       </section>
 
-      <section className="bg-white py-6 sm:py-8 md:py-10">
+      <section >
         <Join />
       </section>
 
-      <section className="bg-[#F9F9F9]">
+      <section >
         <Faculty />
       </section>
 
-      <section className="bg-white py-6 sm:py-8 md:py-10">
+      <section >
         <TestimonialView title="What Our Students Say" tilt={true} />
       </section>
 
-      <section className="bg-[#F9F9F9] py-6 sm:py-8 md:py-10">
+      <section>
         <GetInTouch />
       </section>
     </MainWrapper>

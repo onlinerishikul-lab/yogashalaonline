@@ -132,7 +132,7 @@ const courseList: Course[] = [
   {
     title: "Advanced Yoga Therapy Course",
     teacher: "By Therapeutic Yoga Professionals",
-    image: "/advanced-therapy.jpg",
+    image: "/yoga-theraphy.jpg",
     url: "/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/",
   },
   {

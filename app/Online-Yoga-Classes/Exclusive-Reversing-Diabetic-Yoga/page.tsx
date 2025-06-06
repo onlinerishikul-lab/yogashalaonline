@@ -1,6 +1,6 @@
 
 "use client";
-import HeroSection from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga";
+import HeroSection from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/HeroSection";
 import StickyCourseCard  from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/TestimonialSlider";
 import YogaCoursePage from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/yogacourse";
 import LearnSection from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/LearnSection";

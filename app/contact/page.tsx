@@ -24,7 +24,7 @@ export default function ContactPage() {
         </section>
 
         {/* Form Section */}
-        <section className="py-16 px-4">
+        <section className="py-0 px-4">
           <div className="container mx-auto max-w-3xl">
             <h2 className="text-2xl md:text-3xl text-center text-[#4377B2] font-semibold mb-2">
               Query Form

@@ -1,12 +1,26 @@
 'use client'
 
-import { useState } from 'react'
-import { HeroCarousel } from '@/components/blog/hero-carousel'
-import { BlogTopics } from '@/components/blog/blog-topics'
+import { useState, useMemo } from 'react'
+import dynamic from 'next/dynamic'
 import MainWrapper from '@/components/wrappers/main-wrapper'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Button } from '@/components/ui/button'
 import { useBlogs } from '@/hooks/use-blogs'
+
+// Dynamically import heavy components
+const HeroCarousel = dynamic(() => import('@/components/blog/hero-carousel').then(m => m.HeroCarousel), {
+  ssr: false,
+  loading: () => <Skeleton className="w-full h-[400px]" />
+})
+const BlogTopics = dynamic(() => import('@/components/blog/blog-topics').then(m => m.BlogTopics), {
+  loading: () => (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" aria-busy="true">
+      {[...Array(6)].map((_, i) => (
+        <Skeleton key={i} className="h-[300px] w-full" />
+      ))}
+    </div>
+  )
+})
 
 export default function BlogPage() {
   const [page, setPage] = useState(1)
@@ -33,11 +47,11 @@ export default function BlogPage() {
     return (
       <MainWrapper>
         <main className="space-y-16">
-          <div className="w-full h-[400px]">
+          <div className="w-full h-[400px]" aria-busy="true">
             <Skeleton className="w-full h-full" />
           </div>
           <div className="container mx-auto px-4 pb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" aria-busy="true">
               {[...Array(6)].map((_, i) => (
                 <Skeleton key={i} className="h-[300px] w-full" />
               ))}
@@ -61,13 +75,14 @@ export default function BlogPage() {
     )
   }
 
-  const heroPosts = allBlogs.slice(0, 3)
-  const remainingPosts = paginatedBlogs
+  // Memoize slices
+  const heroPosts = useMemo(() => allBlogs.slice(0, 3), [allBlogs])
+  const remainingPosts = useMemo(() => paginatedBlogs, [paginatedBlogs])
 
   return (
     <MainWrapper>
       <main className="space-y-16">
-        <HeroCarousel posts={heroPosts} />
+        <HeroCarousel posts={heroPosts} key={heroPosts.map(p => p.id).join('-')} />
         <div className="container mx-auto px-4 pb-16">
           <BlogTopics posts={remainingPosts} />
 

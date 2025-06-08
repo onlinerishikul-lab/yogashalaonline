@@ -148,23 +148,6 @@ export default function ContactForm() {
           />
 
           {/* Course Date */}
-          <FormField
-            control={form.control}
-            name="courseDate"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Course Date</FormLabel>
-                <FormControl>
-                  <Input
-                    type="date"
-                    {...field}
-                    className="rounded-full border-gray-200"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
 
           {/* Gender */}
           <FormField

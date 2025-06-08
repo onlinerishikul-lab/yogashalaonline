@@ -1,3 +1,4 @@
+import { Header } from '@/components/common/header'
 import { SiteFooter } from '@/components/common/footer'
 import Blogs from '@/components/home/blogs/blogs'
 import Faculty from '@/components/home/Faculty/faculty'
@@ -33,6 +34,7 @@ export default async function Home() {
 
   return (
     <div>
+      <Header />
       {/* This wrapper ensures content is not hidden behind the fixed header */}
         <Banner />
         <Usp/> {/* ✅ Fix: Add required 'title' prop */}

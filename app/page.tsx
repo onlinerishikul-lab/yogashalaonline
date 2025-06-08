@@ -33,7 +33,7 @@ export default async function Home() {
   }
 
   return (
-    <div>
+    <div className="overflow-x-hidden max-w-full">
       <Header />
       {/* This wrapper ensures content is not hidden behind the fixed header */}
         <Banner />

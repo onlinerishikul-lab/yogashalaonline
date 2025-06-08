@@ -218,7 +218,7 @@ export const Header = () => {
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-      {/* Desktop Layout */}
+      {/* Desktop Layout - UNCHANGED */}
       <div className="hidden lg:block">
         <div className="w-full max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between relative">
           {/* Left Nav */}
@@ -344,7 +344,7 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Layout */}
+      {/* Mobile Layout - IMPROVED OVERFLOW HANDLING */}
       <div className="lg:hidden">
         <div className="w-full px-4 py-3 flex items-center justify-between">
           {/* Mobile Menu Toggle */}
@@ -374,26 +374,26 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="bg-[#4377B2] text-white shadow-md w-full max-h-[80vh] overflow-y-auto">
-            <div className="p-4 space-y-4">
+          <div className="bg-[#4377B2] text-white shadow-md w-full max-h-[80vh] overflow-y-auto overflow-x-hidden">
+            <div className="p-4 space-y-4 overflow-x-hidden">
               {navigationItems.map((item) => (
                 <div key={item.title} className="border-b border-white/20 pb-2">
                   {"href" in item ? (
                     <Link
                       href={item.href}
-                      className="flex items-center justify-between text-lg py-2 hover:text-white/80"
+                      className="flex items-center justify-between text-lg py-2 hover:text-white/80 w-full truncate"
                       onClick={() => setOpen(false)}
                     >
-                      {item.title}
-                      <MoveRight className="w-4 h-4" />
+                      <span className="truncate max-w-full break-words">{item.title}</span>
+                      <MoveRight className="w-4 h-4 flex-shrink-0" />
                     </Link>
                   ) : (
                     <div>
                       <button
-                        className="flex items-center justify-between w-full text-lg py-2 hover:text-white/80"
+                        className="flex items-center justify-between w-full text-lg py-2 hover:text-white/80 truncate"
                         onClick={() => toggleMobileDropdown(item.title)}
                       >
-                        <span className="truncate">{item.title}</span>
+                        <span className="truncate max-w-full break-words">{item.title}</span>
                         {expandedMobileItems.includes(item.title) ? (
                           <ChevronUp className="w-5 h-5 flex-shrink-0" />
                         ) : (
@@ -402,17 +402,17 @@ export const Header = () => {
                       </button>
 
                       {expandedMobileItems.includes(item.title) && (
-                        <div className="pl-4 space-y-2 mt-2 border-l-2 border-white/20">
+                        <div className="pl-4 space-y-2 mt-2 border-l-2 border-white/20 overflow-x-hidden">
                           {item.dropdown.map((subItem, subIdx) => (
                             <div key={subItem.title} className="py-1">
                               {subIdx > 0 && <div className="border-t border-white/10 my-2" />}
                               {subItem.subDropdown ? (
                                 <div>
                                   <button
-                                    className="flex items-center justify-between w-full text-base hover:text-white/80"
+                                    className="flex items-center justify-between w-full text-base hover:text-white/80 truncate"
                                     onClick={() => toggleMobileSubDropdown(subItem.title)}
                                   >
-                                    <span className="truncate">{subItem.title}</span>
+                                    <span className="truncate max-w-full break-words">{subItem.title}</span>
                                     {expandedMobileSubItems.includes(subItem.title) ? (
                                       <ChevronUp className="w-4 h-4 flex-shrink-0" />
                                     ) : (
@@ -421,13 +421,13 @@ export const Header = () => {
                                   </button>
 
                                   {expandedMobileSubItems.includes(subItem.title) && (
-                                    <div className="pl-4 mt-2 space-y-2 border-l border-white/20">
+                                    <div className="pl-4 mt-2 space-y-2 border-l border-white/20 overflow-x-hidden">
                                       {subItem.subDropdown.map((nestedItem, nestedIdx) => (
                                         <div key={nestedItem.title}>
                                           {nestedIdx > 0 && <div className="border-t border-white/10 my-2" />}
                                           <Link
                                             href={nestedItem.href}
-                                            className="block text-sm hover:text-white/80 py-1 truncate"
+                                            className="block text-sm hover:text-white/80 py-1 truncate max-w-full break-words"
                                             onClick={() => setOpen(false)}
                                           >
                                             {nestedItem.title}
@@ -440,7 +440,7 @@ export const Header = () => {
                               ) : (
                                 <Link
                                   href={subItem.href}
-                                  className="block text-base hover:text-white/80 truncate"
+                                  className="block text-base hover:text-white/80 truncate max-w-full break-words"
                                   onClick={() => setOpen(false)}
                                 >
                                   {subItem.title}

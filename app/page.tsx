@@ -1,4 +1,6 @@
 import React from 'react'
+import { Header } from '@/components/common/header'
+import { SiteFooter } from '@/components/common/footer'
 import Blogs from '@/components/home/blogs/blogs'
 import Faculty from '@/components/home/Faculty/faculty'
 import GetInTouch from '@/components/home/get-in-touch/get-in-touch'
@@ -6,10 +8,9 @@ import Join from '@/components/home/join/join'
 import OurTeaching from '@/components/home/our-teaching/our-teaching'
 import Transforming from '@/components/home/transforming/transforming'
 import Trust from '@/components/home/trust/trust'
-import Guarante from '@/components/home/Guarantee/Guarante'
+import GuaranteeSection from '@/components/home/Guarantee/GuaranteeSection'
 import Usp from '@/components/home/usp/usp'
-import TestimonialView from '@/components/home/testimonial/testimonial'
-import MainWrapper from '@/components/wrappers/main-wrapper'
+import Testimonial from '@/components/home/testimonial/testimonial'
 import { Banner } from '@/components/home/Banner/banner'
 import ExploreOurCoursesView from '@/components/home/explore-our-Online-Yoga-Course/explore-our-courses.view'
 import ExploreOurAyurvedaCoursesView from '@/components/home/explore-our-Online-Ayurveda-Course/explore-our-courses.view'
@@ -33,9 +34,10 @@ export default async function Home() {
   }
 
   return (
-    <MainWrapper>
-      {/* Added padding top so content starts below the fixed header */}
-      <div className="pt-20">
+    <div>
+      <Header />
+      {/* This wrapper ensures content is not hidden behind the fixed header */}
+      <div className="pt-20  min-h-screen">
         <Banner />
         <Usp />
         {/* Section 1: Benefits + Courses */}
@@ -47,7 +49,6 @@ export default async function Home() {
             </div>
           </div>
         </section>
-
         {/* Section 2: Course Levels + Ayurveda Courses */}
         <section className="bg-white py-0">
           <div className="container mx-auto px-2">
@@ -55,7 +56,6 @@ export default async function Home() {
             <CourseLevels />
           </div>
         </section>
-
         {/* Section 3: Yoga For Everyone + Yoga Classes */}
         <section className="bg-white py-0">
           <div className="container mx-auto px-2">
@@ -63,18 +63,17 @@ export default async function Home() {
             <YogaForEveryone />
           </div>
         </section>
-
-        {/* Remaining Sections */}
-        <Guarante />
+        <GuaranteeSection />
         <OurTeaching />
         <Transforming />
         <Trust />
         <Blogs blogs={blogs} />
         <Join />
         <Faculty />
-        <TestimonialView title="What Our Students Say" tilt={true} />
+        <Testimonial />
         <GetInTouch />
       </div>
-    </MainWrapper>
+      <SiteFooter />
+    </div>
   )
 }

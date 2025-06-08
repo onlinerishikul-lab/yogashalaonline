@@ -18,7 +18,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
     .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
     .slice(0, 3);
 
- const courses = [
+  const courses = [
     {
       title: "Yoga Anatomy For Safety",
       link: "/25-Hrs-Yoga-Courses/Yoga-Anatomy",
@@ -55,6 +55,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
       image: "/meditation.png",
     },
   ];
+
   return (
     <MainWrapper>
       <article className="min-h-screen">
@@ -62,12 +63,14 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
         <div className="relative h-[70vh] w-full">
           <Image
             src={post.coverImage}
-            alt={post.title}
+            alt={post.title || "Blog cover"}
             fill
             sizes="(max-width: 768px) 100vw, 80vw"
             quality={60}
             className="object-cover"
-            priority // Only LCP image should have this
+            priority
+            decoding="async"
+            unoptimized={false}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent" />
           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-10 lg:p-16">
@@ -78,7 +81,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
               </h1>
               <p className="text-white/90 text-lg">{post.overview}</p>
               <div className="flex justify-center items-center space-x-4 text-white/80 text-sm">
-                <p>By {post.author.name}</p>
+                <p>By {post.author?.name || "Unknown"}</p>
                 <span>•</span>
                 <time dateTime={new Date(post.createdAt).toISOString()}>
                   {new Date(post.createdAt).toLocaleDateString("en-US", {
@@ -98,7 +101,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
         <div className="container max-w-7xl mx-auto px-4 py-12">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Sidebar - Lazy Loaded Images */}
-            <aside className="w-full lg:w-1/4 space-y-4">
+            <aside className="w-full lg:w-1/4 space-y-4" aria-label="Explore Courses">
               <h2 className="text-xl font-bold text-[#4377B2]">Explore Courses</h2>
               <div className="grid gap-4">
                 {courses.map((course) => (
@@ -112,7 +115,9 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
                           sizes="(max-width: 768px) 100vw, 33vw"
                           quality={60}
                           loading="lazy"
+                          decoding="async"
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          unoptimized={false}
                         />
                       </div>
                       <div className="p-4">
@@ -126,7 +131,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
             </aside>
 
             {/* Main Blog Content */}
-            <div className="prose prose-lg dark:prose-invert flex-1">
+            <div className="prose prose-lg dark:prose-invert flex-1" aria-label="Blog Content">
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
           </div>
@@ -135,25 +140,27 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
           <div className="mt-16 border-t pt-8">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
-                {post.author.image ? (
+                {post.author?.image ? (
                   <Image
                     src={post.author.image}
-                    alt={post.author.name}
+                    alt={post.author.name || "Author"}
                     width={48}
                     height={48}
                     className="rounded-full"
                     loading="lazy"
+                    decoding="async"
+                    unoptimized={false}
                   />
                 ) : (
                   <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center">
                     <span className="text-lg font-medium text-gray-600">
-                      {post.author.name[0]}
+                      {post.author?.name?.[0] || "?"}
                     </span>
                   </div>
                 )}
                 <div>
-                  <p className="font-medium">{post.author.name}</p>
-                  <p className="text-sm text-muted-foreground">{post.author.email}</p>
+                  <p className="font-medium">{post.author?.name || "Unknown"}</p>
+                  <p className="text-sm text-muted-foreground">{post.author?.email || ""}</p>
                 </div>
               </div>
               <div className="flex space-x-4 text-sm">
@@ -170,23 +177,23 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
             <div className="space-y-8">
               <h2 className="text-2xl font-bold text-[#4377B2]">Related Posts</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {relatedPosts.map((post) => (
+                {relatedPosts.map((related) => (
                   <BlogCard
-                    key={post.id}
+                    key={related.id}
                     post={{
-                      id: post.id,
-                      title: post.title,
-                      slug: post.slug,
-                      excerpt: post.overview,
-                      content: post.content,
-                      imageUrl: post.coverImage,
-                      date: new Date(post.createdAt).toLocaleDateString("en-US", {
+                      id: related.id,
+                      title: related.title,
+                      slug: related.slug,
+                      excerpt: related.overview,
+                      content: related.content,
+                      imageUrl: related.coverImage,
+                      date: new Date(related.createdAt).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
                         day: "numeric",
                       }),
-                      category: post.tags[0] || "Uncategorized",
-                      author: post.author.name,
+                      category: related.tags[0] || "Uncategorized",
+                      author: related.author?.name || "",
                     }}
                   />
                 ))}

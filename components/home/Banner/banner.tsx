@@ -7,7 +7,7 @@ export function Banner() {
   const router = useRouter();
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
+    <div className="relative w-full min-h-screen">
       {/* Background Image */}
       <Image
         src="/onlinebg.jpg"

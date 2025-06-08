@@ -7,7 +7,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { Button } from '@/components/ui/button'
 import { useBlogs } from '@/hooks/use-blogs'
 
-// Dynamically import heavy components
+// Dynamically import heavy components for better perf
 const HeroCarousel = dynamic(() => import('@/components/blog/hero-carousel').then(m => m.HeroCarousel), {
   ssr: false,
   loading: () => <Skeleton className="w-full h-[400px]" />
@@ -38,6 +38,10 @@ export default function BlogPage() {
     limit: 6,
     category: selectedCategory
   })
+
+  // Always call hooks at the top level, unconditionally
+  const heroPosts = useMemo(() => allBlogs ? allBlogs.slice(0, 3) : [], [allBlogs])
+  const remainingPosts = useMemo(() => paginatedBlogs || [], [paginatedBlogs])
 
   const loadMore = () => {
     setPage(prev => prev + 1)
@@ -74,10 +78,6 @@ export default function BlogPage() {
       </MainWrapper>
     )
   }
-
-  // Memoize slices
-  const heroPosts = useMemo(() => allBlogs.slice(0, 3), [allBlogs])
-  const remainingPosts = useMemo(() => paginatedBlogs, [paginatedBlogs])
 
   return (
     <MainWrapper>

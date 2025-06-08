@@ -39,7 +39,7 @@ export default async function Home() {
       {/* This wrapper ensures content is not hidden behind the fixed header */}
       <div>
         <Banner />
-        <Usp title="Why Choose Us?" /> {/* ✅ Fix: Add required 'title' prop */}
+        <Usp/> {/* ✅ Fix: Add required 'title' prop */}
         
         {/* Section 1: Benefits + Courses */}
         <section className="bg-white py-0">
@@ -74,7 +74,7 @@ export default async function Home() {
         <Blogs blogs={blogs} />
         <Join />
         <Faculty />
-        <Testimonial />
+        <Testimonial title="What Our Students Say" tilt={true}/>
         <GetInTouch />
       </div>
       <SiteFooter />

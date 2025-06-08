@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { BlogCard } from './blog-card'
@@ -11,13 +11,22 @@ interface BlogTopicsProps {
 }
 
 export function BlogTopics({ posts }: BlogTopicsProps) {
-  const categories: BlogCategory[] = ['All', ...Array.from(new Set(posts.map((p) => p.category)))]
+  // Memoize categories
+  const categories: BlogCategory[] = useMemo(
+    () => ['All', ...Array.from(new Set(posts.map((p) => p.category)))],
+    [posts]
+  )
 
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('All')
 
-  const filteredPosts = activeCategory === 'All'
-    ? posts
-    : posts.filter((post) => post.category === activeCategory)
+  // Memoize filtered posts
+  const filteredPosts = useMemo(
+    () =>
+      activeCategory === 'All'
+        ? posts
+        : posts.filter((post) => post.category === activeCategory),
+    [posts, activeCategory]
+  )
 
   return (
     <section className="space-y-8">
@@ -63,7 +72,7 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
             <BlogCard
               key={post.id}
               post={post}
-              isFirst={index === 0} // ✅ First image loads eagerly
+              isFirst={index === 0} // ✅ First image loads eagerly in BlogCard
             />
           ))
         ) : (

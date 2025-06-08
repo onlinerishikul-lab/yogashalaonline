@@ -4,9 +4,8 @@ import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { TESTIMONIALS, Testimonial } from "@/config/constants";
+import { TESTIMONIALS } from "@/config/constants";
 
 export function ReviewSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -65,33 +64,25 @@ export function ReviewSection() {
     isActive = false,
     className = "",
   }: {
-    testimonial: Testimonial;
+    testimonial: {
+      quote: string;
+      name: string;
+      location: string;
+      context: string;
+    };
     isActive?: boolean;
     className?: string;
   }) => (
-    <Card
-      className={`bg-[#2A2A2A] text-white border-none w-full max-w-md mx-auto ${className}`}
-    >
+    <Card className={`bg-[#2A2A2A] text-white border-none w-full max-w-md mx-auto ${className}`}>
       <CardContent className="p-6">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="relative w-12 h-12 rounded-full overflow-hidden">
-            <Image
-              src={testimonial.image}
-              alt={testimonial.name}
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <h3 className="font-semibold">{testimonial.name}</h3>
-            <p className="text-sm text-gray-400">{testimonial.country}</p>
-          </div>
+        <div className="mb-4">
+          <h3 className="font-semibold text-lg">{testimonial.name}</h3>
+          <p className="text-sm text-gray-400">{testimonial.location}</p>
         </div>
-        <blockquote
-          className={`${isActive ? "text-lg" : "text-sm"} italic line-clamp-3`}
-        >
+        <blockquote className={`${isActive ? "text-lg" : "text-sm"} italic line-clamp-4`}>
           &quot;{testimonial.quote}&quot;
         </blockquote>
+        <p className="mt-2 text-xs text-gray-500 italic">({testimonial.context})</p>
       </CardContent>
     </Card>
   );

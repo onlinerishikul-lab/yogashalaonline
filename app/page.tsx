@@ -37,7 +37,6 @@ export default async function Home() {
     <div>
       <Header />
       {/* This wrapper ensures content is not hidden behind the fixed header */}
-      <div>
         <Banner />
         <Usp/> {/* ✅ Fix: Add required 'title' prop */}
         
@@ -76,7 +75,6 @@ export default async function Home() {
         <Faculty />
         <Testimonial title="What Our Students Say" tilt={true}/>
         <GetInTouch />
-      </div>
       <SiteFooter />
     </div>
   )

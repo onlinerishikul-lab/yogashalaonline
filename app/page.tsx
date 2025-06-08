@@ -34,47 +34,47 @@ export default async function Home() {
 
   return (
     <MainWrapper>
-      <Banner />
-      <Usp />
-{/* Section 1: Benefits + Courses */}
-<section className="bg-white py-0">
-  <div className="container mx-auto px-2">
-    <ExploreOurCoursesView courses={courses} />
-    <div className="mt-0 mb-0 py-0">
-      <BenefitsOfOnlineLearning />
-    </div>
-  </div>
-</section>
+      {/* Added padding top so content starts below the fixed header */}
+      <div className="pt-20">
+        <Banner />
+        <Usp />
+        {/* Section 1: Benefits + Courses */}
+        <section className="bg-white py-0">
+          <div className="container mx-auto px-2">
+            <ExploreOurCoursesView courses={courses} />
+            <div className="mt-0 mb-0 py-0">
+              <BenefitsOfOnlineLearning />
+            </div>
+          </div>
+        </section>
 
+        {/* Section 2: Course Levels + Ayurveda Courses */}
+        <section className="bg-white py-0">
+          <div className="container mx-auto px-2">
+            <ExploreOurAyurvedaCoursesView courses={courses} />
+            <CourseLevels />
+          </div>
+        </section>
 
-{/* Section 2: Course Levels + Ayurveda Courses */}
-<section className="bg-white py-0">
-  <div className="container mx-auto px-2">
-    <ExploreOurAyurvedaCoursesView courses={courses} />
-    <CourseLevels />
-  </div>
-</section>
+        {/* Section 3: Yoga For Everyone + Yoga Classes */}
+        <section className="bg-white py-0">
+          <div className="container mx-auto px-2">
+            <ExploreOurClassesView courses={courses} />
+            <YogaForEveryone />
+          </div>
+        </section>
 
-{/* Section 3: Yoga For Everyone + Yoga Classes */}
-<section className="bg-white py-0">
-  <div className="container mx-auto px-2">
-    <ExploreOurClassesView courses={courses} />
-    <YogaForEveryone />
-  </div>
-</section>
-
-
-      {/* Remaining Sections */}
-      <Guarante />
-     
-      <OurTeaching />
-      <Transforming />
-      <Trust />
-      <Blogs blogs={blogs} />
-      <Join />
-      <Faculty />
-      <TestimonialView title="What Our Students Say" tilt={true} />
-      <GetInTouch />
+        {/* Remaining Sections */}
+        <Guarante />
+        <OurTeaching />
+        <Transforming />
+        <Trust />
+        <Blogs blogs={blogs} />
+        <Join />
+        <Faculty />
+        <TestimonialView title="What Our Students Say" tilt={true} />
+        <GetInTouch />
+      </div>
     </MainWrapper>
   )
 }

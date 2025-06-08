@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, memo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -11,7 +11,8 @@ interface HeroCarouselProps {
   posts: BlogPost[]
 }
 
-export function HeroCarousel({ posts }: HeroCarouselProps) {
+// Memoize the carousel to avoid unnecessary rerenders
+export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextSlide = useCallback(() => {
@@ -38,27 +39,22 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="absolute inset-0"
         >
           <Image
             src={currentPost.imageUrl}
-            alt={currentPost.title}
+            alt={currentPost.title || 'Blog post cover'}
             fill
-            className="object-cover"
-            // ✅ Responsive hints for optimization
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 768px"
-            // ✅ Improve FCP/LCP
             priority={currentIndex === 0}
             loading={currentIndex === 0 ? 'eager' : 'lazy'}
             fetchPriority={currentIndex === 0 ? 'high' : 'low'}
-            // ✅ Lightweight quality
             quality={60}
-            // ✅ Blur placeholder
             placeholder={currentPost.blurDataURL ? 'blur' : 'empty'}
             blurDataURL={currentPost.blurDataURL}
-            // ✅ Ensure image optimization for remote URLs
             unoptimized={false}
+            decoding="async"
           />
 
           <div className="absolute inset-0 flex flex-col justify-end bg-black/40 p-6 sm:p-10 text-white">
@@ -77,25 +73,25 @@ export function HeroCarousel({ posts }: HeroCarouselProps) {
               >
                 Read More →
               </Link>
-
-              <div className="flex space-x-2 mt-4">
-                {posts.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setCurrentIndex(idx)}
-                    aria-label={`Go to slide ${idx + 1}`}
-                    aria-current={idx === currentIndex ? 'true' : undefined}
-                    className={cn(
-                      'w-2 h-2 rounded-full transition-all',
-                      idx === currentIndex ? 'bg-white w-3' : 'bg-white/50 hover:bg-white'
-                    )}
-                  />
-                ))}
-              </div>
             </div>
           </div>
         </motion.div>
       </AnimatePresence>
+      {/* Carousel Nav Buttons OUTSIDE AnimatePresence for less rerenders */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+        {posts.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            aria-label={`Go to slide ${idx + 1}`}
+            aria-current={idx === currentIndex ? 'true' : undefined}
+            className={cn(
+              'w-2 h-2 rounded-full transition-all',
+              idx === currentIndex ? 'bg-white w-3' : 'bg-white/50 hover:bg-white'
+            )}
+          />
+        ))}
+      </div>
     </div>
   )
-}
+})

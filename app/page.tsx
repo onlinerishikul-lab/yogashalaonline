@@ -32,9 +32,32 @@ export default async function Home() {
     <MainWrapper>
       <Banner />
       <Usp />
-      <ExploreOurCoursesView courses={courses} />
-      <CoreView isBgVisible={true} />
-      <Guarante />
+      {/* Section 1: Benefits + Courses */}
+        <section className="bg-white py-0">
+          <div className="container mx-auto px-2">
+            <ExploreOurCoursesView courses={courses} />
+            <div className="mt-0 mb-0 py-0">
+              <BenefitsOfOnlineLearning />
+            </div>
+          </div>
+        </section>
+
+        {/* Section 2: Course Levels + Ayurveda Courses */}
+        <section className="bg-white py-0">
+          <div className="container mx-auto px-2">
+            <ExploreOurAyurvedaCoursesView courses={courses} />
+            <CourseLevels />
+          </div>
+        </section>
+
+        {/* Section 3: Yoga For Everyone + Yoga Classes */}
+        <section className="bg-white py-0">
+          <div className="container mx-auto px-2">
+            <ExploreOurClassesView courses={courses} />
+            <YogaForEveryone />
+          </div>
+        </section>
+      <GuaranteeSection />
       <Trust />
       <OurTeaching />
       <Transforming courses={courses} />

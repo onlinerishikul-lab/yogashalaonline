@@ -3,30 +3,34 @@ import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { BlogCardProps } from '@/types/blog'
 import { cn } from '@/lib/utils'
+import { memo } from 'react'
 
 interface ExtendedBlogCardProps extends BlogCardProps {
   className?: string
   isFirst?: boolean
 }
 
-export function BlogCard({ post, className, isFirst = false }: ExtendedBlogCardProps) {
+// Memoized for performance
+export const BlogCard = memo(function BlogCard({ post, className, isFirst = false }: ExtendedBlogCardProps) {
   return (
-    <div className={cn('block h-full', className)}>
+    <article className={cn('block h-full', className)}>
       <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
         {/* Image Section */}
         <div className="relative w-full aspect-[16/9] bg-gray-100">
           <Image
             src={post.imageUrl}
-            alt={post.title}
+            alt={post.title || 'Blog post preview'}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover"
             loading={isFirst ? 'eager' : 'lazy'}
             priority={isFirst}
             fetchPriority={isFirst ? 'high' : 'auto'}
-            quality={60} // reduced from 70 for faster load
+            quality={60}
             placeholder={post.blurDataURL ? 'blur' : 'empty'}
             blurDataURL={post.blurDataURL}
+            decoding="async"
+            unoptimized={false}
           />
         </div>
 
@@ -54,6 +58,6 @@ export function BlogCard({ post, className, isFirst = false }: ExtendedBlogCardP
           </Link>
         </div>
       </Card>
-    </div>
+    </article>
   )
-}
+})

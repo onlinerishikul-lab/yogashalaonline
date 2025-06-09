@@ -45,11 +45,11 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
             src={currentPost.imageUrl}
             alt={currentPost.title || 'Blog post cover'}
             fill
-            sizes="(max-width: 768px) 100vw, 768px"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1280px"
             priority={true}
             loading="eager"
             fetchPriority="high"
-            quality={50}
+            quality={40}
             placeholder={currentPost.blurDataURL ? 'blur' : 'empty'}
             blurDataURL={currentPost.blurDataURL}
             decoding="async"
@@ -59,8 +59,10 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
           <div className="absolute inset-0 flex flex-col justify-end bg-black/50 p-4 sm:p-6 text-white backdrop-blur-sm">
             <div className="max-w-2xl space-y-2" aria-live="polite">
               <div className="text-xs sm:text-sm opacity-80">
-                <time>{currentPost.date}</time> &mdash;{' '}
-                <span>{currentPost.category}</span>
+                <time dateTime={new Date(currentPost.date).toISOString()}>
+                  {currentPost.date}
+                </time>{' '}
+                &mdash; <span>{currentPost.category}</span>
               </div>
               <h1 className="text-xl sm:text-2xl font-bold">{currentPost.title}</h1>
               <p className="text-white/90 text-xs sm:text-base line-clamp-2">

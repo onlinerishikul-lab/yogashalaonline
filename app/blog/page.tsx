@@ -1,18 +1,17 @@
 'use client'
 
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo } from 'react'
 import dynamic from 'next/dynamic'
-import Head from 'next/head'
 import MainWrapper from '@/components/wrappers/main-wrapper'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Button } from '@/components/ui/button'
 import { useBlogs } from '@/hooks/use-blogs'
 
+// Dynamic imports: only load when needed
 const HeroCarousel = dynamic(() => import('@/components/blog/hero-carousel').then(m => m.HeroCarousel), {
   ssr: false,
-  loading: () => <Skeleton className="w-full h-[400px]" />,
+  loading: () => <Skeleton className="w-full h-[400px]" />
 })
-
 const BlogTopics = dynamic(() => import('@/components/blog/blog-topics').then(m => m.BlogTopics), {
   ssr: false,
   loading: () => (
@@ -21,7 +20,7 @@ const BlogTopics = dynamic(() => import('@/components/blog/blog-topics').then(m 
         <Skeleton key={i} className="h-[300px] w-full" />
       ))}
     </div>
-  ),
+  )
 })
 
 export default function BlogPage() {
@@ -34,32 +33,58 @@ export default function BlogPage() {
     totalPages,
     isLoading,
     error,
-    isFetching,
+    isFetching
   } = useBlogs({
     page,
     limit: 6,
-    category: selectedCategory,
+    category: selectedCategory
   })
 
+  // Memoized slicing to reduce recomputation
   const heroPosts = useMemo(() => allBlogs?.slice(0, 3) || [], [allBlogs])
   const remainingPosts = useMemo(() => paginatedBlogs || [], [paginatedBlogs])
 
-  const loadMore = useCallback(() => setPage(prev => prev + 1), [])
+  const loadMore = () => setPage((prev) => prev + 1)
 
-  const preloadImage = heroPosts[0]?.imageUrl
+  if (isLoading) {
+    return (
+      <MainWrapper>
+        <main className="space-y-16">
+          <Skeleton className="w-full h-[400px]" />
+          <div className="container mx-auto px-4 pb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[...Array(6)].map((_, i) => (
+                <Skeleton key={i} className="h-[300px] w-full" />
+              ))}
+            </div>
+          </div>
+        </main>
+      </MainWrapper>
+    )
+  }
+
+  if (error) {
+    return (
+      <MainWrapper>
+        <main className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <h2 className="text-2xl font-semibold text-gray-900">Something went wrong</h2>
+            <p className="text-gray-600 mt-2">{error.message}</p>
+          </div>
+        </main>
+      </MainWrapper>
+    )
+  }
 
   return (
     <MainWrapper>
-      <Head>
-        {preloadImage && (
-          <link rel="preload" as="image" href={preloadImage} imagesrcset={preloadImage} />
-        )}
-      </Head>
-
       <main className="space-y-16">
-        <HeroCarousel posts={heroPosts} key={heroPosts.map(p => p.id).join('-')} />
+        <HeroCarousel
+          posts={heroPosts}
+          key={heroPosts.map((p) => p.id).join('-')}
+        />
 
-        <section className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="container mx-auto px-4 pb-16">
           <BlogTopics posts={remainingPosts} />
 
           {page < totalPages && (
@@ -75,7 +100,7 @@ export default function BlogPage() {
               </Button>
             </div>
           )}
-        </section>
+        </div>
       </main>
     </MainWrapper>
   )

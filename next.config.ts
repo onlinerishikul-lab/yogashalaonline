@@ -6,21 +6,16 @@ const nextConfig: NextConfig = {
       "images.unsplash.com",
       "plus.unsplash.com",
       "utfs.io",
-      "cdn.rishikulonline.com",
+      "cdn.rishikulonline.com", // ✅ Add your CDN/custom domain here if applicable
     ],
-    formats: ["image/webp"],
+    formats: ["image/webp"], // ✅ Use modern image formats
   },
-  experimental: {
-    scrollRestoration: true,
-    optimizeCss: true,
-    turbo: {}, // ✅ Correct usage of TurboPack
-  },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
-  },
-  reactStrictMode: true,
   swcMinify: true,
-  output: "standalone",
+  experimental: {
+    scrollRestoration: true, // ✅ Improves UX when navigating back
+  },
+  reactStrictMode: true, // ✅ Helps catch issues early (optional but recommended)
+  output: "standalone", // Good for Docker/Vercel/hosted deployments
 };
 
 export default nextConfig;

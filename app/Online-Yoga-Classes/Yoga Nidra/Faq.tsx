@@ -5,24 +5,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Do I need to be a yoga teacher to enroll in this course?",
+    question: "Do I need to be a yoga teacher to enroll in this Class?",
     answer:
-      "No. This course is open to everyone—whether you're a yoga teacher, therapist, healer, or simply someone seeking to deepen your personal practice of relaxation and inner awareness.",
+      "No. This Class is open to everyone—whether you're a yoga teacher, therapist, healer, or simply someone seeking to deepen your personal practice of relaxation and inner awareness.",
   },
   {
-    question: "Will I be certified to teach Yoga Nidra after completing the course?",
+    question: "Will I be certified to teach Yoga Nidra after completing the Class?",
     answer:
       "Yes. Upon successful completion, you’ll receive a Yoga Nidra Teacher Training Certificate that qualifies you to guide others through Yoga Nidra sessions.",
   },
   {
-    question: "Is this course theoretical or practical?",
+    question: "Is this Class theoretical or practical?",
     answer:
       "Both. The training combines deep philosophical understanding with guided practice sessions so you can experience, learn, and confidently lead Yoga Nidra.",
   },
   {
-    question: "Can I complete this course at my own pace?",
+    question: "Can I complete this Class at my own pace?",
     answer:
-      "Yes. The course is self-paced and fully online, allowing you to progress through the lessons whenever it suits your schedule.",
+      "Yes. The Class is self-paced and fully online, allowing you to progress through the lessons whenever it suits your schedule.",
   },
 ];
 
@@ -38,10 +38,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Yoga Nidra Teacher Training: FAQ
+          Yoga Nidra Class: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Find answers to your questions before beginning your Yoga Nidra TTC journey.
+          Find answers to your questions before beginning your Yoga Nidra Class journey.
         </p>
 
         <div className="space-y-4">

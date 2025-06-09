@@ -16,7 +16,7 @@ const HeroSection = () => {
       {/* Hero Content Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white px-4 pt-20">
         <h1 className="text-4xl md:text-5xl font-bold text-center leading-snug drop-shadow-lg">
-          Power Yoga
+          Power Yoga Class
           <br />
           Energize the Body, Ignite the Mind.
         </h1>

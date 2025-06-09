@@ -5,8 +5,6 @@ import StickyCourseCard  from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Dia
 import YogaCoursePage from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/yogacourse";
 import LearnSection from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/LearnSection";
 import CourseDetails from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/CourseDetails";
-import YogaAccreditation from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/YogaAccreditation";
-import CertificatePromo from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/CertificatePromo";
 import TestimonialCarousel from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/TestimonialCarousel";
 import Faq from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
@@ -24,8 +22,6 @@ export default function Page() {
           <YogaCoursePage />
           <LearnSection />
           <CourseDetails />
-          <YogaAccreditation />
-          <CertificatePromo />
           <TestimonialCarousel />
           <Faq />
         </div>

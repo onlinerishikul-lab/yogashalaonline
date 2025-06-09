@@ -31,7 +31,7 @@ export default function PaymentPage() {
       id: "remaining",
       title: "Remaining Payment",
       price: "$200.00",
-      description: "After joining course",
+      description: "When Joining The Course",
     },
   ];
 

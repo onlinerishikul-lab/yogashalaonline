@@ -45,7 +45,7 @@ const YogaCoursePage = () => {
           Online Power Yoga Classes
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-      Power Yoga blends strength, flexibility, and endurance into a dynamic, fitness-focused practice. This course trains you to teach energetic, sweat-inducing flows while maintaining yogic roots and mindful awareness.
+      Power Yoga blends strength, flexibility, and endurance into a dynamic, fitness-focused practice. This Class trains you to teach energetic, sweat-inducing flows while maintaining yogic roots and mindful awareness.
         </p>
       </section>
 

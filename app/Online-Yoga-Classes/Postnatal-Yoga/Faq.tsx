@@ -10,9 +10,9 @@ const faqs = [
       "Postnatal Yoga is a gentle and restorative practice designed to help new mothers regain strength, flexibility, and overall well-being after childbirth.",
   },
   {
-    question: "Is this course suitable for all new mothers?",
+    question: "Is this Class suitable for all new mothers?",
     answer:
-      "Yes, this course is suitable for new mothers who are cleared by their healthcare provider to engage in physical activity post childbirth. It’s designed to be gentle and restorative.",
+      "Yes, this Class is suitable for new mothers who are cleared by their healthcare provider to engage in physical activity post childbirth. It’s designed to be gentle and restorative.",
   },
   {
     question: "When can I start practicing Postnatal Yoga after childbirth?",
@@ -20,19 +20,19 @@ const faqs = [
       "It’s recommended to wait at least 6 weeks postpartum (or as advised by your doctor) before starting any physical activity, including Postnatal Yoga.",
   },
   {
-    question: "Will this course help with post-pregnancy weight loss?",
+    question: "Will this Class help with post-pregnancy weight loss?",
     answer:
       "While Postnatal Yoga can aid in toning muscles and improving overall health, it is not specifically aimed at weight loss. It’s about rebuilding strength and creating balance in your body.",
   },
   {
-    question: "Do I need any previous yoga experience to join this course?",
+    question: "Do I need any previous yoga experience to join this Class?",
     answer:
-      "No prior yoga experience is required. This course is designed for beginners and new mothers who want to ease back into physical activity safely.",
+      "No prior yoga experience is required. This Class is designed for beginners and new mothers who want to ease back into physical activity safely.",
   },
   {
-    question: "Will I receive a certificate after completing the course?",
+    question: "Will I receive a certificate after completing the Class?",
     answer:
-      "Yes, upon successful completion of the course, you will receive a digital certificate that you can proudly share.",
+      "Yes, upon successful completion of the Class, you will receive a digital certificate that you can proudly share.",
   },
 ];
 
@@ -48,10 +48,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Postnatal Yoga Course: FAQ
+          Postnatal Yoga Class: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Find answers to your questions before joining the course
+          Find answers to your questions before joining the Class
         </p>
 
         <div className="space-y-4">

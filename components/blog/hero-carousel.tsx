@@ -11,7 +11,6 @@ interface HeroCarouselProps {
   posts: BlogPost[]
 }
 
-// Memoize the carousel to avoid unnecessary rerenders
 export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -31,7 +30,7 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
       role="group"
       aria-roledescription="carousel"
       aria-label="Hero blog carousel"
-      className="relative w-full h-[400px] overflow-hidden"
+      className="relative w-full h-[300px] sm:h-[400px] overflow-hidden"
     >
       <AnimatePresence initial={false} mode="wait">
         <motion.div
@@ -39,37 +38,37 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
           className="absolute inset-0"
         >
           <Image
             src={currentPost.imageUrl}
             alt={currentPost.title || 'Blog post cover'}
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 768px"
+            sizes="(max-width: 768px) 100vw, 768px"
             priority={currentIndex === 0}
             loading={currentIndex === 0 ? 'eager' : 'lazy'}
             fetchPriority={currentIndex === 0 ? 'high' : 'low'}
-            quality={60}
+            quality={50}
             placeholder={currentPost.blurDataURL ? 'blur' : 'empty'}
             blurDataURL={currentPost.blurDataURL}
-            unoptimized={false}
             decoding="async"
+            className="object-cover"
           />
 
-          <div className="absolute inset-0 flex flex-col justify-end bg-black/40 p-6 sm:p-10 text-white">
-            <div className="max-w-3xl space-y-3" aria-live="polite">
-              <div className="text-sm opacity-80">
+          <div className="absolute inset-0 flex flex-col justify-end bg-black/50 p-4 sm:p-6 text-white backdrop-blur-sm">
+            <div className="max-w-2xl space-y-2" aria-live="polite">
+              <div className="text-xs sm:text-sm opacity-80">
                 <time>{currentPost.date}</time> &mdash;{' '}
                 <span>{currentPost.category}</span>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-bold">{currentPost.title}</h1>
-              <p className="text-white/90 text-sm sm:text-base line-clamp-2">
+              <h1 className="text-xl sm:text-2xl font-bold">{currentPost.title}</h1>
+              <p className="text-white/90 text-xs sm:text-base line-clamp-2">
                 {currentPost.excerpt}
               </p>
               <Link
                 href={`/blog/${currentPost.slug}`}
-                className="inline-block text-white text-sm font-medium underline hover:opacity-80"
+                className="inline-block text-sm underline hover:opacity-80"
               >
                 Read More →
               </Link>
@@ -77,8 +76,8 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
           </div>
         </motion.div>
       </AnimatePresence>
-      {/* Carousel Nav Buttons OUTSIDE AnimatePresence for less rerenders */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-1 z-10">
         {posts.map((_, idx) => (
           <button
             key={idx}
@@ -87,7 +86,7 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
             aria-current={idx === currentIndex ? 'true' : undefined}
             className={cn(
               'w-2 h-2 rounded-full transition-all',
-              idx === currentIndex ? 'bg-white w-3' : 'bg-white/50 hover:bg-white'
+              idx === currentIndex ? 'bg-white w-3' : 'bg-white/40 hover:bg-white'
             )}
           />
         ))}

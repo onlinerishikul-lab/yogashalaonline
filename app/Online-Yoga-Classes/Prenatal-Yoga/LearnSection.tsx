@@ -3,7 +3,7 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights",
+      title: "Class Highlights",
       content: [
         "Certified Prenatal Yoga Training",
         "Trimester-specific yoga sequences",
@@ -16,7 +16,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "What’s Inside the Course – Practical Aspects",
+      title: "What’s Inside the Class – Practical Aspects",
       content: [
         "Safe postures and movement during each trimester",
         "Pelvic floor strengthening and core stability",
@@ -29,7 +29,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? NO!",
+      title: "Is This Class for You? NO!",
       content: [
         "You're looking for intense or advanced physical practice",
         "You’re not open to working with subtle, gentle approaches",
@@ -37,7 +37,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? YES!",
+      title: "Is This Class for You? YES!",
       content: [
         "You're a yoga teacher wanting to guide pregnant students safely",
         "You're pregnant and want to practice yoga safely at home",

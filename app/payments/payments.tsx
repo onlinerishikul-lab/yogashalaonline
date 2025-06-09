@@ -5,20 +5,16 @@ import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 
 export default function PaymentPage() {
-  const [selectedPlan, setSelectedPlan] = useState('one-time');
+  const [selectedPlan, setSelectedPlan] = useState('advance');
   const [selectedCourse, setSelectedCourse] = useState('200-hour-yoga');
   const payRef = useRef<HTMLDivElement>(null);
 
   const paymentLinks: Record<string, { razorpay: string; paypal: string }> = {
-    'one-time': {
+    'advance': {
       razorpay: 'https://razorpay.me/@Rishikul',
       paypal: 'https://www.paypal.me/rishikulyogshala',
     },
-    'two-part': {
-      razorpay: 'https://razorpay.me/@Rishikul',
-      paypal: 'https://www.paypal.me/rishikulyogshala',
-    },
-    'three-part': {
+    'remaining': {
       razorpay: 'https://razorpay.me/@Rishikul',
       paypal: 'https://www.paypal.me/rishikulyogshala',
     },
@@ -26,62 +22,17 @@ export default function PaymentPage() {
 
   const plans = [
     {
-      id: 'one-time',
-      title: 'One-Time Payment',
-      price: '$250.00',
-      description: 'Pay once and get full access.',
+      id: 'advance',
+      title: 'Advance Payment',
+      price: '$50.00',
+      description: 'Pay now to reserve your spot.',
     },
     {
-      id: 'two-part',
-      title: 'Two-Part Installments',
-      price: '$125.00 x 2',
-      description: 'Split into two monthly payments.',
+      id: 'remaining',
+      title: 'Remaining Payment',
+      price: '$200.00',
+      description: 'After joining course',
     },
-    {
-      id: 'three-part',
-      title: 'Three-Part Installments',
-      price: '$85.00 x 3',
-      description: 'Split into three monthly payments.',
-    },
-  ];
-
-  const courses = [
-    { id: 'Yoga Anotomy For Safety', name: 'Yoga Anotomy For Safety' },
-    { id: 'Face Yoga TTC', name: 'Face Yoga TTC' },
-    { id: 'Meditation TTC', name: 'Meditation TTC' },
-    { id: 'Pranayama TTC', name: 'Pranayama TTC' },
-    { id: 'Yoga Nidra TTC', name: 'Yoga Nidra TTC' },
-    { id: 'Chair Yoga TTC', name: 'Chair Yoga TTC' },
-    { id: 'Mudra & Mantra Course', name: 'Mudra & Mantra Course' },
-    { id: 'Kundalini Yoga Course', name: 'Kundalini Yoga Course' },
-    { id: 'Kids Yoga Course', name: 'Kids Yoga Course' },
-    { id: 'Yoga Therapy Course', name: 'Yoga Therapy Course' },
-    { id: 'Pregnancy Yoga', name: 'Pregnancy Yoga' },
-    { id: 'Core Concept of Yoga Philosophy', name: 'Core Concept of Yoga Philosophy' },
-    { id: 'Asana Clinic for Yoga Professionals', name: 'Asana Clinic for Yoga Professionals' },
-    { id: 'Prenatal & Postnatal Yoga Course for Teachers', name: 'Prenatal & Postnatal Yoga Course for Teachers' },
-    { id: 'Kids Yoga Course', name: 'Kids Yoga Course' },
-    { id: 'Multi Style Yoga TTC', name: '100 Hrs Multi Style Yoga TTC' },
-    { id: 'Vinyasa Flow Yoga TTC', name: 'Vinyasa Flow Yoga TTC' },
-    { id: 'Hatha Yoga TTC', name: 'Hatha Yoga TTC' },
-    { id: 'Advanced Yoga Therapy Course', name: 'Advanced Yoga Therapy Course' },
-    { id: 'Multi Style Yoga TTC', name: '200 Hrs Multi Style Yoga TTC' },
-    { id: 'Multi Style Yoga TTC', name: '300 Hrs Multi Style Yoga TTC' },
-    { id: 'Ayurvedic Basics Course for Beginners', name: 'Ayurvedic Basics Course for Beginners' },
-    { id: 'Ayurvedic Herbal Course', name: 'Ayurvedic Herbal Course' },
-    { id: 'Ayurvedic Sexual Relationship Course', name: 'Ayurvedic Sexual Relationship Course' },
-    { id: 'Ayurveda Garbha Samskara Course', name: 'Ayurveda Garbha Samskara Course' },
-    { id: 'Ayurveda Immunity Course', name: 'Ayurveda Immunity Course' },
-    { id: 'Ayurveda Skin and Beauty Course', name: 'Ayurveda Skin and Beauty Course' },
-    { id: 'Ayurvedic Foundational Course', name: 'Ayurvedic Foundational Course' },
-    { id: 'Ayurvedic Diet and Nutrition Course', name: 'Ayurvedic Diet and Nutrition Course' },
-    { id: 'Ayurvedic Lifestyle Course', name: 'Ayurvedic Lifestyle Course' },
-    { id: 'Prenatal Yoga', name: 'Prenatal Yoga' },
-    { id: 'Postnatal Yoga', name: 'Postnatal Yoga' },
-    { id: 'Meditation', name: 'Meditation' },
-    { id: 'Pranayama', name: 'Pranayama' },
-    { id: 'Hatha Yoga', name: 'Hatha Yoga' },
-    { id: 'Vinyasa Flow', name: 'Vinyasa Flow' },
   ];
 
   const handleEnrollClick = (planId: string) => {
@@ -95,7 +46,7 @@ export default function PaymentPage() {
     <div>
       <Header />
       <div className="bg-white min-h-screen py-10 px-4 sm:px-10">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Hero Image */}
           <div className="relative w-full h-64 mb-8 rounded-xl overflow-hidden shadow-lg">
             <Image
@@ -107,50 +58,29 @@ export default function PaymentPage() {
             />
           </div>
 
-          {/* Inspirational Quote */}
-          <div className="mb-10 text-center">
-            <blockquote className="text-xl italic text-gray-600 max-w-2xl mx-auto">
-              &ldquo;Yoga is the journey of the self, through the self, to the self.&rdquo; &mdash; Bhagavad Gita
-            </blockquote>
-          </div>
+          {/* Heading */}
+          <h1 className="text-4xl font-bold text-[#4377b2] mb-6 text-center">Select Payment Option</h1>
 
-          <h1 className="text-4xl font-bold text-[#4377b2] mb-6 text-center">Choose Your Payment Plan</h1>
-
-          {/* Course Selector */}
-          <div className="mb-10">
-            <label className="block text-lg font-medium text-gray-700 mb-2">Select Course</label>
-            <select
-              value={selectedCourse}
-              onChange={(e) => setSelectedCourse(e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4377b2]"
-            >
-              {courses.map(course => (
-                <option key={course.id} value={course.id}>{course.name}</option>
-              ))}
-            </select>
-          </div>
-
-          {/* Payment Plans */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          {/* Payment Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             {plans.map(plan => (
               <div
                 key={plan.id}
-                className={`border rounded-xl p-6 shadow-lg transition duration-300 ${
-                  selectedPlan === plan.id ? 'border-[#4377b2] bg-[#f5faff]' : 'border-gray-200'
+                className={`border rounded-xl p-6 shadow-md transition duration-300 ${
+                  selectedPlan === plan.id ? 'border-[#4377b2] bg-[#f0f7ff]' : 'border-gray-200'
                 }`}
               >
                 <h2 className="text-2xl font-semibold text-[#4377b2] mb-2">{plan.title}</h2>
-                <p className="text-lg mb-4">{plan.description}</p>
+                <p className="text-gray-700 mb-2">{plan.description}</p>
                 <p className="text-3xl font-bold text-black mb-4">{plan.price}</p>
-                <ul className="text-sm text-gray-700 mb-4 space-y-2">
-                  <li>✅ Certificate of Completion</li>
-                  <li>✅ Downloadable Training Manual</li>
-                  <li>✅ Lifetime Course Access</li>
-                  <li>✅ 24 Months of Instructor Support</li>
+                <ul className="text-sm text-gray-600 mb-4 space-y-1">
+                  <li>✅ Lifetime Access</li>
+                  <li>✅ Certified Completion</li>
+                  <li>✅ 24x7 Instructor Support</li>
                 </ul>
                 <button
-                  className="w-full bg-[#4377b2] text-white py-2 rounded-lg hover:bg-[#365e93]"
                   onClick={() => handleEnrollClick(plan.id)}
+                  className="w-full bg-[#4377b2] text-white py-2 rounded-md hover:bg-[#365e93]"
                 >
                   ENROLL NOW
                 </button>
@@ -161,20 +91,20 @@ export default function PaymentPage() {
           {/* Payment Buttons */}
           <div ref={payRef} className="text-center mb-10">
             <h2 className="text-2xl font-semibold text-[#4377b2] mb-4">Pay With</h2>
-            <div className="flex justify-center space-x-4">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <a
                 href={paymentLinks[selectedPlan].razorpay}
                 target="_blank"
-                className="bg-[#4377b2] text-white px-6 py-2 rounded-md hover:bg-[#365e93]"
                 rel="noreferrer"
+                className="bg-[#4377b2] text-white px-6 py-2 rounded-md hover:bg-[#365e93]"
               >
                 Razorpay
               </a>
               <a
                 href={paymentLinks[selectedPlan].paypal}
                 target="_blank"
-                className="bg-[#4377b2] text-white px-6 py-2 rounded-md hover:bg-[#365e93]"
                 rel="noreferrer"
+                className="bg-[#4377b2] text-white px-6 py-2 rounded-md hover:bg-[#365e93]"
               >
                 PayPal
               </a>
@@ -182,17 +112,17 @@ export default function PaymentPage() {
           </div>
 
           {/* Policies */}
-          <div className="border-t pt-6 text-sm text-gray-700">
-            <h3 className="text-lg font-semibold text-[#4377b2] mb-2">Privacy Policy</h3>
-            <p className="mb-4">
-              We respect your privacy and ensure that your personal information is safe. We do not share your details with any third party without your consent.
-            </p>
-
-            <h3 className="text-lg font-semibold text-[#4377b2] mb-2">Cancellation & Refund Policy</h3>
-            <p>
-              If you wish to cancel your enrollment, please contact us within 7 days of purchase. Refunds will be processed based on the course access and materials consumed.
-              Once course material has been downloaded or accessed, refund requests may not be entertained.
-            </p>
+          <div className="border-t pt-6 text-sm text-gray-700 space-y-4">
+            <div>
+              <h3 className="text-lg font-semibold text-[#4377b2] mb-1">Privacy Policy</h3>
+              <p>We respect your privacy. Your information is safe and will not be shared without consent.</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-[#4377b2] mb-1">Cancellation & Refund Policy</h3>
+              <p>
+                Contact us within 7 days for cancellations. Refunds depend on content access. Downloaded material may not qualify for refunds.
+              </p>
+            </div>
           </div>
         </div>
       </div>

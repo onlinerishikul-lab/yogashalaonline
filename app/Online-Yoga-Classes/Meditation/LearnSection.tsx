@@ -3,7 +3,7 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights",
+      title: "Class Highlights",
       content: [
         "Certified Meditation Teacher Training (Online)",
         "Covers silent, mantra, guided & breath-focused meditations",
@@ -16,7 +16,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "What’s Inside the Course – Practical Aspects",
+      title: "What’s Inside the Class – Practical Aspects",
       content: [
         "Daily guided meditation and journaling",
         "Breath awareness, body scan, and mindfulness practices",
@@ -29,7 +29,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? NO!",
+      title: "Is This Class for You? NO!",
       content: [
         "You’re looking for a physical workout or asana practice only",
         "You prefer highly active or movement-based methods only",
@@ -37,7 +37,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? YES!",
+      title: "Is This Class for You? YES!",
       content: [
         "You want to deepen your meditation knowledge and practice",
         "You’re a teacher, coach, or healer wanting to add meditation to your work",

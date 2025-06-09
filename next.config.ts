@@ -12,11 +12,11 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     scrollRestoration: true,
-    optimizeCss: true, // ✅ Reduces render-blocking CSS
-    turbo: true, // ✅ Enable TurboPack if supported
+    optimizeCss: true,
+    turbo: {}, // ✅ Correct usage of TurboPack
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV === "production", // ✅ Remove console.logs
+    removeConsole: process.env.NODE_ENV === "production",
   },
   reactStrictMode: true,
   swcMinify: true,

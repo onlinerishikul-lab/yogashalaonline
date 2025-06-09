@@ -44,7 +44,7 @@ const YogaCoursePage = () => {
           Online Yoga Nidra Classes
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-      Dive into the deeply restorative world of Yoga Nidra. This course trains you to guide transformative sessions that relax the body, calm the nervous system, and awaken conscious awareness—perfect for teachers, healers, and seekers alike.
+      Dive into the deeply restorative world of Yoga Nidra. This Class trains you to guide transformative sessions that relax the body, calm the nervous system, and awaken conscious awareness—perfect for teachers, healers, and seekers alike.
         </p>
       </section>
 

@@ -10,22 +10,22 @@ const faqs = [
       "Pranayama is the practice of controlled breathing techniques that help to regulate energy flow, improve mental clarity, and enhance physical health.",
   },
   {
-    question: "Do I need prior experience to join this course?",
+    question: "Do I need prior experience to join this Class?",
     answer:
-      "No prior experience is necessary. This course is suitable for beginners and guides you through the basics of breathing techniques.",
+      "No prior experience is necessary. This Class is suitable for beginners and guides you through the basics of breathing techniques.",
   },
   {
-    question: "What will I learn in this Pranayama course?",
+    question: "What will I learn in this Pranayama Class?",
     answer:
       "You will learn different Pranayama techniques, how to incorporate them into your daily life, and how they can improve your overall well-being.",
   },
   {
-    question: "Is this course suitable for people with respiratory conditions?",
+    question: "Is this Class suitable for people with respiratory conditions?",
     answer:
-      "Pranayama can be beneficial for individuals with respiratory conditions, but we recommend consulting with a healthcare provider before starting the course.",
+      "Pranayama can be beneficial for individuals with respiratory conditions, but we recommend consulting with a healthcare provider before starting the Class.",
   },
   {
-    question: "Will I receive a certificate after completing the course?",
+    question: "Will I receive a certificate after completing the Class?",
     answer:
       "Yes, upon successful completion, you will receive a digital certificate of completion that you can use for continuing education or personal growth.",
   },
@@ -43,10 +43,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Pranayama Course: FAQ
+          Pranayama Class: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Find answers to your questions before joining the course
+          Find answers to your questions before joining the Class
         </p>
 
         <div className="space-y-4">

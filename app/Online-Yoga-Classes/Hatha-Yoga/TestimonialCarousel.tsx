@@ -45,7 +45,7 @@ const TestimonialCarousel = () => {
   return (
     <section className="py-16 bg-[#f5f5f5] w-full flex flex-col items-center px-4">
       <h2 className="text-3xl md:text-4xl font-bold text-[#4377b2] text-center mb-3">
-        What Our Students Say
+        What Our Clients Say
       </h2>
       <p className="text-gray-600 text-center mb-10 text-sm md:text-base">
         Honest reflections from those who’ve grown through our yoga training programs.

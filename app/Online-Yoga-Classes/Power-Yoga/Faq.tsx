@@ -7,17 +7,17 @@ const faqs = [
   {
     question: "Is Power Yoga suitable for beginners?",
     answer:
-      "Yes! While Power Yoga is dynamic and physically challenging, this course includes beginner-friendly modifications and step-by-step guidance for all levels.",
+      "Yes! While Power Yoga is dynamic and physically challenging, this Class includes beginner-friendly modifications and step-by-step guidance for all levels.",
   },
   {
-    question: "Will I get a teaching certificate after the course?",
+    question: "Will I get a teaching certificate after the Class?",
     answer:
       "Absolutely. Upon completion, you'll receive a Power Yoga Teacher Training Certificate that qualifies you to teach globally.",
   },
   {
     question: "What if I can’t attend live sessions?",
     answer:
-      "No worries! All live sessions are recorded and available for replay. The course is primarily self-paced, so you can learn at your own schedule.",
+      "No worries! All live sessions are recorded and available for replay. The Class is primarily self-paced, so you can learn at your own schedule.",
   },
   {
     question: "What makes Power Yoga different from other yoga styles?",
@@ -38,12 +38,11 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Power Yoga Teacher Training: FAQ
+          Power Yoga  Class: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Find answers to your questions before beginning your Power Yoga TTC journey.
+          Find answers to your questions before beginning your Power Yoga Class journey.
         </p>
-
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="bg-white p-4 rounded-lg shadow-md">

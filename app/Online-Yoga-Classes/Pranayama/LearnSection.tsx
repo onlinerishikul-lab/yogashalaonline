@@ -3,7 +3,7 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights",
+      title: "Class Highlights",
       content: [
         "Certified Pranayama Teacher Training (Online/Offline)",
         "Learn foundational and advanced breathing techniques",
@@ -16,7 +16,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "What’s Inside the Course – Practical Aspects",
+      title: "What’s Inside the Class – Practical Aspects",
       content: [
         "Daily breathwork practice with guidance",
         "Techniques like Nadi Shodhana, Kapalabhati, Bhastrika",
@@ -29,7 +29,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? NO!",
+      title: "Is This Class for You? NO!",
       content: [
         "You’re only interested in physical postures (asanas)",
         "You’re not ready to explore inner stillness or subtle energy",
@@ -37,7 +37,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? YES!",
+      title: "Is This Class for You? YES!",
       content: [
         "You want to deepen your personal breath practice",
         "You’re a yoga teacher or practitioner ready to guide others",

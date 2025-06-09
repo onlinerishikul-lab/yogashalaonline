@@ -5,8 +5,6 @@ import StickyCourseCard  from "@/app/Online-Yoga-Classes/Vinyasa-Flow/Testimonia
 import YogaCoursePage from "@/app/Online-Yoga-Classes/Vinyasa-Flow/yogacourse";
 import LearnSection from "@/app/Online-Yoga-Classes/Vinyasa-Flow/LearnSection";
 import CourseDetails from "@/app/Online-Yoga-Classes/Vinyasa-Flow/CourseDetails";
-import YogaAccreditation from "@/app/Online-Yoga-Classes/Vinyasa-Flow/YogaAccreditation";
-import CertificatePromo from "@/app/Online-Yoga-Classes/Vinyasa-Flow/CertificatePromo";
 import TestimonialCarousel from "@/app/Online-Yoga-Classes/Vinyasa-Flow/TestimonialCarousel";
 import Faq from "@/app/Online-Yoga-Classes/Vinyasa-Flow/Faq";
 import { SiteFooter } from "@/components/common/footer";
@@ -24,8 +22,6 @@ export default function Page() {
           <YogaCoursePage />
           <LearnSection />
           <CourseDetails />
-          <YogaAccreditation />
-          <CertificatePromo />
           <TestimonialCarousel />
           <Faq />
         </div>

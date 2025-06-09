@@ -20,7 +20,6 @@ export const BlogCard = memo(function BlogCard({
   return (
     <article className={cn('block h-full', className)}>
       <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
-        {/* Image */}
         <div className="relative w-full aspect-[16/9] bg-gray-100">
           <Image
             src={post.imageUrl}
@@ -38,7 +37,6 @@ export const BlogCard = memo(function BlogCard({
           />
         </div>
 
-        {/* Content */}
         <div className="p-4 flex flex-col justify-between flex-1">
           <div>
             <time

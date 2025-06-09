@@ -79,10 +79,10 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Benefits of the Exclusive Reversing Diabetic Yoga Course
+          Benefits of the Exclusive Reversing Diabetic Yoga Class
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course offers a holistic yoga-based approach to managing and reversing diabetes, enhancing vitality and long-term wellness.
+          This Class offers a holistic yoga-based approach to managing and reversing diabetes, enhancing vitality and long-term wellness.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (

@@ -5,22 +5,22 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Do I need prior yoga or teaching experience to join this course?",
+    question: "Do I need prior yoga or teaching experience to join this Class?",
     answer:
-      "No, this course is beginner-friendly. Whether you're new to yoga or a certified teacher looking to expand your offerings, you'll be guided step-by-step.",
+      "No, this Class is beginner-friendly. Whether you're new to yoga or a certified teacher looking to expand your offerings, you'll be guided step-by-step.",
   },
   {
-    question: "Will I receive a certificate after completing the course?",
+    question: "Will I receive a certificate after completing the Class?",
     answer:
-      "Yes, upon successful completion of the course, you’ll receive a 25-hour Face Yoga Teacher Training Certificate, qualifying you to guide others professionally.",
+      "Yes, upon successful completion of the Class, you’ll receive a 25-hour Face Yoga Teacher Training Certificate, qualifying you to guide others professionally.",
   },
   {
-    question: "Is the course completely online and self-paced?",
+    question: "Is the Class completely online and self-paced?",
     answer:
-      "Yes, the course is 100% online and self-paced. You can learn at your convenience with lifetime access to materials.",
+      "Yes, the Class is 100% online and self-paced. You can learn at your convenience with lifetime access to materials.",
   },
   {
-    question: "What tools or props do I need for the course?",
+    question: "What tools or props do I need for the Class?",
     answer:
       "You’ll only need a mirror, a quiet space, and your hands! No special equipment is required to practice or teach face yoga.",
   },

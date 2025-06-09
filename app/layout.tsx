@@ -3,11 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import QueryProvider from "@/lib/providers/query-provider";
 
-// Font imports
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: "swap", // 🚀 Improves CLS (layout shift)
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -45,7 +44,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-[#f9f9f9] text-[#171717] min-h-screen m-0 p-0`}
+        className={`${
+  geistSans.variable
+} ${
+  geistMono.variable
+} font-sans antialiased bg-[#f9f9f9] text-[#171717] min-h-screen m-0 p-0`}
       >
         <QueryProvider>{children}</QueryProvider>
       </body>

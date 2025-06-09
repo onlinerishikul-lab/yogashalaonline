@@ -5,8 +5,6 @@ import StickyCourseCard  from "@/app/Online-Yoga-Classes/Hatha-Yoga/TestimonialS
 import YogaCoursePage from "@/app/Online-Yoga-Classes/Hatha-Yoga/yogacourse";
 import LearnSection from "@/app/Online-Yoga-Classes/Hatha-Yoga/LearnSection";
 import CourseDetails from "@/app/Online-Yoga-Classes/Hatha-Yoga/CourseDetails";
-import YogaAccreditation from "@/app/Online-Yoga-Classes/Hatha-Yoga/YogaAccreditation";
-import CertificatePromo from "@/app/Online-Yoga-Classes/Hatha-Yoga/CertificatePromo";
 import TestimonialCarousel from "@/app/Online-Yoga-Classes/Hatha-Yoga/TestimonialCarousel";
 import Faq from "@/app/Online-Yoga-Classes/Hatha-Yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
@@ -24,8 +22,6 @@ export default function Page() {
           <YogaCoursePage />
           <LearnSection />
           <CourseDetails />
-          <YogaAccreditation />
-          <CertificatePromo />
           <TestimonialCarousel />
           <Faq />
         </div>

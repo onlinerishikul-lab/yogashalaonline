@@ -5,8 +5,6 @@ import StickyCourseCard  from "@/app/Online-Yoga-Classes/Pranayama/TestimonialSl
 import YogaCoursePage from "@/app/Online-Yoga-Classes/Pranayama/yogacourse";
 import LearnSection from "@/app/Online-Yoga-Classes/Pranayama/LearnSection";
 import CourseDetails from "@/app/Online-Yoga-Classes/Pranayama/CourseDetails";
-import YogaAccreditation from "@/app/Online-Yoga-Classes/Pranayama/YogaAccreditation";
-import CertificatePromo from "@/app/Online-Yoga-Classes/Pranayama/CertificatePromo";
 import TestimonialCarousel from "@/app/Online-Yoga-Classes/Pranayama/TestimonialCarousel";
 import Faq from "@/app/Online-Yoga-Classes/Pranayama/Faq";
 import { SiteFooter } from "@/components/common/footer";
@@ -24,8 +22,6 @@ export default function Page() {
           <YogaCoursePage />
           <LearnSection />
           <CourseDetails />
-          <YogaAccreditation />
-          <CertificatePromo />
           <TestimonialCarousel />
           <Faq />
         </div>

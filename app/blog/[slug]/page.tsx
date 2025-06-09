@@ -2,13 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogCard } from "@/components/blog/blog-card";
-import MainWrapper from "@/components/wrappers/main-wrapper";
 import { getAllBlogs } from "@/app/actions/blog.action";
 
-type BlogParams = Promise<{ slug: string }>;
-
-export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
-  const { slug } = await params;
+export default async function BlogDetailsPage({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   const blogs = await getAllBlogs();
   const post = blogs.find((blog) => blog.slug === slug);
 
@@ -57,9 +54,9 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
   ];
 
   return (
-    <MainWrapper>
+    <div className="px-4 md:px-6 lg:px-8 max-w-[1440px] mx-auto">
       <article className="min-h-screen">
-        {/* LCP-Optimized Hero Image */}
+        {/* Hero Image */}
         <div className="relative h-[70vh] w-full">
           <Image
             src={post.coverImage}
@@ -100,7 +97,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
         {/* Content + Sidebar */}
         <div className="container max-w-7xl mx-auto px-4 py-12">
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Sidebar - Lazy Loaded Images */}
+            {/* Sidebar */}
             <aside className="w-full lg:w-1/4 space-y-4" aria-label="Explore Courses">
               <h2 className="text-xl font-bold text-[#4377B2]">Explore Courses</h2>
               <div className="grid gap-4">
@@ -136,37 +133,38 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
             </div>
           </div>
 
-        {/* Related Posts */}
-        {relatedPosts.length > 0 && (
-          <div className="container px-4 py-16 mx-auto">
-            <div className="space-y-8">
-              <h2 className="text-2xl font-bold text-[#4377B2]">Related Posts</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {relatedPosts.map((related) => (
-                  <BlogCard
-                    key={related.id}
-                    post={{
-                      id: related.id,
-                      title: related.title,
-                      slug: related.slug,
-                      excerpt: related.overview,
-                      content: related.content,
-                      imageUrl: related.coverImage,
-                      date: new Date(related.createdAt).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      }),
-                      category: related.tags[0] || "Uncategorized",
-                      author: related.author?.name || "",
-                    }}
-                  />
-                ))}
+          {/* Related Posts */}
+          {relatedPosts.length > 0 && (
+            <div className="container px-4 py-16 mx-auto">
+              <div className="space-y-8">
+                <h2 className="text-2xl font-bold text-[#4377B2]">Related Posts</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {relatedPosts.map((related) => (
+                    <BlogCard
+                      key={related.id}
+                      post={{
+                        id: related.id,
+                        title: related.title,
+                        slug: related.slug,
+                        excerpt: related.overview,
+                        content: related.content,
+                        imageUrl: related.coverImage,
+                        date: new Date(related.createdAt).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        }),
+                        category: related.tags[0] || "Uncategorized",
+                        author: related.author?.name || "",
+                      }}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </article>
-    </MainWrapper>
+    </div>
   );
 }

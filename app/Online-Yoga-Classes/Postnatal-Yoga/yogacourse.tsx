@@ -44,7 +44,7 @@ const YogaCoursePage = () => {
           Online Postnatal Yoga Classes
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-        This Postnatal Yoga Course is designed to support new mothers in healing, strengthening, and restoring balance after childbirth. Learn safe yoga practices to reconnect with your body, calm the mind, and build emotional resilience during early motherhood.
+        This Postnatal Yoga Class is designed to support new mothers in healing, strengthening, and restoring balance after childbirth. Learn safe yoga practices to reconnect with your body, calm the mind, and build emotional resilience during early motherhood.
         </p>
       </section>
 

@@ -83,10 +83,10 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Benefits of the Meditation Course
+          Benefits of the Meditation Class
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
-          This course offers deep meditative tools that support personal clarity, calmness, and your ability to guide others toward a more peaceful life.
+          This Class offers deep meditative tools that support personal clarity, calmness, and your ability to guide others toward a more peaceful life.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-left">
           {features.map((feature) => (

@@ -2,11 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogCard } from "@/components/blog/blog-card";
+import MainWrapper from "@/components/wrappers/main-wrapper";
 import { getAllBlogs } from "@/app/actions/blog.action";
 
-export default async function BlogDetailsPage({ params }: { params: { slug: string } }) {
-  const slug = params.slug;
+type BlogParams = Promise<{ slug: string }>;
 
+export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
+  const { slug } = await params;
   const blogs = await getAllBlogs();
   const post = blogs.find((blog) => blog.slug === slug);
 
@@ -55,9 +57,9 @@ export default async function BlogDetailsPage({ params }: { params: { slug: stri
   ];
 
   return (
-    <div className="px-4 md:px-6 lg:px-8 max-w-[1440px] mx-auto">
+    <MainWrapper>
       <article className="min-h-screen">
-        {/* Hero Image */}
+        {/* LCP-Optimized Hero Image */}
         <div className="relative h-[70vh] w-full">
           <Image
             src={post.coverImage}
@@ -133,39 +135,39 @@ export default async function BlogDetailsPage({ params }: { params: { slug: stri
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
           </div>
+        </div>
 
-          {/* Related Posts */}
-          {relatedPosts.length > 0 && (
-            <div className="container px-4 py-16 mx-auto">
-              <div className="space-y-8">
-                <h2 className="text-2xl font-bold text-[#4377B2]">Related Posts</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {relatedPosts.map((related) => (
-                    <BlogCard
-                      key={related.id}
-                      post={{
-                        id: related.id,
-                        title: related.title,
-                        slug: related.slug,
-                        excerpt: related.overview,
-                        content: related.content,
-                        imageUrl: related.coverImage,
-                        date: new Date(related.createdAt).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        }),
-                        category: related.tags[0] || "Uncategorized",
-                        author: related.author?.name || "",
-                      }}
-                    />
-                  ))}
-                </div>
+        {/* Related Posts */}
+        {relatedPosts.length > 0 && (
+          <div className="container px-4 py-16 mx-auto">
+            <div className="space-y-8">
+              <h2 className="text-2xl font-bold text-[#4377B2]">Related Posts</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {relatedPosts.map((related) => (
+                  <BlogCard
+                    key={related.id}
+                    post={{
+                      id: related.id,
+                      title: related.title,
+                      slug: related.slug,
+                      excerpt: related.overview,
+                      content: related.content,
+                      imageUrl: related.coverImage,
+                      date: new Date(related.createdAt).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      }),
+                      category: related.tags[0] || "Uncategorized",
+                      author: related.author?.name || "",
+                    }}
+                  />
+                ))}
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </article>
-    </div>
+    </MainWrapper>
   );
 }

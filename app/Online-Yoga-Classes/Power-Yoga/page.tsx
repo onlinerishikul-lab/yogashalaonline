@@ -5,8 +5,6 @@ import StickyCourseCard  from "@/app/Online-Yoga-Classes/Power-Yoga/TestimonialS
 import YogaCoursePage from "@/app/Online-Yoga-Classes/Power-Yoga/yogacourse";
 import LearnSection from "@/app/Online-Yoga-Classes/Power-Yoga/LearnSection";
 import CourseDetails from "@/app/Online-Yoga-Classes/Power-Yoga/CourseDetails";
-import YogaAccreditation from "@/app/Online-Yoga-Classes/Power-Yoga/YogaAccreditation";
-import CertificatePromo from "@/app/Online-Yoga-Classes/Power-Yoga/CertificatePromo";
 import TestimonialCarousel from "@/app/Online-Yoga-Classes/Power-Yoga/TestimonialCarousel";
 import Faq from "@/app/Online-Yoga-Classes/Power-Yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
@@ -24,8 +22,6 @@ export default function Page() {
           <YogaCoursePage />
           <LearnSection />
           <CourseDetails />
-          <YogaAccreditation />
-          <CertificatePromo />
           <TestimonialCarousel />
           <Faq />
         </div>

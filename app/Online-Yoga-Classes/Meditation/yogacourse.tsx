@@ -44,7 +44,7 @@ const YogaCoursePage = () => {
           Online Meditation Classes
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-       This Meditation Teacher Training Course is designed to deepen your personal meditation practice and empower you to guide others. Learn traditional and modern techniques to cultivate stillness, focus, and inner awareness, both for yourself and your students.
+       This Meditation Teacher Training Class is designed to deepen your personal meditation practice and empower you to guide others. Learn traditional and modern techniques to cultivate stillness, focus, and inner awareness, both for yourself and your students.
         </p>
       </section>
 

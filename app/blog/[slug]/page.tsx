@@ -59,7 +59,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
   return (
     <MainWrapper>
       <article className="min-h-screen">
-        {/* LCP-Optimized Hero Image */}
+        {/* Hero Image */}
         <div className="relative h-[70vh] w-full">
           <Image
             src={post.coverImage}
@@ -81,8 +81,6 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
               </h1>
               <p className="text-white/90 text-lg">{post.overview}</p>
               <div className="flex justify-center items-center space-x-4 text-white/80 text-sm">
-                <p>By {post.author?.name || "Unknown"}</p>
-                <span>•</span>
                 <time dateTime={new Date(post.createdAt).toISOString()}>
                   {new Date(post.createdAt).toLocaleDateString("en-US", {
                     year: "numeric",
@@ -99,9 +97,9 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
 
         {/* Content + Sidebar */}
         <div className="container max-w-7xl mx-auto px-4 py-12">
-          <div className="flex flex-col lg:flex-row gap-8">
+          <div className="flex flex-col lg:flex-row gap-8 items-stretch">
             {/* Sidebar */}
-            <aside className="w-full lg:w-1/4 space-y-4" aria-label="Explore Courses">
+            <aside className="w-full lg:w-1/4 space-y-4 flex-shrink-0">
               <h2 className="text-xl font-bold text-[#4377B2]">Explore Courses</h2>
               <div className="grid gap-4">
                 {courses.map((course) => (
@@ -130,7 +128,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
               </div>
             </aside>
 
-            {/* Main Blog Content */}
+            {/* Blog Content */}
             <div className="prose prose-lg dark:prose-invert flex-1" aria-label="Blog Content">
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>

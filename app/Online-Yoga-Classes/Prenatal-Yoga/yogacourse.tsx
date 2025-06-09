@@ -44,7 +44,7 @@ const YogaCoursePage = () => {
           Online Prenatal Yoga Classes
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-        This Prenatal Yoga Course equips you with safe, effective, and nurturing practices for all trimesters. Learn to support physical comfort, emotional balance, and a deep connection between mother and baby through mindful movement and breath.
+        This Prenatal Yoga Class equips you with safe, effective, and nurturing practices for all trimesters. Learn to support physical comfort, emotional balance, and a deep connection between mother and baby through mindful movement and breath.
         </p>
       </section>
 

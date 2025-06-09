@@ -6,6 +6,7 @@ import Image from "next/image";
 
 export default function PaymentPage() {
   const [selectedPlan, setSelectedPlan] = useState("advance");
+  const [selectedCourse, setSelectedCourse] = useState("200-hour-yoga");
   const payRef = useRef<HTMLDivElement>(null);
 
   const paymentLinks: Record<string, { razorpay: string; paypal: string }> = {
@@ -34,6 +35,44 @@ export default function PaymentPage() {
     },
   ];
 
+  const courses = [
+    { id: "Yoga Anotomy For Safety", name: "Yoga Anotomy For Safety" },
+    { id: "Face Yoga TTC", name: "Face Yoga TTC" },
+    { id: "Meditation TTC", name: "Meditation TTC" },
+    { id: "Pranayama TTC", name: "Pranayama TTC" },
+    { id: "Yoga Nidra TTC", name: "Yoga Nidra TTC" },
+    { id: "Chair Yoga TTC", name: "Chair Yoga TTC" },
+    { id: "Mudra & Mantra Course", name: "Mudra & Mantra Course" },
+    { id: "Kundalini Yoga Course", name: "Kundalini Yoga Course" },
+    { id: "Kids Yoga Course", name: "Kids Yoga Course" },
+    { id: "Yoga Therapy Course", name: "Yoga Therapy Course" },
+    { id: "Pregnancy Yoga", name: "Pregnancy Yoga" },
+    { id: "Core Concept of Yoga Philosophy", name: "Core Concept of Yoga Philosophy" },
+    { id: "Asana Clinic for Yoga Professionals", name: "Asana Clinic for Yoga Professionals" },
+    { id: "Prenatal & Postnatal Yoga Course for Teachers", name: "Prenatal & Postnatal Yoga Course for Teachers" },
+    { id: "Multi Style Yoga TTC 100", name: "100 Hrs Multi Style Yoga TTC" },
+    { id: "Vinyasa Flow Yoga TTC", name: "Vinyasa Flow Yoga TTC" },
+    { id: "Hatha Yoga TTC", name: "Hatha Yoga TTC" },
+    { id: "Advanced Yoga Therapy Course", name: "Advanced Yoga Therapy Course" },
+    { id: "Multi Style Yoga TTC 200", name: "200 Hrs Multi Style Yoga TTC" },
+    { id: "Multi Style Yoga TTC 300", name: "300 Hrs Multi Style Yoga TTC" },
+    { id: "Ayurvedic Basics Course", name: "Ayurvedic Basics Course for Beginners" },
+    { id: "Ayurvedic Herbal Course", name: "Ayurvedic Herbal Course" },
+    { id: "Ayurvedic Sexual Relationship Course", name: "Ayurvedic Sexual Relationship Course" },
+    { id: "Ayurveda Garbha Samskara Course", name: "Ayurveda Garbha Samskara Course" },
+    { id: "Ayurveda Immunity Course", name: "Ayurveda Immunity Course" },
+    { id: "Ayurveda Skin and Beauty Course", name: "Ayurveda Skin and Beauty Course" },
+    { id: "Ayurvedic Foundational Course", name: "Ayurvedic Foundational Course" },
+    { id: "Ayurvedic Diet and Nutrition Course", name: "Ayurvedic Diet and Nutrition Course" },
+    { id: "Ayurvedic Lifestyle Course", name: "Ayurvedic Lifestyle Course" },
+    { id: "Prenatal Yoga", name: "Prenatal Yoga" },
+    { id: "Postnatal Yoga", name: "Postnatal Yoga" },
+    { id: "Meditation", name: "Meditation" },
+    { id: "Pranayama", name: "Pranayama" },
+    { id: "Hatha Yoga", name: "Hatha Yoga" },
+    { id: "Vinyasa Flow", name: "Vinyasa Flow" },
+  ];
+
   const handleEnrollClick = (planId: string) => {
     setSelectedPlan(planId);
     setTimeout(() => {
@@ -57,12 +96,30 @@ export default function PaymentPage() {
             />
           </div>
 
-          {/* Heading */}
+          {/* Title */}
           <h1 className="text-4xl font-bold text-[#4377b2] mb-6 text-center">
-            Select Payment Option
+            Course Payment
           </h1>
 
-          {/* Payment Cards */}
+          {/* Course Dropdown */}
+          <div className="mb-10">
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Select Course
+            </label>
+            <select
+              value={selectedCourse}
+              onChange={(e) => setSelectedCourse(e.target.value)}
+              className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4377b2]"
+            >
+              {courses.map((course) => (
+                <option key={course.id} value={course.id}>
+                  {course.name}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Payment Options */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             {plans.map((plan) => (
               <div

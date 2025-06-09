@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Is Hatha Yoga suitable for beginners?",
     answer:
-      "Yes, Hatha Yoga is perfect for beginners. The course starts with basic poses and gradually builds up to more advanced practices, helping you develop strength, flexibility, and mindfulness.",
+      "Yes, Hatha Yoga is perfect for beginners. The Class starts with basic poses and gradually builds up to more advanced practices, helping you develop strength, flexibility, and mindfulness.",
   },
   {
     question: "What equipment do I need for Hatha Yoga?",
@@ -30,9 +30,9 @@ const faqs = [
       "Yes, Hatha Yoga is known for its calming effects. The combination of gentle movements, breathwork, and meditation can significantly reduce stress and anxiety levels.",
   },
   {
-    question: "Will I receive a certificate after completing the course?",
+    question: "Will I receive a certificate after completing the Class?",
     answer:
-      "Yes, upon successful completion of the course, you will receive a digital certificate to mark your achievement in Hatha Yoga.",
+      "Yes, upon successful completion of the Class, you will receive a digital certificate to mark your achievement in Hatha Yoga.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Hatha Yoga Course: FAQ
+          Hatha Yoga Class: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
           Find answers to your questions before beginning your Hatha Yoga journey.

@@ -5,7 +5,6 @@ const CertificatePromo = () => {
   return (
     <section className="bg-[#4377b2] py-16 px-6 text-white">
       <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-        
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-5 leading-tight">

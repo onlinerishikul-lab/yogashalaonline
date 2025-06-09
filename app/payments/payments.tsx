@@ -1,44 +1,43 @@
 "use client";
 
 import { Header } from "@/components/common/header";
-import React, { useState, useRef } from 'react';
-import Image from 'next/image';
+import React, { useState, useRef } from "react";
+import Image from "next/image";
 
 export default function PaymentPage() {
-  const [selectedPlan, setSelectedPlan] = useState('advance');
-  const [selectedCourse, setSelectedCourse] = useState('200-hour-yoga');
+  const [selectedPlan, setSelectedPlan] = useState("advance");
   const payRef = useRef<HTMLDivElement>(null);
 
   const paymentLinks: Record<string, { razorpay: string; paypal: string }> = {
-    'advance': {
-      razorpay: 'https://razorpay.me/@Rishikul',
-      paypal: 'https://www.paypal.me/rishikulyogshala',
+    advance: {
+      razorpay: "https://razorpay.me/@Rishikul",
+      paypal: "https://www.paypal.me/rishikulyogshala",
     },
-    'remaining': {
-      razorpay: 'https://razorpay.me/@Rishikul',
-      paypal: 'https://www.paypal.me/rishikulyogshala',
+    remaining: {
+      razorpay: "https://razorpay.me/@Rishikul",
+      paypal: "https://www.paypal.me/rishikulyogshala",
     },
   };
 
   const plans = [
     {
-      id: 'advance',
-      title: 'Advance Payment',
-      price: '$50.00',
-      description: 'Pay now to reserve your spot.',
+      id: "advance",
+      title: "Advance Payment",
+      price: "$50.00",
+      description: "Pay now to reserve your spot.",
     },
     {
-      id: 'remaining',
-      title: 'Remaining Payment',
-      price: '$200.00',
-      description: 'After joining course',
+      id: "remaining",
+      title: "Remaining Payment",
+      price: "$200.00",
+      description: "After joining course",
     },
   ];
 
   const handleEnrollClick = (planId: string) => {
     setSelectedPlan(planId);
     setTimeout(() => {
-      payRef.current?.scrollIntoView({ behavior: 'smooth' });
+      payRef.current?.scrollIntoView({ behavior: "smooth" });
     }, 100);
   };
 
@@ -59,20 +58,28 @@ export default function PaymentPage() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl font-bold text-[#4377b2] mb-6 text-center">Select Payment Option</h1>
+          <h1 className="text-4xl font-bold text-[#4377b2] mb-6 text-center">
+            Select Payment Option
+          </h1>
 
           {/* Payment Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            {plans.map(plan => (
+            {plans.map((plan) => (
               <div
                 key={plan.id}
                 className={`border rounded-xl p-6 shadow-md transition duration-300 ${
-                  selectedPlan === plan.id ? 'border-[#4377b2] bg-[#f0f7ff]' : 'border-gray-200'
+                  selectedPlan === plan.id
+                    ? "border-[#4377b2] bg-[#f0f7ff]"
+                    : "border-gray-200"
                 }`}
               >
-                <h2 className="text-2xl font-semibold text-[#4377b2] mb-2">{plan.title}</h2>
+                <h2 className="text-2xl font-semibold text-[#4377b2] mb-2">
+                  {plan.title}
+                </h2>
                 <p className="text-gray-700 mb-2">{plan.description}</p>
-                <p className="text-3xl font-bold text-black mb-4">{plan.price}</p>
+                <p className="text-3xl font-bold text-black mb-4">
+                  {plan.price}
+                </p>
                 <ul className="text-sm text-gray-600 mb-4 space-y-1">
                   <li>✅ Lifetime Access</li>
                   <li>✅ Certified Completion</li>
@@ -90,7 +97,9 @@ export default function PaymentPage() {
 
           {/* Payment Buttons */}
           <div ref={payRef} className="text-center mb-10">
-            <h2 className="text-2xl font-semibold text-[#4377b2] mb-4">Pay With</h2>
+            <h2 className="text-2xl font-semibold text-[#4377b2] mb-4">
+              Pay With
+            </h2>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <a
                 href={paymentLinks[selectedPlan].razorpay}
@@ -114,13 +123,21 @@ export default function PaymentPage() {
           {/* Policies */}
           <div className="border-t pt-6 text-sm text-gray-700 space-y-4">
             <div>
-              <h3 className="text-lg font-semibold text-[#4377b2] mb-1">Privacy Policy</h3>
-              <p>We respect your privacy. Your information is safe and will not be shared without consent.</p>
+              <h3 className="text-lg font-semibold text-[#4377b2] mb-1">
+                Privacy Policy
+              </h3>
+              <p>
+                We respect your privacy. Your information is safe and will not
+                be shared without consent.
+              </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-[#4377b2] mb-1">Cancellation & Refund Policy</h3>
+              <h3 className="text-lg font-semibold text-[#4377b2] mb-1">
+                Cancellation & Refund Policy
+              </h3>
               <p>
-                Contact us within 7 days for cancellations. Refunds depend on content access. Downloaded material may not qualify for refunds.
+                Contact us within 7 days for cancellations. Refunds depend on
+                content access. Downloaded material may not qualify for refunds.
               </p>
             </div>
           </div>

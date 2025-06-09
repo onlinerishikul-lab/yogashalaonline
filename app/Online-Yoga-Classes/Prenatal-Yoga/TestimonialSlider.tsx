@@ -71,7 +71,7 @@ const StickyCourseCard: React.FC = () => {
         </h2>
 
         <div className="border-t border-b border-white/30 py-3 text-sm space-y-2">
-          <p className="font-semibold">Course Highlights:</p>
+          <p className="font-semibold">Class Highlights:</p>
           <ul className="list-disc list-inside space-y-1">
             <li>Starting 1st of every month</li>
             <li>Ends 15th of every month</li>
@@ -103,7 +103,7 @@ const StickyCourseCard: React.FC = () => {
         </div>
 
         <div className="bg-white/10 rounded-xl p-4 text-center">
-          <p className="text-sm font-medium mb-1">Discounted Course Fees:</p>
+          <p className="text-sm font-medium mb-1">Discounted Class Fees:</p>
           <p className="text-2xl font-bold">
             {currency} {price}
           </p>

@@ -3,7 +3,7 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights",
+      title: "Class Highlights",
       content: [
         "Certified Hatha Yoga Teacher Training (200/300 hrs options)",
         "Learn over 70 classical yoga poses with correct alignment",
@@ -16,7 +16,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "What’s Inside the Course – Practical Aspects",
+      title: "What’s Inside the Class – Practical Aspects",
       content: [
         "Daily guided Hatha yoga practice",
         "Alignment and adjustment techniques for key asanas",
@@ -29,7 +29,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? NO!",
+      title: "Is This Class for You? NO!",
       content: [
         "You're only looking for fitness-based yoga styles",
         "You’re not open to traditional yogic teachings and discipline",
@@ -37,7 +37,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? YES!",
+      title: "Is This Class for You? YES!",
       content: [
         "You want to explore yoga from its authentic roots",
         "You wish to build a solid foundation in asana, pranayama, and meditation",

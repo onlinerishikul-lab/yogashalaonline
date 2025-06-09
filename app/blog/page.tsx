@@ -7,12 +7,13 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { Button } from '@/components/ui/button'
 import { useBlogs } from '@/hooks/use-blogs'
 
-// Dynamically import heavy components for better perf
+// Dynamic imports: only load when needed
 const HeroCarousel = dynamic(() => import('@/components/blog/hero-carousel').then(m => m.HeroCarousel), {
   ssr: false,
   loading: () => <Skeleton className="w-full h-[400px]" />
 })
 const BlogTopics = dynamic(() => import('@/components/blog/blog-topics').then(m => m.BlogTopics), {
+  ssr: false,
   loading: () => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" aria-busy="true">
       {[...Array(6)].map((_, i) => (
@@ -39,23 +40,19 @@ export default function BlogPage() {
     category: selectedCategory
   })
 
-  // Always call hooks at the top level, unconditionally
-  const heroPosts = useMemo(() => allBlogs ? allBlogs.slice(0, 3) : [], [allBlogs])
+  // Memoized slicing to reduce recomputation
+  const heroPosts = useMemo(() => allBlogs?.slice(0, 3) || [], [allBlogs])
   const remainingPosts = useMemo(() => paginatedBlogs || [], [paginatedBlogs])
 
-  const loadMore = () => {
-    setPage(prev => prev + 1)
-  }
+  const loadMore = () => setPage((prev) => prev + 1)
 
   if (isLoading) {
     return (
       <MainWrapper>
         <main className="space-y-16">
-          <div className="w-full h-[400px]" aria-busy="true">
-            <Skeleton className="w-full h-full" />
-          </div>
+          <Skeleton className="w-full h-[400px]" />
           <div className="container mx-auto px-4 pb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" aria-busy="true">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[...Array(6)].map((_, i) => (
                 <Skeleton key={i} className="h-[300px] w-full" />
               ))}
@@ -82,7 +79,11 @@ export default function BlogPage() {
   return (
     <MainWrapper>
       <main className="space-y-16">
-        <HeroCarousel posts={heroPosts} key={heroPosts.map(p => p.id).join('-')} />
+        <HeroCarousel
+          posts={heroPosts}
+          key={heroPosts.map((p) => p.id).join('-')}
+        />
+
         <div className="container mx-auto px-4 pb-16">
           <BlogTopics posts={remainingPosts} />
 

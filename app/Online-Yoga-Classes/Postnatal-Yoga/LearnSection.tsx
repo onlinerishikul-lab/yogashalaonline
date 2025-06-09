@@ -3,7 +3,7 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights",
+      title: "Class Highlights",
       content: [
         "Certified Postnatal Yoga Teacher Training",
         "Gentle recovery practices after birth",
@@ -16,7 +16,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "What’s Inside the Course – Practical Aspects",
+      title: "What’s Inside the Class – Practical Aspects",
       content: [
         "Healing sequences for abdominal and pelvic areas",
         "Postpartum-safe asanas and modifications",
@@ -29,7 +29,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? NO!",
+      title: "Is This Class for You? NO!",
       content: [
         "You are looking for a fast-paced or intense yoga workout",
         "You have no interest in therapeutic or recovery-based practices",
@@ -37,7 +37,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? YES!",
+      title: "Is This Class for You? YES!",
       content: [
         "You're a new mother seeking mindful healing and strength",
         "You're a yoga teacher looking to safely guide postnatal clients",

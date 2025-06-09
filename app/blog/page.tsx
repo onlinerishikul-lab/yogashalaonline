@@ -2,12 +2,12 @@
 
 import { useState, useMemo, useCallback } from 'react'
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
 import MainWrapper from '@/components/wrappers/main-wrapper'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Button } from '@/components/ui/button'
 import { useBlogs } from '@/hooks/use-blogs'
 
-// Lazy load only when needed
 const HeroCarousel = dynamic(() => import('@/components/blog/hero-carousel').then(m => m.HeroCarousel), {
   ssr: false,
   loading: () => <Skeleton className="w-full h-[400px]" />,
@@ -41,44 +41,21 @@ export default function BlogPage() {
     category: selectedCategory,
   })
 
-  // Memoized slicing to avoid recalculation
   const heroPosts = useMemo(() => allBlogs?.slice(0, 3) || [], [allBlogs])
   const remainingPosts = useMemo(() => paginatedBlogs || [], [paginatedBlogs])
 
   const loadMore = useCallback(() => setPage(prev => prev + 1), [])
 
-  if (isLoading) {
-    return (
-      <MainWrapper>
-        <main className="space-y-16">
-          <Skeleton className="w-full h-[400px]" />
-          <section className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[...Array(6)].map((_, i) => (
-                <Skeleton key={i} className="h-[300px] w-full" />
-              ))}
-            </div>
-          </section>
-        </main>
-      </MainWrapper>
-    )
-  }
-
-  if (error) {
-    return (
-      <MainWrapper>
-        <main className="min-h-screen flex items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-2xl font-semibold text-gray-900">Something went wrong</h2>
-            <p className="text-gray-600 mt-2">{error.message}</p>
-          </div>
-        </main>
-      </MainWrapper>
-    )
-  }
+  const preloadImage = heroPosts[0]?.imageUrl
 
   return (
     <MainWrapper>
+      <Head>
+        {preloadImage && (
+          <link rel="preload" as="image" href={preloadImage} imagesrcset={preloadImage} />
+        )}
+      </Head>
+
       <main className="space-y-16">
         <HeroCarousel posts={heroPosts} key={heroPosts.map(p => p.id).join('-')} />
 

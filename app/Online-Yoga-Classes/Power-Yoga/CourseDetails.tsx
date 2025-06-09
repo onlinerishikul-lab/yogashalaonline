@@ -74,7 +74,7 @@ const CourseDetails = () => {
     <section className="bg-[#f9fafb] text-[#4377b2] py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          Benefits of the Power Yoga Course
+          Benefits of the Power Yoga Class
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-[#4377b2]/90">
           This Power Yoga program combines dynamic movement and mindful breathwork to help you build strength, endurance, and inner clarity.

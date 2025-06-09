@@ -136,41 +136,6 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
             </div>
           </div>
 
-          {/* Author Info */}
-          <div className="mt-16 border-t pt-8">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
-                {post.author?.image ? (
-                  <Image
-                    src={post.author.image}
-                    alt={post.author.name || "Author"}
-                    width={48}
-                    height={48}
-                    className="rounded-full"
-                    loading="lazy"
-                    decoding="async"
-                    unoptimized={false}
-                  />
-                ) : (
-                  <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center">
-                    <span className="text-lg font-medium text-gray-600">
-                      {post.author?.name?.[0] || "?"}
-                    </span>
-                  </div>
-                )}
-                <div>
-                  <p className="font-medium">{post.author?.name || "Unknown"}</p>
-                  <p className="text-sm text-muted-foreground">{post.author?.email || ""}</p>
-                </div>
-              </div>
-              <div className="flex space-x-4 text-sm">
-                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">Twitter</Link>
-                <Link href="#" className="text-muted-foreground hover:text-[#4377B2]">LinkedIn</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <div className="container px-4 py-16 mx-auto">

@@ -45,7 +45,7 @@ const YogaCoursePage = () => {
           Online Exclusive Reversing Diabetic Yoga Classes
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-      Discover a holistic, yogic approach to managing and reversing Type 2 diabetes. This exclusive course blends therapeutic yoga, breathwork, diet guidance, and lifestyle awareness to help regulate blood sugar and restore balance naturally.
+      Discover a holistic, yogic approach to managing and reversing Type 2 diabetes. This exclusive Classes blends therapeutic yoga, breathwork, diet guidance, and lifestyle awareness to help regulate blood sugar and restore balance naturally.
         </p>
       </section>
 

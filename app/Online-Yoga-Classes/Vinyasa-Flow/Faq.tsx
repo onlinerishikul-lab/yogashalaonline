@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Is Vinyasa-Flow suitable for beginners?",
     answer:
-      "Yes, Vinyasa-Flow can be adapted for beginners. The course includes foundational sequences and gradually increases intensity, allowing beginners to grow with confidence.",
+      "Yes, Vinyasa-Flow can be adapted for beginners. The Class includes foundational sequences and gradually increases intensity, allowing beginners to grow with confidence.",
   },
   {
     question: "What equipment do I need for Vinyasa-Flow Yoga?",
@@ -30,9 +30,9 @@ const faqs = [
       "Yes, the breath-focused sequences in Vinyasa-Flow help calm the nervous system, reduce anxiety, and promote emotional balance.",
   },
   {
-    question: "Will I receive a certificate after completing the course?",
+    question: "Will I receive a certificate after completing the Class?",
     answer:
-      "Yes, after completing the Vinyasa-Flow course, you’ll receive a digital certificate recognizing your participation and progress.",
+      "Yes, after completing the Vinyasa-Flow Class, you’ll receive a digital certificate recognizing your participation and progress.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Vinyasa-Flow: FAQ
+          Vinyasa-Flow Class: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
           Get clarity on everything before you begin your Vinyasa-Flow journey.

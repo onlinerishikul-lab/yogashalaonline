@@ -1,77 +1,67 @@
 'use client'
 
-import { useState, useMemo, memo } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import { Card } from '@/components/ui/card'
+import { BlogCardProps } from '@/types/blog'
 import { cn } from '@/lib/utils'
-import { BlogCard } from './blog-card'
-import type { BlogCategory, BlogPost } from '@/types/blog'
+import { memo, useMemo } from 'react'
 
-interface BlogTopicsProps {
-  posts: BlogPost[]
+interface ExtendedBlogCardProps extends BlogCardProps {
+  className?: string
+  isFirst?: boolean
 }
 
-export const BlogTopics = memo(function BlogTopics({ posts }: BlogTopicsProps) {
-  const categories: BlogCategory[] = useMemo(
-    () => ['All', ...Array.from(new Set(posts.map((p) => p.category)))],
-    [posts]
-  )
-
-  const [activeCategory, setActiveCategory] = useState<BlogCategory>('All')
-
-  const filteredPosts = useMemo(
-    () =>
-      activeCategory === 'All'
-        ? posts
-        : posts.filter((post) => post.category === activeCategory),
-    [posts, activeCategory]
-  )
+export const BlogCard = memo(function BlogCard({
+  post,
+  className,
+  isFirst = false,
+}: ExtendedBlogCardProps) {
+  const formattedDate = useMemo(() => new Date(post.date).toISOString(), [post.date])
 
   return (
-    <section className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-bold text-[#4377B2]">Popular Topics</h2>
-        <Link
-          href="/blog"
-          className="text-sm font-medium text-muted-foreground hover:text-[#4377B2]"
-        >
-          View All
-        </Link>
-      </div>
+    <article className={cn('block h-full', className)}>
+      <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
+        <div className="relative w-full aspect-[16/9] bg-gray-100">
+          <Image
+            src={post.imageUrl}
+            alt={post.title || 'Blog post preview'}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover"
+            loading={isFirst ? 'eager' : 'lazy'}
+            priority={isFirst}
+            fetchPriority={isFirst ? 'high' : 'auto'}
+            quality={40}
+            placeholder={post.blurDataURL ? 'blur' : 'empty'}
+            blurDataURL={post.blurDataURL}
+            decoding="async"
+          />
+        </div>
 
-      <nav
-        role="tablist"
-        aria-label="Blog category tabs"
-        className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 scrollbar-thin scrollbar-thumb-[#4377B2]/60 scrollbar-track-transparent"
-      >
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setActiveCategory(category)}
-            role="tab"
-            aria-selected={activeCategory === category}
-            className={cn(
-              'whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors',
-              activeCategory === category
-                ? 'bg-[#4377B2] text-white'
-                : 'text-muted-foreground hover:text-[#4377B2]'
-            )}
+        <div className="p-4 flex flex-col justify-between flex-1">
+          <div>
+            <time
+              className="text-xs text-muted-foreground mb-2 block"
+              dateTime={formattedDate}
+            >
+              {post.date}
+            </time>
+            <h3 className="text-lg font-semibold mb-2 line-clamp-2 hover:text-[#4377B2] transition-colors">
+              {post.title}
+            </h3>
+            <p className="text-sm text-muted-foreground line-clamp-3">
+              {post.excerpt}
+            </p>
+          </div>
+          <Link
+            href={`/blog/${post.slug}`}
+            className="mt-3 text-sm text-[#4377B2] font-medium hover:underline self-start"
           >
-            {category}
-          </button>
-        ))}
-      </nav>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredPosts.length > 0 ? (
-          filteredPosts.map((post, index) => (
-            <BlogCard key={post.id} post={post} isFirst={index === 0} />
-          ))
-        ) : (
-          <p className="text-muted-foreground col-span-full">
-            No posts available in this category.
-          </p>
-        )}
-      </div>
-    </section>
+            Read More →
+          </Link>
+        </div>
+      </Card>
+    </article>
   )
 })

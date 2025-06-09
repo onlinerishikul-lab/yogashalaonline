@@ -4,8 +4,6 @@ import StickyCourseCard  from "@/app/Online-Yoga-Classes/Postnatal-Yoga/Testimon
 import YogaCoursePage from "@/app/Online-Yoga-Classes/Postnatal-Yoga/yogacourse";
 import LearnSection from "@/app/Online-Yoga-Classes/Postnatal-Yoga/LearnSection";
 import CourseDetails from "@/app/Online-Yoga-Classes/Postnatal-Yoga/CourseDetails";
-import YogaAccreditation from "@/app/Online-Yoga-Classes/Postnatal-Yoga/YogaAccreditation";
-import CertificatePromo from "@/app/Online-Yoga-Classes/Postnatal-Yoga/CertificatePromo";
 import TestimonialCarousel from "@/app/Online-Yoga-Classes/Postnatal-Yoga/TestimonialCarousel";
 import Faq from "@/app/Online-Yoga-Classes/Postnatal-Yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
@@ -23,8 +21,6 @@ export default function Page() {
           <YogaCoursePage />
           <LearnSection />
           <CourseDetails />
-          <YogaAccreditation />
-          <CertificatePromo />
           <TestimonialCarousel />
           <Faq />
         </div>

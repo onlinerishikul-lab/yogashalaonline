@@ -46,9 +46,9 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
             alt={currentPost.title || 'Blog post cover'}
             fill
             sizes="(max-width: 768px) 100vw, 768px"
-            priority={currentIndex === 0}
-            loading={currentIndex === 0 ? 'eager' : 'lazy'}
-            fetchPriority={currentIndex === 0 ? 'high' : 'low'}
+            priority={true}
+            loading="eager"
+            fetchPriority="high"
             quality={50}
             placeholder={currentPost.blurDataURL ? 'blur' : 'empty'}
             blurDataURL={currentPost.blurDataURL}

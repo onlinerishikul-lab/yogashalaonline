@@ -5,7 +5,8 @@ import { BlogCard } from "@/components/blog/blog-card";
 import { getAllBlogs } from "@/app/actions/blog.action";
 
 export default async function BlogDetailsPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+  const slug = params.slug;
+
   const blogs = await getAllBlogs();
   const post = blogs.find((blog) => blog.slug === slug);
 

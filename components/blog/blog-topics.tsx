@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, memo } from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { BlogCard } from './blog-card'
@@ -10,8 +10,7 @@ interface BlogTopicsProps {
   posts: BlogPost[]
 }
 
-export function BlogTopics({ posts }: BlogTopicsProps) {
-  // Memoize categories
+export const BlogTopics = memo(function BlogTopics({ posts }: BlogTopicsProps) {
   const categories: BlogCategory[] = useMemo(
     () => ['All', ...Array.from(new Set(posts.map((p) => p.category)))],
     [posts]
@@ -19,7 +18,6 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
 
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('All')
 
-  // Memoize filtered posts
   const filteredPosts = useMemo(
     () =>
       activeCategory === 'All'
@@ -45,7 +43,7 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
       <nav
         role="tablist"
         aria-label="Blog category tabs"
-        className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 scrollbar-hide"
+        className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 scrollbar-thin scrollbar-thumb-[#4377B2]/60 scrollbar-track-transparent"
       >
         {categories.map((category) => (
           <button
@@ -72,7 +70,7 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
             <BlogCard
               key={post.id}
               post={post}
-              isFirst={index === 0} // ✅ First image loads eagerly in BlogCard
+              isFirst={index === 0}
             />
           ))
         ) : (
@@ -83,4 +81,4 @@ export function BlogTopics({ posts }: BlogTopicsProps) {
       </div>
     </section>
   )
-}
+})

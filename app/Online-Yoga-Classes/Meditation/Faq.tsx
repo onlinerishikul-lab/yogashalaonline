@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Is meditation suitable for beginners?",
     answer:
-      "Yes, meditation is suitable for beginners. The course is designed to help you get started with simple techniques and gradually build up your practice.",
+      "Yes, meditation is suitable for beginners. The Class is designed to help you get started with simple techniques and gradually build up your practice.",
   },
   {
     question: "How long should I meditate each day?",
@@ -30,9 +30,9 @@ const faqs = [
       "Yes, meditation has been shown to help reduce stress and anxiety by promoting relaxation and mindfulness, which can help you stay grounded in the present moment.",
   },
   {
-    question: "Will I receive a certificate after completing the course?",
+    question: "Will I receive a certificate after completing the Class?",
     answer:
-      "Yes, upon successful completion of the course, you will receive a digital certificate that you can proudly share.",
+      "Yes, upon successful completion of the Class, you will receive a digital certificate that you can proudly share.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Meditation Course: FAQ
+          Meditation Class: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
           Find answers to your questions before starting your meditation journey.

@@ -64,7 +64,6 @@ export default function BlogPage() {
             rel="preload"
             as="image"
             href={preloadImage}
-            imagesrcset={preloadImage}
           />
         )}
       </Head>

@@ -5,8 +5,6 @@ import StickyCourseCard  from "@/app/Online-Yoga-Classes/Yoga Nidra/TestimonialS
 import YogaCoursePage from "@/app/Online-Yoga-Classes/Yoga Nidra/yogacourse";
 import LearnSection from "@/app/Online-Yoga-Classes/Yoga Nidra/LearnSection";
 import CourseDetails from "@/app/Online-Yoga-Classes/Yoga Nidra/CourseDetails";
-import YogaAccreditation from "@/app/Online-Yoga-Classes/Yoga Nidra/YogaAccreditation";
-import CertificatePromo from "@/app/Online-Yoga-Classes/Yoga Nidra/CertificatePromo";
 import TestimonialCarousel from "@/app/Online-Yoga-Classes/Yoga Nidra/TestimonialCarousel";
 import Faq from "@/app/Online-Yoga-Classes/Yoga Nidra/Faq";
 import { SiteFooter } from "@/components/common/footer";
@@ -24,8 +22,6 @@ export default function Page() {
           <YogaCoursePage />
           <LearnSection />
           <CourseDetails />
-          <YogaAccreditation />
-          <CertificatePromo />
           <TestimonialCarousel />
           <Faq />
         </div>

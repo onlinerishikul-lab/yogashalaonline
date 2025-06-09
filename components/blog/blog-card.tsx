@@ -28,7 +28,6 @@ export const BlogCard = memo(function BlogCard({
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover"
-            style={{ objectFit: 'cover' }}
             loading={isFirst ? 'eager' : 'lazy'}
             priority={isFirst}
             fetchPriority={isFirst ? 'high' : 'auto'}

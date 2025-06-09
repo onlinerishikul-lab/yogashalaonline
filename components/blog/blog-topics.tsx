@@ -28,7 +28,6 @@ export const BlogTopics = memo(function BlogTopics({ posts }: BlogTopicsProps) {
 
   return (
     <section className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      {/* Header */}
       <div className="flex items-center justify-between">
         <h2 className="text-3xl font-bold text-[#4377B2]">Popular Topics</h2>
         <Link
@@ -39,7 +38,6 @@ export const BlogTopics = memo(function BlogTopics({ posts }: BlogTopicsProps) {
         </Link>
       </div>
 
-      {/* Category Tabs */}
       <nav
         role="tablist"
         aria-label="Blog category tabs"
@@ -63,7 +61,6 @@ export const BlogTopics = memo(function BlogTopics({ posts }: BlogTopicsProps) {
         ))}
       </nav>
 
-      {/* Blog Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post, index) => (

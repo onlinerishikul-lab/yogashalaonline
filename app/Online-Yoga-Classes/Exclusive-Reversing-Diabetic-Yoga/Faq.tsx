@@ -38,10 +38,10 @@ export default function Faq() {
     <section className="bg-[#f9fafb] px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-[#4377b2] mb-2">
-          Face Yoga Teacher Training: FAQ
+          Exclusive Reversing Diabetic Yoga Class: FAQ
         </h1>
         <p className="text-gray-600 text-center mb-8 text-sm">
-          Find answers to your questions before starting your Face Yoga Teacher Training journey.
+          Find answers to your questions before starting your Exclusive Reversing Diabetic Yoga Class journey.
         </p>
 
         <div className="space-y-4">

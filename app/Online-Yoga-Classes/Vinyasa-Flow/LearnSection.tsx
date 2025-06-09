@@ -3,7 +3,7 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights",
+      title: "Class Highlights",
       content: [
         "Yoga Alliance Certified Vinyasa Yoga Teacher Training",
         "Master fluid sequencing and breath-synchronized movement",
@@ -16,7 +16,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "What’s Inside the Course – Practical Aspects",
+      title: "What’s Inside the Class – Practical Aspects",
       content: [
         "Daily Vinyasa practice and guided flows",
         "Class structuring: warm-up, peak, cool down",
@@ -29,7 +29,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? NO!",
+      title: "Is This Class for You? NO!",
       content: [
         "You’re only interested in static or restorative yoga",
         "You’re not comfortable with dynamic or physically engaging styles",
@@ -37,7 +37,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? YES!",
+      title: "Is This Class for You? YES!",
       content: [
         "You want to teach or practice energetic, flowing yoga",
         "You’re looking to blend creativity with discipline in your classes",

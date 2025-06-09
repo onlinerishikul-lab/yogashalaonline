@@ -30,7 +30,7 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
       role="group"
       aria-roledescription="carousel"
       aria-label="Hero blog carousel"
-      className="relative w-full h-[300px] sm:h-[400px] overflow-hidden"
+      className="relative w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 h-[300px] sm:h-[400px] overflow-hidden"
     >
       <AnimatePresence initial={false} mode="wait">
         <motion.div

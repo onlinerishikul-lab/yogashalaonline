@@ -27,7 +27,7 @@ export const BlogTopics = memo(function BlogTopics({ posts }: BlogTopicsProps) {
   )
 
   return (
-    <section className="space-y-8">
+    <section className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between">
         <h2 className="text-3xl font-bold text-[#4377B2]">Popular Topics</h2>
@@ -67,11 +67,7 @@ export const BlogTopics = memo(function BlogTopics({ posts }: BlogTopicsProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post, index) => (
-            <BlogCard
-              key={post.id}
-              post={post}
-              isFirst={index === 0}
-            />
+            <BlogCard key={post.id} post={post} isFirst={index === 0} />
           ))
         ) : (
           <p className="text-muted-foreground col-span-full">

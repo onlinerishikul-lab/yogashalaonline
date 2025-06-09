@@ -3,7 +3,7 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights",
+      title: "Class Highlights",
       content: [
         "Yoga Alliance Certified Yoga Nidra Teacher Training",
         "Learn to guide full Yoga Nidra journeys with confidence",
@@ -16,7 +16,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "What’s Inside the Course – Practical Aspects",
+      title: "What’s Inside the Class – Practical Aspects",
       content: [
         "Structure and components of a Yoga Nidra session",
         "Voice modulation and script delivery techniques",
@@ -29,7 +29,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? NO!",
+      title: "Is This Class for You? NO!",
       content: [
         "You want only physical or fitness-based yoga practices",
         "You are not interested in relaxation, inner awareness, or stillness",
@@ -37,7 +37,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? YES!",
+      title: "Is This Class for You? YES!",
       content: [
         "You want to guide deep relaxation and healing practices",
         "You are interested in the science of rest and meditation",

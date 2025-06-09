@@ -45,7 +45,7 @@ const YogaCoursePage = () => {
           Online Pranayama Yoga Classes
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-       Master the ancient science of breath with this Pranayama Teacher Training Course. Learn how to harness the breath for energy, clarity, and healing, and gain the skills to teach powerful breathing techniques safely and effectively.
+       Master the ancient science of breath with this Pranayama Teacher Training Class. Learn how to harness the breath for energy, clarity, and healing, and gain the skills to teach powerful breathing techniques safely and effectively.
         </p>
       </section>
 

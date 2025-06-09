@@ -3,7 +3,7 @@
 const LearnSection = () => {
   const sections = [
     {
-      title: "Course Highlights",
+      title: "Class Highlights",
       content: [
         "Therapeutic Yoga for Diabetes Management",
         "Combines asana, pranayama, and relaxation for blood sugar control",
@@ -16,7 +16,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "What’s Inside the Course – Practical Aspects",
+      title: "What’s Inside the Class – Practical Aspects",
       content: [
         "Daily therapeutic yoga sequences for diabetes",
         "Breathwork (Pranayama) to regulate insulin and stress",
@@ -29,7 +29,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? NO!",
+      title: "Is This Class for You? NO!",
       content: [
         "You want a quick-fix without lifestyle changes",
         "You're not open to consistent practice or self-care",
@@ -37,7 +37,7 @@ const LearnSection = () => {
       ],
     },
     {
-      title: "Is This Course for You? YES!",
+      title: "Is This Class for You? YES!",
       content: [
         "You are diagnosed with prediabetes or Type 2 diabetes",
         "You want a natural, supportive way to manage or reverse it",

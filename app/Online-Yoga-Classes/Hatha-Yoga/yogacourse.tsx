@@ -44,7 +44,7 @@ const YogaCoursePage = () => {
           Online Hatha Yoga Classes
         </h1>
         <p className="text-gray-700 text-sm md:text-base">
-      Dive into the roots of yoga with our Hatha Yoga Teacher Training Course. Explore traditional asanas, breathwork, and meditation to build strength, balance, and inner calm while learning to guide others with confidence and clarity.
+      Dive into the roots of yoga with our Hatha Yoga Teacher Training Class. Explore traditional asanas, breathwork, and meditation to build strength, balance, and inner calm while learning to guide others with confidence and clarity.
         </p>
       </section>
 

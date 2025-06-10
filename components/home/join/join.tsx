@@ -23,9 +23,9 @@ const Join = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 w-full max-w-3xl text-center md:text-left px-2 sm:px-4">
+      <div className="relative z-20 w-full max-w-5xl text-center md:text-left px-2 sm:px-4">
         <div className="mx-auto md:mx-0">
-          <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold uppercase leading-snug sm:leading-tight break-words">
+          <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold uppercase leading-snug whitespace-nowrap overflow-hidden text-ellipsis">
             Stay Connected – Join Our WhatsApp Group
           </h2>
           <p className="text-white mt-3 text-sm sm:text-base md:text-lg leading-relaxed">

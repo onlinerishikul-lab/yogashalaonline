@@ -17,7 +17,6 @@ type SubDropdownItem = {
   title: string;
   href: string;
 };
-
 type DropdownItem = {
   title: string;
   href: string;

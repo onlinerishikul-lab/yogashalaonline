@@ -1,4 +1,4 @@
-import { Instagram, Twitter, Youtube } from "lucide-react";
+import { Instagram, Twitter, Youtube, Facebook } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -44,7 +44,7 @@ export const SiteFooter = () => {
             <Link href="tel:+919845271423" className="hover:underline">
               +91 98452 71423
             </Link>
-            <Link href="mailto:contact@rishikulonline108@gmail.com" className="hover:underline break-words">
+            <Link href="mailto:rishikulonline108@gmail.com" className="hover:underline break-words">
               rishikulonline108@gmail.com
             </Link>
           </div>
@@ -54,7 +54,7 @@ export const SiteFooter = () => {
         <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-white text-sm">
           <div className="flex space-x-4">
             <Link
-              href="https://youtube.com/@rishikulyogshalaonline?si=IdyfN2kaCIIKtI1w"
+              href="https://www.youtube.com/@rishikul.online"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit our YouTube channel"
@@ -72,13 +72,22 @@ export const SiteFooter = () => {
               <Instagram className="h-5 w-5 text-[#4377B2]" />
             </Link>
             <Link
-              href="https://twitter.com/Rishikulonline"
+              href="https://x.com/Rishikul_online"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit our Twitter profile"
               className="rounded-full bg-white/80 p-2 hover:bg-white/20 transition"
             >
               <Twitter className="h-5 w-5 text-[#4377B2]" />
+            </Link>
+            <Link
+              href="https://www.facebook.com/profile.php?id=61577137894469"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Facebook profile"
+              className="rounded-full bg-white/80 p-2 hover:bg-white/20 transition"
+            >
+              <Facebook className="h-5 w-5 text-[#4377B2]" />
             </Link>
           </div>
           <p className="text-center md:text-right w-full md:w-auto">

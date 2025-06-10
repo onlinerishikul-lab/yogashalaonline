@@ -60,20 +60,22 @@ const Faculty = () => {
                 <button
                   key={trainer.id}
                   onClick={() => handleTrainerClick(index)}
-                  className={`relative w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] rounded-full overflow-hidden border-4 transition-all ${
+                  className={`relative w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] rounded-full overflow-hidden border-4 transition-all bg-white ${
                     selectedIndex === index
                       ? "border-white scale-110 z-10"
                       : "border-transparent scale-100"
                   }`}
                   aria-label={`View trainer ${trainer.name}`}
                 >
-                  <Image
-                    src={trainer.image}
-                    alt={trainer.name}
-                    fill
-                    className="object-cover object-top"
-                    loading="lazy"
-                  />
+                  <div className="absolute inset-0 bg-white">
+                    <Image
+                      src={trainer.image}
+                      alt={trainer.name}
+                      fill
+                      className="object-cover object-top"
+                      loading="lazy"
+                    />
+                  </div>
                 </button>
               ))}
             </div>
@@ -89,7 +91,7 @@ const Faculty = () => {
             </div>
 
             {/* Trainer Image */}
-            <div className="relative flex-1 min-h-[280px] sm:min-h-[320px] rounded-3xl shadow-lg overflow-hidden border-4 border-[#4377b2]">
+            <div className="relative flex-1 min-h-[280px] sm:min-h-[320px] rounded-3xl shadow-lg overflow-hidden border-4 border-[#4377b2] bg-white">
               <Image
                 src={selectedTrainer.image}
                 alt={selectedTrainer.name}

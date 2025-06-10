@@ -25,8 +25,9 @@ const Join = () => {
       {/* Content */}
       <div className="relative z-20 w-full max-w-5xl text-center md:text-left px-2 sm:px-4">
         <div className="mx-auto md:mx-0">
-          <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold uppercase leading-snug whitespace-nowrap overflow-hidden text-ellipsis">
-            Stay Connected – Join Our WhatsApp Group
+          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold uppercase leading-snug break-words">
+            Stay Connected – <br className="block sm:hidden" />
+            Join Our WhatsApp Group
           </h2>
           <p className="text-white mt-3 text-sm sm:text-base md:text-lg leading-relaxed">
             Don&apos;t miss out on insights, updates, and shared energy from our yoga family.

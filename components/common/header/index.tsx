@@ -152,7 +152,7 @@ const navigationItems: NavigationItem[] = [
       { title: "Hatha Yoga", href:"/Online-Yoga-Classes/Hatha-Yoga/" },
       { title: "Vinyasa Flow", href: "/Online-Yoga-Classes/Vinyasa-Flow/" },
       { title: "Power Yoga", href:"/Online-Yoga-Classes/Power-Yoga/" },
-      { title: "Exclusive Reversing Diabetic Yoga", href:"/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/" },
+      { title: "Diabetic Yoga", href:"/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/" },
       { title: "Yoga Nidra", href: "/Online-Yoga-Classes/Yoga Nidra/" },
     ],
   },

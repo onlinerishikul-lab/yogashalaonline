@@ -100,6 +100,7 @@ const TestimonialCard = ({ rating, author, date, review }: Testimonial) => (
 
 export default function TestimonialPage() {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+  const [openInstagram, setOpenInstagram] = useState<Video | null>(null);
 
   const renderVideoCard = (video: Video, index: number) => {
     const isPlaying = playingIndex === index;
@@ -109,29 +110,22 @@ export default function TestimonialPage() {
         key={index}
         className="relative rounded-lg overflow-hidden shadow-md h-full min-h-[200px]"
       >
-        {isPlaying ? (
-          video.platform === "youtube" ? (
-            <iframe
-              src={video.url}
-              title={video.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            />
-          ) : (
-            <a
-              href={video.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-full h-full bg-black/10 text-blue-700 text-sm underline"
-            >
-              View on Instagram
-            </a>
-          )
+        {isPlaying && video.platform === "youtube" ? (
+          <iframe
+            src={video.url}
+            title={video.title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
         ) : (
           <button
             className="w-full h-full relative"
-            onClick={() => setPlayingIndex(index)}
+            onClick={() =>
+              video.platform === "youtube"
+                ? setPlayingIndex(index)
+                : setOpenInstagram(video)
+            }
           >
             <img
               src={video.thumbnail}
@@ -148,7 +142,7 @@ export default function TestimonialPage() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-[#e0f2fe] to-white min-h-screen px-4 py-10">
+    <div className="bg-gradient-to-b from-[#e0f2fe] to-white min-h-screen px-4 py-10 relative">
       <Header />
       <h1 className="text-4xl font-bold text-center text-[#1e3a8a] mb-10">
         What Our Students Say
@@ -173,6 +167,45 @@ export default function TestimonialPage() {
           ))}
         </div>
       </div>
+
+      {/* Instagram Modal */}
+      {openInstagram && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+          onClick={() => setOpenInstagram(null)}
+        >
+          <div
+            className="bg-white rounded-lg max-w-2xl w-full p-4 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl"
+              onClick={() => setOpenInstagram(null)}
+            >
+              ×
+            </button>
+            <h2 className="text-lg font-semibold mb-2">{openInstagram.title}</h2>
+            <div className="aspect-video w-full bg-gray-100">
+              {/* Instagram doesn’t support iframe embeds for all reels, use fallback */}
+              <iframe
+                src={`https://www.instagram.com/reel/${openInstagram.url.split("/reel/")[1]?.replace("/", "")}/embed`}
+                className="w-full h-full"
+                allowFullScreen
+              />
+            </div>
+            <p className="mt-4 text-sm text-blue-700 underline">
+              If the video doesn't load,{" "}
+              <a
+                href={openInstagram.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                click here to view on Instagram
+              </a>
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

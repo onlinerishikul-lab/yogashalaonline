@@ -27,7 +27,7 @@ const videos: Video[] = [
     platform: "instagram",
     title: "Dimple Malkan",
     url: "https://www.instagram.com/reel/DI1THQjJr_r/",
-    thumbnail: "/instagram1.jpg", // Put this image in public folder
+    thumbnail: "/instagram1.jpg",
   },
   {
     platform: "instagram",
@@ -97,39 +97,49 @@ const TestimonialCard = ({ rating, author, date, review }: Testimonial) => (
 );
 
 export default function TestimonialPage() {
-  const [activeVideo, setActiveVideo] = useState<Video>(videos[0]);
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
 
-  const renderVideo = () => {
-    if (activeVideo.platform === "youtube") {
-      return (
-        <iframe
-          src={activeVideo.url}
-          title={activeVideo.title}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="w-full h-full"
-        />
-      );
-    } else {
-      // Instagram fallback: open in new tab
-      return (
-        <div className="w-full h-full flex items-center justify-center bg-black/10 text-center p-4 rounded-lg">
-          <div>
-            <p className="text-[#1e3a8a] text-sm mb-2">
-              Instagram reel cannot be embedded directly.{" "}
-            </p>
+  const renderVideoCard = (video: Video, index: number) => {
+    const isPlaying = playingIndex === index;
+
+    return (
+      <div key={index} className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+        {isPlaying ? (
+          video.platform === "youtube" ? (
+            <iframe
+              src={video.url}
+              title={video.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          ) : (
             <a
-              href={activeVideo.url}
+              href={video.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 underline"
+              className="flex items-center justify-center w-full h-full bg-black/10 text-blue-700 text-sm underline"
             >
-              Click here to view {activeVideo.title} on Instagram
+              View on Instagram
             </a>
-          </div>
-        </div>
-      );
-    }
+          )
+        ) : (
+          <button
+            className="w-full h-full"
+            onClick={() => setPlayingIndex(index)}
+          >
+            <img
+              src={video.thumbnail}
+              alt={video.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-3xl">
+              ▶
+            </div>
+          </button>
+        )}
+      </div>
+    );
   };
 
   return (
@@ -140,32 +150,12 @@ export default function TestimonialPage() {
       </h1>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Left Side: Video Player and Thumbnails */}
-        <div className="space-y-6">
-          <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
-            {renderVideo()}
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            {videos.map((video, index) => (
-              <div
-                key={index}
-                className="cursor-pointer hover:opacity-80 transition"
-                onClick={() => setActiveVideo(video)}
-              >
-                <img
-                  src={video.thumbnail}
-                  alt={video.title}
-                  className={`rounded-md shadow border-2 ${
-                    activeVideo.url === video.url ? "border-blue-500" : "border-transparent"
-                  }`}
-                />
-              </div>
-            ))}
-          </div>
+        {/* Left Side: Video Grid */}
+        <div className="grid grid-cols-2 gap-4">
+          {videos.map((video, index) => renderVideoCard(video, index))}
         </div>
 
-        {/* Right Side: Text Testimonials */}
+        {/* Right Side: Testimonials */}
         <div>
           {testimonials.map((t, index) => (
             <TestimonialCard

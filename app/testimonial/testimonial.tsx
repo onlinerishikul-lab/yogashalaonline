@@ -26,14 +26,14 @@ const videos: Video[] = [
   {
     platform: "instagram",
     title: "Dimple Malkan",
-    url: "https://www.instagram.com/reel/DI1THQjJr_r/embed",
-    thumbnail: "/instagram1.jpg", // custom thumbnail image in your `public/` folder
+    url: "https://www.instagram.com/reel/DI1THQjJr_r/",
+    thumbnail: "/instagram1.jpg", // Put this image in public folder
   },
   {
     platform: "instagram",
     title: "Jan",
-    url: "https://www.instagram.com/reel/DI0QwlKhNxa/embed",
-    thumbnail: "/instagram2.jpg", // custom thumbnail image in your `public/` folder
+    url: "https://www.instagram.com/reel/DI0QwlKhNxa/",
+    thumbnail: "/instagram2.jpg",
   },
 ];
 
@@ -99,6 +99,39 @@ const TestimonialCard = ({ rating, author, date, review }: Testimonial) => (
 export default function TestimonialPage() {
   const [activeVideo, setActiveVideo] = useState<Video>(videos[0]);
 
+  const renderVideo = () => {
+    if (activeVideo.platform === "youtube") {
+      return (
+        <iframe
+          src={activeVideo.url}
+          title={activeVideo.title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full"
+        />
+      );
+    } else {
+      // Instagram fallback: open in new tab
+      return (
+        <div className="w-full h-full flex items-center justify-center bg-black/10 text-center p-4 rounded-lg">
+          <div>
+            <p className="text-[#1e3a8a] text-sm mb-2">
+              Instagram reel cannot be embedded directly.{" "}
+            </p>
+            <a
+              href={activeVideo.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline"
+            >
+              Click here to view {activeVideo.title} on Instagram
+            </a>
+          </div>
+        </div>
+      );
+    }
+  };
+
   return (
     <div className="bg-gradient-to-b from-[#e0f2fe] to-white min-h-screen px-4 py-10">
       <Header />
@@ -110,13 +143,7 @@ export default function TestimonialPage() {
         {/* Left Side: Video Player and Thumbnails */}
         <div className="space-y-6">
           <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              src={activeVideo.url}
-              title={activeVideo.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            />
+            {renderVideo()}
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -129,7 +156,9 @@ export default function TestimonialPage() {
                 <img
                   src={video.thumbnail}
                   alt={video.title}
-                  className="rounded-md shadow"
+                  className={`rounded-md shadow border-2 ${
+                    activeVideo.url === video.url ? "border-blue-500" : "border-transparent"
+                  }`}
                 />
               </div>
             ))}

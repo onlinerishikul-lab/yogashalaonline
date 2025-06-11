@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Header } from "@/components/common/header";
 
 type Video = {
@@ -127,11 +128,15 @@ export default function TestimonialPage() {
                 : setOpenInstagram(video)
             }
           >
-            <img
-              src={video.thumbnail}
-              alt={video.title}
-              className="w-full h-full object-cover"
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={video.thumbnail}
+                alt={video.title}
+                layout="fill"
+                objectFit="cover"
+                className="w-full h-full"
+              />
+            </div>
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-3xl">
               ▶
             </div>
@@ -186,15 +191,16 @@ export default function TestimonialPage() {
             </button>
             <h2 className="text-lg font-semibold mb-2">{openInstagram.title}</h2>
             <div className="aspect-video w-full bg-gray-100">
-              {/* Instagram doesn’t support iframe embeds for all reels, use fallback */}
               <iframe
-                src={`https://www.instagram.com/reel/${openInstagram.url.split("/reel/")[1]?.replace("/", "")}/embed`}
+                src={`https://www.instagram.com/reel/${openInstagram.url
+                  .split("/reel/")[1]
+                  ?.replace("/", "")}/embed`}
                 className="w-full h-full"
                 allowFullScreen
               />
             </div>
             <p className="mt-4 text-sm text-blue-700 underline">
-              If the video doesn't load,{" "}
+              If the video doesn&rsquo;t load,{" "}
               <a
                 href={openInstagram.url}
                 target="_blank"

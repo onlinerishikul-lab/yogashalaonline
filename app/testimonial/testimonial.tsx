@@ -76,7 +76,7 @@ const testimonials: Testimonial[] = [
 ];
 
 const TestimonialCard = ({ rating, author, date, review }: Testimonial) => (
-  <div className="bg-white text-[#1e3a8a] rounded-xl shadow-md p-6 mb-6">
+  <div className="bg-white text-[#1e3a8a] rounded-xl shadow-md p-6 mb-6 flex-1">
     <div className="flex justify-between items-center mb-2">
       <h3 className="text-lg font-semibold">{author}</h3>
       <span className="text-sm text-gray-500">{date}</span>
@@ -85,7 +85,9 @@ const TestimonialCard = ({ rating, author, date, review }: Testimonial) => (
       {[...Array(5)].map((_, i) => (
         <span
           key={i}
-          className={`text-xl ${i < Math.round(rating) ? "text-yellow-400" : "text-gray-300"}`}
+          className={`text-xl ${
+            i < Math.round(rating) ? "text-yellow-400" : "text-gray-300"
+          }`}
         >
           ★
         </span>
@@ -103,7 +105,10 @@ export default function TestimonialPage() {
     const isPlaying = playingIndex === index;
 
     return (
-      <div key={index} className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+      <div
+        key={index}
+        className="relative rounded-lg overflow-hidden shadow-md h-full min-h-[200px]"
+      >
         {isPlaying ? (
           video.platform === "youtube" ? (
             <iframe
@@ -125,7 +130,7 @@ export default function TestimonialPage() {
           )
         ) : (
           <button
-            className="w-full h-full"
+            className="w-full h-full relative"
             onClick={() => setPlayingIndex(index)}
           >
             <img
@@ -149,14 +154,14 @@ export default function TestimonialPage() {
         What Our Students Say
       </h1>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 items-stretch">
         {/* Left Side: Video Grid */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="flex-1 grid grid-cols-2 gap-4">
           {videos.map((video, index) => renderVideoCard(video, index))}
         </div>
 
         {/* Right Side: Testimonials */}
-        <div>
+        <div className="flex-1 flex flex-col">
           {testimonials.map((t, index) => (
             <TestimonialCard
               key={index}

@@ -1,14 +1,47 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Header } from "@/components/common/header";
+
+type Video = {
+  platform: "youtube" | "instagram";
+  title: string;
+  url: string;
+  thumbnail: string;
+};
+
+const videos: Video[] = [
+  {
+    platform: "youtube",
+    title: "Student Experience 1",
+    url: "https://www.youtube.com/embed/1oxK0cYax9s?si=YWUW4Ks6WwT5pd0B",
+    thumbnail: "https://img.youtube.com/vi/1oxK0cYax9s/hqdefault.jpg",
+  },
+  {
+    platform: "youtube",
+    title: "Student Experience 2",
+    url: "https://www.youtube.com/embed/s6VazbcpPko?si=mZGJ4PYDhhCX3dsY",
+    thumbnail: "https://img.youtube.com/vi/s6VazbcpPko/hqdefault.jpg",
+  },
+  {
+    platform: "instagram",
+    title: "Dimple Malkan",
+    url: "https://www.instagram.com/reel/DI1THQjJr_r/embed",
+    thumbnail: "/instagram1.jpg", // custom thumbnail image in your `public/` folder
+  },
+  {
+    platform: "instagram",
+    title: "Jan",
+    url: "https://www.instagram.com/reel/DI0QwlKhNxa/embed",
+    thumbnail: "/instagram2.jpg", // custom thumbnail image in your `public/` folder
+  },
+];
 
 type Testimonial = {
   rating: number;
   author: string;
   date: string;
   review: string;
-  videoUrl?: string;
 };
 
 const testimonials: Testimonial[] = [
@@ -17,57 +50,29 @@ const testimonials: Testimonial[] = [
     author: "Dimple Malkan",
     date: "May 20, 2025",
     review:
-      "Rishikul Yogshala was absolutely amazing. I gained much more than just asana training. The environment, teachers, and overall experience were transformative. I highly recommend it to anyone seeking authentic yoga.",
-    videoUrl: "https://www.instagram.com/reel/DI1THQjJr_r/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA== ",
+      "Rishikul Yogshala was absolutely amazing. I gained much more than just asana training. The environment, teachers, and overall experience were transformative.",
   },
   {
     rating: 5,
     author: "Jan",
     date: "Mar 06, 2025",
     review:
-      "Class after class, you'll get saturated with information in an easily digestible way. The pace, the structure, and the teachers are top-notch. I left with a deep understanding and great friends.",
-    videoUrl: "https://www.instagram.com/reel/DI0QwlKhNxa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA== ",
+      "Class after class, you'll get saturated with information in an easily digestible way. The pace, the structure, and the teachers are top-notch.",
   },
   {
     rating: 5,
     author: "Alejandro Godinez",
     date: "May 20, 2025",
     review:
-      "The lineage of the teachers is incredible. They genuinely care for your growth. I’m super grateful for studying with them and this experience has changed my life and my view on yoga forever.",
-    videoUrl: "https://www.youtube.com/embed/ScMzIvxBSi4",
+      "The lineage of the teachers is incredible. They genuinely care for your growth. Super grateful for studying with them. Life-changing experience.",
   },
   {
     rating: 4,
     author: "Charmaine Wardenberg",
     date: "Apr 03, 2025",
     review:
-      "Absolutely loved my experience at this yoga training school. The campus, curriculum, and care from staff made the journey enjoyable and enlightening. Would recommend it to serious learners.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "Absolutely loved my experience. The campus, curriculum, and care from staff made the journey enjoyable and enlightening. Recommended for serious learners.",
   },
-    {
-    rating: 5,
-    author: "Dimple Malkan",
-    date: "May 20, 2025",
-    review:
-      "Rishikul Yogshala was absolutely amazing. I gained much more than just asana training. The environment, teachers, and overall experience were transformative. I highly recommend it to anyone seeking authentic yoga.",
-
-  },
-  {
-    rating: 5,
-    author: "Jan",
-    date: "Mar 06, 2025",
-    review:
-      "Class after class, you'll get saturated with information in an easily digestible way. The pace, the structure, and the teachers are top-notch. I left with a deep understanding and great friends.",
-
-  },
-  {
-    rating: 5,
-    author: "Alejandro Godinez",
-    date: "May 20, 2025",
-    review:
-      "The lineage of the teachers is incredible. They genuinely care for your growth. I’m super grateful for studying with them and this experience has changed my life and my view on yoga forever.",
-
-  }
 ];
 
 const TestimonialCard = ({ rating, author, date, review }: Testimonial) => (
@@ -92,6 +97,8 @@ const TestimonialCard = ({ rating, author, date, review }: Testimonial) => (
 );
 
 export default function TestimonialPage() {
+  const [activeVideo, setActiveVideo] = useState<Video>(videos[0]);
+
   return (
     <div className="bg-gradient-to-b from-[#e0f2fe] to-white min-h-screen px-4 py-10">
       <Header />
@@ -100,30 +107,36 @@ export default function TestimonialPage() {
       </h1>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Left: Video Testimonials only (no text description) */}
-        <div className="space-y-8">
-          {testimonials.map(
-            (t, index) =>
-              t.videoUrl && (
-                <div
-                  key={index}
-                  className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
-                >
-                  <div className="aspect-video">
-                    <iframe
-                      src={t.videoUrl}
-                      title={`Video by ${t.author}`}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    />
-                  </div>
-                </div>
-              )
-          )}
+        {/* Left Side: Video Player and Thumbnails */}
+        <div className="space-y-6">
+          <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src={activeVideo.url}
+              title={activeVideo.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            {videos.map((video, index) => (
+              <div
+                key={index}
+                className="cursor-pointer hover:opacity-80 transition"
+                onClick={() => setActiveVideo(video)}
+              >
+                <img
+                  src={video.thumbnail}
+                  alt={video.title}
+                  className="rounded-md shadow"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Right: Text Testimonials */}
+        {/* Right Side: Text Testimonials */}
         <div>
           {testimonials.map((t, index) => (
             <TestimonialCard

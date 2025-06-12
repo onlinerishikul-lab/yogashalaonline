@@ -27,13 +27,13 @@ const videos: Video[] = [
   {
     platform: "youtube",
     title: "Dimple Malkan",
-    url: "https://youtube.com/shorts/5D8tnZDdOIM?si=FUNn3ZJszdliHkAW",
+    url: "https://www.youtube.com/embed/5D8tnZDdOIM",
     thumbnail: "t3.png",
   },
   {
     platform: "youtube",
     title: "Jan",
-    url: "https://youtube.com/shorts/kvLuu9rhM7Y?si=ZWN-j-fpoVanlfyl",
+    url: "https://www.youtube.com/embed/kvLuu9rhM7Y",
     thumbnail: "t4.png",
   },
 ];

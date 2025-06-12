@@ -16,25 +16,25 @@ const videos: Video[] = [
     platform: "youtube",
     title: "Student Experience 1",
     url: "https://www.youtube.com/embed/1oxK0cYax9s?si=YWUW4Ks6WwT5pd0B",
-    thumbnail: "https://img.youtube.com/vi/1oxK0cYax9s/hqdefault.jpg",
+    thumbnail: "t1.png",
   },
   {
     platform: "youtube",
     title: "Student Experience 2",
     url: "https://www.youtube.com/embed/s6VazbcpPko?si=mZGJ4PYDhhCX3dsY",
-    thumbnail: "https://img.youtube.com/vi/s6VazbcpPko/hqdefault.jpg",
+    thumbnail: "t2.png",
   },
   {
-    platform: "instagram",
+    platform: "youtube",
     title: "Dimple Malkan",
-    url: "https://www.instagram.com/reel/DI1THQjJr_r/",
-    thumbnail: "/instagram1.jpg",
+    url: "https://youtube.com/shorts/5D8tnZDdOIM?si=FUNn3ZJszdliHkAW",
+    thumbnail: "t3.png",
   },
   {
-    platform: "instagram",
+    platform: "youtube",
     title: "Jan",
-    url: "https://www.instagram.com/reel/DI0QwlKhNxa/",
-    thumbnail: "/instagram2.jpg",
+    url: "https://youtube.com/shorts/kvLuu9rhM7Y?si=ZWN-j-fpoVanlfyl",
+    thumbnail: "t4.png",
   },
 ];
 

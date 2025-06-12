@@ -133,7 +133,6 @@ export default function TestimonialPage() {
                 src={video.thumbnail}
                 alt={video.title}
                 layout="fill"
-                objectFit="cover"
                 className="w-full h-full"
               />
             </div>

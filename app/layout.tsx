@@ -41,10 +41,20 @@ export default function RootLayout({
     <html lang="en" className="min-h-full scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* ✅ Updated Google Site Verification */}
         <meta
           name="google-site-verification"
-          content="hOYvN1XlKBpsse_YAD-ymspC8VnZ85bXGeLFwCPgYBM"
+          content="uldEVgqBgxpPfMb94_JBDAs6BeLBjxKJR7Px-cn53SQ"
         />
+
+        {/* Optional: Link to HTML verification file */}
+        <link
+          rel="alternate"
+          href="/google98b10a7b33e90200.html"
+          type="text/html"
+        />
+
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body

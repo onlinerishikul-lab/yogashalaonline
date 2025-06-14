@@ -41,14 +41,16 @@ export default function RootLayout({
     <html lang="en" className="min-h-full scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="google-site-verification"
+          content="hOYvN1XlKBpsse_YAD-ymspC8VnZ85bXGeLFwCPgYBM"
+        />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
         className={`${
-  geistSans.variable
-} ${
-  geistMono.variable
-} font-sans antialiased bg-[#f9f9f9] text-[#171717] min-h-screen m-0 p-0`}
+          geistSans.variable
+        } ${geistMono.variable} font-sans antialiased bg-[#f9f9f9] text-[#171717] min-h-screen m-0 p-0`}
       >
         <QueryProvider>{children}</QueryProvider>
       </body>

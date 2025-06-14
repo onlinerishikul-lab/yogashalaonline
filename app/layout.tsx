@@ -45,7 +45,7 @@ export default function RootLayout({
         {/* ✅ Updated Google Site Verification */}
         <meta
           name="google-site-verification"
-          content="uldEVgqBgxpPfMb94_JBDAs6BeLBjxKJR7Px-cn53SQ"
+          content="yovtIEwXRYb0vSol8Du18IqfAWLv2oSwEtyzgKzySkQ"
         />
 
         {/* Optional: Link to HTML verification file */}
@@ -58,9 +58,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
-        className={`${
-          geistSans.variable
-        } ${geistMono.variable} font-sans antialiased bg-[#f9f9f9] text-[#171717] min-h-screen m-0 p-0`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-[#f9f9f9] text-[#171717] min-h-screen m-0 p-0`}
       >
         <QueryProvider>{children}</QueryProvider>
       </body>

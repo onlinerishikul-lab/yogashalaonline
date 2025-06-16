@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/HeroSection";
-import StickyCourseCard from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/TestimonialSlider";
-import YogaCoursePage from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/yogacourse";
-import LearnSection from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/LearnSection";
-import CourseDetails from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/CourseDetails";
-import YogaAccreditation from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/YogaAccreditation";
-import CertificatePromo from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/CertificatePromo";
-import TestimonialCarousel from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/TestimonialCarousel";
-import Faq from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/Faq";
+import HeroSection from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/HeroSection";
+import StickyCourseCard from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/TestimonialSlider";
+import YogaCoursePage from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/yogacourse";
+import LearnSection from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/LearnSection";
+import CourseDetails from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/CourseDetails";
+import YogaAccreditation from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/YogaAccreditation";
+import CertificatePromo from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/CertificatePromo";
+import TestimonialCarousel from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/TestimonialCarousel";
+import Faq from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

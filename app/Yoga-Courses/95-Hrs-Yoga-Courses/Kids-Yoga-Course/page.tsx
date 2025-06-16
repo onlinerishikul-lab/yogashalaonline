@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/95-Hrs-Yoga-Courses/Kids-Yoga-Course/HeroSection";
-import StickyCourseCard from "@/app/95-Hrs-Yoga-Courses/Kids-Yoga-Course/TestimonialSlider";
-import YogaCoursePage from "@/app/95-Hrs-Yoga-Courses/Kids-Yoga-Course/yogacourse";
-import LearnSection from "@/app/95-Hrs-Yoga-Courses/Kids-Yoga-Course/LearnSection";
-import CourseDetails from "@/app/95-Hrs-Yoga-Courses/Kids-Yoga-Course/CourseDetails";
-import YogaAccreditation from "@/app/95-Hrs-Yoga-Courses/Kids-Yoga-Course/YogaAccreditation";
-import CertificatePromo from "@/app/95-Hrs-Yoga-Courses/Kids-Yoga-Course/CertificatePromo";
-import TestimonialCarousel from "@/app/95-Hrs-Yoga-Courses/Kids-Yoga-Course/TestimonialCarousel";
-import Faq from "@/app/95-Hrs-Yoga-Courses/Kids-Yoga-Course/Faq";
+import HeroSection from "@/app/Yoga-Courses/95-Hrs-Yoga-Courses/Kids-Yoga-Course/HeroSection";
+import StickyCourseCard from "@/app/Yoga-Courses/95-Hrs-Yoga-Courses/Kids-Yoga-Course/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Courses/95-Hrs-Yoga-Courses/Kids-Yoga-Course/yogacourse";
+import LearnSection from "@/app/Yoga-Courses/95-Hrs-Yoga-Courses/Kids-Yoga-Course/LearnSection";
+import CourseDetails from "@/app/Yoga-Courses/95-Hrs-Yoga-Courses/Kids-Yoga-Course/CourseDetails";
+import YogaAccreditation from "@/app/Yoga-Courses/95-Hrs-Yoga-Courses/Kids-Yoga-Course/YogaAccreditation";
+import CertificatePromo from "@/app/Yoga-Courses/95-Hrs-Yoga-Courses/Kids-Yoga-Course/CertificatePromo";
+import TestimonialCarousel from "@/app/Yoga-Courses/95-Hrs-Yoga-Courses/Kids-Yoga-Course/TestimonialCarousel";
+import Faq from "@/app/Yoga-Courses/95-Hrs-Yoga-Courses/Kids-Yoga-Course/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

@@ -188,8 +188,6 @@ export const Header = () => {
     const handleClickOutside = (e: MouseEvent) => {
       const dropdowns = document.querySelectorAll(".dropdown-parent");
       if ([...dropdowns].every((d) => !d.contains(e.target as Node))) {
-        setActiveDropdown(null);
-        setOpenSubDropdown(null);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);

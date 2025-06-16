@@ -1,10 +1,10 @@
 "use client";
 
-import HeroSection from "@/app/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/HeroSection";
-import StickyCourseCard from "@/app/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/TestimonialSlider";
-import YogaCoursePage from "@/app/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/yogacourse";
-import LearnSection from "@/app/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/LearnSection";
-import CourseDetails from "@/app/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/CourseDetails";
+import HeroSection from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/HeroSection";
+import StickyCourseCard from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/yogacourse";
+import LearnSection from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/LearnSection";
+import CourseDetails from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/CourseDetails";
 import YogaAccreditation from "@/app/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/YogaAccreditation";
 import CertificatePromo from "@/app/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/CertificatePromo";
 import TestimonialCarousel from "@/app/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/TestimonialCarousel";

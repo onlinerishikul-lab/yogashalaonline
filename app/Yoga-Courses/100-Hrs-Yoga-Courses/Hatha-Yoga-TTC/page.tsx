@@ -5,10 +5,10 @@ import StickyCourseCard from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga
 import YogaCoursePage from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/yogacourse";
 import LearnSection from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/LearnSection";
 import CourseDetails from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/CourseDetails";
-import YogaAccreditation from "@/app/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/YogaAccreditation";
-import CertificatePromo from "@/app/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/CertificatePromo";
-import TestimonialCarousel from "@/app/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/TestimonialCarousel";
-import Faq from "@/app/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/Faq";
+import YogaAccreditation from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/YogaAccreditation";
+import CertificatePromo from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/CertificatePromo";
+import TestimonialCarousel from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/TestimonialCarousel";
+import Faq from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

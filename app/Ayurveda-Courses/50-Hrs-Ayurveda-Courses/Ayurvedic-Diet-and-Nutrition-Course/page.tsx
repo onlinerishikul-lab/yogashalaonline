@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/HeroSection";
-import StickyCourseCard from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/TestimonialSlider";
-import YogaCoursePage from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/yogacourse";
-import LearnSection from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/LearnSection";
-import CourseDetails from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/CourseDetails";
-import YogaAccreditation from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/YogaAccreditation";
-import CertificatePromo from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/CertificatePromo";
-import TestimonialCarousel from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/TestimonialCarousel";
-import Faq from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/Faq";
+import HeroSection from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/HeroSection";
+import StickyCourseCard from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/TestimonialSlider";
+import YogaCoursePage from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/yogacourse";
+import LearnSection from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/LearnSection";
+import CourseDetails from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/CourseDetails";
+import YogaAccreditation from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/YogaAccreditation";
+import CertificatePromo from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/CertificatePromo";
+import TestimonialCarousel from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/TestimonialCarousel";
+import Faq from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

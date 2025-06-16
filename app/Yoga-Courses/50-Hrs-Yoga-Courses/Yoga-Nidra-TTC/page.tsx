@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/HeroSection";
-import StickyCourseCard from "@/app/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/TestimonialSlider";
-import YogaCoursePage from "@/app/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/yogacourse";
-import LearnSection from "@/app/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/LearnSection";
-import CourseDetails from "@/app/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/CourseDetails";
-import YogaAccreditation from "@/app/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/YogaAccreditation";
-import CertificatePromo from "@/app/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/CertificatePromo";
-import TestimonialCarousel from "@/app/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/TestimonialCarousel";
-import Faq from "@/app/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/Faq";
+import HeroSection from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/HeroSection";
+import StickyCourseCard from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/yogacourse";
+import LearnSection from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/LearnSection";
+import CourseDetails from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/CourseDetails";
+import YogaAccreditation from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/YogaAccreditation";
+import CertificatePromo from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/CertificatePromo";
+import TestimonialCarousel from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/TestimonialCarousel";
+import Faq from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

@@ -1,12 +1,12 @@
 
 "use client";
-import HeroSection from "@/app/Online-Yoga-Classes/Prenatal-Yoga/HeroSection";
-import StickyCourseCard  from "@/app/Online-Yoga-Classes/Prenatal-Yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/Online-Yoga-Classes/Prenatal-Yoga/yogacourse";
-import LearnSection from "@/app/Online-Yoga-Classes/Prenatal-Yoga/LearnSection";
-import CourseDetails from "@/app/Online-Yoga-Classes/Prenatal-Yoga/CourseDetails";
-import TestimonialCarousel from "@/app/Online-Yoga-Classes/Prenatal-Yoga/TestimonialCarousel";
-import Faq from "@/app/Online-Yoga-Classes/Prenatal-Yoga/Faq";
+import HeroSection from "@/app/Yoga-Classes/Prenatal-Yoga/HeroSection";
+import StickyCourseCard  from "@/app/Yoga-Classes/Prenatal-Yoga/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Classes/Prenatal-Yoga/yogacourse";
+import LearnSection from "@/app/Yoga-Classes/Prenatal-Yoga/LearnSection";
+import CourseDetails from "@/app/Yoga-Classes/Prenatal-Yoga/CourseDetails";
+import TestimonialCarousel from "@/app/Yoga-Classes/Prenatal-Yoga/TestimonialCarousel";
+import Faq from "@/app/Yoga-Classes/Prenatal-Yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/HeroSection";
-import StickyCourseCard from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/TestimonialSlider";
-import YogaCoursePage from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/yogacourse";
-import LearnSection from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/LearnSection";
-import CourseDetails from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/CourseDetails";
-import YogaAccreditation from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/YogaAccreditation";
-import CertificatePromo from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/CertificatePromo";
-import TestimonialCarousel from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/TestimonialCarousel";
-import Faq from "@/app/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/Faq";
+import HeroSection from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/HeroSection";
+import StickyCourseCard from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/yogacourse";
+import LearnSection from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/LearnSection";
+import CourseDetails from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/CourseDetails";
+import YogaAccreditation from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/YogaAccreditation";
+import CertificatePromo from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/CertificatePromo";
+import TestimonialCarousel from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/TestimonialCarousel";
+import Faq from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

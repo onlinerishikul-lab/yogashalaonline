@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/50-Hrs-Yoga-Courses/Chair-Yoga/HeroSection";
-import StickyCourseCard from "@/app/50-Hrs-Yoga-Courses/Chair-Yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/50-Hrs-Yoga-Courses/Chair-Yoga/yogacourse";
-import LearnSection from "@/app/50-Hrs-Yoga-Courses/Chair-Yoga/LearnSection";
-import CourseDetails from "@/app/50-Hrs-Yoga-Courses/Chair-Yoga/CourseDetails";
-import YogaAccreditation from "@/app/50-Hrs-Yoga-Courses/Chair-Yoga/YogaAccreditation";
-import CertificatePromo from "@/app/50-Hrs-Yoga-Courses/Chair-Yoga/CertificatePromo";
-import TestimonialCarousel from "@/app/50-Hrs-Yoga-Courses/Chair-Yoga/TestimonialCarousel";
-import Faq from "@/app/50-Hrs-Yoga-Courses/Chair-Yoga/Faq";
+import HeroSection from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Chair-Yoga/HeroSection";
+import StickyCourseCard from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Chair-Yoga/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Chair-Yoga/yogacourse";
+import LearnSection from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Chair-Yoga/LearnSection";
+import CourseDetails from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Chair-Yoga/CourseDetails";
+import YogaAccreditation from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Chair-Yoga/YogaAccreditation";
+import CertificatePromo from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Chair-Yoga/CertificatePromo";
+import TestimonialCarousel from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Chair-Yoga/TestimonialCarousel";
+import Faq from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Chair-Yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

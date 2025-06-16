@@ -1,12 +1,12 @@
 
 "use client";
-import HeroSection from "@/app/Online-Yoga-Classes/Vinyasa-Flow/HeroSection";
-import StickyCourseCard  from "@/app/Online-Yoga-Classes/Vinyasa-Flow/TestimonialSlider";
-import YogaCoursePage from "@/app/Online-Yoga-Classes/Vinyasa-Flow/yogacourse";
-import LearnSection from "@/app/Online-Yoga-Classes/Vinyasa-Flow/LearnSection";
-import CourseDetails from "@/app/Online-Yoga-Classes/Vinyasa-Flow/CourseDetails";
-import TestimonialCarousel from "@/app/Online-Yoga-Classes/Vinyasa-Flow/TestimonialCarousel";
-import Faq from "@/app/Online-Yoga-Classes/Vinyasa-Flow/Faq";
+import HeroSection from "@/app/Yoga-Classes/Vinyasa-Flow/HeroSection";
+import StickyCourseCard  from "@/app/Yoga-Classes/Vinyasa-Flow/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Classes/Vinyasa-Flow/yogacourse";
+import LearnSection from "@/app/Yoga-Classes/Vinyasa-Flow/LearnSection";
+import CourseDetails from "@/app/Yoga-Classes/Vinyasa-Flow/CourseDetails";
+import TestimonialCarousel from "@/app/Yoga-Classes/Vinyasa-Flow/TestimonialCarousel";
+import Faq from "@/app/Yoga-Classes/Vinyasa-Flow/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

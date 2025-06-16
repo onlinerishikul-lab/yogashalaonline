@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/HeroSection";
-import StickyCourseCard from "@/app/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/TestimonialSlider";
-import YogaCoursePage from "@/app/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/yogacourse";
-import LearnSection from "@/app/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/LearnSection";
-import CourseDetails from "@/app/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/CourseDetails";
-import YogaAccreditation from "@/app/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/YogaAccreditation";
-import CertificatePromo from "@/app/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/CertificatePromo";
-import TestimonialCarousel from "@/app/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/TestimonialCarousel";
-import Faq from "@/app/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/Faq";
+import HeroSection from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/HeroSection";
+import StickyCourseCard from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/yogacourse";
+import LearnSection from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/LearnSection";
+import CourseDetails from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/CourseDetails";
+import YogaAccreditation from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/YogaAccreditation";
+import CertificatePromo from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/CertificatePromo";
+import TestimonialCarousel from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/TestimonialCarousel";
+import Faq from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

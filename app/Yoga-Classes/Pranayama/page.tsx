@@ -1,12 +1,12 @@
 
 "use client";
-import HeroSection from "@/app/Online-Yoga-Classes/Pranayama/HeroSection";
-import StickyCourseCard  from "@/app/Online-Yoga-Classes/Pranayama/TestimonialSlider";
-import YogaCoursePage from "@/app/Online-Yoga-Classes/Pranayama/yogacourse";
-import LearnSection from "@/app/Online-Yoga-Classes/Pranayama/LearnSection";
-import CourseDetails from "@/app/Online-Yoga-Classes/Pranayama/CourseDetails";
-import TestimonialCarousel from "@/app/Online-Yoga-Classes/Pranayama/TestimonialCarousel";
-import Faq from "@/app/Online-Yoga-Classes/Pranayama/Faq";
+import HeroSection from "@/app/Yoga-Classes/Pranayama/HeroSection";
+import StickyCourseCard  from "@/app/Yoga-Classes/Pranayama/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Classes/Pranayama/yogacourse";
+import LearnSection from "@/app/Yoga-Classes/Pranayama/LearnSection";
+import CourseDetails from "@/app/Yoga-Classes/Pranayama/CourseDetails";
+import TestimonialCarousel from "@/app/Yoga-Classes/Pranayama/TestimonialCarousel";
+import Faq from "@/app/Yoga-Classes/Pranayama/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

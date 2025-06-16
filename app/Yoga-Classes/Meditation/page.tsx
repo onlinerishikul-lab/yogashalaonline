@@ -1,12 +1,12 @@
 
 "use client";
-import HeroSection from "@/app/Online-Yoga-Classes/Meditation/HeroSection";
-import StickyCourseCard  from "@/app/Online-Yoga-Classes/Meditation/TestimonialSlider";
-import YogaCoursePage from "@/app/Online-Yoga-Classes/Meditation/yogacourse";
-import LearnSection from "@/app/Online-Yoga-Classes/Meditation/LearnSection";
-import CourseDetails from "@/app/Online-Yoga-Classes/Meditation/CourseDetails";
-import TestimonialCarousel from "@/app/Online-Yoga-Classes/Meditation/TestimonialCarousel";
-import Faq from "@/app/Online-Yoga-Classes/Meditation/Faq";
+import HeroSection from "@/app/Yoga-Classes/Meditation/HeroSection";
+import StickyCourseCard  from "@/app/Yoga-Classes/Meditation/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Classes/Meditation/yogacourse";
+import LearnSection from "@/app/Yoga-Classes/Meditation/LearnSection";
+import CourseDetails from "@/app/Yoga-Classes/Meditation/CourseDetails";
+import TestimonialCarousel from "@/app/Yoga-Classes/Meditation/TestimonialCarousel";
+import Faq from "@/app/Yoga-Classes/Meditation/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

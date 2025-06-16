@@ -12,8 +12,159 @@ import {
   ChevronUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+type SubDropdownItem = {
+  title: string;
+  href: string;
+};
+type DropdownItem = {
+  title: string;
+  href: string;
+  subDropdown?: SubDropdownItem[];
+};
 
-// ... (Your type definitions and navigationItems remain unchanged)
+type NavigationItem =
+  | { title: string; href: string }
+  | { title: string; dropdown: DropdownItem[] };
+
+const navigationItems: NavigationItem[] = [
+  {
+    title: "Yoga Courses",
+    dropdown: [
+      {
+        title: "25 Hrs Yoga Courses",
+        href: "/yoga/25-hours",
+        subDropdown: [
+          { title: "Yoga Anotomy For Safety", href: "/Yoga-Courses/25-Hrs-Yoga-Courses/Yoga-Anatomy/" },
+          { title: "Face Yoga TTC", href: "/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga/" },
+        ],
+      },
+      {
+        title: "50 Hrs Yoga Courses",
+        href: "/yoga/50-hours",
+        subDropdown: [
+          { title: "Restorative Yoga TTC", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Restorative-Yoga-TTC/" },
+          { title: "Meditation TTC", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Meditation-TTC/" },
+          { title: "Pranayama TTC", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Pranayama-TTC/" },
+          { title: "Yoga Nidra TTC", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/" },
+          { title: "Chair Yoga TTC", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Chair-Yoga/" },
+          { title: "Mudra & Mantra Course", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/" },
+          { title: "Kundalini Yoga Course", href: "Yoga-Courses/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/" },
+          { title: "Kids Yoga Course", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Kids-Yoga-Course/" },
+          { title: "Yoga Therapy Course", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Therapy-Course/" },
+          { title: "Pregnancy Yoga", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Pregnancy-Yoga/" },
+        ],
+      },
+      {
+        title: "75 Hrs Yoga Courses",
+        href: "/yoga/75-hours",
+        subDropdown: [
+          { title: "Core Concept of Yoga Philosophy", href: "/Yoga-Courses/75-Hrs-Yoga-Courses/Yoga-Philosophy/" },
+          { title: "Asana Clinic for Yoga Professionals", href: "/Yoga-Courses/75-Hrs-Yoga-Courses/Asana-Clinic/" },
+        ],
+      },
+      {
+        title: "85 Hrs Yoga Courses",
+        href: "/yoga/85-hours",
+        subDropdown: [
+          { title: "Prenatal & Postnatal Yoga Course for Teachers", href: "/Yoga-Courses/85-Hrs-Yoga-Courses/Prenatal-Postnatal/" },
+        ],
+      },
+      {
+        title: "95 Hrs Yoga Courses",
+        href: "/yoga/95-hours",
+        subDropdown: [
+          { title: "Kids Yoga Course", href: "/Yoga-Courses/95-Hrs-Yoga-Courses/Kids-Yoga-Course/" },
+        ],
+      },
+      {
+        title: "100 Hrs Yoga Courses",
+        href: "/yoga/100-hours",
+        subDropdown: [
+          { title: "Multi Style Yoga TTC", href: "/Yoga-Courses/100-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/" },
+          { title: "Vinyasa Flow Yoga TTC", href: "/Yoga-Courses/100-Hrs-Yoga-Courses/Vinyasa-Flow-Yoga-TTC/" },
+          { title: "Hatha Yoga TTC", href: "/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/" },
+          { title: "Advanced Yoga Therapy Course", href: "/Yoga-Courses/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/" },
+        ],
+      },
+      {
+        title: "200 Hrs Yoga Courses",
+        href: "/yoga/200-hours",
+        subDropdown: [
+          { title: "Multi Style Yoga TTC", href: "/Yoga-Courses/200-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/" },
+        ],
+      },
+      {
+        title: "300 Hrs Yoga Courses",
+        href: "/yoga/300-hours",
+        subDropdown: [
+          { title: "Multi Style Yoga TTC", href: "/Yoga-Courses/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Ayurveda Courses",
+    dropdown: [
+      {
+        title: "10 Hrs Ayurveda Courses",
+        href: "/yoga/25-hours",
+        subDropdown: [
+          { title: "Ayurvedic Basics Course for Beginners", href: "/Ayurveda-Courses/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/" },
+          { title: "Ayurvedic Herbal Course", href: "/Ayurveda-Courses/10-Hrs-Ayurveda-Courses/Ayurvedic-Herbal-Course/" },
+        ],
+      },
+      {
+        title: "15 Hrs Ayurveda Courses",
+        href: "/yoga/50-hours",
+        subDropdown: [
+          { title: "Ayurvedic Relationship Course", href: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/" },
+          { title: "Ayurveda Garbha Samskara Course", href: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/" },
+        ],
+      },
+      {
+        title: "25 Hrs Ayurveda Courses",
+        href: "/yoga/75-hours",
+        subDropdown: [
+          { title: "Ayurveda Immunity Course", href: "/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/" },
+          { title: "Ayurveda Skin and Beauty Course", href: "/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/" },
+        ],
+      },
+      {
+        title: "50 Hrs Ayurveda Courses",
+        href: "/yoga/85-hours",
+        subDropdown: [
+          { title: "Ayurvedic Foundational Course", href: "/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Foundational-Course/" },
+          { title: "Ayurvedic Diet and Nutrition Course", href: "/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Diet-and-Nutrition-Course/" },
+          { title: "Ayurvedic Lifestyle Course", href: "/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Yoga Classes",
+    dropdown: [
+      { title: "Prenatal Yoga", href: "/Yoga-Classes/Prenatal-Yoga/" },
+      { title: "Postnatal Yoga", href: "/Yoga-Classes/Postnatal-Yoga/" },
+      { title: "Meditation", href: "/Yoga-Classes/Meditation/" },
+      { title: "Pranayama", href: "/Yoga-Classes/Pranayama/" },
+      { title: "Hatha Yoga", href:"/Yoga-Classes/Hatha-Yoga/" },
+      { title: "Vinyasa Flow", href: "/Yoga-Classes/Vinyasa-Flow/" },
+      { title: "Power Yoga", href:"/Yoga-Classes/Power-Yoga/" },
+      { title: "Diabetic Yoga", href:"/Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/" },
+      { title: "Yoga Nidra", href: "/Yoga-Classes/Yoga Nidra/" },
+    ],
+  },
+  {
+    title: "About Us",
+    dropdown: [
+      { title: "Our Teachers", href: "/our-teachers" },
+      { title: "Our Blogs", href: "/blog" },
+      { title: "Our Testimonials", href: "/testimonial" },
+    ],
+  },
+  { title: "Contact Us", href: "/contact" },
+  { title: "Payment", href: "/payments" },
+];
 
 export const Header = () => {
   const router = useRouter();

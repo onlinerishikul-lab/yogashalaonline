@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/HeroSection";
-import StickyCourseCard from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/TestimonialSlider";
-import YogaCoursePage from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/yogacourse";
-import LearnSection from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/LearnSection";
-import CourseDetails from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/CourseDetails";
-import YogaAccreditation from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/YogaAccreditation";
-import CertificatePromo from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/CertificatePromo";
-import TestimonialCarousel from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/TestimonialCarousel";
-import Faq from "@/app/75-Hrs-Yoga-Courses/Asana-Clinic/Faq";
+import HeroSection from "@/app/Yoga-Courses/75-Hrs-Yoga-Courses/Asana-Clinic/HeroSection";
+import StickyCourseCard from "@/app/Yoga-Courses/75-Hrs-Yoga-Courses/Asana-Clinic/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Courses/75-Hrs-Yoga-Courses/Asana-Clinic/yogacourse";
+import LearnSection from "@/app/Yoga-Courses/75-Hrs-Yoga-Courses/Asana-Clinic/LearnSection";
+import CourseDetails from "@/app/Yoga-Courses/75-Hrs-Yoga-Courses/Asana-Clinic/CourseDetails";
+import YogaAccreditation from "@/app/Yoga-Courses/75-Hrs-Yoga-Courses/Asana-Clinic/YogaAccreditation";
+import CertificatePromo from "@/app/Yoga-Courses/75-Hrs-Yoga-Courses/Asana-Clinic/CertificatePromo";
+import TestimonialCarousel from "@/app/Yoga-Courses/75-Hrs-Yoga-Courses/Asana-Clinic/TestimonialCarousel";
+import Faq from "@/app/Yoga-Courses/75-Hrs-Yoga-Courses/Asana-Clinic/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

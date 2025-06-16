@@ -1,12 +1,12 @@
 
 "use client";
-import HeroSection from "@/app/Online-Yoga-Classes/Power-Yoga/HeroSection";
-import StickyCourseCard  from "@/app/Online-Yoga-Classes/Power-Yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/Online-Yoga-Classes/Power-Yoga/yogacourse";
-import LearnSection from "@/app/Online-Yoga-Classes/Power-Yoga/LearnSection";
-import CourseDetails from "@/app/Online-Yoga-Classes/Power-Yoga/CourseDetails";
-import TestimonialCarousel from "@/app/Online-Yoga-Classes/Power-Yoga/TestimonialCarousel";
-import Faq from "@/app/Online-Yoga-Classes/Power-Yoga/Faq";
+import HeroSection from "@/app/Yoga-Classes/Power-Yoga/HeroSection";
+import StickyCourseCard  from "@/app/Yoga-Classes/Power-Yoga/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Classes/Power-Yoga/yogacourse";
+import LearnSection from "@/app/Yoga-Classes/Power-Yoga/LearnSection";
+import CourseDetails from "@/app/Yoga-Classes/Power-Yoga/CourseDetails";
+import TestimonialCarousel from "@/app/Yoga-Classes/Power-Yoga/TestimonialCarousel";
+import Faq from "@/app/Yoga-Classes/Power-Yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

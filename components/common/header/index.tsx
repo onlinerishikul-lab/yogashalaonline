@@ -12,6 +12,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 type SubDropdownItem = {
   title: string;
   href: string;
@@ -216,10 +217,10 @@ export const Header = () => {
         isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
-      {/* Desktop Layout - HAMBURGER ON LEFT */}
+      {/* Desktop Layout */}
       <div className="hidden lg:block">
         <div className="w-full max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between relative">
-          {/* --- CHANGED/NEW: Hamburger menu on left */}
+          {/* Hamburger menu on left */}
           <Button
             variant="ghost"
             onClick={() => setOpen(!isOpen)}
@@ -233,72 +234,8 @@ export const Header = () => {
             )}
           </Button>
 
-          {/* Left Nav (hide if menu open) */}
-          {!isOpen && (
-            <div className="flex flex-1 items-center gap-x-8 text-white text-sm font-medium">
-              {navigationItems.slice(0, 3).map((item) =>
-                "dropdown" in item ? (
-                  <div key={item.title} className="relative dropdown-parent">
-                    <button
-                      className="flex items-center gap-1 hover:text-white/80 whitespace-nowrap"
-                      onClick={() =>
-                        setActiveDropdown((prev) => (prev === item.title ? null : item.title))
-                      }
-                    >
-                      {item.title}
-                      <ChevronDown className="w-4 h-4" />
-                    </button>
-                    {activeDropdown === item.title && (
-                      <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1">
-                        {item.dropdown.map((subItem, idx) => (
-                          <div key={subItem.title} className="relative group">
-                            {idx > 0 && <div className="border-t border-gray-200 my-1" />}
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                if (subItem.subDropdown) {
-                                  setOpenSubDropdown((prev) =>
-                                    prev === subItem.title ? null : subItem.title
-                                  );
-                                } else {
-                                  router.push(subItem.href);
-                                  setActiveDropdown(null);
-                                  setOpenSubDropdown(null);
-                                }
-                              }}
-                              className="w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-100 flex justify-between items-center"
-                            >
-                              {subItem.title}
-                              {subItem.subDropdown && <ChevronRight className="w-4 h-4" />}
-                            </button>
-                            {openSubDropdown === subItem.title && subItem.subDropdown && (
-                              <div className="absolute top-0 left-full ml-1 bg-white shadow-lg rounded-md min-w-[300px] z-50 p-2 space-y-1 whitespace-nowrap">
-                                {subItem.subDropdown.map((nestedItem, nestedIdx) => (
-                                  <div key={nestedItem.title}>
-                                    {nestedIdx > 0 && <div className="border-t border-gray-200 my-1" />}
-                                    <Link
-                                      href={nestedItem.href}
-                                      className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                                    >
-                                      {nestedItem.title}
-                                    </Link>
-                                  </div>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link key={item.title} href={item.href} className="hover:text-white/80 whitespace-nowrap">
-                    {item.title}
-                  </Link>
-                )
-              )}
-            </div>
-          )}
+          {/* Remove navigation titles from header */}
+          <div className="flex flex-1 items-center gap-x-8" />
 
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 mx-8">
@@ -311,55 +248,11 @@ export const Header = () => {
             />
           </Link>
 
-          {/* Right Nav (hide if menu open) */}
-          {!isOpen && (
-            <div className="flex flex-1 justify-end items-center gap-x-8 text-white text-sm font-medium">
-              {navigationItems.slice(3).map((item) =>
-                "dropdown" in item ? (
-                  <div key={item.title} className="relative dropdown-parent">
-                    <button
-                      className="flex items-center gap-1 hover:text-white/80 whitespace-nowrap"
-                      onClick={() =>
-                        setActiveDropdown((prev) => (prev === item.title ? null : item.title))
-                      }
-                    >
-                      {item.title}
-                      <ChevronDown className="w-4 h-4" />
-                    </button>
-                    {activeDropdown === item.title && (
-                      <div className="absolute bg-white shadow-lg top-full mt-2 rounded-md w-64 z-50 p-2 space-y-1 right-0">
-                        {item.dropdown.map((subItem, idx) => (
-                          <div key={subItem.title}>
-                            {idx > 0 && <div className="border-t border-gray-200 my-1" />}
-                            <Link
-                              href={subItem.href}
-                              className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                            >
-                              {subItem.title}
-                            </Link>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link key={item.title} href={item.href} className="hover:text-white/80 whitespace-nowrap">
-                    {item.title}
-                  </Link>
-                )
-              )}
+          <div className="flex flex-1 justify-end items-center gap-x-8" />
 
-              <Button
-                onClick={() => router.push("/login")}
-                className="text-sm font-medium text-white bg-[#ffffff78] hover:bg-[#285384] px-4 py-2 rounded-full whitespace-nowrap"
-              >
-                Sign In / Log In
-              </Button>
-            </div>
-          )}
         </div>
 
-        {/* --- NEW: Desktop Sidebar Menu (reuse mobile menu) */}
+        {/* Sidebar Menu (titles only inside menu) */}
         {isOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex">
             <div className="bg-[#4377B2] text-white shadow-md w-[340px] max-w-full h-full overflow-y-auto">
@@ -388,7 +281,6 @@ export const Header = () => {
                             <ChevronDown className="w-5 h-5 flex-shrink-0" />
                           )}
                         </button>
-
                         {expandedMobileItems.includes(item.title) && (
                           <div className="pl-4 space-y-2 mt-2 border-l-2 border-white/20 overflow-x-hidden">
                             {item.dropdown.map((subItem, subIdx) => (
@@ -407,7 +299,6 @@ export const Header = () => {
                                         <ChevronDown className="w-4 h-4 flex-shrink-0" />
                                       )}
                                     </button>
-
                                     {expandedMobileSubItems.includes(subItem.title) && (
                                       <div className="pl-4 mt-2 space-y-2 border-l border-white/20 overflow-x-hidden">
                                         {subItem.subDropdown.map((nestedItem, nestedIdx) => (
@@ -485,7 +376,6 @@ export const Header = () => {
         {isOpen && (
           <div className="bg-[#4377B2] text-white shadow-md w-full max-h-[80vh] overflow-y-auto overflow-x-hidden">
             <div className="p-4 space-y-4 overflow-x-hidden">
-              {/* ... (Mobile menu code unchanged) */}
               {/* You can keep your mobile menu here as is */}
             </div>
           </div>

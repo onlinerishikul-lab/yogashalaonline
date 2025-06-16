@@ -1,12 +1,12 @@
 
 "use client";
-import HeroSection from "@/app/Online-Yoga-Classes/Hatha-Yoga/HeroSection";
-import StickyCourseCard  from "@/app/Online-Yoga-Classes/Hatha-Yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/Online-Yoga-Classes/Hatha-Yoga/yogacourse";
-import LearnSection from "@/app/Online-Yoga-Classes/Hatha-Yoga/LearnSection";
-import CourseDetails from "@/app/Online-Yoga-Classes/Hatha-Yoga/CourseDetails";
-import TestimonialCarousel from "@/app/Online-Yoga-Classes/Hatha-Yoga/TestimonialCarousel";
-import Faq from "@/app/Online-Yoga-Classes/Hatha-Yoga/Faq";
+import HeroSection from "@/app/Yoga-Classes/Hatha-Yoga/HeroSection";
+import StickyCourseCard  from "@/app/Yoga-Classes/Hatha-Yoga/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Classes/Hatha-Yoga/yogacourse";
+import LearnSection from "@/app/Yoga-Classes/Hatha-Yoga/LearnSection";
+import CourseDetails from "@/app/Yoga-Classes/Hatha-Yoga/CourseDetails";
+import TestimonialCarousel from "@/app/Yoga-Classes/Hatha-Yoga/TestimonialCarousel";
+import Faq from "@/app/Yoga-Classes/Hatha-Yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

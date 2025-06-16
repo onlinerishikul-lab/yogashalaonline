@@ -8,7 +8,6 @@ import {
   MoveRight,
   X,
   ChevronDown,
-  ChevronRight,
   ChevronUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -171,8 +170,6 @@ export const Header = () => {
   const router = useRouter();
   const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
   const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
   const [expandedMobileSubItems, setExpandedMobileSubItems] = useState<string[]>([]);
 

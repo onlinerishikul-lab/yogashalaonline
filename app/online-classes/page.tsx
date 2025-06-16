@@ -127,7 +127,7 @@ export default function ClassesPage() {
 
                     <div className="flex gap-2 mt-4">
                       <Link
-                        href={`/Online-Yoga-Classes/${slug}`}
+                        href={`//Yoga-Classes/${slug}`}
                         className="bg-[#4377B2] text-white px-4 py-2 rounded hover:bg-[#285384] transition w-full text-center"
                       >
                         View Detail

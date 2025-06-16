@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/HeroSection";
-import StickyCourseCard from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/yogacourse";
-import LearnSection from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/LearnSection";
-import CourseDetails from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/CourseDetails";
-import YogaAccreditation from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/YogaAccreditation";
-import CertificatePromo from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/CertificatePromo";
-import TestimonialCarousel from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/TestimonialCarousel";
-import Faq from "@/app/50-Hrs-Yoga-Courses/Pregnancy-Yoga/Faq";
+import HeroSection from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Pregnancy-Yoga/HeroSection";
+import StickyCourseCard from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Pregnancy-Yoga/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Pregnancy-Yoga/yogacourse";
+import LearnSection from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Pregnancy-Yoga/LearnSection";
+import CourseDetails from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Pregnancy-Yoga/CourseDetails";
+import YogaAccreditation from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Pregnancy-Yoga/YogaAccreditation";
+import CertificatePromo from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Pregnancy-Yoga/CertificatePromo";
+import TestimonialCarousel from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Pregnancy-Yoga/TestimonialCarousel";
+import Faq from "@/app/Yoga-Courses/50-Hrs-Yoga-Courses/Pregnancy-Yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

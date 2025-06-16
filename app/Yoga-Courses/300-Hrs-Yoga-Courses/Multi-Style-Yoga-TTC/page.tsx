@@ -1,13 +1,13 @@
 "use client";
-import HeroSection from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/HeroSection";
-import StickyCourseCard from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/TestimonialSlider";
-import YogaCoursePage from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/yogacourse";
-import LearnSection from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/LearnSection";
-import CourseDetails from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/CourseDetails";
-import YogaAccreditation from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/YogaAccreditation";
-import CertificatePromo from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/CertificatePromo";
-import TestimonialCarousel from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/TestimonialCarousel";
-import Faq from "@/app/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/Faq";
+import HeroSection from "@/app/Yoga-Courses/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/HeroSection";
+import StickyCourseCard from "@/app/Yoga-Courses/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Courses/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/yogacourse";
+import LearnSection from "@/app/Yoga-Courses/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/LearnSection";
+import CourseDetails from "@/app/Yoga-Courses/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/CourseDetails";
+import YogaAccreditation from "@/app/Yoga-Courses/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/YogaAccreditation";
+import CertificatePromo from "@/app/Yoga-Courses/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/CertificatePromo";
+import TestimonialCarousel from "@/app/Yoga-Courses/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/TestimonialCarousel";
+import Faq from "@/app/Yoga-Courses/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

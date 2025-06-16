@@ -1,12 +1,12 @@
 
 "use client";
-import HeroSection from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/HeroSection";
-import StickyCourseCard  from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/yogacourse";
-import LearnSection from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/LearnSection";
-import CourseDetails from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/CourseDetails";
-import TestimonialCarousel from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/TestimonialCarousel";
-import Faq from "@/app/Online-Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/Faq";
+import HeroSection from "@/app/Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/HeroSection";
+import StickyCourseCard  from "@/app/Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/yogacourse";
+import LearnSection from "@/app/Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/LearnSection";
+import CourseDetails from "@/app/Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/CourseDetails";
+import TestimonialCarousel from "@/app/Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/TestimonialCarousel";
+import Faq from "@/app/Yoga-Classes/Exclusive-Reversing-Diabetic-Yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

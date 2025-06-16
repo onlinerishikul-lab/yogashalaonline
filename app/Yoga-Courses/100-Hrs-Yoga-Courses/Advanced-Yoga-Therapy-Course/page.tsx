@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/HeroSection";
-import StickyCourseCard from "@/app/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/TestimonialSlider";
-import YogaCoursePage from "@/app/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/yogacourse";
-import LearnSection from "@/app/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/LearnSection";
-import CourseDetails from "@/app/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/CourseDetails";
-import YogaAccreditation from "@/app/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/YogaAccreditation";
-import CertificatePromo from "@/app/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/CertificatePromo";
-import TestimonialCarousel from "@/app/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/TestimonialCarousel";
-import Faq from "@/app/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/Faq";
+import HeroSection from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/HeroSection";
+import StickyCourseCard from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/yogacourse";
+import LearnSection from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/LearnSection";
+import CourseDetails from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/CourseDetails";
+import YogaAccreditation from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/YogaAccreditation";
+import CertificatePromo from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/CertificatePromo";
+import TestimonialCarousel from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/TestimonialCarousel";
+import Faq from "@/app/Yoga-Courses/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

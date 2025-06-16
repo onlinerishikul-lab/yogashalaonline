@@ -1,12 +1,12 @@
 
 "use client";
-import HeroSection from "@/app/Online-Yoga-Classes/Yoga Nidra/HeroSection";
-import StickyCourseCard  from "@/app/Online-Yoga-Classes/Yoga Nidra/TestimonialSlider";
-import YogaCoursePage from "@/app/Online-Yoga-Classes/Yoga Nidra/yogacourse";
-import LearnSection from "@/app/Online-Yoga-Classes/Yoga Nidra/LearnSection";
-import CourseDetails from "@/app/Online-Yoga-Classes/Yoga Nidra/CourseDetails";
-import TestimonialCarousel from "@/app/Online-Yoga-Classes/Yoga Nidra/TestimonialCarousel";
-import Faq from "@/app/Online-Yoga-Classes/Yoga Nidra/Faq";
+import HeroSection from "@/app/Yoga-Classes/Yoga Nidra/HeroSection";
+import StickyCourseCard  from "@/app/Yoga-Classes/Yoga Nidra/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Classes/Yoga Nidra/yogacourse";
+import LearnSection from "@/app/Yoga-Classes/Yoga Nidra/LearnSection";
+import CourseDetails from "@/app/Yoga-Classes/Yoga Nidra/CourseDetails";
+import TestimonialCarousel from "@/app/Yoga-Classes/Yoga Nidra/TestimonialCarousel";
+import Faq from "@/app/Yoga-Classes/Yoga Nidra/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

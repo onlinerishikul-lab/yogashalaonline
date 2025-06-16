@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/HeroSection";
-import StickyCourseCard from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/TestimonialSlider";
-import YogaCoursePage from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/yogacourse";
-import LearnSection from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/LearnSection";
-import CourseDetails from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/CourseDetails";
-import YogaAccreditation from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/YogaAccreditation";
-import CertificatePromo from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/CertificatePromo";
-import TestimonialCarousel from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/TestimonialCarousel";
-import Faq from "@/app/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/Faq";
+import HeroSection from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/HeroSection";
+import StickyCourseCard from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/TestimonialSlider";
+import YogaCoursePage from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/yogacourse";
+import LearnSection from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/LearnSection";
+import CourseDetails from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/CourseDetails";
+import YogaAccreditation from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/YogaAccreditation";
+import CertificatePromo from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/CertificatePromo";
+import TestimonialCarousel from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/TestimonialCarousel";
+import Faq from "@/app/Ayurveda-Courses/50-Hrs-Ayurveda-Courses/Ayurvedic-Lifestyle-Course/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

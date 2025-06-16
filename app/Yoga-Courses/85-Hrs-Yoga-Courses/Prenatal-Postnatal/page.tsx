@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/HeroSection";
-import StickyCourseCard from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/TestimonialSlider";
-import YogaCoursePage from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/yogacourse";
-import LearnSection from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/LearnSection";
-import CourseDetails from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/CourseDetails";
-import YogaAccreditation from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/YogaAccreditation";
-import CertificatePromo from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/CertificatePromo";
-import TestimonialCarousel from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/TestimonialCarousel";
-import Faq from "@/app/85-Hrs-Yoga-Courses/Prenatal-Postnatal/Faq";
+import HeroSection from "@/app/Yoga-Courses/85-Hrs-Yoga-Courses/Prenatal-Postnatal/HeroSection";
+import StickyCourseCard from "@/app/Yoga-Courses/85-Hrs-Yoga-Courses/Prenatal-Postnatal/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Courses/85-Hrs-Yoga-Courses/Prenatal-Postnatal/yogacourse";
+import LearnSection from "@/app/Yoga-Courses/85-Hrs-Yoga-Courses/Prenatal-Postnatal/LearnSection";
+import CourseDetails from "@/app/Yoga-Courses/85-Hrs-Yoga-Courses/Prenatal-Postnatal/CourseDetails";
+import YogaAccreditation from "@/app/Yoga-Courses/85-Hrs-Yoga-Courses/Prenatal-Postnatal/YogaAccreditation";
+import CertificatePromo from "@/app/Yoga-Courses/85-Hrs-Yoga-Courses/Prenatal-Postnatal/CertificatePromo";
+import TestimonialCarousel from "@/app/Yoga-Courses/85-Hrs-Yoga-Courses/Prenatal-Postnatal/TestimonialCarousel";
+import Faq from "@/app/Yoga-Courses/85-Hrs-Yoga-Courses/Prenatal-Postnatal/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

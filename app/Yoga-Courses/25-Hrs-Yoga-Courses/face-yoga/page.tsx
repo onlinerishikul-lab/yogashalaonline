@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/HeroSection";
-import StickyCourseCard from "@/app/25-Hrs-Yoga-Courses/face-yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/25-Hrs-Yoga-Courses/face-yoga/yogacourse";
-import LearnSection from "@/app/25-Hrs-Yoga-Courses/face-yoga/LearnSection";
-import CourseDetails from "@/app/25-Hrs-Yoga-Courses/face-yoga/CourseDetails";
-import YogaAccreditation from "@/app/25-Hrs-Yoga-Courses/face-yoga/YogaAccreditation";
-import CertificatePromo from "@/app/25-Hrs-Yoga-Courses/face-yoga/CertificatePromo";
-import TestimonialCarousel from "@/app/25-Hrs-Yoga-Courses/face-yoga/TestimonialCarousel";
-import Faq from "@/app/25-Hrs-Yoga-Courses/face-yoga/Faq";
+import HeroSection from "@/app/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga/HeroSection";
+import StickyCourseCard from "@/app/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga/yogacourse";
+import LearnSection from "@/app/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga/LearnSection";
+import CourseDetails from "@/app/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga/CourseDetails";
+import YogaAccreditation from "@/app/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga/YogaAccreditation";
+import CertificatePromo from "@/app/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga/CertificatePromo";
+import TestimonialCarousel from "@/app/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga/TestimonialCarousel";
+import Faq from "@/app/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

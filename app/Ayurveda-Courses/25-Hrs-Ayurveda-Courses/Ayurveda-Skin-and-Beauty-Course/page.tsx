@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/HeroSection";
-import StickyCourseCard from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/TestimonialSlider";
-import YogaCoursePage from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/yogacourse";
-import LearnSection from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/LearnSection";
-import CourseDetails from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/CourseDetails";
-import YogaAccreditation from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/YogaAccreditation";
-import CertificatePromo from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/CertificatePromo";
-import TestimonialCarousel from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/TestimonialCarousel";
-import Faq from "@/app/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/Faq";
+import HeroSection from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/HeroSection";
+import StickyCourseCard from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/TestimonialSlider";
+import YogaCoursePage from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/yogacourse";
+import LearnSection from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/LearnSection";
+import CourseDetails from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/CourseDetails";
+import YogaAccreditation from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/YogaAccreditation";
+import CertificatePromo from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/CertificatePromo";
+import TestimonialCarousel from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/TestimonialCarousel";
+import Faq from "@/app/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

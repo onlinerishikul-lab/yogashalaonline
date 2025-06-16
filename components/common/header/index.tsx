@@ -48,7 +48,7 @@ const navigationItems: NavigationItem[] = [
           { title: "Yoga Nidra TTC", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Nidra-TTC/" },
           { title: "Chair Yoga TTC", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Chair-Yoga/" },
           { title: "Mudra & Mantra Course", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Mudra-Mantra-Course/" },
-          { title: "Kundalini Yoga Course", href: "Yoga-Courses/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/" },
+          { title: "Kundalini Yoga Course", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Kundalini-Yoga-Course/" },
           { title: "Kids Yoga Course", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Kids-Yoga-Course/" },
           { title: "Yoga Therapy Course", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Yoga-Therapy-Course/" },
           { title: "Pregnancy Yoga", href: "/Yoga-Courses/50-Hrs-Yoga-Courses/Pregnancy-Yoga/" },

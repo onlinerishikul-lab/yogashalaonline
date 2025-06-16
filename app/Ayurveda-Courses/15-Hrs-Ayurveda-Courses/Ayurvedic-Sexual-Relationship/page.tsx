@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/HeroSection";
-import StickyCourseCard from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/TestimonialSlider";
-import YogaCoursePage from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/yogacourse";
-import LearnSection from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/LearnSection";
-import CourseDetails from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/CourseDetails";
-import YogaAccreditation from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/YogaAccreditation";
-import CertificatePromo from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/CertificatePromo";
-import TestimonialCarousel from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/TestimonialCarousel";
-import Faq from "@/app/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/Faq";
+import HeroSection from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/HeroSection";
+import StickyCourseCard from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/TestimonialSlider";
+import YogaCoursePage from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/yogacourse";
+import LearnSection from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/LearnSection";
+import CourseDetails from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/CourseDetails";
+import YogaAccreditation from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/YogaAccreditation";
+import CertificatePromo from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/CertificatePromo";
+import TestimonialCarousel from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/TestimonialCarousel";
+import Faq from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

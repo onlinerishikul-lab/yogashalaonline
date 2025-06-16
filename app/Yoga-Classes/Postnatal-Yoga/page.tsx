@@ -1,11 +1,11 @@
 "use client";
-import HeroSection from "@/app/Online-Yoga-Classes/Postnatal-Yoga/HeroSection";
-import StickyCourseCard  from "@/app/Online-Yoga-Classes/Postnatal-Yoga/TestimonialSlider";
-import YogaCoursePage from "@/app/Online-Yoga-Classes/Postnatal-Yoga/yogacourse";
-import LearnSection from "@/app/Online-Yoga-Classes/Postnatal-Yoga/LearnSection";
-import CourseDetails from "@/app/Online-Yoga-Classes/Postnatal-Yoga/CourseDetails";
-import TestimonialCarousel from "@/app/Online-Yoga-Classes/Postnatal-Yoga/TestimonialCarousel";
-import Faq from "@/app/Online-Yoga-Classes/Postnatal-Yoga/Faq";
+import HeroSection from "@/app/Yoga-Classes/Postnatal-Yoga/HeroSection";
+import StickyCourseCard  from "@/app/Yoga-Classes/Postnatal-Yoga/TestimonialSlider";
+import YogaCoursePage from "@/app/Yoga-Classes/Postnatal-Yoga/yogacourse";
+import LearnSection from "@/app/Yoga-Classes/Postnatal-Yoga/LearnSection";
+import CourseDetails from "@/app/Yoga-Classes/Postnatal-Yoga/CourseDetails";
+import TestimonialCarousel from "@/app/Yoga-Classes/Postnatal-Yoga/TestimonialCarousel";
+import Faq from "@/app/Yoga-Classes/Postnatal-Yoga/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

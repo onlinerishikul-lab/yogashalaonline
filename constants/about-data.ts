@@ -73,11 +73,8 @@ Exploring the depths of yoga, where movement meets mindfulness, and strength mer
     Subtitle:"(Ayurvedic physician)",
     description: `
 Dr. Reshma R.S. is a dedicated Ayurvedic physician renowned for her integrative approach to health and wellness. With a passion for blending the time-honored principles of Ayurveda with modern, evidence-based practices, she offers a truly holistic path to healing and vitality.
-
 Her diverse expertise spans Sports Medicine, Women’s Wellness, Cosmetology, Panchakarma therapies, and Joint Disorder management, allowing her to address a wide range of health concerns with precision and compassion. Dr. Reshma is also a highly experienced Dietician, which enhances her ability to offer well-rounded, personalized treatment plans tailored to each individual's constitution and lifestyle.
-
 At the core of Dr. Reshma’s practice is the belief that true healing comes from balance—of body, mind, and spirit. She empowers her patients with the tools and knowledge needed to take charge of their own wellness journey, combining traditional Ayurvedic therapies with contemporary healthcare strategies for optimal results.
-
 Whether you're seeking relief from chronic conditions, support for women-specific health issues, or guidance on diet and rejuvenation, Dr. Reshma provides comprehensive care to help you achieve harmony and a more vibrant, healthier life.`
   },
   {
@@ -86,7 +83,6 @@ Whether you're seeking relief from chronic conditions, support for women-specifi
     image: "/Bipin.png",
     Subtitle: "(Ashtanga Vinyasa Yoga, Hatha Yoga & Pranayama)",
     description: `Born in a Brahmin Family, the art of yoga flowed naturally in Yogi Bipin. Upon acquiring qualification in Hatha Yoga, Ashtanga Vinyasa, Pranayama and Meditation he began his teaching practices after being registered as a Yoga teacher with Yoga Alliance.
-
 Learning from some great yogis and receiving his Spiritual training from experts, he is specialized in Hatha Yoga and Ashtanga Vinyasa. With a firm belief that Yoga is a Science and exceeds the body practices, he shares the mystical and spiritual aspects attached to it.`
   },
 ];

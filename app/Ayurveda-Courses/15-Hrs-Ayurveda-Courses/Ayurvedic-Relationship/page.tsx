@@ -1,14 +1,14 @@
 "use client";
 
-import HeroSection from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/HeroSection";
-import StickyCourseCard from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/TestimonialSlider";
-import YogaCoursePage from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/yogacourse";
-import LearnSection from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/LearnSection";
-import CourseDetails from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/CourseDetails";
-import YogaAccreditation from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/YogaAccreditation";
-import CertificatePromo from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/CertificatePromo";
-import TestimonialCarousel from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/TestimonialCarousel";
-import Faq from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/Faq";
+import HeroSection from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship/HeroSection";
+import StickyCourseCard from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship/TestimonialSlider";
+import YogaCoursePage from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship/yogacourse";
+import LearnSection from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship/LearnSection";
+import CourseDetails from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship/CourseDetails";
+import YogaAccreditation from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship/YogaAccreditation";
+import CertificatePromo from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship/CertificatePromo";
+import TestimonialCarousel from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship/TestimonialCarousel";
+import Faq from "@/app/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship/Faq";
 import { SiteFooter } from "@/components/common/footer";
 
 export default function Page() {

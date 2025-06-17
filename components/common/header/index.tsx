@@ -117,7 +117,7 @@ const navigationItems: NavigationItem[] = [
         title: "15 Hrs Ayurveda Courses",
         href: "/yoga/50-hours",
         subDropdown: [
-          { title: "Ayurvedic Relationship Course", href: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/" },
+          { title: "Ayurvedic Relationship Course", href: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship/" },
           { title: "Ayurveda Garbha Samskara Course", href: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/" },
         ],
       },

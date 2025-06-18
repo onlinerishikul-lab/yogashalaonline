@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, type NextRouter } from "next/navigation";
 import Image from "next/image";
 import {
   Menu,
@@ -173,7 +173,6 @@ function NavigationMenu({
   toggleMobileDropdown,
   toggleMobileSubDropdown,
   setOpen,
-  isMobile,
   router
 }: {
   navigationItems: NavigationItem[];
@@ -182,8 +181,7 @@ function NavigationMenu({
   toggleMobileDropdown: (title: string) => void;
   toggleMobileSubDropdown: (title: string) => void;
   setOpen: (open: boolean) => void;
-  isMobile: boolean;
-  router: any;
+  router: NextRouter; // fixed type here
 }) {
   return (
     <div className="p-4 space-y-4 overflow-x-hidden">
@@ -361,7 +359,6 @@ export const Header = () => {
                 toggleMobileDropdown={toggleMobileDropdown}
                 toggleMobileSubDropdown={toggleMobileSubDropdown}
                 setOpen={setOpen}
-                isMobile={false}
                 router={router}
               />
             </div>
@@ -370,7 +367,7 @@ export const Header = () => {
         )}
       </div>
 
-      {/* Mobile Layout - NOW MATCHES DESKTOP SIDEBAR */}
+      {/* Mobile Layout */}
       <div className="lg:hidden">
         <div className="w-full px-4 py-3 flex items-center justify-between">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)} className="p-2">
@@ -401,11 +398,8 @@ export const Header = () => {
               toggleMobileDropdown={toggleMobileDropdown}
               toggleMobileSubDropdown={toggleMobileSubDropdown}
               setOpen={setOpen}
-              isMobile={true}
               router={router}
             />
-            {/* Click outside to close (optional): */}
-            {/* <div className="flex-1" onClick={() => setOpen(false)} /> */}
           </div>
         )}
       </div>

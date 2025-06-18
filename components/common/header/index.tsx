@@ -166,6 +166,117 @@ const navigationItems: NavigationItem[] = [
   { title: "Payment", href: "/payments" },
 ];
 
+function NavigationMenu({
+  navigationItems,
+  expandedMobileItems,
+  expandedMobileSubItems,
+  toggleMobileDropdown,
+  toggleMobileSubDropdown,
+  setOpen,
+  isMobile,
+  router
+}: {
+  navigationItems: NavigationItem[];
+  expandedMobileItems: string[];
+  expandedMobileSubItems: string[];
+  toggleMobileDropdown: (title: string) => void;
+  toggleMobileSubDropdown: (title: string) => void;
+  setOpen: (open: boolean) => void;
+  isMobile: boolean;
+  router: any;
+}) {
+  return (
+    <div className="p-4 space-y-4 overflow-x-hidden">
+      {navigationItems.map((item) => (
+        <div key={item.title} className="border-b border-white/20 pb-2">
+          {"href" in item ? (
+            <Link
+              href={item.href}
+              className={`flex items-center justify-between text-lg py-2 hover:text-white/80 w-full truncate`}
+              onClick={() => setOpen(false)}
+            >
+              <span className="truncate max-w-full break-words">{item.title}</span>
+              <MoveRight className="w-4 h-4 flex-shrink-0" />
+            </Link>
+          ) : (
+            <div>
+              <button
+                className="flex items-center justify-between w-full text-lg py-2 hover:text-white/80 truncate"
+                onClick={() => toggleMobileDropdown(item.title)}
+              >
+                <span className="truncate max-w-full break-words">{item.title}</span>
+                {expandedMobileItems.includes(item.title) ? (
+                  <ChevronUp className="w-5 h-5 flex-shrink-0" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 flex-shrink-0" />
+                )}
+              </button>
+              {expandedMobileItems.includes(item.title) && (
+                <div className="pl-4 space-y-2 mt-2 border-l-2 border-white/20 overflow-x-hidden">
+                  {item.dropdown.map((subItem, subIdx) => (
+                    <div key={subItem.title} className="py-1">
+                      {subIdx > 0 && <div className="border-t border-white/10 my-2" />}
+                      {subItem.subDropdown ? (
+                        <div>
+                          <button
+                            className="flex items-center justify-between w-full text-base hover:text-white/80 truncate"
+                            onClick={() => toggleMobileSubDropdown(subItem.title)}
+                          >
+                            <span className="truncate max-w-full break-words">{subItem.title}</span>
+                            {expandedMobileSubItems.includes(subItem.title) ? (
+                              <ChevronUp className="w-4 h-4 flex-shrink-0" />
+                            ) : (
+                              <ChevronDown className="w-4 h-4 flex-shrink-0" />
+                            )}
+                          </button>
+                          {expandedMobileSubItems.includes(subItem.title) && (
+                            <div className="pl-4 mt-2 space-y-2 border-l border-white/20 overflow-x-hidden">
+                              {subItem.subDropdown.map((nestedItem, nestedIdx) => (
+                                <div key={nestedItem.title}>
+                                  {nestedIdx > 0 && <div className="border-t border-white/10 my-2" />}
+                                  <Link
+                                    href={nestedItem.href}
+                                    className="block text-sm hover:text-white/80 py-1 truncate max-w-full break-words"
+                                    onClick={() => setOpen(false)}
+                                  >
+                                    {nestedItem.title}
+                                  </Link>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ) : (
+                        <Link
+                          href={subItem.href}
+                          className="block text-base hover:text-white/80 truncate max-w-full break-words"
+                          onClick={() => setOpen(false)}
+                        >
+                          {subItem.title}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      ))}
+
+      <Button
+        onClick={() => {
+          setOpen(false);
+          router.push("/login");
+        }}
+        className="w-full mt-4 text-white bg-[#ffffff78] hover:bg-[#285384] rounded-full py-2"
+      >
+        Sign In / Log In
+      </Button>
+    </div>
+  );
+}
+
 export const Header = () => {
   const router = useRouter();
   const [isOpen, setOpen] = useState(false);
@@ -215,7 +326,6 @@ export const Header = () => {
       {/* Desktop Layout */}
       <div className="hidden lg:block">
         <div className="w-full max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between relative">
-          {/* Hamburger menu on left */}
           <Button
             variant="ghost"
             onClick={() => setOpen(!isOpen)}
@@ -228,11 +338,7 @@ export const Header = () => {
               <Menu className="w-6 h-6 text-white" />
             )}
           </Button>
-
-          {/* Remove navigation titles from header */}
           <div className="flex flex-1 items-center gap-x-8" />
-
-          {/* Logo */}
           <Link href="/" className="flex-shrink-0 mx-8">
             <Image
               src="/assets/rishikulonlinlogo.png"
@@ -242,111 +348,29 @@ export const Header = () => {
               className="w-auto h-16"
             />
           </Link>
-
           <div className="flex flex-1 justify-end items-center gap-x-8" />
-
         </div>
-
         {/* Sidebar Menu (titles only inside menu) */}
         {isOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex">
             <div className="bg-[#4377B2] text-white shadow-md w-[340px] max-w-full h-full overflow-y-auto">
-              <div className="p-4 space-y-4 overflow-x-hidden">
-                {navigationItems.map((item) => (
-                  <div key={item.title} className="border-b border-white/20 pb-2">
-                    {"href" in item ? (
-                      <Link
-                        href={item.href}
-                        className="flex items-center justify-between text-lg py-2 hover:text-white/80 w-full truncate"
-                        onClick={() => setOpen(false)}
-                      >
-                        <span className="truncate max-w-full break-words">{item.title}</span>
-                        <MoveRight className="w-4 h-4 flex-shrink-0" />
-                      </Link>
-                    ) : (
-                      <div>
-                        <button
-                          className="flex items-center justify-between w-full text-lg py-2 hover:text-white/80 truncate"
-                          onClick={() => toggleMobileDropdown(item.title)}
-                        >
-                          <span className="truncate max-w-full break-words">{item.title}</span>
-                          {expandedMobileItems.includes(item.title) ? (
-                            <ChevronUp className="w-5 h-5 flex-shrink-0" />
-                          ) : (
-                            <ChevronDown className="w-5 h-5 flex-shrink-0" />
-                          )}
-                        </button>
-                        {expandedMobileItems.includes(item.title) && (
-                          <div className="pl-4 space-y-2 mt-2 border-l-2 border-white/20 overflow-x-hidden">
-                            {item.dropdown.map((subItem, subIdx) => (
-                              <div key={subItem.title} className="py-1">
-                                {subIdx > 0 && <div className="border-t border-white/10 my-2" />}
-                                {subItem.subDropdown ? (
-                                  <div>
-                                    <button
-                                      className="flex items-center justify-between w-full text-base hover:text-white/80 truncate"
-                                      onClick={() => toggleMobileSubDropdown(subItem.title)}
-                                    >
-                                      <span className="truncate max-w-full break-words">{subItem.title}</span>
-                                      {expandedMobileSubItems.includes(subItem.title) ? (
-                                        <ChevronUp className="w-4 h-4 flex-shrink-0" />
-                                      ) : (
-                                        <ChevronDown className="w-4 h-4 flex-shrink-0" />
-                                      )}
-                                    </button>
-                                    {expandedMobileSubItems.includes(subItem.title) && (
-                                      <div className="pl-4 mt-2 space-y-2 border-l border-white/20 overflow-x-hidden">
-                                        {subItem.subDropdown.map((nestedItem, nestedIdx) => (
-                                          <div key={nestedItem.title}>
-                                            {nestedIdx > 0 && <div className="border-t border-white/10 my-2" />}
-                                            <Link
-                                              href={nestedItem.href}
-                                              className="block text-sm hover:text-white/80 py-1 truncate max-w-full break-words"
-                                              onClick={() => setOpen(false)}
-                                            >
-                                              {nestedItem.title}
-                                            </Link>
-                                          </div>
-                                        ))}
-                                      </div>
-                                    )}
-                                  </div>
-                                ) : (
-                                  <Link
-                                    href={subItem.href}
-                                    className="block text-base hover:text-white/80 truncate max-w-full break-words"
-                                    onClick={() => setOpen(false)}
-                                  >
-                                    {subItem.title}
-                                  </Link>
-                                )}
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                ))}
-
-                <Button
-                  onClick={() => {
-                    setOpen(false);
-                    router.push("/login");
-                  }}
-                  className="w-full mt-4 text-white bg-[#ffffff78] hover:bg-[#285384] rounded-full py-2"
-                >
-                  Sign In / Log In
-                </Button>
-              </div>
+              <NavigationMenu
+                navigationItems={navigationItems}
+                expandedMobileItems={expandedMobileItems}
+                expandedMobileSubItems={expandedMobileSubItems}
+                toggleMobileDropdown={toggleMobileDropdown}
+                toggleMobileSubDropdown={toggleMobileSubDropdown}
+                setOpen={setOpen}
+                isMobile={false}
+                router={router}
+              />
             </div>
-            {/* Click outside to close */}
             <div className="flex-1" onClick={() => setOpen(false)} />
           </div>
         )}
       </div>
 
-      {/* Mobile Layout - UNCHANGED */}
+      {/* Mobile Layout - NOW MATCHES DESKTOP SIDEBAR */}
       <div className="lg:hidden">
         <div className="w-full px-4 py-3 flex items-center justify-between">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)} className="p-2">
@@ -369,10 +393,19 @@ export const Header = () => {
           <div className="w-10"></div>
         </div>
         {isOpen && (
-          <div className="bg-[#4377B2] text-white shadow-md w-full max-h-[80vh] overflow-y-auto overflow-x-hidden">
-            <div className="p-4 space-y-4 overflow-x-hidden">
-              {/* You can keep your mobile menu here as is */}
-            </div>
+          <div className="bg-[#4377B2] text-white shadow-md w-full max-h-[80vh] overflow-y-auto overflow-x-hidden z-50 fixed top-0 left-0 min-h-screen">
+            <NavigationMenu
+              navigationItems={navigationItems}
+              expandedMobileItems={expandedMobileItems}
+              expandedMobileSubItems={expandedMobileSubItems}
+              toggleMobileDropdown={toggleMobileDropdown}
+              toggleMobileSubDropdown={toggleMobileSubDropdown}
+              setOpen={setOpen}
+              isMobile={true}
+              router={router}
+            />
+            {/* Click outside to close (optional): */}
+            {/* <div className="flex-1" onClick={() => setOpen(false)} /> */}
           </div>
         )}
       </div>

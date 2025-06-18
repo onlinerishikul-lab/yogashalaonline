@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter, type NextRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import {
   Menu,
@@ -165,7 +165,6 @@ const navigationItems: NavigationItem[] = [
   { title: "Contact Us", href: "/contact" },
   { title: "Payment", href: "/payments" },
 ];
-
 function NavigationMenu({
   navigationItems,
   expandedMobileItems,
@@ -181,7 +180,7 @@ function NavigationMenu({
   toggleMobileDropdown: (title: string) => void;
   toggleMobileSubDropdown: (title: string) => void;
   setOpen: (open: boolean) => void;
-  router: NextRouter; // fixed type here
+  router: ReturnType<typeof useRouter>;
 }) {
   return (
     <div className="p-4 space-y-4 overflow-x-hidden">

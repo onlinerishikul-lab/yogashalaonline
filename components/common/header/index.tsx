@@ -166,6 +166,7 @@ const navigationItems: NavigationItem[] = [
   { title: "Payment", href: "/payments" },
 ];
 
+
 function NavigationMenu({
   navigationItems,
   expandedMobileItems,
@@ -334,36 +335,43 @@ export const Header = () => {
     >
       {/* Desktop Layout */}
       <div className="hidden lg:block">
-        <div className="w-full max-w-screen-xl mx-auto px-4 flex items-center justify-between relative" style={{transition: "all 0.3s"}}>
-          <Button
-            variant="ghost"
-            onClick={() => setOpen(!isOpen)}
-            className="p-2 mr-4 lg:flex hidden"
-            aria-label={isOpen ? "Close Menu" : "Open Menu"}
-          >
-            {isOpen ? (
-              <>
-                <X className="w-6 h-6 text-white mr-2" />
-                <span>Close</span>
-              </>
-            ) : (
-              <>
-                <MenuIcon className="w-6 h-6 text-white mr-2" />
-                <span>Menu</span>
-              </>
-            )}
-          </Button>
-          <div className="flex flex-1 items-center gap-x-8" />
-          <Link href="/" className="flex-shrink-0 mx-8">
-            <Image
-              src="/assets/rishikulonlinlogo.png"
-              alt="Yoga Logo"
-              width={120}
-              height={80}
-              className="w-auto h-16"
-            />
-          </Link>
-          <div className="flex flex-1 justify-end items-center gap-x-8" />
+        {/* 
+            Remove max-w-screen-xl and mx-auto from here,
+            and put them on a child div to make sure 
+            the blue background fills the entire width.
+         */}
+        <div className="w-full px-4">
+          <div className="max-w-screen-xl mx-auto flex items-center justify-between relative" style={{transition: "all 0.3s"}}>
+            <Button
+              variant="ghost"
+              onClick={() => setOpen(!isOpen)}
+              className="p-2 mr-4 lg:flex hidden"
+              aria-label={isOpen ? "Close Menu" : "Open Menu"}
+            >
+              {isOpen ? (
+                <>
+                  <X className="w-6 h-6 text-white mr-2" />
+                  <span>Close</span>
+                </>
+              ) : (
+                <>
+                  <MenuIcon className="w-6 h-6 text-white mr-2" />
+                  <span>Menu</span>
+                </>
+              )}
+            </Button>
+            <div className="flex flex-1 items-center gap-x-8" />
+            <Link href="/" className="flex-shrink-0 mx-8">
+              <Image
+                src="/assets/rishikulonlinlogo.png"
+                alt="Yoga Logo"
+                width={120}
+                height={80}
+                className="w-auto h-16"
+              />
+            </Link>
+            <div className="flex flex-1 justify-end items-center gap-x-8" />
+          </div>
         </div>
         {/* Sidebar Menu (titles only inside menu) */}
         {isOpen && (

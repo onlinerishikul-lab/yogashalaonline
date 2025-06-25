@@ -12,10 +12,8 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-type SubDropdownItem = {
-  title: string;
-  href: string;
-};
+// Navigation types
+type SubDropdownItem = { title: string; href: string };
 type DropdownItem = {
   title: string;
   href: string;
@@ -164,7 +162,6 @@ const navigationItems: NavigationItem[] = [
   { title: "Contact Us", href: "/contact" },
   { title: "Payment", href: "/payments" },
 ];
-
 function NavigationMenu({
   navigationItems,
   expandedMobileItems,
@@ -271,6 +268,7 @@ function NavigationMenu({
   );
 }
 
+// Header component
 export const Header = () => {
   const router = useRouter();
   const [isOpen, setOpen] = useState(false);
@@ -327,9 +325,11 @@ export const Header = () => {
             <Image
               src="/assets/rishikulonlinlogo.png"
               alt="Yoga Logo"
-              width={isScrolled || isOpen ? 90 : 120}
-              height={isScrolled || isOpen ? 60 : 80}
-              className={`w-auto transition-all duration-500 ease-in-out`}
+              width={120}
+              height={80}
+              className={`w-auto transition-all duration-500 ease-in-out ${
+                isScrolled || isOpen ? "h-10 scale-90" : "h-16 scale-100"
+              }`}
             />
           </Link>
           <div className="flex flex-1 justify-end items-center gap-x-8" />
@@ -365,9 +365,11 @@ export const Header = () => {
             <Image
               src="/assets/rishikulonlinlogo.png"
               alt="Yoga Logo"
-              width={isScrolled || isOpen ? 70 : 100}
-              height={isScrolled || isOpen ? 45 : 67}
-              className="w-auto transition-all duration-500 ease-in-out"
+              width={100}
+              height={67}
+              className={`w-auto transition-all duration-500 ease-in-out ${
+                isScrolled || isOpen ? "h-8 scale-90" : "h-12 scale-100"
+              }`}
               priority
             />
           </Link>

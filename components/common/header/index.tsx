@@ -21,7 +21,6 @@ type DropdownItem = {
   href: string;
   subDropdown?: SubDropdownItem[];
 };
-
 type NavigationItem =
   | { title: string; href: string }
   | { title: string; dropdown: DropdownItem[] };
@@ -183,8 +182,93 @@ function NavigationMenu({
   setOpen: (open: boolean) => void;
   router: ReturnType<typeof useRouter>;
 }) {
-  // ... (keep this function unchanged)
-  // (No changes required for NavigationMenu)
+  return (
+    <div className="p-4 space-y-4 overflow-x-hidden">
+      {navigationItems.map((item) => (
+        <div key={item.title} className="border-b border-white/20 pb-2">
+          {"href" in item ? (
+            <Link
+              href={item.href}
+              className="flex items-center justify-between text-lg py-2 hover:text-white/80 w-full truncate"
+              onClick={() => setOpen(false)}
+            >
+              <span className="truncate max-w-full break-words">{item.title}</span>
+              <MoveRight className="w-4 h-4 flex-shrink-0" />
+            </Link>
+          ) : (
+            <div>
+              <button
+                className="flex items-center justify-between w-full text-lg py-2 hover:text-white/80 truncate"
+                onClick={() => toggleMobileDropdown(item.title)}
+              >
+                <span className="truncate max-w-full break-words">{item.title}</span>
+                {expandedMobileItems.includes(item.title) ? (
+                  <ChevronUp className="w-5 h-5 flex-shrink-0" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 flex-shrink-0" />
+                )}
+              </button>
+              {expandedMobileItems.includes(item.title) && (
+                <div className="pl-4 space-y-2 mt-2 border-l-2 border-white/20 overflow-x-hidden">
+                  {item.dropdown.map((subItem) => (
+                    <div key={subItem.title} className="py-1">
+                      {subItem.subDropdown ? (
+                        <div>
+                          <button
+                            className="flex items-center justify-between w-full text-base hover:text-white/80 truncate"
+                            onClick={() => toggleMobileSubDropdown(subItem.title)}
+                          >
+                            <span className="truncate max-w-full break-words">{subItem.title}</span>
+                            {expandedMobileSubItems.includes(subItem.title) ? (
+                              <ChevronUp className="w-4 h-4 flex-shrink-0" />
+                            ) : (
+                              <ChevronDown className="w-4 h-4 flex-shrink-0" />
+                            )}
+                          </button>
+                          {expandedMobileSubItems.includes(subItem.title) && (
+                            <div className="pl-4 mt-2 space-y-2 border-l border-white/20 overflow-x-hidden">
+                              {subItem.subDropdown.map((nestedItem) => (
+                                <div key={nestedItem.title}>
+                                  <Link
+                                    href={nestedItem.href}
+                                    className="block text-sm hover:text-white/80 py-1 truncate max-w-full break-words"
+                                    onClick={() => setOpen(false)}
+                                  >
+                                    {nestedItem.title}
+                                  </Link>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ) : (
+                        <Link
+                          href={subItem.href}
+                          className="block text-base hover:text-white/80 truncate max-w-full break-words"
+                          onClick={() => setOpen(false)}
+                        >
+                          {subItem.title}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      ))}
+      <Button
+        onClick={() => {
+          setOpen(false);
+          router.push("/login");
+        }}
+        className="w-full mt-4 text-white bg-[#ffffff78] hover:bg-[#285384] rounded-full py-2"
+      >
+        Sign In / Log In
+      </Button>
+    </div>
+  );
 }
 
 export const Header = () => {
@@ -193,20 +277,10 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
   const [expandedMobileSubItems, setExpandedMobileSubItems] = useState<string[]>([]);
-  const [logoScale, setLogoScale] = useState(1); // <-- NEW STATE
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const threshold = window.innerHeight / 2;
-      // Clamp scroll value between 0 and threshold
-      const clampedScroll = Math.min(Math.max(scrollY, 0), threshold);
-      // Scale from 1 to 0.7 as the user scrolls half the viewport
-      const minScale = 0.7;
-      const scale =
-        1 - ((1 - minScale) * clampedScroll) / threshold;
-      setLogoScale(scale);
-      setIsScrolled(scrollY >= threshold);
+      setIsScrolled(window.scrollY >= window.innerHeight / 2);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -215,16 +289,6 @@ export const Header = () => {
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      const dropdowns = document.querySelectorAll(".dropdown-parent");
-      if ([...dropdowns].every((d) => !d.contains(e.target as Node))) {
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   const toggleMobileDropdown = (title: string) => {
     setExpandedMobileItems((prev) =>
@@ -240,8 +304,8 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transform transition-transform duration-500 ease-in-out ${
+        isScrolled || isOpen ? "bg-[#4377B2] shadow-md scale-95" : "bg-transparent scale-100"
       }`}
     >
       {/* Desktop Layout */}
@@ -261,27 +325,16 @@ export const Header = () => {
           </Button>
           <div className="flex flex-1 items-center gap-x-8" />
           <Link href="/" className="flex-shrink-0 mx-8">
-            <div
-              style={{
-                transition: "transform 0.3s cubic-bezier(.4,0,.2,1)",
-                transform: `scale(${logoScale})`,
-                willChange: "transform",
-                display: "inline-block",
-              }}
-            >
-              <Image
-                src="/assets/rishikulonlinlogo.png"
-                alt="Yoga Logo"
-                width={120}
-                height={80}
-                className="w-auto h-16"
-                priority
-              />
-            </div>
+            <Image
+              src="/assets/rishikulonlinlogo.png"
+              alt="Yoga Logo"
+              width={120}
+              height={80}
+              className="w-auto h-16"
+            />
           </Link>
           <div className="flex flex-1 justify-end items-center gap-x-8" />
         </div>
-        {/* Sidebar Menu (titles only inside menu) */}
         {isOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex">
             <div className="bg-[#4377B2] text-white shadow-md w-[340px] max-w-full h-full overflow-y-auto">
@@ -311,23 +364,14 @@ export const Header = () => {
             )}
           </Button>
           <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
-            <div
-              style={{
-                transition: "transform 0.3s cubic-bezier(.4,0,.2,1)",
-                transform: `scale(${logoScale})`,
-                willChange: "transform",
-                display: "inline-block",
-              }}
-            >
-              <Image
-                src="/assets/rishikulonlinlogo.png"
-                alt="Yoga Logo"
-                width={100}
-                height={67}
-                className="w-auto h-10 sm:h-12"
-                priority
-              />
-            </div>
+            <Image
+              src="/assets/rishikulonlinlogo.png"
+              alt="Yoga Logo"
+              width={100}
+              height={67}
+              className="w-auto h-10 sm:h-12"
+              priority
+            />
           </Link>
           <div className="w-10"></div>
         </div>

@@ -317,11 +317,10 @@ export const Header = () => {
             className="p-2 mr-4 lg:flex hidden"
             aria-label={isOpen ? "Close Menu" : "Open Menu"}
           >
-            {isOpen ? (
-              <X className="w-6 h-6 text-white" />
-            ) : (
-              <Menu className="w-6 h-6 text-white" />
-            )}
+            <div className="flex items-center gap-1 text-white">
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <span className="text-base">Menu</span>
+            </div>
           </Button>
           <div className="flex flex-1 items-center gap-x-8" />
           <Link href="/" className="flex-shrink-0 mx-8">
@@ -359,11 +358,10 @@ export const Header = () => {
       <div className="lg:hidden">
         <div className="w-full px-4 py-3 flex items-center justify-between">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)} className="p-2">
-            {isOpen ? (
-              <X className="w-6 h-6 text-white" />
-            ) : (
-              <Menu className="w-6 h-6 text-white" />
-            )}
+            <div className="flex items-center gap-1 text-white">
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <span className="text-base">Menu</span>
+            </div>
           </Button>
           <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
             <Image

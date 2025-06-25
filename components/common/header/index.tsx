@@ -279,9 +279,8 @@ export const Header = () => {
   const [expandedMobileSubItems, setExpandedMobileSubItems] = useState<string[]>([]);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () =>
       setIsScrolled(window.scrollY >= window.innerHeight / 2);
-    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -304,8 +303,8 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transform transition-transform duration-500 ease-in-out ${
-        isScrolled || isOpen ? "bg-[#4377B2] shadow-md scale-95" : "bg-transparent scale-100"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
       {/* Desktop Layout */}
@@ -335,9 +334,14 @@ export const Header = () => {
           </Link>
           <div className="flex flex-1 justify-end items-center gap-x-8" />
         </div>
+        {/* Sidebar Menu (zoom-out effect here) */}
         {isOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex">
-            <div className="bg-[#4377B2] text-white shadow-md w-[340px] max-w-full h-full overflow-y-auto">
+            <div
+              className={`bg-[#4377B2] text-white shadow-md w-[340px] max-w-full h-full overflow-y-auto transform transition-transform duration-500 ease-in-out ${
+                isOpen ? "scale-95" : "scale-100"
+              }`}
+            >
               <NavigationMenu
                 navigationItems={navigationItems}
                 expandedMobileItems={expandedMobileItems}
@@ -376,7 +380,11 @@ export const Header = () => {
           <div className="w-10"></div>
         </div>
         {isOpen && (
-          <div className="bg-[#4377B2] text-white shadow-md w-full max-h-[80vh] overflow-y-auto overflow-x-hidden z-50 fixed top-0 left-0 min-h-screen">
+          <div
+            className={`bg-[#4377B2] text-white shadow-md w-full max-h-[80vh] overflow-y-auto overflow-x-hidden z-50 fixed top-0 left-0 min-h-screen transform transition-transform duration-500 ease-in-out ${
+              isOpen ? "scale-95" : "scale-100"
+            }`}
+          >
             <NavigationMenu
               navigationItems={navigationItems}
               expandedMobileItems={expandedMobileItems}

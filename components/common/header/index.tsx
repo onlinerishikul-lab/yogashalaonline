@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import {
-  Menu as MenuIcon,
+  Menu,
   MoveRight,
   X,
   ChevronDown,
@@ -165,8 +165,6 @@ const navigationItems: NavigationItem[] = [
   { title: "Contact Us", href: "/contact" },
   { title: "Payment", href: "/payments" },
 ];
-
-
 function NavigationMenu({
   navigationItems,
   expandedMobileItems,
@@ -282,39 +280,27 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
   const [expandedMobileSubItems, setExpandedMobileSubItems] = useState<string[]>([]);
-  const [headerStyle, setHeaderStyle] = useState({
-    padding: "1.25rem 0", // px-4 py-5
-    transform: "scale(1)",
-    boxShadow: "none"
-  });
 
-  // Header zoom out effect on scroll
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (scrollY > 30) {
-        setIsScrolled(true);
-        setHeaderStyle({
-          padding: "0.2rem 0",
-          transform: "scale(0.92)",
-          boxShadow: "0 2px 12px 0 rgba(67,119,178,0.15)"
-        });
-      } else {
-        setIsScrolled(false);
-        setHeaderStyle({
-          padding: "1.25rem 0",
-          transform: "scale(1)",
-          boxShadow: "none"
-        });
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    const handleScroll = () =>
+      setIsScrolled(window.scrollY >= window.innerHeight / 2);
+    window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const dropdowns = document.querySelectorAll(".dropdown-parent");
+      if ([...dropdowns].every((d) => !d.contains(e.target as Node))) {
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const toggleMobileDropdown = (title: string) => {
     setExpandedMobileItems((prev) =>
@@ -330,48 +316,36 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"}`}
-      style={headerStyle}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
+      }`}
     >
       {/* Desktop Layout */}
       <div className="hidden lg:block">
-        {/* 
-            Remove max-w-screen-xl and mx-auto from here,
-            and put them on a child div to make sure 
-            the blue background fills the entire width.
-         */}
-        <div className="w-full px-4">
-          <div className="max-w-screen-xl mx-auto flex items-center justify-between relative" style={{transition: "all 0.3s"}}>
-            <Button
-              variant="ghost"
-              onClick={() => setOpen(!isOpen)}
-              className="p-2 mr-4 lg:flex hidden"
-              aria-label={isOpen ? "Close Menu" : "Open Menu"}
-            >
-              {isOpen ? (
-                <>
-                  <X className="w-6 h-6 text-white mr-2" />
-                  <span>Close</span>
-                </>
-              ) : (
-                <>
-                  <MenuIcon className="w-6 h-6 text-white mr-2" />
-                  <span>Menu</span>
-                </>
-              )}
-            </Button>
-            <div className="flex flex-1 items-center gap-x-8" />
-            <Link href="/" className="flex-shrink-0 mx-8">
-              <Image
-                src="/assets/rishikulonlinlogo.png"
-                alt="Yoga Logo"
-                width={120}
-                height={80}
-                className="w-auto h-16"
-              />
-            </Link>
-            <div className="flex flex-1 justify-end items-center gap-x-8" />
-          </div>
+        <div className="w-full max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between relative">
+          <Button
+            variant="ghost"
+            onClick={() => setOpen(!isOpen)}
+            className="p-2 mr-4 lg:flex hidden"
+            aria-label={isOpen ? "Close Menu" : "Open Menu"}
+          >
+            {isOpen ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <Menu className="w-6 h-6 text-white" />
+            )}
+          </Button>
+          <div className="flex flex-1 items-center gap-x-8" />
+          <Link href="/" className="flex-shrink-0 mx-8">
+            <Image
+              src="/assets/rishikulonlinlogo.png"
+              alt="Yoga Logo"
+              width={120}
+              height={80}
+              className="w-auto h-16"
+            />
+          </Link>
+          <div className="flex flex-1 justify-end items-center gap-x-8" />
         </div>
         {/* Sidebar Menu (titles only inside menu) */}
         {isOpen && (
@@ -394,18 +368,12 @@ export const Header = () => {
 
       {/* Mobile Layout */}
       <div className="lg:hidden">
-        <div className="w-full px-4 flex items-center justify-between">
+        <div className="w-full px-4 py-3 flex items-center justify-between">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)} className="p-2">
             {isOpen ? (
-              <>
-                <X className="w-6 h-6 text-white mr-2" />
-                <span>Close</span>
-              </>
+              <X className="w-6 h-6 text-white" />
             ) : (
-              <>
-                <MenuIcon className="w-6 h-6 text-white mr-2" />
-                <span>Menu</span>
-              </>
+              <Menu className="w-6 h-6 text-white" />
             )}
           </Button>
           <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">

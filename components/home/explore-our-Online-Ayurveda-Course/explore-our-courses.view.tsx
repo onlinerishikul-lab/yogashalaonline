@@ -77,11 +77,11 @@ export default function ExploreOurClassesView({
         </Swiper>
 
         <div className="text-center mt-6 z-10 relative">
-          <button
-            onClick={handleExploreMoreClick}
-            className="bg-[#4377B2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#285384] transition-colors duration-300"
-            aria-label="Explore more ayurveda courses"
-          >
+       <Button
+              className="mt-8 bg-transparent text-[#4377B2] hover:bg-[#4377B2] hover:text-white font-semibold w-[220px] rounded-full border-2 border-[#4377B2] py-5 duration-300"
+              onClick={handleExploreMoreClick}
+        >
+
             EXPLORE MORE
           </button>
         </div>

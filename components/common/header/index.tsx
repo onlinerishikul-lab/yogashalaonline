@@ -22,7 +22,6 @@ type DropdownItem = {
 type NavigationItem =
   | { title: string; href: string }
   | { title: string; dropdown: DropdownItem[] };
-
 const navigationItems: NavigationItem[] = [
   {
     title: "Yoga Courses",
@@ -328,7 +327,7 @@ export const Header = () => {
               width={120}
               height={80}
               className={`w-auto transition-all duration-500 ease-in-out ${
-                isScrolled || isOpen ? "h-10 scale-90" : "h-16 scale-100"
+                isScrolled || isOpen ? "h-14 scale-95" : "h-16 scale-100"
               }`}
             />
           </Link>
@@ -368,7 +367,7 @@ export const Header = () => {
               width={100}
               height={67}
               className={`w-auto transition-all duration-500 ease-in-out ${
-                isScrolled || isOpen ? "h-8 scale-90" : "h-12 scale-100"
+                isScrolled || isOpen ? "h-10 scale-95" : "h-12 scale-100"
               }`}
               priority
             />

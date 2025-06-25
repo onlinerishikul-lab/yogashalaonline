@@ -327,11 +327,9 @@ export const Header = () => {
             <Image
               src="/assets/rishikulonlinlogo.png"
               alt="Yoga Logo"
-              width={120}
-              height={80}
-              className={`w-auto h-16 transition-transform duration-500 ease-in-out ${
-                isScrolled || isOpen ? "scale-y-90" : "scale-y-100"
-              }`}
+              width={isScrolled || isOpen ? 90 : 120}
+              height={isScrolled || isOpen ? 60 : 80}
+              className={`w-auto transition-all duration-500 ease-in-out`}
             />
           </Link>
           <div className="flex flex-1 justify-end items-center gap-x-8" />
@@ -367,11 +365,9 @@ export const Header = () => {
             <Image
               src="/assets/rishikulonlinlogo.png"
               alt="Yoga Logo"
-              width={100}
-              height={67}
-              className={`w-auto h-10 sm:h-12 transition-transform duration-500 ease-in-out ${
-                isScrolled || isOpen ? "scale-y-90" : "scale-y-100"
-              }`}
+              width={isScrolled || isOpen ? 70 : 100}
+              height={isScrolled || isOpen ? 45 : 67}
+              className="w-auto transition-all duration-500 ease-in-out"
               priority
             />
           </Link>

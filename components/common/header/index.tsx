@@ -304,8 +304,8 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transform transition-transform duration-500 ease-in-out ${
-        isScrolled || isOpen ? "bg-[#4377B2] shadow-md scale-y-90" : "bg-transparent scale-y-100"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
+        isScrolled || isOpen ? "bg-[#4377B2] shadow-md" : "bg-transparent"
       }`}
     >
       {/* Desktop Layout */}
@@ -330,7 +330,9 @@ export const Header = () => {
               alt="Yoga Logo"
               width={120}
               height={80}
-              className="w-auto h-16"
+              className={`w-auto h-16 transition-transform duration-500 ease-in-out ${
+                isScrolled || isOpen ? "scale-y-90" : "scale-y-100"
+              }`}
             />
           </Link>
           <div className="flex flex-1 justify-end items-center gap-x-8" />
@@ -369,7 +371,9 @@ export const Header = () => {
               alt="Yoga Logo"
               width={100}
               height={67}
-              className="w-auto h-10 sm:h-12"
+              className={`w-auto h-10 sm:h-12 transition-transform duration-500 ease-in-out ${
+                isScrolled || isOpen ? "scale-y-90" : "scale-y-100"
+              }`}
               priority
             />
           </Link>

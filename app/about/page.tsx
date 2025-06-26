@@ -22,12 +22,12 @@ export default function AboutPage() {
           </div>
 
           {/* Content Section */}
-          <div className="container mx-auto py-3 px-4">
+          <div className="container mx-auto  px-4">
             <h1 className="text-[#4377B2] text-4xl font-bold mb-6 text-center md:text-left">
               About Rishikul Online
             </h1>
 
-            <div className="space-y-6 text-gray-700 max-w-7xl mx-auto">
+            <div className="text-gray-700 max-w-7xl mx-auto">
               <p className="leading-relaxed">
                 Welcome to Rishikul Online, your one-stop destination for all
                 yoga teacher training (YTTC Online) courses. Founded in 2010,

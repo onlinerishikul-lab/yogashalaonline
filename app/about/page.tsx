@@ -12,7 +12,7 @@ export default function AboutPage() {
         {/* Hero Section with Title */}
         <div className="relative h-[50vh] md:h-[60vh] w-full">
           <Image
-            src="https://images.unsplash.com/photo-1528319725582-ddc096101511?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
+            src="/aboutus.jpg"
             alt="Meditation beads representing spiritual practice"
             fill
             className="object-cover"

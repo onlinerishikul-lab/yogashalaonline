@@ -1,3 +1,10 @@
+// app/layout.tsx
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
   title: "RishikulOnline",
   description:
@@ -9,7 +16,7 @@ export const metadata: Metadata = {
     "best online yoga",
     "yoga course",
     "yoga alliance",
-    "online yoga certification"
+    "online yoga certification",
   ],
   icons: {
     icon: "/favicon.ico",
@@ -24,3 +31,16 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <head />
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
+}

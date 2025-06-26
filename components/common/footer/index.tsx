@@ -19,15 +19,16 @@ export const SiteFooter = () => {
               priority
             />
           </div>
-          <nav className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-white text-sm md:text-base">
-            <Link href="/about" className="hover:underline">About</Link>
-            <Link href="/" className="hover:underline">Our Team</Link>
-            <Link href="/blog" className="hover:underline">Blogs</Link>
-            <Link href="/courses" className="hover:underline">Courses</Link>
-            <Link href="/" className="hover:underline">Privacy Policy</Link>
-            <Link href="/" className="hover:underline">Terms & Conditions</Link>
-            <Link href="/" className="hover:underline">Refund & Cancellation Policy</Link>
-          </nav>
+         <nav className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-white text-sm md:text-base">
+  <Link href="/about" className="hover:underline">About</Link>
+  <Link href="/our-teachers" className="hover:underline">Our Team</Link>
+  <Link href="/blog" className="hover:underline">Blogs</Link>
+  <Link href="/courses" className="hover:underline">Courses</Link>
+  <Link href="/payments" className="hover:underline">Privacy Policy</Link>
+  <Link href="/payments" className="hover:underline">Terms & Conditions</Link>
+  <Link href="/payments" className="hover:underline">Refund & Cancellation Policy</Link>
+</nav>
+
         </div>
 
         {/* Middle Section: Description and Contact */}

@@ -10,7 +10,7 @@ export function Banner() {
     <div className="relative w-full min-h-screen">
       {/* Background Image */}
       <Image
-        src="/onlinebg.jpg"
+        src="/Online-image.jpg"
         alt="Yoga pose on beach"
         fill
         className="object-cover brightness-75"

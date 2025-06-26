@@ -34,14 +34,18 @@ export default function OurBelieves() {
         </ul>
 
         <p className="text-gray-700 mb-6">
-          We believe that yoga is more than just physical postures—it's a pathway to inner peace and lifelong well-being. Our online platform is designed to meet the needs of modern learners while preserving the ancient wisdom of yoga and Ayurveda.
+          We believe that yoga is more than just physical postures—it&apos;s a pathway to inner peace and lifelong well-being. Our online platform is designed to meet the needs of modern learners while preserving the ancient wisdom of yoga and Ayurveda.
         </p>
 
         <p className="text-gray-700 mb-12">
           Through interactive learning, one-on-one mentoring, and immersive course material, we empower you to become a confident practitioner and instructor. Begin your journey today and discover the transformational power of a true yogic lifestyle.
         </p>
 
-        <Link href="https://www.rishikulonline.com/contact" target="_blank" rel="noopener noreferrer">
+        <Link
+          href="https://www.rishikulonline.com/contact"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button className="bg-[#4377B2] hover:bg-[#4377B2]/90 text-white px-8 py-6 rounded-full text-lg">
             Start your Online Journey
           </Button>

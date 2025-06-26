@@ -41,11 +41,7 @@ export default function OurBelieves() {
           Through interactive learning, one-on-one mentoring, and immersive course material, we empower you to become a confident practitioner and instructor. Begin your journey today and discover the transformational power of a true yogic lifestyle.
         </p>
 
-        <Link
-          href="https://www.rishikulonline.com/contact"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="https://www.rishikulonline.com/contact">
           <Button className="bg-[#4377B2] hover:bg-[#4377B2]/90 text-white px-8 py-6 rounded-full text-lg">
             Start your Online Journey
           </Button>

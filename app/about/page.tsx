@@ -28,13 +28,14 @@ export default function AboutPage() {
         {/* About Content Section */}
         <div className="container mx-auto px-4">
 {/* About Content Section */}
-<div className="container mx-auto px-4 py-12">
+<div className="container mx-auto px-4">
   <div className="max-w-4xl mx-auto text-justify text-gray-800 text-lg leading-relaxed">
     <p>
-      Welcome to Rishikul Online – your trusted platform for online yoga and Ayurveda education. Since 2010, we've empowered students worldwide through certified Yoga Teacher Training Courses, live classes, and in-depth Ayurveda programs. Learn Hatha, Ashtanga, Vinyasa, prenatal yoga, and more with expert guidance, video modules, and live sessions. Deepen your practice with yogic philosophy, meditation, and holistic wellness—all from the comfort of home.
+      Welcome to Rishikul Online – your trusted platform for online yoga and Ayurveda education. Since 2010, we&apos;ve empowered students worldwide through certified Yoga Teacher Training Courses, live classes, and in-depth Ayurveda programs. Learn Hatha, Ashtanga, Vinyasa, prenatal yoga, and more with expert guidance, video modules, and live sessions. Deepen your practice with yogic philosophy, meditation, and holistic wellness—all from the comfort of home.
     </p>
   </div>
 </div>
+
         </div>
 
         {/* Additional Sections */}

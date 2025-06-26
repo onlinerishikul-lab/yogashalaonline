@@ -95,7 +95,6 @@ const Faculty = () => {
               <Image
                 src={selectedTrainer.image}
                 alt={selectedTrainer.name}
-                className="object-contain"
                 loading="eager"
                 priority
               />

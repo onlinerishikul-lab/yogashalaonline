@@ -8,6 +8,7 @@ import styles from "./explore-our-courses.module.css";
 import { Course } from "@/types/course";
 import Image from "next/image";
 import "swiper/css";
+import { Button } from "@/components/ui/button"; // ✅ Required Button import
 
 interface ExploreOurCoursesViewProps {
   courses: Course[];

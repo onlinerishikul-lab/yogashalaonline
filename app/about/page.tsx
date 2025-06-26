@@ -27,26 +27,13 @@ export default function AboutPage() {
 
         {/* About Content Section */}
         <div className="container mx-auto px-4">
-<div className="max-w-4xl mx-auto space-y-6 text-justify text-gray-800 text-lg leading-relaxed">
-  <p>
-    Welcome to <strong>Rishikul Online</strong>, your trusted destination for holistic well-being through online yoga and Ayurveda education. Since 2010, we’ve helped thousands of students worldwide embark on their personal journey of transformation.
-  </p>
-
-  <p>
-    Whether you&apos;re seeking <strong>Yoga Teacher Training Courses (YTTC)</strong>, regular <strong>live yoga classes</strong>, or authentic <strong>Ayurveda learning</strong>, Rishikul Online offers a flexible, structured, and immersive experience from the comfort of your home.
-  </p>
-
-  <p>
-    Our programs include <strong>Hatha Yoga</strong>, <strong>Ashtanga</strong>, <strong>Vinyasa</strong>, and specialized branches such as <strong>prenatal yoga</strong> and <strong>aerial yoga</strong>. Our Ayurveda classes cover foundational principles, diet & lifestyle, and herbal wisdom to restore balance in body and mind.
-  </p>
-
-  <p>
-    All courses are led by experienced instructors through a blend of video modules, live webinars, Q&amp;A sessions, and personal feedback. We focus not only on posture but also on yogic philosophy, meditation, breathwork, and spiritual growth.
-  </p>
-
-  <p>
-    At Rishikul Online, we help you become a confident, certified instructor and a lifelong practitioner. Join our global community and start your journey toward a healthier, more conscious life today. <strong>Namaste</strong>.
-  </p>
+{/* About Content Section */}
+<div className="container mx-auto px-4 py-12">
+  <div className="max-w-4xl mx-auto text-justify text-gray-800 text-lg leading-relaxed">
+    <p>
+      Welcome to Rishikul Online – your trusted platform for online yoga and Ayurveda education. Since 2010, we've empowered students worldwide through certified Yoga Teacher Training Courses, live classes, and in-depth Ayurveda programs. Learn Hatha, Ashtanga, Vinyasa, prenatal yoga, and more with expert guidance, video modules, and live sessions. Deepen your practice with yogic philosophy, meditation, and holistic wellness—all from the comfort of home.
+    </p>
+  </div>
 </div>
         </div>
 

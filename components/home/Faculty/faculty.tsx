@@ -91,14 +91,18 @@ const Faculty = () => {
             </div>
 
             {/* Trainer Image */}
-            <div className="relative flex-1 min-h-[280px] sm:min-h-[320px] rounded-3xl shadow-lg overflow-hidden border-4 border-[#4377b2] bg-white">
-              <Image
-                src={selectedTrainer.image}
-                alt={selectedTrainer.name}
-                loading="eager"
-                priority
-              />
-            </div>
+            {/* Trainer Image */}
+<div className="relative flex-1 min-h-[280px] sm:min-h-[320px] rounded-3xl shadow-lg overflow-hidden border-4 border-[#4377b2] bg-white">
+  <Image
+    src={selectedTrainer.image}
+    alt={selectedTrainer.name}
+    fill
+    className="object-cover"
+    loading="eager"
+    priority
+  />
+</div>
+
           </div>
         </div>
       </div>

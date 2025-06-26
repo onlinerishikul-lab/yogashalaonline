@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RishikulOnline",
     description: "Join yoga and wellness courses anytime, anywhere.",
-    url: "https://rishikulonline.com",
+    url: "#https://rishikulonline.com",
     siteName: "RishikulOnline",
     type: "website",
   },

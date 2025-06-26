@@ -8,17 +8,17 @@ import { motion } from "framer-motion";
 const courses = [
   {
     title: "Yoga Anatomy For Safety",
-    link: "/25-Hrs-Yoga-Courses/Yoga-Anatomy",
+    link: "/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga",
     image: "/25.hrs.png",
   },
   {
     title: "Face Yoga TTC",
-    link: "/25-Hrs-Yoga-Courses/face-yoga",
+    link: "/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga",
     image: "/Face-Yoga.jpg",
   },
   {
     title: "Ayurveda Immunity Course",
-    link: "/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course",
+    link: "/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course",
     image: "/Immunity.jpg",
   },
 ];

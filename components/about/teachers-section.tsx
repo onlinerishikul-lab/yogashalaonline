@@ -41,7 +41,7 @@ export default function TeachersSection() {
   }, [isHovered, controls]);
 
   return (
-    <section className="bg-white py-16 md:py-24 overflow-hidden">
+    <section className="bg-white py-3 md:py-3 overflow-hidden">
       <div className="max-w-7xl mx-auto py-0">
         <h2 className="text-[#4377B2] text-4xl md:text-5xl font-bold mb-12 text-center">
           Our Teachers

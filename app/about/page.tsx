@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <MainWrapper>
       <div className="bg-white">
-        <div className="h-screen min-h-fit md:h-screen md:min-h-[800px]">
+        <div className="h-screen min-h-fit md:h-screen md:min-h-[400px]">
           {/* Hero Image */}
           <div className="relative h-1/2 w-full">
             <Image

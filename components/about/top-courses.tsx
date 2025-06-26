@@ -4,15 +4,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { courses } from "@/constants/about-data";
+
+const courses = [
+  {
+    title: "Yoga Anatomy For Safety",
+    link: "/25-Hrs-Yoga-Courses/Yoga-Anatomy",
+    image: "/25.hrs.png",
+  },
+  {
+    title: "Face Yoga TTC",
+    link: "/25-Hrs-Yoga-Courses/face-yoga",
+    image: "/Face-Yoga.jpg",
+  },
+  {
+    title: "Ayurveda Immunity Course",
+    link: "/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course",
+    image: "/Immunity.jpg",
+  },
+];
 
 export default function TopCourses() {
   return (
-    <section className="bg-white py-16 md:py-24">
+    <section className="bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Hero Section */}
-          <div className="relative h-[500px] lg:h-full rounded-3xl rounded-tr-[50px]  overflow-hidden">
+          <div className="relative h-[500px] lg:h-full rounded-3xl rounded-tr-[50px] overflow-hidden">
             <Image
               src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
               alt="Woman practicing yoga in nature"
@@ -41,7 +58,7 @@ export default function TopCourses() {
                 transition={{ delay: (index + 1) * 0.2 }}
                 className="flex-1"
               >
-                <Link href={course.href}>
+                <Link href={course.link}>
                   <div className="group flex items-center gap-6 p-4 rounded-2xl hover:bg-gray-50 transition-colors shadow-md h-full">
                     <div className="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0">
                       <Image

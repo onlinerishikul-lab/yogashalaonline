@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
@@ -7,7 +6,7 @@ export const CoreValuesSection = ({
   values,
 }: {
   title?: string | undefined;
-  values: { icon?: string | undefined; text?: string | undefined }[]; 
+  values: { icon?: string | undefined; text?: string | undefined }[];
 }) => {
   return (
     <div className="space-y-8">

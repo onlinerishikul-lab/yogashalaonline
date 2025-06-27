@@ -29,8 +29,8 @@ export const CoreValuesSection = ({
                   <Image
                     src={value.icon}
                     alt="icon"
-                    width={45}
-                    height={45}
+                    width={85}
+                    height={85}
                     className="object-contain"
                   />
                 )}

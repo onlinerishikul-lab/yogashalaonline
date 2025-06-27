@@ -21,27 +21,52 @@ export default function GetInTouch() {
     courseInterest: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = schema.safeParse(data);
     if (!result.success) {
       setErrors(
         Object.fromEntries(
-          result.error.errors.map((err) => [err.path[0], err.message]),
-        ),
+          result.error.errors.map((err) => [err.path[0], err.message])
+        )
       );
       return;
     }
-    console.log("Form data:", result.data);
-    setData({ name: "", email: "", courseInterest: "" });
+
     setErrors({});
+    setLoading(true);
+    try {
+      const response = await fetch("https://formspree.io/f/mkgbkgyg", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          course: data.courseInterest,
+        }),
+      });
+
+      if (response.ok) {
+        alert("Thank you! Your enrollment has been submitted.");
+        setData({ name: "", email: "", courseInterest: "" });
+      } else {
+        alert("There was an error submitting the form.");
+      }
+    } catch (error) {
+      alert("Something went wrong.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -111,9 +136,10 @@ export default function GetInTouch() {
 
           <Button
             type="submit"
+            disabled={loading}
             className="bg-[#0982FE] hover:bg-[#056fd4] w-full py-3 rounded-lg font-semibold text-sm text-white transition-colors"
           >
-            Enrol&nbsp;Now
+            {loading ? "Submitting..." : "Enrol Now"}
           </Button>
         </form>
 

@@ -43,6 +43,7 @@ export default function GetInTouch() {
 
     setErrors({});
     setLoading(true);
+
     try {
       const response = await fetch("https://formspree.io/f/mkgbkgyg", {
         method: "POST",
@@ -62,7 +63,7 @@ export default function GetInTouch() {
       } else {
         alert("There was an error submitting the form.");
       }
-    } catch (error) {
+    } catch {
       alert("Something went wrong.");
     } finally {
       setLoading(false);

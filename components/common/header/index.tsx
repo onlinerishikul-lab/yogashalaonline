@@ -30,7 +30,7 @@ const navigationItems: NavigationItem[] = [
         title: "25 Hrs Yoga Courses",
         href: "/yoga/25-hours",
         subDropdown: [
-          { title: "Yoga Anotomy For Safety", href: "/Yoga-Courses/25-Hrs-Yoga-Courses/Yoga-Anatomy/#goaaaaa" },
+          { title: "Yoga Anotomy For Safety", href: "/Yoga-Courses/25-Hrs-Yoga-Courses/Yoga-Anatomy/" },
           { title: "Face Yoga TTC", href: "/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga/" },
         ],
       },

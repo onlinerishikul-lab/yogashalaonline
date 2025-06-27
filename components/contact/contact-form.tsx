@@ -82,7 +82,7 @@ export default function ContactForm() {
           onSubmit={() => setTimeout(handleIframeLoad, 1000)}
           className="space-y-6"
         >
-          {/* Hidden fields required by FormSubmit */}
+          {/* Hidden inputs for FormSubmit */}
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
           <input
@@ -101,7 +101,6 @@ export default function ContactForm() {
                   <FormLabel>Name</FormLabel>
                   <FormControl>
                     <Input
-                      name="name"
                       placeholder="John Carter"
                       {...field}
                       className="rounded-full border-gray-200"
@@ -121,7 +120,6 @@ export default function ContactForm() {
                   <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input
-                      name="email"
                       type="email"
                       placeholder="Email address"
                       {...field}
@@ -142,7 +140,6 @@ export default function ContactForm() {
                   <FormLabel>Phone Number</FormLabel>
                   <FormControl>
                     <Input
-                      name="phone"
                       placeholder="(123) 456 - 7890"
                       {...field}
                       className="rounded-full border-gray-200"
@@ -239,7 +236,6 @@ export default function ContactForm() {
                 <FormLabel>Message</FormLabel>
                 <FormControl>
                   <Textarea
-                    name="message"
                     placeholder="Write a comment..."
                     className="min-h-[120px] rounded-[24px] border-gray-200"
                     {...field}
@@ -262,7 +258,7 @@ export default function ContactForm() {
         </form>
       </Form>
 
-      {/* Hidden iframe for background submission */}
+      {/* Hidden iframe to prevent redirect */}
       <iframe
         name="hidden_iframe"
         ref={iframeRef}

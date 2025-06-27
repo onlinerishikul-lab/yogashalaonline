@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { onlineYogaTrainingMenu } from "@/constants/course-data";
@@ -11,11 +11,18 @@ export default function GetInTouch() {
     email: "",
     courseInterest: "",
   });
+  const [submitted, setSubmitted] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  };
+
+  const handleIframeLoad = () => {
+    setSubmitted(true);
+    setFormValues({ name: "", email: "", courseInterest: "" });
   };
 
   return (
@@ -30,23 +37,27 @@ export default function GetInTouch() {
           embrace the transformative power of these practices.
         </p>
 
+        {submitted && (
+          <div className="text-green-600 text-center mb-4">
+            ✅ Thank you! Your form has been submitted.
+          </div>
+        )}
+
         <form
+          ref={formRef}
           action="https://formsubmit.co/rishikulonline108@gmail.com"
           method="POST"
+          target="formTarget"
+          onSubmit={() => setTimeout(handleIframeLoad, 1000)}
           className="flex flex-col gap-4"
         >
-          {/* Prevent spam via Formsubmit */}
           <input type="hidden" name="_captcha" value="false" />
           <input
             type="hidden"
             name="_subject"
             value="New Enrollment - Rishikul Online"
           />
-          <input
-            type="hidden"
-            name="_template"
-            value="table"
-          />
+          <input type="hidden" name="_template" value="table" />
 
           <div>
             <input
@@ -55,7 +66,6 @@ export default function GetInTouch() {
               value={formValues.name}
               onChange={handleChange}
               placeholder="Name"
-              aria-label="Name"
               required
               className="p-3 border border-gray-300 rounded-md text-sm w-full"
             />
@@ -68,7 +78,6 @@ export default function GetInTouch() {
               value={formValues.email}
               onChange={handleChange}
               placeholder="Email"
-              aria-label="Email"
               required
               className="p-3 border border-gray-300 rounded-md text-sm w-full"
             />
@@ -79,7 +88,6 @@ export default function GetInTouch() {
               name="courseInterest"
               value={formValues.courseInterest}
               onChange={handleChange}
-              aria-label="Course interest"
               required
               className="p-3 border border-gray-300 rounded-md text-sm w-full"
             >
@@ -100,6 +108,13 @@ export default function GetInTouch() {
           </Button>
         </form>
 
+        {/* Hidden iframe for background submission */}
+        <iframe
+          name="formTarget"
+          style={{ display: "none" }}
+          onLoad={handleIframeLoad}
+        />
+
         <div className="flex flex-col sm:flex-row justify-center gap-6 mt-8">
           <div className="flex gap-3 items-start">
             <Image
@@ -108,7 +123,6 @@ export default function GetInTouch() {
               width={20}
               height={20}
               loading="lazy"
-              decoding="async"
             />
             <div className="text-sm">
               <p className="font-semibold">Phone</p>
@@ -125,7 +139,6 @@ export default function GetInTouch() {
               width={20}
               height={20}
               loading="lazy"
-              decoding="async"
             />
             <div className="text-sm">
               <p className="font-semibold">E-Mail</p>

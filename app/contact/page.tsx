@@ -1,60 +1,97 @@
-import Image from "next/image";
-import ContactForm from "@/components/contact/contact-form";
-import { ReviewSection } from "@/components/review-section";
-import MainWrapper from "@/components/wrappers/main-wrapper";
-import { Card } from "@/components/ui/card";
-import { CardContent } from "@/components/ui/card";
+"use client";
 
-export default function ContactPage() {
+import { useState, useRef } from "react";
+import { Button } from "@/components/ui/button";
+
+export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleIframeLoad = () => {
+    setSubmitted(true);
+    setFormData({ name: "", email: "", message: "" });
+  };
+
   return (
-    <MainWrapper>
-      <main className="min-h-screen">
-        {/* Hero Section */}
-        <section className="relative h-[70vh] overflow-hidden">
-          <Image
-            src="https://images.unsplash.com/photo-1520769945061-0a448c463865?q=80&w=2070&auto=format&fit=crop"
-            alt="Person practicing yoga pose on a rock by a mountain lake"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="h-full w-full bg-black/25 absolute top-0 left-0" />
-          {/* Angled bottom overlay */}
-          <div className="absolute bottom-0 left-0 right-0 h-48 bg-white transform -skew-y-3 translate-y-24" />
-        </section>
+    <div className="w-full">
+      {submitted && (
+        <p className="text-green-600 text-center mb-4">
+          ✅ Thank you! Your message has been sent.
+        </p>
+      )}
 
-        {/* Form Section */}
-        <section className="py-0 px-4">
-          <div className="container mx-auto max-w-3xl">
-            <h2 className="text-2xl md:text-3xl text-center text-[#4377B2] font-semibold mb-2">
-              Query Form
-            </h2>
-            <p className="text-center text-gray-600 mb-12">
-              Please fill the form below to receive a quote for your project.
-              <br />
-              Feel free to add as much detail as needed.
-            </p>
-            <div className="min-h-screen bg-white p-4 flex flex-col items-center">
-              <Card className="w-full max-w-3xl bg-white rounded-[24px] shadow-2xl">
-                <CardContent className="p-8">
-                  <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-                    Contact details
-                  </h2>
-                  <p className="text-gray-500 mb-6">
-                    Please fill your information so we can get in touch with
-                    you.
-                  </p>
+      <form
+        ref={formRef}
+        action="https://formsubmit.co/rishikulonline108@gmail.com"
+        method="POST"
+        target="hidden_iframe"
+        onSubmit={() => setTimeout(handleIframeLoad, 1000)}
+        className="flex flex-col gap-4"
+      >
+        {/* Formsubmit hidden controls */}
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Contact Query from Rishikul Online"
+        />
 
-                  <ContactForm />
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name"
+          required
+          value={formData.name}
+          onChange={handleChange}
+          className="p-3 border border-gray-300 rounded-md text-sm"
+        />
 
-        {/* Review Section */}
-        <ReviewSection />
-      </main>
-    </MainWrapper>
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email"
+          required
+          value={formData.email}
+          onChange={handleChange}
+          className="p-3 border border-gray-300 rounded-md text-sm"
+        />
+
+        <textarea
+          name="message"
+          placeholder="Your message"
+          required
+          rows={5}
+          value={formData.message}
+          onChange={handleChange}
+          className="p-3 border border-gray-300 rounded-md text-sm"
+        ></textarea>
+
+        <Button
+          type="submit"
+          className="bg-[#0982FE] hover:bg-[#056fd4] w-full py-3 rounded-lg font-semibold text-sm text-white transition-colors"
+        >
+          Send Message
+        </Button>
+      </form>
+
+      {/* Background iframe for no-redirect submission */}
+      <iframe
+        name="hidden_iframe"
+        style={{ display: "none" }}
+        onLoad={handleIframeLoad}
+      />
+    </div>
   );
 }

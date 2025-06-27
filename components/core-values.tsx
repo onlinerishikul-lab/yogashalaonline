@@ -7,7 +7,7 @@ export const CoreValuesSection = ({
   values,
 }: {
   title?: string | undefined;
-  values: { icon?: string | undefined; text?: string | undefined }[];
+  values: { icon?: string | undefined; text?: string | undefined }[]; 
 }) => {
   return (
     <div className="space-y-8">
@@ -18,21 +18,22 @@ export const CoreValuesSection = ({
         {/* Horizontal line */}
         <div className="absolute top-[25%] left-0 right-0 h-[2px] bg-[#4377B2] w-full md:w-[80%] md:left-[10%]" />
 
-        <div className="flex flex-row justify-between items-start gap-12 md:gap-4">
+        <div className="flex flex-row justify-between items-start gap-12 md:gap-4 flex-wrap">
           {values.map((value, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center space-y-4 w-full md:w-48"
+              className="flex flex-col items-center text-center space-y-4 w-full sm:w-1/2 md:w-1/4"
             >
-              <div
-                className={cn(
-                  "w-16 h-16 rounded-full bg-[#4377B2] flex items-center justify-center  text-white relative z-10 shadow-lg transition-transform hover:scale-110"
-                )}
-              >
+              {/* Icon without blue circle */}
+              <div className="flex items-center justify-center relative z-10 transition-transform hover:scale-110">
                 {value.icon && (
-                  <div className="w-8 h-8 text-white flex items-center justify-center">
-                    <Image src={value.icon} alt="icon" width={45} height={45} />
-                  </div>
+                  <Image
+                    src={value.icon}
+                    alt="icon"
+                    width={45}
+                    height={45}
+                    className="object-contain"
+                  />
                 )}
               </div>
               <p className="text-gray-800 mt-4 text-lg font-medium max-w-[200px]">

@@ -2,72 +2,20 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { onlineYogaTrainingMenu } from "@/constants/course-data";
 
-const schema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Invalid email address"),
-  courseInterest: z.string().min(1, "Please select a course"),
-});
-
-type FormData = z.infer<typeof schema>;
-
 export default function GetInTouch() {
-  const [data, setData] = useState<FormData>({
+  const [formValues, setFormValues] = useState({
     name: "",
     email: "",
     courseInterest: "",
   });
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    setData({ ...data, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const result = schema.safeParse(data);
-    if (!result.success) {
-      setErrors(
-        Object.fromEntries(
-          result.error.errors.map((err) => [err.path[0], err.message])
-        )
-      );
-      return;
-    }
-
-    setErrors({});
-    setLoading(true);
-
-    try {
-      const response = await fetch("https://formspree.io/f/mkgbkgyg", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          course: data.courseInterest,
-        }),
-      });
-
-      if (response.ok) {
-        alert("Thank you! Your enrollment has been submitted.");
-        setData({ name: "", email: "", courseInterest: "" });
-      } else {
-        alert("There was an error submitting the form.");
-      }
-    } catch {
-      alert("Something went wrong.");
-    } finally {
-      setLoading(false);
-    }
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
   return (
@@ -82,43 +30,57 @@ export default function GetInTouch() {
           embrace the transformative power of these practices.
         </p>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form
+          action="https://formsubmit.co/rishikulonline108@gmail.com"
+          method="POST"
+          className="flex flex-col gap-4"
+        >
+          {/* Prevent spam via Formsubmit */}
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Enrollment - Rishikul Online"
+          />
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          />
+
           <div>
             <input
               type="text"
               name="name"
-              value={data.name}
+              value={formValues.name}
               onChange={handleChange}
               placeholder="Name"
               aria-label="Name"
+              required
               className="p-3 border border-gray-300 rounded-md text-sm w-full"
             />
-            {errors.name && (
-              <span className="text-xs text-red-600">{errors.name}</span>
-            )}
           </div>
 
           <div>
             <input
               type="email"
               name="email"
-              value={data.email}
+              value={formValues.email}
               onChange={handleChange}
               placeholder="Email"
               aria-label="Email"
+              required
               className="p-3 border border-gray-300 rounded-md text-sm w-full"
             />
-            {errors.email && (
-              <span className="text-xs text-red-600">{errors.email}</span>
-            )}
           </div>
 
           <div>
             <select
               name="courseInterest"
-              value={data.courseInterest}
+              value={formValues.courseInterest}
               onChange={handleChange}
               aria-label="Course interest"
+              required
               className="p-3 border border-gray-300 rounded-md text-sm w-full"
             >
               <option value="">Select a Course</option>
@@ -128,19 +90,13 @@ export default function GetInTouch() {
                 </option>
               ))}
             </select>
-            {errors.courseInterest && (
-              <span className="text-xs text-red-600">
-                {errors.courseInterest}
-              </span>
-            )}
           </div>
 
           <Button
             type="submit"
-            disabled={loading}
             className="bg-[#0982FE] hover:bg-[#056fd4] w-full py-3 rounded-lg font-semibold text-sm text-white transition-colors"
           >
-            {loading ? "Submitting..." : "Enrol Now"}
+            Enrol&nbsp;Now
           </Button>
         </form>
 

@@ -5,7 +5,10 @@ import Image from "next/image";
 
 const Join = () => {
   const handleJoinClick = () => {
-    window.open("https://chat.whatsapp.com/your-group-invite-link", "_blank");
+    const phoneNumber = "919845271423"; // WhatsApp format without +
+    const message = encodeURIComponent("I want to know more about the course about autotype.");
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(url, "_blank");
   };
 
   return (

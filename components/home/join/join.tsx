@@ -6,7 +6,7 @@ import Image from "next/image";
 const Join = () => {
   const handleJoinClick = () => {
     const phoneNumber = "919845271423"; // WhatsApp format without +
-    const message = encodeURIComponent("I want to know more about the course about autotype.");
+    const message = encodeURIComponent("I want to know more about the courses about");
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, "_blank");
   };

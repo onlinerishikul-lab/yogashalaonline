@@ -26,11 +26,11 @@ export const BlogCard = memo(function BlogCard({
             alt={post.title || 'Blog post preview'}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover"
+            className="object-cover object-top" // <-- Changed here
             loading={isFirst ? 'eager' : 'lazy'}
             priority={isFirst}
             fetchPriority={isFirst ? 'high' : 'auto'}
-            quality={40} // Lowered from 50 for better compression
+            quality={60} // <-- Slightly higher for better clarity
             placeholder={post.blurDataURL ? 'blur' : 'empty'}
             blurDataURL={post.blurDataURL}
             decoding="async"

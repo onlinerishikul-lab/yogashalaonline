@@ -20,17 +20,17 @@ export const BlogCard = memo(function BlogCard({
   return (
     <article className={cn('block h-full', className)}>
       <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
-        <div className="relative w-full h-64 bg-gray-100"> {/* Fixed height */}
+        <div className="w-full h-64 bg-gray-100 flex justify-center items-center">
           <Image
             src={post.imageUrl}
             alt={post.title || 'Blog post preview'}
-            fill
-            sizes="100vw"
-            className="object-contain"
+            width={800}
+            height={256}
+            className="object-contain w-full h-full"
             loading={isFirst ? 'eager' : 'lazy'}
             priority={isFirst}
             fetchPriority={isFirst ? 'high' : 'auto'}
-            quality={75}
+            quality={80}
             placeholder={post.blurDataURL ? 'blur' : 'empty'}
             blurDataURL={post.blurDataURL}
             decoding="async"

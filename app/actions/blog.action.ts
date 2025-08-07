@@ -20,13 +20,17 @@ export type Blog = {
   author: Author;
 }
 
-export async function getAllBlogs(): Promise<Blog[]> {
+export async function getAllBlogs(params?: { slug?: string }): Promise<Blog[]> {
   try {
+    const { slug } = params || {};
+
     const blogs = await prisma.blog.findMany({
+      where: slug ? { slug } : {},
       orderBy: {
         createdAt: 'desc'
       }
     });
+
     return blogs;
   } catch (error) {
     console.error("Error fetching blogs:", error);

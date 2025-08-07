@@ -64,7 +64,6 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
           <Image
             src={post.coverImage}
             alt={post.title || "Blog cover"}
-            fill
             sizes="(max-width: 768px) 100vw, 80vw"
             quality={60}
             className="object-cover"

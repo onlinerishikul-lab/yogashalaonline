@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo } from 'react'
 import dynamic from 'next/dynamic'
 import MainWrapper from '@/components/wrappers/main-wrapper'
 import { Skeleton } from '@/components/ui/skeleton'

@@ -24,8 +24,6 @@ export const BlogCard = memo(function BlogCard({
           <Image
             src={post.imageUrl}
             alt={post.title || 'Blog post preview'}
-            width={800}
-            height={256}
             className="object-contain w-full h-full"
             loading={isFirst ? 'eager' : 'lazy'}
             priority={isFirst}

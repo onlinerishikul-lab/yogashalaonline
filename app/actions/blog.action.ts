@@ -20,46 +20,62 @@ export type Blog = {
   author: Author;
 }
 
-export async function getAllBlogs(params?: { slug?: string }): Promise<Blog[]> {
-  try {
-    const { slug } = params || {};
-
-    const blogs = await prisma.blog.findMany({
-      where: slug ? { slug } : {},
-      orderBy: {
-        createdAt: 'desc'
-      }
-    });
-
-    return blogs;
-  } catch (error) {
-    console.error("Error fetching blogs:", error);
-    throw new Error("Failed to fetch blogs");
-  }
-}
-
 // Add pagination support
-export async function getPaginatedBlogs(page: number = 1, limit: number = 6): Promise<{ blogs: Blog[], total: number }> {
+export async function getPaginatedBlogs(
+  page: number = 1,
+  limit: number = 6,
+  category?: string
+): Promise<{ blogs: Blog[]; total: number }> {
   try {
     const skip = (page - 1) * limit;
-    
+    const whereClause: any = {};
+
+    if (category && category !== 'All') {
+      whereClause.tags = {
+        has: category,
+      };
+    }
+
     const [blogs, total] = await Promise.all([
       prisma.blog.findMany({
+        where: whereClause,
         skip,
         take: limit,
         orderBy: {
-          createdAt: 'desc'
-        }
+          createdAt: 'desc',
+        },
       }),
-      prisma.blog.count()
+      prisma.blog.count({ where: whereClause }),
     ]);
 
     return {
       blogs,
-      total
+      total,
     };
   } catch (error) {
-    console.error("Error fetching paginated blogs:", error);
-    throw new Error("Failed to fetch blogs");
+    console.error('Error fetching paginated blogs:', error);
+    throw new Error('Failed to fetch blogs');
+  }
+}
+
+export async function getBlogCategories(): Promise<string[]> {
+  try {
+    const blogs = await prisma.blog.findMany({
+      select: {
+        tags: true,
+      },
+    });
+
+    const categories = new Set<string>();
+    blogs.forEach(blog => {
+      blog.tags.forEach(tag => {
+        categories.add(tag);
+      });
+    });
+
+    return Array.from(categories);
+  } catch (error) {
+    console.error("Error fetching blog categories:", error);
+    throw new Error("Failed to fetch blog categories");
   }
 }

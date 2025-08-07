@@ -5,11 +5,13 @@ import { BlogCard } from "@/components/blog/blog-card";
 import MainWrapper from "@/components/wrappers/main-wrapper";
 import { getBlogBySlug, getRelatedBlogs } from "@/app/actions/blog.action";
 
-type BlogParams = {
-  slug: string;
-};
+interface BlogDetailsPageProps {
+  params: {
+    slug: string;
+  };
+}
 
-export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
+export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) {
   const { slug } = params;
   const post = await getBlogBySlug(slug);
 

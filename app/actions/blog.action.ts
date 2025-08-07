@@ -21,6 +21,12 @@ export type Blog = {
 }
 
 // Add pagination support
+interface BlogWhereClause {
+  tags?: {
+    has: string;
+  };
+}
+
 export async function getPaginatedBlogs(
   page: number = 1,
   limit: number = 6,
@@ -28,7 +34,7 @@ export async function getPaginatedBlogs(
 ): Promise<{ blogs: Blog[]; total: number }> {
   try {
     const skip = (page - 1) * limit;
-    const whereClause: any = {};
+    const whereClause: BlogWhereClause = {};
 
     if (category && category !== 'All') {
       whereClause.tags = {
@@ -58,6 +64,21 @@ export async function getPaginatedBlogs(
   }
 }
 
+export async function getBlogBySlug(slug: string): Promise<Blog | null> {
+  try {
+    const blog = await prisma.blog.findUnique({
+      where: {
+        slug,
+      },
+    });
+
+    return blog;
+  } catch (error) {
+    console.error('Error fetching blog by slug:', error);
+    throw new Error('Failed to fetch blog');
+  }
+}
+
 export async function getBlogCategories(): Promise<string[]> {
   try {
     const blogs = await prisma.blog.findMany({
@@ -77,5 +98,29 @@ export async function getBlogCategories(): Promise<string[]> {
   } catch (error) {
     console.error("Error fetching blog categories:", error);
     throw new Error("Failed to fetch blog categories");
+  }
+}
+
+export async function getRelatedBlogs(category: string, currentBlogId: string): Promise<Blog[]> {
+  try {
+    const blogs = await prisma.blog.findMany({
+      where: {
+        tags: {
+          has: category,
+        },
+        id: {
+          not: currentBlogId,
+        },
+      },
+      take: 3,
+      orderBy: {
+        createdAt: 'desc',
+      },
+    });
+
+    return blogs;
+  } catch (error) {
+    console.error('Error fetching related blogs:', error);
+    throw new Error('Failed to fetch related blogs');
   }
 }

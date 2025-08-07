@@ -3,21 +3,19 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogCard } from "@/components/blog/blog-card";
 import MainWrapper from "@/components/wrappers/main-wrapper";
-import { getAllBlogs } from "@/app/actions/blog.action";
+import { getBlogBySlug, getRelatedBlogs } from "@/app/actions/blog.action";
 
-type BlogParams = Promise<{ slug: string }>;
+type BlogParams = {
+  slug: string;
+};
 
 export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
-  const { slug } = await params;
-  const blogs = await getAllBlogs({ slug });
-  const post = blogs[0];
+  const { slug } = params;
+  const post = await getBlogBySlug(slug);
 
   if (!post) notFound();
 
-  const allBlogs = await getAllBlogs();
-  const relatedPosts = allBlogs
-    .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
-    .slice(0, 3);
+  const relatedPosts = await getRelatedBlogs(post.tags[0], post.id);
 
   const courses = [
     {

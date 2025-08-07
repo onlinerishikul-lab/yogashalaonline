@@ -1,17 +1,18 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import MainWrapper from '@/components/wrappers/main-wrapper'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Button } from '@/components/ui/button'
 import { useBlogs } from '@/hooks/use-blogs'
 
-// Dynamic imports: only load when needed
+// Dynamic imports
 const HeroCarousel = dynamic(() => import('@/components/blog/hero-carousel').then(m => m.HeroCarousel), {
   ssr: false,
   loading: () => <Skeleton className="w-full h-[400px]" />
 })
+
 const BlogTopics = dynamic(() => import('@/components/blog/blog-topics').then(m => m.BlogTopics), {
   ssr: false,
   loading: () => (
@@ -28,7 +29,6 @@ export default function BlogPage() {
   const [selectedCategory] = useState('All')
 
   const {
-    allBlogs,
     paginatedBlogs,
     totalPages,
     isLoading,
@@ -40,9 +40,19 @@ export default function BlogPage() {
     category: selectedCategory
   })
 
-  // Memoized slicing to reduce recomputation
-  const heroPosts = useMemo(() => allBlogs?.slice(0, 3) || [], [allBlogs])
-  const remainingPosts = useMemo(() => paginatedBlogs || [], [paginatedBlogs])
+  const heroPosts = useMemo(() => {
+    if (page === 1) {
+      return paginatedBlogs?.slice(0, 3) || []
+    }
+    return []
+  }, [paginatedBlogs, page])
+
+  const remainingPosts = useMemo(() => {
+    if (page === 1) {
+      return paginatedBlogs?.slice(3) || []
+    }
+    return paginatedBlogs || []
+  }, [paginatedBlogs, page])
 
   const loadMore = () => setPage((prev) => prev + 1)
 
@@ -79,10 +89,13 @@ export default function BlogPage() {
   return (
     <MainWrapper>
       <main className="space-y-16">
-        <HeroCarousel
-          posts={heroPosts}
-          key={heroPosts.map((p) => p.id).join('-')}
-        />
+        {/* Render HeroCarousel only on first page */}
+        {page === 1 && heroPosts.length > 0 && (
+          <HeroCarousel
+            posts={heroPosts}
+            key={heroPosts.map((p) => p.id).join('-')}
+          />
+        )}
 
         <div className="container mx-auto px-4 pb-16">
           <BlogTopics posts={remainingPosts} />

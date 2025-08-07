@@ -3,19 +3,20 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogCard } from "@/components/blog/blog-card";
 import MainWrapper from "@/components/wrappers/main-wrapper";
-import { getBlogBySlug, getRelatedBlogs } from "@/app/actions/blog.action";
+import { getAllBlogs } from "@/app/actions/blog.action";
 
-export default async function Page({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const { slug } = params;
-  const post = await getBlogBySlug(slug);
+type BlogParams = Promise<{ slug: string }>;
 
-  if (!post) return notFound();
+export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
+  const { slug } = await params;
+  const blogs = await getAllBlogs();
+  const post = blogs.find((blog) => blog.slug === slug);
 
-  const relatedPosts = await getRelatedBlogs(post.tags[0], post.id);
+  if (!post) notFound();
+
+  const relatedPosts = blogs
+    .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
+    .slice(0, 3);
 
   const courses = [
     {

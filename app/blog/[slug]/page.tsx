@@ -9,12 +9,13 @@ type BlogParams = Promise<{ slug: string }>;
 
 export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
   const { slug } = await params;
-  const blogs = await getAllBlogs();
-  const post = blogs.find((blog) => blog.slug === slug);
+  const blogs = await getAllBlogs({ slug });
+  const post = blogs[0];
 
   if (!post) notFound();
 
-  const relatedPosts = blogs
+  const allBlogs = await getAllBlogs();
+  const relatedPosts = allBlogs
     .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
     .slice(0, 3);
 

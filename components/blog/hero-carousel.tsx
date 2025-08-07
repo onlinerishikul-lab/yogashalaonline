@@ -44,7 +44,6 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
           <Image
             src={currentPost.imageUrl}
             alt={currentPost.title || 'Blog post cover'}
-            fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1280px"
             priority={true}
             loading="eager"

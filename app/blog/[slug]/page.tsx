@@ -5,14 +5,11 @@ import { BlogCard } from "@/components/blog/blog-card";
 import MainWrapper from "@/components/wrappers/main-wrapper";
 import { getBlogBySlug, getRelatedBlogs } from "@/app/actions/blog.action";
 
-// ✅ Properly typed props for App Router
-interface BlogDetailsPageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) {
+export default async function Page({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const { slug } = params;
   const post = await getBlogBySlug(slug);
 

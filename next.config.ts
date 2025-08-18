@@ -10,7 +10,6 @@ const nextConfig: NextConfig = {
     ],
     formats: ["image/webp"], // ✅ Use modern image formats
   },
-  swcMinify: true,
   experimental: {
     scrollRestoration: true, // ✅ Improves UX when navigating back
   },

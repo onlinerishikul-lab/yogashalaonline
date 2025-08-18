@@ -3,6 +3,47 @@
 import { Header } from "@/components/common/header";
 import React, { useState, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
+// Policies Section Component
+export const PoliciesSection = () => {
+  const policies = [
+    {
+      name: "Privacy Policy",
+      link: "/payments/privacypolicy",
+    },
+    {
+      name: "Cancellation Policy",
+      link: "/payments/cancellation-policy",
+    },
+    {
+      name: "Terms and Conditions",
+      link: "/payments/terms-and-conditions",
+    },
+  ];
+
+  return (
+    <section className="py-12 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center">
+          Our Policies
+        </h2>
+        <ul className="space-y-4">
+          {policies.map((policy, index) => (
+            <li key={index}>
+              <Link
+                href={policy.link}
+                className="block text-lg font-semibold text-indigo-600 hover:underline"
+              >
+                {policy.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+};
 
 export default function PaymentPage() {
   const [selectedPlan, setSelectedPlan] = useState("advance");
@@ -177,27 +218,8 @@ export default function PaymentPage() {
             </div>
           </div>
 
-          {/* Policies */}
-          <div className="border-t pt-6 text-sm text-gray-700 space-y-4">
-            <div>
-              <h3 className="text-lg font-semibold text-[#4377b2] mb-1">
-                Privacy Policy
-              </h3>
-              <p>
-                We respect your privacy. Your information is safe and will not
-                be shared without consent.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-[#4377b2] mb-1">
-                Cancellation & Refund Policy
-              </h3>
-              <p>
-                Contact us within 7 days for cancellations. Refunds depend on
-                content access. Downloaded material may not qualify for refunds.
-              </p>
-            </div>
-          </div>
+          {/* Policies Section */}
+          <PoliciesSection />
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ export function CoursesList({ initialCourses = [] }: CoursesListProps) {
 
   // Group courses by their categories (using yogaCoursesForBeginners.courseLanguage)
   const groupedCourses = coursesArray.reduce<Record<string, Course[]>>((acc: Record<string, Course[]>, course: Course) => {
-    const category = course.yogaCoursesForBeginners.courseLanguage;
+    const category = course.yogaCoursesForBeginners?.courseLanguage || 'General';
     if (!acc[category]) {
       acc[category] = [];
     }

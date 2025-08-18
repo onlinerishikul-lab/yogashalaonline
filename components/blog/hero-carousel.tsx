@@ -23,7 +23,13 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
     return () => clearInterval(timer)
   }, [nextSlide])
 
-  const currentPost = posts[currentIndex]
+  const getPostByIndex = (index: number) => {
+    return posts[(posts.length + index) % posts.length]
+  }
+
+  const prevPost = getPostByIndex(currentIndex - 1)
+  const currentPost = getPostByIndex(currentIndex)
+  const nextPost = getPostByIndex(currentIndex + 1)
 
   return (
     <div
@@ -32,54 +38,83 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
       aria-label="Hero blog carousel"
       className="relative w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 h-[300px] sm:h-[400px] overflow-hidden"
     >
-      <AnimatePresence initial={false} mode="wait">
-        <motion.div
-          key={currentPost.id}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.4 }}
-          className="absolute inset-0"
-        >
+      <div className="flex items-center justify-center h-full">
+        {/* Previous Post */}
+        <div className="w-1/4 h-full relative">
           <Image
-            src={currentPost.imageUrl}
-            alt={currentPost.title || 'Blog post cover'}
+            src={prevPost.imageUrl}
+            alt={prevPost.title || 'Previous blog post cover'}
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1280px"
-            priority={true}
-            loading="eager"
-            fetchPriority="high"
-            quality={40}
-            placeholder={currentPost.blurDataURL ? 'blur' : 'empty'}
-            blurDataURL={currentPost.blurDataURL}
-            decoding="async"
-            className="object-cover"
+            sizes="(max-width: 640px) 25vw, 25vw"
+            quality={20}
+            className="object-cover opacity-50"
           />
+        </div>
 
-          <div className="absolute inset-0 flex flex-col justify-end bg-black/50 p-4 sm:p-6 text-white backdrop-blur-sm">
-            <div className="max-w-2xl space-y-2" aria-live="polite">
-              <div className="text-xs sm:text-sm opacity-80">
-                <time dateTime={new Date(currentPost.date).toISOString()}>
-                  {currentPost.date}
-                </time>{' '}
-                &mdash; <span>{currentPost.category}</span>
+        {/* Current Post */}
+        <div className="w-1/2 h-full relative z-10">
+          <AnimatePresence initial={false} mode="wait">
+            <motion.div
+              key={currentPost.id}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={currentPost.imageUrl}
+                alt={currentPost.title || 'Blog post cover'}
+                fill
+                sizes="(max-width: 640px) 50vw, 50vw"
+                priority={true}
+                loading="eager"
+                fetchPriority="high"
+                quality={75}
+                placeholder={currentPost.blurDataURL ? 'blur' : 'empty'}
+                blurDataURL={currentPost.blurDataURL}
+                decoding="async"
+                className="object-cover"
+              />
+
+              <div className="absolute inset-0 flex flex-col justify-end bg-black/50 p-4 sm:p-6 text-white backdrop-blur-sm">
+                <div className="max-w-2xl space-y-2" aria-live="polite">
+                  <div className="text-xs sm:text-sm opacity-80">
+                    <time dateTime={new Date(currentPost.date).toISOString()}>
+                      {currentPost.date}
+                    </time>{' '}
+                    &mdash; <span>{currentPost.category}</span>
+                  </div>
+                  <h1 className="text-xl sm:text-2xl font-bold">{currentPost.title}</h1>
+                  <p className="text-white/90 text-xs sm:text-base line-clamp-2">
+                    {currentPost.excerpt}
+                  </p>
+                  <Link
+                    href={`/blog/${currentPost.slug}`}
+                    className="inline-block text-sm underline hover:opacity-80"
+                  >
+                    Read More →
+                  </Link>
+                </div>
               </div>
-              <h1 className="text-xl sm:text-2xl font-bold">{currentPost.title}</h1>
-              <p className="text-white/90 text-xs sm:text-base line-clamp-2">
-                {currentPost.excerpt}
-              </p>
-              <Link
-                href={`/blog/${currentPost.slug}`}
-                className="inline-block text-sm underline hover:opacity-80"
-              >
-                Read More →
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </AnimatePresence>
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-1 z-10">
+        {/* Next Post */}
+        <div className="w-1/4 h-full relative">
+          <Image
+            src={nextPost.imageUrl}
+            alt={nextPost.title || 'Next blog post cover'}
+            fill
+            sizes="(max-width: 640px) 25vw, 25vw"
+            quality={20}
+            className="object-cover opacity-50"
+          />
+        </div>
+      </div>
+
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-1 z-20">
         {posts.map((_, idx) => (
           <button
             key={idx}

@@ -25,16 +25,18 @@ const Blogs = ({ blogs }: BlogsProps) => {
               className="bg-white rounded-3xl shadow-md overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               {/* Blog Image */}
-              <div className="relative w-full h-48 sm:h-52 lg:h-44 xl:h-48">
-                <Image
-                  src={blog.coverImage}
-                  alt={blog.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  priority
-                />
-              </div>
+              <Link href={`/blog/${blog.slug}`} passHref>
+                <div className="relative w-full h-48 sm:h-52 lg:h-44 xl:h-48">
+                  <Image
+                    src={blog.coverImage}
+                    alt={blog.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    priority
+                  />
+                </div>
+              </Link>
 
               {/* Blog Content */}
               <div className="p-5 flex flex-col flex-1 justify-between">

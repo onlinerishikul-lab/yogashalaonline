@@ -14,13 +14,13 @@ const Join = () => {
   return (
     <div className="relative w-full min-h-[400px] flex justify-center items-center px-4 py-8 sm:py-10">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-black">
         <Image
           src="/join.jpg"
           alt="Join background"
-          fill
-          className="object-cover w-full h-full"
-          priority
+          layout="fill"
+          objectFit="contain"
+          className="w-full h-full"
         />
         <div className="absolute inset-0 bg-black/40 z-10" />
       </div>

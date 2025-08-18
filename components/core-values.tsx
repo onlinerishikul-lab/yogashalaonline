@@ -17,7 +17,7 @@ export const CoreValuesSection = ({
       {/* Values section with continuous lines */}
       <div className="relative max-w-6xl mx-auto">
         {/* Horizontal line */}
-        <div className="absolute top-[25%] left-0 right-0 h-[2px] bg-[#4377B2] w-full md:w-[80%] md:left-[10%] hidden sm:block" />
+        <div className="absolute top-[25%] left-0 right-0 h-[2px] bg-[#ffffff] w-full md:w-[80%] md:left-[10%] hidden sm:block" />
 
         <div className="flex flex-wrap justify-center gap-y-12 gap-x-6 md:gap-x-10">
           {values.map((value, index) => (

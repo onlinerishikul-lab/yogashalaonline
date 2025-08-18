@@ -1,7 +1,7 @@
 .explore_our_courses {
   position: relative;
   padding-bottom: 50px;
-  background-color: #ffffff;
+  background-color: #FBF6F3;
 }
 
 /* Removed ::before and ::after curves */
@@ -21,7 +21,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #ffffff;
+  background: #FBF6F3;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -9,6 +9,7 @@ export const SiteFooter = () => {
       <div className="max-w-screen-2xl w-full px-4 py-8 md:px-8 md:py-12">
         {/* Top Section: Logo and Navigation */}
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between mb-10 gap-8 md:gap-0">
+          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
           <div className="flex-shrink-0">
             <Image
               src="/assets/rishikulonlinlogo.png"
@@ -19,6 +20,7 @@ export const SiteFooter = () => {
               priority
             />
           </div>
+          </Link>
          <nav className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-white text-sm md:text-base">
   <Link href="/about" className="hover:underline">About</Link>
   <Link href="/our-teachers" className="hover:underline">Our Team</Link>

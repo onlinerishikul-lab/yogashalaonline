@@ -61,8 +61,7 @@ const yogaCourses: Course[] = [
   { title: "Hatha Yoga TTC", teacher: "By Traditional Hatha Yoga Instructors", image: "/hatha-yoga.png", url: "/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/" },
   { title: "Advanced Yoga Therapy Course", teacher: "By Therapeutic Yoga Professionals", image: "/yoga-theraphy.jpg", url: "/Yoga-Courses/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/" },
   { title: "Multi Style Yoga TTC (200 Hrs)", teacher: "By International Yoga Masters", image: "/multistyle-yoga.jpg", url: "/Yoga-Courses/200-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/" },
-  { title: "Multi Style Yoga TTC (300 Hrs)", teacher: "By Expert Yoga Teachers", image: "/multistyle-yoga.jpg", url: "/Yoga-Courses/300-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/" },
-];
+  ];
 
 const wellnessCourses: Course[] = [
   { title: "Prenatal Yoga", teacher: "By Experienced Yoga Teachers", image: "/Prenatal.jpg" },

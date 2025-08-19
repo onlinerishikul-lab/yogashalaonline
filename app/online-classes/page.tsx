@@ -11,15 +11,16 @@ type Course = {
   title: string;
   teacher: string;
   image: string;
+  directUrl?: string; // optional override for URL
 };
 
-// Converts course titles to clean URL slugs
+// Converts course titles to clean URL slugs (default)
 function slugify(title: string): string {
   return title
     .normalize("NFKD")
-    .replace(/\u00A0/g, " ") // non-breaking space to normal
+    .replace(/\u00A0/g, " ") // replace non-breaking space
     .trim()
-    .replace(/\s+/g, "-"); // space(s) to dash
+    .replace(/\s+/g, "-"); // replace spaces with dash
 }
 
 const courseList: Course[] = [
@@ -67,6 +68,7 @@ const courseList: Course[] = [
     title: "Yoga Nidra",
     teacher: "By Yoga Nidra Professionals",
     image: "/YogaNidra.jpg",
+    directUrl: "Yoga-Classes/Yoga%20Nidra", // 👈 direct URL with %20
   },
 ];
 
@@ -83,7 +85,10 @@ export default function ClassesPage() {
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {courseList.map((course, index) => {
-              const slug = slugify(course.title);
+              const slug = course.directUrl
+                ? course.directUrl
+                : `Yoga-Classes/${slugify(course.title)}`;
+
               return (
                 <div
                   key={index}
@@ -125,7 +130,7 @@ export default function ClassesPage() {
 
                     <div className="flex gap-2 mt-4">
                       <Link
-                        href={`/Yoga-Classes/${slug}`}
+                        href={`/${slug}`}
                         className="bg-[#4377B2] text-white px-4 py-2 rounded hover:bg-[#285384] transition w-full text-center"
                       >
                         View Detail

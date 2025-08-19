@@ -21,7 +21,7 @@ export const CoreValuesSection = ({
           {values.map((value, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center space-y-4 w-full md:w-48"
+              className="flex flex-col items-center text-center space-y-2 w-full md:w-48"
             >
               {/* Icon with no background */}
               <div className="relative z-10 flex items-center justify-center">
@@ -30,7 +30,7 @@ export const CoreValuesSection = ({
                 )}
               </div>
 
-              <p className="text-gray-800 mt-4 text-lg font-medium max-w-[200px]">
+              <p className="text-gray-800 text-lg font-medium max-w-[200px]">
                 {value.text}
               </p>
             </div>

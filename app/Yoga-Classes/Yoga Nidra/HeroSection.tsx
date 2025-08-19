@@ -3,8 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import { Header } from "@/components/common/header";
+import { useRouter } from "next/navigation";
 
 const HeroSection = () => {
+  const router = useRouter();
   return (
     <div
       className="relative h-screen bg-cover bg-center"
@@ -20,7 +22,7 @@ const HeroSection = () => {
           <br />
           Awaken Deep Rest, Restore Inner Balance.
         </h1>
-        <button className="mt-6 bg-[#4377b2] hover:bg-[#365e8f] transition-colors duration-300 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg">
+        <button onClick={() => router.push("/contact")} className="mt-6 bg-[#4377b2] hover:bg-[#365e8f] transition-colors duration-300 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg">
           Enroll Now
         </button>
       </div>

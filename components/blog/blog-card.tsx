@@ -20,27 +20,25 @@ export const BlogCard = memo(function BlogCard({
   return (
     <article className={cn('block h-full', className)}>
       <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
-        {/* Image section without white space */}
-         <Link
-            href={`/blog/${post.slug}`}>
-        <div className="relative w-full h-64">
-          <Image
-            src={post.imageUrl}
-            alt={post.title || 'Blog post preview'}
-            fill
-            className="object-cover"
-            loading={isFirst ? 'eager' : 'lazy'}
-            priority={isFirst}
-            fetchPriority={isFirst ? 'high' : 'auto'}
-            quality={80}
-            placeholder={post.blurDataURL ? 'blur' : 'empty'}
-            blurDataURL={post.blurDataURL}
-            decoding="async"
-          />
-        </div>
-      </Link>
-        <Link
-            href={`/blog/${post.slug}`}>
+        {/* Image section */}
+        <Link href={`/blog/${post.slug}`}>
+          <div className="relative w-full h-64">
+            <Image
+              src={post.imageUrl}
+              alt={post.title || 'Blog post preview'}
+              fill
+              className="object-cover"
+              loading={isFirst ? 'eager' : 'lazy'}
+              priority={isFirst}
+              fetchPriority={isFirst ? 'high' : 'auto'}
+              quality={80}
+              placeholder={post.blurDataURL ? 'blur' : 'empty'}
+              blurDataURL={post.blurDataURL}
+              decoding="async"
+            />
+          </div>
+        </Link>
+
         {/* Text content */}
         <div className="p-4 flex flex-col justify-between flex-1">
           <div>
@@ -51,13 +49,14 @@ export const BlogCard = memo(function BlogCard({
               {post.date}
             </time>
             <h3 className="text-lg font-semibold mb-2 line-clamp-2 hover:text-[#4377B2] transition-colors">
-              {post.title}
+              <Link href={`/blog/${post.slug}`}>
+                {post.title}
+              </Link>
             </h3>
             <p className="text-sm text-muted-foreground line-clamp-3">
               {post.excerpt}
             </p>
           </div>
-          </Link>
           <Link
             href={`/blog/${post.slug}`}
             className="mt-3 text-sm text-[#4377B2] font-medium hover:underline self-start"

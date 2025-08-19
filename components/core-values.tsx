@@ -6,7 +6,7 @@ export const CoreValuesSection = ({
   values,
 }: {
   title?: string;
-  values: { icon?: string; text?: string }[];
+  values: { icon?: string; text?: string; size?: number }[]; // added size
 }) => {
   return (
     <div className="py-16">
@@ -34,8 +34,8 @@ export const CoreValuesSection = ({
                   <Image
                     src={value.icon}
                     alt="icon"
-                    width={60}
-                    height={60}
+                    width={value.size ?? 60}  // dynamic size
+                    height={value.size ?? 60} // dynamic size
                     className="mx-auto"
                   />
                 )}

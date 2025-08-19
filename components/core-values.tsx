@@ -17,11 +17,12 @@ export const CoreValuesSection = ({
         {/* Horizontal line centered on icons */}
         <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-[#4377B2] w-full md:w-[80%] md:left-[10%] -translate-y-1/2" />
 
-        <div className="flex flex-row justify-between items-start gap-5 md:gap-4">
+        {/* align items center so icons sit on the line and text sits just below */}
+        <div className="flex flex-row justify-between items-center gap-5 md:gap-4">
           {values.map((value, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center space-y-2 w-full md:w-48"
+              className="flex flex-col items-center text-center space-y-1 w-full md:w-48"
             >
               {/* Icon with no background */}
               <div className="relative z-10 flex items-center justify-center">

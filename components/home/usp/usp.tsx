@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+
 const uspContent = [
   {
     icon: "/assets/usp/1.png",
@@ -25,14 +26,14 @@ const uspContent = [
 
 const Usp = () => {
   return (
-    <div className="flex items-center justify-center container mx-auto   px-2 sm:px-4">
+    <div className="flex items-center justify-center container mx-auto px-2 sm:px-4">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 w-full">
         {uspContent.map((item, index) => (
           <div
             key={index}
             className="flex flex-col items-center p-3 sm:p-4 lg:p-6 hover:transform hover:scale-105 transition-transform duration-300"
           >
-            <div className="rounded-full h-[80px] w-[80px] sm:h-[90px] sm:w-[90px] lg:h-[100px] lg:w-[100px] p-2 flex items-center justify-center mb-2 sm:mb-3">
+            <div className="rounded-full h-[80px] w-[80px] sm:h-[90px] sm:w-[90px] lg:h-[100px] lg:w-[100px] p-2 flex items-center justify-center mb-1">
               <Image
                 src={item.icon}
                 height={50}

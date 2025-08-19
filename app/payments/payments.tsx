@@ -62,18 +62,8 @@ export default function PaymentPage() {
   };
 
   const plans = [
-    {
-      id: "advance",
-      title: "Advance Payment",
-      price: "$50.00",
-      description: "Pay now to reserve your spot.",
-    },
-    {
-      id: "remaining",
-      title: "Remaining Payment",
-      price: "$200.00",
-      description: "When Joining The Course",
-    },
+    { id: "advance", title: "Advance Payment", price: "$50.00", description: "Pay now to reserve your spot." },
+    { id: "remaining", title: "Remaining Payment", price: "$200.00", description: "When Joining The Course" },
   ];
 
   const courses = [
@@ -124,24 +114,26 @@ export default function PaymentPage() {
   return (
     <div>
       <Header />
-      <div className="bg-white min-h-screen py-10 px-4 sm:px-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Hero Image */}
-          <div className="relative w-full h-64 mb-8 rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/1.png"
-              alt="Peaceful yoga practice"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
 
-          {/* Title */}
-          <h1 className="text-4xl font-bold text-[#4377b2] mb-6 text-center">
+      {/* Full-Width Hero Section */}
+      <div className="relative w-full h-[400px] sm:h-[500px]">
+        <Image
+          src="/1.png"
+          alt="Peaceful yoga practice"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white text-center">
             Course Payment
           </h1>
+        </div>
+      </div>
 
+      {/* Content Section */}
+      <div className="bg-white py-10 px-4 sm:px-10">
+        <div className="max-w-4xl mx-auto">
           {/* Course Dropdown */}
           <div className="mb-10">
             <label className="block text-lg font-medium text-gray-700 mb-2">

@@ -15,7 +15,7 @@ export const CoreValuesSection = ({
       {/* Values section with continuous lines */}
       <div className="relative max-w-5xl mx-auto px-4 md:px-8">
         {/* Horizontal line */}
-        <div className="absolute top-[25%] left-0 right-0 h-[2px] bg-[#4377B2] w-full md:w-[80%] md:left-[10%]" />
+        <div className="absolute top-1/4 left-0 right-0 h-[2px] bg-[#4377B2] w-full md:w-[80%] md:left-[10%]" />
 
         <div className="flex flex-row justify-between items-start gap-12 md:gap-4">
           {values.map((value, index) => (
@@ -23,10 +23,10 @@ export const CoreValuesSection = ({
               key={index}
               className="flex flex-col items-center text-center space-y-4 w-full md:w-48"
             >
-              {/* Just the icon with space (no background) */}
+              {/* Bigger icon with no background */}
               <div className="relative z-10 flex items-center justify-center">
                 {value.icon && (
-                  <Image src={value.icon} alt="icon" width={45} height={45} />
+                  <Image src={value.icon} alt="icon" width={70} height={70} />
                 )}
               </div>
 

@@ -46,7 +46,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
       image: "/Garbha-Samskara.jpg",
     },
     {
-      title: "Ayurvedic Sexual Relationship Course",
+      title: "Ayurvedic  Relationship Course",
       link: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship",
       image: "/Sexual-Relationship.jpg",
     },

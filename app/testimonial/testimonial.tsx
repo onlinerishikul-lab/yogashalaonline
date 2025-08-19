@@ -153,29 +153,33 @@ export default function TestimonialPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative bg-[#1e3a8a] text-white py-20 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl font-bold mb-4">Student Stories & Experiences</h1>
-          <p className="text-lg text-gray-200">
-            Hear directly from our students about their journey, growth, and
-            transformation at Rishikul Yogshala.
-          </p>
-        </div>
-        {/* Decorative Wave */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            className="w-full h-20"
-          >
-            <path
-              fill="#e0f2fe"
-              fillOpacity="1"
-              d="M0,192L80,197.3C160,203,320,213,480,197.3C640,181,800,139,960,133.3C1120,128,1280,160,1360,176L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-            ></path>
-          </svg>
-        </div>
-      </section>
+     <section className="relative bg-[#4377b2] text-white py-24 px-6 text-center min-h-screen flex items-center justify-center">
+  <div className="max-w-3xl mx-auto">
+    <h1 className="text-5xl font-bold mb-6">
+      Student Stories & Experiences
+    </h1>
+    <p className="text-lg text-gray-100">
+      Hear directly from our students about their journey, growth, and
+      transformation at Rishikul Yogshala.
+    </p>
+  </div>
+
+  {/* Decorative Wave */}
+  <div className="absolute bottom-0 left-0 right-0 overflow-hidden">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+      className="w-full h-28"
+    >
+      <path
+        fill="#ffffff"
+        fillOpacity="1"
+        d="M0,192L80,197.3C160,203,320,213,480,197.3C640,181,800,139,960,133.3C1120,128,1280,160,1360,176L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+      ></path>
+    </svg>
+  </div>
+</section>
+
 
       {/* Main Content */}
       <div className="px-4 pt-16 pb-10">

@@ -18,40 +18,41 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
     .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
     .slice(0, 3);
 
+  // ✅ Fixed course links (correct paths to avoid 404)
   const courses = [
     {
       title: "Yoga Anatomy For Safety",
-      link: "/25-Hrs-Yoga-Courses/Yoga-Anatomy",
+      link: "/Yoga-Courses/25-Hrs-Yoga-Courses/Yoga-Anatomy",
       image: "/25.hrs.png",
     },
     {
       title: "Face Yoga TTC",
-      link: "/25-Hrs-Yoga-Courses/face-yoga",
+      link: "/Yoga-Courses/25-Hrs-Yoga-Courses/face-yoga",
       image: "/Face-Yoga.jpg",
     },
     {
       title: "Ayurveda Immunity Course",
-      link: "/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course",
+      link: "/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course",
       image: "/Immunity.jpg",
     },
     {
       title: "Ayurveda Skin and Beauty Course",
-      link: "/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course",
+      link: "/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course",
       image: "/Beauty.jpg",
     },
     {
       title: "Ayurveda Garbha Samskara Course",
-      link: "/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course",
+      link: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course",
       image: "/Garbha-Samskara.jpg",
     },
     {
       title: "Ayurvedic Sexual Relationship Course",
-      link: "/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship",
+      link: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship",
       image: "/Sexual-Relationship.jpg",
     },
     {
       title: "Meditation",
-      link: "/Online-Yoga-Classes/Meditation",
+      link: "/Yoga-Classes/Meditation",
       image: "/meditation.png",
     },
   ];

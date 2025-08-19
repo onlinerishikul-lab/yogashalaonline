@@ -24,17 +24,13 @@ export const CoreValuesSection = ({
               key={index}
               className="flex flex-col items-center text-center space-y-4 w-full md:w-48"
             >
-              <div
-                className={cn(
-                  "w-16 h-16 rounded-full bg-transparent flex items-center justify-center text-white relative z-10 shadow-lg transition-transform hover:scale-110"
-                )}
-              >
+              {/* Just the icon with space (no background) */}
+              <div className="relative z-10 flex items-center justify-center">
                 {value.icon && (
-                  <div className="w-8 h-8 flex items-center justify-center">
-                    <Image src={value.icon} alt="icon" width={45} height={45} />
-                  </div>
+                  <Image src={value.icon} alt="icon" width={45} height={45} />
                 )}
               </div>
+
               <p className="text-gray-800 mt-4 text-lg font-medium max-w-[200px]">
                 {value.text}
               </p>

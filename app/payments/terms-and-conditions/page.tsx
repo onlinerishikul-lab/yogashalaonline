@@ -1,8 +1,11 @@
 // app/(legal)/terms-and-conditions/page.tsx
 import React from "react";
+import { Header } from "@/components/common/header";
+import { SiteFooter } from "@/components/common/footer";
 
 export default function TermsAndConditions() {
   return (
+     <Header />
     <div className="max-w-4xl mx-auto px-6 py-10 space-y-8">
       <h1 className="text-3xl font-bold">
         Terms & Conditions | RishikulOnline
@@ -33,6 +36,7 @@ export default function TermsAndConditions() {
         All disputes shall be governed under <strong>Indian jurisdiction</strong>{" "}
         and settled in a competent court in India.
       </p>
+        <SiteFooter />
     </div>
   );
 }

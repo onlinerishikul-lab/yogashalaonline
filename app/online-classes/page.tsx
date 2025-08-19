@@ -11,16 +11,18 @@ type Course = {
   title: string;
   teacher: string;
   image: string;
+  url?: string; // ✅ added optional URL override
 };
 
-// Converts course titles to clean URL slugs
+// ✅ Converts course titles to clean lowercase URL slugs
 function slugify(title: string): string {
   return title
     .normalize("NFKD")
-    .replace(/\u00A0/g, " ")        // non-breaking space to normal
-    .replace(/\s+/g, "-")           // space to dash
+    .replace(/\u00A0/g, " ")        // convert non-breaking space to normal space
+    .replace(/\s+/g, "-")           // space → dash
     .replace(/[^\w\-]+/g, "")       // remove special characters
-    .replace(/\-+/g, "-")           // collapse dashes
+    .replace(/\-+/g, "-")           // collapse multiple dashes
+    .toLowerCase()                  // force lowercase
     .trim();
 }
 
@@ -56,12 +58,12 @@ const courseList: Course[] = [
     image: "/vinyasaflow.jpg",
   },
   {
-    title: "Exclusive Reversing Diabetic Yoga",
+    title: "Exclusive Reversing Diabetic Yoga",
     teacher: "By Exclusive Reversing Diabetic Yoga Instructors",
     image: "/DiabeticYoga.jpg",
   },
   {
-    title: "Power Yoga",
+    title: "Power Yoga",
     teacher: "By Power Yoga Professionals",
     image: "/PowerYoga.jpg",
   },
@@ -69,6 +71,7 @@ const courseList: Course[] = [
     title: "Yoga Nidra",
     teacher: "By Yoga Nidra Professionals",
     image: "/YogaNidra.jpg",
+    url: "/Yoga-Classes/Yoga%20Nidra", // ✅ direct fixed URL
   },
 ];
 
@@ -86,21 +89,24 @@ export default function ClassesPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {courseList.map((course, index) => {
               const slug = slugify(course.title);
+              const linkHref = course.url || `/Yoga-Classes/${slug}`;
               return (
                 <div
                   key={index}
                   className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between"
                 >
+                  {/* Image */}
                   <div className="relative h-48 w-full">
                     <Image
                       src={course.image}
                       alt={course.title}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      style={{ objectFit: "cover" }}
                       priority
                     />
                   </div>
 
+                  {/* Content */}
                   <div className="p-6 flex flex-col justify-between flex-grow">
                     <div>
                       <h2 className="text-2xl font-semibold text-[#4377B2] mb-1">
@@ -125,9 +131,10 @@ export default function ClassesPage() {
                       </ul>
                     </div>
 
+                    {/* Buttons */}
                     <div className="flex gap-2 mt-4">
                       <Link
-                        href={`//Yoga-Classes/${slug}`}
+                        href={linkHref}   // ✅ uses direct URL if available
                         className="bg-[#4377B2] text-white px-4 py-2 rounded hover:bg-[#285384] transition w-full text-center"
                       >
                         View Detail

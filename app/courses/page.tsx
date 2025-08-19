@@ -30,7 +30,7 @@ function slugify(title: string): string {
 const ayurvedaCourses: Course[] = [
   { title: "Ayurvedic Basics Course for Beginners", teacher: "By Certified Ayurveda Instructors", image: "/ayurveda.png", url: "/Ayurveda-Courses/10-Hrs-Ayurveda-Courses/Ayurvedic-Basics-Course/" },
   { title: "Ayurvedic Herbal Course", teacher: "By Herbal Science Experts", image: "/ayurveda1.jpg", url: "/Ayurveda-Courses/10-Hrs-Ayurveda-Courses/Ayurvedic-Herbal-Course/" },
-  { title: "Ayurvedic Relationship Course", teacher: "By Certified Ayurvedic Counselors", image: "/Sexual-Relationship.jpg", url: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/" },
+  { title: "Ayurvedic Relationship Course", teacher: "By Certified Ayurvedic Counselors", image: "/Sexual-Relationship.jpg", url: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship/" },
   { title: "Ayurveda Garbha Samskara Course", teacher: "By Ayurvedic Fertility Specialists", image: "/Garbha-Samskara.jpg", url: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurveda-Garbha-Samskara-Course/" },
   { title: "Ayurveda Immunity Course", teacher: "By Ayurvedic Immunity Coaches", image: "/Immunity.jpg", url: "/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Immunity-Course/" },
   { title: "Ayurveda Skin and Beauty Course", teacher: "By Ayurvedic Beauty Experts", image: "/Beauty.jpg", url: "/Ayurveda-Courses/25-Hrs-Ayurveda-Courses/Ayurveda-Skin-and-Beauty-Course/" },
@@ -143,7 +143,7 @@ export default function AllCoursesPage() {
       {/* Wellness Section */}
       <section className="min-h-screen bg-[#FBF6F3] py-10 px-6">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold text-center text-[#4377B2] mb-10">Our Yoga & Wellness Classes</h1>
+          <h1 className="text-4xl font-bold text-center text-[#4377B2] mb-10">Our Yoga Classes</h1>
           {renderCourses(wellnessCourses, true)}
         </div>
       </section>

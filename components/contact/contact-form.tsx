@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { onlineYogaTrainingMenu } from "@/constants/course-data";  // ✅ import courses
 
 // Country list with ISO codes for flag + dial codes
 const countries = [
@@ -51,6 +52,7 @@ export default function ContactForm() {
     iso: "in",
     phone: "",
     month: "",
+    course: "",
     message: "",
   });
 
@@ -148,6 +150,22 @@ export default function ContactForm() {
           <option value="">Select a month</option>
           {months.map((m) => (
             <option key={m} value={m}>{m}</option>
+          ))}
+        </select>
+      </div>
+
+      {/* Select Course */}
+      <div>
+        <label className="block text-gray-700 font-medium mb-2">Select Course</label>
+        <select
+          name="course"
+          onChange={handleChange}
+          className="w-full p-3 border rounded-lg bg-white focus:ring-2 focus:ring-blue-500"
+          required
+        >
+          <option value="">Select a course</option>
+          {onlineYogaTrainingMenu.map((c) => (
+            <option key={c.id} value={c.title}>{c.title}</option>
           ))}
         </select>
       </div>

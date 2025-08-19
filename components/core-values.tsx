@@ -34,8 +34,8 @@ export const CoreValuesSection = ({
                   <Image
                     src={value.icon}
                     alt="icon"
-                    width={value.size ?? 60}  // dynamic size
-                    height={value.size ?? 60} // dynamic size
+                    width={value.size ?? 100}  // dynamic size
+                    height={value.size ?? 100} // dynamic size
                     className="mx-auto"
                   />
                 )}

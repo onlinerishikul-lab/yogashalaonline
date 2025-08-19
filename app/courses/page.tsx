@@ -61,7 +61,7 @@ const yogaCourses: Course[] = [
   { title: "Hatha Yoga TTC", teacher: "By Traditional Hatha Yoga Instructors", image: "/hatha-yoga.png", url: "/Yoga-Courses/100-Hrs-Yoga-Courses/Hatha-Yoga-TTC/" },
   { title: "Advanced Yoga Therapy Course", teacher: "By Therapeutic Yoga Professionals", image: "/yoga-theraphy.jpg", url: "/Yoga-Courses/100-Hrs-Yoga-Courses/Advanced-Yoga-Therapy-Course/" },
   { title: "Multi Style Yoga TTC (200 Hrs)", teacher: "By International Yoga Masters", image: "/multistyle-yoga.jpg", url: "/Yoga-Courses/200-Hrs-Yoga-Courses/Multi-Style-Yoga-TTC/" },
-  ];
+];
 
 const wellnessCourses: Course[] = [
   { title: "Prenatal Yoga", teacher: "By Experienced Yoga Teachers", image: "/Prenatal.jpg" },
@@ -72,7 +72,8 @@ const wellnessCourses: Course[] = [
   { title: "Vinyasa Flow", teacher: "By Flow Yoga Professionals", image: "/vinyasaflow.jpg" },
   { title: "Exclusive Reversing Diabetic Yoga", teacher: "By Exclusive Reversing Diabetic Yoga Instructors", image: "/DiabeticYoga.jpg" },
   { title: "Power Yoga", teacher: "By Power Yoga Professionals", image: "/PowerYoga.jpg" },
-  { title: "Yoga Nidra", teacher: "By Yoga Nidra Professionals", image: "/YogaNidra.jpg" },
+  // ✅ Direct URL for Yoga Nidra
+  { title: "Yoga Nidra", teacher: "By Yoga Nidra Professionals", image: "/YogaNidra.jpg", url: "/Yoga-Classes/Yoga%20Nidra" },
 ];
 
 // ---------- COMPONENT ----------
@@ -83,6 +84,10 @@ export default function AllCoursesPage() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {courses.map((course, index) => {
         const slug = isWellness ? slugify(course.title) : "";
+        const linkHref = isWellness
+          ? (course.url || `/Yoga-Classes/${slug}`)
+          : (course.url || "#");
+
         return (
           <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between">
             <div className="relative h-48 w-full">
@@ -101,7 +106,7 @@ export default function AllCoursesPage() {
               </div>
               <div className="flex gap-2 mt-4">
                 <Link
-                  href={isWellness ? `/Yoga-Classes/${slug}` : course.url || "#"}
+                  href={linkHref}
                   className="bg-[#4377B2] text-white px-4 py-2 rounded hover:bg-[#285384] transition w-full text-center"
                 >
                   View Detail

@@ -1,8 +1,11 @@
 // app/(legal)/cancellation-policy/page.tsx
 import React from "react";
+import { Header } from "@/components/common/header";
+import { SiteFooter } from "@/components/common/footer";
 
 export default function CancellationPolicy() {
   return (
+    <Header />
     <div className="max-w-4xl mx-auto px-6 py-10 space-y-8">
       <h1 className="text-3xl font-bold">
         Cancellation & Refund Policy | RishikulOnline
@@ -32,6 +35,7 @@ export default function CancellationPolicy() {
           .
         </li>
       </ul>
+              <SiteFooter />
     </div>
   );
 }

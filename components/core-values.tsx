@@ -9,7 +9,7 @@ export const CoreValuesSection = ({
   values: { icon?: string | undefined; text?: string | undefined }[];
 }) => {
   return (
-    <div className="space-y-8 py-12">
+    <div>
       <h2 className="text-3xl font-bold text-center text-[#4377B2]">{title}</h2>
 
       {/* Values section with continuous lines */}
@@ -17,7 +17,7 @@ export const CoreValuesSection = ({
         {/* Horizontal line centered on icons */}
         <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-[#4377B2] w-full md:w-[80%] md:left-[10%] -translate-y-1/2" />
 
-        <div className="flex flex-row justify-between items-start gap-12 md:gap-4">
+        <div className="flex flex-row justify-between items-start gap-5 md:gap-4">
           {values.map((value, index) => (
             <div
               key={index}

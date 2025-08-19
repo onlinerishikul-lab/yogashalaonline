@@ -33,7 +33,7 @@ const Usp = () => {
             key={index}
             className="flex flex-col items-center p-3 sm:p-4 lg:p-6 hover:transform hover:scale-105 transition-transform duration-300"
           >
-            <div className="rounded-full h-[80px] w-[80px] sm:h-[90px] sm:w-[90px] lg:h-[100px] lg:w-[100px] p-2 flex items-center justify-center mb-1">
+            <div className="rounded-full h-[80px] w-[80px] sm:h-[90px] sm:w-[90px] lg:h-[100px] lg:w-[100px] p-2 flex items-center justify-center">
               <Image
                 src={item.icon}
                 height={50}
@@ -45,7 +45,7 @@ const Usp = () => {
             <h2 className="text-[#4377B2] text-xl sm:text-2xl lg:text-2xl font-semibold text-center">
               {item.count}
             </h2>
-            <p className="text-[#4377B2] text-sm sm:text-base lg:text-base font-semibold text-center mt-1">
+            <p className="text-[#4377B2] text-sm sm:text-base lg:text-base font-semibold text-center">
               {item.text}
             </p>
           </div>

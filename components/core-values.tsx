@@ -9,7 +9,7 @@ export const CoreValuesSection = ({
   values: { icon?: string; text?: string; size?: number }[]; // added size
 }) => {
   return (
-    <div className="py-16">
+    <div className="py-0">
       {/* Title */}
       {title && (
         <h2 className="text-3xl font-bold text-center text-[#4377B2] mb-12">

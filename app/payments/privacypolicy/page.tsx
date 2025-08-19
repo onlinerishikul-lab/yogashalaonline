@@ -1,9 +1,12 @@
+"use client";
 // app/(legal)/privacy-policy/page.tsx
 import React from "react";
-
+import { Header } from "@/components/common/header";
+import { SiteFooter } from "@/components/common/footer";
 export default function PrivacyPolicy() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-10 space-y-8">
+      <Header />
       <h1 className="text-3xl font-bold">Privacy Policy | RishikulOnline</h1>
       <p>
         RishikulOnline respects the privacy of every individual and is committed
@@ -36,6 +39,7 @@ export default function PrivacyPolicy() {
         </a>
         .
       </p>
+      <SiteFooter />
     </div>
   );
 }

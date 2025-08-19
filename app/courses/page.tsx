@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/common/header";
@@ -72,7 +71,6 @@ const wellnessCourses: Course[] = [
   { title: "Vinyasa Flow", teacher: "By Flow Yoga Professionals", image: "/vinyasaflow.jpg" },
   { title: "Exclusive Reversing Diabetic Yoga", teacher: "By Exclusive Reversing Diabetic Yoga Instructors", image: "/DiabeticYoga.jpg" },
   { title: "Power Yoga", teacher: "By Power Yoga Professionals", image: "/PowerYoga.jpg" },
-  // ✅ Direct URL for Yoga Nidra
   { title: "Yoga Nidra", teacher: "By Yoga Nidra Professionals", image: "/YogaNidra.jpg", url: "/Yoga-Classes/Yoga%20Nidra" },
 ];
 
@@ -91,7 +89,8 @@ export default function AllCoursesPage() {
         return (
           <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-between">
             <div className="relative h-48 w-full">
-              <Image src={course.image} alt={course.title} layout="fill" objectFit="cover" priority />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
             </div>
             <div className="p-6 flex flex-col justify-between flex-grow">
               <div>
@@ -129,20 +128,11 @@ export default function AllCoursesPage() {
     <>
       <Header />
 
-      {/* ✅ Hero Section Image */}
-      <section className="relative w-full h-[60vh]">
-        <Image
-          src="/hero-courses.jpg" // 🔹 replace with your hero image path
-          alt="All Courses Hero"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white text-center">
-            Explore Our Courses
-          </h1>
-        </div>
+      {/* ✅ Hero Section with solid background color */}
+      <section className="relative w-full h-[60vh] bg-[#4377B2] flex items-center justify-center">
+        <h1 className="text-4xl md:text-6xl font-bold text-white text-center">
+          Explore Our Courses
+        </h1>
       </section>
 
       {/* Ayurveda Section */}

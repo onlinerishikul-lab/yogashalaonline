@@ -38,7 +38,9 @@ export const BlogCard = memo(function BlogCard({
             decoding="async"
           />
         </div>
-      
+      </Link>
+        <Link
+            href={`/blog/${post.slug}`}>
         {/* Text content */}
         <div className="p-4 flex flex-col justify-between flex-1">
           <div>

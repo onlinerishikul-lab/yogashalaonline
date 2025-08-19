@@ -7,7 +7,7 @@ import { Header } from "@/components/common/header";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/multi-style.jpg")' }}>
+    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/multistyle-yoga.jpg")' }}>
       {/* Header Menu */}
       <Header />
 

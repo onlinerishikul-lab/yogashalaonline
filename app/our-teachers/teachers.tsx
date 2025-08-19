@@ -6,6 +6,7 @@ import { teachers } from "@/constants/about-data"; // ✅ Import teacher data
 import { Header } from "@/components/common/header";
 import { SiteFooter } from "@/components/common/footer";
 
+// ---------- Teacher Card Component ----------
 function TeacherCard({ teacher }: { teacher: (typeof teachers)[0] }) {
   const [expanded, setExpanded] = useState(false);
   const preview = teacher.description.slice(0, 250);
@@ -46,15 +47,27 @@ function TeacherCard({ teacher }: { teacher: (typeof teachers)[0] }) {
   );
 }
 
+// ---------- Page Component ----------
 export default function TeachersPage() {
   return (
     <>
       {/* ---------- HEADER ---------- */}
       <Header />
 
-      <main className="bg-white text-[#4377b2] min-h-screen py-12 px-4 sm:px-8">
-        <h1 className="text-4xl font-bold text-center mb-12">Our Teachers</h1>
+      {/* ---------- HERO SECTION ---------- */}
+      <section className="relative bg-[#4377b2] text-white py-20 px-6 sm:px-12 lg:px-24 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-5xl font-extrabold mb-6">Meet Our Teachers</h1>
+          <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
+            Our dedicated and experienced teachers bring wisdom, compassion, and
+            a deep love for yoga to every class. Discover the people who will
+            guide you on your journey at <strong>RishikulOnline</strong>.
+          </p>
+        </div>
+      </section>
 
+      {/* ---------- MAIN CONTENT ---------- */}
+      <main className="bg-white text-[#4377b2] min-h-screen py-16 px-6 sm:px-12 lg:px-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {teachers.map((teacher) => (
             <TeacherCard key={teacher.id} teacher={teacher} />

@@ -26,7 +26,7 @@ export const CoreValuesSection = ({
               {/* Bigger icon with no background */}
               <div className="relative z-10 flex items-center justify-center">
                 {value.icon && (
-                  <Image src={value.icon} alt="icon" width={70} height={70} />
+                  <Image src={value.icon} alt="icon" width={100} height={100} />
                 )}
               </div>
 

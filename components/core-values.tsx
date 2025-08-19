@@ -9,7 +9,7 @@ export const CoreValuesSection = ({
   values: { icon?: string | undefined; text?: string | undefined }[];
 }) => {
   return (
-    <div className="px-4 sm:px-6 lg:px-8 py-14 bg-white">
+    <div className="px-4 sm:px-6 lg:px-8 py-12">
       {/* Section Title */}
       {title && (
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#4377B2] mb-14">
@@ -19,27 +19,27 @@ export const CoreValuesSection = ({
 
       <div className="relative max-w-6xl mx-auto">
         {/* Horizontal connecting line */}
-        <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-[#4377B2] w-full md:w-[85%] md:left-[7.5%] hidden sm:block" />
+        <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#4377B2] to-transparent w-full" />
 
         {/* Values */}
-        <div className="flex flex-wrap justify-center gap-y-12 gap-x-10 md:gap-x-16 relative z-10">
+        <div className="flex flex-wrap justify-center gap-y-14 gap-x-12 relative z-10">
           {values.map((value, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center w-[45%] sm:w-[30%] md:w-[20%]"
+              className="flex flex-col items-center text-center w-[40%] sm:w-[28%] md:w-[20%]"
             >
-              <div className="flex items-center justify-center rounded-full bg-white shadow-lg p-6 sm:p-7 transition-transform hover:scale-110">
+              <div className="flex items-center justify-center rounded-full bg-gradient-to-br from-white to-gray-50 shadow-lg p-6 transition-transform duration-300 hover:scale-110 hover:shadow-xl">
                 {value.icon && (
                   <Image
                     src={value.icon}
                     alt="icon"
-                    width={110}   // Increased icon size
-                    height={110}  // Increased icon size
+                    width={60}
+                    height={60}
                     className="object-contain"
                   />
                 )}
               </div>
-              <p className="text-gray-800 mt-4 text-base sm:text-lg font-semibold max-w-[220px] leading-snug">
+              <p className="text-gray-800 mt-4 text-sm sm:text-base font-semibold leading-snug">
                 {value.text}
               </p>
             </div>

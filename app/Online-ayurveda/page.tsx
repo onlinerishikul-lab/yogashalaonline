@@ -31,7 +31,7 @@ const courseList: Course[] = [
     title: "Ayurvedic Relationship Course",
     teacher: "By Certified Ayurvedic Counselors",
     image: "/Sexual-Relationship.jpg",
-    url: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Sexual-Relationship/",
+    url: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship/",
   },
   {
     title: "Ayurveda Garbha Samskara Course",
@@ -144,3 +144,4 @@ export default function ClassesPage() {
     </>
   );
 }
+

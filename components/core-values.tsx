@@ -6,7 +6,7 @@ export const CoreValuesSection = ({
   values,
 }: {
   title?: string | undefined;
-  values: { icon?: string | undefined; text?: string | undefined; size?: number | undefined }[];
+  values: { icon?: string | undefined; text?: string | undefined }[];
 }) => {
   return (
     <div className="space-y-8 py-12">
@@ -14,8 +14,8 @@ export const CoreValuesSection = ({
 
       {/* Values section with continuous lines */}
       <div className="relative max-w-5xl mx-auto px-4 md:px-8">
-        {/* Horizontal line */}
-        <div className="absolute top-1/4 left-0 right-0 h-[2px] bg-[#4377B2] w-full md:w-[80%] md:left-[10%]" />
+        {/* Horizontal line centered on icons */}
+        <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-[#4377B2] w-full md:w-[80%] md:left-[10%] -translate-y-1/2" />
 
         <div className="flex flex-row justify-between items-start gap-12 md:gap-4">
           {values.map((value, index) => (
@@ -23,15 +23,10 @@ export const CoreValuesSection = ({
               key={index}
               className="flex flex-col items-center text-center space-y-4 w-full md:w-48"
             >
-              {/* Icon with custom size (default 100) */}
+              {/* Icon with no background */}
               <div className="relative z-10 flex items-center justify-center">
                 {value.icon && (
-                  <Image
-                    src={value.icon}
-                    alt="icon"
-                    width={value.size ?? 100}
-                    height={value.size ?? 100}
-                  />
+                  <Image src={value.icon} alt="icon" width={100} height={100} />
                 )}
               </div>
 

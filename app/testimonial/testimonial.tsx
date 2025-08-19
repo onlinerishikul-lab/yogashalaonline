@@ -153,12 +153,13 @@ export default function TestimonialPage() {
       </div>
 
       {/* Hero Section */}
-     <section className="relative bg-[#4377b2] text-white py-24 px-6 text-center min-h-screen flex items-center justify-center">
+     {/* Hero Section */}
+<section className="relative bg-gradient-to-r from-[#4377b2] to-[#265a8f] text-white py-20 px-6 text-center">
   <div className="max-w-3xl mx-auto">
-    <h1 className="text-5xl font-bold mb-6">
+    <h1 className="text-4xl md:text-5xl font-bold mb-4">
       Student Stories & Experiences
     </h1>
-    <p className="text-lg text-gray-100">
+    <p className="text-base md:text-lg text-gray-100">
       Hear directly from our students about their journey, growth, and
       transformation at Rishikul Yogshala.
     </p>
@@ -169,7 +170,7 @@ export default function TestimonialPage() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 320"
-      className="w-full h-28"
+      className="w-full h-20"
     >
       <path
         fill="#ffffff"

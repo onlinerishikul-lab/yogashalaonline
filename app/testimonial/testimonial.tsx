@@ -148,16 +148,40 @@ export default function TestimonialPage() {
   return (
     <div className="bg-gradient-to-b from-[#e0f2fe] to-white min-h-screen relative">
       {/* Fixed Header */}
-<div className="bg-[#4377b2]">
-  <Header/>
-</div>
+      <div className="bg-[#4377b2]">
+        <Header />
+      </div>
 
+      {/* Hero Section */}
+      <section className="relative bg-[#1e3a8a] text-white py-20 px-6 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-5xl font-bold mb-4">Student Stories & Experiences</h1>
+          <p className="text-lg text-gray-200">
+            Hear directly from our students about their journey, growth, and
+            transformation at Rishikul Yogshala.
+          </p>
+        </div>
+        {/* Decorative Wave */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            className="w-full h-20"
+          >
+            <path
+              fill="#e0f2fe"
+              fillOpacity="1"
+              d="M0,192L80,197.3C160,203,320,213,480,197.3C640,181,800,139,960,133.3C1120,128,1280,160,1360,176L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+      </section>
 
-      {/* Added pt-24 so content clears header */}
-      <div className="px-4 pt-24 pb-10">
-        <h1 className="text-4xl font-bold text-center text-[#1e3a8a] mb-10">
+      {/* Main Content */}
+      <div className="px-4 pt-16 pb-10">
+        <h2 className="text-4xl font-bold text-center text-[#1e3a8a] mb-10">
           What Our Students Say
-        </h1>
+        </h2>
 
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 items-stretch">
           {/* Left Side: Video Grid */}

@@ -31,24 +31,26 @@ const Usp = () => {
         {uspContent.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-3 sm:p-4 lg:p-6 hover:transform hover:scale-105 transition-transform duration-300"
+            className="flex flex-col items-center p-3 sm:p-4 lg:p-6 transform transition-transform duration-300 hover:scale-105"
           >
-            <div className="flex flex-col items-center gap-0">
-              <div className="rounded-full h-[80px] w-[80px] sm:h-[90px] sm:w-[90px] lg:h-[100px] lg:w-[100px] p-2 flex items-center justify-center mb-0">
-                <Image
-                  src={item.icon}
-                  height={50}
-                  width={50}
-                  alt="usp icon"
-                  className="w-[50px] h-[50px] sm:w-[50px] sm:h-[50px] lg:w-[50px] lg:h-[50px]"
-                  style={{ marginBottom: 0 }}
-                />
-              </div>
-              <h2 className="text-[#4377B2] text-xl sm:text-2xl lg:text-2xl font-semibold text-center leading-none mt-0">
-                {item.count}
-              </h2>
+            {/* icon */}
+            <div className="rounded-full flex items-center justify-center h-[80px] w-[80px] sm:h-[90px] sm:w-[90px] lg:h-[100px] lg:w-[100px] p-1">
+              <Image
+                src={item.icon}
+                width={48}
+                height={48}
+                alt="usp icon"
+                className="block w-[48px] h-[48px] object-contain"
+              />
             </div>
-            <p className="text-[#4377B2] text-sm sm:text-base lg:text-base font-semibold text-center">
+
+            {/* count - reset default heading margins so there's no gap */}
+            <h2 className="m-0 text-[#4377B2] text-xl sm:text-2xl lg:text-2xl font-semibold text-center leading-none">
+              {item.count}
+            </h2>
+
+            {/* description */}
+            <p className="mt-1 text-[#4377B2] text-sm sm:text-base lg:text-base font-semibold text-center">
               {item.text}
             </p>
           </div>

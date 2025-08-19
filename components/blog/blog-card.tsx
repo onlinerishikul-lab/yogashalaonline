@@ -38,7 +38,7 @@ export const BlogCard = memo(function BlogCard({
             decoding="async"
           />
         </div>
-      </Link>
+      
         {/* Text content */}
         <div className="p-4 flex flex-col justify-between flex-1">
           <div>
@@ -55,6 +55,7 @@ export const BlogCard = memo(function BlogCard({
               {post.excerpt}
             </p>
           </div>
+          </Link>
           <Link
             href={`/blog/${post.slug}`}
             className="mt-3 text-sm text-[#4377B2] font-medium hover:underline self-start"

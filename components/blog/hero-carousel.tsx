@@ -30,7 +30,7 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
       role="group"
       aria-roledescription="carousel"
       aria-label="Hero blog carousel"
-      className="relative w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 h-[300px] sm:h-[400px] overflow-hidden"
+      className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden"
     >
       <AnimatePresence initial={false} mode="wait">
         <motion.div
@@ -45,11 +45,11 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
             src={currentPost.imageUrl}
             alt={currentPost.title || 'Blog post cover'}
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1280px"
+            sizes="100vw"
             priority={true}
             loading="eager"
             fetchPriority="high"
-            quality={40}
+            quality={60}
             placeholder={currentPost.blurDataURL ? 'blur' : 'empty'}
             blurDataURL={currentPost.blurDataURL}
             decoding="async"
@@ -57,20 +57,20 @@ export const HeroCarousel = memo(function HeroCarousel({ posts }: HeroCarouselPr
           />
 
           <div className="absolute inset-0 flex flex-col justify-end bg-black/50 p-4 sm:p-6 text-white backdrop-blur-sm">
-            <div className="max-w-2xl space-y-2" aria-live="polite">
+            <div className="max-w-3xl space-y-2 mx-auto text-center" aria-live="polite">
               <div className="text-xs sm:text-sm opacity-80">
                 <time dateTime={new Date(currentPost.date).toISOString()}>
                   {currentPost.date}
                 </time>{' '}
                 &mdash; <span>{currentPost.category}</span>
               </div>
-              <h1 className="text-xl sm:text-2xl font-bold">{currentPost.title}</h1>
-              <p className="text-white/90 text-xs sm:text-base line-clamp-2">
+              <h1 className="text-xl sm:text-3xl lg:text-4xl font-bold">{currentPost.title}</h1>
+              <p className="text-white/90 text-xs sm:text-base lg:text-lg line-clamp-2">
                 {currentPost.excerpt}
               </p>
               <Link
                 href={`/blog/${currentPost.slug}`}
-                className="inline-block text-sm underline hover:opacity-80"
+                className="inline-block text-sm sm:text-base underline hover:opacity-80"
               >
                 Read More →
               </Link>

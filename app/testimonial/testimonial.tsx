@@ -149,7 +149,7 @@ export default function TestimonialPage() {
     <div className="bg-gradient-to-b from-[#e0f2fe] to-white min-h-screen relative">
       {/* Fixed Header */}
 <div className="bg-[#4377b2]">
-  <Header className="bg-transparent text-white" />
+  <Header/>
 </div>
 
 

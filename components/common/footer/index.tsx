@@ -10,27 +10,26 @@ export const SiteFooter = () => {
         {/* Top Section: Logo and Navigation */}
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between mb-10 gap-8 md:gap-0">
           <Link href="/">
-          <div className="flex-shrink-0">
-            <Image
-              src="/assets/rishikulonlinlogo.png"
-              alt="Rishikul Online Yoga Logo"
-              height={120}
-              width={80}
-              className="object-contain"
-              priority
-            />
-          </div>
+            <div className="flex-shrink-0">
+              <Image
+                src="/assets/rishikulonlinlogo.png"
+                alt="Rishikul Online Yoga Logo"
+                height={120}
+                width={80}
+                className="object-contain"
+                priority
+              />
+            </div>
           </Link>
-         <nav className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-white text-sm md:text-base">
-  <Link href="/about" className="hover:underline">About</Link>
-  <Link href="/our-teachers" className="hover:underline">Our Team</Link>
-  <Link href="/blog" className="hover:underline">Blogs</Link>
-  <Link href="/courses" className="hover:underline">Courses</Link>
-  <Link href="/payments" className="hover:underline">Privacy Policy</Link>
-  <Link href="/payments" className="hover:underline">Terms & Conditions</Link>
-  <Link href="/payments" className="hover:underline">Refund & Cancellation Policy</Link>
-</nav>
-
+          <nav className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-white text-sm md:text-base">
+            <Link href="/about" className="hover:underline">About</Link>
+            <Link href="/our-teachers" className="hover:underline">Our Team</Link>
+            <Link href="/blog" className="hover:underline">Blogs</Link>
+            <Link href="/courses" className="hover:underline">Courses</Link>
+            <Link href="/payments/privacypolicy" className="hover:underline">Privacy Policy</Link>
+            <Link href="/payments/terms-and-conditions" className="hover:underline">Terms & Conditions</Link>
+            <Link href="/payments/cancellation-policy" className="hover:underline">Refund & Cancellation Policy</Link>
+          </nav>
         </div>
 
         {/* Middle Section: Description and Contact */}

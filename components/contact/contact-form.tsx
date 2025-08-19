@@ -1,270 +1,136 @@
 "use client";
-
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { useRef, useState } from "react";
-import * as z from "zod";
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { onlineYogaTrainingMenu } from "@/constants/course-data";
+import { useState } from "react";
 
 const countries = [
-  "India", "United States", "United Kingdom", "Canada", "Australia", "Germany", "France",
-  "Japan", "China", "Brazil", "South Africa", "Italy", "Netherlands", "New Zealand",
-  "Singapore", "Mexico", "Spain", "Russia", "Switzerland", "Sweden", "Norway",
-  "Denmark", "Ireland", "UAE", "Saudi Arabia", "Pakistan", "Bangladesh",
-  "Sri Lanka", "Nepal", "Thailand", "Malaysia", "Indonesia"
+  { code: "+1", name: "United States" },
+  { code: "+44", name: "United Kingdom" },
+  { code: "+91", name: "India" },
+  { code: "+61", name: "Australia" },
+  { code: "+81", name: "Japan" },
+  { code: "+49", name: "Germany" },
+  { code: "+33", name: "France" },
+  { code: "+39", name: "Italy" },
+  { code: "+971", name: "UAE" },
+  { code: "+86", name: "China" },
+  { code: "+7", name: "Russia" },
+  // 👉 You can extend this with a full ISO country code list
 ];
 
-const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
-  phone: z.string().min(10, "Phone number must be at least 10 digits"),
-  courseName: z.string().min(1, "Please select a course"),
-  courseDate: z.string().optional(),
-  gender: z.string().min(1, "Please select gender"),
-  country: z.string().min(1, "Please select country"),
-  message: z.string().optional(),
-});
+const months = [
+  "January","February","March","April","May","June",
+  "July","August","September","October","November","December"
+];
 
 export default function ContactForm() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      courseName: "",
-      courseDate: "",
-      gender: "",
-      country: "",
-      message: "",
-    },
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    countryCode: "+91",
+    phone: "",
+    month: "",
+    message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  const handleIframeLoad = () => {
-    setSubmitted(true);
-    form.reset();
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form Submitted: ", formData);
   };
 
   return (
-    <>
-      {submitted && (
-        <p className="text-green-600 text-center mb-4">
-          ✅ Thank you! Your message has been sent.
-        </p>
-      )}
+    <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Name */}
+      <div>
+        <label className="block text-gray-700 font-medium mb-2">Full Name</label>
+        <input
+          type="text"
+          name="name"
+          onChange={handleChange}
+          className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your full name"
+          required
+        />
+      </div>
 
-      <Form {...form}>
-        <form
-          action="https://formsubmit.co/rishikulonline108@gmail.com"
-          method="POST"
-          target="hidden_iframe"
-          onSubmit={() => setTimeout(handleIframeLoad, 1000)}
-          className="space-y-6"
-        >
-          {/* Hidden inputs for FormSubmit */}
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
+      {/* Email */}
+      <div>
+        <label className="block text-gray-700 font-medium mb-2">Email</label>
+        <input
+          type="email"
+          name="email"
+          onChange={handleChange}
+          className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+
+      {/* Country Code + Phone */}
+      <div>
+        <label className="block text-gray-700 font-medium mb-2">Phone Number</label>
+        <div className="flex gap-2">
+          <select
+            name="countryCode"
+            value={formData.countryCode}
+            onChange={handleChange}
+            className="w-1/3 p-3 border rounded-lg bg-white focus:ring-2 focus:ring-blue-500"
+          >
+            {countries.map((c) => (
+              <option key={c.code} value={c.code}>
+                {c.name} ({c.code})
+              </option>
+            ))}
+          </select>
           <input
-            type="hidden"
-            name="_subject"
-            value="New Rishikul Online Contact Form Submission"
+            type="tel"
+            name="phone"
+            onChange={handleChange}
+            className="w-2/3 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            placeholder="Phone number"
+            required
           />
+        </div>
+      </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Name */}
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Name</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="John Carter"
-                      {...field}
-                      className="rounded-full border-gray-200"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+      {/* Select Month */}
+      <div>
+        <label className="block text-gray-700 font-medium mb-2">Preferred Month</label>
+        <select
+          name="month"
+          onChange={handleChange}
+          className="w-full p-3 border rounded-lg bg-white focus:ring-2 focus:ring-blue-500"
+          required
+        >
+          <option value="">Select a month</option>
+          {months.map((m) => (
+            <option key={m} value={m}>{m}</option>
+          ))}
+        </select>
+      </div>
 
-            {/* Email */}
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input
-                      type="email"
-                      placeholder="Email address"
-                      {...field}
-                      className="rounded-full border-gray-200"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+      {/* Message */}
+      <div>
+        <label className="block text-gray-700 font-medium mb-2">Message</label>
+        <textarea
+          name="message"
+          onChange={handleChange}
+          rows={4}
+          className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your message"
+          required
+        />
+      </div>
 
-            {/* Phone */}
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="(123) 456 - 7890"
-                      {...field}
-                      className="rounded-full border-gray-200"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* Course Name */}
-            <FormField
-              control={form.control}
-              name="courseName"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Course Name</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger className="rounded-full border-gray-200">
-                        <SelectValue placeholder="Select a course" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      {onlineYogaTrainingMenu.map((course) => (
-                        <SelectItem key={course.title} value={course.title}>
-                          {course.title}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* Gender */}
-            <FormField
-              control={form.control}
-              name="gender"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Gender</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger className="rounded-full border-gray-200">
-                        <SelectValue placeholder="Choose" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectItem value="male">Male</SelectItem>
-                      <SelectItem value="female">Female</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* Country */}
-            <FormField
-              control={form.control}
-              name="country"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Country</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger className="rounded-full border-gray-200">
-                        <SelectValue placeholder="Choose" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      {countries.map((country) => (
-                        <SelectItem key={country} value={country}>
-                          {country}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-
-          {/* Message */}
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Message</FormLabel>
-                <FormControl>
-                  <Textarea
-                    placeholder="Write a comment..."
-                    className="min-h-[120px] rounded-[24px] border-gray-200"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          {/* Submit Button */}
-          <div className="flex justify-center">
-            <Button
-              type="submit"
-              className="bg-[#4377B2] hover:bg-[#285384] text-white rounded-full px-8 py-6 text-lg font-medium"
-            >
-              Submit
-            </Button>
-          </div>
-        </form>
-      </Form>
-
-      {/* Hidden iframe to prevent redirect */}
-      <iframe
-        name="hidden_iframe"
-        ref={iframeRef}
-        style={{ display: "none" }}
-        onLoad={handleIframeLoad}
-      />
-    </>
+      {/* Submit Button */}
+      <button
+        type="submit"
+        className="w-full py-3 bg-[#4377B2] text-white font-semibold rounded-lg hover:bg-[#35608f] transition"
+      >
+        Submit
+      </button>
+    </form>
   );
 }

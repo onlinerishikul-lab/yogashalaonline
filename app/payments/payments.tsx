@@ -116,7 +116,7 @@ export default function PaymentPage() {
       <Header />
 
       {/* Full-Width Hero Section */}
-      <div className="relative w-full h-[400px] sm:h-[500px]">
+      <div className="relative w-full h-[200px] sm:h-[200px]">
         <Image
           src="/1.png"
           alt="Peaceful yoga practice"

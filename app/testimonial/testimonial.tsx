@@ -132,8 +132,8 @@ export default function TestimonialPage() {
               <Image
                 src={video.thumbnail}
                 alt={video.title}
-                layout="fill"
-                className="w-full h-full"
+                fill
+                className="object-cover"
               />
             </div>
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-3xl">
@@ -146,29 +146,34 @@ export default function TestimonialPage() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-[#e0f2fe] to-white min-h-screen px-4 py-10 relative">
+    <div className="bg-gradient-to-b from-[#e0f2fe] to-white min-h-screen relative">
+      {/* Fixed Header */}
       <Header />
-      <h1 className="text-4xl font-bold text-center text-[#1e3a8a] mb-10">
-        What Our Students Say
-      </h1>
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 items-stretch">
-        {/* Left Side: Video Grid */}
-        <div className="flex-1 grid grid-cols-2 gap-4">
-          {videos.map((video, index) => renderVideoCard(video, index))}
-        </div>
+      {/* Added pt-24 so content clears header */}
+      <div className="px-4 pt-24 pb-10">
+        <h1 className="text-4xl font-bold text-center text-[#1e3a8a] mb-10">
+          What Our Students Say
+        </h1>
 
-        {/* Right Side: Testimonials */}
-        <div className="flex-1 flex flex-col">
-          {testimonials.map((t, index) => (
-            <TestimonialCard
-              key={index}
-              author={t.author}
-              date={t.date}
-              rating={t.rating}
-              review={t.review}
-            />
-          ))}
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 items-stretch">
+          {/* Left Side: Video Grid */}
+          <div className="flex-1 grid grid-cols-2 gap-4">
+            {videos.map((video, index) => renderVideoCard(video, index))}
+          </div>
+
+          {/* Right Side: Testimonials */}
+          <div className="flex-1 flex flex-col">
+            {testimonials.map((t, index) => (
+              <TestimonialCard
+                key={index}
+                author={t.author}
+                date={t.date}
+                rating={t.rating}
+                review={t.review}
+              />
+            ))}
+          </div>
         </div>
       </div>
 

@@ -94,7 +94,7 @@ export const SiteFooter = () => {
             </Link>
           </div>
           <p className="text-center md:text-right w-full md:w-auto">
-            © 2025 — All Rights Reserved
+            © 2025 - All Rights Reserved
           </p>
         </div>
       </div>

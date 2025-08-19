@@ -3,6 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { Header } from "@/components/common/header";
+import Link from "next/link"; 
+import { useRouter } from "next/navigation";
  // Adjust the path if it's in a different folder
 
 const HeroSection = () => {
@@ -18,7 +20,7 @@ const HeroSection = () => {
           <br />
           Discover the Foundations of Natural Healing.
         </h1>
-        <button className="mt-6 bg-[#4377b2] hover:bg-[#365e8f] transition-colors duration-300 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg">
+        <button onClick={() => router.push("/contact") className="mt-6 bg-[#4377b2] hover:bg-[#365e8f] transition-colors duration-300 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg">
           Enroll Now
         </button>
 

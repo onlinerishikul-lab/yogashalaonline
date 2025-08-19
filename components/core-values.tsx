@@ -26,11 +26,11 @@ export const CoreValuesSection = ({
             >
               <div
                 className={cn(
-                  "w-16 h-16 rounded-full bg-[#4377B2] flex items-center justify-center  text-white relative z-10 shadow-lg transition-transform hover:scale-110"
+                  "w-16 h-16 rounded-full bg-transparent flex items-center justify-center text-white relative z-10 shadow-lg transition-transform hover:scale-110"
                 )}
               >
                 {value.icon && (
-                  <div className="w-8 h-8 text-white flex items-center justify-center">
+                  <div className="w-8 h-8 flex items-center justify-center">
                     <Image src={value.icon} alt="icon" width={45} height={45} />
                   </div>
                 )}

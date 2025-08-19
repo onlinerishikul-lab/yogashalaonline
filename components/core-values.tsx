@@ -6,7 +6,7 @@ export const CoreValuesSection = ({
   values,
 }: {
   title?: string | undefined;
-  values: { icon?: string | undefined; text?: string | undefined }[];
+  values: { icon?: string | undefined; text?: string | undefined; size?: number | undefined }[];
 }) => {
   return (
     <div className="space-y-8 py-12">
@@ -23,10 +23,15 @@ export const CoreValuesSection = ({
               key={index}
               className="flex flex-col items-center text-center space-y-4 w-full md:w-48"
             >
-              {/* Bigger icon with no background */}
+              {/* Icon with custom size (default 100) */}
               <div className="relative z-10 flex items-center justify-center">
                 {value.icon && (
-                  <Image src={value.icon} alt="icon" width={100} height={100} />
+                  <Image
+                    src={value.icon}
+                    alt="icon"
+                    width={value.size ?? 100}
+                    height={value.size ?? 100}
+                  />
                 )}
               </div>
 

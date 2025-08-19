@@ -1,19 +1,41 @@
 "use client";
 import { useState } from "react";
 
+// Country list with ISO codes for flag + dial codes
 const countries = [
-  { code: "+1", name: "United States" },
-  { code: "+44", name: "United Kingdom" },
-  { code: "+91", name: "India" },
-  { code: "+61", name: "Australia" },
-  { code: "+81", name: "Japan" },
-  { code: "+49", name: "Germany" },
-  { code: "+33", name: "France" },
-  { code: "+39", name: "Italy" },
-  { code: "+971", name: "UAE" },
-  { code: "+86", name: "China" },
-  { code: "+7", name: "Russia" },
-  // 👉 You can extend this with a full ISO country code list
+  { code: "+1", name: "United States", iso: "us" },
+  { code: "+44", name: "United Kingdom", iso: "gb" },
+  { code: "+91", name: "India", iso: "in" },
+  { code: "+61", name: "Australia", iso: "au" },
+  { code: "+81", name: "Japan", iso: "jp" },
+  { code: "+49", name: "Germany", iso: "de" },
+  { code: "+33", name: "France", iso: "fr" },
+  { code: "+39", name: "Italy", iso: "it" },
+  { code: "+971", name: "UAE", iso: "ae" },
+  { code: "+86", name: "China", iso: "cn" },
+  { code: "+7", name: "Russia", iso: "ru" },
+  { code: "+34", name: "Spain", iso: "es" },
+  { code: "+55", name: "Brazil", iso: "br" },
+  { code: "+27", name: "South Africa", iso: "za" },
+  { code: "+62", name: "Indonesia", iso: "id" },
+  { code: "+63", name: "Philippines", iso: "ph" },
+  { code: "+60", name: "Malaysia", iso: "my" },
+  { code: "+65", name: "Singapore", iso: "sg" },
+  { code: "+92", name: "Pakistan", iso: "pk" },
+  { code: "+94", name: "Sri Lanka", iso: "lk" },
+  { code: "+880", name: "Bangladesh", iso: "bd" },
+  { code: "+968", name: "Oman", iso: "om" },
+  { code: "+966", name: "Saudi Arabia", iso: "sa" },
+  { code: "+20", name: "Egypt", iso: "eg" },
+  { code: "+212", name: "Morocco", iso: "ma" },
+  { code: "+234", name: "Nigeria", iso: "ng" },
+  { code: "+82", name: "South Korea", iso: "kr" },
+  { code: "+90", name: "Turkey", iso: "tr" },
+  { code: "+31", name: "Netherlands", iso: "nl" },
+  { code: "+41", name: "Switzerland", iso: "ch" },
+  { code: "+46", name: "Sweden", iso: "se" },
+  { code: "+47", name: "Norway", iso: "no" },
+  { code: "+358", name: "Finland", iso: "fi" },
 ];
 
 const months = [
@@ -26,13 +48,23 @@ export default function ContactForm() {
     name: "",
     email: "",
     countryCode: "+91",
+    iso: "in",
     phone: "",
     month: "",
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+
+    if (name === "countryCode") {
+      const selected = countries.find((c) => c.code === value);
+      setFormData({ ...formData, countryCode: value, iso: selected?.iso || "in" });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -76,7 +108,7 @@ export default function ContactForm() {
             name="countryCode"
             value={formData.countryCode}
             onChange={handleChange}
-            className="w-1/3 p-3 border rounded-lg bg-white focus:ring-2 focus:ring-blue-500"
+            className="w-1/2 md:w-1/3 p-3 border rounded-lg bg-white focus:ring-2 focus:ring-blue-500"
           >
             {countries.map((c) => (
               <option key={c.code} value={c.code}>
@@ -88,10 +120,19 @@ export default function ContactForm() {
             type="tel"
             name="phone"
             onChange={handleChange}
-            className="w-2/3 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            className="w-1/2 md:w-2/3 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
             placeholder="Phone number"
             required
           />
+        </div>
+        {/* Show selected flag + code */}
+        <div className="flex items-center gap-2 mt-2">
+          <img
+            src={`https://flagcdn.com/w20/${formData.iso}.png`}
+            alt="flag"
+            className="w-6 h-4 object-cover rounded"
+          />
+          <span className="text-gray-700">{formData.countryCode}</span>
         </div>
       </div>
 

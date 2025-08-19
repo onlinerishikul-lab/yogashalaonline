@@ -148,7 +148,9 @@ export default function TestimonialPage() {
   return (
     <div className="bg-gradient-to-b from-[#e0f2fe] to-white min-h-screen relative">
       {/* Fixed Header */}
-      <Header />
+    <div className="bg-[#4377b2]">
+        <Header />
+      </div>
 
       {/* Added pt-24 so content clears header */}
       <div className="px-4 pt-24 pb-10">

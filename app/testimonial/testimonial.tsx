@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
-export const TestimonialsPage  = () => {
+export const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-[#4377b2] text-white shadow-md z-50">
       <div className="max-w-screen-2xl mx-auto flex items-center justify-between px-6 py-4">

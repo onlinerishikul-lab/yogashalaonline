@@ -1,6 +1,6 @@
 "use client";
 import { SiteFooter } from "@/components/common/footer";
-import { TestimonialsPage } from "@/app/testimonial/testimonial";
+import TestimonialsPage  from "@/app/testimonial/testimonial";
 
 export default function Page() {
   return (
@@ -10,4 +10,5 @@ export default function Page() {
     </div>
   );
 }
+
 

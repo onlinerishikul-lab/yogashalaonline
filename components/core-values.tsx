@@ -26,23 +26,24 @@ export const CoreValuesSection = ({
           {values.map((value, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center w-24 md:w-32"
+              className="flex flex-col items-center text-center w-24 md:w-32 relative"
             >
-              {/* Icon directly */}
-              {value.icon && (
-                <Image
-                  src={value.icon}
-                  alt="icon"
-                  width={value.size ?? 100}
-                  height={value.size ?? 100}
-                  className="mx-auto"
-                />
-              )}
-
-              {/* Text directly below icon */}
-              <p className="text-gray-800 text-base font-medium leading-tight">
-                {value.text}
-              </p>
+              {/* Icon + Text as one block */}
+              <div className="relative inline-block">
+                {value.icon && (
+                  <Image
+                    src={value.icon}
+                    alt="icon"
+                    width={value.size ?? 100}
+                    height={value.size ?? 100}
+                    className="mx-auto"
+                  />
+                )}
+                {/* Text OVERLAPPING bottom of icon */}
+                <p className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full text-gray-800 text-base font-semibold whitespace-nowrap">
+                  {value.text}
+                </p>
+              </div>
             </div>
           ))}
         </div>

@@ -55,16 +55,18 @@ export default function TeachersPage() {
       <Header />
 
       {/* ---------- HERO SECTION ---------- */}
-      <section className="relative bg-[#4377b2] text-white py-20 px-6 sm:px-12 lg:px-24 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl font-extrabold mb-6">Meet Our Teachers</h1>
-          <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
-            Our dedicated and experienced teachers bring wisdom, compassion, and
-            a deep love for yoga to every class. Discover the people who will
-            guide you on your journey at <strong>RishikulOnline</strong>.
-          </p>
-        </div>
-      </section>
+     {/* ---------- HERO SECTION ---------- */}
+<section className="relative bg-[#4377b2] text-white pt-32 pb-20 px-6 sm:px-12 lg:px-24 text-center">
+  <div className="max-w-3xl mx-auto">
+    <h1 className="text-5xl font-extrabold mb-6">Meet Our Teachers</h1>
+    <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
+      Our dedicated and experienced teachers bring wisdom, compassion, and
+      a deep love for yoga to every class. Discover the people who will
+      guide you on your journey at <strong>RishikulOnline</strong>.
+    </p>
+  </div>
+</section>
+
 
       {/* ---------- MAIN CONTENT ---------- */}
       <main className="bg-white text-[#4377b2] min-h-screen py-16 px-6 sm:px-12 lg:px-24">
@@ -80,3 +82,4 @@ export default function TeachersPage() {
     </>
   );
 }
+

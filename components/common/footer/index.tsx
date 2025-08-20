@@ -26,6 +26,7 @@ export const SiteFooter = () => {
             <Link href="/our-teachers" className="hover:underline">Our Team</Link>
             <Link href="/blog" className="hover:underline">Blogs</Link>
             <Link href="/courses" className="hover:underline">Courses</Link>
+            <Link href="/payments" className="hover:underline">Privacy Policy</Link>
             <Link href="/payments/privacypolicy" className="hover:underline">Privacy Policy</Link>
             <Link href="/payments/terms-and-conditions" className="hover:underline">Terms & Conditions</Link>
             <Link href="/payments/cancellation-policy" className="hover:underline">Refund & Cancellation Policy</Link>

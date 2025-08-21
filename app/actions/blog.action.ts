@@ -20,15 +20,6 @@ export type Blog = {
   author: Author;
 }
 
-// Utility to normalize slugs
-function normalizeSlug(title: string, slug?: string): string {
-  const base = slug || title;
-  return base
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric with hyphen
-    .replace(/^-+|-+$/g, ''); // Trim starting/ending hyphens
-}
-
 export async function getAllBlogs(): Promise<Blog[]> {
   try {
     const blogs = await prisma.blog.findMany({
@@ -36,22 +27,15 @@ export async function getAllBlogs(): Promise<Blog[]> {
         createdAt: 'desc'
       }
     });
-
-    // Ensure slug normalization
-    return blogs.map(blog => ({
-      ...blog,
-      slug: normalizeSlug(blog.title, blog.slug)
-    }));
+    return blogs;
   } catch (error) {
     console.error("Error fetching blogs:", error);
     throw new Error("Failed to fetch blogs");
   }
 }
 
-export async function getPaginatedBlogs(
-  page: number = 1, 
-  limit: number = 6
-): Promise<{ blogs: Blog[], total: number }> {
+// Add pagination support
+export async function getPaginatedBlogs(page: number = 1, limit: number = 6): Promise<{ blogs: Blog[], total: number }> {
   try {
     const skip = (page - 1) * limit;
     
@@ -66,14 +50,8 @@ export async function getPaginatedBlogs(
       prisma.blog.count()
     ]);
 
-    // Ensure slug normalization
-    const normalizedBlogs = blogs.map(blog => ({
-      ...blog,
-      slug: normalizeSlug(blog.title, blog.slug)
-    }));
-
     return {
-      blogs: normalizedBlogs,
+      blogs,
       total
     };
   } catch (error) {

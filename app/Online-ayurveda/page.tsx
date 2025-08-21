@@ -77,11 +77,20 @@ export default function ClassesPage() {
   return (
     <>
       <Header />
+      
+      {/* Hero Section */}
+      <section className="bg-[#4377b2] text-white py-16">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Ayurveda Courses</h1>
+          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+            Discover the ancient wisdom of Ayurveda through our comprehensive courses taught by certified experts
+          </p>
+        </div>
+      </section>
+
+      {/* Courses Section */}
       <section className="min-h-screen bg-[#FBF6F3] py-10 px-6">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold text-center text-[#4377B2] mb-10">
-            Our Ayurveda Courses
-          </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {courseList.map((course, index) => (
               <div
@@ -144,4 +153,3 @@ export default function ClassesPage() {
     </>
   );
 }
-

@@ -7,11 +7,19 @@ export default function CancellationPolicy() {
   return (
     <>
       <Header />
-      <div className="max-w-4xl mx-auto px-6 py-10 space-y-8">
-        <h1 className="text-3xl font-bold">
-          Cancellation & Refund Policy | RishikulOnline
-        </h1>
+      
+      {/* Hero Section */}
+      <section className="bg-[#4377b2] text-white py-16">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Cancellation & Refund Policy</h1>
+          <p className="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto">
+            Clear and transparent policies for course cancellations and refunds
+          </p>
+        </div>
+      </section>
 
+      {/* Content Section */}
+      <div className="max-w-4xl mx-auto px-6 py-10 space-y-8">
         <ul className="list-disc pl-6 space-y-2">
           <li>
             All course fees are <strong>non-refundable</strong> once payment is
@@ -37,6 +45,7 @@ export default function CancellationPolicy() {
           </li>
         </ul>
       </div>
+      
       <SiteFooter />
     </>
   );

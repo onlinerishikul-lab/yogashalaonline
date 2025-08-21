@@ -1,3 +1,4 @@
+// components/core-values.tsx
 import Image from "next/image";
 import React from "react";
 
@@ -6,49 +7,43 @@ export const CoreValuesSection = ({
   values,
 }: {
   title?: string;
-  values: { icon?: string; text?: string; size?: number }[]; // added size
+  values: { icon?: string; text?: string; size?: number }[];
 }) => {
   return (
-    <div className="py-0">
+    <section className="py-12">
       {/* Title */}
       {title && (
-        <h2 className="text-3xl font-bold text-center text-[#4377B2] mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#4377B2] mb-10">
           {title}
         </h2>
       )}
 
-      <div className="relative max-w-6xl mx-auto px-4 md:px-8">
-        {/* Horizontal line */}
-        <div className="absolute top-10 left-0 right-0 h-[3px] bg-[#4377B2] w-full -z-0" />
-
-        {/* Icons + Text */}
-        <div className="flex justify-between items-start relative z-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
           {values.map((value, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center w-24 md:w-32"
+              className="flex flex-col items-center justify-center text-center bg-white shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
             >
-              {/* Icon placed on line */}
-              <div className="bg-white px-2">
-                {value.icon && (
-                  <Image
-                    src={value.icon}
-                    alt="icon"
-                    width={60}  // dynamic size
-                    height={60} // dynamic size
-                    className="mx-auto"
-                  />
-                )}
-              </div>
+              {/* Icon */}
+              {value.icon && (
+                <Image
+                  src={value.icon}
+                  alt="icon"
+                  width={value.size || 80}
+                  height={value.size || 80}
+                  className="object-contain"
+                />
+              )}
 
-              {/* Text below */}
-              <p className="mt-4 text-gray-800 text-base font-medium">
+              {/* Text */}
+              <p className="mt-4 text-gray-800 text-lg font-semibold">
                 {value.text}
               </p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

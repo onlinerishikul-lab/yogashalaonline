@@ -22,6 +22,7 @@ type DropdownItem = {
 type NavigationItem =
   | { title: string; href: string }
   | { title: string; dropdown: DropdownItem[] };
+
 const navigationItems: NavigationItem[] = [
   {
     title: "Yoga Courses",
@@ -161,6 +162,7 @@ const navigationItems: NavigationItem[] = [
   { title: "Contact Us", href: "/contact" },
   { title: "Payment", href: "/payments" },
 ];
+
 function NavigationMenu({
   navigationItems,
   expandedMobileItems,
@@ -179,90 +181,110 @@ function NavigationMenu({
   router: ReturnType<typeof useRouter>;
 }) {
   return (
-    <div className="p-4 space-y-4 overflow-x-hidden">
-      {navigationItems.map((item) => (
-        <div key={item.title} className="border-b border-white/20 pb-2">
-          {"href" in item ? (
-            <Link
-              href={item.href}
-              className="flex items-center justify-between text-lg py-2 hover:text-white/80 w-full truncate"
-              onClick={() => setOpen(false)}
-            >
-              <span className="truncate max-w-full break-words">{item.title}</span>
-              <MoveRight className="w-4 h-4 flex-shrink-0" />
-            </Link>
-          ) : (
-            <div>
-              <button
-                className="flex items-center justify-between w-full text-lg py-2 hover:text-white/80 truncate"
-                onClick={() => toggleMobileDropdown(item.title)}
+    <div className="overflow-x-hidden">
+      {/* Logo at the top of the menu */}
+      <div className="p-4 border-b border-white/20 bg-[#4377B2]">
+        <div className="flex justify-center">
+          <Link href="/" onClick={() => setOpen(false)}>
+            <Image
+              src="/assets/rishikulonlinlogo.png"
+              alt="Yoga Logo"
+              width={120}
+              height={80}
+              className="w-auto h-16"
+            />
+          </Link>
+        </div>
+      </div>
+
+      {/* Navigation Items */}
+      <div className="p-4 space-y-4 overflow-x-hidden">
+        {navigationItems.map((item) => (
+          <div key={item.title} className="border-b border-white/20 pb-2">
+            {"href" in item ? (
+              <Link
+                href={item.href}
+                className="flex items-center justify-between text-lg py-2 hover:text-white/80 w-full truncate"
+                onClick={() => setOpen(false)}
               >
                 <span className="truncate max-w-full break-words">{item.title}</span>
-                {expandedMobileItems.includes(item.title) ? (
-                  <ChevronUp className="w-5 h-5 flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 flex-shrink-0" />
-                )}
-              </button>
-              {expandedMobileItems.includes(item.title) && (
-                <div className="pl-4 space-y-2 mt-2 border-l-2 border-white/20 overflow-x-hidden">
-                  {item.dropdown.map((subItem) => (
-                    <div key={subItem.title} className="py-1">
-                      {subItem.subDropdown ? (
-                        <div>
-                          <button
-                            className="flex items-center justify-between w-full text-base hover:text-white/80 truncate"
-                            onClick={() => toggleMobileSubDropdown(subItem.title)}
-                          >
-                            <span className="truncate max-w-full break-words">{subItem.title}</span>
-                            {expandedMobileSubItems.includes(subItem.title) ? (
-                              <ChevronUp className="w-4 h-4 flex-shrink-0" />
-                            ) : (
-                              <ChevronDown className="w-4 h-4 flex-shrink-0" />
+                <MoveRight className="w-4 h-4 flex-shrink-0" />
+              </Link>
+            ) : (
+              <div>
+                <button
+                  className="flex items-center justify-between w-full text-lg py-2 hover:text-white/80 truncate"
+                  onClick={() => toggleMobileDropdown(item.title)}
+                >
+                  <span className="truncate max-w-full break-words">{item.title}</span>
+                  {expandedMobileItems.includes(item.title) ? (
+                    <ChevronUp className="w-5 h-5 flex-shrink-0" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 flex-shrink-0" />
+                  )}
+                </button>
+                {expandedMobileItems.includes(item.title) && (
+                  <div className="pl-4 space-y-2 mt-2 border-l-2 border-white/20 overflow-x-hidden">
+                    {item.dropdown.map((subItem) => (
+                      <div key={subItem.title} className="py-1">
+                        {subItem.subDropdown ? (
+                          <div>
+                            <button
+                              className="flex items-center justify-between w-full text-base hover:text-white/80 truncate"
+                              onClick={() => toggleMobileSubDropdown(subItem.title)}
+                            >
+                              <span className="truncate max-w-full break-words">{subItem.title}</span>
+                              {expandedMobileSubItems.includes(subItem.title) ? (
+                                <ChevronUp className="w-4 h-4 flex-shrink-0" />
+                              ) : (
+                                <ChevronDown className="w-4 h-4 flex-shrink-0" />
+                              )}
+                            </button>
+                            {expandedMobileSubItems.includes(subItem.title) && (
+                              <div className="pl-4 mt-2 space-y-2 border-l border-white/20 overflow-x-hidden">
+                                {subItem.subDropdown.map((nestedItem) => (
+                                  <div key={nestedItem.title}>
+                                    <Link
+                                      href={nestedItem.href}
+                                      className="block text-sm hover:text-white/80 py-1 truncate max-w-full break-words"
+                                      onClick={() => setOpen(false)}
+                                    >
+                                      {nestedItem.title}
+                                    </Link>
+                                  </div>
+                                ))}
+                              </div>
                             )}
-                          </button>
-                          {expandedMobileSubItems.includes(subItem.title) && (
-                            <div className="pl-4 mt-2 space-y-2 border-l border-white/20 overflow-x-hidden">
-                              {subItem.subDropdown.map((nestedItem) => (
-                                <div key={nestedItem.title}>
-                                  <Link
-                                    href={nestedItem.href}
-                                    className="block text-sm hover:text-white/80 py-1 truncate max-w-full break-words"
-                                    onClick={() => setOpen(false)}
-                                  >
-                                    {nestedItem.title}
-                                  </Link>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      ) : (
-                        <Link
-                          href={subItem.href}
-                          className="block text-base hover:text-white/80 truncate max-w-full break-words"
-                          onClick={() => setOpen(false)}
-                        >
-                          {subItem.title}
-                        </Link>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-        </div>
-      ))}
-      <Button
-        onClick={() => {
-          setOpen(false);
-          router.push("/login");
-        }}
-        className="w-full mt-4 text-white bg-[#ffffff78] hover:bg-[#285384] rounded-full py-2"
-      >
-        Sign In / Log In
-      </Button>
+                          </div>
+                        ) : (
+                          <Link
+                            href={subItem.href}
+                            className="block text-base hover:text-white/80 truncate max-w-full break-words"
+                            onClick={() => setOpen(false)}
+                          >
+                            {subItem.title}
+                          </Link>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        ))}
+
+        {/* Sign In Button */}
+        <Button
+          onClick={() => {
+            setOpen(false);
+            router.push("/login");
+          }}
+          className="w-full mt-4 text-white bg-[#ffffff78] hover:bg-[#285384] rounded-full py-2"
+        >
+          Sign In / Log In
+        </Button>
+      </div>
     </div>
   );
 }
@@ -308,10 +330,11 @@ export const Header = () => {
       {/* Desktop Layout */}
       <div className="hidden lg:block">
         <div className="w-full max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between relative">
+          {/* Menu Button */}
           <Button
             variant="ghost"
             onClick={() => setOpen(!isOpen)}
-            className="p-2 mr-4 lg:flex hidden"
+            className="p-2 flex-shrink-0"
             aria-label={isOpen ? "Close Menu" : "Open Menu"}
           >
             <div className="flex items-center gap-1 text-white">
@@ -319,8 +342,9 @@ export const Header = () => {
               <span className="text-base">Menu</span>
             </div>
           </Button>
-          <div className="flex flex-1 items-center gap-x-8" />
-          <Link href="/" className="flex-shrink-0 mx-8">
+
+          {/* Centered Logo */}
+          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
             <Image
               src="/assets/rishikulonlinlogo.png"
               alt="Yoga Logo"
@@ -331,8 +355,11 @@ export const Header = () => {
               }`}
             />
           </Link>
-          <div className="flex flex-1 justify-end items-center gap-x-8" />
+
+          {/* Empty space for balance */}
+          <div className="flex-shrink-0 w-[100px]"></div>
         </div>
+
         {isOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex">
             <div className="bg-[#4377B2] text-white shadow-md w-[340px] max-w-full h-full overflow-y-auto">
@@ -360,6 +387,8 @@ export const Header = () => {
               <span className="text-base">Menu</span>
             </div>
           </Button>
+
+          {/* Centered Logo */}
           <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
             <Image
               src="/assets/rishikulonlinlogo.png"
@@ -372,8 +401,11 @@ export const Header = () => {
               priority
             />
           </Link>
+
+          {/* Empty space for balance */}
           <div className="w-10"></div>
         </div>
+
         {isOpen && (
           <div className="bg-[#4377B2] text-white shadow-md w-full max-h-[80vh] overflow-y-auto overflow-x-hidden z-50 fixed top-0 left-0 min-h-screen">
             <NavigationMenu

@@ -31,7 +31,7 @@ export const CoreValuesSection = ({
                     src={value.icon}
                     alt="icon"
                     width={64}
-                    height={64}
+                    height={55}
                     className="object-contain"
                   />
                 )}

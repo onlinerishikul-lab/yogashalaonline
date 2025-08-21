@@ -5,7 +5,7 @@ const YogaForEveryone = () => {
   const audience = [
     { icon: "/assets/1.png", text: "Kids", size: 70 },
     { icon: "/assets/6.png", text: "Women", size: 70 },
-    { icon: "/assets/9.png", text: "Men", size: 17 },
+    { icon: "/assets/9.png", text: "Men", size: 70 },
   ];
 
   return (

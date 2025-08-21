@@ -78,11 +78,20 @@ export default function ClassesPage() {
   return (
     <>
       <Header />
+      
+      {/* Hero Section */}
+      <section className="bg-[#4377b2] text-white py-16">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Yoga & Wellness Classes</h1>
+          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+            Transform your mind, body, and spirit through our diverse range of yoga and wellness practices
+          </p>
+        </div>
+      </section>
+
+      {/* Classes Section */}
       <section className="min-h-screen bg-[#FBF6F3] py-10 px-6">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold text-center text-[#4377B2] mb-10">
-            Our Yoga & Wellness Classes
-          </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {courseList.map((course, index) => {
               const slug = course.directUrl

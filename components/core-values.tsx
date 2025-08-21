@@ -6,7 +6,7 @@ export const CoreValuesSection = ({
   values,
 }: {
   title?: string;
-  values: { icon?: string; text?: string; size?: number }[];
+  values: { icon?: string; text?: string }[];
 }) => {
   return (
     <section className="py-12">
@@ -24,14 +24,14 @@ export const CoreValuesSection = ({
               key={index}
               className="flex flex-col items-center justify-start text-center bg-white shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
             >
-              {/* Fixed square box for uniform icons */}
-              <div className="w-24 h-24 flex items-center justify-center">
+              {/* Circle background for icons */}
+              <div className="w-28 h-28 rounded-full bg-blue-100 flex items-center justify-center">
                 {value.icon && (
                   <Image
                     src={value.icon}
                     alt="icon"
-                    width={value.size || 80}
-                    height={value.size || 80}
+                    width={64}
+                    height={64}
                     className="object-contain"
                   />
                 )}

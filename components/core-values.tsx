@@ -1,4 +1,3 @@
-// components/core-values.tsx
 import Image from "next/image";
 import React from "react";
 
@@ -23,18 +22,20 @@ export const CoreValuesSection = ({
           {values.map((value, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center text-center bg-white shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
+              className="flex flex-col items-center justify-start text-center bg-white shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
             >
-              {/* Icon */}
-              {value.icon && (
-                <Image
-                  src={value.icon}
-                  alt="icon"
-                  width={value.size || 80}
-                  height={value.size || 80}
-                  className="object-contain"
-                />
-              )}
+              {/* Fixed icon box for alignment */}
+              <div className="h-28 flex items-center justify-center">
+                {value.icon && (
+                  <Image
+                    src={value.icon}
+                    alt="icon"
+                    width={value.size || 80}
+                    height={value.size || 80}
+                    className="object-contain"
+                  />
+                )}
+              </div>
 
               {/* Text */}
               <p className="mt-4 text-gray-800 text-lg font-semibold">

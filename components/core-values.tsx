@@ -24,8 +24,8 @@ export const CoreValuesSection = ({
               key={index}
               className="flex flex-col items-center justify-start text-center bg-white shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
             >
-              {/* Fixed icon box for alignment */}
-              <div className="h-28 flex items-center justify-center">
+              {/* Fixed square box for uniform icons */}
+              <div className="w-24 h-24 flex items-center justify-center">
                 {value.icon && (
                   <Image
                     src={value.icon}

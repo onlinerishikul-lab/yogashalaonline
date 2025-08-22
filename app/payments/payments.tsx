@@ -47,7 +47,7 @@ export const PoliciesSection = () => {
 
 export default function PaymentPage() {
   const [selectedPlan, setSelectedPlan] = useState("advance");
-  const [selectedCourse, setSelectedCourse] = useState("200-hour-yoga");
+  const [selectedCourse, setSelectedCourse] = useState("Yoga Anatomy For Safety");
   const payRef = useRef<HTMLDivElement>(null);
 
   const paymentLinks: Record<string, { razorpay: string; paypal: string }> = {
@@ -66,42 +66,73 @@ export default function PaymentPage() {
     { id: "remaining", title: "Remaining Payment", price: "$200.00", description: "When Joining The Course" },
   ];
 
+  // ALL COURSES LIST
   const courses = [
-    { id: "Yoga Anotomy For Safety", name: "Yoga Anotomy For Safety" },
-    { id: "Face Yoga TTC", name: "Face Yoga TTC" },
-    { id: "Meditation TTC", name: "Meditation TTC" },
-    { id: "Pranayama TTC", name: "Pranayama TTC" },
-    { id: "Yoga Nidra TTC", name: "Yoga Nidra TTC" },
-    { id: "Chair Yoga TTC", name: "Chair Yoga TTC" },
-    { id: "Mudra & Mantra Course", name: "Mudra & Mantra Course" },
-    { id: "Kundalini Yoga Course", name: "Kundalini Yoga Course" },
-    { id: "Kids Yoga Course", name: "Kids Yoga Course" },
-    { id: "Yoga Therapy Course", name: "Yoga Therapy Course" },
-    { id: "Pregnancy Yoga", name: "Pregnancy Yoga" },
-    { id: "Core Concept of Yoga Philosophy", name: "Core Concept of Yoga Philosophy" },
-    { id: "Asana Clinic for Yoga Professionals", name: "Asana Clinic for Yoga Professionals" },
-    { id: "Prenatal & Postnatal Yoga Course for Teachers", name: "Prenatal & Postnatal Yoga Course for Teachers" },
-    { id: "Multi Style Yoga TTC 100", name: "100 Hrs Multi Style Yoga TTC" },
-    { id: "Vinyasa Flow Yoga TTC", name: "Vinyasa Flow Yoga TTC" },
-    { id: "Hatha Yoga TTC", name: "Hatha Yoga TTC" },
-    { id: "Advanced Yoga Therapy Course", name: "Advanced Yoga Therapy Course" },
-    { id: "Multi Style Yoga TTC 200", name: "200 Hrs Multi Style Yoga TTC" },
-    { id: "Multi Style Yoga TTC 300", name: "300 Hrs Multi Style Yoga TTC" },
-    { id: "Ayurvedic Basics Course", name: "Ayurvedic Basics Course for Beginners" },
-    { id: "Ayurvedic Herbal Course", name: "Ayurvedic Herbal Course" },
-    { id: "Ayurvedic Sexual Relationship Course", name: "Ayurvedic Sexual Relationship Course" },
-    { id: "Ayurveda Garbha Samskara Course", name: "Ayurveda Garbha Samskara Course" },
-    { id: "Ayurveda Immunity Course", name: "Ayurveda Immunity Course" },
-    { id: "Ayurveda Skin and Beauty Course", name: "Ayurveda Skin and Beauty Course" },
-    { id: "Ayurvedic Foundational Course", name: "Ayurvedic Foundational Course" },
-    { id: "Ayurvedic Diet and Nutrition Course", name: "Ayurvedic Diet and Nutrition Course" },
-    { id: "Ayurvedic Lifestyle Course", name: "Ayurvedic Lifestyle Course" },
-    { id: "Prenatal Yoga", name: "Prenatal Yoga" },
-    { id: "Postnatal Yoga", name: "Postnatal Yoga" },
-    { id: "Meditation", name: "Meditation" },
-    { id: "Pranayama", name: "Pranayama" },
-    { id: "Hatha Yoga", name: "Hatha Yoga" },
-    { id: "Vinyasa Flow", name: "Vinyasa Flow" },
+    // --- 25 Hrs Yoga ---
+    { id: "Yoga Anatomy For Safety", name: "25Hrs - Yoga Anatomy For Safety" },
+    { id: "Face Yoga TTC", name: "25Hrs - Face Yoga TTC" },
+
+    // --- 50 Hrs Yoga ---
+    { id: "Restorative Yoga TTC", name: "50Hrs - Restorative Yoga TTC" },
+    { id: "Meditation TTC", name: "50Hrs - Meditation TTC" },
+    { id: "Pranayama TTC", name: "50Hrs - Pranayama TTC" },
+    { id: "Yoga Nidra TTC", name: "50Hrs - Yoga Nidra TTC" },
+    { id: "Chair Yoga TTC", name: "50Hrs - Chair Yoga TTC" },
+    { id: "Mudra & Mantra Course", name: "50Hrs - Mudra & Mantra Course" },
+    { id: "Kundalini Yoga Course", name: "50Hrs - Kundalini Yoga Course" },
+    { id: "Kids Yoga Course", name: "50Hrs - Kids Yoga Course" },
+    { id: "Yoga Therapy Course", name: "50Hrs - Yoga Therapy Course" },
+    { id: "Pregnancy Yoga", name: "50Hrs - Pregnancy Yoga" },
+
+    // --- 75 Hrs Yoga ---
+    { id: "Core Concept of Yoga Philosophy", name: "75Hrs - Core Concept of Yoga Philosophy" },
+    { id: "Asana Clinic for Yoga Professionals", name: "75Hrs - Asana Clinic for Yoga Professionals" },
+
+    // --- 85 Hrs Yoga ---
+    { id: "Prenatal & Postnatal Yoga Course", name: "85Hrs - Prenatal & Postnatal Yoga Course" },
+
+    // --- 95 Hrs Yoga ---
+    { id: "Kids Yoga Course 95", name: "95Hrs - Kids Yoga Course" },
+
+    // --- 100 Hrs Yoga ---
+    { id: "Multi Style Yoga TTC 100", name: "100Hrs - Multi Style Yoga TTC" },
+    { id: "Vinyasa Flow Yoga TTC", name: "100Hrs - Vinyasa Flow Yoga TTC" },
+    { id: "Hatha Yoga TTC", name: "100Hrs - Hatha Yoga TTC" },
+    { id: "Advanced Yoga Therapy Course", name: "100Hrs - Advanced Yoga Therapy Course" },
+
+    // --- 200 Hrs Yoga ---
+    { id: "Multi Style Yoga TTC 200", name: "200Hrs - Multi Style Yoga TTC" },
+
+    // --- 300 Hrs Yoga ---
+    { id: "Multi Style Yoga TTC 300", name: "300Hrs - Multi Style Yoga TTC" },
+
+    // --- Ayurveda 10 Hrs ---
+    { id: "Ayurvedic Basics Course", name: "10Hrs - Ayurvedic Basics Course for Beginners" },
+    { id: "Ayurvedic Herbal Course", name: "10Hrs - Ayurvedic Herbal Course" },
+
+    // --- Ayurveda 15 Hrs ---
+    { id: "Ayurvedic Relationship Course", name: "15Hrs - Ayurvedic Relationship Course" },
+    { id: "Ayurveda Garbha Samskara Course", name: "15Hrs - Ayurveda Garbha Samskara Course" },
+
+    // --- Ayurveda 25 Hrs ---
+    { id: "Ayurveda Immunity Course", name: "25Hrs - Ayurveda Immunity Course" },
+    { id: "Ayurveda Skin and Beauty Course", name: "25Hrs - Ayurveda Skin and Beauty Course" },
+
+    // --- Ayurveda 50 Hrs ---
+    { id: "Ayurvedic Foundational Course", name: "50Hrs - Ayurvedic Foundational Course" },
+    { id: "Ayurvedic Diet and Nutrition Course", name: "50Hrs - Ayurvedic Diet and Nutrition Course" },
+    { id: "Ayurvedic Lifestyle Course", name: "50Hrs - Ayurvedic Lifestyle Course" },
+
+    // --- Yoga Classes ---
+    { id: "Prenatal Yoga", name: "Class - Prenatal Yoga" },
+    { id: "Postnatal Yoga", name: "Class - Postnatal Yoga" },
+    { id: "Meditation", name: "Class - Meditation" },
+    { id: "Pranayama", name: "Class - Pranayama" },
+    { id: "Hatha Yoga", name: "Class - Hatha Yoga" },
+    { id: "Vinyasa Flow", name: "Class - Vinyasa Flow" },
+    { id: "Power Yoga", name: "Class - Power Yoga" },
+    { id: "Diabetic Yoga", name: "Class - Diabetic Yoga" },
+    { id: "Yoga Nidra", name: "Class - Yoga Nidra" },
   ];
 
   const handleEnrollClick = (planId: string) => {

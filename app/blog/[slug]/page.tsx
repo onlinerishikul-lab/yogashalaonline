@@ -3,23 +3,30 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogCard } from "@/components/blog/blog-card";
 import MainWrapper from "@/components/wrappers/main-wrapper";
-import { getAllBlogs, getBlogBySlug } from "@/app/actions/blog.action";
+import { getAllBlogs } from "@/app/actions/blog.action";
 
-export default async function BlogDetailsPage({ params }: { params: { slug: string } }) {
-  // ✅ Fetch single blog directly by slug
-  const post = await getBlogBySlug(params.slug);
+type BlogParams = Promise<{ slug: string }>;
+
+export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
+  const { slug } = await params;
+
+  // ✅ Remove trailing numbers from URL slug
+  const cleanSlug = slug.replace(/-\d+$/, "");
+
+  const blogs = await getAllBlogs();
+
+  // ✅ Match DB slug ignoring numbers
+  const post = blogs.find(
+    (blog) => blog.slug.replace(/-\d+$/, "") === cleanSlug
+  );
 
   if (!post) notFound();
 
-  // ✅ Fetch all blogs for related section
-  const blogs = await getAllBlogs();
-
-  // ✅ Related posts (same first tag, exclude current)
   const relatedPosts = blogs
     .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
     .slice(0, 3);
 
-  // ✅ Fixed course links
+  // ✅ Fixed course links (correct paths to avoid 404)
   const courses = [
     {
       title: "Yoga Anatomy For Safety",
@@ -47,7 +54,7 @@ export default async function BlogDetailsPage({ params }: { params: { slug: stri
       image: "/Garbha-Samskara.jpg",
     },
     {
-      title: "Ayurvedic Relationship Course",
+      title: "Ayurvedic  Relationship Course",
       link: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship",
       image: "/Sexual-Relationship.jpg",
     },
@@ -71,6 +78,7 @@ export default async function BlogDetailsPage({ params }: { params: { slug: stri
             sizes="100vw"
             quality={70}
             decoding="async"
+            unoptimized={false}
             className="object-cover"
           />
           {/* Gradient Overlay */}
@@ -118,6 +126,7 @@ export default async function BlogDetailsPage({ params }: { params: { slug: stri
                           loading="lazy"
                           decoding="async"
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          unoptimized={false}
                         />
                       </div>
                       <div className="p-4">
@@ -149,7 +158,7 @@ export default async function BlogDetailsPage({ params }: { params: { slug: stri
                     post={{
                       id: related.id,
                       title: related.title,
-                      slug: related.slug, // ✅ clean slug comes from DB directly
+                      slug: related.slug, // we will clean inside BlogCard
                       excerpt: related.overview,
                       content: related.content,
                       imageUrl: related.coverImage,

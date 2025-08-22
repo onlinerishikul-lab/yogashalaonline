@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-[#4377b2] text-white py-16">
+      <section className="bg-[#4377b2] text-white pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto">

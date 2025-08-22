@@ -22,7 +22,7 @@ export function Banner() {
       <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-6 pt-24 sm:pt-28 md:pt-32 lg:pt-36 min-h-screen max-w-7xl mx-auto">
         <h1 className="max-w-4xl text-3xl sm:text-4xl md:text-5xl font-bold leading-snug drop-shadow-lg">
           <span className="block text-[#4377B2] text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-            Online Yoga Teacher Training:
+            Online Yoga Teacher Training
           </span>
           <span className="block mt-2 text-white font-normal text-base sm:text-lg md:text-xl lg:text-2xl">
             Become a Certified Yoga Teacher

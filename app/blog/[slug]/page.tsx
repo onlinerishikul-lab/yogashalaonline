@@ -3,21 +3,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogCard } from "@/components/blog/blog-card";
 import MainWrapper from "@/components/wrappers/main-wrapper";
-import { getAllBlogs } from "@/app/actions/blog.action";
+import { getAllBlogs, getBlogBySlug } from "@/app/actions/blog.action";
 
-type BlogParams = { slug: string };
-
-export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
-  // ✅ Clean slug from URL (remove -12345 numbers if user manually visits old links)
-  const cleanSlug = params.slug.replace(/-\d+$/, "");
-
-  // ✅ Fetch all blogs
-  const blogs = await getAllBlogs();
-
-  // ✅ Match only against clean DB slug
-  const post = blogs.find((blog) => blog.slug === cleanSlug);
+export default async function BlogDetailsPage({ params }: { params: { slug: string } }) {
+  // ✅ Fetch single blog directly by slug
+  const post = await getBlogBySlug(params.slug);
 
   if (!post) notFound();
+
+  // ✅ Fetch all blogs for related section
+  const blogs = await getAllBlogs();
 
   // ✅ Related posts (same first tag, exclude current)
   const relatedPosts = blogs
@@ -76,7 +71,6 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
             sizes="100vw"
             quality={70}
             decoding="async"
-            unoptimized={false}
             className="object-cover"
           />
           {/* Gradient Overlay */}
@@ -124,7 +118,6 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
                           loading="lazy"
                           decoding="async"
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
-                          unoptimized={false}
                         />
                       </div>
                       <div className="p-4">
@@ -156,7 +149,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
                     post={{
                       id: related.id,
                       title: related.title,
-                      slug: related.slug.replace(/-\d+$/, ""), // ✅ clean slug for links
+                      slug: related.slug, // ✅ clean slug comes from DB directly
                       excerpt: related.overview,
                       content: related.content,
                       imageUrl: related.coverImage,

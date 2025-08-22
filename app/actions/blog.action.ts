@@ -1,61 +1,46 @@
-'use server'
+"use server";
 
 import { prisma } from "@/lib/prisma";
 
-export type Author = {
-  name: string;
-  email: string;
-  image?: string | null;
+// Generate a clean slug
+function generateSlug(title: string) {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-") // replace spaces & special chars with -
+    .replace(/^-+|-+$/g, ""); // trim - from start/end
 }
 
-export type Blog = {
-  id: string;
+// Create blog
+export async function createBlogAction(data: {
   title: string;
-  slug: string;
-  overview: string;
   content: string;
-  coverImage: string;
-  createdAt: Date;
-  tags: string[];
-  author: Author;
+  authorId: string;
+}) {
+  const slug = generateSlug(data.title);
+
+  const blog = await prisma.blog.create({
+    data: {
+      title: data.title,
+      content: data.content,
+      slug, // stored clean slug
+      authorId: data.authorId,
+    },
+  });
+
+  return blog;
 }
 
-export async function getAllBlogs(): Promise<Blog[]> {
-  try {
-    const blogs = await prisma.blog.findMany({
-      orderBy: {
-        createdAt: 'desc'
-      }
-    });
-    return blogs;
-  } catch (error) {
-    console.error("Error fetching blogs:", error);
-    throw new Error("Failed to fetch blogs");
-  }
+// Get blog by slug
+export async function getBlogBySlug(slug: string) {
+  const blog = await prisma.blog.findUnique({
+    where: { slug },
+  });
+  return blog;
 }
 
-// Add pagination support
-export async function getPaginatedBlogs(page: number = 1, limit: number = 6): Promise<{ blogs: Blog[], total: number }> {
-  try {
-    const skip = (page - 1) * limit;
-    
-    const [blogs, total] = await Promise.all([
-      prisma.blog.findMany({
-        skip,
-        take: limit,
-        orderBy: {
-          createdAt: 'desc'
-        }
-      }),
-      prisma.blog.count()
-    ]);
-
-    return {
-      blogs,
-      total
-    };
-  } catch (error) {
-    console.error("Error fetching paginated blogs:", error);
-    throw new Error("Failed to fetch blogs");
-  }
+// List all blogs
+export async function getAllBlogs() {
+  return await prisma.blog.findMany({
+    orderBy: { createdAt: "desc" },
+  });
 }

@@ -59,15 +59,16 @@ export default function ExploreOurClassesView({
             <SwiperSlide key={course.id + index}>
               <div
                 onClick={handleExploreMoreClick}
-                className="relative overflow-hidden shadow-lg rounded-md h-[320px] cursor-pointer group"
+                className="relative aspect-[4/5] overflow-hidden shadow-lg rounded-xl cursor-pointer group" 
+                aria-label={course?.headerSection?.title || "Ayurveda Course"}
               >
                 <Image
                   src={course?.headerSection?.image || "/fallback.jpg"}
                   alt={course?.headerSection?.title || "Ayurveda Course"}
-                  layout="fill"
-                  quality={75}
+                  fill
+                  quality={85}
                   loading="lazy"
-                  className="transition-opacity duration-300 group-hover:opacity-90"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute bottom-4 right-4 bg-[#4377B2] text-white text-sm px-3 py-1 rounded z-20 shadow-md">
                   Online

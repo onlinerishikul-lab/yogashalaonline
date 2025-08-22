@@ -16,30 +16,38 @@ export type Blog = {
   content: string;
   coverImage: string;
   createdAt: Date;
-  tags: { name: string }[];  // adjust if tags is string[]
+  tags: string[];
   author: Author;
 }
 
-// Fetch all blogs
+// Utility to normalize slugs
+function normalizeSlug(title: string, slug?: string): string {
+  const base = slug || title;
+  return base
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric with hyphen
+    .replace(/^-+|-+$/g, ''); // Trim starting/ending hyphens
+}
+
 export async function getAllBlogs(): Promise<Blog[]> {
   try {
     const blogs = await prisma.blog.findMany({
-      include: {
-        author: true,
-        tags: true
-      },
       orderBy: {
         createdAt: 'desc'
       }
     });
-    return blogs;
+
+    // Ensure slug normalization
+    return blogs.map(blog => ({
+      ...blog,
+      slug: normalizeSlug(blog.title, blog.slug)
+    }));
   } catch (error) {
     console.error("Error fetching blogs:", error);
     throw new Error("Failed to fetch blogs");
   }
 }
 
-// Fetch paginated blogs
 export async function getPaginatedBlogs(
   page: number = 1, 
   limit: number = 6
@@ -51,10 +59,6 @@ export async function getPaginatedBlogs(
       prisma.blog.findMany({
         skip,
         take: limit,
-        include: {
-          author: true,
-          tags: true
-        },
         orderBy: {
           createdAt: 'desc'
         }
@@ -62,28 +66,18 @@ export async function getPaginatedBlogs(
       prisma.blog.count()
     ]);
 
+    // Ensure slug normalization
+    const normalizedBlogs = blogs.map(blog => ({
+      ...blog,
+      slug: normalizeSlug(blog.title, blog.slug)
+    }));
+
     return {
-      blogs,
+      blogs: normalizedBlogs,
       total
     };
   } catch (error) {
     console.error("Error fetching paginated blogs:", error);
     throw new Error("Failed to fetch blogs");
-  }
-}
-
-// Fetch single blog by slug
-export async function getBlogBySlug(slug: string): Promise<Blog | null> {
-  try {
-    return await prisma.blog.findUnique({
-      where: { slug },
-      include: {
-        author: true,
-        tags: true
-      }
-    });
-  } catch (error) {
-    console.error("Error fetching blog by slug:", error);
-    throw new Error("Failed to fetch blog");
   }
 }

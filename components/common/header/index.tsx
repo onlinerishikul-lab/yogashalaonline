@@ -329,7 +329,7 @@ export const Header = () => {
     >
       {/* Desktop Layout */}
       <div className="hidden lg:block">
-        <div className="w-full max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between relative">
+        <div className="w-full max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between relative">
           {/* Menu Button */}
           <Button
             variant="ghost"
@@ -343,8 +343,8 @@ export const Header = () => {
             </div>
           </Button>
 
-          {/* Centered Logo */}
-          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
+          {/* Centered Logo - Moved down with margin-top */}
+          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2 mt-2">
             <Image
               src="/assets/rishikulonlinlogo.png"
               alt="Yoga Logo"
@@ -380,7 +380,7 @@ export const Header = () => {
 
       {/* Mobile Layout */}
       <div className="lg:hidden">
-        <div className="w-full px-4 py-3 flex items-center justify-between">
+        <div className="w-full px-4 py-4 flex items-center justify-between">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)} className="p-2">
             <div className="flex items-center gap-1 text-white">
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -388,8 +388,8 @@ export const Header = () => {
             </div>
           </Button>
 
-          {/* Centered Logo */}
-          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
+          {/* Centered Logo - Moved down with margin-top */}
+          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2 mt-1">
             <Image
               src="/assets/rishikulonlinlogo.png"
               alt="Yoga Logo"

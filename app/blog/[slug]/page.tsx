@@ -10,12 +10,15 @@ type BlogParams = Promise<{ slug: string }>;
 export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
   const { slug } = await params;
 
-  // ✅ Remove trailing numbers if present in URL
+  // ✅ Remove trailing numbers from URL slug
   const cleanSlug = slug.replace(/-\d+$/, "");
 
   const blogs = await getAllBlogs();
-  // ✅ Find blog ignoring numeric suffix
-  const post = blogs.find((blog) => blog.slug.replace(/-\d+$/, "") === cleanSlug);
+
+  // ✅ Match DB slug ignoring numbers
+  const post = blogs.find(
+    (blog) => blog.slug.replace(/-\d+$/, "") === cleanSlug
+  );
 
   if (!post) notFound();
 
@@ -155,7 +158,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
                     post={{
                       id: related.id,
                       title: related.title,
-                      slug: related.slug.replace(/-\d+$/, ""), // ✅ also clean here
+                      slug: related.slug, // we will clean inside BlogCard
                       excerpt: related.overview,
                       content: related.content,
                       imageUrl: related.coverImage,

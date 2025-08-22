@@ -17,11 +17,14 @@ export const BlogCard = memo(function BlogCard({
 }: ExtendedBlogCardProps) {
   const formattedDate = useMemo(() => new Date(post.date).toISOString(), [post.date])
 
+  // ✅ Clean slug (remove trailing numbers if they exist)
+  const cleanSlug = post.slug.replace(/-\d+$/, "")
+
   return (
     <article className={cn('block h-full', className)}>
       <Card className="h-full overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
         {/* Image section */}
-        <Link href={`/blog/${post.slug}`}>
+        <Link href={`/blog/${cleanSlug}`}>
           <div className="relative w-full h-64">
             <Image
               src={post.imageUrl}
@@ -49,7 +52,7 @@ export const BlogCard = memo(function BlogCard({
               {post.date}
             </time>
             <h3 className="text-lg font-semibold mb-2 line-clamp-2 hover:text-[#4377B2] transition-colors">
-              <Link href={`/blog/${post.slug}`}>
+              <Link href={`/blog/${cleanSlug}`}>
                 {post.title}
               </Link>
             </h3>
@@ -58,7 +61,7 @@ export const BlogCard = memo(function BlogCard({
             </p>
           </div>
           <Link
-            href={`/blog/${post.slug}`}
+            href={`/blog/${cleanSlug}`}
             className="mt-3 text-sm text-[#4377B2] font-medium hover:underline self-start"
           >
             Read More →

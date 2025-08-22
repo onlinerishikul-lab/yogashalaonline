@@ -8,7 +8,7 @@ import styles from "./explore-our-courses.module.css";
 import { Course } from "@/types/course";
 import Image from "next/image";
 import "swiper/css";
-import { Button } from "@/components/ui/button"; // ✅ Required Button import
+import { Button } from "@/components/ui/button";
 
 interface ExploreOurCoursesViewProps {
   courses: Course[];
@@ -59,18 +59,15 @@ export default function ExploreOurClassesView({
             <SwiperSlide key={course.id + index}>
               <div
                 onClick={handleExploreMoreClick}
-                className="relative overflow-hidden shadow-lg rounded-md h-[320px] cursor-pointer group"
+                className="relative shadow-lg rounded-xl overflow-hidden cursor-pointer group w-full aspect-[4/5]" // ✅ fixed frame ratio
                 aria-label={course?.headerSection?.title || "Yoga Course"}
               >
                 <Image
                   src={course?.headerSection?.image || "/fallback.jpg"}
                   alt={course?.headerSection?.title || "Yoga Course"}
                   fill
-                  sizes="(max-width: 768px) 100vw,
-                         (max-width: 1200px) 50vw,
-                         25vw"
-                  className="transition-opacity duration-300 group-hover:opacity-90"
-                  quality={70}
+                  className="object-cover transition-transform duration-500 group-hover:scale-105" // ✅ no compression
+                  quality={90}
                   loading="lazy"
                 />
                 <div className="absolute bottom-4 right-4 bg-[#4377B2] text-white text-sm px-3 py-1 rounded z-20 shadow-md">

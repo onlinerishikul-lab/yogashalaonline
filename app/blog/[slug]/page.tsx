@@ -5,28 +5,26 @@ import { BlogCard } from "@/components/blog/blog-card";
 import MainWrapper from "@/components/wrappers/main-wrapper";
 import { getAllBlogs } from "@/app/actions/blog.action";
 
-type BlogParams = Promise<{ slug: string }>;
+type BlogParams = { slug: string };
 
 export default async function BlogDetailsPage({ params }: { params: BlogParams }) {
-  const { slug } = await params;
+  // ✅ Clean slug from URL (remove -12345 numbers if user manually visits old links)
+  const cleanSlug = params.slug.replace(/-\d+$/, "");
 
-  // ✅ Remove trailing numbers from URL slug
-  const cleanSlug = slug.replace(/-\d+$/, "");
-
+  // ✅ Fetch all blogs
   const blogs = await getAllBlogs();
 
-  // ✅ Match DB slug ignoring numbers
-  const post = blogs.find(
-    (blog) => blog.slug.replace(/-\d+$/, "") === cleanSlug
-  );
+  // ✅ Match only against clean DB slug
+  const post = blogs.find((blog) => blog.slug === cleanSlug);
 
   if (!post) notFound();
 
+  // ✅ Related posts (same first tag, exclude current)
   const relatedPosts = blogs
     .filter((blog) => blog.tags[0] === post.tags[0] && blog.id !== post.id)
     .slice(0, 3);
 
-  // ✅ Fixed course links (correct paths to avoid 404)
+  // ✅ Fixed course links
   const courses = [
     {
       title: "Yoga Anatomy For Safety",
@@ -54,7 +52,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
       image: "/Garbha-Samskara.jpg",
     },
     {
-      title: "Ayurvedic  Relationship Course",
+      title: "Ayurvedic Relationship Course",
       link: "/Ayurveda-Courses/15-Hrs-Ayurveda-Courses/Ayurvedic-Relationship",
       image: "/Sexual-Relationship.jpg",
     },
@@ -158,7 +156,7 @@ export default async function BlogDetailsPage({ params }: { params: BlogParams }
                     post={{
                       id: related.id,
                       title: related.title,
-                      slug: related.slug, // we will clean inside BlogCard
+                      slug: related.slug.replace(/-\d+$/, ""), // ✅ clean slug for links
                       excerpt: related.overview,
                       content: related.content,
                       imageUrl: related.coverImage,

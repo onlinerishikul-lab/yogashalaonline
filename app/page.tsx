@@ -21,6 +21,7 @@ import { getBlogs } from '@/server-actions/blog'
 import BenefitsOfOnlineLearning from '@/components/home/core-values/benefits-of-online-learning'
 import CourseLevels from '@/components/home/core-values/course-levels'
 import YogaForEveryone from '@/components/home/core-values/yoga-for-everyone'
+import Script from 'next/script'
 
 export default async function Home() {
   const [{ courses = [], error: coursesError }, { blogs = [], error: blogsError }] = await Promise.all([
@@ -33,48 +34,64 @@ export default async function Home() {
   }
 
   return (
-    <div className="overflow-x-hidden max-w-full">
+    <div className="overflow-x-hidden max-w-full relative">
       <Header />
-      {/* This wrapper ensures content is not hidden behind the fixed header */}
-        <Banner />
-        <Usp/> {/* ✅ Fix: Add required 'title' prop */}
-        
-        {/* Section 1: Benefits + Courses */}
-        <section className="bg-white py-0">
-          <div className="container mx-auto px-2">
-            <ExploreOurCoursesView courses={courses} />
-            <div className="mt-0 mb-0 py-0">
-              <BenefitsOfOnlineLearning />
-            </div>
-          </div>
-        </section>
 
-        {/* Section 2: Course Levels + Ayurveda Courses */}
-        <section className="bg-white py-0">
-          <div className="container mx-auto px-2">
-            <ExploreOurAyurvedaCoursesView courses={courses} />
-            <CourseLevels />
-          </div>
-        </section>
+      {/* ✅ Main Content */}
+      <Banner />
+      <Usp />
 
-        {/* Section 3: Yoga For Everyone + Yoga Classes */}
-        <section className="bg-white py-0">
-          <div className="container mx-auto px-2">
-            <ExploreOurClassesView courses={courses} />
-            <YogaForEveryone />
+      {/* Section 1: Benefits + Courses */}
+      <section className="bg-white py-0">
+        <div className="container mx-auto px-2">
+          <ExploreOurCoursesView courses={courses} />
+          <div className="mt-0 mb-0 py-0">
+            <BenefitsOfOnlineLearning />
           </div>
-        </section>
+        </div>
+      </section>
 
-        <GuaranteeSection />
-        <OurTeaching />
-        <Transforming />
-        <Trust />
-        <Blogs blogs={blogs} />
-        <Join />
-        <Faculty />
-        <Testimonial title="What Our Students Say" tilt={true}/>
-        <GetInTouch />
+      {/* Section 2: Course Levels + Ayurveda Courses */}
+      <section className="bg-white py-0">
+        <div className="container mx-auto px-2">
+          <ExploreOurAyurvedaCoursesView courses={courses} />
+          <CourseLevels />
+        </div>
+      </section>
+
+      {/* Section 3: Yoga For Everyone + Yoga Classes */}
+      <section className="bg-white py-0">
+        <div className="container mx-auto px-2">
+          <ExploreOurClassesView courses={courses} />
+          <YogaForEveryone />
+        </div>
+      </section>
+
+      <GuaranteeSection />
+      <OurTeaching />
+      <Transforming />
+      <Trust />
+      <Blogs blogs={blogs} />
+      <Join />
+      <Faculty />
+      <Testimonial title="What Our Students Say" tilt={true} />
+      <GetInTouch />
       <SiteFooter />
+
+      {/* ✅ ElevenLabs Chat Widget Integration */}
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `
+            <elevenlabs-convai agent-id="agent_8801k6v9zhake538veqyaty5tg0y"></elevenlabs-convai>
+          `
+        }}
+      />
+
+      <Script
+        src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+        async
+        type="text/javascript"
+      />
     </div>
   )
 }

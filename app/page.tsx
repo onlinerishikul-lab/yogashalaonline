@@ -78,12 +78,18 @@ export default async function Home() {
       <GetInTouch />
       <SiteFooter />
 
-      {/* ✅ ElevenLabs Chat Widget Integration */}
+      {/* ✅ ElevenLabs Chat Widget - Fixed Bottom Right */}
       <div
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          zIndex: 9999,
+        }}
         dangerouslySetInnerHTML={{
           __html: `
             <elevenlabs-convai agent-id="agent_8801k6v9zhake538veqyaty5tg0y"></elevenlabs-convai>
-          `
+          `,
         }}
       />
 

@@ -191,10 +191,7 @@ export default function ClassesPage() {
                     </h2>
                     <p className="text-sm text-gray-600 mb-3">{course.teacher}</p>
                     <ul className="text-sm text-gray-700 mb-4 space-y-1">
-                      <li><strong>Everyday:</strong> 6 Days a Week & All Time</li>
-                      <li><strong>English:</strong> 6:00am, 7:30am, 6:00pm, 7:30pm IST</li>
-                      <li><strong>Hindi:</strong> 6:00am, 7:30am, 5:00pm, 6:00pm IST</li>
-                      <li><strong>Session Duration:</strong> 1 Hour Class</li>
+                      <p> "Honor your body's unique structure, align with precision, and breathe with awareness to practice yoga safely and harmoniously."</p>
                     </ul>
                   </div>
 
@@ -222,3 +219,4 @@ export default function ClassesPage() {
     </>
   );
 }
+
